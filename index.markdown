@@ -4,7 +4,7 @@ Table of Contents
 1. Introduction
   * The Selenium Project and Tools
   * Functional Test Automation Basics
-  * These docs
+  * These Docs
 
 2. Getting Started with WebDriver
   * Supported Browsers
@@ -47,4 +47,4 @@ Table of Contents
   * Configuration
   * Maintaining
 
-8. Record-and-playback
+8. Record-and-Playback
