@@ -48,8 +48,6 @@ require "selenium-webdriver"
 driver = Selenium::WebDriver.for :opera
 ```
 
-<!-- #codeExamples -->
-
 Browser Launching and Manipulation
 ----------------------------------
 <!-- #codeExamples -->
@@ -57,7 +55,28 @@ Browser Launching and Manipulation
 
 Waits (implicit & explicit)
 ---------------------------
-<!-- #codeExamples -->
+Waiting is having the automated task execution elapse a certain amount of time before continuing with the next step.
+
+### Implicit Wait
+An implicit wait is to tell WebDriver to poll the DOM for a certain amount of time when trying to find an element or elements if they are not immediately available. The default setting is 0. Once set, the implicit wait is set for the life of the WebDriver object instance.
+
+### Explicit Wait
+An explicit waits is code you define to wait for a certain condition to occur before proceeding further in the code.
+
+#### Expected Conditions
+There are some common conditions that are frequently come across when automating web browsers. 
+
+```ruby
+# ruby
+require "selenium-webdriver"
+driver = Selenium::WebDriver.for :firefox
+
+# element is clickable
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+wait.until { driver.find_element(:id => "your_element").click }
+```
+
+
 
 Support Classes
 ---------------
