@@ -136,7 +136,34 @@ driver = Selenium::WebDriver.for :internet_explorer
 
 Waits (implicit & explicit)
 ---------------------------
+
+
+Fluent Waits:
+
+The implicit wait in Selenium 2 might not work for Ajax elements. It is recommend that you use any one of the following workaround to handle Ajax elements.
+
+One approach is to use FluentWait and a Predicate available with Selenium2. The advantage of this approach is that element polling mechanism is configurable. The code example below waits for 1 second and polls for a textarea every 100 milliseconds.
+
 <!-- #codeExamples -->
+
+``` java
+
+    FluentWait<By> fluentWait = new FluentWait<By>(By.tagName("TEXTAREA"));
+        fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
+        fluentWait.withTimeout(1000, TimeUnit.MILLISECONDS);
+        fluentWait.until(new Predicate<By>() {
+            public boolean apply(By by) {
+                try {
+                    return browser.findElement(by).isDisplayed();
+                } catch (NoSuchElementException ex) {
+                    return false;
+                }
+            }
+        });
+        browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");
+    
+```    
+
 
 Support Classes
 ---------------
