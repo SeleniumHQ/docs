@@ -21,13 +21,13 @@ to capture all of the network traffic between the browser and the site being aut
 including HTTP response codes.
 
 Selenium WebDriver is a completely different approach to browser automation, preferring to 
-act more like a user. This solves some of the fundamental problems inherent in the Selenium
-RC approach. However, since much of the actual driving of the browser is now done externally
-to the browser itself, creating a method similar to captureNetworkTraffic() is difficult at
-best, and impossible at worst, particularly without a proxy in between the browser and the
-site being automated.
+act more like a user and this is represented in the way you write tests with WebDriver. In automated functional testing checking the status code is not a particularly important detail of a test's failure; the steps that preceded it are more important.
 
-The solution to capturing HTTP status codes is to replicate the behavior of Selenium RC by
+The browser will always represent the HTTP status code, imagine for example a 404 or a 500 error page. A simple way to 'fail fast' when you encounter one of these error pages is to check the page title or content of a reliable point (eg the `<h1>` tag) after every page load. If you are using the page object model you can include this check in your class constructor or similar point where the page load is expected. Occasionally the HTTP code may even be represented in the browser's error page and you could use WebDriver to read this and improve your debugging output.
+
+Checking the webpage itself is inline with WebDriver's ideal practice of representing and asserting upon the user's view of the website.
+
+If you insist, an advanced solution to capturing HTTP status codes is to replicate the behavior of Selenium RC by
 actually using a proxy. The WebDriver API provides the ability to set a proxy for the browser,
 and there are a number of proxies that programmatically allow you to manipulate the contents
 of requests sent to and received from the web server. Using a proxy lets you decide how you
@@ -35,8 +35,13 @@ want to respond to redirection response codes. Additionally, not every browser m
 response codes available to WebDriver, so opting to use a proxy allows you to have a solution
 that works for every browser.
 
-GMAIL and Facebook Logins
+Gmail, email and Facebook Logins
 -------------------------
+For multiple reasons logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable. Not what we want where test stability is important.
+
+The ideal practice is to use the APIs that email providers offer, or in the case of facebook the developer tools service which exposes an API for creating test accounts, friends and so forth. Although using an API might seem like a bit extra hard work you will be paid back in speed, reliabilty and stability. The API is also unlikely to change whereas webpages and HTML locators change often and require you to update your test framework.
+
+Logging in to 3rd-party sites using WebDriver at any point of your test increases the risk of your test failing because it makes your test longer. A general rule of thumb is that longer tests are more fragile and unreliable.
 
 Performance Testing
 -------------------
