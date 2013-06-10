@@ -20,7 +20,10 @@ Locating Elements
 -----------------
 <!-- #codeExamples -->
 <!-- Cover all types of locators -->
-
+Sometimes you can't select an item in a dropdown menu with two clicks (clicking the menu open, then clicking the menu item). That element might be located by nesting find_elements:
+```ruby
+@driver.find_element(:id, 'my_dropdown').find_element(:id, 'my_menu_item').click
+```
 Acting on the AUT
 -----------------
 <!-- Setting elements text, clicking, drag&drop, running javascript, etc. -->
