@@ -3,69 +3,67 @@ WebDriver
 
 Different Drivers and Requirements
 ----------------------------------
+You can use any languages that are supported by the selenium team to write you code. You can use any testing frameworks like junit / testng to write your tests. This code example uses testng to 
+write tests.
+
+To instantiate a driver in java you have to -
+
+
+
+<!-- #codeExamples -->
+
+
+
+''' java
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import java.util.concurrent.TimeUnit;
+
+
+public class test{
+
+    private WebDriver driver;
+
+    @BeforeClass
+    public void setUp() throws Exception {
+        DesiredCapabilities capabillities = DesiredCapabilities.firefox();
+        capabillities.setCapability("version", "21");
+        //Instantiate the firefox driver
+        driver = new FirefoxDriver();
+        // Set the wait
+        driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
+    }
+
+    // You can also swap with the driver with chromedriver or IEDriver. For requirements on chromedriver see the requirements section.
+    @Test
+    public void Test() throws Exception
+    {
+        //Open your site
+        driver.get("http://docs.seleniumhq.org/");
+        // add more code here
+    }
+
+    @AfterClass
+    //Quit the driver
+    public void tearDown() throws Exception {
+        driver.quit();
+    }
+
+}
+
+
+'''
 <!-- #codeExamples -->
 
 Browser Launching and Manipulation
 ----------------------------------
-
-Firefox Profiles
-----------------
-
-You have the ability to define and re-use specialized profiles in Firefox. New profiles can be created for one-time use in a test session, or existing profiles (customized by you outside of WebDriver) can be utilized.
-
-In this example, imagine a small internal tool that requires Basic HTTP authentication. In this case, your company has assigned an untrusted certificate to the server, which will result in a forced authentication when WebDriver tries to log in. Normally, you would not be able to control the acceptance of this certificate in code. This snippet demonstrates how a Firefox profile can circumvent this inconvenience.
-
-```java
-        FirefoxProfile profile = new FirefoxProfile();
-        profile.setAssumeUntrustedCertificateIssuer(true);  //Accept self-signed certificates by default
-        
-        WebDriver httpsDriver = new FirefoxDriver(profile);
-        httpsDriver.get("https://internal.mytools.com/");
-  driver.quit();
-```
-
-EventFiringWebDriver
---------------------
-
-The EventFiringWebDriver offers the ability to "intercept" certain events that fire regularly over the course of a test. Clicks, page turns, forward- and back- navigations--all of these are events. If you write your own custom implementation of the EventFiringWebDriver, you can change WebDriver's behavior when any of these events occur. For example, you can add special logging before every click, informing you of the locator being used, etc.
-
-The advantage of this approach is, you avoid cluttering up your test code with all the log statements--by implementing this interface, you get these special hooks and log statements "for free".
-
-To utilize the EventFiringWebDriver, you must first implement your custom hooks in a class which implements WebDriverEventListener. Then, you simply take an existing WebDriver instance (any browser--remember, it's an interface), and send it to a new instance of the EventFiringWebDriver, complete with your implementation:
-
-```java
-        WebDriver browserDriver = new FirefoxDriver();
-	WebDriverEventListener myEventListener = new MyWebDriverEventListener(); //A class implementing WebDriverEventListener, written elsewhere
- 	WebDriver eventFiringDriver = new EventFiringWebDriver( browserDriver ).register( myEventListener );
-
-	// The beforeNavigateTo() method (shown below) will be executed just before the navigation takes place. Once the page has turned, it will invoke afterNavigateTo()
-	eventFiringDriver.get("http://www.google.com/");
-	eventFiringDriver.quit();
-``` 
-       
-Below is a snippet of our custom implementation. You will have to implement all the methods of the interface, but they have been omitted for brevity: 
-
-```java
-public class MyWebDriverEventListener implements WebDriverEventListener {
-
-	<snip>
-
-    @Override
-    public void beforeNavigateTo( String url, WebDriver driver ) {
-        AutomationLogger.logDebugMessage( "Currently on page [%s], but about to navigate to [%s]", driver.getTitle(), url );
-    }
-
-    @Override
-    public void afterNavigateTo( String url, WebDriver driver ) {
-        AutomationLogger.logInfoMessage( "Completed navigation to [%s]", driver.getTitle(), url );
-    }
-
-	<snip>
-
-}
-```                    
-
-
+<!-- #codeExamples -->
+<!-- Remember to cover profile and extensions here -->
 
 Waits (implicit & explicit)
 ---------------------------
