@@ -16,8 +16,21 @@ Why Grid?
 Setting Up Your Own
 -------------------
 
+* Operating Systems
+      * Mac OSX
+      * Linux
+      * Windows
+
+* Execution Using Shell Scripts
+
+* Running in a Continuous Integration Environment
+      * Bamboo
+      * Jenkins
+
+
 Configuration
 -------------
+
 
 Maintaining
 -----------
