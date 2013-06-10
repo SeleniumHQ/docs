@@ -98,6 +98,12 @@ Acting on the AUT
 -----------------
 <!-- Setting elements text, clicking, drag&drop, running javascript, etc. -->
 
+Clicking on an element
+
+You can click on an element using the click method:
+```java
+driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
+```
 Reading Page State
 ------------------
 <!-- Getting element text and attributes, running javascript, etc. -->
