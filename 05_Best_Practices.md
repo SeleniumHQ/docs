@@ -1,6 +1,18 @@
 Best Practices
 ==============
-The following are suggested best practices to using Selenium 2.x+
+
+Functional testing is difficult to get right for many reasons.  If not
+application state, complexity, and dependencies make testing difficult
+enough, dealing with browsers – and especially cross-browser
+incompatibilities – makes writing good tests a challenge.
+
+Selenium provides tools to make functional user interaction easier,
+but doesn't help you write well-architected test suites.  In this
+chapter we offer advice, or best practices if you will, on how to
+approach functional web page automation.
+
+This chapter records software design patterns popular amongst many of
+the users of Selenium that have proven successful over the years.
 
 Page Object Models
 ------------------
