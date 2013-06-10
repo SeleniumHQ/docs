@@ -135,9 +135,28 @@ driver = Selenium::WebDriver.for :internet_explorer
 
 Waits (implicit & explicit)
 ---------------------------
+Waiting is having the automated task execution elapse a certain amount of time before continuing with the next step.
 
+### Implicit Wait
+An implicit wait is to tell WebDriver to poll the DOM for a certain amount of time when trying to find an element or elements if they are not immediately available. The default setting is 0. Once set, the implicit wait is set for the life of the WebDriver object instance.
 
-Fluent Waits:
+### Explicit Wait
+An explicit waits is code you define to wait for a certain condition to occur before proceeding further in the code.
+
+#### Expected Conditions
+There are some common conditions that are frequently come across when automating web browsers. 
+
+```ruby
+# ruby
+require "selenium-webdriver"
+driver = Selenium::WebDriver.for :firefox
+
+# element is clickable
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+wait.until { driver.find_element(:id => "your_element").click }
+```
+
+### Fluent Wait
 
 The implicit wait in Selenium 2 might not work for Ajax elements. It is recommend that you use any one of the following workaround to handle Ajax elements.
 
