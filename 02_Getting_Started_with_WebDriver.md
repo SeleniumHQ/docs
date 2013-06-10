@@ -104,6 +104,15 @@ String name = "Charles";
 driver.findElement(By.name("name")).sendKeys(name);
 ```
 
+Some web application use javascript libraries to add drag-and-drop functionality. The following is a basic example of 
+dragging one element onto another element:
+
+```java
+WebElement source = driver.findElement(By.id("source"));
+WebElement target = driver.findElement(By.id("target"));
+new Actions(driver).dragAndDrop(source, target).build().perform();
+```
+
 Reading Page State
 ------------------
 <!-- Getting element text and attributes, running javascript, etc. -->
