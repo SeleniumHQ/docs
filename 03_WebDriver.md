@@ -100,7 +100,6 @@ path of the *selenium-server-standalone JAR that you just downloaded.
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :opera
 ```
-n
 <!-- #codeExamples -->
 
 Browser Launching and Manipulation
