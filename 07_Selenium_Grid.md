@@ -16,6 +16,20 @@ Why Grid?
 
 <!-- Parallelization and Multiple Environments -->
 
+What is a Hub and Node?
+-----------------------
+
+* Hub
+	* Hub is a central point from where your tests will be loaded.
+	* There will be only one Hub in a grid and it is launched from a computer
+	* Hub is the place where you kick off your tests and you will see the tests running in the nodes.
+
+* Node
+	* Nodes are the different selenium instances that will execute your tests in a distributed manner.
+	* There can be many nodes in a grid
+	* The machines which are nodes need not to be the same platform as that of hub.
+
+
 Setting Up Your Own
 -------------------
 
