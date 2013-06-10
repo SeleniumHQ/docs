@@ -20,9 +20,6 @@ Selenium makes use of these third party drivers where possible, but
 also provides its own drivers maintained by the project for the cases
 where this is not a reality.
 
-Selenium provides a framework tieing all of the drivers together,
-making it useful for cross-browser automatio
-
 The Selenium framework ties all of these pieces together through a
 user-facing interface that enables the different browser backends to
 be used transparently, enabling cross-browser and cross-platform
