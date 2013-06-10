@@ -4,10 +4,11 @@ Remote WebDriver
 You can use Remote webdriver the same way you would use webdriver locally. The primary difference is that
 remote webdriver needs to be configured so that it can run your tests on a seperate machine.
 
-The RemoteWebDriver is composed of two pieces: a client and a server. The client is your WebDriver test and the server is simply a Java servlet, which can be hosted in any modern JEE app server. The server will always run on the machine with the browser you want to test. There are two ways to user the server: command line or configured in code.
+The RemoteWebDriver is composed of two pieces: a client and a server. The client is your WebDriver test and the server is simply a Java servlet, which can be hosted in any modern JEE app server. 
 
 The RemoteWebDriver Server
 ===========================
+The server will always run on the machine with the browser you want to test. There are two ways to user the server: command line or configured in code.
 
 Starting the Server from The Command Line
 ------------------------------------------
@@ -27,9 +28,9 @@ The server has two different timeouts, which can be set as follows:
 ```
 java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60
 ```
-browserTimeout    Controls how long the browser is allowed to hang (value in seconds)
-timeout	 Controls how long the client is is allowed to be gone before the session is reclaimed (value in seconds)
-System property "selenium.server.session.timeout" is no longer supported as of 2.21.
+- browserTimeout: Controls how long the browser is allowed to hang (value in seconds)
+- timeout: Controls how long the client is is allowed to be gone before the session is reclaimed (value in seconds)
+- System property: "selenium.server.session.timeout" is no longer supported as of 2.21.
 
 Please note that the "browserTimeout" is intended as a backup timeout mechanism when the ordinary timeout mechanism fails, which should be used mostly in grid/server environments to ensure that crashed/lost processes do not stay around for too long, polluting the runtime environment.
 
@@ -110,4 +111,39 @@ driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :des
 
 Local File Detector
 -------------------
-<!-- #codeExamples -->
+
+The Local File Detector allows the transfer of files from the client machine to the remote server. 
+For example if a test needs to upload a file to a web application, RemoteWebDriver can automatically 
+transfer the file from the local machine to the remote web server during runtime. This allows the file to be 
+uploaded from the remote machine running the test. It is not enabled by default and can 
+be enabled in the following way:
+
+Java:
+```java
+driver.setFileDetector(new LocalFileDetector());
+```
+
+Ruby:
+```ruby
+@driver.file_detector = lambda do |args|
+         # args => ["/path/to/file"]
+         str = args.first.to_s
+         str if File.exist?(str)
+end
+```
+
+Once the above code is defined, you can upload a file in your test in the following way:
+
+Java:
+```java
+driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
+WebElement upload = driver.findElement(By.id("myfile"));
+upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
+```
+
+Ruby:
+```ruby
+@driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
+element = @driver.find_element(:id, 'myfile')
+element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"
+```
