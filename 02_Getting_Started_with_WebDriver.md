@@ -47,10 +47,10 @@ in development environments.  We can make use of some of these
 browsers for automation purposes also, and Selenium ties in support
 for the following specialized drivers:
 
-| Driver Name    | Purpose                                    | Maintainer          |
-|----------------|--------------------------------------------|---------------------|
-| GhostDriver    | Headless PhantomJS browser backed by V8.   | GhostDriver project |
-| HtmlUnitDriver | Headless browser emulator backed by Rhino. | Selenium            |
+| Driver Name     | Purpose                                        | Maintainer                                                  |
+|-----------------|------------------------------------------------|-------------------------------------------------------------|
+| PhantomJSDriver | Headless PhantomJS browser backed by QtWebKit. | [GhostDriver project](https://github.com/detro/ghostdriver) |
+| HtmlUnitDriver  | Headless browser emulator backed by Rhino.     | Selenium                                                    |
 
 Locating Elements
 -----------------
@@ -58,23 +58,24 @@ Locating Elements
 One of the most fundamental things to learn when using WebDriver is finding elements. An alternative way to find elements in java is to use the [FluentWebElement](https://github.com/SeleniumHQ/fluent-selenium "SeleniumHQ/fluent-selenium") and [By](http://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/By.html "By.java")...
 ```java
 public class Example  {
-   	private final By searchInputId = id("gbqfq");
-   	private final By searchButtonId = id("gbqfba");
-   	public static void main(String[] args) {
-		FluentWebDriver driver = new FluentWebDriver(new ChromeDriver());
+    private final By searchInputId = id("gbqfq");
+    private final By searchButtonId = id("gbqfba");
 
-       	// And now use this to visit Google
-       	driver.get("http://www.google.com");
+    public static void main(String[] args) {
+        FluentWebDriver driver = new FluentWebDriver(new ChromeDriver());
 
-       	// Find the text input element by its id 
-       	FluentWebElement searchInput = driver.input(searchInputId);
+        // And now use this to visit Google
+        driver.get("http://www.google.com");
 
-       	// Enter something to search for
-       	searchInput.sendKeys("SeConf");
+        // Find the text input element by its id
+        FluentWebElement searchInput = driver.input(searchInputId);
 
-       	// Now click the Google Search Button
-       	driver.button(searchButtonId).click();
-   	}
+        // Enter something to search for
+        searchInput.sendKeys("SeConf");
+
+        // Now click the Google Search Button
+        driver.button(searchButtonId).click();
+    }
 }
 ```
 
