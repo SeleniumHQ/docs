@@ -1,5 +1,6 @@
 Best Practices
 ==============
+The following are suggested best practices to using Selenium 2.x+
 
 Page Object Models
 ------------------
@@ -25,10 +26,19 @@ create data for the AUT.
 
 Mock External Services
 ----------------------
-Eliminating the depencies on external services will greatly improve the speed and stability on tests.  
+Eliminating the dependencies on external services will greatly improve the speed and stability on tests.  
 
 Improved Reporting
 ------------------
+Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test
+frameworks is a good start.  Most unit test frameworks have reports that can generate xUnit or HTML formatted reports.  xUnit reports are popular
+for importing results to a Continuous Integration(CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links for more information
+regarding report outputs for several languages
+
+Python:
+ - nose
+  - xUnit: http://nose.readthedocs.org/en/latest/plugins/xunit.html
+  - HTML: https://nose.readthedocs.org/en/latest/plugins/cover.html?highlight=html%20reports
 
 Avoid Sharing State
 -------------------
