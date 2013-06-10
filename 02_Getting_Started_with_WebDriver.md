@@ -26,7 +26,7 @@ Acting on the AUT
 <!-- Setting elements text, clicking, drag&drop, running javascript, etc. -->
 
 You can set an element's text using the sendKeys method as follows:
-```
+```java
 String name = "Charles";
 driver.findElement(By.name("name")).sendKeys(name);
 ```
