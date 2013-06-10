@@ -118,6 +118,51 @@ Browser Launching and Manipulation
 Waits (implicit & explicit)
 ---------------------------
 <!-- #codeExamples -->
+* Implicit Waits
+
+The ImplicitWait will tell the webDriver to poll the DOM for a certain duration when trying to find the element, this will be useful when certain elements on the webpage will not be available immediately and needs some time to load.
+By default it ill take the value to 0, for the life of the WebDriver object instance through out the test script.
+
+#### Java
+```java
+WebDriver driver = new FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.get("http://somedomain/url_that_delays_loading");
+WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
+```
+
+* Explicit Waits
+An explicit waits is code you define to wait for a certain condition to occur before proceeding further in the code. Which is more similar to the Thread.sleep().
+We can combine the use of Expected Conditions to accomplish wait Without using any hard delay.
+ 
+#### Java
+```java
+WebDriver driver = new FirefoxDriver();
+driver.get("http://somedomain/url_that_delays_loading");
+WebElement myDynamicElement = (new WebDriverWait(driver, 10))
+  .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));
+```
+
+* FluentWait
+
+FluentWait instance defines the maximum amount of time to wait for a condition, as well as the frequency with which to check the condition. 
+User may configure the wait to ignore specific types of exceptions whilst waiting, such as NoSuchElementExceptions when searching for an element on the page.
+
+#### Java
+```java
+// Waiting 30 seconds for an element to be present on the page, checking
+   // for its presence once every 5 seconds.
+   Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+       .withTimeout(30, SECONDS)
+       .pollingEvery(5, SECONDS)
+       .ignoring(NoSuchElementException.class);
+
+   WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+     public WebElement apply(WebDriver driver) {
+       return driver.findElement(By.id("foo"));
+     }
+   });
+```
 
 Support Classes
 ---------------
