@@ -47,10 +47,10 @@ in development environments.  We can make use of some of these
 browsers for automation purposes also, and Selenium ties in support
 for the following specialized drivers:
 
-| Driver Name    | Purpose                                    | Maintainer          |
-|----------------|--------------------------------------------|---------------------|
-| GhostDriver    | Headless PhantomJS browser backed by V8.   | GhostDriver project |
-| HtmlUnitDriver | Headless browser emulator backed by Rhino. | Selenium            |
+| Driver Name     | Purpose                                        | Maintainer                                                  |
+|-----------------|------------------------------------------------|-------------------------------------------------------------|
+| PhantomJSDriver | Headless PhantomJS browser backed by QtWebKit. | [GhostDriver project](https://github.com/detro/ghostdriver) |
+| HtmlUnitDriver  | Headless browser emulator backed by Rhino.     | Selenium                                                    |
 
 Locating Elements
 -----------------
