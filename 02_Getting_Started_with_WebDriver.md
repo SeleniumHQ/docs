@@ -40,6 +40,8 @@ The Selenium framework officially supports the following browsers:
 | Safari            | Selenium   | 5.1 and newer      |
 | Internet Explorer | Selenium   | 6 and newer        |
 
+### Specialized browsers
+
 There are also a set of specialized browsers out there typically used
 in development environments.  We can make use of some of these
 browsers for automation purposes also, and Selenium ties in support
