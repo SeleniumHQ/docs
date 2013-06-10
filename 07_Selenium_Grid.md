@@ -13,6 +13,8 @@ Why Grid?
 
 * Cons of Using Grid
 
+* Alternatives to Selenium Grid
+ - http://saucelabs.com
 
 <!-- Parallelization and Multiple Environments -->
 
