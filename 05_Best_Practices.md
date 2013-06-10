@@ -28,5 +28,13 @@ Avoid Sharing State
 -------------------
 
 ### Fresh browser per test
+Start each test from a clean known state.  Ideally spin up a new virtual machine for each test.  If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test.  For Firefox, start a WebDriver with your
+known profile.
+
+Java example
+```java
+FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));
+WebDriver driver = new FirefoxDriver(profile);
+```
 
 ### Unique test accounts
