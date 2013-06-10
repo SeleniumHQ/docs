@@ -13,10 +13,10 @@ currently Record and Playback is supported by Selenium Buidler
 Selenium Builder is an extension for the Firefox browser which make installation a snap.
 
 #### Step 1 
-Launch Firefox and navigate to the [Selenium Builder download page]()
+Launch Firefox and navigate to the [Selenium Builder download page](http://sebuilder.github.io/se-builder/) or [view on Github](http://github.com/sebuilder/se-builder)
 
 #### Step 2 
-Click the <i>Download Now</i> button
+Click the [Install](http://www.saucelabs.com/addons/selenium-builder-latest.xpi) button
 ![download now!](images/download_now.png)
 If prompted, confirm that you would like to allow installation from this location.
 
@@ -47,9 +47,9 @@ Interact with your application in whatever means is needed to fulfill your scrip
 
 #### Step 4 
 A script that goes end-to-end without error tells provides value, but really there needs to be some checks put in it. To add a check while recording, click the <i>Record a verification</i> button. This pauses recording and enables the element highlighter.
-![element highlighter](images/element_highlighter.png)
+![element highlighter](https://raw.github.com/sebuilder/se-builder/master/docs/images/element_highlighter.png)
 Using the element highlighter, select the portion of the page you want to check. Once the check is recorded Selenium Builder returns to recording actions.
-![verify text present](/images/verifyTextPresent.png)
+![verify text present](https://raw.github.com/sebuilder/se-builder/master/docs/images/verifyTextPresent.png)
 By default, the check recorded by Selenium Builder is <i>verifyTextPresent</i>. This is a sensible default, but there are a number of situations where you would want to change it to another one. You can do it during the recording process or afterwards. The procedure for editing a step is the same in either case and is documented in <a href="TODO">Editing a Selenium Builder step</a>
 
 #### Step 5 
@@ -58,7 +58,7 @@ Once you have recorded everything you want in the script, click <i>Stop recordin
 #### Step 6
 Perhaps the most important part of recording a script is saving it. After stopping recording, the buttons at the bottom of the Selenium Builder window will change and include one for saving. Clicking it presents you will a list of formats that the script can be saved in.
 Selenium Builder supports a number of formats that it can save as, but it's native format is HTML (Selenese). Choose that one for now and save your file. It is now safe to close turn off Selenium Builder.
-![save](images/save.png)
+![save](https://raw.github.com/sebuilder/se-builder/master/docs/images/save.png)
 
 ### Opening an existing script
 Since Selenium Builder's native format is Selenese, it can import scripts that were created with either Selenium Builder, [Selenium IDE](selenium ide) or [Selenium IDE](http://seleniumhq.org/projects/ide). To load a script created by any of these, click the <i>Open a test file</i> link on the main Selenium Builder screen.
@@ -116,7 +116,7 @@ Part of the power of Selenium Builder is its ability to save recorded scripts in
 
 To export your Selenium Builder in a non Selenese format, choose the <i>Save to disk</i> button as you would normally but instead of selecting HTML select the format you want to export as. For instance, <i>Java (TestNG) - Selenium RC</i> saves the script in such a way that it can be run from the popular Java test framework JUnit against your local Selenium server.
 
-![save as](images/save_as.png)
+![save as](https://raw.github.com/sebuilder/se-builder/master/docs/images/save_as.png)
 
 Once a script has been saved as a non-Selenese format, that script is no longer considered a Selenium Builder script and cannot be opened by Selenium Builder -- even if no changes have been made to the underlying script. This is because the various formats can include things that Selenium Builder cannot represent in its GUI. It is because of this that saving in another format should be done only once you have a level of comfort with the script's contents in terms of flow and execution.
 
@@ -181,7 +181,7 @@ To properly synchronize an AJAX application, the two most common commands are wa
 
 But even waitForElementPresent and waitForVisible fail some of the times. Especially when dealing with COMET technologies (once such site like that is GMail). Successful synchronization here is a collaboration between the developer writing the AJAX/Comet action and the scripter. Actually, all successful automation is a collaboration, but that's not the point here. Through a combination of setting a property in the browser's window object via the 'completed' callback in and waitForCondition, Selenium Builder will wait until synchronization is achieved. waitForCondition takes two arguments;a Javascript snippet as an argument that it waits for, and a timeout value for how long to wait.
   
-![waitForCondition](images/waitForCondition.png)
+![waitForCondition](https://raw.github.com/sebuilder/se-builder/master/docs/images/waitForCondition.png)
 
 In this particular case, the step will wait up to 30 seconds for an attribute on the window object called 'latch' to be given a value of 'done'.
 
