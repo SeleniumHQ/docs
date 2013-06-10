@@ -35,8 +35,13 @@ want to respond to redirection response codes. Additionally, not every browser m
 response codes available to WebDriver, so opting to use a proxy allows you to have a solution
 that works for every browser.
 
-GMAIL and Facebook Logins
+Gmail, email and Facebook Logins
 -------------------------
+For multiple reasons logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable. Not what we want where test stability is important.
+
+The ideal practice is to use the APIs that email providers offer, or in the case of facebook the developer tools service which exposes an API for creating test accounts, friends and so forth. Although using an API might seem like a bit extra hard work you will be paid back in speed, reliabilty and stability. The API is also unlikely to change whereas webpages and HTML locators change often and require you to update your test framework.
+
+Logging in to 3rd-party sites using WebDriver at any point of your test increases the risk of your test failing because it makes your test longer. A general rule of thumb is that longer tests are more fragile and unreliable.
 
 Performance Testing
 -------------------
