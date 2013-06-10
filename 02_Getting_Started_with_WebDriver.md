@@ -14,7 +14,7 @@ a _driver_.  The driver is the component responsible for delegating
 down to the browser, and handles all communication to and from
 Selenium and the browser.
 
-This separation is part of a conscoius effort to have browser vendors
+This separation is part of a conscious effort to have browser vendors
 take responsibility for the implementation for their browser.
 Selenium makes use of these third party drivers where possible, but
 also provides its own drivers maintained by the project for the cases
