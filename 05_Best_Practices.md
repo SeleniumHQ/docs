@@ -15,6 +15,23 @@ Rule of Thumb:
    - If you submit a page and are redirected, it should return the new page object
    - If you click submit on login and you want to check to see if a user is logged in it should return True or False in a method
 
+Domain Specific Language
+-------------------------
+DSL	- Domain Specific Language.
+In general DSL is a programming language dedicated to a particular problem that is created specifically to solve problems.
+
+With Selenium, DSL are methods that are specifically written to make the API simple and readable which would enable a good rapport between the developer's and the business stake holders.
+
+Writing your own DSL - By Wrapping WebDriver API's
+
+#### Java
+
+```java
+public void findElementAndType(webDriver driver, String elementLocator,String testData){
+driver.findElement(By.name(elemenLocator)).clear();
+driver.findElement(By.name(elemenLocator)).sendKeys(testData);
+}
+```
 
 Generating Application State
 ----------------------------
