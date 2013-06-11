@@ -128,8 +128,8 @@ doing this:
 $ export SELENIUM_SERVER_JAR=/path/to/operadriver.jar
 ```
 
-It's possible to set this in your shell's profile (e.g. _~/.bashrc) to
-have the variable set every time you launch a new shell session.
+It's possible to set this in your shell's profile (e.g. _~/.bashrc_)
+to have the variable set every time you launch a new shell session.
 Alternatively you can set the variable programmatically in your test
 runner.  In Python you'd do something along the lines of
 
