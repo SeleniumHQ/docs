@@ -22,13 +22,11 @@ Selenium 1.0 + WebDriver = Selenium 2.0
 Driver Requirements
 -------------------
 
-Selenium WebDriver works with a variety of browsers, such as Firefox,
-Chrome, Internet Explorer, Safari, and Opera. WebDriver drives the
-browser directly using the browser’s built in support for automation.
-
-You can use any languages that are supported by the selenium team to
-write your code. You can use any testing frameworks like junit /
-testng to write your tests.
+Through WebDriver, Selenium supports all major browsers on the market
+such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
+Where possible WebDriver drives the browser using the browser's
+built-in support for automation, although not all browsers have
+official support for remote control.
 
 ### Firefox
 
