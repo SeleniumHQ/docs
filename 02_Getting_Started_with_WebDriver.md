@@ -54,8 +54,56 @@ for the following specialized drivers:
 
 Locating Elements
 -----------------
+One of the most fundamental things to learn when using WebDriver is finding elements on the page
+
+WebDriver supports eight strategies for locating elements. Each has its benefits and drawbacks:
+
+| Locator | Description |
+| ------- | ----------- |
+| class name| Locates elements whose class name contains the search value; compound class names are not permitted
+| css selector| Locates elements matching a CSS selector
+| id| Locates elements whose ID attribute matches the value
+| name| Locates elements whose NAME attribute matches the value
+| link text| Locates anchor elements whose visible text matches the value
+| partial link text| Locates anchor elements whose visible text partially matches the value
+| tag name| Locates elements whose tag name matches the value
+| xpath| Locates elements matching an XPath expression
+
+In general, if HTML IDs are available, unique, and consistently predictable, they are the preferred method for locating an element on a page. They tend to work very quickly, and forego much processing that comes with complicated DOM traversals
+
+If unique IDs are unavailable, a well-written CSS Selector is the preferred method of locating an element. XPath works as well as CSS Selectors, but the syntax is complicated and frequently difficult to debug
+
+LinkText and PartialLinkText have drawbacks in that they only work on link elements
+
+TagName can be a dangerous way to locate elements--there are frequently multiple elements of the same tag present on the page at once. This is mostly useful when calling the findElements() method--which returns a list of elements rather than just one
+
+Here is a simple example, for sending text to the search input at google.com:
+
+```java
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.google.com/");
+
+        WebElement searchField = driver.findElement( By.id( "gbqfq" ) );
+        searchField.sendKeys( "Where the Wild Things Are" );
+```
+
+Sometimes locating elements is just that simple, but frequently it requires more steps: one technique frequently used in locating elements is to "chain" multiple locations together: Use an ID or some other easy identifier to locate an element at the top of a tree, then use another locator to find the particular "child" element you're interested in.
+
+In this example, we will go to the Yahoo home page, and grab the second headline in the "Trending Now" box on the top right:
+
+```java
+        WebDriver driver = new FirefoxDriver();
+        driver.get("http://www.yahoo.com/");
+
+        System.out.println("Second story on the Yahoo home page: " + driver.findElement(By.className("type_trendingnow")).findElements(By.tagName("li")).get(1).getText());
+``` 
+
+This example uses the CSS Class Name to locate the "parent" element of the story we're interested in (the Trending Now box), then uses the Tag Name locator to locate a list of all the article links underneath--this returns a List<WebElement>, from which we then pull the second element. Then we get the text displayed in the link, and send it to the console. We could conceivably then click on the link, compare the full headline against the sample here, or take any variety of actions to complete the test
+
+The recommended Best Practice is to keep your locators as compact and readable as possible, and to "anchor" on a parent element when possible. Asking WebDriver to traverse the DOM structure is an expensive operation, and the more you can narrow the scope of your search, the better
+
 <!-- Location using fluent selenium -->
-One of the most fundamental things to learn when using WebDriver is finding elements. An alternative way to find elements in java is to use the [FluentWebElement](https://github.com/SeleniumHQ/fluent-selenium "SeleniumHQ/fluent-selenium") and [By](http://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/By.html "By.java")...
+An alternative way to find elements in java is to use the [FluentWebElement](https://github.com/SeleniumHQ/fluent-selenium "SeleniumHQ/fluent-selenium") and [By](http://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/By.html "By.java")...
 ```java
 public class Example  {
     private final By searchInputId = id("gbqfq");
@@ -78,22 +126,6 @@ public class Example  {
     }
 }
 ```
-
-
-<!-- #codeExamples -->
-There are eight and only eight types of element locator supported by WebDriver recently.
-
-| Locator | Description |
-| ------- | ----------- |
-| class name| Locates elements whose class name contains the search value; compound class names are not permitted.
-| css selector | Locates elements matching a CSS selector.
-| id | Locates elements whose ID attribute matches the search value.
-| name| Locates elements whose NAME attribute matches the search value.
-| link text| Locates anchor elements whose visible text matches the search value.
-| partial link text| Locates anchor elements whose visible text partially matches the search value.
-| tag name| Locates elements whose tag name matches the search value.
-| xpath | Locates elements matching an XPath expression.
-
 
 Acting on the AUT
 -----------------
