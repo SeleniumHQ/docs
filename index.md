@@ -15,7 +15,7 @@ Table of Contents
   * The Rest of the API
 
 3. WebDriver
-  * Different Drivers and Requirements
+  * Driver Requirements
   * Browser Launching and Manipulation
   * Waits (implicit & explicit)
   * Support Classes

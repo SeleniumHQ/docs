@@ -19,8 +19,8 @@ Selenium 1.0 + WebDriver = Selenium 2.0
 * It drives the browser much more effectively and over comes the limitations of Selenium 1.x which affected our functional test coverage, like the file upload or download, pop-ups and dialogs barrier
 * WebDriver overcomes the limitation of Selenium Rc's Single Host origin policy
 
-Different Drivers and Requirements
-----------------------------------
+Driver Requirements
+-------------------
 
 Selenium WebDriver works with a variety of browsers, such as Firefox,
 Chrome, Internet Explorer, Safari, and Opera. WebDriver drives the
