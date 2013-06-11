@@ -24,7 +24,7 @@ be used transparently, enabling cross-browser and cross-platform
 automation.
 
 More details about drivers can be found in the [drivers
-section(Different Drivers and Requirements).
+section](Different Drivers and Requirements).
 
 ### Consumer browsers
 
