@@ -7,12 +7,10 @@ Supported Browsers
 Selenium supports automation of all the major browsers in the market
 through the use of _WebDriver_.  WebDriver is an API and protocol that
 defines a language-neutral interface for controlling the behaviour of
-web browsers.
-
-Each browser is backed by a specific WebDriver implementation, called
-a _driver_.  The driver is the component responsible for delegating
-down to the browser, and handles all communication to and from
-Selenium and the browser.
+web browsers.  Each browser is backed by a specific WebDriver
+implementation, called a _driver_.  The driver is the component
+responsible for delegating down to the browser, and handles all
+communication to and from Selenium and the browser.
 
 This separation is part of a conscious effort to have browser vendors
 take responsibility for the implementation for their browser.
@@ -34,11 +32,11 @@ The Selenium framework officially supports the following browsers:
 
 | Browser           | Maintainer | Versions Supported |
 |-------------------|------------|--------------------|
-| Firefox           | Selenium   | 4 and newer        |
 | Chrome/Chromium   | Chromium   | All versions       |
+| Firefox           | Selenium   | 4 and newer        |
+| Internet Explorer | Selenium   | 6 and newer        |
 | Opera             | Opera      | 10.5 and newer     |
 | Safari            | Selenium   | 5.1 and newer      |
-| Internet Explorer | Selenium   | 6 and newer        |
 
 ### Specialized browsers
 
@@ -198,5 +196,48 @@ Grabbing Screenshots
 --------------------
 <!-- #codeExamples -->
 
+#### Java
+```java
+import java.io.File;
+import java.net.URL;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class Testing {
+    
+    public void myTest() throws Exception {
+        WebDriver driver = new RemoteWebDriver(
+                                new URL("http://localhost:4444/wd/hub"), 
+                                DesiredCapabilities.firefox());
+        
+        driver.get("http://www.seleniumhq.org");
+        
+        // RemoteWebDriver does not implement the TakesScreenshot class
+        // if the driver does have the Capabilities to take a screenshot
+        // then Augmenter will add the TakesScreenshot methods to the instance
+        WebDriver augmentedDriver = new Augmenter().augment(driver);
+        File screenshot = ((TakesScreenshot)augmentedDriver).
+                            getScreenshotAs(OutputType.FILE);
+    }
+````
+A nice feature of the remote webdriver is that exceptions often have an attached screen shot, encoded as a Base64 PNG. 
+In order to get this screenshot, 
+
+#### Java
+
+```java
+public String extractScreenShot(WebDriverException e) {
+  Throwable cause = e.getCause();
+  if (cause instanceof ScreenshotException) {
+    return ((ScreenshotException) cause).getBase64EncodedScreenshot();
+  }
+  return null;
+}
+```
 The Rest of the API
 -------------------
