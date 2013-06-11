@@ -52,20 +52,101 @@ for the following specialized drivers:
 
 Locating Elements
 -----------------
-One of the most fundamental things to learn when using WebDriver is finding elements on the page
 
-WebDriver supports eight strategies for locating elements. Each has its benefits and drawbacks:
+### Loating one element
 
-| Locator | Description |
-| ------- | ----------- |
-| class name| Locates elements whose class name contains the search value; compound class names are not permitted
-| css selector| Locates elements matching a CSS selector
-| id| Locates elements whose ID attribute matches the value
-| name| Locates elements whose NAME attribute matches the value
-| link text| Locates anchor elements whose visible text matches the value
-| partial link text| Locates anchor elements whose visible text partially matches the value
-| tag name| Locates elements whose tag name matches the value
-| xpath| Locates elements matching an XPath expression
+One of the most fundamental things to learn when using WebDriver is
+finding elements on the page.  It offers a number of built-in selector
+types, amongst them finding an element by its ID attribute:
+
+```java
+WebElement cheese = driver.findElement(By.id("cheese"));
+```
+
+As seen in the example, locating elements in WebDriver is done on the
+`WebDriver` instance object.  The `findElement(By)` method returns
+another fundamental object type in WebDriver, called a `WebElement`.
+The types `WebDriver`'s and `WebElement`'s represent the browser
+instance and a DOM node respectively.
+
+Once you have have a reference to a web element you've located, you
+can narrow down your search by using the same call on that object
+instance:
+
+```java
+WebElement cheese = driver.findElement(By.id("cheese"));
+WebElement cheddar = cheese.findElement(By.id("cheddar"));
+```
+
+You can do this because both the `WebDriver` and `WebElement` types
+implement the
+[`SearchContext`](http://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/SearchContext.html)
+interface.  In WebDriver this is known as a _role-based interface_.
+Role-based interfaces allow you to determine whether a particular
+driver implementation supports a given feature.  These interfaces are
+clearly defined and try to adhere to having only a single role of
+responsibility.  You can read more about WebDriver's design and what
+roles are supported in which drivers in the [Some Other Section Which
+Must Be Named](#).
+
+Consequently, the `By` interface you saw used above also supports a
+number of additional locator strategies.  A nested lookup might not be
+the most effective cheese location strategy since it requires two
+separate commands to be issued to the browser; first searching the DOM
+for an element with ID “cheese”, then a search for “cheddar” in a
+narrowed context.
+
+To improve the performance slightly we should try to use a more
+specific locator.  Thankfully WebDriver supports looking up elements
+by CSS locators and so we can contract the two previous locators into
+one search:
+
+```java
+driver.findElement(By.cssSelector("#cheese #cheddar"));
+```
+
+# Locating multiple elements
+
+Incidentally the document we are introspecting may turn out to have an
+ordered list of the cheese we like the best:
+
+```html
+<ol id="cheese">
+  <li id="cheddar">…</li>
+  <li id="brie">…</li>
+  <li id="rochefort">…</li>
+  <li id="camembert">…</li>
+</ul>
+```
+
+Since more cheese is undisputably always better, and it would be
+cumbersome to have to retrieve each of the items individually, a far
+superior technique for retrieving cheese is to make use of the
+pluralized version `findElements(By)`.  The return type of this method
+is a collection of web elements.  If only one element is found, the
+collection size will equal 1.  If no elements match the selection, an
+empty list will be returned.
+
+```java
+List<WebElement> muchoCheese = driver.findElements(By.cssSelector("#cheese li"));
+```
+
+### Element selection strategies
+
+There are eight different built-in element location strategies in WebDriver:
+
+| Locator           | Description |
+|-------------------|-------------|
+| class name        | Locates elements whose class name contains the search value; compound class names are not permitted.
+| css selector      | Locates elements matching a CSS selector.
+| id                | Locates elements whose ID attribute matches the search value.
+| name              | Locates elements whose NAME attribute matches the search value.
+| link text         | Locates anchor elements whose visible text matches the search value.
+| partial link text | Locates anchor elements whose visible text partially matches the search value.
+| tag name          | Locates elements whose tag name matches the search value.
+| xpath             | Locates elements matching an XPath expression.
+
+# Tips on using selectors
 
 In general, if HTML IDs are available, unique, and consistently predictable, they are the preferred method for locating an element on a page. They tend to work very quickly, and forego much processing that comes with complicated DOM traversals
 
@@ -88,68 +169,6 @@ Here is a simple example, for sending text to the search input at google.com:
 Sometimes locating elements is just that simple, but frequently it requires more steps: one technique frequently used in locating elements is to "chain" multiple locations together: Use an ID or some other easy identifier to locate an element at the top of a tree, then use another locator to find the particular "child" element you're interested in.
 
 In this example, we will go to the Yahoo home page, and grab the second headline in the "Trending Now" box on the top right:
-
-```java
-        WebDriver driver = new FirefoxDriver();
-        driver.get("http://www.yahoo.com/");
-
-        System.out.println("Second story on the Yahoo home page: " + driver.findElement(By.className("type_trendingnow")).findElements(By.tagName("li")).get(1).getText());
-``` 
-
-This example uses the CSS Class Name to locate the "parent" element of the story we're interested in (the Trending Now box), then uses the Tag Name locator to locate a list of all the article links underneath--this returns a List<WebElement>, from which we then pull the second element. Then we get the text displayed in the link, and send it to the console. We could conceivably then click on the link, compare the full headline against the sample here, or take any variety of actions to complete the test
-
-The recommended Best Practice is to keep your locators as compact and readable as possible, and to "anchor" on a parent element when possible. Asking WebDriver to traverse the DOM structure is an expensive operation, and the more you can narrow the scope of your search, the better
-
-<!-- Location using fluent selenium -->
-An alternative way to find elements in java is to use the [FluentWebElement](https://github.com/SeleniumHQ/fluent-selenium "SeleniumHQ/fluent-selenium") and [By](http://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/By.html "By.java")...
-```java
-public class Example  {
-    private final By searchInputId = id("gbqfq");
-    private final By searchButtonId = id("gbqfba");
-
-    public static void main(String[] args) {
-        FluentWebDriver driver = new FluentWebDriver(new ChromeDriver());
-
-        // And now use this to visit Google
-        driver.get("http://www.google.com");
-
-        // Find the text input element by its id
-        FluentWebElement searchInput = driver.input(searchInputId);
-
-        // Enter something to search for
-        searchInput.sendKeys("SeConf");
-
-        // Now click the Google Search Button
-        driver.button(searchButtonId).click();
-    }
-}
-```
-
-<!-- #codeExamples -->
-There are eight and only eight types of element locator supported by WebDriver recently.
-
-| Locator | Description |
-| ------- | ----------- |
-| class name| Locates elements whose class name contains the search value; compound class names are not permitted.
-| css selector | Locates elements matching a CSS selector.
-| id | Locates elements whose ID attribute matches the search value.
-| name| Locates elements whose NAME attribute matches the search value.
-| link text| Locates anchor elements whose visible text matches the search value.
-| partial link text| Locates anchor elements whose visible text partially matches the search value.
-| tag name| Locates elements whose tag name matches the search value.
-| xpath | Locates elements matching an XPath expression.
-
-In general, if HTML IDs are available, unique, and consistently predictable, they are the preferred method for locating an element on a page. They tend to work very quickly, and forego much processing that comes with complicated DOM traversals
-
-If unique IDs are unavailable, a well-written CSS Selector is the preferred method of locating an element. XPath works as well as CSS Selectors, but the syntax is complicated and frequently difficult to debug
-
-LinkText and PartialLinkText have drawbacks in that they only work on link elements
-
-TagName can be a dangerous way to locate elements--there are frequently multiple elements of the same tag present on the page at once. This is mostly useful when calling the findElements() method--which returns a list of elements rather than just one
-
-One technique frequently used in locating elements is to "chain" multiple locations together: Use an ID or some other easy identifier to locate an element at the top of a tree, then use another locator to find the particular "child" element you're interested in.
-
-In this example, we go to the Yahoo home page, and grab the second headline in the "Trending Now" box on the top right:
 
 ```java
         WebDriver driver = new FirefoxDriver();
