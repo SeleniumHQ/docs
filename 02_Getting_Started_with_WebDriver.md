@@ -7,12 +7,10 @@ Supported Browsers
 Selenium supports automation of all the major browsers in the market
 through the use of _WebDriver_.  WebDriver is an API and protocol that
 defines a language-neutral interface for controlling the behaviour of
-web browsers.
-
-Each browser is backed by a specific WebDriver implementation, called
-a _driver_.  The driver is the component responsible for delegating
-down to the browser, and handles all communication to and from
-Selenium and the browser.
+web browsers.  Each browser is backed by a specific WebDriver
+implementation, called a _driver_.  The driver is the component
+responsible for delegating down to the browser, and handles all
+communication to and from Selenium and the browser.
 
 This separation is part of a conscious effort to have browser vendors
 take responsibility for the implementation for their browser.
@@ -34,11 +32,11 @@ The Selenium framework officially supports the following browsers:
 
 | Browser           | Maintainer | Versions Supported |
 |-------------------|------------|--------------------|
-| Firefox           | Selenium   | 4 and newer        |
 | Chrome/Chromium   | Chromium   | All versions       |
+| Firefox           | Selenium   | 4 and newer        |
+| Internet Explorer | Selenium   | 6 and newer        |
 | Opera             | Opera      | 10.5 and newer     |
 | Safari            | Selenium   | 5.1 and newer      |
-| Internet Explorer | Selenium   | 6 and newer        |
 
 ### Specialized browsers
 
