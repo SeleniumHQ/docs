@@ -28,6 +28,12 @@ Where possible WebDriver drives the browser using the browser's
 built-in support for automation, although not all browsers have
 official support for remote control.
 
+WebDriver's aim is to emulate a real user's interaction with the
+browser as closely as possible.  This is possible at varying levels in
+different browsers.  For more detalis on the different driver
+idiosyncracies, please see [Driver
+Idiosyncracies](09_Driver_Idiosyncracies.md).
+
 ### Firefox
 
 #### Java
