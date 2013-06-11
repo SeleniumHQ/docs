@@ -105,7 +105,7 @@ one search:
 driver.findElement(By.cssSelector("#cheese #cheddar"));
 ```
 
-# Locating multiple elements
+### Locating multiple elements
 
 Incidentally the document we are introspecting may turn out to have an
 ordered list of the cheese we like the best:
@@ -146,7 +146,7 @@ There are eight different built-in element location strategies in WebDriver:
 | tag name          | Locates elements whose tag name matches the search value.
 | xpath             | Locates elements matching an XPath expression.
 
-# Tips on using selectors
+### Tips on using selectors
 
 In general, if HTML IDs are available, unique, and consistently predictable, they are the preferred method for locating an element on a page. They tend to work very quickly, and forego much processing that comes with complicated DOM traversals
 
