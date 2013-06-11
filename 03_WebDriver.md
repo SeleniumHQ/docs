@@ -34,43 +34,38 @@ different browsers.  For more detalis on the different driver
 idiosyncracies, please see [Driver
 Idiosyncracies](09_Driver_Idiosyncracies.md).
 
-### Firefox
+Even though all the drivers share a single user-facing interface for
+contolling the browser, they have slightly different ways of setting
+up browser sessions.  Since many of the driver implementations are
+provided by third parties, they are not included in the standard
+Selenium distribution.
 
-#### Java
+Driver instantiation, profile management, and various browser specific
+settings are examples of parameters that have different requirements
+depending on the browser.  This section explains the basic
+requirements for getting you started with the different browsers.
+
+### Firefox
 
 Requirements: 
 
 ```java
-
-    private WebDriver driver;
-    
-    @BeforeClass
-    public void setUp() throws Exception {
-        DesiredCapabilities capabillities = DesiredCapabilities.firefox();
-        // You can also swap with the driver with chromedriver or IEDriver. For requirements on chromedriver see the chrome requirements section.
-        capabillities.setCapability("version", "21");
-        //Instantiate the firefox driver
-        driver = new FirefoxDriver();
-        // Set the wait
-        driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
-    }
-
-    
+DesiredCapabilities capabillities = DesiredCapabilities.firefox();
+capabillities.setCapability("version", "21");  // optionally specify which installed version of Firefox to request
+WebDriver driver = new FirefoxDriver();
 ```
-
-#### Ruby
-Requirements: 
-
 ```ruby
-# ruby
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :firefox
 ```
 
 ### Chrome
 
-#### Ruby / Python
-Requirements: To drive Chrome, you have to download [ChromeDriver](https://code.google.com/p/chromedriver/downloads/list) and either put it into a folder that is already in your PATH or add the new folder to your PATH. To find out what folders are currently in your PATH, execute this command in your Mac or Linux Terminal.
+To drive Chrome, you have to download
+[ChromeDriver](https://code.google.com/p/chromedriver/downloads/list)
+and either put it into a folder that is already in your PATH or add
+the new folder to your PATH. To find out what folders are currently in
+your PATH, execute this command in your Mac or Linux Terminal.
 
 ```bash
 #!/bin/sh
