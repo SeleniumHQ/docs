@@ -94,6 +94,10 @@ by installing a browser add-on in Firefox' profile before starting the
 browser.  The WebDriver client then communicates with that add-on to
 instruct the browser what to do.
 
+The approach for instantiating a WebDriver session to Firefox is
+pretty much the same as for Chrome and Chromium, but doesn't require
+any additional dependencies:
+
 ```java
 WebDriver driver = new FirefoxDriver();
 ```
@@ -102,27 +106,61 @@ require "selenium-webdriver"
 driver = Selenium::WebDriver.for :firefox
 ```
 
-### Opera
+### Internet Explorer
 
-#### Java
+### Opera (Presto-based)
 
-Requirements:
-Expose the OperaDriver JAR to the Java CLASSPATH
+Setting up support for Opera is fairly similar to the Chrome approach
+in that they are both supported by third parties.  Consequently you
+need to set up a dependency to the `com.opera:operadriver` artifact
+(if using Maven) or [download a prebuilt standalone server
+JAR](https://code.google.com/p/selenium/downloads/list).  If you use a
+prebuilt JAR as long as it's exposed on your classpath, you're good.
 
-#### Ruby / Python
+If you use Python or Ruby as your language of choice you must set the
+_SELENIUM_SERVER_JAR_ environmental variable to point to the location
+of the binary JAR.
 
-Requirements: To drive Opera, you must have Opera installed and a copy
-of [Selenium
-Server](http://code.google.com/p/selenium/downloads/list). You must
-also set the environmental variable 'SELENIUM_SERVER_JAR' to the full
-path of the *selenium-server-standalone JAR that you just downloaded.
+On Linux and Mac OS X you can do it for your current shell session by
+doing this:
+
+```sh
+$ export SELENIUM_SERVER_JAR=/path/to/operadriver.jar
+```
+
+It's possible to set this in your shell's profile (e.g. _~/.bashrc) to
+have the variable set every time you launch a new shell session.
+Alternatively you can set the variable programmatically in your test
+runner.  In Python you'd do something along the lines of
+
+```python
+import os
+os.environ["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"
+```
+
+The equivalent in Ruby:
 
 ```ruby
-# ruby
+ENV["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"
+```
+
+Instantiating a driver session is similar to Firefox and Chromium:
+
+```java
+WebDriver driver = new OperaDriver();
+```
+```ruby
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :opera
 ```
-<!-- #codeExamples -->
+
+### Safari
+
+### Specialized browsers
+
+#### HtmlUnit
+
+#### PhantomJS
 
 Browser Launching and Manipulation
 ----------------------------------
