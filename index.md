@@ -48,3 +48,7 @@ Table of Contents
   * Maintaining
 
 8. Record-and-Playback
+
+9. Driver Idiosyncrasies
+  * Shared capabilities
+  * Driver specific capabilities
