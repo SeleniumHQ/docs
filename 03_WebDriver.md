@@ -45,38 +45,59 @@ settings are examples of parameters that have different requirements
 depending on the browser.  This section explains the basic
 requirements for getting you started with the different browsers.
 
-### Firefox
+### Chromium/Chrome
 
-Requirements: 
+To drive Chrome or Chromium, you have to download
+[chromedriver](https://code.google.com/p/chromedriver/downloads/list)
+and put it in a folder that is on your system's path.
+
+On Linux or Mac OS X this means modifying the `PATH` environmental
+variable.  You can see what directories, separated by a colon, that
+makes up your system's path by executing the following command:
+
+```sh
+$ echo $PATH
+# => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```
+
+To include chromedriver on the path if it isn't already, make sure you
+include the chromedriver binary's parent directory:
+
+```sh
+$ export PATH="$PATH:/path/to/chromedriver
+```
+
+When chromedriver is available on your path, you should be able to
+execute the _chromedriver_ executable from any directory.
+
+To instantiate a Chrome/Chromium session, you can do the following:
 
 ```java
-DesiredCapabilities capabillities = DesiredCapabilities.firefox();
-capabillities.setCapability("version", "21");  // optionally specify which installed version of Firefox to request
+WebDriver driver = new ChromeDriver();
+```
+
+```ruby
+require "selenium-webdriver"
+driver = Selenium::WebDriver.for :chrome
+```
+
+The chromedriver is implemented as a WebDriver remote server that by
+exposing Chrome's internal automation proxy interface instructs the
+browser what to do.
+
+### Firefox
+
+The driver for Firefox is maintained by the Selenium project and works
+by installing a browser add-on in Firefox' profile before starting the
+browser.  The WebDriver client then communicates with that add-on to
+instruct the browser what to do.
+
+```java
 WebDriver driver = new FirefoxDriver();
 ```
 ```ruby
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :firefox
-```
-
-### Chrome
-
-To drive Chrome, you have to download
-[ChromeDriver](https://code.google.com/p/chromedriver/downloads/list)
-and either put it into a folder that is already in your PATH or add
-the new folder to your PATH. To find out what folders are currently in
-your PATH, execute this command in your Mac or Linux Terminal.
-
-```bash
-#!/bin/sh
-echo $PATH
-# => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-```
-
-```ruby
-# ruby
-require "selenium-webdriver"
-driver = Selenium::WebDriver.for :chrome
 ```
 
 ### Opera
