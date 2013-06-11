@@ -61,10 +61,12 @@ $ echo $PATH
 ```
 
 To include chromedriver on the path if it isn't already, make sure you
-include the chromedriver binary's parent directory:
+include the chromedriver binary's parent directory.  The following
+line will set the _$PATH_ environmental variable its current content,
+plus an additional path added after the colon:
 
 ```sh
-$ export PATH="$PATH:/path/to/chromedriver
+$ export PATH="$PATH:/path/to/chromedriver"
 ```
 
 When chromedriver is available on your path, you should be able to
