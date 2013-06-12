@@ -24,7 +24,7 @@ With Selenium, DSL are methods that are specifically written to make the API sim
 
 * Benefits
 	* Readable - Business stake holders can also understand as its readable in a user level.
-	* Writable - Easy to write with these and shall avoid code duplication.
+	* Writable - Easy to write. It Shall avoid code duplication.
 	* Extensible - Test base will extend with these DSL
 
 Writing your own DSL - By Wrapping WebDriver API's
