@@ -98,10 +98,54 @@ Acting on the AUT
 -----------------
 <!-- Setting elements text, clicking, drag&drop, running javascript, etc. -->
 
-You can set an element's text using the sendKeys method as follows:
+Using Click API to handle click events in WebDriver:
 ```java
-String name = "Charles";
-driver.findElement(By.name("name")).sendKeys(name);
+driver.findElement(By.Id("some id")).click();
+```
+Using SendKeys API to handle a type in WebDriver:
+```java
+String name = "selenium";
+driver.findElement(By.name("locatorByName")).sendKeys(name);
+```
+Using JavaScript in WebDriver:
+```java
+WebElement element = (WebElement) ((JavascriptExecutor)driver).executeScript("return $('.cheese')[0]");
+```
+Using Actions Class in WebDriver:
+	* handling drag and drop in WebDriver:
+	```java
+	WebElement sourceElement = driver.findElement(By.name("sourceElement"));
+	WebElement targetElement = driver.findElement(By.name("target"));
+
+	(new Actions(driver)).dragAndDrop(sourceElement, targetElement).perform();
+	```
+	* handling mouse hover in WebDriver:
+	```java
+	Actions builder = new Actions(driver);
+	WebElement tagElement = driver.findElement(By.id("some id"));
+	builder.moveToElement(tagElement).build().perform();
+	```
+	
+Using Select API to select a value from a drop down:
+```java
+Select select = new Select(driver.findElement(By.tagName("select")));
+select.deselectAll();
+select.selectByVisibleText("text");
+select.selectByIndex(index);
+select.selectByValue("value");
+```
+Using Alert API for handling Alerts in WebDriver:
+```java
+Alert alert = driver.switchTo().alert();
+alert.accept();
+alert.dismiss();
+alert.getText();
+```
+Using get and Navigate API for handling opening and navigation of applications in WebDriver:
+```java
+//both the API are used to open the specified url in the String
+driver.navigate().to("http://www.seleniumhq.org");
+driver.get("http://www.seleniumhq.org");
 ```
 
 Reading Page State
