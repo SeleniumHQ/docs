@@ -53,10 +53,10 @@ for the following specialized drivers:
 Locating Elements
 -----------------
 
-### Loating one element
+### Locating one element
 
-One of the most fundamental things to learn when using WebDriver is
-finding elements on the page.  It offers a number of built-in selector
+One of the most fundamental techniques to learn when using WebDriver is
+how to find elements on the page. WebDriver offers a number of built-in selector
 types, amongst them finding an element by its ID attribute:
 
 ```java
@@ -65,12 +65,13 @@ WebElement cheese = driver.findElement(By.id("cheese"));
 
 As seen in the example, locating elements in WebDriver is done on the
 `WebDriver` instance object.  The `findElement(By)` method returns
-another fundamental object type in WebDriver, called a `WebElement`.
-The types `WebDriver`'s and `WebElement`'s represent the browser
-instance and a DOM node respectively.
+another fundamental object type: the `WebElement`.
 
-Once you have have a reference to a web element you've located, you
-can narrow down your search by using the same call on that object
+* `WebDriver` represents the browser
+* `WebElement` represents a particular DOM node (a control, e.g. a link or input field, etc)
+
+Once you have have a reference to a web element that's been "found", you
+can narrow the scope of your search by using the same call on that object
 instance:
 
 ```java
@@ -81,15 +82,15 @@ WebElement cheddar = cheese.findElement(By.id("cheddar"));
 You can do this because both the `WebDriver` and `WebElement` types
 implement the
 [`SearchContext`](http://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/SearchContext.html)
-interface.  In WebDriver this is known as a _role-based interface_.
+interface. In WebDriver this is known as a _role-based interface_.
 Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature.  These interfaces are
+driver implementation supports a given feature. These interfaces are
 clearly defined and try to adhere to having only a single role of
 responsibility.  You can read more about WebDriver's design and what
 roles are supported in which drivers in the [Some Other Section Which
 Must Be Named](#).
 
-Consequently, the `By` interface you saw used above also supports a
+Consequently, the `By` interface used above also supports a
 number of additional locator strategies.  A nested lookup might not be
 the most effective cheese location strategy since it requires two
 separate commands to be issued to the browser; first searching the DOM
@@ -97,8 +98,8 @@ for an element with ID “cheese”, then a search for “cheddar” in a
 narrowed context.
 
 To improve the performance slightly we should try to use a more
-specific locator.  Thankfully WebDriver supports looking up elements
-by CSS locators and so we can contract the two previous locators into
+specific locator: WebDriver supports looking up elements
+by CSS locators, allowing us to combine the two previous locators into
 one search:
 
 ```java
@@ -107,7 +108,7 @@ driver.findElement(By.cssSelector("#cheese #cheddar"));
 
 ### Locating multiple elements
 
-Incidentally the document we are introspecting may turn out to have an
+It's possible that the document we are working with may turn have an
 ordered list of the cheese we like the best:
 
 ```html
@@ -119,12 +120,12 @@ ordered list of the cheese we like the best:
 </ul>
 ```
 
-Since more cheese is undisputably always better, and it would be
-cumbersome to have to retrieve each of the items individually, a far
+Since more cheese is undisputably better, and it would be
+cumbersome to have to retrieve each of the items individually, a
 superior technique for retrieving cheese is to make use of the
-pluralized version `findElements(By)`.  The return type of this method
-is a collection of web elements.  If only one element is found, the
-collection size will equal 1.  If no elements match the selection, an
+pluralized version `findElements(By)`. This method returns a collection
+of web elements. If only one element is found, it will still return 
+a collection (of one element). If no elements match the locator, an
 empty list will be returned.
 
 ```java
@@ -137,14 +138,14 @@ There are eight different built-in element location strategies in WebDriver:
 
 | Locator           | Description |
 |-------------------|-------------|
-| class name        | Locates elements whose class name contains the search value; compound class names are not permitted.
-| css selector      | Locates elements matching a CSS selector.
-| id                | Locates elements whose ID attribute matches the search value.
-| name              | Locates elements whose NAME attribute matches the search value.
-| link text         | Locates anchor elements whose visible text matches the search value.
-| partial link text | Locates anchor elements whose visible text partially matches the search value.
-| tag name          | Locates elements whose tag name matches the search value.
-| xpath             | Locates elements matching an XPath expression.
+| class name        | Locates elements whose class name contains the search value (compound class names are not permitted)
+| css selector      | Locates elements matching a CSS selector
+| id                | Locates elements whose ID attribute matches the search value
+| name              | Locates elements whose NAME attribute matches the search value
+| link text         | Locates anchor elements whose visible text matches the search value
+| partial link text | Locates anchor elements whose visible text partially matches the search value
+| tag name          | Locates elements whose tag name matches the search value
+| xpath             | Locates elements matching an XPath expression
 
 ### Tips on using selectors
 
@@ -173,18 +174,15 @@ readable as possible.  Asking WebDriver to traverse the DOM structure
 is an expensive operation, and the more you can narrow the scope of
 your search, the better.
 
-Acting on the AUT
------------------
-<!-- Setting elements text, clicking, drag&drop, running javascript, etc. -->
-
+Performing Actions on the AUT
+-----------------------------
 You can set an element's text using the sendKeys method as follows:
 ```java
 String name = "Charles";
 driver.findElement(By.name("name")).sendKeys(name);
 ```
 
-Some web application use javascript libraries to add drag-and-drop functionality. The following is a basic example of 
-dragging one element onto another element:
+Some web application use javascript libraries to add drag-and-drop functionality. The following is a basic example of dragging one element onto another element:
 
 ```java
 WebElement source = driver.findElement(By.id("source"));
@@ -252,3 +250,48 @@ public String extractScreenShot(WebDriverException e) {
 ```
 The Rest of the API
 -------------------
+The interactions you will have with Selenium will be through two interfaces:
+
+* WebDriver
+* WebElement
+
+These two interfaces offer nearly all the abstraction you need, allowing for rich, robust, 
+and reliable tests to be written in a way that allows you to ignore the implementation details.
+
+### WebDriver
+WebDriver represents **The Browser**. The methods available via the WebDriver interface allow you
+to ask questions or send commands
+
+#### Some Questions
+* What page am I on?
+* What is the title of the page?
+* What does the page's HTML source code look like?
+
+#### Some Commands
+* Go to another page (URL)
+* Reload the page (or go back/forward)
+* Locate elements on the page
+
+### WebElement
+WebElement represents controls, DOM nodes, and other types of elements on the page. The methods available allow you to ask questions and send commands to these elements
+
+#### Some Questions
+* What are some of your attributes?
+* Where on the page are you located?
+* If you're a link, what href to you point to?
+
+#### Some Commands
+* Click
+* Send Keys (to fill out a field)
+* Find "child" elements within your own DOM structure
+
+
+
+
+
+
+
+
+
+
+
