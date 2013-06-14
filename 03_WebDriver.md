@@ -115,7 +115,7 @@ in that they are both supported by third parties.  Consequently you
 need to set up a dependency to the `com.opera:operadriver` artifact
 (if using Maven) or [download a prebuilt standalone server
 JAR](https://code.google.com/p/selenium/downloads/list).  As long as
-the JAR is available on your classpaht, you should be good to go.
+the JAR is available on your classpath, you should be good to go.
 
 If you use Python or Ruby as your language of choice you must set the
 _SELENIUM_SERVER_JAR_ environmental variable to point to the location
