@@ -1,13 +1,13 @@
 Best Practices
 ==============
 
-Functional testing is difficult to get right for many reasons.  If not
+Functional testing is difficult to get right for many reasons. If not
 application state, complexity, and dependencies make testing difficult
 enough, dealing with browsers – and especially cross-browser
 incompatibilities – makes writing good tests a challenge.
 
 Selenium provides tools to make functional user interaction easier,
-but doesn't help you write well-architected test suites.  In this
+but doesn't help you write well-architected test suites. In this
 chapter we offer advice, or best practices if you will, on how to
 approach functional web page automation.
 
@@ -29,38 +29,77 @@ UI are located in one place.
 
 The Page Object Design Pattern provides the following advantage:
 
-There is clean separation between test code and page specific code
-such as locators (or their use if you’re using a UI map) and layout.
+*There is clean separation between test code and page specific code
+such as locators (or their use if you’re using a UI map) and layout.*
 
 Rule of Thumb:
 
-- Page objects should return a value
-- If you submit a page and are redirected, it should return the new
+#### Page object methods should return a value
+* If you submit a page and are redirected, it should return the new
   page object
-- If you click submit on login and you want to check to see if a user
+* If you click submit on login and you want to check to see if a user
   is logged in it should return True or False in a method
+
 Domain Specific Language
 -------------------------
-DSL	- Domain Specific Language.
-In general DSL is a programming language dedicated to a particular problem that is created specifically to solve problems.
+*DSL* - Domain Specific Language.
+A DSL is a system which provides the user an expressive means of solving a problem. It allows a user to interact with the system on their terms--not just programmer-speak
 
-With Selenium, DSL are methods that are specifically written to make the API simple and readable which would enable a good rapport between the developer's and the business stake holders.
+Your users, in general, don't care how your site looks. They don't care about the decoration or the animations or the graphics. They want to use your system to push their new employees through the process with minimal difficulty. They want to book travel to Alaska. They want to configure and buy unicorns at a discount. Your job as the tester is to come as close as you can to "capturing" this mind-set. With that in mind, we set about "modeling" the application you're working on, such that the test scripts (the user's only pre-release proxy) "speak" for and represent the user.
 
-* Benefits
-	* Readable - Business stake holders can also understand as its readable in a user level.
-	* Writable - Easy to write. It Shall avoid code duplication.
-	* Extensible - Test base will extend with these DSL
+With Selenium, DSL is usually represented by methods, written to make the API simple and readable--they enable a rapport between the developers and the stakeholders (users, product owners, business intelligence specialists, etc)
 
-Writing your own DSL - By Wrapping WebDriver API's
+#### Benefits
+* Readable - Business stake holders can understand it
+* Writable - Easy to write--avoids unnecessary duplication
+* Extensible - Functionality can (reasonably) be added without breaking contracts and existing functionality
+* Maintainable - By leaving the implementation details out of test cases, you are well-insulated against changes to the AUT
 
 #### Java
+Here is an example of a reasonable DSL method in Java. For brevity's sake, it assumes the "driver" object is pre-defined and available to the method
 
 ```java
-public void findElementAndType(webDriver driver, String elementLocator,String testData){
-driver.findElement(By.name(elemenLocator)).clear();
-driver.findElement(By.name(elemenLocator)).sendKeys(testData);
+/**
+ * Takes a username and password, fills out the fields, and clicks "login"
+ * @returns An instance of the AccountPage
+ */
+public AccountPage loginAsUser(String username, String password) {
+    driver.findElement(By.id("loginField")).clear();
+    driver.findElement(By.id("loginField")).sendKeys(testData);
+
+    //Fill out the password field. The locator we're using is "By.id", and we should have it 
+    // defined elsewhere in the class
+    driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys();
+
+    //Click the login button, which happens to have the id "submit"
+    driver.findElement(By.id("submit")).click();
+
+    //Create and return a new instance of the AccountPage (via the built-in Selenium PageFactory)
+    return PageFactory.newInstance(AccountPage.class);
 }
 ```
+
+This method completely abstracts the concepts of input fields, buttons, clicking, and even pages
+from your test code. Using this approach, all your tester has to do is call this method. This gives
+you a maintenance advantage: if the login fields ever changed, you would only ever have to change 
+this method--not your tests.
+
+```java
+public void loginTest() {
+    loginAsUser("cbrown", "cl0wn3");
+
+    //now that we're logged in, do some other stuff--since we used a DSL to support our testers, it's 
+    // as easy as choosing from available methods
+    do.something();
+    do.somethingElse();
+    Assert.assertTrue("Something should have been done!", something.wasDone();
+
+    //Note that we still haven't referred to a button or web control anywhere in this script...
+}
+```
+
+It bears repeating: One of your primary goals should be writing an API that allows your tests to address *the problem at hand, and NOT the problem of the UI*. The UI is a secondary concern for your users--they don't care about the UI, they just want to get their job done. Your test scripts should read like a laundry list of things the user whats to DO, and the things they want to KNOW. The tests should not concern themselves with HOW the UI requires you to go about it.  
 
 Generating Application State
 ----------------------------
