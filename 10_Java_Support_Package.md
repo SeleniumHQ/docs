@@ -62,3 +62,81 @@ Or you can convert the colour into one of the following formats and perform a st
 ```
 
 Colours are no longer a problem
+
+Working With <select> Elements
+--------------------
+
+Select elements can require quite a bit of boiler plate code to automate, to reduce this and make your tests cleaner there is a Select class in the Selenium support package.  To use it you will need the following import:
+
+```java
+    import org.openqa.selenium.support.ui.Select;
+```
+
+You are then able to create a Select object using a WebElement that references a <select> element.
+
+```java
+    WebElement selectElement = driver.findElement(By.id("selectElementID"));
+    Select selectObject = new Select(selectElement);
+```
+
+The select object will now give you a series of commands that allow you to interact with a <select> element.  First of all you have some options to select various options from the <select> element.  Here is an example <select> element:
+
+```html
+    <!-- The second value will be selected initially -->
+    <select name="select">
+      <option value="value1">Bread</option>
+      <option value="value2" selected>Milk</option>
+      <option value="value3">Cheese</option>
+    </select>
+```
+
+To select the first option from the above <select> element you now have three options:
+
+```java
+    //Select an <option> based upon the <select> elements internal index
+    selectObject.selectByIndex(1);
+
+    //Select an <option> based upon its value attribute
+    selectObject.selectByValue("value1");
+
+    //Select an <option> based upon its text
+    selectObject.selectByVisibleText("Bread");
+```
+
+You can then check which options are selected by using:
+
+```java
+    //Return a WebElement<List> of options that have been selected
+    List<WebElement> allSelectedOptions = selectObject.getAllSelectedOptions();
+
+    //Return a WebElement referencing the first selection option found by walking down the DOM
+    WebElement firstSelectedOption = selectObject.getFirstSelectedOption();
+```
+
+Or you may just be interested in what <option> elements the <select> element contains:
+
+```java
+    //Return a WebElement<List> of options that the <select> element contains
+    List<WebElement> allAvailableOptions = selectObject.getOptions();
+```
+
+If you then want to deselect any elements you now have four options
+
+```java
+    //Deselect an <option> based upon the <select> elements internal index
+    selectObject.deselectByIndex(1);
+
+    //Deselect an <option> based upon its value attribute
+    selectObject.deselectByValue("value1");
+
+    //Deselect an <option> based upon its text
+    selectObject.deselectByVisibleText("Bread");
+
+    //Deselect all selected <option> elements
+    selectObject.deselectAll();
+```
+Finally, some <select> elements allow you to select more than one option, you can find out if your <select> element is one of these by using:
+
+```java
+    Boolean doesThisAllowMultipleSelections = selectObject.isMultiple();
+```
