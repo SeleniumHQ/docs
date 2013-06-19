@@ -1,9 +1,9 @@
 Best Practices
 ==============
 
-Functional testing is difficult to get right for many reasons. If not
-application state, complexity, and dependencies make testing difficult
-enough, dealing with browsers – and especially cross-browser
+Functional testing is difficult to get right for many reasons. As if 
+application state, complexity, and dependencies don't make testing 
+difficult enough, dealing with browsers – and especially cross-browser
 incompatibilities – makes writing good tests a challenge.
 
 Selenium provides tools to make functional user interaction easier,
@@ -43,20 +43,37 @@ Rule of Thumb:
 Domain Specific Language
 -------------------------
 *DSL* - Domain Specific Language.
-A DSL is a system which provides the user an expressive means of solving a problem. It allows a user to interact with the system on their terms--not just programmer-speak
+A DSL is a system which provides the user an expressive means of 
+solving a problem. It allows a user to interact with the system on 
+their terms--not just programmer-speak.
 
-Your users, in general, don't care how your site looks. They don't care about the decoration or the animations or the graphics. They want to use your system to push their new employees through the process with minimal difficulty. They want to book travel to Alaska. They want to configure and buy unicorns at a discount. Your job as the tester is to come as close as you can to "capturing" this mind-set. With that in mind, we set about "modeling" the application you're working on, such that the test scripts (the user's only pre-release proxy) "speak" for and represent the user.
+Your users, in general, don't care how your site looks. They don't 
+care about the decoration or the animations or the graphics. They 
+want to use your system to push their new employees through the 
+process with minimal difficulty. They want to book travel to Alaska. 
+They want to configure and buy unicorns at a discount. Your job as 
+the tester is to come as close as you can to "capturing" this 
+mind-set. With that in mind, we set about "modeling" the application 
+you're working on, such that the test scripts (the user's only 
+pre-release proxy) "speak" for and represent the user.
 
-With Selenium, DSL is usually represented by methods, written to make the API simple and readable--they enable a rapport between the developers and the stakeholders (users, product owners, business intelligence specialists, etc)
+With Selenium, DSL is usually represented by methods, written to make 
+the API simple and readable--they enable a rapport between the 
+developers and the stakeholders (users, product owners, business 
+intelligence specialists, etc)
 
 #### Benefits
 * Readable - Business stake holders can understand it
 * Writable - Easy to write--avoids unnecessary duplication
-* Extensible - Functionality can (reasonably) be added without breaking contracts and existing functionality
-* Maintainable - By leaving the implementation details out of test cases, you are well-insulated against changes to the AUT
+* Extensible - Functionality can (reasonably) be added without 
+* breaking contracts and existing functionality
+* Maintainable - By leaving the implementation details out of test 
+* cases, you are well-insulated against changes to the AUT
 
 #### Java
-Here is an example of a reasonable DSL method in Java. For brevity's sake, it assumes the "driver" object is pre-defined and available to the method
+Here is an example of a reasonable DSL method in Java. For brevity's 
+sake, it assumes the "driver" object is pre-defined and available to 
+the method
 
 ```java
 /**
@@ -99,26 +116,33 @@ public void loginTest() {
 }
 ```
 
-It bears repeating: One of your primary goals should be writing an API that allows your tests to address *the problem at hand, and NOT the problem of the UI*. The UI is a secondary concern for your users--they don't care about the UI, they just want to get their job done. Your test scripts should read like a laundry list of things the user whats to DO, and the things they want to KNOW. The tests should not concern themselves with HOW the UI requires you to go about it.  
+It bears repeating: One of your primary goals should be writing an 
+API that allows your tests to address *the problem at hand, and NOT 
+the problem of the UI*. The UI is a secondary concern for your 
+users--they don't care about the UI, they just want to get their job 
+done. Your test scripts should read like a laundry list of things 
+the user wants to DO, and the things they want to KNOW. The tests 
+should not concern themselves with HOW the UI requires you to go 
+about it.  
 
 Generating Application State
 ----------------------------
 
 Selenium should not be used to prepare a test case.  All repetitive
 actions, and prepration for a test case should be done through other
-methods.  An example, most Web UI have authentication(login form).
-Eliminating logging via web browser before every test will improve
-both the speed and stability of the test. A method should be created
-to gain access to the AUT(i.e.-using an API to login and set cookie in
-browser object).  Also, creating methods to pre-load data for testing
-should not be done using Selenium.  As mentioned previously, existing
-APIs should be leveraged to create data for the AUT.
+methods.  An example, most Web UIs have authentication (e.g., a login 
+form).  Eliminating logging in via web browser before every test will 
+improve both the speed and stability of the test. A method should be 
+created to gain access to the AUT (e.g. using an API to login and set 
+cookie inbrowser object).  Also, creating methods to pre-load data for 
+testing should not be done using Selenium.  As mentioned previously, 
+existing APIs should be leveraged to create data for the AUT.
 
 Mock External Services
 ----------------------
 
 Eliminating the dependencies on external services will greatly improve
-the speed and stability on tests.
+the speed and stability of your tests.
 
 Improved Reporting
 ------------------
@@ -127,10 +151,9 @@ Selenium is not designed to report on the status of test cases
 run. Taking advantage of the built-in reporting capabilities of unit
 test frameworks is a good start.  Most unit test frameworks have
 reports that can generate xUnit or HTML formatted reports.  xUnit
-reports are popular for importing results to a Continuous
-Integration(CI) server like Jenkins, Travis, Bamboo, etc.  Here are
-some links for more information regarding report outputs for several
-languages
+reports are popular for importing results to a Continuous Integration 
+(CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links 
+for more information regarding report outputs for several languages.
 
 Python:
 
