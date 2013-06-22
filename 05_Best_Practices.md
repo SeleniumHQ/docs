@@ -164,6 +164,74 @@ Python:
 Avoid Sharing State
 -------------------
 
+Consider Using a Fluent API
+-------------------
+Martin Fowler coined the term "Fluent API".  You could search the Google search page using a fluent
+API call like so:  
+
+    driver.get().withFluent().setSearchString().clickSearchButton();
+
+Using a code snippet like so:
+```java
+public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
+
+    public class GSPFluentInterface {
+        
+        private GoogleSearchPage gsp;
+
+        public GSPFluentInterface(GoogleSearchPage googleSearchPage) {
+            gsp = googleSearchPage;
+        }
+
+        public GSPFluentInterface clickSearchButton() {
+            gsp.searchButton.click();
+            return this;
+        }
+
+        public GSPFluentInterface setSearchString( String sstr ) {
+            clearAndType( gsp.searchField, sstr );
+            return this;
+        }
+
+    }
+    
+    private GSPFluentInterface gspfi;
+    @FindBy(id = "gbqfq") private WebElement searchField;
+    @FindBy(id = "gbqfb") private WebElement searchButton;
+
+    public GoogleSearchPage() {
+        System.out.println("GoogleSearchPage constructor...");
+        gspfi = new GSPFluentInterface( this );
+        this.get(); // if load() fails, calls isLoaded() until page is finished loading
+        PageFactory.initElements(driver, this); // initialize WebElements on page 
+    }
+    
+    public void clickSearchButton() {
+        searchButton.click();
+    }
+    
+    public void setSearchString( String sstr ) {
+        clearAndType( searchField, sstr );
+    }
+    
+    @Override
+    protected void isLoaded() throws Error {      
+    	  System.out.println("GoogleSearchPage.isLoaded()...");
+        Assert.assertTrue("Google search page is not yet loaded.", isSearchFieldVisible() );
+    }
+
+    @Override
+    protected void load() {
+        System.out.println("GoogleSearchPage.load()...");
+        if ( isSFieldPresent ) {
+            Wait<WebDriver> wait = new WebDriverWait( driver, 3 );        
+            wait.until( visibilityOfElementLocated( By.id("gbqfq") ) ).click();
+        }
+    }
+
+}
+```
+
 Fresh browser per test
 ----------------------
 
