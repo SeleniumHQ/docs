@@ -42,38 +42,40 @@ Rule of Thumb:
 
 Domain Specific Language
 -------------------------
-*DSL* - Domain Specific Language.
-A DSL is a system which provides the user an expressive means of 
-solving a problem. It allows a user to interact with the system on 
-their terms--not just programmer-speak.
 
-Your users, in general, don't care how your site looks. They don't 
-care about the decoration or the animations or the graphics. They 
-want to use your system to push their new employees through the 
-process with minimal difficulty. They want to book travel to Alaska. 
-They want to configure and buy unicorns at a discount. Your job as 
-the tester is to come as close as you can to "capturing" this 
-mind-set. With that in mind, we set about "modeling" the application 
-you're working on, such that the test scripts (the user's only 
-pre-release proxy) "speak" for and represent the user.
+A domain specific language (DSL) is a system which provides the user
+an expressive means of solving a problem.  It allows a user to
+interact with the system on their terms – not just programmer-speak.
 
-With Selenium, DSL is usually represented by methods, written to make 
-the API simple and readable--they enable a rapport between the 
-developers and the stakeholders (users, product owners, business 
-intelligence specialists, etc)
+Your users, in general, don't care how your site looks.  They don't
+care about the decoration or the animations or the graphics.  They
+want to use your system to push their new employees through the
+process with minimal difficulty.  They want to book travel to Alaska.
+They want to configure and buy unicorns at a discount. Your job as the
+tester is to come as close as you can to “capturing” this mind-set.
+With that in mind, we set about “modeling” the application you're
+working on, such that the test scripts (the user's only pre-release
+proxy) “speak” for and represent the user.
+
+With Selenium, DSL is usually represented by methods, written to make
+the API simple and readable – they enable a repport between the
+developers and the stakeholders (users, product owners, business
+intelligence specialists, etc.).
 
 #### Benefits
-* Readable - Business stake holders can understand it
-* Writable - Easy to write--avoids unnecessary duplication
-* Extensible - Functionality can (reasonably) be added without 
-* breaking contracts and existing functionality
-* Maintainable - By leaving the implementation details out of test 
-* cases, you are well-insulated against changes to the AUT
+
+* *Readable*: Business stake holders can understand it.
+* *Writable*: Easy to write – avoids unnecessary duplication.
+* *Extensible*: Functionality can (reasonably) be added without
+   breaking contracts and existing functionality.
+* *Maintainable*: By leaving the implementation details out of test
+   cases, you are well-insulated against changes to the AUT.
 
 #### Java
-Here is an example of a reasonable DSL method in Java. For brevity's 
-sake, it assumes the "driver" object is pre-defined and available to 
-the method
+
+Here is an example of a reasonable DSL method in Java.  For brevity's
+sake, it assumes the `driver` object is pre-defined and available to
+the method.
 
 ```java
 /**
