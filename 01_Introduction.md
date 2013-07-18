@@ -127,8 +127,8 @@ Each time you move through the workflow, you want to try to avoid having to crea
 
 Types Of Testing
 ----------------
-TODO: Add paragraphs about acceptance testing, regression testing, test driven development, and/or behavior 
-driven development (JBehave, Capybara, & Robot Framework).
+TODO: Add paragraphs about acceptance testing, performance testing, load testing, regression testing, test driven development, and/or behavior 
+driven development (JBehave, Capybara, & Robot Framework), with how they relate to Selenium.
 
 
 About These Docs
