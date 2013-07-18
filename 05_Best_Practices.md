@@ -197,7 +197,7 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
             clearAndType( gsp.searchField, sstr );
             return this;
         }
-
+        
     }
     
     private GSPFluentInterface gspfi;
@@ -210,6 +210,10 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
         this.get(); // if load() fails, calls isLoaded() until page is finished loading
         PageFactory.initElements(driver, this); // initialize WebElements on page 
     }
+    
+    public GSPFluentInterface withFluent() {
+        return gspfi;
+    }  
     
     public void clickSearchButton() {
         searchButton.click();
