@@ -170,8 +170,11 @@ Consider Using a Fluent API
 -------------------
 Martin Fowler coined the term "Fluent API".  You could search the Google search page using a fluent
 API call like so:  
-
-    driver.get().withFluent().setSearchString().clickSearchButton();
+```java
+    driver.get( "http://www.google.com/webhp?hl=en&tab=ww" );
+    GoogleSearchPage gsp = new GoogleSearchPage();
+    gsp.get().withFluent().setSearchString().clickSearchButton();
+```
 
 Using a code snippet like so:
 ```java
@@ -194,7 +197,7 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
             clearAndType( gsp.searchField, sstr );
             return this;
         }
-
+        
     }
     
     private GSPFluentInterface gspfi;
@@ -207,6 +210,10 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
         this.get(); // if load() fails, calls isLoaded() until page is finished loading
         PageFactory.initElements(driver, this); // initialize WebElements on page 
     }
+    
+    public GSPFluentInterface withFluent() {
+        return gspfi;
+    }  
     
     public void clickSearchButton() {
         searchButton.click();
