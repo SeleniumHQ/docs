@@ -3,7 +3,8 @@ Table of Contents
 
 1. Introduction
   * The Selenium Project and Tools
-  * Functional Test Automation Basics
+  * Test Automation Basics
+  * Types of Testing
   * These Docs
 
 2. Getting Started with WebDriver
