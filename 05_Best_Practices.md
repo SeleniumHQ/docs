@@ -171,7 +171,9 @@ Consider Using a Fluent API
 Martin Fowler coined the term "Fluent API".  You could search the Google search page using a fluent
 API call like so:  
 
-    driver.get().withFluent().setSearchString().clickSearchButton();
+    driver.get( "http://www.google.com/webhp?hl=en&tab=ww" );
+    GoogleSearchPage gsp = new GoogleSearchPage();
+    gsp.get().withFluent().setSearchString().clickSearchButton();
 
 Using a code snippet like so:
 ```java
