@@ -146,6 +146,7 @@ Mock External Services
 Eliminating the dependencies on external services will greatly improve
 the speed and stability of your tests.
 
+
 Improved Reporting
 ------------------
 
@@ -163,20 +164,24 @@ Python:
   - xUnit: http://nose.readthedocs.org/en/latest/plugins/xunit.html
   - HTML: https://nose.readthedocs.org/en/latest/plugins/cover.html?highlight=html%20reports
 
+
 Avoid Sharing State
 -------------------
+TODO: Add paragraph here.
+
 
 Consider Using a Fluent API
 -------------------
-Martin Fowler coined the term "Fluent API".  You could search the Google search page using a fluent
-API call like so:  
+Martin Fowler coined the term "Fluent API".  Selenium already implements something like this in their *FluentWait* 
+class which is meant as an alternative to the standard *Wait* class.  You could enable the Fluent API design pattern in your page object and then query the Google search page
+with a code snippet like this one:  
 ```java
     driver.get( "http://www.google.com/webhp?hl=en&tab=ww" );
     GoogleSearchPage gsp = new GoogleSearchPage();
-    gsp.get().withFluent().setSearchString().clickSearchButton();
+    gsp.withFluent().setSearchString().clickSearchButton();
 ```
 
-Using a code snippet like so:
+The Google page object class with this fluent behavior might look like this:
 ```java
 public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
 
@@ -205,7 +210,6 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
     @FindBy(id = "gbqfb") private WebElement searchButton;
 
     public GoogleSearchPage() {
-        System.out.println("GoogleSearchPage constructor...");
         gspfi = new GSPFluentInterface( this );
         this.get(); // if load() fails, calls isLoaded() until page is finished loading
         PageFactory.initElements(driver, this); // initialize WebElements on page 
@@ -225,13 +229,11 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
     
     @Override
     protected void isLoaded() throws Error {      
-    	  System.out.println("GoogleSearchPage.isLoaded()...");
         Assert.assertTrue("Google search page is not yet loaded.", isSearchFieldVisible() );
     }
 
     @Override
     protected void load() {
-        System.out.println("GoogleSearchPage.load()...");
         if ( isSFieldPresent ) {
             Wait<WebDriver> wait = new WebDriverWait( driver, 3 );        
             wait.until( visibilityOfElementLocated( By.id("gbqfq") ) ).click();
