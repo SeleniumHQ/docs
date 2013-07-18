@@ -20,7 +20,7 @@ Many of the most important companies in the world have adopted Selenium for thei
 As the web becomes more complicated and new technologies are added to sites around the world, it is the mission of this project to keep up with them where possible. Being an Open Source project, this support is provided through the generous donation of time from many volunteers, every one of which has a "day job". Another mission of the project is to encourage more volunteers and build a strong community, so that the project can continue to keep up with emerging technologies and remain the dominant platform for test automation.
 
 
-Functional Test Automation Basics
+Test Automation Basics
 ---------------------------------
 ### I need to test my application. Now what??!
 
@@ -123,6 +123,13 @@ Note that the tester still hasn't done anything but talk about unicorns in this 
 Your Page Objects will require some small maintenance in order to conform to the site redesign, but these tests will remain the same. Taking this basic design, you will want to keep going through your workflows with the fewest browser-facing steps possible. Your next workflow will involve adding a unicorn to the shopping cart. You will probably want many iterations of this test in order to make sure the cart is keeping its state properly: are there more than one unicorns in the cart before you start? How many can fit in the shopping cart? If you create more than one with the same name and/or features, will it break? Will it only keep the existing one or will it add another?
 
 Each time you move through the workflow, you want to try to avoid having to create an account, login as the user, and configure the unicorn. Ideally you'll be able to create and account and pre-configure a unicorn via the API or database. Then all you have to do is log in as the user, locate Sparkles, and add her to the cart.
+
+
+Types Of Testing
+----------------
+TODO: Add paragraphs about acceptance testing, regression testing, test driven development, and/or behavior 
+driven development (JBehave, Capybara, & Robot Framework).
+
 
 About These Docs
 ----------------
