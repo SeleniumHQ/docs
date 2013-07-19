@@ -153,7 +153,7 @@ And here is an example of a node1Config.json file:
             "platform": "WINDOWS"
         },
         {
-            "browserName": "internetExplorer",
+            "browserName": "internet explorer",
             "maxInstances": 1,
             "platform": "WINDOWS"
         }
