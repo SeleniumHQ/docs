@@ -207,11 +207,30 @@ Waiting is having the automated task execution elapse a certain amount of time b
 ### Implicit Wait
 An implicit wait is to tell WebDriver to poll the DOM for a certain amount of time when trying to find an element or elements if they are not immediately available. The default setting is 0. Once set, the implicit wait is set for the life of the WebDriver object instance.
 
+```java
+WebDriver driver = new FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.get("http://somedomain/url_that_delays_loading");
+WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
+```
+
 ### Explicit Wait
 An explicit waits is code you define to wait for a certain condition to occur before proceeding further in the code.
 
+```java
+WebDriver driver = new FirefoxDriver();
+driver.get("http://somedomain/url_that_delays_loading");
+WebElement myDynamicElement = (new WebDriverWait(driver, 10))
+  .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));
+```
+
 #### Expected Conditions
 There are some common conditions that are frequently come across when automating web browsers. 
+
+```java
+WebDriverWait wait = new WebDriverWait(driver, 10);
+WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("someid")));
+```
 
 ```ruby
 # ruby
