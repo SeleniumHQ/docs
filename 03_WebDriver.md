@@ -78,7 +78,7 @@ To instantiate a Chrome/Chromium session, you can do the following:
 WebDriver driver = new ChromeDriver();
 ```
 
-Remeber that you have to set the path to the chromedriver executable.
+Remember that you have to set the path to the chromedriver executable.
 This is possible using the following line:
 
 ```java
