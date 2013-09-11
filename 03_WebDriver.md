@@ -71,18 +71,20 @@ $ export PATH="$PATH:/path/to/chromedriver"
 
 When chromedriver is available on your path, you should be able to
 execute the _chromedriver_ executable from any directory.
+Lets say the chromedriver.exe is located in 
+/src/test/resources/chromedriver.exe.
+Like this, you can set the system property in the code itself.
+NOTE: you won't have to export it to your PATH as displayed above
+when using this method!
+
+```java
+System.setProperty("webdriver.chrome.driver", "/src/test/resources/chromedriver.exe");
+```
 
 To instantiate a Chrome/Chromium session, you can do the following:
 
 ```java
 WebDriver driver = new ChromeDriver();
-```
-
-Remeber that you have to set the path to the chromedriver executable.
-This is possible using the following line:
-
-```java
-System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
 ```
 
 ```ruby
