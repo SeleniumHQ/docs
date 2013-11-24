@@ -9,8 +9,8 @@ Computers and Humans Apart_, are explicitly designed to prevent
 automations, so don't try!  There are two primary strategies to get
 around CAPTCHA checks:
 
-* Disable CAPTCHAs in your test environments
-* Add a hook to allow tests to bypass the CAPTCHA
+  * Disable CAPTCHAs in your test environments
+  * Add a hook to allow tests to bypass the CAPTCHA
 
 File Download Support
 ---------------------

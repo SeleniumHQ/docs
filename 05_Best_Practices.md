@@ -1,8 +1,8 @@
 Best Practices
 ==============
 
-Functional testing is difficult to get right for many reasons. As if 
-application state, complexity, and dependencies don't make testing 
+Functional testing is difficult to get right for many reasons. As if
+application state, complexity, and dependencies don't make testing
 difficult enough, dealing with browsers – and especially cross-browser
 incompatibilities – makes writing good tests a challenge.
 
@@ -86,7 +86,7 @@ public AccountPage loginAsUser(String username, String password) {
     driver.findElement(By.id("loginField")).clear();
     driver.findElement(By.id("loginField")).sendKeys(testData);
 
-    //Fill out the password field. The locator we're using is "By.id", and we should have it 
+    //Fill out the password field. The locator we're using is "By.id", and we should have it
     // defined elsewhere in the class
     driver.findElement(By.id("password")).clear();
     driver.findElement(By.id("password")).sendKeys();
@@ -99,16 +99,17 @@ public AccountPage loginAsUser(String username, String password) {
 }
 ```
 
-This method completely abstracts the concepts of input fields, buttons, clicking, and even pages
-from your test code. Using this approach, all your tester has to do is call this method. This gives
-you a maintenance advantage: if the login fields ever changed, you would only ever have to change 
-this method--not your tests.
+This method completely abstracts the concepts of input fields,
+buttons, clicking, and even pages from your test code. Using this
+approach, all your tester has to do is call this method. This gives
+you a maintenance advantage: if the login fields ever changed, you
+would only ever have to change this method--not your tests.
 
 ```java
 public void loginTest() {
     loginAsUser("cbrown", "cl0wn3");
 
-    //now that we're logged in, do some other stuff--since we used a DSL to support our testers, it's 
+    //now that we're logged in, do some other stuff--since we used a DSL to support our testers, it's
     // as easy as choosing from available methods
     do.something();
     do.somethingElse();
@@ -118,26 +119,26 @@ public void loginTest() {
 }
 ```
 
-It bears repeating: One of your primary goals should be writing an 
-API that allows your tests to address *the problem at hand, and NOT 
-the problem of the UI*. The UI is a secondary concern for your 
-users--they don't care about the UI, they just want to get their job 
-done. Your test scripts should read like a laundry list of things 
-the user wants to DO, and the things they want to KNOW. The tests 
-should not concern themselves with HOW the UI requires you to go 
-about it.  
+It bears repeating: One of your primary goals should be writing an
+API that allows your tests to address *the problem at hand, and NOT
+the problem of the UI*. The UI is a secondary concern for your
+users--they don't care about the UI, they just want to get their job
+done. Your test scripts should read like a laundry list of things
+the user wants to DO, and the things they want to KNOW. The tests
+should not concern themselves with HOW the UI requires you to go
+about it.
 
 Generating Application State
 ----------------------------
 
 Selenium should not be used to prepare a test case.  All repetitive
 actions, and prepration for a test case should be done through other
-methods.  An example, most Web UIs have authentication (e.g., a login 
-form).  Eliminating logging in via web browser before every test will 
-improve both the speed and stability of the test. A method should be 
-created to gain access to the AUT (e.g. using an API to login and set 
-cookie inbrowser object).  Also, creating methods to pre-load data for 
-testing should not be done using Selenium.  As mentioned previously, 
+methods.  An example, most Web UIs have authentication (e.g., a login
+form).  Eliminating logging in via web browser before every test will
+improve both the speed and stability of the test. A method should be
+created to gain access to the AUT (e.g. using an API to login and set
+cookie inbrowser object).  Also, creating methods to pre-load data for
+testing should not be done using Selenium.  As mentioned previously,
 existing APIs should be leveraged to create data for the AUT.
 
 Mock External Services
@@ -154,8 +155,8 @@ Selenium is not designed to report on the status of test cases
 run. Taking advantage of the built-in reporting capabilities of unit
 test frameworks is a good start.  Most unit test frameworks have
 reports that can generate xUnit or HTML formatted reports.  xUnit
-reports are popular for importing results to a Continuous Integration 
-(CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links 
+reports are popular for importing results to a Continuous Integration
+(CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links
 for more information regarding report outputs for several languages.
 
 Python:
@@ -172,21 +173,27 @@ TODO: Add paragraph here.
 
 Consider Using a Fluent API
 -------------------
-Martin Fowler coined the term "Fluent API".  Selenium already implements something like this in their *FluentWait* 
-class which is meant as an alternative to the standard *Wait* class.  You could enable the Fluent API design pattern in your page object and then query the Google search page
-with a code snippet like this one:  
+
+Martin Fowler coined the term "Fluent API".  Selenium already
+implements something like this in their *FluentWait* class which is
+meant as an alternative to the standard *Wait* class.  You could
+enable the Fluent API design pattern in your page object and then
+query the Google search page with a code snippet like this one:
+
 ```java
     driver.get( "http://www.google.com/webhp?hl=en&tab=ww" );
     GoogleSearchPage gsp = new GoogleSearchPage();
     gsp.withFluent().setSearchString().clickSearchButton();
 ```
 
-The Google page object class with this fluent behavior might look like this:
+The Google page object class with this fluent behavior might look like
+this:
+
 ```java
 public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
 
     public class GSPFluentInterface {
-        
+
         private GoogleSearchPage gsp;
 
         public GSPFluentInterface(GoogleSearchPage googleSearchPage) {
@@ -202,9 +209,9 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
             clearAndType( gsp.searchField, sstr );
             return this;
         }
-        
+
     }
-    
+
     private GSPFluentInterface gspfi;
     @FindBy(id = "gbqfq") private WebElement searchField;
     @FindBy(id = "gbqfb") private WebElement searchButton;
@@ -212,30 +219,30 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
     public GoogleSearchPage() {
         gspfi = new GSPFluentInterface( this );
         this.get(); // if load() fails, calls isLoaded() until page is finished loading
-        PageFactory.initElements(driver, this); // initialize WebElements on page 
+        PageFactory.initElements(driver, this); // initialize WebElements on page
     }
-    
+
     public GSPFluentInterface withFluent() {
         return gspfi;
-    }  
-    
+    }
+
     public void clickSearchButton() {
         searchButton.click();
     }
-    
+
     public void setSearchString( String sstr ) {
         clearAndType( searchField, sstr );
     }
-    
+
     @Override
-    protected void isLoaded() throws Error {      
+    protected void isLoaded() throws Error {
         Assert.assertTrue("Google search page is not yet loaded.", isSearchFieldVisible() );
     }
 
     @Override
     protected void load() {
         if ( isSFieldPresent ) {
-            Wait<WebDriver> wait = new WebDriverWait( driver, 3 );        
+            Wait<WebDriver> wait = new WebDriverWait( driver, 3 );
             wait.until( visibilityOfElementLocated( By.id("gbqfq") ) ).click();
         }
     }
