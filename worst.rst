@@ -4,8 +4,8 @@ Worst Practices
 Captchas
 --------
 
-CAPTCHA, short for _Completely Automated Public Turing test to tell
-Computers and Humans Apart_, are explicitly designed to prevent
+CAPTCHA, short for *Completely Automated Public Turing test to tell
+Computers and Humans Apart*, are explicitly designed to prevent
 automations, so don't try!  There are two primary strategies to get
 around CAPTCHA checks:
 
@@ -21,7 +21,7 @@ HTTP Response Codes
 For some browser configurations in Selenium RC, Selenium acted as a
 proxy between the browser and the site being automated.  This meant
 that all browser traffic passed through Selenium, and could be
-captured or manipulated.  The `captureNetworkTraffic() method
+captured or manipulated.  The ``captureNetworkTraffic()`` method
 purported to capture all of the network traffic between the browser
 and the site being automated, including HTTP response codes.
 
@@ -35,7 +35,7 @@ important.
 The browser will always represent the HTTP status code, imagine for
 example a 404 or a 500 error page.  A simple way to “fail fast” when
 you encounter one of these error pages is to check the page title or
-content of a reliable point (e.g. the `<h1>` tag) after every page
+content of a reliable point (e.g. the ``<h1>`` tag) after every page
 load.  If you are using the page object model you can include this
 check in your class constructor or similar point where the page load
 is expected.  Occasionally the HTTP code may even be represented in

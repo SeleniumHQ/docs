@@ -73,37 +73,37 @@ Download the "selenium-server.zip" and unpack. Put the JARs on the
 CLASSPATH Create a new class called "AppServer". Here, I'm using
 Jetty, so you'll need to download that as well:
 
-```java
-import org.mortbay.jetty.Connector;
-import org.mortbay.jetty.Server;
-import org.mortbay.jetty.nio.SelectChannelConnector;
-import org.mortbay.jetty.security.SslSocketConnector;
-import org.mortbay.jetty.webapp.WebAppContext;
+.. code-block:: java
 
-import javax.servlet.Servlet;
-import java.io.File;
+   import org.mortbay.jetty.Connector;
+   import org.mortbay.jetty.Server;
+   import org.mortbay.jetty.nio.SelectChannelConnector;
+   import org.mortbay.jetty.security.SslSocketConnector;
+   import org.mortbay.jetty.webapp.WebAppContext;
 
-import org.openqa.selenium.remote.server.DriverServlet;
+   import javax.servlet.Servlet;
+   import java.io.File;
 
-public class AppServer {
-  private Server server = new Server();
+   import org.openqa.selenium.remote.server.DriverServlet;
 
-  public AppServer() throws Exception {
-    WebAppContext context = new WebAppContext();
-    context.setContextPath("");
-    context.setWar(new File("."));
-    server.addHandler(context);
+   public class AppServer {
+     private Server server = new Server();
 
-    context.addServlet(DriverServlet.class, "/wd/*");
+     public AppServer() throws Exception {
+       WebAppContext context = new WebAppContext();
+       context.setContextPath("");
+       context.setWar(new File("."));
+       server.addHandler(context);
 
-    SelectChannelConnector connector = new SelectChannelConnector();
-    connector.setPort(3001);
-    server.addConnector(connector);
+       context.addServlet(DriverServlet.class, "/wd/*");
 
-    server.start();
-  }
-}
-```
+       SelectChannelConnector connector = new SelectChannelConnector();
+       connector.setPort(3001);
+       server.addConnector(connector);
+
+       server.start();
+     }
+   }
 
 Running RemoteWebDriver Client
 ===============================
@@ -114,13 +114,13 @@ customize our configuration, we set desired capabilities.  Below is an
 example of instantiating a remote webdriver object pointing to our
 remote web server, www.example.com, running our tests on Firefox.
 
-```ruby
-require 'selenium-webdriver'
+.. code-block:: ruby
 
-driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => :firefox
-driver.get "http://www.google.com"
-driver.close
-```
+   require 'selenium-webdriver'
+
+   driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => :firefox
+   driver.get "http://www.google.com"
+   driver.close
 
 To further customize our test configuration we can add additional
 desired capabilities.
@@ -137,13 +137,13 @@ https://code.google.com/p/selenium/wiki/DesiredCapabilities
 For example, suppose you wanted to run chrome on Windows XP, using
 Chrome version 27
 
-```ruby
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.platform = Windows XP
-caps.version = 27
+.. code-block:: ruby
 
-driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
-```
+   caps = Selenium::WebDriver::Remote::Capabilities.chrome
+   caps.platform = Windows XP
+   caps.version = 27
+
+   driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
 
 Local File Detector
 -------------------
@@ -156,35 +156,29 @@ runtime. This allows the file to be uploaded from the remote machine
 running the test. It is not enabled by default and can be enabled in
 the following way:
 
-Java:
-```java
-driver.setFileDetector(new LocalFileDetector());
-```
+.. code-block:: java
 
-Ruby:
-```ruby
-@driver.file_detector = lambda do |args|
-         # args => ["/path/to/file"]
-         str = args.first.to_s
-         str if File.exist?(str)
-end
-```
+   driver.setFileDetector(new LocalFileDetector());
+
+.. code-block:: ruby
+
+   @driver.file_detector = lambda do |args|
+     # args => ["/path/to/file"]
+     str = args.first.to_s
+     str if File.exist?(str)
+   end
 
 Once the above code is defined, you can upload a file in your test in
 the following way:
 
-Java:
+.. code-block:: java
 
-```java
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
-WebElement upload = driver.findElement(By.id("myfile"));
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
-```
+   driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
+   WebElement upload = driver.findElement(By.id("myfile"));
+   upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
 
-Ruby:
+.. code-block:: ruby
 
-```ruby
-@driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
-element = @driver.find_element(:id, 'myfile')
-element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"
-```
+   @driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
+   element = @driver.find_element(:id, 'myfile')
+   element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"

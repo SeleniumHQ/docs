@@ -9,8 +9,8 @@ leap forward in terms of browser automation.
 Selenium WebDriver fits in the same role as RC did, and has
 incorporated the original 1.x bindings.  It refers to both the
 language bindings and the implementations of the individual browser
-controlling code.  This is commonly referred to as just _WebDriver_ or
-sometimes as _Selenium 2_.
+controlling code.  This is commonly referred to as just *WebDriver* or
+sometimes as *Selenium 2*.
 
 Selenium 1.0 + WebDriver = Selenium 2.0
 
@@ -211,17 +211,16 @@ An implicit wait is to tell WebDriver to poll the DOM for a certain amount of ti
 An explicit waits is code you define to wait for a certain condition to occur before proceeding further in the code.
 
 #### Expected Conditions
-There are some common conditions that are frequently come across when automating web browsers. 
+There are some common conditions that are frequently come across when automating web browsers.
 
-```ruby
-# ruby
-require "selenium-webdriver"
-driver = Selenium::WebDriver.for :firefox
+.. code-block:: ruby
 
-# element is clickable
-wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-wait.until { driver.find_element(:id => "your_element").click }
-```
+   require "selenium-webdriver"
+   driver = Selenium::WebDriver.for :firefox
+
+   # element is clickable
+   wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+   wait.until { driver.find_element(:id => "your_element").click }
 
 ### Fluent Wait
 
@@ -229,40 +228,44 @@ The implicit wait in Selenium 2 might not work for Ajax elements. It is recommen
 
 One approach is to use FluentWait and a Predicate available with Selenium2. The advantage of this approach is that element polling mechanism is configurable. The code example below waits for 1 second and polls for a textarea every 100 milliseconds.
 
-<!-- #codeExamples -->
 * Implicit Waits
 
 The ImplicitWait will tell the webDriver to poll the DOM for a certain duration when trying to find the element, this will be useful when certain elements on the webpage will not be available immediately and needs some time to load.
 By default it ill take the value to 0, for the life of the WebDriver object instance through out the test script.
 
-#### Java
-```java
-WebDriver driver = new FirefoxDriver();
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-driver.get("http://somedomain/url_that_delays_loading");
-WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
-```
+.. code-block:: java
+
+   WebDriver driver = new FirefoxDriver();
+   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+   driver.get("http://somedomain/url_that_delays_loading");
+   WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
 
 * Explicit Waits
-An explicit waits is code you define to wait for a certain condition to occur before proceeding further in the code. Which is more similar to the Thread.sleep().
-We can combine the use of Expected Conditions to accomplish wait Without using any hard delay.
- 
-#### Java
-```java
-WebDriver driver = new FirefoxDriver();
-driver.get("http://somedomain/url_that_delays_loading");
-WebElement myDynamicElement = (new WebDriverWait(driver, 10))
-  .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));
-```
+
+An explicit waits is code you define to wait for a certain condition
+to occur before proceeding further in the code. Which is more similar
+to the Thread.sleep().  We can combine the use of Expected Conditions
+to accomplish wait Without using any hard delay.
+
+.. code-block:: java
+
+   WebDriver driver = new FirefoxDriver();
+   driver.get("http://somedomain/url_that_delays_loading");
+   WebElement myDynamicElement = (new WebDriverWait(driver, 10))
+     .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));
 
 * FluentWait
 
-FluentWait instance defines the maximum amount of time to wait for a condition, as well as the frequency with which to check the condition. 
-User may configure the wait to ignore specific types of exceptions whilst waiting, such as NoSuchElementExceptions when searching for an element on the page.
+FluentWait instance defines the maximum amount of time to wait for a
+condition, as well as the frequency with which to check the condition.
 
-#### Java
-```java
-// Waiting 30 seconds for an element to be present on the page, checking
+User may configure the wait to ignore specific types of exceptions
+whilst waiting, such as NoSuchElementExceptions when searching for an
+element on the page.
+
+.. code-block:: java
+
+   // Waiting 30 seconds for an element to be present on the page, checking
    // for its presence once every 5 seconds.
    Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
        .withTimeout(30, SECONDS)
@@ -274,9 +277,8 @@ User may configure the wait to ignore specific types of exceptions whilst waitin
        return driver.findElement(By.id("foo"));
      }
    });
-```
 
-``` java
+.. code-block:: java
 
     FluentWait<By> fluentWait = new FluentWait<By>(By.tagName("TEXTAREA"));
         fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
@@ -291,9 +293,6 @@ User may configure the wait to ignore specific types of exceptions whilst waitin
             }
         });
         browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");
-    
-```    
-
 
 Support Classes
 ---------------
