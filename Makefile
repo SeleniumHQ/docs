@@ -1,2 +1,2 @@
 AUTHORS:
-	git log --format="%aN <%ae>" | sort -uf > $@
+	git log --use-mailmap --format="%aN <%aE>" | sort -uf > $@
