@@ -1,0 +1,19 @@
+{% extends "basic/layout.html" %}
+
+{%- block extrahead %}
+{% endblock %}
+
+{% block header %}
+{%- if logo %}
+<header>
+  <div class="logo">
+    <a href="{{ pathto(master_doc) }}">
+      <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
+    </a>
+  </div>
+</header>
+{%- endif %}
+{% endblock %}
+
+{%- block sidebarlogo %}{%- endblock %}
+{%- block sidebarsourcelink %}{%- endblock %}
