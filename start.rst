@@ -1,9 +1,6 @@
 Getting Started with WebDriver
 ==============================
 
-Supported Browsers
-------------------
-
 Selenium supports automation of all the major browsers in the market
 through the use of _WebDriver_.  WebDriver is an API and protocol that
 defines a language-neutral interface for controlling the behaviour of
@@ -23,10 +20,10 @@ user-facing interface that enables the different browser backends to
 be used transparently, enabling cross-browser and cross-platform
 automation.
 
-More details about drivers can be found in the [drivers
-section](09_Driver_Idiosyncrasies.md).
+More details about drivers can be found in the :doc:`drivers`.
 
-### Consumer browsers
+Consumer Browsers
+=================
 
 The Selenium framework officially supports the following browsers:
 
@@ -40,24 +37,26 @@ The Selenium framework officially supports the following browsers:
 | Safari            | Selenium   | 5.1 and newer      |
 +-------------------+------------+--------------------+
 
-### Specialized browsers
+Specialized browsers
+====================
 
 There are also a set of specialized browsers out there typically used
 in development environments.  We can make use of some of these
 browsers for automation purposes also, and Selenium ties in support
 for the following specialized drivers:
 
-+-----------------+------------------------------------------------+-------------------------------------------------------------+
-| Driver Name     | Purpose                                        | Maintainer                                                  |
-+-----------------+------------------------------------------------+-------------------------------------------------------------+
-| PhantomJSDriver | Headless PhantomJS browser backed by QtWebKit. | [GhostDriver project](https://github.com/detro/ghostdriver) |
-| HtmlUnitDriver  | Headless browser emulator backed by Rhino.     | Selenium                                                    |
-+-----------------+------------------------------------------------+-------------------------------------------------------------+
++-----------------+------------------------------------------------+------------------------+
+| Driver Name     | Purpose                                        | Maintainer             |
++-----------------+------------------------------------------------+------------------------+
+| PhantomJSDriver | Headless PhantomJS browser backed by QtWebKit. | `GhostDriver project`_ |
+| HtmlUnitDriver  | Headless browser emulator backed by Rhino.     | Selenium               |
++-----------------+------------------------------------------------+------------------------+
 
 Locating Elements
------------------
+=================
 
-### Locating one element
+Locating One Element
+--------------------
 
 One of the most fundamental techniques to learn when using WebDriver is
 how to find elements on the page. WebDriver offers a number of built-in selector
@@ -107,11 +106,12 @@ specific locator: WebDriver supports looking up elements
 by CSS locators, allowing us to combine the two previous locators into
 one search:
 
-```java
-driver.findElement(By.cssSelector("#cheese #cheddar"));
-```
+.. code-block:: java
 
-### Locating multiple elements
+   driver.findElement(By.cssSelector("#cheese #cheddar"));
+
+Locating Multiple Elements
+--------------------------
 
 It's possible that the document we are working with may turn have an
 ordered list of the cheese we like the best:
@@ -137,7 +137,8 @@ empty list will be returned.
 
    List<WebElement> muchoCheese = driver.findElements(By.cssSelector("#cheese li"));
 
-### Element selection strategies
+Element Selection Strategies
+----------------------------
 
 There are eight different built-in element location strategies in WebDriver:
 
@@ -154,7 +155,8 @@ There are eight different built-in element location strategies in WebDriver:
 | xpath             | Locates elements matching an XPath expression                                                        |
 +-------------------+------------------------------------------------------------------------------------------------------+
 
-### Tips on using selectors
+Tips On Using Selectors
+-----------------------
 
 In general, if HTML ID's are available, unique, and consistently
 predictable, they are the preferred method for locating an element on
@@ -182,7 +184,7 @@ is an expensive operation, and the more you can narrow the scope of
 your search, the better.
 
 Performing Actions on the AUT
------------------------------
+=============================
 
 You can set an element's text using the sendKeys method as follows:
 
@@ -202,9 +204,12 @@ element onto another element:
    new Actions(driver).dragAndDrop(source, target).build().perform();
 
 Clicking on an element
+----------------------
 
 You can click on an element using the click method:
 
 .. code-block:: java
 
    driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
+
+.. _GhostDriver project: https://github.com/detro/ghostdriver

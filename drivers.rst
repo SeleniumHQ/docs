@@ -1,4 +1,6 @@
-# Driver Idiosyncrasies
+=====================
+Driver Idiosyncrasies
+=====================
 
 ## Shared capabilities
 
