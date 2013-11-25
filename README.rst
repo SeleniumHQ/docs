@@ -14,13 +14,19 @@ formatted using `reStructuredText
 
 First make sure you have the necessary dependencies:
 
+::
+
     pip install sphinx
 
 To clone the repository:
 
+::
+
     git clone https://github.com/SeleniumHQ/selenium-docs.git
 
 And finally to build it:
+
+::
 
     cd selenium-docs
     make
@@ -33,6 +39,8 @@ index.
 
 If you want to use *virtualenv* when working on the docs, you can do
 that too:
+
+::
 
     virtualenv selenium-docs
     cd selenium-docs
