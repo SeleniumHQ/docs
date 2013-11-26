@@ -45,7 +45,7 @@ that too:
     virtualenv selenium-docs
     cd selenium-docs
     source bin/activate
-    pip install -e https://github.com/SeleniumHQ/selenium-docs.git
+    pip install -e git+https://github.com/SeleniumHQ/selenium-docs.git
 
 Formatting
 ==========
