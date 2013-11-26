@@ -3,10 +3,10 @@ Getting Started with WebDriver
 ==============================
 
 Selenium supports automation of all the major browsers in the market
-through the use of _WebDriver_.  WebDriver is an API and protocol that
+through the use of *WebDriver*.  WebDriver is an API and protocol that
 defines a language-neutral interface for controlling the behaviour of
 web browsers.  Each browser is backed by a specific WebDriver
-implementation, called a _driver_.  The driver is the component
+implementation, called a *driver*.  The driver is the component
 responsible for delegating down to the browser, and handles all
 communication to and from Selenium and the browser.
 
@@ -30,11 +30,15 @@ The Selenium framework officially supports the following browsers:
 
 +-------------------+------------+--------------------+
 | Browser           | Maintainer | Versions Supported |
-+-------------------+------------+--------------------+
++===================+============+====================+
 | Chrome/Chromium   | Chromium   | All versions       |
++-------------------+------------+--------------------+
 | Firefox           | Selenium   | 4 and newer        |
++-------------------+------------+--------------------+
 | Internet Explorer | Selenium   | 6 and newer        |
++-------------------+------------+--------------------+
 | Opera             | Opera      | 10.5 and newer     |
++-------------------+------------+--------------------+
 | Safari            | Selenium   | 5.1 and newer      |
 +-------------------+------------+--------------------+
 
@@ -48,8 +52,9 @@ for the following specialized drivers:
 
 +-----------------+------------------------------------------------+------------------------+
 | Driver Name     | Purpose                                        | Maintainer             |
-+-----------------+------------------------------------------------+------------------------+
++=================+================================================+========================+
 | PhantomJSDriver | Headless PhantomJS browser backed by QtWebKit. | `GhostDriver project`_ |
++-----------------+------------------------------------------------+------------------------+
 | HtmlUnitDriver  | Headless browser emulator backed by Rhino.     | Selenium               |
 +-----------------+------------------------------------------------+------------------------+
 
