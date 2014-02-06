@@ -6,7 +6,7 @@ Copyright and Attributions
 
 .. |copy|   unicode:: U+000A9 .. COPYRIGHT SIGN
 
-Copyright |copy| 2013, Software Freedom Conservancy.
+Copyright |copy| 2013-2014, Software Freedom Conservancy.
 
 Every effort has been made to make this documentation as complete and
 as accurate as possible, but no warranty or fitness is implied.  The
