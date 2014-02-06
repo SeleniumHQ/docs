@@ -8,11 +8,15 @@ The Selenium Project and Tools
 Selenium controls web browsers
 ------------------------------
 
+Selenium is a toolset for web browser automation that uses the best
+techniques possible to remotely control browser instances and
+emulating user interaction with the browser.
+
 Used primarily for testing, it allows users to simulate common
 activities performed by end-users: entering text into fields,
-selecting drop-down values and checking boxes, and clicking links. It
-also provides many other controls (mouse movements, Javascript
-execution, etc), which will be addressed later in this guide.
+selecting drop-down values and checking boxes, and clicking links.  It
+also provides many other controls such as mouse movement, JavaScript
+execution, and much more.
 
 Imagine a bank of computers in your server room, data center, or even
 in the cloud, all firing up browsers at the same time, hitting your
