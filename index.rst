@@ -13,7 +13,7 @@ The project is made possible by volunteer contributors who have put in
 thousands of hours of their own time, and made the source code freely
 available under the :ref:`Apache 2.0 license <license>`.
 
-Here is one of the simplest Selenium programs you can make:
+Here is one of the simplest Selenium instructions you can make:
 
 .. code-block:: python
 
@@ -26,14 +26,14 @@ Here is one of the simplest Selenium programs you can make:
    search_box.submit()
 
 After you've installed Selenium and run this program you will see the
-browser navigate to the search engine and “cheese” before submitting
-the form.
+browser navigate to the search engine and enter “cheese” into the
+search field before submitting the form.
 
 See :doc:`quick_tour` for a full explanation of what goes on behind
 the scenes when you run this code.  You should continue on to the
 :ref:`narrative_documentation` to understand how you can use Selenium
-as a test automation tool and to scale simple tests like this run in
-large, distributed environments on multiple browsers, under several
+as a test automation tool and to scale simple tests like this to run
+in large, distributed environments on multiple browsers, under several
 different operating systems.
 
 Getting Started
@@ -52,8 +52,8 @@ get up to speed right away.
 Narrative Documentation
 =======================
 
-Narrative documentation in chapter form explaining how to use
-Selenium.
+Narrative documentation in chapter form explaining how to use Selenium
+in detail, from bottom up.
 
 .. toctree::
    :maxdepth: 2
