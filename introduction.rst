@@ -93,34 +93,59 @@ Recently this work has evolved into a W3C standardization process
 where the goal is to turn the WebDriver component in Selenium into a
 *de jeur* remote control library for browsers.
 
-Test Automation Basics
-======================
-
-I need to test my application. Now what?
-----------------------------------------
+On Test Automation
+==================
 
 First, start by asking yourself whether or not you really need to use
-a browser. Odds are good that, at some point, if you're working on a
+a browser.  Odds are good that, at some point, if you're working on a
 complex web application, you will need to open a browser and actually
 test it.
 
+Functional end-user tests such as Selenium tests are however expensive
+to run.  Furthermore they typically require substantial infrastructure
+to be in place to be run effectively.  It's a good rule to always ask
+yourself if what you want to test can be done using more lightweight
+test approaches such as unit tests or with a lower-level approach.
+
 Once you have made the determination that you're in the web browser
 testing business, and you have your Selenium environment ready to
-begin writing tests, you will generally perform some combination of 3
-steps:
+begin writing tests, you will generally perform some combination of
+three steps:
 
 * Set up the data
 * Perform a discrete set of actions
 * Evaluate the results
 
-You will want to keep these steps as short as possible--one to two
-operations should be enough much of the time. Browser automation has
-the reputation of being "flaky", but in reality that is because users
-frequently demand too much of it.
+You will want to keep these steps as short as possible – one to two
+operations should be enough much of the time.  Browser automation has
+the reputation of being “flaky”, but in reality that is because users
+frequently demand too much of it.  In later chapters we will return to
+techniques you can use to mitigate intermittent problems in tests.
 
 By keeping your tests short, and by using the web browser only when
-you have absolutely no alternative, you can have **many tests, with
-minimal flake**.
+you have absolutely no alternative, you can have many tests, with
+minimal flake.
+
+A distinct advantage of Selenium tests are their inherent ability to
+test all components of the application, from backend to frontend, from
+a user's perspective.  So in other words, whilst functional tests may
+be expensive to run, they also encompass large business-critical
+portions at one time.
+
+Testing Requirements
+--------------------
+
+As mentioned before, Selenium tests can be expensive to run.  To what
+extent depends on the browser you're running the tests against, but
+historically browsers' behaviour have varied so much that it has often
+been a stated goal to cross-test against multiple browsers.
+
+Selenium allows you to run the same instructions against multiple
+browsers on multiple operating systems, but the enumeration of all the
+possible browsers, their different versions, and the many operating
+systems they run on will quickly become a non-trival undertaking.
+
+
 
 Let's start with an example:
 ----------------------------
