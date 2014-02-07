@@ -5,6 +5,9 @@ The New Selenium Docs
 We're rewriting the Selenium documentation from scratch!  Help us out
 by sending us a patch!
 
+Once this documentation reaches a state of relative stability and
+completeness, it will replace the existing Selenium documentation.
+
 Building
 ========
 
