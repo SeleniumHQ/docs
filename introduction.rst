@@ -9,22 +9,26 @@ Selenium controls web browsers
 ------------------------------
 
 Selenium is a toolset for web browser automation that uses the best
-techniques possible to remotely control browser instances and
-emulating user interaction with the browser.
+techniques available to remotely control browser instances and emulate
+user interaction with the browser.
 
 Used primarily for testing, it allows users to simulate common
 activities performed by end-users: entering text into fields,
 selecting drop-down values and checking boxes, and clicking links.  It
-also provides many other controls such as mouse movement, JavaScript
-execution, and much more.
+also provides many other controls such as mouse movement, arbitrary
+JavaScript execution, and much more.
 
 Imagine a bank of computers in your server room, data center, or even
 in the cloud, all firing up browsers at the same time, hitting your
 site's links, forms, and tables, testing your application 24 hours a
-day. Through a simple, unified programming interface (supporting many
+day.  Through a simple, unified programming interface (supporting many
 of the most important and frequently-used languages), these tests will
 run tirelessly in parallel, reporting back to you when errors
 occurred.
+
+The Selenium project's goal is to make this reality by providing users
+with tools and documentation to not only control browsers, but to
+make it easy to scale and deploy such grids.
 
 That is the promise of Selenium. With no licensing fees
 -------------------------------------------------------
@@ -59,6 +63,34 @@ project is to encourage more volunteers and build a strong community,
 so that the project can continue to keep up with emerging technologies
 and remain the dominant platform for test automation.
 
+History
+-------
+
+When Selenium 1 released over N years ago it was out of the necessity
+to reduce time spent manually verifying consistent behaviour in the
+front-end of a web application.  It made use of what tools were
+available at the time, and relied heavily on the injection of
+JavaScript to the web page under test to emulate a user's interaction.
+
+Whilst JavaScript is a good tool to let you introspect the properties
+of the DOM and to do certain client-side observations that you would
+otherwise not be able to do, it falls short on being able to naturally
+replicate a user's interactions as if the mouse and keyboard is being
+used.
+
+Since then Selenium has grown and matured a lot, into a tool widely
+used by many – if not most – of the largest organizations around the
+world.  Selenium has gone from a homebrewed test automation toolkit at
+Thoughtworks for a niché audience and a specific use case, to become
+the world's de facto browser automation library.
+
+Just as Selenium 1 made use of the tools of the trade available at the
+time, Selenium 2 drives that tradition on by taking the browser
+interaction part to the browser vendor's home turf, and asking them to
+take responsibility of the backend, browser-facing implementations.
+Recently this work has evolved into a W3C standardization process
+where the goal is to turn the WebDriver component in Selenium into a
+*de jeur* remote control library for browsers.
 
 Test Automation Basics
 ======================
