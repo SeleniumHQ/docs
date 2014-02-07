@@ -30,38 +30,39 @@ The Selenium project's goal is to make this reality by providing users
 with tools and documentation to not only control browsers, but to
 make it easy to scale and deploy such grids.
 
-That is the promise of Selenium. With no licensing fees
--------------------------------------------------------
+One Interface to Rule Them All
+------------------------------
 
-One of the project's guiding principles is to **support a common
-interface for all (major) browser technologies**. Web Browsers are
+One of the project's guiding principles is to support a common
+interface for all (major) browser technologies.  Web browsers are
 incredibly complex, highly engineered applications, performing their
-operations in completely different ways, but which frequently look the
-same while doing so. Even though the text is rendered in the same
+operations in completely different ways but which frequently look the
+same while doing so.  Even though the text is rendered in the same
 fonts, the images are displayed in the same place, and the links take
 you to the same destination, what is happening underneath is as
-different as night and day. Selenium "abstracts" these differences,
-hiding their details and intricacies from the person writing the
-code. This allows you to write several lines of code to perform a
+different as night and day.  Selenium “abstracts” these differences,
+hiding their details and intricacies from the person writing the code.
+This allows you to write several lines of code to perform a
 complicated workflow, but these same lines will execute on Firefox,
 Internet Explorer, Chrome, and all other supported browsers.
 
-Selenium is the backbone of test organizations the world over
--------------------------------------------------------------
+Who Uses Selenium
+-----------------
 
 Many of the most important companies in the world have adopted
 Selenium for their browser-based testing, often replacing years-long
-efforts involving other, non-open source tools. As it has grown in
+efforts involving other proprietary tools.  As it has grown in
 popularity, so have its requirements and challenges multiplied.
 
 As the web becomes more complicated and new technologies are added to
 sites around the world, it is the mission of this project to keep up
-with them where possible. Being an Open Source project, this support
+with them where possible.  Being an open source project, this support
 is provided through the generous donation of time from many
-volunteers, every one of which has a "day job". Another mission of the
-project is to encourage more volunteers and build a strong community,
-so that the project can continue to keep up with emerging technologies
-and remain the dominant platform for test automation.
+volunteers, every one of which has a “day job”.  Another mission of
+the project is to encourage more volunteers and build a strong
+community, so that the project can continue to keep up with emerging
+technologies and remain the dominant platform for function test
+automation.
 
 History
 -------
@@ -95,8 +96,8 @@ where the goal is to turn the WebDriver component in Selenium into a
 Test Automation Basics
 ======================
 
-I need to test my application. Now what??!
-------------------------------------------
+I need to test my application. Now what?
+----------------------------------------
 
 First, start by asking yourself whether or not you really need to use
 a browser. Odds are good that, at some point, if you're working on a
