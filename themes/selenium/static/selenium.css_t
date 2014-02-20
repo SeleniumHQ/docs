@@ -1,0 +1,95 @@
+/* -*- mode: css -*- */
+
+* { margin: 0; padding: 0; }
+
+body {
+  background-color: rgb(242,242,242);
+  color: rgb(50,50,50);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 2em;
+}
+
+.container:after { clear: both; }
+.container:before, .container:after { display: table; content: " "; }
+.container {
+  max-width: 970px;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: rgb(248,248,248);
+  border-color: rgb(236,236,236);
+  min-height: 50px;
+  margin-bottom: 1em;
+  width: 100%;
+  border-radius: 4px;
+}
+
+nav h1 {
+  float: left;
+}
+
+nav ul a, nav ul li { display: inline-block; }
+
+nav ul a {
+  height: 50px;
+  padding: 0 .8em;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  background-color: rgb(250,250,250);
+}
+
+nav a:link {
+  color: rgb(120,120,120);
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+  font-size: 110%;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.headerlink { display: none; }
+*:hover > .headerlink { display: inline; }
+
+ul ul {
+  margin-left: 1em;
+}
+
+pre {
+  font-family: "Monaco", "Menlo", "Consolas", monospace;
+  font-size: 95%;
+  line-height: 1.5;
+  display: block;
+  padding: .4em .8em;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: rgb(247,247,247);
+  border: 1px solid rgb(190,190,190);
+  border-radius: 4px;
+  color: rgb(70,70,70);
+}
+
+p, ul, ol, pre {
+  margin-bottom: 1em;
+}
+
+a:active, a:hover {
+  color: #217919;
+}
+
+a:link {
+  color: #36F;
+  font-weight: bold;
+  text-decoration: none;
+}

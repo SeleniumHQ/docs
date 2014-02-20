@@ -1,19 +1,34 @@
-{% extends "basic/layout.html" %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    {% block htmltitle %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+    {% endblock %}
 
-{%- block extrahead %}
-{% endblock %}
+    {% if favicon %}
+    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
+    {% endif %}
 
-{% block header %}
-{%- if logo %}
-<header>
-  <div class="logo">
-    <a href="{{ pathto(master_doc) }}">
-      <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-    </a>
-  </div>
-</header>
-{%- endif %}
-{% endblock %}
+    <link rel="stylesheet" href="{{ pathto('_static/selenium.css', 1) }}" />
+  </head>
 
-{%- block sidebarlogo %}{%- endblock %}
-{%- block sidebarsourcelink %}{%- endblock %}
+  <body>
+    <div class="container">
+      <nav>
+        <h1>Selenium</h1>
+
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      {% block body %}{% endblock %}
+    </div>
+  </body>
+</html>
