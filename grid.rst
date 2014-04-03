@@ -1,7 +1,7 @@
 # Selenium Grid
 
-```[NOTE] - http://docs.seleniumhq.org/docs/07_selenium_grid.jsp is a good starting point as most of the basic
-ideas are discussed here. We need to find out the original author so we can give proper credit.```
+``[NOTE] - http://docs.seleniumhq.org/docs/07_selenium_grid.jsp is a good starting point as most of the basic
+ideas are discussed here. We need to find out the original author so we can give proper credit.``
 
 Selenium Grid is a server that allows tests to use web browser instances running on remote machines. With
 Selenium Grid, one server acts as the hub. Tests contact the hub to obtain access to browser instances. The
