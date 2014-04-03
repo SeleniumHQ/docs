@@ -15,7 +15,7 @@ Pros of using Grid
 ------------------------------------------------------------------------
 
 +----------------------+-----------------------------------------------+ 
-| Pros of using Grid   | Description                     | 
+| Pros of using Grid   | Description                                   | 
 +======================+===============================================+ 
 | Scale                | Scale by distributing tests on several        | 
 |                      | machines (parallel execution).                | 
