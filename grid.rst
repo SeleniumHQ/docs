@@ -15,11 +15,11 @@ manage different browser versions and browser configurations centrally
 | Pros of using Grid   | Description                                   | 
 +======================+===============================================+ 
 | Scale                | Scale by distributing tests on several        | 
-|                      | machines (parallel execution).                | 
+|                      | machines using parallel execution.            | 
 +----------------------+-----------------------------------------------+ 
 | Central              | Manage multiple environments from a central   |
 |                      | point, making it easy to run the tests against|
-|                      | a large combination of browsers / OS.         | 
+|                      | a large combination of browsers as OS's.      | 
 +----------------------+-----------------------------------------------+ 
 | Minimize             | Minimize the maintenance time for the grid by |
 |                      | allowing you to implement custom hooks to     |
