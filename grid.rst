@@ -1,6 +1,6 @@
 # Selenium Grid
 
-```text
+```
 [NOTE] - http://docs.seleniumhq.org/docs/07_selenium_grid.jsp is a good starting point as most of the basic
 ideas are discussed here. We need to find out the original author so we can give proper credit.
 ```
