@@ -1,7 +1,5 @@
-# Selenium Grid
-
-``[NOTE] - http://docs.seleniumhq.org/docs/07_selenium_grid.jsp is a good starting point as most of the basic
-ideas are discussed here. We need to find out the original author so we can give proper credit.``
+Selenium Grid
+================
 
 Selenium Grid is a smart proxy server that allows Selenium tests to route commands to remote web browser 
 instances. With Selenium Grid, one server acts as the hub that routes JSON formatted test commands to one or
@@ -10,7 +8,8 @@ list of registered servers that it provides access to, and allows us to control 
 allows us to run tests in parallel on multiple machines, and to manage different browser versions and browser 
 configurations centrally (instead of in each individual test).
 
-## Why Grid?
+Why Grid?
+================
 
 * Vision of Grid
 
