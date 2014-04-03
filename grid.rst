@@ -11,9 +11,6 @@ Grid allows us to run tests in parallel on multiple machines, and to
 manage different browser versions and browser configurations centrally 
 (instead of in each individual test).
 
-Test
-============
-
 +---------------------+------------------------------------------------+ 
 | Pros of using Grid  | Description                                    | 
 +=====================+================================================+ 
@@ -29,7 +26,7 @@ Test
 |                     | allowing you to implement custom hooks to      |
 |                     | leverage a virtual infrastructure of           |
 |                     | registered nodes.                              |
-+---------------------+------------------------------------------------| 
++---------------------+------------------------------------------------+ 
 | Cross Platform      | If your tests are running on one particular    |
 |                     | platform, by using a node on another platform  |
 |                     | you effectively have cross platform testing.   | 
