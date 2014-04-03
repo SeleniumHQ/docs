@@ -21,7 +21,20 @@ manage different browser versions and browser configurations centrally
 |                      | point, making it easy to run the tests against|
 |                      | a large combination of browsers as OS's.      | 
 +----------------------+-----------------------------------------------+ 
-
+| Minimize             | Minimize the maintenance time for the grid by |
+|                      | allowing you to implement custom hooks to     |
+|                      | leverage a virtual infrastructure of          |
+|                      | registered nodes.                             |
++----------------------+-----------------------------------------------| 
+| Cross Platform       | If your tests are running on one particular   |
+|                      | platform, by using a node on another platform |
+|                      | you effectively have cross platform testing.  | 
++----------------------+-----------------------------------------------+
+| Smart                | Grid can route commands to a certain version  |
+|                      | of a browser if you have 2 or more nodes      | 
+|                      | registered, each pointing to a different      | 
+|                      | version of the browser binary.                | 
++----------------------+-----------------------------------------------+
 
   
 Cons of using Grid
