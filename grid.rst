@@ -1,39 +1,58 @@
-# Selenium Grid
+Selenium Grid
+========================================================================
 
-```text
-[NOTE] - http://docs.seleniumhq.org/docs/07_selenium_grid.jsp is a good starting point as most of the basic
-ideas are discussed here. We need to find out the original author so we can give proper credit.
-```
+Selenium Grid is a smart proxy server that allows Selenium tests to 
+route commands to remote web browser instances. With Selenium Grid, one 
+server acts as the hub that routes JSON formatted test commands to one 
+or more registered Grid nodes. Tests contact the hub to obtain access to 
+remote browser instances. The hub has a list of registered servers that 
+it provides access to, and allows us to control these instances. Selenium
+Grid allows us to run tests in parallel on multiple machines, and to 
+manage different browser versions and browser configurations centrally 
+(instead of in each individual test).
 
-Selenium Grid is a server that allows tests to use web browser instances running on remote machines. With
-Selenium Grid, one server acts as the hub. Tests contact the hub to obtain access to browser instances. The
-hub has a list of servers that provide access to browser instances (WebDriver nodes), and lets tests use
-these instances. Selenium Grid allows to run tests in parallel on multiple machines, and to manage different
-browser versions and browser configurations centrally (instead of in each individual test).
++---------------------+------------------------------------------------+ 
+| Pros of using Grid  | Description                                    | 
++=====================+================================================+ 
+| Scale               | Scale by distributing tests on several         | 
+|                     | machines using parallel execution.             | 
++---------------------+------------------------------------------------+ 
+| Central             | Manage multiple environments from a central    |
+|                     | point, making it easy to run the tests against |
+|                     | a large combination of browsers and operating  |
+|                     | systems.                                       | 
++---------------------+------------------------------------------------+ 
+| Minimize            | Minimize the maintenance time for the grid by  |
+|                     | allowing you to implement custom hooks to      |
+|                     | leverage a virtual infrastructure of           |
+|                     | registered nodes.                              |
++---------------------+------------------------------------------------+ 
+| Cross Platform      | If your tests are running on one particular    |
+|                     | platform, by using a node on another platform  |
+|                     | you effectively have cross platform testing.   | 
++---------------------+------------------------------------------------+
+| Smart               | Grid can route commands to a certain version   |
+|                     | of a browser if you have 2 or more nodes       | 
+|                     | registered, each pointing to a different       | 
+|                     | version of the browser binary.                 | 
++---------------------+------------------------------------------------+
 
-## Why Grid?
+  
++---------------------+------------------------------------------------+ 
+| Cons of using Grid  | Description                                    | 
++=====================+================================================+ 
+| Prompted Input      | You have no capabilities for user input if your|
+|                     | tests want to prompt for input whereas you     |
+|                     | would if your tests ran locally.               | 
++---------------------+------------------------------------------------+ 
+| Maintainability     | You also need to maintain the health of other  |
+|                     | computer systems which run your nodes.         | 
++---------------------+------------------------------------------------+ 
+| Limited Power       | Third party libraries, like Sikuli, will not   |
+|                     | work through a Grid because the WebDriver JSON |
+|                     | protocol is not able to send those commands.   |
++---------------------+------------------------------------------------+ 
 
-* Vision of Grid
-
-* Pros of Using Grid
-
-  * scale by distributing tests on several machines (parallel
-    execution)
-  * manage multiple environments from a central point, making it easy
-    to run the tests against a vast combination of browsers / OS.
-
-* minimize the maintenance time for the grid by allowing you to
-  implement custom hooks to leverage virtual infrastructure for
-  instance.
-* if your tests are running on one particular platform, by using a
-  node on another platform you effectively have cross platform
-  testing.
-* Cons of Using Grid
-
-  * you have no capabilities for user input if your tests want to
-    prompt for input whereas you would if your tests ran locally
-  * you also need to maintain the health of other computer systems
-    which run your nodes
 
 What is a Hub and Node?
 =======================
@@ -154,15 +173,19 @@ And here is an example of a node1Config.json file:
                       "javascriptEnabled": true,
                       "takesScreenshot": false,
                       "firefox_profile": "",
-                      "browser-version": "19.0",
+                      "browser-version": "27",
                       "platform": "WINDOWS",
-                      "maxInstances": 5},
+                      "maxInstances": 5,
+                      "firefox_binary": "",
+                      "cleanSession": true },
                      {"browserName": "chrome",
                       "maxInstances": 5,
-                      "platform": "WINDOWS"},
+                      "platform": "WINDOWS",
+                      "webdriver.chrome.driver": "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe" },
                      {"browserName": "internet explorer",
                       "maxInstances": 1,
-                      "platform": "WINDOWS"}],
+                      "platform": "WINDOWS",
+                      "webdriver.ie.driver": "C:/Program Files (x86)/Internet Explorer/iexplore.exe" }],
     "configuration": {"_comment" : "Configuration for Node",
                       "cleanUpCycle": 2000,
                       "timeout": 30000,
