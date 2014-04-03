@@ -30,11 +30,7 @@ manage different browser versions and browser configurations centrally
 |                      | platform, by using a node on another platform |
 |                      | you effectively have cross platform testing.  | 
 +----------------------+-----------------------------------------------+
-| Smart                | Grid can route commands to a certain version  |
-|                      | of a browser if you have 2 or more nodes      | 
-|                      | registered, each pointing to a different      | 
-|                      | version of the browser binary.                | 
-+----------------------+-----------------------------------------------+
+
 
   
 Cons of using Grid
