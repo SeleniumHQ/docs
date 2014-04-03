@@ -17,7 +17,7 @@ Pros of using Grid
 +----------------------+---------------------------------+ 
 | Pros of using Grid   | Description                     | 
 +======================+=================================+ 
-| body row 1           | column 2                        | 
+| body row 1           | Scale by distributing tests on several machines (parallel execution). | 
 +----------------------+---------------------------------+ 
 | body row 2           | Cells may                       | 
 +----------------------+---------------------------------+ 
@@ -26,7 +26,7 @@ Pros of using Grid
 | body row 4           |                                 | 
 +----------------------+---------------------------------+
 
-* Scale by distributing tests on several machines (parallel execution).
+* 
 
 * Manage multiple environments from a central point, making it easy to run
 the tests against a large combination of browsers / OS.
