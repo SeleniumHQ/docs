@@ -11,6 +11,9 @@ Grid allows us to run tests in parallel on multiple machines, and to
 manage different browser versions and browser configurations centrally 
 (instead of in each individual test).
 
+Test
+============
+
 +---------------------+------------------------------------------------+ 
 | Pros of using Grid  | Description                                    | 
 +=====================+================================================+ 
