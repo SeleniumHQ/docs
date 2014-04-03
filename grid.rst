@@ -154,7 +154,7 @@ And here is an example of a node1Config.json file:
                       "javascriptEnabled": true,
                       "takesScreenshot": false,
                       "firefox_profile": "",
-                      "browser-version": "19.0",
+                      "browser-version": "27",
                       "platform": "WINDOWS",
                       "maxInstances": 5,
                       "firefox_binary": "",
