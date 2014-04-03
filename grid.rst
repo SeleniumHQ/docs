@@ -4,11 +4,11 @@
 ideas are discussed here. We need to find out the original author so we can give proper credit.``
 
 Selenium Grid is a smart proxy server that allows Selenium tests to route commands to remote web browser 
-instances. With Selenium Grid, one server acts as the hub that routes test commands to one or more registered 
-nodes. Tests contact the hub to obtain access to remote browser instances. The hub has a list of registered 
-servers that provide access to browser instances on each of those servers, and allows us to control these 
-instances. Selenium Grid allows us to run tests in parallel on multiple machines, and to manage different 
-browser versions and browser configurations centrally (instead of in each individual test).
+instances. With Selenium Grid, one server acts as the hub that routes JSON formatted test commands to one or
+more registered Grid nodes. Tests contact the hub to obtain access to remote browser instances. The hub has a 
+list of registered servers that it provides access to, and allows us to control these instances. Selenium Grid
+allows us to run tests in parallel on multiple machines, and to manage different browser versions and browser 
+configurations centrally (instead of in each individual test).
 
 ## Why Grid?
 
@@ -16,8 +16,7 @@ browser versions and browser configurations centrally (instead of in each indivi
 
 * Pros of Using Grid
 
-  * scale by distributing tests on several machines (parallel
-    execution)
+  * scale by distributing tests on several machines (parallel execution)
   * manage multiple environments from a central point, making it easy
     to run the tests against a vast combination of browsers / OS.
 
