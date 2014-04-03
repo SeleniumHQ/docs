@@ -38,16 +38,20 @@ manage different browser versions and browser configurations centrally
 +---------------------+------------------------------------------------+
 
   
-Cons of using Grid
-------------------------------------------------------------------------
-
-* You have no capabilities for user input if your tests want to prompt for input whereas 
-    you would if your tests ran locally.
-    
-* You also need to maintain the health of other computer systems which run your nodes.
-
-* Third party libraries, like Sikuli, will not work through a Grid because the WebDriver 
-    JSON protocol is not able to transport those commands.
++---------------------+------------------------------------------------+ 
+| Cons of using Grid  | Description                                    | 
++=====================+================================================+ 
+| Prompted Input      | You have no capabilities for user input if your|
+|                     | tests want to prompt for input whereas you     |
+|                     | would if your tests ran locally.               | 
++---------------------+------------------------------------------------+ 
+| Maintainability     | You also need to maintain the health of other  |
+|                     | computer systems which run your nodes.         | 
++---------------------+------------------------------------------------+ 
+| Limited Power       | Third party libraries, like Sikuli, will not   |
+|                     | work through a Grid because the WebDriver JSON |
+|                     | protocol is not able to send those commands.   |
++---------------------+------------------------------------------------+ 
 
 
 What is a Hub and Node?
