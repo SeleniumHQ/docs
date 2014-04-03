@@ -1,28 +1,36 @@
 Selenium Grid
-================
+========================================================================
 
-Selenium Grid is a smart proxy server that allows Selenium tests to route commands to remote web browser 
-instances. With Selenium Grid, one server acts as the hub that routes JSON formatted test commands to one or
-more registered Grid nodes. Tests contact the hub to obtain access to remote browser instances. The hub has a 
-list of registered servers that it provides access to, and allows us to control these instances. Selenium Grid
-allows us to run tests in parallel on multiple machines, and to manage different browser versions and browser 
-configurations centrally (instead of in each individual test).
+Selenium Grid is a smart proxy server that allows Selenium tests to 
+route commands to remote web browser instances. With Selenium Grid, one 
+server acts as the hub that routes JSON formatted test commands to one 
+or more registered Grid nodes. Tests contact the hub to obtain access to 
+remote browser instances. The hub has a list of registered servers that 
+it provides access to, and allows us to control these instances. Selenium
+Grid allows us to run tests in parallel on multiple machines, and to 
+manage different browser versions and browser configurations centrally 
+(instead of in each individual test).
 
 Pros of using Grid
--------------------
+------------------------------------------------------------------------
 
 * Scale by distributing tests on several machines (parallel execution).
 
-* Manage multiple environments from a central point, making it easy to run the tests against a large combination of browsers / OS.
+* Manage multiple environments from a central point, making it easy to run
+the tests against a large combination of browsers / OS.
 
-* Minimize the maintenance time for the grid by allowing you to implement custom hooks to leverage a virtual infrastructure of registered nodes.
+* Minimize the maintenance time for the grid by allowing you to implement 
+custom hooks to leverage a virtual infrastructure of registered nodes.
   
-* If your tests are running on one particular platform, by using a node on another platform you effectively have cross platform testing.
+* If your tests are running on one particular platform, by using a node on
+another platform you effectively have cross platform testing.
     
-* Grid can route commands to a certain version of a browser if you have 2 or more nodes registered, each pointing to a different version of the browser binary.
+* Grid can route commands to a certain version of a browser if you have 2 
+or more nodes registered, each pointing to a different version of the 
+browser binary.
   
 Cons of using Grid
---------------------
+------------------------------------------------------------------------
 
 * You have no capabilities for user input if your tests want to prompt for input whereas 
     you would if your tests ran locally.
