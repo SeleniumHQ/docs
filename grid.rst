@@ -14,17 +14,20 @@ manage different browser versions and browser configurations centrally
 Pros of using Grid
 ------------------------------------------------------------------------
 
-+----------------------+---------------------------------+ 
++----------------------+-----------------------------------------------+ 
 | Pros of using Grid   | Description                     | 
-+======================+=================================+ 
-| body row 1           | Scale by distributing tests on several machines (parallel execution). | 
-+----------------------+---------------------------------+ 
-| body row 2           | Cells may                       | 
-+----------------------+---------------------------------+ 
-| body row 3           | Cells may                       | 
-+----------------------+ span rows.                      | 
-| body row 4           |                                 | 
-+----------------------+---------------------------------+
++======================+===============================================+ 
+| Scale                | Scale by distributing tests on several        | 
+|                      | machines (parallel execution).                | 
++----------------------+-----------------------------------------------+ 
+| body row 2           | Manage multiple environments from a central   |
+|                      | point, making it easy to run the tests against|
+|                      | a large combination of browsers / OS.         | 
++----------------------+-----------------------------------------------+ 
+| body row 3           | Cells may                                     | 
++----------------------+ span rows.                                    | 
+| body row 4           |                                               | 
++----------------------+-----------------------------------------------+
 
 * 
 
