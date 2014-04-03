@@ -8,29 +8,30 @@ list of registered servers that it provides access to, and allows us to control 
 allows us to run tests in parallel on multiple machines, and to manage different browser versions and browser 
 configurations centrally (instead of in each individual test).
 
-Why Grid?
+Pros of using Grid
 ================
 
-* Vision of Grid
+* scale by distributing tests on several machines (parallel execution)
 
-* Pros of Using Grid
-
-  * scale by distributing tests on several machines (parallel execution)
-  * manage multiple environments from a central point, making it easy
+* manage multiple environments from a central point, making it easy
     to run the tests against a vast combination of browsers / OS.
 
 * minimize the maintenance time for the grid by allowing you to
   implement custom hooks to leverage virtual infrastructure for
   instance.
+  
 * if your tests are running on one particular platform, by using a
   node on another platform you effectively have cross platform
   testing.
-* Cons of Using Grid
+  
+Cons of using Grid
+--------------------
 
-  * you have no capabilities for user input if your tests want to
+* you have no capabilities for user input if your tests want to
     prompt for input whereas you would if your tests ran locally
-  * you also need to maintain the health of other computer systems
+* you also need to maintain the health of other computer systems
     which run your nodes
+
 
 What is a Hub and Node?
 =======================
