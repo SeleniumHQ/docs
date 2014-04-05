@@ -86,11 +86,20 @@ A node on Windows might have the capability of offering Internet
 Explorer as a browser option, whereas this wouldn't be possible on
 Linux or Mac.
 
-Setting Up Your Own
-===================
+Rolling Your Own Grid
+=====================
 
-You could use an online service, such as "Sauce Labs" or "Testing Bot" to run your Grid Nodes, but if you
-would rather run your own on your own hardware then see below.
+To use Selenium Grid you must maintain your own infrastructure for
+the nodes.  Without this infrastructure, Grid will not function.
+Many organizations use IaaS providers such as Amazon EC2 and Google
+Compute to provide this infrastructure.
+
+Other options include outsourcing the infrastructure management to
+providers such as Sauce Labs or Testing Bot.  They provide grid
+nodes as a service, but it's certainly possible to also run nodes
+on your own hardware.  This chapter will go into detail about the
+option of rolling your own grid, complete with its own node
+infrastructure.
 
 Quick Start
 -----------
