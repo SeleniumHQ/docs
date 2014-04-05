@@ -1,3 +1,4 @@
+=============
 Selenium Grid
 =============
 
@@ -15,63 +16,75 @@ Selenium Grid allows us to run tests in parallel on multiple machines,
 and to manage different browser versions and browser configurations
 centrally (instead of in each individual test).
 
-+---------------------+------------------------------------------------+ 
-| Pros of using Grid  | Description                                    | 
-+=====================+================================================+ 
-| Scale               | Scale by distributing tests on several         | 
-|                     | machines using parallel execution.             | 
-+---------------------+------------------------------------------------+ 
-| Central             | Manage multiple environments from a central    |
-|                     | point, making it easy to run the tests against |
-|                     | a large combination of browsers and operating  |
-|                     | systems.                                       | 
-+---------------------+------------------------------------------------+ 
-| Minimize            | Minimize the maintenance time for the grid by  |
-|                     | allowing you to implement custom hooks to      |
-|                     | leverage a virtual infrastructure of           |
-|                     | registered nodes.                              |
-+---------------------+------------------------------------------------+ 
-| Cross Platform      | If your tests are running on one particular    |
-|                     | platform, by using a node on another platform  |
-|                     | you effectively have cross platform testing.   | 
-+---------------------+------------------------------------------------+
-| Smart               | Grid can route commands to a certain version   |
-|                     | of a browser if you have 2 or more nodes       | 
-|                     | registered, each pointing to a different       | 
-|                     | version of the browser binary.                 | 
-+---------------------+------------------------------------------------+
+Pros and Cons
+=============
 
+Selenium Grid isn't a silver bullet.  It solves a subset of common
+delegation and distribution problems, but will for example not
+manage your infrastructure and might not suite your specific needs.
+
+Pros
+----
+
+Scale
+
+  Scale by distributing tests on several machines using parallel execution.
   
-+---------------------+------------------------------------------------+ 
-| Cons of using Grid  | Description                                    | 
-+=====================+================================================+ 
-| Prompted Input      | You have no capabilities for user input if your|
-|                     | tests want to prompt for input whereas you     |
-|                     | would if your tests ran locally.               | 
-+---------------------+------------------------------------------------+ 
-| Maintainability     | You also need to maintain the health of other  |
-|                     | computer systems which run your nodes.         | 
-+---------------------+------------------------------------------------+ 
-| Limited Power       | Third party libraries, like Sikuli, will not   |
-|                     | work through a Grid because the WebDriver JSON |
-|                     | protocol is not able to send those commands.   |
-+---------------------+------------------------------------------------+ 
+Central
 
+  Manage multiple environments from a central point, making it easy to
+  run the tests against a large combination of browsers and operating
+  systems.
+  
+Minimize
+
+  Minimize the maintenance time for the grid by allowing you to implement
+  custom hooks to leverage a virtual infrastructure of registered nodes.
+  
+Cross-Platform
+
+  If your tests are running on one particular platform, by using a node
+  on another platform you effectively have cross-platform testing.
+  
+Smart
+
+  Grid can route commands to a certain version of a browser if you
+  have two or more nodes registered, each pointing to a different
+  version of the browser binary.
+
+Cons
+----
+
+Prompted input
+
+  You have no capabilities for user input if your tests want to
+  prompt for user input whereas you wuold if your tests ran locally.
+
+Maintainability
+
+  You also need to maintain the health of other computer systems
+  which run your nodes.
+
+Limited power
+
+  Certain third party libraries have limitations that prevent them
+  from being used in conjuction with Grid.
 
 What is a Hub and Node?
 =======================
 
-* Hub
+A _hub_ is a central point from where your tests will be kicked
+off.  There will only be one hub in a grid and it's launched from
+one system.  The hub will connect one or more nodes that tests will
+be delegated to.
 
-  * Hub is a central point from where your tests will be kicked off.
-  * There will be only one Hub in a grid and it is launched from one
-    system.
-
-* Node
-
-  * Nodes are the different selenium instances that will execute your tests in a distributed manner.
-  * There can be many nodes in a grid.
-  * The machines which are nodes need not to be the same platform as that of hub.
+_Nodes_ are different Selenium instances that will execute tests
+on individual computer systems.  There can be many nodes in a grid.
+The machines which are nodes need not be the same platform or have
+the same browser selection as that of the hub or the other nodes.
+A node on Windows might have the capability of offering Internet
+Explorer as a browser option, whereas this wouldn't be possible on
+Linux or Mac.
 
 Setting Up Your Own
 ===================
