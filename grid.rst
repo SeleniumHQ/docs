@@ -28,24 +28,27 @@ Pros
 
 Scale
 
-  Scale by distributing tests on several machines using parallel execution.
-  
+  Scale by distributing tests on several machines using parallel
+  execution.
+
 Central
 
-  Manage multiple environments from a central point, making it easy to
-  run the tests against a large combination of browsers and operating
-  systems.
-  
+  Manage multiple environments from a central point, making it easy
+  to run the tests against a large combination of browsers and
+  operating systems.
+
 Minimize
 
-  Minimize the maintenance time for the grid by allowing you to implement
-  custom hooks to leverage a virtual infrastructure of registered nodes.
-  
+  Minimize the maintenance time for the grid by allowing you to
+  implement custom hooks to leverage a virtual infrastructure of
+  registered nodes.
+
 Cross-Platform
 
-  If your tests are running on one particular platform, by using a node
-  on another platform you effectively have cross-platform testing.
-  
+  If your tests are running on one particular platform, by using a
+  node on another platform you effectively have cross-platform
+  testing.
+
 Smart
 
   Grid can route commands to a certain version of a browser if you
