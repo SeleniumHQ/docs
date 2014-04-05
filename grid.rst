@@ -108,45 +108,55 @@ Quick Start
 -----------
 
 This example will show you how to start the Selenium 2 Hub, and
-register both a WebDriver node and a Selenium 1 RC legacy node. We’ll
-also show you how to call the grid from Java. The hub and nodes are
-shown here running on the same machine, but of course you can copy the
-selenium-server-standalone to multiple machines.
+register both a WebDriver node and a Selenium 1 RC legacy node.
+We’ll also show you how to call the grid from Java.  The hub and
+nodes are shown here running on the same machine, but of course you
+can copy the selenium-server-standalone to multiple machines.
 
-    The selenium-server-standalone package includes the Hub,
-    WebDriver, and legacy RC needed to run the grid. Ant is not
-    required anymore. You can download the
-    selenium-server-standalone-.jar from
-    http://code.google.com/p/selenium/downloads/list. This
-    walk-through assumes you already have Java installed.
+The selenium-server-standalone package includes the hub, WebDriver,
+and legacy RC needed to run the grid.  ant is not required anymore.
+You can download the selenium-server-standalone-.jar from
+http://code.google.com/p/selenium/downloads/list.
 
 Step 1: Start the Hub
 ~~~~~~~~~~~~~~~~~~~~~
 
-The Hub is the central point that will receive all the test request and distribute them the the right nodes.
+The hub is the central point that will receive test requests and
+distribute them the the right nodes.  The distribution is done on
+capabilities basis, meaning a test requiring a set of capabilities
+will only be distributed to nods offering that set or subset of
+capabilities.
 
-Open a command prompt and navigate to the directory where you copied the selenium-server-standalone
-file. Type the following command:
+Because a test's desired capabilities are just what the name implies,
+_desired_, the hub cannot guarantee that it will locate a node fully
+matching the requested desired capabilitie set.
 
-    java -jar selenium-server-standalone-2.14.0.jar -role hub
+Open a command prompt and navigate to the directory where you copied
+the *selenium-server-standalone.jar* file.  You start the hub by
+passing the `-role hub` flag to the standalone server::
 
-The hub will automatically start-up using port 4444 by default, among its other defaults. You can view the
-status of the hub by opening a browser window and navigating to: http://localhost:4444/grid/console
+    java -jar selenium-server-standalone.jar -role hub
 
-###### Configuration of Hub with options
+The hub will listen to port 4444 by default.  You can view the
+status of the hub by opening a browser window and navigating to:
+http://localhost:4444/grid/console.
 
-To change the default port, you can add the optional parameter -port when you run the command. Also, any
-of the other options you see in the JSON config file (below) are possible.
+To change the default port, you can add the optional `-port` flag
+with an integer representing the port to listen to when you run the
+command.  Also, all of the other options you see in the JSON config
+file (seen below) are possible command-line flags.
 
-###### Configuration of Hub with JSON
+You certainly can get by with only the simple command show above,
+but if you need more advanced configuration, then you may also for
+convenience specify a JSON format config file to configure the gir
+dhub when you start it.  You can do it like so::
 
-You certainly can get by with only the simple command show above, but if you need more advanced
-configuration, then you can specify a JSON format config file to configure the Grid Hub when you
-start it.  You can do it like so:
+    java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug
 
-    java -jar %JAR% -role hub -hubConfig hubConfig.json -debug
+Below you will see an example of a *hubConfig.json* file.  We will
+go into more detail on how to provide node configuration files in
+step 2.
 
-And here is an example of a hubConfig.json file:
 
 .. code-block:: json
 
@@ -164,36 +174,42 @@ And here is an example of a hubConfig.json file:
     "nodePolling": 180000,
     "platform": "WINDOWS"}
 
-#### Step 2: Start the nodes
+Step 2: Start the nodes
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Regardless on whether you want to run a grid with new WebDriver functionality, or a grid with
-Selenium 1 RC functionality, or both at the same time, you use the same selenium-server-standalone
-jar file to start the nodes.
+Regardless on whether you want to run a grid with new WebDriver
+functionality, or a grid with Selenium 1 RC functionality, or both
+at the same time, you use the same selenium-server-standalone.jar
+file to start the nodes::
 
-    java -jar selenium-server-standalone-2.14.0.jar -role node -hub http://localhost:4444/grid/register
+    java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444/grid/register
 
-The port defaults to 5555 if not specified whenever the "-role" option is provided and is not hub.  You
-can run multiple Nodes on one machine but if you do so, you need to be aware of your systems memory
-resources and problems with screenshots if your tests take them.
+The port defaults to 5555 if not specified whenever the _-role_
+option is provided and is not hub.  You can run multiple nodes on
+one machine but if you do so, you need to be aware of your systems
+memory resources and problems with screenshots if your tests take
+them.
 
-###### Configuration of Node with options
+###### Configuration of Node With Options
 
-For backwards compatibility "wd" and "rc" roles are still a valid subset of the "node" role. But
-those roles limit the types of remote connections to their corresponding API, while "node" allows
-both RC and WebDriver remote connections.
+As mentioned, for backwards compatibility “wd” and “rc” roles are
+still a valid subset of the “node” role.  But those roles limit the
+types of remote connections to their corresponding API, while “node”
+allows both RC and WebDriver remote connections.
 
-You can pass JVM "-D" properties to the Java process on the command line as well:
-```text
--Dwebdriver.chrome.driver=chromedriver.exe
-```
+Passing JVM properties (using the _-D_ flag) on the command line
+as well, and these will be picked up and propagated to the nodes::
 
-###### Configuration of Node with JSON
+    -Dwebdriver.chrome.driver=chromedriver.exe
 
-You can also start Grid Nodes that are configured with a JSON configuration file.
+###### Configuration of Node With JSON
 
-    java.exe -jar %JAR% -role node -nodeConfig node1Config.json -Dwebdriver.chrome.driver=%CHROMEDRIVER%
+You can also start grid nodes that are configured with a JSON
+configuration file::
 
-And here is an example of a node1Config.json file:
+    java.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json -Dwebdriver.chrome.driver=chromedriver.exe
+
+And here is an example of a _nodeConfig.json_ file:
 
 .. code-block:: json
 
@@ -224,28 +240,3 @@ And here is an example of a node1Config.json file:
                       "register": true,
                       "hubPort": 4444,
                       "maxSessions": 5}}
-
-### Support
-
-* Operating Systems
-      * Mac OSX
-      * Linux
-      * Windows
-
-* Execution Using Shell Scripts
-
-* Running in a Continuous Integration Environment
-      * Bamboo
-      * Jenkins
-
-
-Configuration
--------------
-
-
-Maintaining
------------
-
-
-
-[info added from Grid2 wiki page](https://code.google.com/p/selenium/wiki/Grid2)
