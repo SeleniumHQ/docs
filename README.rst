@@ -53,13 +53,6 @@ that too:
     source bin/activate
     pip install -e git+https://github.com/SeleniumHQ/selenium-docs.git
 
-Formatting
-==========
-
-Each line should not exceed 72 characters per line unless they need
-special treatment because you need to preformat the text or they're
-code.
-
 Patches
 =======
 
