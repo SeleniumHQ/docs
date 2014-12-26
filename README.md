@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SeleniumHQ/docs.svg)](https://travis-ci.org/SeleniumHQ/docs)
+
 We're rewriting the Selenium documentation from scratch!
 Help us out by sending us a patch!
 
