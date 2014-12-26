@@ -17,11 +17,11 @@ ALLSPHINXOPTS   = -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 .PHONY: all clean html check themes open
 
-all: AUTHORS html
+all: html
 
 clean:
 	-rm -rf _build/*
-	-rm -rf authors.rst AUTHORS
+	-rm -rf authors.rst
 
 _build/doctrees:
 	mkdir -p _build/doctrees
@@ -41,9 +41,6 @@ linkcheck: _build/doctrees
 
 themes:
 	@true
-
-AUTHORS:
-	git log --use-mailmap --format="%aN <%aE>" | sort -uf > $@
 
 authors.rst:
 	git log --use-mailmap --format="* %aN" | sort -uf > $@
