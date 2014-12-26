@@ -3,19 +3,13 @@ SPHINXOPTS  := -W
 SPHINXBUILD := sphinx-build
 PAPER       :=
 
-ifeq ($(shell uname -s),Linux)
-BROWSER     := x-www-browser
-else
-BROWSER     := open
-endif
-
 # Internal variables
 ROOT            = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
-.PHONY: all clean html check themes open
+.PHONY: all clean html check themes
 
 all: html
 
@@ -44,6 +38,3 @@ themes:
 
 authors.rst:
 	git log --use-mailmap --format="* %aN" | sort -uf > $@
-
-open: html
-	$(BROWSER) "file://$(ROOT)/_build/html/index.html"
