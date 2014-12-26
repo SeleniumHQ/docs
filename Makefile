@@ -11,7 +11,6 @@ CONTENTS = \
 	best.html \
 	worst.html \
 	grid.html \
-	ide.html \
 	drivers.html \
 	javasupport.html \
 	attr.html \
