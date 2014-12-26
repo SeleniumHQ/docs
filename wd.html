@@ -74,30 +74,30 @@
  You can see what directories, separated by a colon,
  that makes up your system's path by executing the following command:
 
-<code><pre>% echo $PATH
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</pre></code>
+<pre><code>% echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</code></pre>
 
 <p>To include chromedriver on the path if it isn't already,
  make sure you include the chromedriver binary's parent directory.
  The following line will set the <var>PATH</var> environmental variable
  its current content, plus an additional path added after the colon:
 
-<code><pre>% export PATH="$PATH:/path/to/chromedriver"</pre></code>
+<pre><code>% export PATH="$PATH:/path/to/chromedriver"</code></pre>
 
 <p>When chromedriver is available on your path,
  you should be able to execute the _chromedriver_ executable from any directory.
 
 <p>To instantiate a Chrome/Chromium session, you can do the following:
 
-<code class=java><pre>WebDriver driver = new ChromeDriver();</pre></code>
+<pre><code class=java>WebDriver driver = new ChromeDriver();</code></pre>
 
 <p>Remember that you have to set the path to the chromedriver executable.
  This is possible using the following line:
 
-<code class=java><pre>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</pre></code>
+<pre><code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code></pre>
 
-<code class=ruby><pre>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :chrome</pre></code>
+<pre><code class=ruby>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :chrome</code></pre>
 
 <p>The chromedriver is implemented as a WebDriver remote server
  that by exposing Chrome's internal automation proxy interface
@@ -116,10 +116,10 @@ driver = Selenium::WebDriver.for :chrome</pre></code>
  is pretty much the same as for Chrome and Chromium,
  but doesn't require any additional dependencies:
 
-<code class=java><pre>WebDriver driver = new FirefoxDriver();</pre></code>
+<pre><code class=java>WebDriver driver = new FirefoxDriver();</code></pre>
 
-<code class=rb><pre>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :firefox</pre></code>
+<pre><code class=rb>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :firefox</code></pre>
 
 
 <h3>Internet Explorer</h3>
@@ -141,26 +141,26 @@ driver = Selenium::WebDriver.for :firefox</pre></code>
 <p>On Linux and Mac OS X you can do it for your current shell session
  by doing this:
 
-<code><pre>% export SELENIUM_SERVER_JAR=/path/to/operadriver.jar</pre></code>
+<pre><code>% export SELENIUM_SERVER_JAR=/path/to/operadriver.jar</code></pre>
 
 <p>It's possible to set this in your shell's profile (e.g. <em>~/.bashrc</em>)
  to have the variable set every time you launch a new shell session.
  Alternatively you can set the variable programmatically in your test runner.
  In Python you'd do something along the lines of
 
-<code class=py><pre>import os
-os.environ["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</pre></code>
+<pre><code class=py>import os
+os.environ["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</code></pre>
 
 <p>The equivalent in Ruby:
 
-<code class=rb><pre>ENV["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</pre></code>
+<pre><code class=rb>ENV["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</code></pre>
 
 <p>Instantiating a driver session is similar to Firefox and Chromium:
 
-<code class=java><pre>WebDriver driver = new OperaDriver();</pre></code>
+<pre><code class=java>WebDriver driver = new OperaDriver();</code></pre>
 
-<code class=rb><pre>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :opera</pre></code>
+<pre><code class=rb>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :opera</code></pre>
 
 
 <h3>Safari</h3>
@@ -192,15 +192,15 @@ driver = Selenium::WebDriver.for :opera</pre></code>
 
 <p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows you have to download the latest [Internet Explorer Driver](https://code.google.com/p/selenium/downloads/list) and put the file into a folder that is in PATH. To find out which directories are in PATH type `echo %PATH%` in command prompt.
 
-<code><pre>echo %PATH%
-C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</pre></code>
+<pre><code>echo %PATH%
+C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</code></pre>
 
 `C:\Ruby200\bin` looks like a good place. Unzip `IEDriverServer` file and move `IEDriverServer.exe` there.
 
 This should open a new Internet Explorer window:
 
-<code class=rb><pre>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :internet_explorer</pre></code>
+<pre><code class=rb>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :internet_explorer</code></pre>
 
 
 <h2 id=waits>Waits (Implicit and Explicit)</h2>
@@ -229,12 +229,12 @@ driver = Selenium::WebDriver.for :internet_explorer</pre></code>
 <p>There are some common conditions
  that are frequently come across when automating web browsers.
 
-<code class=ruby><pre>require "selenium-webdriver"
+<pre><code class=ruby>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :firefox
 
 # element is clickable
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-wait.until { driver.find_element(:id => "your_element").click }</pre></code>
+wait.until { driver.find_element(:id => "your_element").click }</code></pre>
 
 <h3>Fluent Wait</h3>
 
@@ -257,10 +257,10 @@ wait.until { driver.find_element(:id => "your_element").click }</pre></code>
  By default it ill take the value to 0,
  for the life of the WebDriver object instance through out the test script.
 
-<code class=java><pre>WebDriver driver = new FirefoxDriver();
+<pre><code class=java>WebDriver driver = new FirefoxDriver();
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.get("http://somedomain/url_that_delays_loading");
-WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</pre></code>
+WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</code></pre>
 
 
 <h4>Explicit Waits</h4>
@@ -271,10 +271,10 @@ WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</pr
  We can combine the use of Expected Conditions
  to accomplish wait Without using any hard delay.
 
-<code class=java><pre>WebDriver driver = new FirefoxDriver();
+<pre><code class=java>WebDriver driver = new FirefoxDriver();
 driver.get("http://somedomain/url_that_delays_loading");
 WebElement myDynamicElement = (new WebDriverWait(driver, 10))
-  .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));</pre></code>
+  .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));</code></pre>
 
 
 <h4>FluentWait</h4>
@@ -285,7 +285,7 @@ WebElement myDynamicElement = (new WebDriverWait(driver, 10))
 <p>User may configure the wait to ignore specific types of exceptions whilst waiting,
  such as NoSuchElementExceptions when searching for an element on the page.
 
-<code class=java><pre>// Waiting 30 seconds for an element to be present on the page, checking
+<pre><code class=java>// Waiting 30 seconds for an element to be present on the page, checking
 // for its presence once every 5 seconds.
 Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .withTimeout(30, SECONDS)
@@ -296,9 +296,9 @@ WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
   public WebElement apply(WebDriver driver) {
     return driver.findElement(By.id("foo"));
   }
-});</pre></code>
+});</code></pre>
 
-<code class=java><pre>FluentWait<By> fluentWait = new FluentWait<By>(By.tagName("TEXTAREA"));
+<pre><code class=java>FluentWait<By> fluentWait = new FluentWait<By>(By.tagName("TEXTAREA"));
 fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
 fluentWait.withTimeout(1000, TimeUnit.MILLISECONDS);
 fluentWait.until(new Predicate<By>() {
@@ -310,7 +310,7 @@ fluentWait.until(new Predicate<By>() {
     }
   }
 });
-browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");</pre></code>
+browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");</code></pre>
 
 
 <h2 class=support_classes>Support Classes</h2>
