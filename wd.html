@@ -185,7 +185,7 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <p>Ruby is not installed by default on Windows. Download the latest [version](http://rubyinstaller.org/downloads) and run the installer. You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check *Add Ruby executables to your PATH* checkbox. To drive any browser you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
 
-<code><pre>gem install selenium-webdriver</pre></code>
+<pre><code>gem install selenium-webdriver</code></pre>
 
 
 <h3>Internet Explorer</h3>
@@ -287,21 +287,21 @@ WebElement myDynamicElement = (new WebDriverWait(driver, 10))
 
 <pre><code class=java>// Waiting 30 seconds for an element to be present on the page, checking
 // for its presence once every 5 seconds.
-Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+Wait&lt;WebDriver&gt; wait = new FluentWait&lt;WebDriver&gt;(driver)
   .withTimeout(30, SECONDS)
   .pollingEvery(5, SECONDS)
   .ignoring(NoSuchElementException.class);
 
-WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+WebElement foo = wait.until(new Function&lt;WebDriver, WebElement&gt;() {
   public WebElement apply(WebDriver driver) {
     return driver.findElement(By.id("foo"));
   }
 });</code></pre>
 
-<pre><code class=java>FluentWait<By> fluentWait = new FluentWait<By>(By.tagName("TEXTAREA"));
+<pre><code class=java>FluentWait&lt;By&gt; fluentWait = new FluentWait&lt;By&gt;(By.tagName("TEXTAREA"));
 fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
 fluentWait.withTimeout(1000, TimeUnit.MILLISECONDS);
-fluentWait.until(new Predicate<By>() {
+fluentWait.until(new Predicate&lt;By&gt;() {
   public boolean apply(By by) {
     try {
       return browser.findElement(by).isDisplayed();
