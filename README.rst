@@ -1,4 +1,6 @@
-# The New Selenium Docs
+====
+The New Selenium Docs
+====
 
 We're rewriting the Selenium documentation from scratch!  Help us out
 by sending us a patch!
@@ -9,7 +11,8 @@ completeness, it will replace the existing Selenium documentation.
 **Warning:** This repo does not host the official Selenium documentation.
 You can find the official documentation at http://docs.seleniumhq.org/docs/.
 
-## Building
+Building
+====
 
 The documentation is built using `Sphinx <http://sphinx-doc.org>`_ and
 formatted using `reStructuredText
@@ -42,7 +45,8 @@ that too::
     source bin/activate
     pip install -e git+https://github.com/SeleniumHQ/selenium-docs.git
 
-## Patches
+Patches
+====
 
 We accept patches and pull requests from GitHub.
 When opening a pull request,
