@@ -1,0 +1,318 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>WebDriver</title>
+
+<h1>WebDriver</h1>
+
+<p>The biggest change in Selenium recently
+ has been the inclusion of the WebDriver API.
+ Driving a browser natively as a user would either locally
+ or on a remote machine using the Selenium server
+ it marks a leap forward in terms of browser automation.
+
+<p>Selenium WebDriver fits in the same role as RC did,
+ and has incorporated the original 1.x bindings.
+ It refers to both the language bindings
+ and the implementations of the individual browser controlling code.
+ This is commonly referred to as just <em>WebDriver</em>
+ or sometimes as <em>Selenium 2</em>.
+
+<p>Selenium 1.0 + WebDriver = Selenium 2.0
+
+<ul>
+ <li>WebDriver is designed in a simpler
+  and more concise programming interface
+  along with addressing some limitations in the Selenium-RC API.
+
+ <li>WebDriver is a compact object-oriented API
+  when compared to Selenium 1.0.
+
+ <li>It drives the browser much more effectively
+  and overcomes the limitations of Selenium 1
+  that affected our functional test coverage,
+  like the file upload or download, pop-ups, and dialogs barrier.
+
+ <li>WebDriver overcomes the limitation of Selenium RC's
+  single-host origin policy.
+</ul>
+
+
+<h2 class=driver_requirements>Driver Requirements</h2>
+
+<p>Through WebDriver, Selenium supports all major browsers on the market
+ such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
+ Where possible WebDriver drives the browser
+ using the browser's built-in support for automation,
+ although not all browsers have official support for remote control.
+
+<p>WebDriver's aim is to emulate a real user's interaction
+ with the browser as closely as possible.
+ This is possible at varying levels in different browsers.
+ For more detalis on the different driver idiosyncracies,
+ please see <em><a href=drivers.html>Driver Idiosyncracies</a></em>.
+
+<p>Even though all the drivers share a single user-facing interface
+ for contolling the browser,
+ they have slightly different ways of setting up browser sessions.
+ Since many of the driver implementations are provided by third parties,
+ they are not included in the standard Selenium distribution.
+
+<p>Driver instantiation, profile management, and various browser specific settings
+ are examples of parameters that have different requirements depending on the browser.
+ This section explains the basic requirements
+ for getting you started with the different browsers.
+
+
+<h3>Chromium/Chrome</h3>
+
+<p>To drive Chrome or Chromium, you have to download
+ <a href=//code.google.com/p/chromedriver/downloads/list>chromedriver</a>
+ and put it in a folder that is on your system's path.
+
+<p>On Linux or Mac OS this means modifying
+ the <var>PATH</var> environmental variable.
+ You can see what directories, separated by a colon,
+ that makes up your system's path by executing the following command:
+
+<code><pre>% echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</pre></code>
+
+<p>To include chromedriver on the path if it isn't already,
+ make sure you include the chromedriver binary's parent directory.
+ The following line will set the <var>PATH</var> environmental variable
+ its current content, plus an additional path added after the colon:
+
+<code><pre>% export PATH="$PATH:/path/to/chromedriver"</pre></code>
+
+<p>When chromedriver is available on your path,
+ you should be able to execute the _chromedriver_ executable from any directory.
+
+<p>To instantiate a Chrome/Chromium session, you can do the following:
+
+<code class=java><pre>WebDriver driver = new ChromeDriver();</pre></code>
+
+<p>Remember that you have to set the path to the chromedriver executable.
+ This is possible using the following line:
+
+<code class=java><pre>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</pre></code>
+
+<code class=ruby><pre>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :chrome</pre></code>
+
+<p>The chromedriver is implemented as a WebDriver remote server
+ that by exposing Chrome's internal automation proxy interface
+ instructs the browser what to do.
+
+
+<h3>Firefox</h3>
+
+<p>The driver for Firefox is maintained by the Selenium project
+ and works by installing a browser add-on
+ in Firefox' profile before starting the browser.
+ The WebDriver client then communicates with that add-on
+ to instruct the browser what to do.
+
+<p>The approach for instantiating a WebDriver session to Firefox
+ is pretty much the same as for Chrome and Chromium,
+ but doesn't require any additional dependencies:
+
+<code class=java><pre>WebDriver driver = new FirefoxDriver();</pre></code>
+
+<code class=rb><pre>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :firefox</pre></code>
+
+
+<h3>Internet Explorer</h3>
+
+
+<h3>Opera (Presto-based)</h3>
+
+<p>Setting up support for Opera is fairly similar to the Chrome approach
+ in that they are both supported by third parties.
+ Consequently you need to set up a dependency to
+ the <code>com.opera:operadriver</code> artifact (if using Maven)
+ or <a href=//code.google.com/p/selenium/downloads/list>download a prebuilt standalone server JAR</a>
+ As long as the JAR is available on your classpath, you should be good to go.
+
+<p>If you use Python or Ruby as your language of choice
+ you must set the <var>SELENIUM_SERVER_JAR</var> environmental variable
+ to point to the location of the binary JAR.
+
+<p>On Linux and Mac OS X you can do it for your current shell session
+ by doing this:
+
+<code><pre>% export SELENIUM_SERVER_JAR=/path/to/operadriver.jar</pre></code>
+
+<p>It's possible to set this in your shell's profile (e.g. <em>~/.bashrc</em>)
+ to have the variable set every time you launch a new shell session.
+ Alternatively you can set the variable programmatically in your test runner.
+ In Python you'd do something along the lines of
+
+<code class=py><pre>import os
+os.environ["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</pre></code>
+
+<p>The equivalent in Ruby:
+
+<code class=rb><pre>ENV["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</pre></code>
+
+<p>Instantiating a driver session is similar to Firefox and Chromium:
+
+<code class=java><pre>WebDriver driver = new OperaDriver();</pre></code>
+
+<code class=rb><pre>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :opera</pre></code>
+
+
+<h3>Safari</h3>
+
+
+<h3>Specialized Browsers</h3>
+
+
+<h4> HtmlUnit</h4>
+
+
+<h4>PhantomJS</h4>
+
+
+<h2 id=browser_launching_and_manipulation>Browser Launching and Manipulation</h2>
+
+<!-- #codeExamples -->
+<!-- Remember to cover profile and extensions here -->
+
+
+<h3>Ruby</h3>
+
+<p>Ruby is not installed by default on Windows. Download the latest [version](http://rubyinstaller.org/downloads) and run the installer. You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check *Add Ruby executables to your PATH* checkbox. To drive any browser you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
+
+<code><pre>gem install selenium-webdriver</pre></code>
+
+
+<h3>Internet Explorer</h3>
+
+<p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows you have to download the latest [Internet Explorer Driver](https://code.google.com/p/selenium/downloads/list) and put the file into a folder that is in PATH. To find out which directories are in PATH type `echo %PATH%` in command prompt.
+
+<code><pre>echo %PATH%
+C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</pre></code>
+
+`C:\Ruby200\bin` looks like a good place. Unzip `IEDriverServer` file and move `IEDriverServer.exe` there.
+
+This should open a new Internet Explorer window:
+
+<code class=rb><pre>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :internet_explorer</pre></code>
+
+
+<h2 id=waits>Waits (Implicit and Explicit)</h2>
+
+<p>Waiting is having the automated task execution
+ elapse a certain amount of time before continuing with the next step.
+
+
+<h3>Implicit Wait</h3>
+
+<p>An implicit wait is to tell WebDriver to poll the DOM
+ for a certain amount of time when trying to find an element or elements
+ if they are not immediately available.
+ The default setting is 0.
+ Once set, the implicit wait is set for the life of the WebDriver object instance.
+
+
+<h3>Explicit Wait</h3>
+
+<p>An explicit waits is code you define to wait
+ for a certain condition to occur before proceeding further in the code.
+
+
+<h4>Expected Conditions</h4>
+
+<p>There are some common conditions
+ that are frequently come across when automating web browsers.
+
+<code class=ruby><pre>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :firefox
+
+# element is clickable
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+wait.until { driver.find_element(:id => "your_element").click }</pre></code>
+
+<h3>Fluent Wait</h3>
+
+<p>The implicit wait in Selenium 2 might not work for Ajax elements.
+ It is recommend that you use any one of the following workaround
+ to handle Ajax elements.
+
+<p>One approach is to use FluentWait and a Predicate available with Selenium 2.
+ The advantage of this approach is that element polling mechanism is configurable.
+ The code example below waits for 1 second
+ and polls for a textarea every 100 milliseconds.
+
+
+<h4>Implicit Waits</h4>
+
+<p>The ImplicitWait will tell the webDriver to poll the DOM
+ for a certain duration when trying to find the element,
+ this will be useful when certain elements on the webpage
+ will not be available immediately and needs some time to load.
+ By default it ill take the value to 0,
+ for the life of the WebDriver object instance through out the test script.
+
+<code class=java><pre>WebDriver driver = new FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.get("http://somedomain/url_that_delays_loading");
+WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</pre></code>
+
+
+<h4>Explicit Waits</h4>
+
+<p>An explicit waits is code you define to wait for a certain condition
+ to occur before proceeding further in the code.
+ Which is more similar to the Thread.sleep().
+ We can combine the use of Expected Conditions
+ to accomplish wait Without using any hard delay.
+
+<code class=java><pre>WebDriver driver = new FirefoxDriver();
+driver.get("http://somedomain/url_that_delays_loading");
+WebElement myDynamicElement = (new WebDriverWait(driver, 10))
+  .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));</pre></code>
+
+
+<h4>FluentWait</h4>
+
+<p>FluentWait instance defines the maximum amount of time to wait for a condition,
+ as well as the frequency with which to check the condition.
+
+<p>User may configure the wait to ignore specific types of exceptions whilst waiting,
+ such as NoSuchElementExceptions when searching for an element on the page.
+
+<code class=java><pre>// Waiting 30 seconds for an element to be present on the page, checking
+// for its presence once every 5 seconds.
+Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+  .withTimeout(30, SECONDS)
+  .pollingEvery(5, SECONDS)
+  .ignoring(NoSuchElementException.class);
+
+WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+  public WebElement apply(WebDriver driver) {
+    return driver.findElement(By.id("foo"));
+  }
+});</pre></code>
+
+<code class=java><pre>FluentWait<By> fluentWait = new FluentWait<By>(By.tagName("TEXTAREA"));
+fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
+fluentWait.withTimeout(1000, TimeUnit.MILLISECONDS);
+fluentWait.until(new Predicate<By>() {
+  public boolean apply(By by) {
+    try {
+      return browser.findElement(by).isDisplayed();
+    } catch (NoSuchElementException ex) {
+      return false;
+    }
+  }
+});
+browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");</pre></code>
+
+
+<h2 class=support_classes>Support Classes</h2>
+
+<h2 class=http_proxies>HTTP Proxies</h2>

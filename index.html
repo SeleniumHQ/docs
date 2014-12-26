@@ -1,0 +1,123 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Selenium Documentation</title>
+
+<h1>The Selenium Browser Automation Project</h1>
+
+<p>Selenium is an umbrella project for various tools and libraries that
+ enable automation of web browsers.
+ Amongst other things it provides the support infrastructure
+ for the <a href=//w3c.github.com/webdriver>W3C WebDriver specification</a>,
+ that lets you write interchangable code for all major web browsers.
+
+<p>The project is made possible by volunteer contributors
+ who have put in thousands of hours of their own time,
+ and made the source code freely available
+ under the <a href=license.html>Apache 2.0 license</a>.
+
+<p>Here is one of the simplest Selenium instructions you can make:
+
+<code class=python><pre>from selenium import webdriver
+
+driver = webdriver.Firefox()
+driver.get("http://google.com/?hl=en")
+search_box = driver.find_element_by_id("q")
+search_box.send_keys("cheese")
+search_box.submit()</pre></code>
+
+<p>After you've installed Selenium and run this program
+ you will see the browser navigate to the search engine
+ and enter “cheese” into the search field before submitting the form.
+
+<p>See the <em><a href=quick.html>Quick Tour</a></em>
+ for a full explanation of what goes on behind the scenes when you run this code.
+ You should continue on to the <a href=#narrative>narrative documentation</a>
+ to understand how you can use Selenium as a test automation tool
+ and to scale simple tests like this to run in large,
+ distributed environments on multiple browsers,
+ under several different operating systems.
+
+
+<h2>Getting Started</h2>
+
+<p>If you are new to Selenium,
+ we have a few resources that can help you
+ get up to speed right away.
+
+<ul>
+ <li><a href=quick.html>Quick Tour</a>
+</ul>
+
+
+<h2>Narrative Documentation</h2>
+
+<p>Narrative documentation in chapter form
+ explaining how to use Selenium in detail, from bottom up.
+
+<ul>
+ <li><a href=intro.html>Introduction</a>
+  <ul>
+   <li><a href=intro.html#project>The Selenium Project and Tools</a>
+   <li><a href=intro.html#automation>On Test Automation</a>
+   <li><a href=intro.html#types>Types of Testing</a>
+   <li><a href=intro.html#docs>About This Documentation</a>
+  </ul>
+ <li><a href=install.html>Installation</a>
+ <li><a href=start.html>Getting Staretd with WebDriver</a>
+  <ul>
+   <li><a href=start.html#consumer_browsers>Consumer Browsers</a>
+   <li><a href=start.html#specialized_browsers>Specialized Browsers</a>
+   <li><a href=start.html#locating_elements>Locating Elements</a>
+   <li><a href=start.html#performing_actions_on_the_aut>Performing Actions on the AUT</a>
+  </ul>
+ <li><a href=wd.html>WebDriver</a>
+  <ul>
+   <li><a href=wd.html#driver_requirements>Driver Requirements</a>
+   <li><a href=wd.html#browser_launching_and_manipulation>Browser Launching and Manipulation</a>
+   <li><a href=wd.html#waits>Waits (Implicit and Explicit)</a>
+   <li><a href=wd.html#support_classes>Support Classes</a>
+  </ul>
+ <li><a href=remote.html>Remote WebDriver</a>
+  <ul>
+   <li><a href=remote.html#the_remote_webdriver_server>The Remote WebDriver Server</a>
+   <li><a href=remote.html#running_remotewebdriver_client>Running RemoteWebDriver Client</a>
+  </ul>
+ <li><a href=best.html>Best Practices</a>
+  <ul>
+   <li><a href=best.html#page_object_models>Page Object Models</a>
+   <li><a href=best.html#domain_specific_language>Domain Specific Language</a>
+   <li><a href=best.html#generating_application_state>Generating Application State</a>
+   <li><a href=best.html#mock_external_services>Mock External Services</a>
+   <li><a href=best.html#improved_reporting>Improved Reporting</a>
+   <li><a href=best.html#avoid_sharing_state>Avoid Sharing State</a>
+   <li><a href=best.html#consider_using_a_fluent_api>Consider Using a Fluent API</a>
+   <li><a href=best.html#fresh_browser_per_test>Fresh Browser Per Test</a>
+  </ul>
+ <li><a href=worst.html>Worst Practices</a>
+  <ul>
+   <li><a href=worst.html#captchas>Captchas</a>
+   <li><a href=worst.html#file_downloads>File Downloads</a>
+   <li><a href=worst.html#http_response_codes>HTTP Response Codes</a>
+   <li><a href=worst.html#gmail>Gmail, Email, and Facebook Logins</a>
+   <li><a href=worst.html#performance_testing>Performance Testing</a>
+   <li><a href=worst.html#link_spidering>Link Spidering</a>
+  </ul>
+ <li><a href=grid.html>Selenium Grid</a>
+  <ul>
+   <li><a href=grid.html#pros_and_cons>Pros and Cons</a>
+   <li><a href=grid.html#what_is_a_hub_and_node>What Is A Hub And Node?</a>
+   <li><a href=grid.html#rolling_your_own_grid>Rolling Your Own Grid</a>
+  </ul>
+ <li><a href=ide.html>Record and Playback</a>
+ <li><a href=drivers.html>Driver Idiosyncrasies</a>
+ <li><a href=javasupport.html>The Java Support Package</a>
+</ul>
+
+
+<h2>Front Matter</h2>
+
+<ul>
+ <li><a href=attr.html>Copyright and Attributions</a>
+ <li><a href=conventions.html>Typographical Conventions</a>
+ <li><a href=ack.html>Ackknowledgements</a>
+</ul>
