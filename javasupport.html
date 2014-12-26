@@ -17,51 +17,51 @@
 
 <p>First of all you will need to import the class:
 
-<code class=java><pre>import org.openqa.selenium.support.Color</pre></code>
+<pre><code class=java>import org.openqa.selenium.support.Color</code></pre>
 
 <p>You can now start creating colour objects,
  every colour object will need to be created from a string representation of your colour,
  supported colour representations are:
 
-<code class=java><pre>private final Color HEX_COLOUR = Color.fromString("#2F7ED8");
+<pre><code class=java>private final Color HEX_COLOUR = Color.fromString("#2F7ED8");
 private final Color RGB_COLOUR = Color.fromString("rgb(255, 255, 255)");
 private final Color RGB_COLOUR = Color.fromString("rgb(40%, 20%, 40%)");
 private final Color RGBA_COLOUR = Color.fromString("rgba(255, 255, 255, 0.5)");
 private final Color RGBA_COLOUR = Color.fromString("rgba(40%, 20%, 40%, 0.5)");
 private final Color HSL_COLOUR = Color.fromString("hsl(100, 0%, 50%)");
-private final Color HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)");</pre></code>
+private final Color HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)");</code></pre>
 
 <p>The Color package also supports all of the base colour definitions
  specified in <a href=//www.w3.org/TR/css3-color/#html4>http://www.w3.org/TR/css3-color/#html4</a>.
 
-<code class=java><pre>private final Color BLACK = Color.fromString("black");
+<pre><code class=java>private final Color BLACK = Color.fromString("black");
 private final Color CHOCOLATE = Color.fromString("chocolate");
-private final Color HOTPINK = Color.fromString("hotpink");</pre></code>
+private final Color HOTPINK = Color.fromString("hotpink");</code></pre>
 
 <p>Sometimes browsers will return a colour value of transparent
  if no colour has been set on an element,
  the Color package also supports this
 
-<code class=java><pre>private final Color TRANSPARENT = Color.fromString("transparent");</pre></code>
+<pre><code class=java>private final Color TRANSPARENT = Color.fromString("transparent");</code></pre>
 
 <p>You can now safely query an element
  to get its colour/background colour knowing that
  any response will be correctly parsed
  and converted into a valid Color object:
 
-<code class=java><pre>Color loginButtonColour = driver.findElement(By.id("login")).getCssValue("color");
-Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color");</pre></code>
+<pre><code class=java>Color loginButtonColour = driver.findElement(By.id("login")).getCssValue("color");
+Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color");</code></pre>
 
 <p>You can then directly compare colour objects:
 
-<code class=java><pre>assert loginButtonBackgroundColour.equals(HOTPINK);</pre></code>
+<pre><code class=java>assert loginButtonBackgroundColour.equals(HOTPINK);</code></pre>
 
 <p>Or you can convert the colour into one of the following formats
  and perform a static validation:
 
-<code class=java><pre>assert loginButtonBackgroundColour.asHex().equals("#ff69b4");
+<pre><code class=java>assert loginButtonBackgroundColour.asHex().equals("#ff69b4");
 assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
-assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");</pre></code>
+assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");</code></pre>
 
 <p>Colours are no longer a problem.
 
@@ -73,54 +73,54 @@ assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");</pre></
  <em>Select</em> class in the Selenium support package.
  To use it you will need the following import:
 
-<code class=java><pre>import org.openqa.selenium.support.ui.Select;</pre></code>
+<pre><code class=java>import org.openqa.selenium.support.ui.Select;</code></pre>
 
 <p>You are then able to create a Select object using a WebElement that
 references a &lt;select&gt; element.
 
-<code class=java><pre>WebElement selectElement = driver.findElement(By.id("selectElementID"));
-Select selectObject = new Select(selectElement);</pre></code>
+<pre><code class=java>WebElement selectElement = driver.findElement(By.id("selectElementID"));
+Select selectObject = new Select(selectElement);</code></pre>
 
 <p>The select object will now give you a series of commands
  that allow you to interact with a &lt;select&gt; element.
  First of all you have some options to select various options
  from the &lt;select&gt; element.
 
-<code class=html><pre>&lt;select&gt;
+<pre><code class=html>&lt;select&gt;
  &lt;option value=value1&gt;Bread&lt;/option&gt;
  &lt;option value=value2 selected&gt;Milk&lt;/option&gt;
  &lt;option value=value3&gt;Cheese&lt;/option&gt;
-&lt;/select&gt;</pre></code>
+&lt;/select&gt;</code></pre>
 
 <p>To select the first option from the above element
  you now have three options:
 
-<code class=java><pre>// Select an &lt;option&gt; based upon the &lt;select&gt; elements internal index
+<pre><code class=java>// Select an &lt;option&gt; based upon the &lt;select&gt; elements internal index
 selectObject.selectByIndex(1);
 
 // Select an &lt;option&gt; based upon its value attribute
 selectObject.selectByValue("value1");
 
 // Select an &lt;option&gt; based upon its text
-selectObject.selectByVisibleText("Bread");</pre></code>
+selectObject.selectByVisibleText("Bread");</code></pre>
 
 <p>You can then check which options are selected by using:
 
-<code class=java><pre>// Return a WebElement&lt;List&gt; of options that have been selected
+<pre><code class=java>// Return a WebElement&lt;List&gt; of options that have been selected
 List&lt;WebElement&gt; allSelectedOptions = selectObject.getAllSelectedOptions();
 
 // Return a WebElement referencing the first selection option found by walking down the DOM
-WebElement firstSelectedOption = selectObject.getFirstSelectedOption();</pre></code>
+WebElement firstSelectedOption = selectObject.getFirstSelectedOption();</code></pre>
 
 <p>Or you may just be interested in what &lt;option&gt; elements
  the &lt;select&gt; element contains:
 
-<code class=java><pre>// Return a WebElement&lt;List&gt; of options that the &lt;select&gt; element contains
-List&lt;WebElement&gt; allAvailableOptions = selectObject.getOptions();</pre></code>
+<pre><code class=java>// Return a WebElement&lt;List&gt; of options that the &lt;select&gt; element contains
+List&lt;WebElement&gt; allAvailableOptions = selectObject.getOptions();</code></pre>
 
 <p>If you then want to deselect any elements you now have four options:
 
-<code class=java><pre>// Deselect an &lt;option&gt; based upon the &lt;select&gt; elements internal index
+<pre><code class=java>// Deselect an &lt;option&gt; based upon the &lt;select&gt; elements internal index
 selectObject.deselectByIndex(1);
 
 // Deselect an &lt;option&gt; based upon its value attribute
@@ -130,9 +130,9 @@ selectObject.deselectByValue("value1");
 selectObject.deselectByVisibleText("Bread");
 
 // Deselect all selected &lt;option&gt; elements
-selectObject.deselectAll();</pre></code>
+selectObject.deselectAll();</code></pre>
 
 <p>Finally, some &lt;select&gt; elements allow you to select more than one option,
  you can find out if your &lt;select&gt; element is one of these by using:
 
-<code class=java><pre>Boolean doesThisAllowMultipleSelections = selectObject.isMultiple();</pre></code>
+<pre><code class=java>Boolean doesThisAllowMultipleSelections = selectObject.isMultiple();</code></pre>

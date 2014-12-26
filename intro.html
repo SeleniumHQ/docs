@@ -221,7 +221,7 @@ three steps:
 <p>Ideally, you can address this set-up phase in one line of code,
  which will execute before any browser is launched:
 
-<code class=java><pre>// Create a user who has read-only permissions--they can configure a unicorn, but they do not have payment
+<pre><code class=java>// Create a user who has read-only permissions--they can configure a unicorn, but they do not have payment
 // information set up, nor do they have administrative privileges.
 // At the time the user is created, its email address and password are randomly generated--you don't even need to know them
 User user = UserFactory.createCommonUser(); //This method is defined elsewhere
@@ -229,7 +229,7 @@ User user = UserFactory.createCommonUser(); //This method is defined elsewhere
 // Log in as this user
 // Logging in on this site takes you to your personal "My Account" page, so the AccountPage object
 // is returned by the loginAs method, allowing you to then perform actions from the AccountPage
-AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());</pre></code>
+AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());</code></pre>
 
 <p>As you can imagine, the <em>UserFactory</em> can be extended
  to provide methods such as <em>createAdminUser()</em>, and <em>createUserWithPayment()</em>.
@@ -262,7 +262,7 @@ AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());</pre></c
  You want to write your code like the user trying to solve their problem.
  Here is one way of doing this (continuing from the previous example):
 
-<code class=java><pre>// The Unicorn is a top-level Object--it has attributes, which are set here. This only stores the values, it does not
+<pre><code class=java>// The Unicorn is a top-level Object--it has attributes, which are set here. This only stores the values, it does not
 // fill out any web forms or interact with the browser in any way
 Unicorn sparkles = new Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
 
@@ -272,14 +272,14 @@ AddUnicornPage addUnicornPage = accountPage.addUnicorn();
 
 //Now that we're on the AddUnicornPage, we will pass the "sparkles" object to its createUnicorn() method. This method will
 // take Sparkles' attributes, fill out the form, and click submit
-UnicornConfirmationPage unicornConfirmationPage= addUnicornPage.createUnicorn(sparkles);</pre></code>
+UnicornConfirmationPage unicornConfirmationPage= addUnicornPage.createUnicorn(sparkles);</code></pre>
 
 <p>Now that you've configured your unicorn,
  you need to move on to step 3: Making sure it actually worked.
 
-<code class=java><pre>// The exists() method from UnicornConfirmationPage will take the Sparkles object--a specification of the attributes
+<pre><code class=java>// The exists() method from UnicornConfirmationPage will take the Sparkles object--a specification of the attributes
 // you want to see, and compare them with the fields on the page
-Assert.assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles);</pre></code>
+Assert.assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles);</code></pre>
 
 <p>Note that the tester still hasn't done anything but talk about unicorns in this code–
  no buttons, no locators, no browser controls.

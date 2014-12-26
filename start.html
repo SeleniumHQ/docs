@@ -75,7 +75,7 @@
 how to find elements on the page. WebDriver offers a number of built-in selector
 types, amongst them finding an element by its ID attribute:
 
-<code class=java><pre>WebElement cheese = driver.findElement(By.id("cheese"));</pre></code>
+<pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));</code></pre>
 
 <p>As seen in the example, locating elements in WebDriver is done on the
 <code>WebDriver</code> instance object.  The <code>findElement(By)</code> method returns
@@ -91,8 +91,8 @@ another fundamental object type, the <code>WebElement</code>.
  you can narrow the scope of your search
  by using the same call on that object instance:
 
-<code class=java><pre>WebElement cheese = driver.findElement(By.id("cheese"));
-WebElement cheddar = cheese.findElement(By.id("cheddar"));</pre></code>
+<pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));
+WebElement cheddar = cheese.findElement(By.id("cheddar"));</code></pre>
 
 <p>You can do this because both the <em>WebDriver</em> and <em>WebElement</em> types
 implement the <em><a href=//selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext</a></em>
@@ -116,7 +116,7 @@ specific locator: WebDriver supports looking up elements
 by CSS locators, allowing us to combine the two previous locators into
 one search:
 
-<code class=java><pre>driver.findElement(By.cssSelector("#cheese #cheddar"));</pre></code>
+<pre><code class=java>driver.findElement(By.cssSelector("#cheese #cheddar"));</code></pre>
 
 
 <h3>Locating Multiple Elements</h3>
@@ -124,12 +124,12 @@ one search:
 <p>It's possible that the document we are working with may turn have an
 ordered list of the cheese we like the best:
 
-<code class=html><pre>&lt;ol id=cheese&gt;
+<pre><code class=html>&lt;ol id=cheese&gt;
  &lt;li id=cheddar&gt;…
  &lt;li id=brie&gt;…
  &lt;li id=rochefort&gt;…
  &lt;li id=camembert&gt;…
-&lt;/ul&gt;</pre></code>
+&lt;/ul&gt;</code></pre>
 
 <p>Since more cheese is undisputably better, and it would be cumbersome
 to have to retrieve each of the items individually, a superior
@@ -139,7 +139,7 @@ elements. If only one element is found, it will still return a
 collection (of one element). If no elements match the locator, an
 empty list will be returned.
 
-<code class=java><pre>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</pre></code>
+<pre><code class=java>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</code></pre>
 
 
 <h3>Element Selection Strategies</h3>
@@ -227,20 +227,20 @@ your search, the better.
 
 <p>You can set an element's text using the sendKeys method as follows:
 
-<code class=java><pre>String name = "Charles";
-driver.findElement(By.name("name")).sendKeys(name);</pre></code>
+<pre><code class=java>String name = "Charles";
+driver.findElement(By.name("name")).sendKeys(name);</code></pre>
 
 <p>Some web application use javascript libraries to add drag-and-drop
 functionality. The following is a basic example of dragging one
 element onto another element:
 
-<code class=java><pre>WebElement source = driver.findElement(By.id("source"));
+<pre><code class=java>WebElement source = driver.findElement(By.id("source"));
 WebElement target = driver.findElement(By.id("target"));
-new Actions(driver).dragAndDrop(source, target).build().perform();</pre></code>
+new Actions(driver).dragAndDrop(source, target).build().perform();</code></pre>
 
 
 <h3>Clicking on an element</h3>
 
 <p>You can click on an element using the click method:
 
-<code class=java></pre>driver.findElement(By.cssSelector("input[type='submit']")).click();</pre></code>
+<pre><code class=java>driver.findElement(By.cssSelector("input[type='submit']")).click();</code></pre>

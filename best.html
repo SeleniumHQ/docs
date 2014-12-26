@@ -2,7 +2,7 @@
 <meta charset=utf-8>
 <title>Best Practices</title>
 
-<title>Best Practices</title>
+<h1>Best Practices</h1>
 
 <p>Functional testing is difficult to get right for many reasons.
  As if application state, complexity, and dependencies don't make testing difficult enough,
@@ -76,7 +76,7 @@ intelligence specialists, etc.).
  <li><strong>Writable:</strong> Easy to write, avoids unnecessary duplication.
  <li><strong>Extensible:</strong> Functionality can (reasonably) be added
   without breaking contracts and existing functionality.
- <li>Maintainable:</strong> By leaving the implementation details out of test
+ <li><strong>Maintainable:</strong> By leaving the implementation details out of test
   cases, you are well-insulated against changes to the AUT.
 </ul>
 
@@ -87,7 +87,7 @@ intelligence specialists, etc.).
  For brevity's sake, it assumes the `driver` object is pre-defined
  and available to the method.
 
-<code class=java><pre>/**
+<pre><code class=java>/**
  * Takes a username and password, fills out the fields, and clicks "login"
  * @returns An instance of the AccountPage
  */
@@ -105,7 +105,7 @@ public AccountPage loginAsUser(String username, String password) {
 
   //Create and return a new instance of the AccountPage (via the built-in Selenium PageFactory)
   return PageFactory.newInstance(AccountPage.class);
-}</pre></code>
+}</code></pre>
 
 <p>This method completely abstracts the concepts of input fields,
 buttons, clicking, and even pages from your test code. Using this
@@ -113,7 +113,7 @@ approach, all your tester has to do is call this method. This gives
 you a maintenance advantage: if the login fields ever changed, you
 would only ever have to change this method--not your tests.
 
-<code class=java><pre>public void loginTest() {
+<pre><code class=java>public void loginTest() {
     loginAsUser("cbrown", "cl0wn3");
 
     //now that we're logged in, do some other stuff--since we used a DSL to support our testers, it's
@@ -123,7 +123,7 @@ would only ever have to change this method--not your tests.
     Assert.assertTrue("Something should have been done!", something.wasDone();
 
     //Note that we still haven't referred to a button or web control anywhere in this script...
-}</pre></code>
+}</code></pre>
 
 <p>It bears repeating: One of your primary goals should be writing an
 API that allows your tests to address <strong>the problem at hand, and NOT
@@ -176,15 +176,14 @@ meant as an alternative to the standard *Wait* class.  You could
 enable the Fluent API design pattern in your page object and then
 query the Google search page with a code snippet like this one:
 
-<code class=java><pre>driver.get( "http://www.google.com/webhp?hl=en&tab=ww" );
+<pre><code class=java>driver.get( "http://www.google.com/webhp?hl=en&amp;tab=ww" );
 GoogleSearchPage gsp = new GoogleSearchPage();
-gsp.withFluent().setSearchString().clickSearchButton();</pre></code>
+gsp.withFluent().setSearchString().clickSearchButton();</code></pre>
 
 <p>The Google page object class with this fluent behavior
  might look like this:
 
-<code class=java><pre>
-public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
+<pre><code class=java>public class GoogleSearchPage extends LoadableComponent&lt;GoogleSearchPage&gt; {
   private GSPFluentInterface gspfi;
 
   public class GSPFluentInterface {
@@ -233,11 +232,11 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
   @Override
   protected void load() {
     if ( isSFieldPresent ) {
-      Wait<WebDriver> wait = new WebDriverWait( driver, 3 );
+      Wait&lt;WebDriver&gt; wait = new WebDriverWait( driver, 3 );
       wait.until( visibilityOfElementLocated( By.id("gbqfq") ) ).click();
     }
   }
-}</pre></code>
+}</code></pre>
 
 
 <h2 id=fresh_browser_per_test>Fresh Browser Per Test</h2>
@@ -248,5 +247,5 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
  at least start a new WebDriver for each test.
  For Firefox, start a WebDriver with your known profile.
 
-<code class=java><pre>FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));
-WebDriver driver = new FirefoxDriver(profile);</pre></code>
+<pre><code class=java>FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));
+WebDriver driver = new FirefoxDriver(profile);</code></pre>

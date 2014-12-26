@@ -26,7 +26,7 @@ Once you have downloaded selenium-server-standalone-{VERSION}.jar
 place it on the computer with the browser you want to test. Then from
 the directory with the jar run the following
 
-<code><pre>java -jar selenium-server-standalone-{VERSION}.jar</pre></code>
+<pre><code>java -jar selenium-server-standalone-{VERSION}.jar</code></pre>
 
 
 <h3>Considerations when running server</h3>
@@ -45,7 +45,7 @@ stop/quit every now and then (or increase memory with -Xmx jvm option)
 
 The server has two different timeouts, which can be set as follows:
 
-<code><pre>java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60</pre></code>
+<pre>j<code>ava -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60</code></pre>
 
 <dl>
  <dt>browserTimeout</dt>
@@ -78,7 +78,7 @@ follow.
 CLASSPATH Create a new class called "AppServer". Here, I'm using
 Jetty, so you'll need to download that as well:
 
-<code class=java><pre>import org.mortbay.jetty.Connector;
+<pre><code class=java>import org.mortbay.jetty.Connector;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.nio.SelectChannelConnector;
 import org.mortbay.jetty.security.SslSocketConnector;
@@ -106,7 +106,7 @@ public class AppServer {
 
     server.start();
   }
-}</pre></code>
+}</code></pre>
 
 
 <h2 class=running_remotewebdriver_client>Running RemoteWebDriver Client</h2>
@@ -118,11 +118,11 @@ public class AppServer {
  pointing to our remote web server, <em>www.example.com</em>,
  running our tests on Firefox.
 
-<code class=rb><pre>require 'selenium-webdriver'
+<pre><code class=rb>require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => :firefox
 driver.get "http://www.google.com"
-driver.close</pre></code>
+driver.close</code></pre>
 
 <p>To further customize our test configuration
  we can add additional desired capabilities.
@@ -139,11 +139,11 @@ driver.close</pre></code>
 <p>For example, suppose you wanted to run chrome on Windows XP,
  using Chrome version 27:
 
-<code class=rb><pre>caps = Selenium::WebDriver::Remote::Capabilities.chrome
+<pre><code class=rb>caps = Selenium::WebDriver::Remote::Capabilities.chrome
 caps.platform = Windows XP
 caps.version = 27
 
-driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps</pre></code>
+driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps</code></pre>
 
 
 <h3>Local File Detector</h3>
@@ -156,21 +156,21 @@ runtime. This allows the file to be uploaded from the remote machine
 running the test. It is not enabled by default and can be enabled in
 the following way:
 
-<code class=java><pre>driver.setFileDetector(new LocalFileDetector());</pre></code>
+<pre><code class=java>driver.setFileDetector(new LocalFileDetector());</code></pre>
 
-<code class=rb><pre>@driver.file_detector = lambda do |args|
+<pre><code class=rb>@driver.file_detector = lambda do |args|
   # args => ["/path/to/file"]
   str = args.first.to_s
   str if File.exist?(str)
-end</pre></code>
+end</code></pre>
 
 <p>Once the above code is defined,
  you can upload a file in your test in the following way:
 
-<code class=java><pre>driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
+<pre><code class=java>driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
 WebElement upload = driver.findElement(By.id("myfile"));
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");</pre></code>
+upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");</code></pre>
 
-<code class=rb><pre>@driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
+<pre><code class=rb>@driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
 element = @driver.find_element(:id, 'myfile')
-element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"</pre></code>
+element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"</code></pre>
