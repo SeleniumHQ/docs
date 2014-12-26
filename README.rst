@@ -44,8 +44,9 @@ that too::
 
 ## Patches
 
-We accept patches and pull requests from GitHub.  When opening a pull
-request, please indicate that you have filled in the `Contributor
-License Agreement
+We accept patches and pull requests from GitHub.
+When opening a pull request,
+please indicate that you have signed the
+`Contributor License Agreement
 <https://spreadsheets.google.com/spreadsheet/viewform?hl=en_US&formkey=dFFjXzBzM1VwekFlOWFWMjFFRjJMRFE6MQ#gid=0>`_,
 which is necessary to contribute to the Selenium project.
