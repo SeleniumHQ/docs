@@ -1,14 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-* { margin: 0; padding: 0; }
-
 html {
  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
  font-size: 14px;
  font-weight: 400;
 }
 
-body { color: rgb(68,68,68) }
+body { margin: 0; color: rgb(68,68,68) }
 
 header {
  min-height: 100px;
