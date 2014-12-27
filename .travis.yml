@@ -1,5 +1,8 @@
 language: c
 script: "make test"
+branches:
+  only:
+    - gh-pages
 notifications:
   irc:
     channels:
