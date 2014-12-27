@@ -10,7 +10,7 @@ clean:
 test: validate
 
 validate: $(CONTENTS)
-	for f in $(CONTENTS) ; do \
+	@for f in $(CONTENTS) ; do \
 		curl -s -F laxtype=yes -F parser=html5 -F level=error -F out=gnu -F doc=@$$f https://validator.nu ; \
 	done
 
