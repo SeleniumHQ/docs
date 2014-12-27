@@ -12,3 +12,4 @@ notifications:
     template:
       - "%{repository} (%{commit}): %{message}"
       - "Build details: %{build_url}"
+sudo: false
