@@ -1,2 +1,11 @@
 language: c
-script: "make all test"
+script: "make test"
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#selenium"
+    on_success: change
+    on_failure: always
+    template:
+      - "%{repository} (%{commit}) : %{message} %{foo} "
+      - "Build details: %{build_url}"
