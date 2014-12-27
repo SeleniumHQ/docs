@@ -1,4 +1,4 @@
-.PHONY: all test clean validate
+.PHONY: all test validate
 
 CONTENTS = \
 	index.html \
@@ -20,9 +20,6 @@ CONTENTS = \
 all: $(CONTENTS)
 
 test: validate
-
-clean:
-	rm -f authors.html
 
 validate: $(CONTENTS)
 	for f in $(CONTENTS) ; do \
