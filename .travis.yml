@@ -1,4 +1,3 @@
-language: c
 script: "make test"
 branches:
   only:
