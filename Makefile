@@ -5,6 +5,7 @@ CONTENTS = $(wildcard *.html)
 all: AUTHORS $(CONTENTS)
 
 clean:
+	rm -f toc.html
 	rm -f AUTHORS
 
 test: validate
@@ -13,6 +14,12 @@ validate: $(CONTENTS)
 	@for f in $(CONTENTS) ; do \
 		curl -s -F laxtype=yes -F parser=html5 -F level=error -F out=gnu -F doc=@$$f https://validator.nu ; \
 	done
+
+index.html: toc.html
+		
+
+toc.html: $(CONTENTS)
+	./maketoc $^ > $@
 
 AUTHORS:
 	git log --use-mailmap --format="%aN <%aE>" | sort -uf >> $@
