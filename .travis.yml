@@ -1,1 +1,1 @@
-script: make all test
+script: "make all test"
