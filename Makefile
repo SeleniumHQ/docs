@@ -15,11 +15,11 @@ validate: $(CONTENTS)
 		curl -s -F laxtype=yes -F parser=html5 -F level=error -F out=gnu -F doc=@$$f https://validator.nu ; \
 	done
 
-index.html: toc.html
-		
-
-toc.html: $(CONTENTS)
-	./maketoc $^ > $@
+#index.html: toc.html
+#
+#
+#toc.html: $(CONTENTS)
+#	./maketoc $^ > $@
 
 AUTHORS:
 	git log --use-mailmap --format="%aN <%aE>" | sort -uf >> $@
