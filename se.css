@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
 * { margin: 0; padding: 0; }
 
 html {
@@ -10,6 +12,8 @@ header {
  min-height: 100px;
  background-color: rgb(0,106,20);
 }
+
+article { width: 66%; margin: 0 2.6em; }
 
 h1, h2, h3 {
  text-transform: uppercase;
