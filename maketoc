@@ -68,18 +68,17 @@ def xml_to_html(toc):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("document", metavar="DOCUMENT", nargs="+",
-		help="the document(s) to operate on")
+		type=argparse.FileType("rb"), help="the document(s) to operate on")
 	parser.add_argument("-o", metavar="TYPE", dest="type",
 		choices=["html", "xml"], default="html", help="Output type (html or xml)")
 	args = parser.parse_args()
 
 	docs = args.document
 	toc = ET.Element("toc")
-	for path in docs:
-		with open(path, "rb") as fh:
-			src = html5lib.parse(fh, treebuilder="lxml", namespaceHTMLElements=False)
+	for fh in docs:
+		src = html5lib.parse(fh, treebuilder="lxml", namespaceHTMLElements=False)
 		doc = extract_headers(src)
-		doc.set("path", path)
+		doc.set("path", fh.name)
 		toc.append(doc)
 
 	if args.type == "xml":
