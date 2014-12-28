@@ -29,7 +29,7 @@ validate: $(CONTENTS)
 	done
 
 toc.tmp: $(CONTENTS) maketoc
-	./maketoc $^ > $@
+	./maketoc -m2 $^ > $@
 
 index.html: toc.tmp
 	@true
