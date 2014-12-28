@@ -1,0 +1,88 @@
+#!/usr/bin/env python
+
+"""Makes a Table of Contents from HTML documents."""
+
+import argparse
+import collections
+import html5lib
+import string
+import sys
+import xml.etree.ElementTree as ET
+
+headers = ["h1", "h2", "h3", "h4", "h5", "h6"]
+anchor_whitelist = string.ascii_lowercase + string.digits + " "
+
+def construct_id(s):
+	if s is None:
+		return None
+	s = s.strip().lower()
+	return filter(lambda c: c in anchor_whitelist, s).replace(" ", "_")
+
+def extract_headers(src):
+	hs = [el for el in src.findall("/body/*") if el.tag in headers]
+
+	doc = ET.Element("document")
+	prev_el = None
+	parents = collections.defaultdict()
+	parents[1] = doc
+
+	for h in hs:
+		level = int(h.tag[1])	
+		if level not in parents:
+			parents[level] = prev_el.find("children")
+		parent_el = parents[level]
+
+		el = ET.SubElement(parent_el, "heading")
+		el.set("level", str(level))
+		ET.SubElement(el, "id").text = h.get("id", construct_id(h.text))
+		ET.SubElement(el, "title").text = h.text.strip()
+		children = ET.SubElement(el, "children")
+
+		prev_el = el
+
+	return doc
+
+def xml_to_html(toc):
+	def submenu(hs, level=0):
+		rv = ""
+		indent = " " * level
+		if level > 0:
+			rv += "%s<ul>\n" % indent
+		for h in hs:
+			url = "%s#%s" % (base_path, h.find("id").text)
+			rv += " %s<li><a href=%s>%s</a>\n" % (indent, url, h.find("title").text)
+			children = h.find("children")
+			if len(children) > 0:
+				rv += submenu(children, level + 2)
+		if level > 0:
+			rv += "%s</ul></li>\n" % indent
+		return rv
+
+	rv = "<ul>\n"
+	for doc in toc:
+		base_path = doc.get("path")
+		rv += submenu(doc.findall("heading"))
+	rv += "</ul>"
+	return rv
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser()
+	parser.add_argument("document", metavar="DOCUMENT", nargs="+",
+		help="the document(s) to operate on")
+	parser.add_argument("-o", metavar="TYPE", dest="type",
+		choices=["html", "xml"], default="html", help="Output type (html or xml)")
+	args = parser.parse_args()
+
+	docs = args.document
+	toc = ET.Element("toc")
+	for path in docs:
+		with open(path, "rb") as fh:
+			src = html5lib.parse(fh, treebuilder="lxml", namespaceHTMLElements=False)
+		doc = extract_headers(src)
+		doc.set("path", path)
+		toc.append(doc)
+
+	if args.type == "xml":
+		print ET.tostring(toc, "utf8")
+	elif args.type == "html":
+		print xml_to_html(toc)

@@ -1,11 +1,24 @@
 .PHONY: all test validate
 
-CONTENTS = $(wildcard *.html)
+CONTENTS = \
+	intro.html \
+	install.html \
+	start.html \
+	wd.html \
+	remote.html \
+	best.html \
+	worst.html \
+	grid.html \
+	drivers.html \
+	javasupport.html \
+	attr.html \
+	conventions.html \
+	ack.html
 
-all: AUTHORS $(CONTENTS)
+all: AUTHORS toc.tmp $(CONTENTS)
 
 clean:
-	rm -f toc.html
+	rm -f toc.tmp
 	rm -f AUTHORS
 
 test: validate
@@ -15,11 +28,11 @@ validate: $(CONTENTS)
 		curl -s -F laxtype=yes -F parser=html5 -F level=error -F out=gnu -F doc=@$$f https://validator.nu ; \
 	done
 
-#index.html: toc.html
-#
-#
-#toc.html: $(CONTENTS)
-#	./maketoc $^ > $@
+toc.tmp: $(CONTENTS) maketoc
+	./maketoc $^ > $@
+
+index.html: toc.tmp
+	@true
 
 AUTHORS:
 	git log --use-mailmap --format="%aN <%aE>" | sort -uf >> $@
