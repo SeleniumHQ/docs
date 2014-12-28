@@ -19,7 +19,7 @@
  that have proven successful over the years.
 
 
-<h2 id=page_object_models>Page Object Models</h2>
+<h2>Page Object Models</h2>
 
 <p>Page Object is a Design Pattern which has become popular in test
 automation for enhancing test maintenance and reducing code
@@ -47,7 +47,7 @@ UI are located in one place.
 </ul>
 
 
-<h2 id=domain_specific_language>Domain Specific Language</h2>
+<h2>Domain Specific Language</h2>
 
 <p>A domain specific language (DSL) is a system which provides the user
 an expressive means of solving a problem.  It allows a user to
@@ -135,7 +135,7 @@ should not concern themselves with HOW the UI requires you to go
 about it.
 
 
-<h2 id=generating_application_state>Generating Application State</h2>
+<h2>Generating Application State</h2>
 
 <p>Selenium should not be used to prepare a test case.  All repetitive
 actions, and prepration for a test case should be done through other
@@ -148,13 +148,13 @@ testing should not be done using Selenium.  As mentioned previously,
 existing APIs should be leveraged to create data for the AUT.
 
 
-<h2 id=mock_external_services>Mock External Services</h2>
+<h2>Mock External Services</h2>
 
 <p>Eliminating the dependencies on external services will greatly improve
 the speed and stability of your tests.
 
 
-<h2 id=improved_reporting>Improved Reporting</h2>
+<h2>Improved Reporting</h2>
 
 <p>Selenium is not designed to report on the status of test cases
 run. Taking advantage of the built-in reporting capabilities of unit
@@ -165,10 +165,10 @@ reports are popular for importing results to a Continuous Integration
 for more information regarding report outputs for several languages.
 
 
-<h2 id=avoid_sharing_state>Avoid Sharing State</h2>
+<h2>Avoid Sharing State</h2>
 
 
-<h2 id=consider_using_a_fluent_api>Consider Using a Fluent API</h2>
+<h2>Consider Using a Fluent API</h2>
 
 <p>Martin Fowler coined the term "Fluent API".  Selenium already
 implements something like this in their *FluentWait* class which is
@@ -239,7 +239,7 @@ gsp.withFluent().setSearchString().clickSearchButton();</code></pre>
 }</code></pre>
 
 
-<h2 id=fresh_browser_per_test>Fresh Browser Per Test</h2>
+<h2>Fresh Browser Per Test</h2>
 
 <p>Start each test from a clean known state.
  Ideally spin up a new virtual machine for each test.
