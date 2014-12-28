@@ -69,7 +69,8 @@ def xml_to_html(toc):
 	return rv
 
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser(
+		description="Makes a Table of Contents from HTML documents.")
 	parser.add_argument("document", metavar="DOCUMENT", nargs="+",
 		type=argparse.FileType("rb"), help="the document(s) to operate on")
 	parser.add_argument("-m", dest="max_level", type=int,
