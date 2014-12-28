@@ -10,115 +10,123 @@
 
 <h3>Selenium controls web browsers</h3>
 
-Selenium is a toolset for web browser automation that uses the best
-techniques available to remotely control browser instances and emulate
-user interaction with the browser.
+<p>Selenium is a toolset for web browser automation
+ that uses the best techniques available
+ to remotely control browser instances
+ and emulate user interaction with the browser.
 
-Used primarily for testing, it allows users to simulate common
-activities performed by end-users: entering text into fields,
-selecting drop-down values and checking boxes, and clicking links.  It
-also provides many other controls such as mouse movement, arbitrary
-JavaScript execution, and much more.
+<p>Used primarily for testing,
+ it allows users to simulate common activities performed by end-users:
+ entering text into fields,
+ selecting drop-down values and checking boxes,
+ and clicking links.
+ It also provides many other controls such as mouse movement,
+ arbitrary JavaScript execution, and much more.
 
-Imagine a bank of computers in your server room, data center, or even
-in the cloud, all firing up browsers at the same time, hitting your
-site's links, forms, and tables, testing your application 24 hours a
-day.  Through a simple, unified programming interface (supporting many
-of the most important and frequently-used languages), these tests will
-run tirelessly in parallel, reporting back to you when errors
-occurred.
+<p>Imagine a bank of computers in your server room,
+ data center, or even in the cloud–
+ all firing up browsers at the same time
+ hitting your site's links, forms, and tables–
+ testing your application 24 hours a day.
+ Through a simple, unified programming interface
+ (supporting many of the most important and frequently-used languages),
+ these tests will run tirelessly in parallel,
+ reporting back to you when errors occurred.
 
-The Selenium project's goal is to make this reality by providing users
-with tools and documentation to not only control browsers, but to
-make it easy to scale and deploy such grids.
+<p>The Selenium project's goal is to make this reality
+ by providing users with tools and documentation to not only control browsers,
+ but to make it easy to scale and deploy such grids.
 
 
 <h3>One Interface to Rule Them All</h3>
 
-One of the project's guiding principles is to support a common
-interface for all (major) browser technologies.  Web browsers are
-incredibly complex, highly engineered applications, performing their
-operations in completely different ways but which frequently look the
-same while doing so.  Even though the text is rendered in the same
-fonts, the images are displayed in the same place, and the links take
-you to the same destination, what is happening underneath is as
-different as night and day.  Selenium “abstracts” these differences,
-hiding their details and intricacies from the person writing the code.
-This allows you to write several lines of code to perform a
-complicated workflow, but these same lines will execute on Firefox,
-Internet Explorer, Chrome, and all other supported browsers.
+<p>One of the project's guiding principles
+ is to support a common interface for all (major) browser technologies.
+ Web browsers are incredibly complex, highly engineered applications,
+ performing their operations in completely different ways
+ but which frequently look the same while doing so.
+ Even though the text is rendered in the same fonts,
+ the images are displayed in the same place,
+ and the links take you to the same destination,
+ what is happening underneath is as different as night and day.
+ Selenium “abstracts” these differences,
+ hiding their details and intricacies from the person writing the code.
+ This allows you to write several lines of code to perform a complicated workflow,
+ but these same lines will execute on Firefox,
+ Internet Explorer, Chrome, and all other supported browsers.
 
 
 <h3>Who Uses Selenium</h3>
 
-Many of the most important companies in the world have adopted
-Selenium for their browser-based testing, often replacing years-long
-efforts involving other proprietary tools.  As it has grown in
-popularity, so have its requirements and challenges multiplied.
+<p>Many of the most important companies in the world
+ have adopted Selenium for their browser-based testing,
+ often replacing years-long efforts involving other proprietary tools.
+ As it has grown in popularity, so have its requirements and challenges multiplied.
 
-As the web becomes more complicated and new technologies are added to
-sites around the world, it is the mission of this project to keep up
-with them where possible.  Being an open source project, this support
-is provided through the generous donation of time from many
-volunteers, every one of which has a “day job”.  Another mission of
-the project is to encourage more volunteers and build a strong
-community, so that the project can continue to keep up with emerging
-technologies and remain the dominant platform for function test
-automation.
+<p>As the web becomes more complicated
+ and new technologies are added to sites around the world,
+ it is the mission of this project to keep up with them where possible.
+ Being an open source project,
+ this support is provided through the generous donation of time from many volunteers,
+ every one of which has a “day job”.
+ Another mission of the project is to encourage more volunteers
+ and build a strong community,
+ so that the project can continue to keep up with emerging technologies
+ and remain the dominant platform for function test automation.
 
 
 <h3>History</h3>
 
-When Selenium 1 released over N years ago it was out of the necessity
-to reduce time spent manually verifying consistent behaviour in the
-front-end of a web application.  It made use of what tools were
-available at the time, and relied heavily on the injection of
-JavaScript to the web page under test to emulate a user's interaction.
+<p>When Selenium 1 released over N years ago
+ it was out of the necessity to reduce time spent
+ manually verifying consistent behaviour in the front-end of a web application.
+ It made use of what tools were available at the time,
+ and relied heavily on the injection of JavaScript to the web page under test
+ to emulate a user's interaction.
 
-Whilst JavaScript is a good tool to let you introspect the properties
-of the DOM and to do certain client-side observations that you would
-otherwise not be able to do, it falls short on being able to naturally
-replicate a user's interactions as if the mouse and keyboard is being
-used.
+<p>Whilst JavaScript is a good tool to let you introspect the properties of the DOM
+ and to do certain client-side observations that you would otherwise not be able to do,
+ it falls short on being able to naturally replicate a user's interactions
+ as if the mouse and keyboard is being used.
 
-Since then Selenium has grown and matured a lot, into a tool widely
-used by many – if not most – of the largest organizations around the
-world.  Selenium has gone from a homebrewed test automation toolkit at
-Thoughtworks for a niché audience and a specific use case, to become
-the world's de facto browser automation library.
+<p>Since then Selenium has grown and matured a lot,
+ into a tool widely used by many – if not most –
+ of the largest organizations around the world.
+ Selenium has gone from a homebrewed test automation toolkit at Thoughtworks
+ for a niché audience and a specific use case,
+ to become the world's de facto browser automation library.
 
-Just as Selenium 1 made use of the tools of the trade available at the
-time, Selenium 2 drives that tradition on by taking the browser
-interaction part to the browser vendor's home turf, and asking them to
-take responsibility of the backend, browser-facing implementations.
-Recently this work has evolved into a W3C standardization process
-where the goal is to turn the WebDriver component in Selenium into a
-<em>de jeur</em> remote control library for browsers.
+<p>Just as Selenium 1 made use of the tools of the trade available at the time,
+ Selenium 2 drives that tradition on by taking
+ the browser interaction part to the browser vendor's home turf,
+ and asking them to take responsibility of the backend, browser-facing implementations.
+ Recently this work has evolved into a W3C standardization process
+ where the goal is to turn the WebDriver component in Selenium
+ into a <em>de jeur</em> remote control library for browsers.
 
 
 <h2>On Test Automation</h2>
 
-<p>First, start by asking yourself whether or not you really need to use
-a browser.  Odds are good that, at some point, if you're working on a
-complex web application, you will need to open a browser and actually
-test it.
+<p>First, start by asking yourself whether or not you really need to use a browser.
+ Odds are good that, at some point, if you're working on a complex web application,
+ you will need to open a browser and actually test it.
 
-<p>Functional end-user tests such as Selenium tests are however expensive
-to run.  Furthermore they typically require substantial infrastructure
-to be in place to be run effectively.  It's a good rule to always ask
-yourself if what you want to test can be done using more lightweight
-test approaches such as unit tests or with a lower-level approach.
+<p>Functional end-user tests such as Selenium tests are however expensive to run.
+ Furthermore they typically require substantial infrastructure
+ to be in place to be run effectively.
+ It's a good rule to always ask yourself if what you want to test
+ can be done using more lightweight test approaches such as unit tests
+ or with a lower-level approach.
 
-<p>Once you have made the determination that you're in the web browser
-testing business, and you have your Selenium environment ready to
-begin writing tests, you will generally perform some combination of
-three steps:
+<p>Once you have made the determination that you're in the web browser testing business,
+ and you have your Selenium environment ready to begin writing tests,
+ you will generally perform some combination of three steps:
 
-<ul>
+<ol>
  <li>Set up the data
  <li>Perform a discrete set of actions
  <li>Evaluate the results
-</ul>
+</ol>
 
 <p>You will want to keep these steps as short as possible –
  one to two operations should be enough much of the time.
