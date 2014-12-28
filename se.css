@@ -2,11 +2,12 @@
 
 html {
  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
- font-size: 14px;
+ font-size: 16px;
  font-weight: 400;
+ line-height: 24px;
 }
 
-body { margin: 0; color: rgb(68,68,68) }
+body { margin: 0; color: rgba(68,68,68,.8) }
 
 header {
  min-height: 100px;
@@ -15,7 +16,11 @@ header {
 
 article { width: 66%; margin: 0 2.6em; }
 
+a { color: rgba(0,106,20,.8) }
+
 h1, h2, h3 {
  text-transform: uppercase;
  color: rgb(0,106,20);
 }
+
+pre { line-height: 120%; font-size: 90%; }
