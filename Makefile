@@ -32,10 +32,14 @@ toc.tmp: $(CONTENTS) maketoc
 	./maketoc -m2 $^ > $@
 
 index.html: toc.tmp
-	@true
+#	sed -i ':a;N;$!ba;s/\n/,/g' test.txt
+	sed -P 's/<\!\-\- TOC \-\->.*<\!\-\- \/TOC \-\->/<\!\-\- TOC \-\->foo<\!\-\- \/TOC \-\->/m' $@
+
+	sed -i '' -e '/<\!\-\- TOC \-\->/,/\<\!\-\- \/TOC \-\->/d' $@
+
 
 AUTHORS:
-	git log --use-mailmap --format="%aN <%aE>" | sort -uf >> $@
+	git log --use-mailmap --format="%aN <%aE>" | sort -uf > $@
 
 ack.html: AUTHORS
 	sed -i '' -e '/\<ul\>/,/\<\/ul\>/d' $@
