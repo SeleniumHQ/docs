@@ -1,6 +1,6 @@
 .PHONY: all test validate
 
-CONTENTS = \
+NARRATIVE = \
 	intro.html \
 	install.html \
 	start.html \
@@ -10,16 +10,20 @@ CONTENTS = \
 	worst.html \
 	grid.html \
 	drivers.html \
-	javasupport.html \
+	javasupport.html
+
+FRONTMATTER = \
 	attr.html \
 	conventions.html \
 	ack.html
 
-all: AUTHORS $(CONTENTS) toc.tmp index.html
+CONTENTS = $(NARRATIVE) $(FRONTMATTER)
+
+all: AUTHORS $(CONTENTS) index.html
 
 clean:
-	rm -f toc.tmp
 	rm -f AUTHORS
+	rm -f *.tmp
 
 test: validate
 
@@ -28,12 +32,16 @@ validate: $(CONTENTS)
 		curl -s -F laxtype=yes -F parser=html5 -F level=error -F out=gnu -F doc=@$$f https://validator.nu ; \
 	done
 
-toc.tmp: $(CONTENTS) maketoc
+narrative.tmp: $(NARRATIVE)
 	./maketoc -m2 $^ > $@
 
-index.html: toc.tmp
-	./hs '#toc' @$< $@ > $@.tmp
-	mv $@.tmp $@
+frontmatter.tmp: $(FRONTMATTER)
+	./maketoc -m2 $^ > $@
+
+index.html: narrative.tmp frontmatter.tmp
+	./hs '#narrative' @narrative.tmp $@ > $@.tmp
+	./hs '#frontmatter' @frontmatter.tmp $@.tmp > $@
+	rm -f *.tmp
 
 AUTHORS:
 	git log --use-mailmap --format="%aN <%aE>" | sort -uf > $@
