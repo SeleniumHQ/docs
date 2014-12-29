@@ -5,6 +5,7 @@
 import argparse
 import html5lib
 import lxml.cssselect
+import lxml.html
 import sys
 
 class NoSuchElementException(Exception):
@@ -32,7 +33,15 @@ def replace(expr, subst, doc, method="css"):
 	if el is None:
 		raise NoSuchElementException("Could not find element by expression: %s" % expr)
 
-	el.text = subst
+	el.text = ""
+	for child in el.getchildren():
+		el.remove(child)
+
+	frags = lxml.html.fragments_fromstring(subst)
+	if type(frags[0]) == str:
+		el.text = frags.pop(0)
+	el.extend(frags)
+
 	return doc
 
 def warning(msg):
