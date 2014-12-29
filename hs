@@ -7,6 +7,7 @@ import html5lib
 import lxml.cssselect
 import lxml.html
 import sys
+import traceback
 
 class NoSuchElementException(Exception):
 	pass
@@ -26,7 +27,8 @@ def replace(expr, subst, doc, method="css"):
 		els = sel(doc)
 		if len(els) > 1:
 			warning("multiple matches (%d)" % len(els))
-		el = els[0]
+		elif len(els) == 1:
+			el = els[0]
 	else:
 		raise ValueError("Unknown method: %s" % method)
 
@@ -50,7 +52,6 @@ def warning(msg):
 def error(exc):
 	msg = exc.message[0].lower() + exc.message[1:]
 	print >> sys.stderr, "%s: error: %s" % (sys.argv[0], msg)
-	sys.exit(1)
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(
@@ -77,5 +78,7 @@ if __name__ == "__main__":
 		doc = replace(args.expression, subst, src, method="xpath" if args.xpath else "css")
 	except Exception as e:
 		error(e)
+		traceback.print_exc()
+		sys.exit(1)
 
 	print serialize(doc)
