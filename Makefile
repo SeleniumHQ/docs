@@ -32,11 +32,8 @@ toc.tmp: $(CONTENTS) maketoc
 	./maketoc -m2 $^ > $@
 
 index.html: toc.tmp
-#	sed -i ':a;N;$!ba;s/\n/,/g' test.txt
-	sed -P 's/<\!\-\- TOC \-\->.*<\!\-\- \/TOC \-\->/<\!\-\- TOC \-\->foo<\!\-\- \/TOC \-\->/m' $@
-
-	sed -i '' -e '/<\!\-\- TOC \-\->/,/\<\!\-\- \/TOC \-\->/d' $@
-
+	./hs '#toc' @$< $@ > $@.tmp
+	mv $@.tmp $@
 
 AUTHORS:
 	git log --use-mailmap --format="%aN <%aE>" | sort -uf > $@
