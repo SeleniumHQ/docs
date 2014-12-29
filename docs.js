@@ -56,7 +56,7 @@ function insertFooter() {
 		" <p>Last updated " + document.lastModified +
 		" <p>" +
 		"  <ul>" +
-		"   <li><a href=//github.com/seleniumhq/docs/issue>Report a bug</a>" +
+		"   <li><a href=//github.com/seleniumhq/docs/issues>Report a bug</a>" +
 		"   <li><a href=//github.com/seleniumhq/docs/edit/gh-pages/" + file + ">Edit</a>" +
 		"  </ul>" +
 		"</div>";
