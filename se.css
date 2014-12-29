@@ -84,6 +84,11 @@ code { font-family: "Inconsolata", "Consolas", "Menlo", "Monaco", monospace; fon
 ul li { margin-bottom: .8em }
 ul li ul li { margin-bottom: 0 }
 
+#authors ul { padding: 0 }
+#authors li { list-style: none; display: inline; }
+#authors li:after { content: ", " }
+#authors li:last-child:after { content: "" }
+
 @media only screen and (max-width: 950px) {
  body { width: auto }
 }
