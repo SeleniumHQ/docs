@@ -36,6 +36,7 @@ function paginate() {
 	var prev = document.querySelector("link[rel=prev]");
 	var next = document.querySelector("link[rel=next]");
 	var nav = document.createElement("nav");
+	nav.id = "pagination";
 	if (prev)
 		nav.innerHTML = "<a class=prev href=" + prev.href + ">" + prev.title + "</a>";
 	if (next)
