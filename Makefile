@@ -15,7 +15,7 @@ CONTENTS = \
 	conventions.html \
 	ack.html
 
-all: AUTHORS toc.tmp $(CONTENTS)
+all: AUTHORS $(CONTENTS) toc.tmp index.html
 
 clean:
 	rm -f toc.tmp
