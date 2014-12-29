@@ -36,9 +36,12 @@ function paginate() {
 	var prev = document.querySelector("link[rel=prev]");
 	var next = document.querySelector("link[rel=next]");
 	var nav = document.createElement("nav");
-	nav.innerHTML = "<a class=prev href=" + prev.href + ">" + prev.title + "</a>" +
-		"<a class=next href=" + next.href + ">" + next.title + "</a>";
-	document.body.appendChild(nav);
+	if (prev)
+		nav.innerHTML = "<a class=prev href=" + prev.href + ">" + prev.title + "</a>";
+	if (next)
+		nav.innerHTML += "<a class=next href=" + next.href + ">" + next.title + "</a>";
+	if (prev || next)
+		document.body.appendChild(nav);
 }
 
 // TODO(ato): Warning, this is unsafe.
