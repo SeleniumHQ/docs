@@ -7,15 +7,54 @@ html {
  line-height: 24px;
 }
 
-body { margin: 0; color: rgba(68,68,68,.8) }
+body {
+ margin: 0;
+ color: rgba(68,68,68,.8);
+}
 
 header {
  min-height: 100px;
  background-color: rgb(0,106,20);
 }
 
-header, body { padding: 0 2.6em }
-body { width: 66%; max-width: 800px; margin-bottom: 8em; }
+body, header, footer > div { padding: 0 50px }
+body { padding-right: 40% }
+header, footer { margin: 0 -50px; width: 100%; position: absolute; }
+
+nav {
+ border-color: rgb(210,210,210);
+ border-style: solid;
+ border-width: 0;
+ border-top-width: 1px;
+ border-bottom-width: 1px;
+ border-bottom-width: 1;
+ margin: 3em 0 2em;
+ font-weight: bold;
+ display: table;
+ width: 100%;
+}
+nav a { border: 0; display: table-cell; width: 50%; padding: 1.2em 0 }
+nav .next { text-align: right }
+nav a.prev:link:before { content: "‹ " }
+nav a.next:link:after { content: " ›" }
+
+footer {
+ margin-top: 6em;
+ background-color: rgb(69,134,84);
+ color: rgb(234,234,234);
+ line-height: 120%;
+}
+footer > div { padding-top: 1.2em; padding-bottom: 1.2em; }
+footer p { margin: 0 }
+footer .links { background-color: rgb(120,161,108) }
+footer .meta { font-size: 85%; color: rgb(120,161,108); }
+footer .meta * { margin: 0 }
+footer .meta > * { margin-left: 70% }
+footer .meta a { color: rgb(181,201,182) }
+footer .meta a:hover { border-bottom-color: rgb(181,201,182) }
+footer .meta ul { padding: 0; list-style: none }
+footer .meta ul li { display: inline; margin-right: .8em; }
+footer .meta ul li:last-child { margin-right: 0 }
 
 a {
  color: rgb(120, 161, 108);
