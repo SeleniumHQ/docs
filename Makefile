@@ -1,4 +1,4 @@
-.PHONY: all test validate
+.PHONY: all clean test validate
 
 NARRATIVE = \
 	intro.html \
