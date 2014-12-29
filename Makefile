@@ -14,8 +14,7 @@ NARRATIVE = \
 
 FRONTMATTER = \
 	attr.html \
-	conventions.html \
-	ack.html
+	conventions.html
 
 CONTENTS = $(NARRATIVE) $(FRONTMATTER)
 
@@ -46,8 +45,11 @@ index.html: narrative.tmp frontmatter.tmp
 AUTHORS:
 	git log --use-mailmap --format="%aN <%aE>" | sort -uf > $@
 
-ack.html: AUTHORS
-	sed -i '' -e '/\<ul\>/,/\<\/ul\>/d' $@
+authors.tmp: AUTHORS
 	echo "<ul>" >> $@
 	git log --use-mailmap --format=" <li><a href=mailto:%aE>%aN</a>" | sort -uf >> $@
 	echo "</ul>" >> $@
+
+attr.html: authors.tmp
+	./hs '#authors' @$< $@ > $@.tmp
+	mv $@.tmp $@
