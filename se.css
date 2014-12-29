@@ -41,3 +41,10 @@ pre {
  word-wrap: break-word;
 }
 code { font-family: "Inconsolata", "Consolas", "Menlo", "Monaco", monospace; font-size: 90%; }
+
+ul li { margin-bottom: .8em }
+ul li ul li { margin-bottom: 0 }
+
+@media only screen and (max-width: 950px) {
+ body { width: auto }
+}
