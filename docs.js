@@ -10,6 +10,7 @@ window.addEventListener("load", addStructure);
 window.addEventListener("load", addAnchors);
 window.addEventListener("load", addToc);
 window.addEventListener("load", paginate);
+window.addEventListener("load", insertHeader);
 window.addEventListener("load", insertFooter);
 window.addEventListener("load", populateHeaderYs);
 window.addEventListener("load", populateTocEls);
@@ -56,6 +57,12 @@ function paginate() {
 		nav.innerHTML += "<a class=next href=" + next.href + ">" + next.title + "</a>";
 	if (prev || next)
 		document.body.appendChild(nav);
+}
+
+function insertHeader() {
+	var header = document.createElement("header");
+	header.innerHTML = "<h1>Selenium Documentation</h1>";
+	document.body.insertBefore(header, document.body.firstChild);
 }
 
 // TODO(ato): Warning, this is unsafe.
