@@ -6,15 +6,11 @@ function $(loc) {
 	return els.length > 0 ? els : els[0];
 }
 
-window.onload = init;
-
-function init() {
-	addStructure();
-	addAnchors();
-	addToc();
-	paginate();
-	insertFooter();
-}
+window.addEventListener("load", addStructure);
+window.addEventListener("load", addAnchors);
+window.addEventListener("load", addToc);
+window.addEventListener("load", paginate);
+window.addEventListener("load", insertFooter);
 
 function addStructure() {}
 
