@@ -15,6 +15,7 @@ body {
 header {
  min-height: 100px;
  background-color: rgb(69,134,84);
+ margin-bottom: 2em;
 }
 
 body, header, footer > div { padding: 0 50px }
@@ -23,10 +24,11 @@ header, footer { margin: 0 -50px; width: 100%; position: absolute; }
 
 nav#toc {
  position: fixed;
- width: 300px;
+ width: 250px;
  border: 1px solid rgb(69,134,84);
  border-radius: 3px;
- right: 100px;
+ margin-left: 1em;
+ left: 60%;
 }
 nav#toc h1 {
  margin: 0;
@@ -113,7 +115,11 @@ ul li ul li { margin-bottom: 0 }
 #authors li:after { content: ", " }
 #authors li:last-child:after { content: "" }
 
-@media only screen and (max-width: 950px) {
- body { width: auto }
- nav#toc { display: none }
+@media only screen and (max-width: 820px) {
+ body { padding-right: 50px }
+ nav#toc {
+  position: relative;
+  left: 0;
+  margin-left: 0;
+ }
 }
