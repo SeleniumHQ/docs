@@ -11,6 +11,7 @@ window.onload = init;
 function init() {
 	addStructure();
 	addAnchors();
+	addToc();
 	paginate();
 	insertFooter();
 }
@@ -30,6 +31,16 @@ function addAnchors() {
 	for (var h of hs) {
 		h.id = sanitise(h.textContent);
 	}
+}
+
+function addToc() {
+	var toc = document.createElement("nav");
+	toc.id = "toc";
+	toc.innerHTML = "<h1><a href=index.html>Table of Contents</a></h1>";
+	for (var h of $("h1, h2, h3, h4, h5, h6")) {
+		toc.innerHTML += "<a href=#" + h.id + ">" + h.textContent + "</a>"
+	}
+	document.body.insertBefore(toc, document.body.firstChild);
 }
 
 function paginate() {
