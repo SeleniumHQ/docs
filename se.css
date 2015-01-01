@@ -47,6 +47,10 @@ nav#toc a {
 nav#toc a { color: rgba(68,68,68,.8) }
 nav#toc a:last-child { border: 0 }
 nav#toc a.current { background-color: rgb(120,161,108); color: white; }
+nav#toc a.level3, nav#toc a.level4, nav#toc a.level5, nav#toc a.level6 {
+ font-size: 85%;
+ padding-left: 2em;
+}
 
 nav#pagination {
  border-color: rgb(210,210,210);

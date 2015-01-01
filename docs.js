@@ -37,7 +37,10 @@ function addToc() {
 	toc.id = "toc";
 	toc.innerHTML = "<h1><a href=index.html>Table of Contents</a></h1>";
 	for (var h of $("h1, h2, h3, h4, h5, h6")) {
-		toc.innerHTML += "<a href=#" + h.id + ">" + h.textContent + "</a>"
+		var level = h.tagName.substring(1);
+		if (level == 1)
+			continue;
+		toc.innerHTML += "<a href=#" + h.id + " class=level" + level + ">" + h.textContent + "</a>"
 	}
 	document.body.insertBefore(toc, document.body.firstChild);
 }
@@ -113,6 +116,9 @@ function updateToc(id) {
 		return;
 	}
 	Object.keys(tocEls).map((id) => { tocEls[id].classList.remove("current") });
-	curHeader = tocEls["#" + id];
+	var sel = "#" + id;
+	if (!(sel in tocEls))
+		return;
+	curHeader = tocEls[sel];
 	curHeader.classList.add("current");
 }
