@@ -24,7 +24,8 @@ header, footer { margin: 0 -50px; width: 100%; position: absolute; }
 
 nav#toc {
  position: fixed;
- width: 250px;
+ max-width: 250px;
+ min-width: 100px;
  border: 1px solid rgb(69,134,84);
  border-radius: 3px;
  margin-left: 50px;
@@ -45,6 +46,7 @@ nav#toc a {
 }
 nav#toc a { color: rgba(68,68,68,.8) }
 nav#toc a:last-child { border: 0 }
+nav#toc a.current { background-color: rgb(120,161,108); color: white; }
 
 nav#pagination {
  border-color: rgb(210,210,210);

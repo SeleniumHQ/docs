@@ -11,6 +11,9 @@ window.addEventListener("load", addAnchors);
 window.addEventListener("load", addToc);
 window.addEventListener("load", paginate);
 window.addEventListener("load", insertFooter);
+window.addEventListener("load", populateHeaderYs);
+window.addEventListener("load", populateTocEls);
+window.addEventListener("scroll", trackHeaders);
 
 function addStructure() {}
 
@@ -23,7 +26,7 @@ function addAnchors() {
 		s = Array.prototype.filter.call(s, (c) => { return whitelist.indexOf(c) >= 0 }).join("");
 		return s.replace(/\s/g, "_")
 	}
-	var hs = $("h1, h2, h3 h4, h5, h6");
+	var hs = $("h1, h2, h3, h4, h5, h6");
 	for (var h of hs) {
 		h.id = sanitise(h.textContent);
 	}
@@ -73,4 +76,43 @@ function insertFooter() {
 		"</div>";
 
 	document.body.appendChild(footer);
+}
+
+var hs = [];
+var headerYs = {};
+var curHeader = null;
+var tocEls = {};
+
+function populateHeaderYs() {
+	for (var h of $("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]")) {
+		hs.push(h);
+		headerYs[h.offsetTop] = h.id;
+	};
+}
+
+function populateTocEls() {
+	for (var el of $("nav#toc > a")) {
+		var anchor = el.href.substring(el.href.indexOf("#"));
+		tocEls[anchor] = el;
+	}
+}
+
+function trackHeaders(ev) {
+	var pageY = ev.pageY;
+	var cur = hs[0].id;
+	var gone = Object.keys(headerYs).filter((y, h) => { return y <= pageY });
+	if (gone.length > 0) {
+		var curY = gone[gone.length - 1];
+		cur = headerYs[curY];
+	}
+	updateToc(cur);
+}
+
+function updateToc(id) {
+	if (curHeader == id) {
+		return;
+	}
+	Object.keys(tocEls).map((id) => { tocEls[id].classList.remove("current") });
+	curHeader = tocEls["#" + id];
+	curHeader.classList.add("current");
 }
