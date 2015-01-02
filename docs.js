@@ -15,6 +15,7 @@ window.addEventListener("load", insertFooter);
 window.addEventListener("load", populateHeaderYs);
 window.addEventListener("load", populateTocEls);
 window.addEventListener("scroll", trackHeaders);
+window.addEventListener("scroll", moveToc);
 
 function addStructure() {}
 
@@ -128,4 +129,18 @@ function updateToc(id) {
 		return;
 	curHeader = tocEls[sel];
 	curHeader.classList.add("current");
+}
+
+function moveToc(ev) {
+	var toc = $("nav#toc")[0];
+	var firstEl = $("nav + h1")[0];
+	var firstElSt = firstEl.getBoundingClientRect();
+	
+	var firstElRealTop = firstElSt.bottom - (firstElSt.height - 200);
+	if (firstElRealTop - 50 < 0) {
+		toc.style.top = "50px";
+	} else {
+		var offset = document.body.classList.contains("front") ? 300 : 200;
+		toc.style.top = firstElSt.y + offset + "px";
+	}
 }

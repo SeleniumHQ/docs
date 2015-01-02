@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+/*@import url(https://fonts.googleapis.com/css?family=Lato:400,700);*/
 
 html {
  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -59,7 +59,6 @@ nav#pagination {
  border-width: 0;
  border-top-width: 1px;
  border-bottom-width: 1px;
- border-bottom-width: 1;
  margin: 3em 0 2em;
  font-weight: bold;
  display: table;
