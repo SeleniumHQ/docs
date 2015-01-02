@@ -19,10 +19,17 @@
 
 <p>The project is made possible by volunteer contributors
  who have put in thousands of hours of their own time,
- and made the source code freely available
- under the <a href=license.html>Apache 2.0 license</a>.
+ and made the source code <a href=license.html>freely available</a>
+ for anyone to use, enjoy, and improve.
 
-<p>Here is one of the simplest Selenium instructions you can make:
+<p>Selenium brings together browser vendors, engineers, and enthusiasts
+ to further an open discussion around automation of the web platform.
+ The project organises <a href=//seleniumconf.org/>an annual conference</a>
+ to teach and nurture the community.
+
+<p>At the core of Selenium is <em><a href=wd.html>WebDriver</a></em>,
+ an interface to write instruction sets that can be run interchangably in many browsers.
+ Here is one of the simplest instructions you can make:
 
 <pre><code class=python>from selenium import webdriver
 
@@ -32,17 +39,13 @@ search_box = driver.find_element_by_id("q")
 search_box.send_keys("cheese")
 search_box.submit()</code></pre>
 
-<p>After you've installed Selenium and run this program
- you will see the browser navigate to the search engine
- and enter “cheese” into the search field before submitting the form.
-
 <p>See the <em><a href=quick.html>Quick Tour</a></em>
  for a full explanation of what goes on behind the scenes when you run this code.
  You should continue on to the <a href=#narrative>narrative documentation</a>
- to understand how you can use Selenium as a test automation tool
- and to scale simple tests like this to run in large,
- distributed environments on multiple browsers,
- under several different operating systems.
+ to understand how you can <a href=install.html>install</a> and
+ successfully use Selenium as a test automation tool, and
+ scaling simple tests like this to run in large, distributed environments
+ on multiple browsers, under several different operating systems.
 
 
 <h2>Getting Started</h2>
