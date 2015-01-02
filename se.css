@@ -6,7 +6,7 @@ html {
  font-weight: 400;
  line-height: 24px;
 }
-body { margin: 0; color: rgba(68,68,68,.8); }
+body { margin: 0; color: rgba(68,68,68,.8); overflow-x: hidden; }
 body.front header h1 { padding: 100px 0 }
 body.front h1 { padding-top: 300px }
 body.front nav#toc { top: 300px }
