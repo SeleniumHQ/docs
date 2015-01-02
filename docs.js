@@ -135,12 +135,12 @@ function moveToc(ev) {
 	var toc = $("nav#toc")[0];
 	var firstEl = $("nav + h1")[0];
 	var firstElSt = firstEl.getBoundingClientRect();
-	
-	var firstElRealTop = firstElSt.bottom - (firstElSt.height - 200);
+	var offset = document.body.classList.contains("front") ? 300 : 200;
+
+	var firstElRealTop = firstElSt.bottom - (firstElSt.height - offset);
 	if (firstElRealTop - 50 < 0) {
 		toc.style.top = "50px";
 	} else {
-		var offset = document.body.classList.contains("front") ? 300 : 200;
 		toc.style.top = firstElSt.y + offset + "px";
 	}
 }
