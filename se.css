@@ -113,6 +113,9 @@ pre code { font-size: 100% }
 
 ul li { margin-bottom: .8em }
 ul li ul li { margin-bottom: 0 }
+dl { margin-left: 1em }
+dl dt { font-weight: bold }
+dl dd { margin-bottom: 1em }
 
 #authors ul { padding: 0 }
 #authors li { list-style: none; display: inline; }

@@ -207,10 +207,205 @@ This should open a new Internet Explorer window:
 driver = Selenium::WebDriver.for :internet_explorer</code></pre>
 
 
-<h2>Waits (Implicit and Explicit)</h2>
+<h2>Waits</h2>
+
+<p>WebDriver can generally be said to have a blocking API.
+ Because it is an out-of-process library that
+ <em>instructs</em> the browser what to do,
+ and because the web platform has an intrinsicly asynchronous nature,
+ WebDriver doesn't track the active, real-time state of the DOM.
+ This comes with some challenges that we will discuss here.
+
+<p>From experience,
+ most intermittents that arise from use of Selenium and WebDriver
+ are connected to <em>race conditions</em> that occur between
+ the browser and the user's instructions.
+ An example could be that the user instructs the browser to navigate to a page,
+ then gets a <strong>no such element</strong> error
+ when trying to find an element.
+
+<p>Consider the following document:
+
+<pre class=html><code>&lt;!doctype html&gt;
+&lt;meta charset=utf-8&gt;
+&lt;title&gt;Race Condition Example&lt;title&gt;
+
+&lt;script&gt;
+  var initialised = false;
+  window.addEventListener("load", function() {
+    var newElement = document.createElement("p");
+    newElement.textContent = "Hello from JavaScript!";
+    document.body.appendChild(newElement);
+    initialised = true;
+  });
+&lt;/script&gt;</code></pre>
+
+<p>The WebDriver instructions might look innocent enough:
+
+<pre class=py><code>driver.navigate("file:///race_condition.html")
+el = driver.find_element_by_tag_name("p")
+assert el.text == "Hello from JavaScript!"</code></pre>
+
+<p>The issue here is that the default
+ <a href=#page_load_strategy>page load strategy</a>
+ used in WebDriver listens for the <var>document.readyState</var>
+ to change to <code>"complete"</code> before returning from the call to <em>navigate</em>.
+ Because the <code>p</code> element is
+ added <em>after</em> the document has completed loading,
+ this WebDriver script <em>might</em> be intermittent.
+ It “might” be intermittent because no guarantees can be made
+ about elements or events that trigger asynchronously
+ without explicitly waiting&mdash;or blocking&mdash;on those events.
+
+<p>Fortunately, using the normal instruction set available on
+ the <em><a href=#webelement>WebElement</a></em> interface&mdash;such
+ as <em>WebElement.click</em> and <em>WebElement.sendKeys</em>&mdash;are
+ guaranteed to be synchronous,
+ in that the function calls won't return
+ (or the callback won't trigger in callback-style languages)
+ until the the command has been completed in the browser.
+ The advanced user interaction APIs,
+ <em><a href=#keyboard>Keyboard</a></em> and
+ <em><a href=#mouse>Mouse</a></em>,
+ are exceptions as they are explicitly intended as
+ “do what I say” asynchronous commands.
 
 <p>Waiting is having the automated task execution
  elapse a certain amount of time before continuing with the next step.
+
+<p>To overcome the problem of race conditions
+ between the browser and your WebDriver script,
+ most Selenium clients ships with a <em>wait</em> package.
+ When employing a wait,
+ you are using what is commonly referred to
+ as an <em><a href=#explicit_wait>explicit wait</a></em>.
+
+
+<h3>Explicit Wait</h3>
+
+<p><em>Explicit waits</em> are available to Selenium clients
+ for imperative, procedural languages.
+ They allow your code to halt program execution,
+ or freezing the thread,
+ until the <em>condition</em> you pass it resolves.
+ The condition is called with a certain frequency
+ until the timeout of the wait is elapsed.
+ This means that for as long as the condition returns a falsy value,
+ it will keep trying and keep waiting.
+
+<p>Since explicit waits allow you to wait for a condition to occur,
+ they make a good fit for synchronising the state between the browser and its DOM,
+ and your WebDriver script.
+
+<p>To remedy our buggy instruction set from earlier,
+ we could employ a wait to have the <em>findElement</em> call
+ wait until the dynamically added element from the script
+ has been added to the DOM:
+
+<pre class=py><code>from selenium.webdriver.support.ui import WebDriverWait
+
+def document_initialised(driver):
+    return driver.execute_script("return initialised")
+
+driver.navigate("file:///race_condition.html")
+WebDriverWait(driver).until(document_initialised)
+el = driver.find_element_by_tag_name("p")
+assert el.text == "Hello from JavaScript!"</code></pre>
+
+<p>We pass in the <em>condition</em> as a function reference
+ that the <em>wait</em> will run repeatedly until its return value is truthy.
+ A “truthful” return value is anything that evaluates to boolean true
+ in the language at hand, such as a string, number, a boolean,
+ an object (including a <em>WebElement</em>),
+ or a populated (non-empty) sequence or list.
+ That means an <em>empty list</em> evaluates to false.
+ When the condition is truthful and the blocking wait is aborted,
+ the return value from the condition becomes the return value of the wait.
+
+<p>With this knowledge,
+ and because the wait utility ignores <em>no such element</em> errors by default,
+ we can refactor our instructions to be more concise:
+
+<pre class=py><code>from selenium.webdriver.support.ui import WebDriverWait
+
+driver.navigate("file:///race_condition.html")
+el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"))
+assert el.text == "Hello from JavaScript!"</code></pre>
+
+<p>In that example we pass in an anonymous function
+ (but we could also define it explicitly as we did earlier so it may be reused).
+ The first and only argument that is passed to our condition
+ is always a reference to our driver object, <em>WebDriver</em>
+ (called <em>d</em> in the example).
+ In a multi-threaded environment you should be careful
+ to operate on the driver reference passed in to the condition
+ rather than the reference to the driver in the outer scope.
+
+<p>Because the wait will swallow <em>no such element</em> errors
+ that are raised when the element isn't found,
+ the condition will retry until the element is found.
+ Then it will take the return value, a <em>WebElement</em>,
+ an pass it back through to our script.
+
+<p>If the condition fails,
+ e.g. a truthful return value from the condition is never reached,
+ the wait will throw/raise an error/exception called a <em>timeout error</em>.
+
+
+<h4>Options</h4>
+
+<p>The wait condition can be customised to match your needs.
+ Sometimes it's unnecessary to wait the full extent of the default timeout,
+ as the penalty for not hitting a successful condition can be expensive.
+
+<p>The wait lets you pass in an argument to override the timeout:
+
+<pre class=py><code>WebDriverWait(driver, timeout=3).until(some_condition)</code></pre>
+
+
+<h4>Expected Conditions</h4>
+
+<p>Because it's quite a common occurence
+ to have to synchronise the DOM and your instructions,
+ most clients also come with a set of predefined <em>expected conditions</em>.
+ As might be obvious by the name,
+ they are conditions that are predefined for frequent wait operations.
+
+<p>The conditions available in the different language bindings vary,
+ but this is a non-exhaustive list of a few:
+
+<!-- TODO(ato): Fill in -->
+<dl>
+ <dt>alert is present
+ <dd>
+
+ <dt>element exists
+ <dd>
+
+ <dt>element is visible
+ <dd>
+
+ <dt>title contains
+ <dd>
+
+ <dt>title is
+ <dd>
+
+ <dt>element staleness
+ <dd>
+
+ <dt>visible text
+ <dd>
+</dl>
+
+<p>You can refer to the API documentation for each client binding
+ to find an exhaustive list of expected conditions:
+
+<ul>
+ <li>Java's <code><a href=//selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html>org.openqa.selenium.support.ui.ExpectedConditions</a></code> package
+ <li>Python's <code><a href=//selenium.googlecode.com/git/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html>selenium.webdriver.support.expected_conditions</a></code> package
+ <li>.NET's <code><a href=//selenium.googlecode.com/git/docs/api/dotnet/html/AllMembers_T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm>OpenQA.Selenium.Support.UI.ExpectedConditions</a></code> type
+</ul>
 
 
 <h3>Implicit Wait</h3>
@@ -220,26 +415,8 @@ driver = Selenium::WebDriver.for :internet_explorer</code></pre>
  if they are not immediately available.
  The default setting is 0.
  Once set, the implicit wait is set for the life of the WebDriver object instance.
-
-
-<h3>Explicit Wait</h3>
-
-<p>An explicit waits is code you define to wait
- for a certain condition to occur before proceeding further in the code.
-
-
-<h4>Expected Conditions</h4>
-
-<p>There are some common conditions
- that are frequently come across when automating web browsers.
-
-<pre><code class=ruby>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :firefox
-
-# element is clickable
-wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-wait.until { driver.find_element(:id => "your_element").click }</code></pre>
-
+ 
+ 
 <h3>Fluent Wait</h3>
 
 <p>The implicit wait in Selenium 2 might not work for Ajax elements.
