@@ -415,21 +415,9 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  if they are not immediately available.
  The default setting is 0.
  Once set, the implicit wait is set for the life of the WebDriver object instance.
- 
- 
-<h3>Fluent Wait</h3>
-
-<p>The implicit wait in Selenium 2 might not work for Ajax elements.
- It is recommend that you use any one of the following workaround
- to handle Ajax elements.
-
-<p>One approach is to use FluentWait and a Predicate available with Selenium 2.
- The advantage of this approach is that element polling mechanism is configurable.
- The code example below waits for 1 second
- and polls for a textarea every 100 milliseconds.
 
 
-<h4>Implicit Waiting</h4>
+<h3>Implicit Waiting</h3>
 
 <p>There is a second type of wait that is distinct from
  <a href=#explicit_wait>explicit waits</a> called <em>implicit waiting</em>.
