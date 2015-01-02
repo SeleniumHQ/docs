@@ -429,33 +429,39 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  and polls for a textarea every 100 milliseconds.
 
 
-<h4>Implicit Waits</h4>
+<h4>Implicit Waiting</h4>
 
-<p>The ImplicitWait will tell the webDriver to poll the DOM
- for a certain duration when trying to find the element,
- this will be useful when certain elements on the webpage
+<p>There is a second type of wait that is distinct from
+ <a href=#explicit_wait>explicit waits</a> called <em>implicit waiting</em>.
+ By implicitly waiting, WebDriver to poll the DOM
+ for a certain duration when trying to find <em>any</em> element.
+ This can be useful when certain elements on the webpage
  will not be available immediately and needs some time to load.
- By default it ill take the value to 0,
- for the life of the WebDriver object instance through out the test script.
 
-<pre><code class=java>WebDriver driver = new FirefoxDriver();
+<p>Implicit waiting for elements to appear is disabled by default
+ and will need to be manually enabled on a per-session basis.
+ Mixing <a href=#explicit_wait>explicit waits</a> and implicit waiting
+ will cause unintended consequences,
+ namely waits sleeping for the maximum time
+ even if the element is available or condition is true.
+
+<p><strong>Warning:</strong>
+ Do not mix implicit and explicit waits.
+ Doing so can cause unpredictable wait times.
+ For example setting an implicit wait of 10 seconds
+ and an explicit wait of 15 seconds,
+ could cause a timeout to occur after 20 seconds.
+
+<p>An implicit wait is to tell WebDriver to poll the DOM
+ for a certain amount of time when trying to find an element or elements
+ if they are not immediately available.
+ The default setting is 0, meaning disabled.
+ Once set, the implicit wait is set for the life of the session.
+
+<pre class=java><code>WebDriver driver = new FirefoxDriver();
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.get("http://somedomain/url_that_delays_loading");
 WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</code></pre>
-
-
-<h4>Explicit Waits</h4>
-
-<p>An explicit waits is code you define to wait for a certain condition
- to occur before proceeding further in the code.
- Which is more similar to the Thread.sleep().
- We can combine the use of Expected Conditions
- to accomplish wait Without using any hard delay.
-
-<pre><code class=java>WebDriver driver = new FirefoxDriver();
-driver.get("http://somedomain/url_that_delays_loading");
-WebElement myDynamicElement = (new WebDriverWait(driver, 10))
-  .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));</code></pre>
 
 
 <h4>FluentWait</h4>
