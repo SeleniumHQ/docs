@@ -10,7 +10,7 @@ NARRATIVE = \
 	worst.html \
 	grid.html \
 	drivers.html \
-	javasupport.html
+	java.html
 
 FRONTMATTER = \
 	attr.html \
