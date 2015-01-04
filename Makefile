@@ -14,7 +14,7 @@ NARRATIVE = \
 
 FRONTMATTER = \
 	attr.html \
-	conventions.html
+	typo.html
 
 CONTENTS = index.html quick.html $(NARRATIVE) $(FRONTMATTER)
 
