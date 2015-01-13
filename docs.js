@@ -25,7 +25,7 @@ function addAnchors() {
 		if (!s)
 			return;
 		s = s.trim().toLowerCase();
-		s = Array.prototype.filter.call(s, (c) => { return whitelist.indexOf(c) >= 0 }).join("");
+		s = Array.prototype.filter.call(s, function(c) { return whitelist.indexOf(c) >= 0 }).join("");
 		return s.replace(/\s/g, "_")
 	}
 	var hs = $("h1, h2, h3, h4, h5, h6");
@@ -111,7 +111,7 @@ function populateTocEls() {
 function trackHeaders(ev) {
 	var pageY = ev.pageY;
 	var cur = hs[0].id;
-	var gone = Object.keys(headerYs).filter((y, h) => { return y <= pageY });
+	var gone = Object.keys(headerYs).filter(function(y, h) { return y <= pageY });
 	if (gone.length > 0) {
 		var curY = gone[gone.length - 1];
 		cur = headerYs[curY];
@@ -123,7 +123,7 @@ function updateToc(id) {
 	if (curHeader == id) {
 		return;
 	}
-	Object.keys(tocEls).map((id) => { tocEls[id].classList.remove("current") });
+	Object.keys(tocEls).map(function(id) { tocEls[id].classList.remove("current") });
 	var sel = "#" + id;
 	if (!(sel in tocEls))
 		return;
