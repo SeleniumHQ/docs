@@ -29,8 +29,8 @@ function addAnchors() {
 		return s.replace(/\s/g, "_")
 	}
 	var hs = $("h1, h2, h3, h4, h5, h6");
-	for (var h of hs) {
-		h.id = sanitise(h.textContent);
+	for (var i=0; i< hs.length; i++) {
+		hs[i].id = sanitise(hs[i].textContent);
 	}
 }
 
@@ -38,11 +38,12 @@ function addToc() {
 	var toc = document.createElement("nav");
 	toc.id = "toc";
 	toc.innerHTML = "<h1><a href=index.html>Table of Contents</a></h1>";
-	for (var h of $("h1, h2, h3, h4, h5, h6")) {
-		var level = h.tagName.substring(1);
+    var hs = $("h1, h2, h3, h4, h5, h6");
+	for (var i=0; i< hs.length; i++) {
+		var level = hs[i].tagName.substring(1);
 		if (level == 1)
 			continue;
-		toc.innerHTML += "<a href=#" + h.id + " class=level" + level + ">" + h.textContent + "</a>"
+		toc.innerHTML += "<a href=#" + hs[i].id + " class=level" + level + ">" + hs[i].textContent + "</a>"
 	}
 	document.body.insertBefore(toc, document.body.firstChild);
 }
@@ -95,16 +96,18 @@ var curHeader = null;
 var tocEls = {};
 
 function populateHeaderYs() {
-	for (var h of $("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]")) {
-		hs.push(h);
-		headerYs[h.offsetTop] = h.id;
+    var hdrs = $("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+    for (var i=0; i< hdrs.length; i++) {
+		hs.push(hdrs[i]);
+		headerYs[hdrs[i].offsetTop] = hdrs[i].id;
 	};
 }
 
 function populateTocEls() {
-	for (var el of $("nav#toc > a")) {
-		var anchor = el.href.substring(el.href.indexOf("#"));
-		tocEls[anchor] = el;
+    var els = $("nav#toc > a");
+    for (var i=0; i< els.length; i++) {
+		var anchor = els[i].href.substring(els[i].href.indexOf("#"));
+		tocEls[anchor] = els[i];
 	}
 }
 
