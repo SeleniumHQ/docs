@@ -38,7 +38,7 @@ function addToc() {
 	var toc = document.createElement("nav");
 	toc.id = "toc";
 	toc.innerHTML = "<h1><a href=index.html>Table of Contents</a></h1>";
-    var hs = $("h1, h2, h3, h4, h5, h6");
+	var hs = $("h1, h2, h3, h4, h5, h6");
 	for (var i=0; i< hs.length; i++) {
 		var level = hs[i].tagName.substring(1);
 		if (level == 1)
@@ -96,16 +96,16 @@ var curHeader = null;
 var tocEls = {};
 
 function populateHeaderYs() {
-    var hdrs = $("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
-    for (var i=0; i< hdrs.length; i++) {
+	var hdrs = $("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+	for (var i=0; i< hdrs.length; i++) {
 		hs.push(hdrs[i]);
 		headerYs[hdrs[i].offsetTop] = hdrs[i].id;
 	};
 }
 
 function populateTocEls() {
-    var els = $("nav#toc > a");
-    for (var i=0; i< els.length; i++) {
+	var els = $("nav#toc > a");
+	for (var i=0; i< els.length; i++) {
 		var anchor = els[i].href.substring(els[i].href.indexOf("#"));
 		tocEls[anchor] = els[i];
 	}
