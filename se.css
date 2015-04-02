@@ -29,6 +29,7 @@ header a#home_link {
   height: 30px;
   background-color: rgb(79,144,94);
 }
+header a#home_link:before { content: "‹ " }
 
 header a#home_link:hover {
   background-color: rgb(89,154,104);
