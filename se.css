@@ -46,7 +46,7 @@ nav#toc a {
  padding: .5em .8em;
  color: rgba(68,68,68,.8)
 }
-nav#toc a:hover {
+nav#toc > a:hover {
   background-color: #eceeed;
 }
 
