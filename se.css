@@ -46,6 +46,10 @@ nav#toc a {
  padding: .5em .8em;
  color: rgba(68,68,68,.8)
 }
+nav#toc a:hover {
+  background-color: #eceeed;
+}
+
 nav#toc a:last-child { border: 0 }
 nav#toc a.current { background-color: rgb(120,161,108); color: white; }
 nav#toc a.level3, nav#toc a.level4, nav#toc a.level5, nav#toc a.level6 {
