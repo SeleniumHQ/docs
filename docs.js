@@ -19,6 +19,10 @@ window.addEventListener("scroll", moveToc);
 
 function addStructure() {}
 
+/**
+ * Function that parses through the current page, and adds
+ * anchors on the h1-h6 tags for TOC navigation
+ */
 function addAnchors() {
 	var whitelist = "abcdefghijklmnopqrstuvwxyz0123456789 ";
 	function sanitise(s) {
@@ -34,6 +38,9 @@ function addAnchors() {
 	}
 }
 
+/**
+ * Add the table of contents to the DOM.
+ */
 function addToc() {
 	var toc = document.createElement("nav");
 	toc.id = "toc";
@@ -48,11 +55,18 @@ function addToc() {
 	document.body.insertBefore(toc, document.body.firstChild);
 }
 
+/**
+ * Retrieve the current page, without an extension
+ * @returns string "index" | "intro" | etc.
+ */
 function getCurrentPage() {
   var paths = location.href.split('/');
   return paths[paths.length-1].split('.')[0];
 }
 
+/**
+ * Adds a pagination nav to the page
+ */
 function paginate() {
 	var prev = document.querySelector("link[rel=prev]");
 	var next = document.querySelector("link[rel=next]");
@@ -66,16 +80,22 @@ function paginate() {
 		document.body.appendChild(nav);
 }
 
+/**
+ * Listener function that will put the header into the DOM as the first child in <body>
+ */
 function insertHeader() {
 	var header = document.createElement("header");
 	header.innerHTML = "<h1>Selenium Documentation</h1>";
 
   if (getCurrentPage() != 'index')
-    header.innerHTML += "<a id='home_link' href='index.html'>&laquo; back to index</a>";
+    header.innerHTML += "<a id='home_link' href='index.html'>back to index</a>";
 
 	document.body.insertBefore(header, document.body.firstChild);
 }
 
+/**
+ * Listener function that will put the footer into the DOM as the last child in <body>
+ */
 // TODO(ato): Warning, this is unsafe.
 function insertFooter() {
 	var footer = document.createElement("footer");
@@ -104,6 +124,9 @@ var headerYs = {};
 var curHeader = null;
 var tocEls = {};
 
+/**
+ * Function that stores the `y` coords of each html header
+ */
 function populateHeaderYs() {
 	var hdrs = $("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
 	for (var i=0; i< hdrs.length; i++) {
@@ -112,6 +135,9 @@ function populateHeaderYs() {
 	};
 }
 
+/**
+ * Function that populates the elements within the Table of Contents floaty
+ */
 function populateTocEls() {
 	var els = $("nav#toc > a");
 	for (var i=0; i< els.length; i++) {
@@ -120,6 +146,10 @@ function populateTocEls() {
 	}
 }
 
+/**
+ * Listener function that observes the html headers, and will determine whether they have disappeared
+ * @param ev the scroll event
+ */
 function trackHeaders(ev) {
 	var pageY = ev.pageY;
 	var cur = hs[0].id;
@@ -131,6 +161,10 @@ function trackHeaders(ev) {
 	updateToc(cur);
 }
 
+/**
+ * Update the table of contents with where the user is on the page
+ * @param id the id of the header element
+ */
 function updateToc(id) {
 	if (curHeader == id) {
 		return;
@@ -143,6 +177,10 @@ function updateToc(id) {
 	curHeader.classList.add("current");
 }
 
+/**
+ * Listener event that moves the table of contents with the user's viewport
+ * @param ev the scroll event
+ */
 function moveToc(ev) {
 	var toc = $("nav#toc")[0];
 	var firstEl = $("nav + h1")[0];
