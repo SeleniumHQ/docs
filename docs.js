@@ -78,7 +78,7 @@ function insertFooter() {
 	footer.innerHTML = "<div class=links>" +
 		" </div>" +
 		"<div class=meta>" +
-		" <p>© 2013-2015, <a href=attr.html>Software Freedom Conservancy</a>." +
+		" <p>© 2013-" + new Date().getFullYear() + ", <a href=attr.html>Software Freedom Conservancy</a>." +
 		" <p>Last updated " + document.lastModified +
 		" <p>" +
 		"  <ul>" +
