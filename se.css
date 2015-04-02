@@ -17,6 +17,22 @@ header {
  margin-bottom: 2em;
 }
 header h1 { padding: 50px 0; color: white; font-weight: normal; }
+header a#home_link {
+  text-transform: uppercase;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  float:left;
+  width: auto;
+  height: 30px;
+  background-color: rgb(79,144,94);
+}
+
+header a#home_link:hover {
+  background-color: rgb(89,154,104);
+}
 
 body, header, footer > div { padding: 0 50px }
 body { padding-right: 40% }

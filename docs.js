@@ -48,6 +48,11 @@ function addToc() {
 	document.body.insertBefore(toc, document.body.firstChild);
 }
 
+function getCurrentPage() {
+  var paths = location.href.split('/');
+  return paths[paths.length-1].split('.')[0];
+}
+
 function paginate() {
 	var prev = document.querySelector("link[rel=prev]");
 	var next = document.querySelector("link[rel=next]");
@@ -64,6 +69,10 @@ function paginate() {
 function insertHeader() {
 	var header = document.createElement("header");
 	header.innerHTML = "<h1>Selenium Documentation</h1>";
+
+  if (getCurrentPage() != 'index')
+    header.innerHTML += "<a id='home_link' href='index.html'>&laquo; back to index</a>";
+
 	document.body.insertBefore(header, document.body.firstChild);
 }
 
