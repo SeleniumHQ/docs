@@ -87,7 +87,7 @@ function insertHeader() {
 	var header = document.createElement("header");
 	header.innerHTML = "<h1>Selenium Documentation</h1>";
 
-  if (getCurrentPage() != 'index')
+  if (getCurrentPage() != 'index' || window.location.pathname === '/docs' || window.location.pathname === '/docs/')
     header.innerHTML += "<a id='home_link' href='index.html'>back to index</a>";
 
 	document.body.insertBefore(header, document.body.firstChild);
@@ -107,7 +107,7 @@ function insertFooter() {
 	footer.innerHTML = "<div class=links>" +
 		" </div>" +
 		"<div class=meta>" +
-		" <p>© 2013-" + new Date().getFullYear() + ", <a href=attr.html>Software Freedom Conservancy</a>." +
+		" <p>&copy; 2013-" + new Date().getFullYear() + ", <a href=attr.html>Software Freedom Conservancy</a>." +
 		" <p>Last updated " + document.lastModified +
 		" <p>" +
 		"  <ul>" +
