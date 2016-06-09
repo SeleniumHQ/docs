@@ -192,6 +192,7 @@ gsp.withFluent().setSearchString().clickSearchButton();</code></pre>
  might look like this:
 
 <pre><code class=java>public class GoogleSearchPage extends LoadableComponent&lt;GoogleSearchPage&gt; {
+  private final WebDriver driver;
   private GSPFluentInterface gspfi;
 
   public class GSPFluentInterface {
@@ -214,7 +215,7 @@ gsp.withFluent().setSearchString().clickSearchButton();</code></pre>
 
   @FindBy(id = "gbqfq") private WebElement searchField;
   @FindBy(id = "gbqfb") private WebElement searchButton;
-  public GoogleSearchPage() {
+  public GoogleSearchPage(WebDriver driver) {
     gspfi = new GSPFluentInterface( this );
     this.get(); // if load() fails, calls isLoaded() until page is finished loading
     PageFactory.initElements(driver, this); // initialize WebElements on page
