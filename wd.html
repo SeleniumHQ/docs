@@ -70,7 +70,7 @@
 <h3>Chromium/Chrome</h3>
 
 <p>To drive Chrome or Chromium, you have to download
- <a href=//code.google.com/p/chromedriver/downloads/list>chromedriver</a>
+ <a href=//sites.google.com/a/chromium.org/chromedriver/downloads>chromedriver</a>
  and put it in a folder that is on your system's path.
 
 <p>On Linux or Mac OS this means modifying
@@ -100,7 +100,7 @@
 
 <pre><code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code></pre>
 
-<pre><code class=ruby>require "selenium-webdriver"
+<pre><code class=rb>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :chrome</code></pre>
 
 <p>The chromedriver is implemented as a WebDriver remote server
@@ -135,7 +135,7 @@ driver = Selenium::WebDriver.for :firefox</code></pre>
  in that they are both supported by third parties.
  Consequently you need to set up a dependency to
  the <code>com.opera:operadriver</code> artifact (if using Maven)
- or <a href=//code.google.com/p/selenium/downloads/list>download a prebuilt standalone server JAR</a>
+ or <a href=//www.seleniumhq.org/download/>download a prebuilt standalone server JAR</a>
  As long as the JAR is available on your classpath, you should be good to go.
 
 <p>If you use Python or Ruby as your language of choice
@@ -187,21 +187,26 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <h3>Ruby</h3>
 
-<p>Ruby is not installed by default on Windows. Download the latest [version](http://rubyinstaller.org/downloads) and run the installer. You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check *Add Ruby executables to your PATH* checkbox. To drive any browser you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
+<p>Ruby is not installed by default on Windows. Download the latest <a href="http://rubyinstaller.org/downloads">version</a> and run the installer. You can leave all settings at default values, except at the <em>Installation Destination and Optional Tasks</em> screen check <em>Add Ruby executables to your PATH</em> checkbox. To drive any browser you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
 
 <pre><code>gem install selenium-webdriver</code></pre>
 
 
 <h3>Internet Explorer</h3>
 
-<p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows you have to download the latest [Internet Explorer Driver](https://code.google.com/p/selenium/downloads/list) and put the file into a folder that is in PATH. To find out which directories are in PATH type `echo %PATH%` in command prompt.
+<p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows you have to download the latest <a href="//www.seleniumhq.org/download/">Internet Explorer Driver</a> and put the file into a folder that is in PATH. To find out which directories are in PATH type <em>echo %PATH%</em> in command prompt.
 
 <pre><code>echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</code></pre>
 
-`C:\Ruby200\bin` looks like a good place. Unzip `IEDriverServer` file and move `IEDriverServer.exe` there.
+<em>C:\Ruby200\bin</em> looks like a good place. Unzip `IEDriverServer` file and move `IEDriverServer.exe` there.
 
 This should open a new Internet Explorer window:
+
+<pre><code>
+System.setProperty("webdriver.ie.driver", /path/to/internetexplorerdriver);
+WebDriver driver = new InternetExplorerDriver();
+</code></pre>
 
 <pre><code class=rb>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :internet_explorer</code></pre>
@@ -212,7 +217,7 @@ driver = Selenium::WebDriver.for :internet_explorer</code></pre>
 <p>WebDriver can generally be said to have a blocking API.
  Because it is an out-of-process library that
  <em>instructs</em> the browser what to do,
- and because the web platform has an intrinsicly asynchronous nature,
+ and because the web platform has an intrinsically asynchronous nature,
  WebDriver doesn't track the active, real-time state of the DOM.
  This comes with some challenges that we will discuss here.
 
@@ -263,7 +268,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  guaranteed to be synchronous,
  in that the function calls won't return
  (or the callback won't trigger in callback-style languages)
- until the the command has been completed in the browser.
+ until the command has been completed in the browser.
  The advanced user interaction APIs,
  <em><a href=#keyboard>Keyboard</a></em> and
  <em><a href=#mouse>Mouse</a></em>,
@@ -275,7 +280,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 
 <p>To overcome the problem of race conditions
  between the browser and your WebDriver script,
- most Selenium clients ships with a <em>wait</em> package.
+ most Selenium clients ship with a <em>wait</em> package.
  When employing a wait,
  you are using what is commonly referred to
  as an <em><a href=#explicit_wait>explicit wait</a></em>.
@@ -345,7 +350,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  that are raised when the element isn't found,
  the condition will retry until the element is found.
  Then it will take the return value, a <em>WebElement</em>,
- an pass it back through to our script.
+ and pass it back through to our script.
 
 <p>If the condition fails,
  e.g. a truthful return value from the condition is never reached,
@@ -402,9 +407,9 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  to find an exhaustive list of expected conditions:
 
 <ul>
- <li>Java's <code><a href=//selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html>org.openqa.selenium.support.ui.ExpectedConditions</a></code> package
- <li>Python's <code><a href=//selenium.googlecode.com/git/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html>selenium.webdriver.support.expected_conditions</a></code> package
- <li>.NET's <code><a href=//selenium.googlecode.com/git/docs/api/dotnet/html/AllMembers_T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm>OpenQA.Selenium.Support.UI.ExpectedConditions</a></code> type
+ <li>Java's <code><a href=//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html>org.openqa.selenium.support.ui.ExpectedConditions</a></code> class
+ <li>Python's <code><a href=//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected>selenium.webdriver.support.expected_conditions</a></code> class
+ <li>.NET's <code><a href=//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm>OpenQA.Selenium.Support.UI.ExpectedConditions</a></code> type
 </ul>
 
 
@@ -412,10 +417,10 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 
 <p>There is a second type of wait that is distinct from
  <a href=#explicit_wait>explicit waits</a> called <em>implicit waiting</em>.
- By implicitly waiting, WebDriver to poll the DOM
+ By implicitly waiting, WebDriver polls the DOM
  for a certain duration when trying to find <em>any</em> element.
  This can be useful when certain elements on the webpage
- will not be available immediately and needs some time to load.
+ are not available immediately and need some time to load.
 
 <p>Implicit waiting for elements to appear is disabled by default
  and will need to be manually enabled on a per-session basis.
@@ -428,7 +433,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  Do not mix implicit and explicit waits.
  Doing so can cause unpredictable wait times.
  For example setting an implicit wait of 10 seconds
- and an explicit wait of 15 seconds,
+ and an explicit wait of 15 seconds
  could cause a timeout to occur after 20 seconds.
 
 <p>An implicit wait is to tell WebDriver to poll the DOM
@@ -449,7 +454,7 @@ WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</co
  as well as the frequency with which to check the condition.
 
 <p>User may configure the wait to ignore specific types of exceptions whilst waiting,
- such as NoSuchElementExceptions when searching for an element on the page.
+ such as <code>NoSuchElementException</code>s when searching for an element on the page.
 
 <pre><code class=java>// Waiting 30 seconds for an element to be present on the page, checking
 // for its presence once every 5 seconds.
@@ -482,3 +487,11 @@ browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");</code></p
 <h2 class=support_classes>Support Classes</h2>
 
 <h2 class=http_proxies>HTTP Proxies</h2>
+
+<h2 class="page_load_strategy">Page Load Strategy</h2>
+
+<h2 class="webelement">WebElement</h2>
+
+<h2 class="keyboard">Keyboard</h2>
+
+<h2 class="mouse">Mouse</h2>
