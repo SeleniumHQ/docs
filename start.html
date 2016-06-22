@@ -17,7 +17,7 @@
  and handles communication to and from Selenium and the browser.
 
 <p>This separation is part of a conscious effort to have browser vendors
- take responsibility for the implementation for their browser.
+ take responsibility for the implementation for their browsers.
  Selenium makes use of these third party drivers where possible,
  but also provides its own drivers maintained by the project
  for the cases where this is not a reality.
@@ -38,10 +38,10 @@
 <table>
  <tr><th>Browser</th> <th>Maintainer</th> <th>Versions Supported</th></tr>
 
- <tr><td>Chromium</td> <td>Chromium</td> <td>All versions</td></tr>
+ <tr><td>Chromium</td> <td><a href="//sites.google.com/a/chromium.org/chromedriver/">Chromium</a></td> <td>All versions</td></tr>
  <tr><td>Firefox</td> <td>Selenium</td> <td>4 and newer</td></tr>
  <tr><td>Internet Explorer</td> <td>Selenium</td> <td>6 and newer</td></tr>
- <tr><td>Opera</td> <td>Opera</td> <td>10.5 and newer</td></tr>
+ <tr><td>Opera</td> <td>Opera <a href="//github.com/operasoftware/operachromiumdriver">Chromium</a> / <a href="//github.com/operasoftware/operaprestodriver">Presto</a></td> <td>10.5 and newer</td></tr>
  <tr><td>Safari</td> <td>Selenium</td> <td>5.1 and newer</td></tr>
 </table>
 
@@ -70,6 +70,26 @@
 </table>
 
 
+<h2>Other third party drivers and plugins</h2>
+
+<p>Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
+
+<p>Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project. In addition, be advised that the plugins listed below are not necessarily licensed under the Apache License v.2.0. Some of the plugins are available under another free and open source software license; others are only available under a proprietary license. Any questions about plugins and their license of distribution need to be raised with their respective developer(s).
+
+<table>
+ <tr>
+ <th>Browser</th><th>Latest version</th><th></th><th></th><th></th></tr>
+ <tr>
+  <td><a href="//sites.google.com/a/chromium.org/chromedriver/">Google Chrome driver</a></td>
+  <td><a href="//chromedriver.storage.googleapis.com/index.html">2.22</a> - 2016-06-06</td>
+  <td><a href="//chromedriver.storage.googleapis.com/2.22/notes.txt">changelog</a></td>
+  <td><a href="//bugs.chromium.org/p/chromedriver/issues/list">issues</a></td>
+  <td><a href="//github.com/SeleniumHQ/selenium/wiki/ChromeDriver">wiki</a></td>
+ </tr>
+ <tr></tr>
+</table>
+
+
 <h2>Locating Elements</h2>
 
 
@@ -91,7 +111,7 @@ another fundamental object type, the <code>WebElement</code>.
   (a control, e.g. a link or input field, etc.)
 </ul>
 
-<p>Once you have have a reference to a web element that's been “found”,
+<p>Once you have a reference to a web element that's been “found”,
  you can narrow the scope of your search
  by using the same call on that object instance:
 
@@ -99,7 +119,7 @@ another fundamental object type, the <code>WebElement</code>.
 WebElement cheddar = cheese.findElement(By.id("cheddar"));</code></pre>
 
 <p>You can do this because both the <em>WebDriver</em> and <em>WebElement</em> types
-implement the <em><a href=//selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext</a></em>
+implement the <em><a href=//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext</a></em>
 interface. In WebDriver this is known as a <em>role-based interface</em>.
 Role-based interfaces allow you to determine whether a particular
 driver implementation supports a given feature. These interfaces are
@@ -107,6 +127,7 @@ clearly defined and try to adhere to having only a single role of
 responsibility.  You can read more about WebDriver's design and what
 roles are supported in which drivers in the [Some Other Section Which
 Must Be Named](#).
+<!-- TODO: A new section needs to be created for the above.-->
 
 <p>Consequently, the <em>By</em> interface used above also supports a
 number of additional locator strategies.  A nested lookup might not be
@@ -125,7 +146,7 @@ one search:
 
 <h3>Locating Multiple Elements</h3>
 
-<p>It's possible that the document we are working with may turn have an
+<p>It's possible that the document we are working with may turn out to have an
 ordered list of the cheese we like the best:
 
 <pre><code class=html>&lt;ol id=cheese&gt;
@@ -138,7 +159,7 @@ ordered list of the cheese we like the best:
 <p>Since more cheese is undisputably better, and it would be cumbersome
 to have to retrieve each of the items individually, a superior
 technique for retrieving cheese is to make use of the pluralized
-version `findElements(By)`. This method returns a collection of web
+version <code>findElements(By)</code>. This method returns a collection of web
 elements. If only one element is found, it will still return a
 collection (of one element). If no elements match the locator, an
 empty list will be returned.
@@ -189,7 +210,7 @@ empty list will be returned.
 
  <tr>
   <td>tag name</td>
-  <td>Locates elements whos etag name matches the search value</td>
+  <td>Locates elements whose tag name matches the search value</td>
  </tr>
 
  <tr>
@@ -218,7 +239,7 @@ call down to XPath selectors internally in WebDriver.
 
 <p>Tag name can be a dangerous way to locate elements.  There are
 frequently multiple elements of the same tag present on the page.
-This is mostly useful when calling the `findElements(By)` method which
+This is mostly useful when calling the <em>findElements(By)</em> method which
 returns a collection of elements.
 
 <p>The recommended best practice is to keep your locators as compact and

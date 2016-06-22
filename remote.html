@@ -20,7 +20,7 @@ Java servlet, which can be hosted in any modern JEE app server.
 <h2>The RemoteWebDriver Server</h2>
 
 The server will always run on the machine with the browser you want to
-test. There are two ways to user the server: command line or
+test. There are two ways to use the server: command line or
 configured in code.
 
 
@@ -36,10 +36,10 @@ the directory with the jar run the following
 <h3>Considerations when running server</h3>
 
 The caller is expected to terminate each session properly, calling
-either Selenium#stop() or WebDriver#quit.
+either <code>Selenium#stop()</code> or <code>WebDriver#quit</code>.
 
 The selenium-server keeps in-memory logs for each ongoing session,
-which are cleared when Selenium#stop() or WebDriver#quit is called. If
+which are cleared when <code>Selenium#stop()</code> or <code>WebDriver#quit</code> is called. If
 you forget to terminate these sessions your server may leak memory. If
 you keep extremely long-running sessions you will probably need to
 stop/quit every now and then (or increase memory with -Xmx jvm option)
@@ -53,11 +53,11 @@ The server has two different timeouts, which can be set as follows:
 
 <dl>
  <dt>browserTimeout</dt>
- <dd>Controls how long the browser is allowed to hang (value in seconds)
+ <dd>Controls how long the browser is allowed to hang (value in seconds).
 
  <dt>timeout</dt>
- <dd>Controls how long the client is is allowed to be gone
-  before the session is reclaimed (value in seconds)
+ <dd>Controls how long the client is allowed to be gone
+  before the session is reclaimed (value in seconds).
 </dl>
 
 <p>The system property <var>selenium.server.session.timeout</var>
@@ -73,14 +73,14 @@ The server has two different timeouts, which can be set as follows:
 
 <h3>Configuring the Server in Code</h3>
 
-<p>In theory, the process is as simple as mapping the "DriverServlet" to
+<p>In theory, the process is as simple as mapping the <code>DriverServlet</code> to
 a URL, but it's also possible to host the page in a lightweight
 container, such as Jetty configured entirely in code. Steps to do this
 follow.
 
 <p>Download the "selenium-server.zip" and unpack. Put the JARs on the
-CLASSPATH Create a new class called "AppServer". Here, I'm using
-Jetty, so you'll need to download that as well:
+CLASSPATH. Create a new class called <code>AppServer</code>. Here, I'm using
+Jetty, so you'll need to <a href="http://www.eclipse.org/jetty/download.html">download</a> that as well:
 
 <pre><code class=java>import org.mortbay.jetty.Connector;
 import org.mortbay.jetty.Server;
@@ -115,7 +115,7 @@ public class AppServer {
 
 <h2 class=running_remotewebdriver_client>Running RemoteWebDriver Client</h2>
 
-<p>First we need to connect to remote webdriver.
+<p>First we need to connect to the remote webdriver.
  We do this by pointing the URL to the address of the server running our tests.
  In order to customize our configuration, we set desired capabilities.
  Below is an example of instantiating a remote WebDriver object
@@ -137,8 +137,7 @@ driver.close</code></pre>
 <p>Desired capabilities can be expanded further.
  All RemoteWebdriver capabilities are sent through JsonWireProtocol.
  For a list of configurable capabilities, and more information on JsonWireProtocol,
- please visit the documentation here:
- https://code.google.com/p/selenium/wiki/DesiredCapabilities
+ please visit the <a href="https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities">documentation here</a>.
 
 <p>For example, suppose you wanted to run chrome on Windows XP,
  using Chrome version 27:

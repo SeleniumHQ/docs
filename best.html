@@ -68,7 +68,7 @@ working on, such that the test scripts (the user's only pre-release
 proxy) “speak” for and represent the user.
 
 <p>With Selenium, DSL is usually represented by methods, written to make
-the API simple and readable – they enable a repport between the
+the API simple and readable – they enable a report between the
 developers and the stakeholders (users, product owners, business
 intelligence specialists, etc.).
 
@@ -76,7 +76,7 @@ intelligence specialists, etc.).
 <h3>Benefits</h3>
 
 <ul>
- <li><strong>Readable:</strong> Business stake holders can understand it.
+ <li><strong>Readable:</strong> Business stakeholders can understand it.
  <li><strong>Writable:</strong> Easy to write, avoids unnecessary duplication.
  <li><strong>Extensible:</strong> Functionality can (reasonably) be added
   without breaking contracts and existing functionality.
@@ -96,18 +96,20 @@ intelligence specialists, etc.).
  * @returns An instance of the AccountPage
  */
 public AccountPage loginAsUser(String username, String password) {
-  driver.findElement(By.id("loginField")).clear();
-  driver.findElement(By.id("loginField")).sendKeys(testData);
+  WebElement loginField = driver.findElement(By.id("loginField"));
+  loginField.clear();
+  loginField.sendKeys(username);
 
-  //Fill out the password field. The locator we're using is "By.id", and we should have it
+  // Fill out the password field. The locator we're using is "By.id", and we should have it
   // defined elsewhere in the class
-  driver.findElement(By.id("password")).clear();
-  driver.findElement(By.id("password")).sendKeys();
+  WebElement passwordField = driver.findElement(By.id("password"));
+  passwordField.clear();
+  passwordField.sendKeys(password);
 
-  //Click the login button, which happens to have the id "submit"
+  // Click the login button, which happens to have the id "submit"
   driver.findElement(By.id("submit")).click();
 
-  //Create and return a new instance of the AccountPage (via the built-in Selenium PageFactory)
+  // Create and return a new instance of the AccountPage (via the built-in Selenium PageFactory)
   return PageFactory.newInstance(AccountPage.class);
 }</code></pre>
 
@@ -115,18 +117,18 @@ public AccountPage loginAsUser(String username, String password) {
 buttons, clicking, and even pages from your test code. Using this
 approach, all your tester has to do is call this method. This gives
 you a maintenance advantage: if the login fields ever changed, you
-would only ever have to change this method--not your tests.
+would only ever have to change this method - not your tests.
 
 <pre><code class=java>public void loginTest() {
     loginAsUser("cbrown", "cl0wn3");
 
-    //now that we're logged in, do some other stuff--since we used a DSL to support our testers, it's
+    // Now that we're logged in, do some other stuff--since we used a DSL to support our testers, it's
     // as easy as choosing from available methods
     do.something();
     do.somethingElse();
-    Assert.assertTrue("Something should have been done!", something.wasDone();
+    Assert.assertTrue("Something should have been done!", something.wasDone());
 
-    //Note that we still haven't referred to a button or web control anywhere in this script...
+    // Note that we still haven't referred to a button or web control anywhere in this script...
 }</code></pre>
 
 <p>It bears repeating: One of your primary goals should be writing an
@@ -167,20 +169,25 @@ reports that can generate xUnit or HTML formatted reports.  xUnit
 reports are popular for importing results to a Continuous Integration
 (CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links
 for more information regarding report outputs for several languages.
+<!-- TODO: Add links.-->
 
 
 <h2>Avoid Sharing State</h2>
 
 <h2>Test Independency</h2>
-<p>
-  Write each test as its own unit.  Write the tests in a way that won't be reliant on other tests to complete.
-</p>
+<p>Write each test as its own unit.  Write the tests in a way that won't be reliant on other tests to complete:
+
+<p>Let's say there is a content management system with which you can create some custom content which then appears on you website as a module after publishing, and it may take some time to sync between the CMS and the application.
+
+<p>A wrong way of testing your module is that the content is created and published in one test, and then checking the module in another test. This is not feasible as the content may not be available immediately for the other test after publishing.
+<p>Instead you can create a stub content which can be turned on and off within the affected test, and use that for validating the module. However for content creation you can still have a separate test.
+
 
 <h2>Consider Using a Fluent API</h2>
 
 <p>Martin Fowler coined the term "Fluent API".  Selenium already
-implements something like this in their *FluentWait* class which is
-meant as an alternative to the standard *Wait* class.  You could
+implements something like this in their <code>FluentWait</code> class which is
+meant as an alternative to the standard <code>Wait</code> class.  You could
 enable the Fluent API design pattern in your page object and then
 query the Google search page with a code snippet like this one:
 
