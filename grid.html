@@ -127,13 +127,13 @@
  WebDriver, and legacy RC needed to run the grid.
  <em>ant</em> is not required anymore.
  You can download the <em>selenium-server-standalone-.jar</em> from
- <a href=//code.google.com/p/selenium/downloads/list>http://code.google.com/p/selenium/downloads/list</a>.
+ <a href=//www.seleniumhq.org/download/>http://www.seleniumhq.org/download/</a>.
 
 
 <h4>Step 1: Start the Hub</h4>
 
 <p>The hub is the central point that will receive test requests
- and distribute them the the right nodes.
+ and distribute them to the right nodes.
  The distribution is done on capabilities basis,
  meaning a test requiring a set of capabilities
  will only be distributed to nodes offering that set or subset of capabilities.
@@ -160,7 +160,7 @@
  Also, all of the other options you see in the JSON config file (seen below)
  are possible command-line flags.
 
-<p>You certainly can get by with only the simple command show above,
+<p>You certainly can get by with only the simple command shown above,
  but if you need more advanced configuration,
  then you may also for convenience specify a JSON format config file
  to configure the hub when you start it.
@@ -188,7 +188,7 @@
 
 <h4>Step 2: Start the nodes</h4>
 
-<p>Regardless on whether you want to run a grid with new WebDriver functionality,
+<p>Regardless of whether you want to run a grid with new WebDriver functionality,
  or a grid with Selenium 1 RC functionality,
  or both at the same time,
  you use the same <em>selenium-server-standalone.jar</em> file to start the nodes:
@@ -221,7 +221,7 @@
 <p>You can also start grid nodes that are configured
  with a JSON configuration file
 
-<pre><code>java.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json -Dwebdriver.chrome.driver=chromedriver.exe</code></pre>
+<pre><code>java -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json -Dwebdriver.chrome.driver=chromedriver.exe</code></pre>
 
 <p>And here is an example of a <em>nodeConfig.json</em> file:
 

@@ -55,7 +55,7 @@ def error(exc):
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(
-		description="Subsitutes inner HTML of an element "
+		description="Substitutes inner HTML of an element "
 		"with supplied content by CSS locator or XPath expression.")
 	parser.add_argument("expression", metavar="EXPRESSION",
 		help="the expression to find the element by")

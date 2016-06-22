@@ -69,7 +69,7 @@
  Through the simple programming interface
  provided for the most common languages,
  these tests will run tirelessly in parallel,
- reporting back to you when errors occurs.
+ reporting back to you when errors occur.
 
 <p>It's an aim to help make this a reality for you,
  by providing users with tools and documentation to not only control browsers,
@@ -263,12 +263,12 @@ User user = UserFactory.createCommonUser(); //This method is defined elsewhere
 // is returned by the loginAs method, allowing you to then perform actions from the AccountPage
 AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());</code></pre>
 
-<p>As you can imagine, the <em>UserFactory</em> can be extended
- to provide methods such as <em>createAdminUser()</em>, and <em>createUserWithPayment()</em>.
+<p>As you can imagine, the <code>UserFactory</code> can be extended
+ to provide methods such as <code>createAdminUser()</code>, and <code>createUserWithPayment()</code>.
  The point is, these two lines of code do not distract you from the ultimate purpose of this test:
  configuring a unicorn.
 
-<p>The intricacies of the <a href=best.html#page_object_model>Page Object model</a>
+<p>The intricacies of the <a href=best.html#page_object_models>Page Object model</a>
  will be discussed in later chapters, but we will introduce the concept here:
 
 <p>Your tests should be composed of actions,
@@ -298,13 +298,13 @@ AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());</code></
 // fill out any web forms or interact with the browser in any way
 Unicorn sparkles = new Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
 
-//Since we're already "on" the account page, we have to use it to get to the actual
+// Since we're already "on" the account page, we have to use it to get to the actual
 // place where you configure unicorns. Calling the "Add Unicorn" method takes us there
 AddUnicornPage addUnicornPage = accountPage.addUnicorn();
 
-//Now that we're on the AddUnicornPage, we will pass the "sparkles" object to its createUnicorn() method. This method will
+// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to its createUnicorn() method. This method will
 // take Sparkles' attributes, fill out the form, and click submit
-UnicornConfirmationPage unicornConfirmationPage= addUnicornPage.createUnicorn(sparkles);</code></pre>
+UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles);</code></pre>
 
 <p>Now that you've configured your unicorn,
  you need to move on to step 3: Making sure it actually worked.
@@ -336,7 +336,7 @@ Assert.assertTrue("Sparkles should have been created, with all attributes intact
 <p>Each time you move through the workflow,
  you want to try to avoid having to create an account,
  login as the user, and configure the unicorn.
- Ideally you'll be able to create and account
+ Ideally you'll be able to create an account
  and pre-configure a unicorn via the API or database.
  Then all you have to do is log in as the user, locate Sparkles,
  and add her to the cart.

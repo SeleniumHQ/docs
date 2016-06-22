@@ -29,8 +29,8 @@ around CAPTCHA checks:
 
 <p>For some browser configurations in Selenium RC, Selenium acted as a
 proxy between the browser and the site being automated.  This meant
-that all browser traffic passed through Selenium, and could be
-captured or manipulated.  The ``captureNetworkTraffic()`` method
+that all browser traffic passed through Selenium could be
+captured or manipulated.  The <code>captureNetworkTraffic()</code> method
 purported to capture all of the network traffic between the browser
 and the site being automated, including HTTP response codes.
 
@@ -74,7 +74,7 @@ slow and unreliable. Not what we want where test stability is
 important.
 
 <p>The ideal practice is to use the APIs that email providers offer, or
-in the case of facebook the developer tools service which exposes an
+in the case of Facebook the developer tools service which exposes an
 API for creating test accounts, friends and so forth. Although using
 an API might seem like a bit extra hard work you will be paid back in
 speed, reliabilty and stability. The API is also unlikely to change
@@ -97,11 +97,11 @@ fragile and unreliable.
 
 <p>Performance testing using Selenium and WebDriver is generally not
 advised. Not because it is incapable but because it is not optimised
-for the job and this you are unlikely to get good results.
+for the job and you are unlikely to get good results.
 
 <p>It may seem ideal to performance test in the context of the user but a
 suite of WebDriver tests are subjected to lots of points of external
-fragility which is beyond your control; for example Browser startup
+fragility which is beyond your control; for example browser startup
 speed, speed of HTTP servers, response of 3rd party servers that host
 Javascript or CSS. Variation at these points will cause variation in
 your results. It is very difficult to separate the difference between
