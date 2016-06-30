@@ -99,7 +99,40 @@
 how to find elements on the page. WebDriver offers a number of built-in selector
 types, amongst them finding an element by its ID attribute:
 
-<pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));</code></pre>
+    <div class="tabs">
+        <ul class="tabs">
+            <li><a href="#java">java</a></li>
+            <li><a href="#ruby">ruby</a></li>
+            <li><a href="#python">python</a></li>
+            <li><a href="#c-sharp">c#</a></li>
+            <li><a href="#perl">perl</a></li>
+            <li><a href="#php">php</a></li>
+        </ul>
+
+        <div class="tab" id="ruby">
+            <pre><code class=ruby>coming soon</code></pre>
+        </div>
+
+        <div class="tab" id="python">
+            <pre><code class=python>coming soon</code></pre>
+        </div>
+
+        <div class="tab" id="c-sharp">
+            <pre><code class=c-sharp>coming soon</code></pre>
+        </div>
+
+        <div class="tab" id="perl">
+            <pre><code class=perl>coming soon</code></pre>
+        </div>
+
+        <div class="tab" id="php">
+            <pre><code class=php>coming soon</code></pre>
+        </div>
+
+        <div class="tab" id="java">
+            <pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));</code></pre>
+        </div>
+    </div>
 
 <p>As seen in the example, locating elements in WebDriver is done on the
 <code>WebDriver</code> instance object.  The <code>findElement(By)</code> method returns
@@ -115,8 +148,41 @@ another fundamental object type, the <code>WebElement</code>.
  you can narrow the scope of your search
  by using the same call on that object instance:
 
-<pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));
+<div class="tabs">
+    <ul class="tabs">
+        <li><a href="#java1">java</a></li>
+        <li><a href="#ruby1">ruby</a></li>
+        <li><a href="#python1">python</a></li>
+        <li><a href="#c-sharp1">c#</a></li>
+        <li><a href="#perl1">perl</a></li>
+        <li><a href="#php1">php</a></li>
+    </ul>
+
+    <div class="tab" id="ruby1">
+        <pre><code class=ruby>coming soon</code></pre>
+    </div>
+
+    <div class="tab" id="python1">
+        <pre><code class=python>coming soon</code></pre>
+    </div>
+
+    <div class="tab" id="c-sharp1">
+        <pre><code class=c-sharp>coming soon</code></pre>
+    </div>
+
+    <div class="tab" id="perl1">
+        <pre><code class=perl>coming soon</code></pre>
+    </div>
+
+    <div class="tab" id="php1">
+        <pre><code class=php>coming soon</code></pre>
+    </div>
+
+    <div class="tab" id="java1">
+        <pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));
 WebElement cheddar = cheese.findElement(By.id("cheddar"));</code></pre>
+    </div>
+</div>
 
 <p>You can do this because both the <em>WebDriver</em> and <em>WebElement</em> types
 implement the <em><a href=//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext</a></em>
