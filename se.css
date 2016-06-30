@@ -151,3 +151,16 @@ dl dd { margin-bottom: 1em }
   margin-left: 0;
  }
 }
+
+.tabs li { display: inline; }
+
+.tab, .tab:target ~ #java  {
+ display: none;
+}
+
+#java, .tab:target {
+ display: block;
+}
+
+
+
