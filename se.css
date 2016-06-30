@@ -152,7 +152,7 @@ dl dd { margin-bottom: 1em }
  }
 }
 
-.tabs li { display: inline; }
+.tabs li { display: inline; margin: 5px;}
 
 .tab, .tab:target ~ #java  {
  display: none;
