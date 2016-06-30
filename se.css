@@ -154,11 +154,11 @@ dl dd { margin-bottom: 1em }
 
 .tabs li { display: inline; margin: 5px;}
 
-.tab, .tab:target ~ #java  {
+.tab, .tab:target ~ div[id ^= java]  {
  display: none;
 }
 
-#java, .tab:target {
+div[id ^= java], .tab:target {
  display: block;
 }
 
