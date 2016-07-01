@@ -107,6 +107,7 @@ types, amongst them finding an element by its ID attribute:
             <li><a href="#c-sharp">c#</a></li>
             <li><a href="#perl">perl</a></li>
             <li><a href="#php">php</a></li>
+            <li><a href="#jscript">javascript</a></li>
         </ul>
 
         <div class="tab" id="ruby">
@@ -129,6 +130,11 @@ types, amongst them finding an element by its ID attribute:
 
         <div class="tab" id="php">
             <pre><code class=php>$search = $this->webDriver->findElement(WebDriverBy::id('cheese'));
+            </code></pre>
+        </div>
+
+        <div class="tab" id="jscript">
+            <pre><code class=javascript>var element = driver.findElement(webdriver.By.id('cheese'));
             </code></pre>
         </div>
 
@@ -159,6 +165,7 @@ another fundamental object type, the <code>WebElement</code>.
         <li><a href="#c-sharp1">c#</a></li>
         <li><a href="#perl1">perl</a></li>
         <li><a href="#php1">php</a></li>
+        <li><a href="#jscript1">javascript</a></li>
     </ul>
 
     <div class="tab" id="ruby1">
@@ -177,11 +184,18 @@ IWebElement cheddarElement = cheeseElement.FindElement(By.Id("cheddar"));</code>
     </div>
 
     <div class="tab" id="perl1">
-        <pre><code class=perl>coming soon</code></pre>
+        <pre><code class=perl>my $cheese = $driver->find_element("cheese", "id");
+my $cheddar = $cheese->find_element("cheddar", "id");</code></pre>
     </div>
 
     <div class="tab" id="php1">
-        <pre><code class=php>coming soon</code></pre>
+        <pre><code class=php>$cheese = $this->webDriver->findElement(WebDriverBy::id('cheese'));
+$cheddar = $cheese->findElement(WebDriverBy::id('cheddar'));</code></pre>
+    </div>
+
+    <div class="tab" id="jscript1">
+            <pre><code class=javascript>var cheese = driver.findElement(webdriver.By.id('cheese'));
+var cheddar = cheese.findElement(webdriver.By.id('cheddar'));</code></pre>
     </div>
 
     <div class="tab" id="java1">
