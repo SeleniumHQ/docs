@@ -110,23 +110,26 @@ types, amongst them finding an element by its ID attribute:
         </ul>
 
         <div class="tab" id="ruby">
-            <pre><code class=ruby>coming soon</code></pre>
+            <pre><code class=java>element = driver.find_element(:id, 'cheese')</code></pre>
         </div>
 
         <div class="tab" id="python">
-            <pre><code class=python>coming soon</code></pre>
+            <pre><code class=java>element = driver.find_element_by_id("cheese")</code></pre>
         </div>
 
         <div class="tab" id="c-sharp">
-            <pre><code class=c-sharp>coming soon</code></pre>
+            <pre><code class=java>IWebElement element = driver.FindElement(By.Id("cheese"));
+            </code></pre>
         </div>
 
         <div class="tab" id="perl">
-            <pre><code class=perl>coming soon</code></pre>
+            <pre><code class=perl>my $element = $driver->find_element("cheese", "id");
+            </code></pre>
         </div>
 
         <div class="tab" id="php">
-            <pre><code class=php>coming soon</code></pre>
+            <pre><code class=php>$search = $this->webDriver->findElement(WebDriverBy::id('cheese'));
+            </code></pre>
         </div>
 
         <div class="tab" id="java">
@@ -159,15 +162,18 @@ another fundamental object type, the <code>WebElement</code>.
     </ul>
 
     <div class="tab" id="ruby1">
-        <pre><code class=ruby>coming soon</code></pre>
+        <pre><code class=ruby>cheese = driver.find_element(:id, 'cheese')
+cheddar = cheese.find_element(:id, 'cheddar')</code></pre>
     </div>
 
     <div class="tab" id="python1">
-        <pre><code class=python>coming soon</code></pre>
+        <pre><code class=python>cheese = driver.find_element_by_id("cheese")
+cheddar = cheese.find_element_by_id("cheddar")</code></pre>
     </div>
 
     <div class="tab" id="c-sharp1">
-        <pre><code class=c-sharp>coming soon</code></pre>
+        <pre><code class=c-sharp>IWebElement cheeseElement = driver.FindElement(By.Id("cheese"));
+IWebElement cheddarElement = cheeseElement.FindElement(By.Id("cheddar"));</code></pre>
     </div>
 
     <div class="tab" id="perl1">
