@@ -250,8 +250,46 @@ elements. If only one element is found, it will still return a
 collection (of one element). If no elements match the locator, an
 empty list will be returned.
 
-<pre><code class=java>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</code></pre>
+<div class="tabs">
+    <ul class="tabs">
+        <li><a href="#java2">java</a></li>
+        <li><a href="#ruby2">ruby</a></li>
+        <li><a href="#python2">python</a></li>
+        <li><a href="#c-sharp2">c#</a></li>
+        <li><a href="#perl2">perl</a></li>
+        <li><a href="#php2">php</a></li>
+        <li><a href="#jscript2">javascript</a></li>
+    </ul>
 
+    <div class="tab" id="ruby2">
+        <pre><code class=ruby>cheeses = driver.find_elements(:id, 'cheese')</code></pre>
+    </div>
+
+    <div class="tab" id="python2">
+        <pre><code class=python>cheeses = driver.find_elements_by_id("cheese")</code></pre>
+    </div>
+
+    <div class="tab" id="c-sharp2">
+        <pre><code class=c-sharp>IList&lt;IWebElement&gt; cheeses = driver.FindElements(By.id("#cheese"));</code></pre>
+    </div>
+
+    <div class="tab" id="perl2">
+        <pre><code class=perl>my $cheeses = $driver->find_elements("cheese", "id");</code></pre>
+    </div>
+
+    <div class="tab" id="php2">
+        <pre><code class=php>$cheese = $this->webDriver->findElements(WebDriverBy::id('cheese'));
+    </code></pre>
+    </div>
+
+    <div class="tab" id="jscript2">
+            <pre><code class=javascript>driver.findElements(By.id("cheese")).then(cheeses => console.log(cheeses.length));</code></pre>
+    </div>
+
+    <div class="tab" id="java2">
+        <pre><code class=java>List&lt;WebElement&gt; cheeses = driver.findElements(By.id("#cheese"));</code></pre>
+    </div>
+</div>
 
 <h3>Element Selection Strategies</h3>
 
