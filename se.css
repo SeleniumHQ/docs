@@ -158,6 +158,14 @@ dl dd { margin-bottom: 1em }
  display: none;
 }
 
+div:before {
+ display: block;
+ content: " ";
+ margin-top: -285px;
+ height: 285px;
+ visibility: hidden;
+}
+
 div[id ^= java], .tab:target {
  display: block;
 }
