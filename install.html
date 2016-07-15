@@ -7,9 +7,75 @@
 <script src=docs.js></script>
 
 <h1>Selenium Installation</h1>
+Selenium set up is quite different than other commercial tools. You don't install a tool using
+selenium binaries but set up your test automation project to use selenium binary in the langauge
+of your choice. The selenium binary you would need depends on browsers you want to run
+your tests upon.
 
+
+<h2>Using browser specific jar</h2>
+If you want to run tests in only a spcific brower then you can add browser specific dependency in
+your pom.xml file. You should add following dependency in your pom.xml file to run
+tests only on Firefox browser -
+
+
+<textarea rows="6" cols="100" style="border:none; margin-top:10px; margin-bottom:10px;">
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-firefox-driver</artifactId>
+    <version>2.53.1</version>
+</dependency>
+</textarea>
+
+that's all and you are ready to driver your tests in firefox browser.
 
 <h2>Using standalone jar</h2>
+More often than not you would need to run test on more than one browser and you would also like
+to take advantage of <a href=quick.html#selenium_grid>Selenium Grid</a> to distribute tests in
+a combination of operating systems and browser. Hence you would use selenium-java
+maven dependency in your project -
+
+<textarea rows="6" cols="100" style="border:none; margin-top:10px; margin-bottom:10px;">
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>2.53.1</version>
+</dependency>
+</textarea>
+
+Adding this dependency would bring following artifacts to your project -
+
+<ul>
+    <li><a href="https://sites.google.com/a/chromium.org/chromedriver/getting-started">selenium-chrome-driver</a>
+    </li>
+    <li><a
+            href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/tools/webdriver/">selenium-edge-driver</a>
+    </li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette">selenium-firefox-driver</a>
+    </li>
+    <li>selenium-ie-driver
+    </li>
+    <li>selenium-safari-driver
+    </li>
+</ul>
+
+Following third party browsers are not artifacts of selenium-java maven dependency and should be
+configured manually -
+
+<ul>
+    <li><a href="http://choice.opera.com/developer/tools/operadriver/">OperaDriver</a>
+    </li>
+    <li><a
+            href="https://github.com/detro/ghostdriver">GhostDriver</a>
+    </li>
+    <li><a href="http://appium.io/">Appium</a>
+    </li>
+    <li><a href="http://selendroid.io/">Selendroid</a>
+    </li>
+    <li><a
+            href="http://devblog.blackberry.com/2014/02/selenium-support-in-blackberry-10/">Blackberry
+    </a>
+    </li>
+</ul>
 
 
-<h2>Including selenium as Maven dependency</h2>
