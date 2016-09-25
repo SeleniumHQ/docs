@@ -14,6 +14,7 @@ window.addEventListener("load", insertHeader);
 window.addEventListener("load", insertFooter);
 window.addEventListener("load", populateHeaderYs);
 window.addEventListener("load", populateTocEls);
+window.addEventListener("load", highlightCode);
 window.addEventListener("scroll", trackHeaders);
 window.addEventListener("scroll", moveToc);
 
@@ -144,6 +145,30 @@ function populateTocEls() {
 		var anchor = els[i].href.substring(els[i].href.indexOf("#"));
 		tocEls[anchor] = els[i];
 	}
+}
+
+/**
+ * Function that highlights pre code blocks using https://highlightjs.org/usage/
+ * It dynamically loads required css and js without changing all html files.
+ */
+function highlightCode() {
+	var link = document.createElement("link");
+	link.rel = "stylesheet";
+	link.type = "text/css";
+	link.href = "github.css";
+	link.onload = function() {
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = "highlight.pack.js";
+		script.onload = function() {
+			var blocks = $("pre code");
+			for (var i = 0; i < blocks.length; i++) {
+				hljs.highlightBlock(blocks[i]);
+			}
+		}
+		document.head.appendChild(script);
+	}
+	document.head.appendChild(link);
 }
 
 /**
