@@ -90,6 +90,12 @@ nav#pagination .next { text-align: right }
 nav#pagination a.prev:link:before { content: "‹ " }
 nav#pagination a.next:link:after { content: " ›" }
 
+td { border-bottom: solid}
+th {
+ background-color: rgb(69,134,84);
+ color: white;
+}
+
 footer {
  margin-top: 6em;
  background-color: rgb(69,134,84);
