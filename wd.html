@@ -126,6 +126,20 @@ driver = Selenium::WebDriver.for :chrome</code></pre>
 driver = Selenium::WebDriver.for :firefox</code></pre>
 
 
+<h3>Edge</h3>
+
+<p>Edge is Microsoft's newest browser, included with Windows 10 and Server 2016.
+ Updates to Edge are bundled with major Windows updates,
+ so you'll need to download a binary which matches the build number of your currently installed build of Windows.
+ The <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Edge Developer site</a>
+ contains links to all the available binaries. Bugs against the EdgeDriver implementation can be raised with
+ <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver">Microsoft</a>.  If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft offer free VMs for testers on the <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/"> Edge Developer site</a>.
+
+<pre><code class=java>WebDriver driver = new EdgeDriver();</code></pre>
+
+<p>If Edge driver is not present in your path, you can set the path using the following line:
+
+<pre><code class=java>System.setProperty("webdriver.edge.driver", "/path/to/edgedriver");</code></pre>
 <h3>Internet Explorer</h3>
 
 
