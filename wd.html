@@ -127,6 +127,18 @@ driver = Selenium::WebDriver.for :firefox</code></pre>
 
 
 <h3>Internet Explorer</h3>
+<p>Internet Explorer was Microsoft's default browser until Windows 10, although it is still included in Windows 10. Internet Explorer Driver is the only driver The Selenium project aims to support the same releases
+ <a href="https://support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer">
+  Microsoft considers current</a>. Older releases may work, but will be unsupported.
+<p>While the Selenium project provides binaries for both the 32-bit and 64-bit versions of Internet Explorer, there are some <a href="http://jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html">limitations</a> with Internet Explorer 10 &amp; 11 with the 64-bit driver, but using the 32-bit driver continues to work well. It should be noted that as Internet Explorer preferences are saved against the logged in user's account, some <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration">additional setup is required</a>.
+
+<pre><code class=java>WebDriver driver = new InternetExplorerDriver();</code></pre>
+
+<p>If Internet Explorer driver is not present in your path, you can set the path using the following line:
+
+<pre><code class=java>System.setProperty("webdriver.ie.driver", "/path/to/iedriver");</code></pre>
+
+Microsoft also offer a WedDriver binary for <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=44069">Internet Explorer 11 on Windows 7 &amp; 8.1</a>. It has not been updated since 2014 and is based of a draft version of the W3 specification. <a href="http://jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html">Jim Evans</a> has an excellent writeup on Microsoft's implementation.
 
 
 <h3>Opera (Presto-based)</h3>
