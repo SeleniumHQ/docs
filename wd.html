@@ -177,20 +177,19 @@ driver = Selenium::WebDriver.for :chrome</code></pre>
 
 <h3>Firefox</h3>
 
-<p>The driver for Firefox is maintained by the Selenium project
- and works by installing a browser add-on
- in Firefox' profile before starting the browser.
- The WebDriver client then communicates with that add-on
- to instruct the browser what to do.
+<p>Starting with Selenium 3, Mozilla has taken over implementation of Firefox Driver, with <a href=https://github.com/mozilla/geckodriver/releases>Geckodriver</a>, which must be added to your PATH.
+ Gecko Driver works with Firefox 48 and newer, although the implementation is not yet complete, compared to the Firefox Driver built into Selenium 2.
 
-<p>The approach for instantiating a WebDriver session to Firefox
- is pretty much the same as for Chrome and Chromium,
- but doesn't require any additional dependencies:
+<p>As Geckodriver is the new default way of launching Firefox, you can instantiate Firefox in the same way as Selenium 2:
 
 <pre><code class=java>WebDriver driver = new FirefoxDriver();</code></pre>
 
 <pre><code class=rb>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :firefox</code></pre>
+
+<p>It is currently possible to revert to the older, more feature complete Firefox driver, by installing Firefox 45
+ <a href="https://ftp.mozilla.org/pub/firefox/releases/45.0.2/">Standard</a> or <a href="https://ftp.mozilla.org/pub/firefox/releases/45.0esr/">ESR</a>)
+ and specifying a desired capability of <strong>marionette</strong> as <strong>false</strong>. Later releases of Firefox are no longer compatible.
 
 
 <h3>Edge</h3>
