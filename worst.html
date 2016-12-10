@@ -24,6 +24,10 @@ around CAPTCHA checks:
 
 <h2>File Downloads</h2>
 
+<p>Whilst it is possible to start a download by clicking a link with a browser under Selenium&apos;s control -
+  the Selenium API does not currently expose download progress, making it less than idea for testing downloaded files.
+  Instead, find the link (and any required cookies) and pass it to a HTTP library.
+
 
 <h2>HTTP Response Codes</h2>
 
