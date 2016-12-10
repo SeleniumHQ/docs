@@ -66,6 +66,19 @@
  This section explains the basic requirements
  for getting you started with the different browsers.
 
+<h3>Adding Executables to your PATH</h3>
+<p>Most drivers require an extra executable for Selenium to communicate with the browser. You can manually specify where the executable lives before starting WebDriver, but this can make your tests less portable, as the executables will need to be in the same place on every machine, or included within your test code repository.
+<p>By adding a folder containing WebDriver's binaries to your system's path, Selenium will be able to locate the additional binaries without requiring your test code to locate the exact location of the driver..
+<h4>On Windows</h4>
+<ul>
+    <li>Create a directory to place the executables in, like <em>C:\WebDriver\bin</em></li>
+    <li>Open a new cmd window as administrator and the run the following command to permanently add the directory to your path for all users on your machine:<pre><code>setx /m path "%path%;C:\WebDriver\bin\"</code></pre></li>
+    <li>Close all cmd windows and open a new one.  You can test by trying to run one of the binaries - e.g: <pre><code>chromedriver -v</code></pre>If that worked, you should be all set!</li>
+</ul>
+<h4>On OS X / Linux</h4>
+<ul>
+    <li>In a terminal: <pre><code>export PATH=$PATH:/path/to/dir >> ~/.profile</code></pre></li>
+</ul>
 
 <h3>Quick Reference</h3>
 
