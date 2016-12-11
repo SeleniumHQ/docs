@@ -67,17 +67,35 @@
  for getting you started with the different browsers.
 
 <h3>Adding Executables to your PATH</h3>
-<p>Most drivers require an extra executable for Selenium to communicate with the browser. You can manually specify where the executable lives before starting WebDriver, but this can make your tests less portable, as the executables will need to be in the same place on every machine, or included within your test code repository.
-<p>By adding a folder containing WebDriver's binaries to your system's path, Selenium will be able to locate the additional binaries without requiring your test code to locate the exact location of the driver..
-<h4>On Windows</h4>
+<p>Most drivers require an extra executable for Selenium to communicate
+ with the browser. You can manually specify where the executable lives
+ before starting WebDriver, but this can make your tests less portable,
+ as the executables will need to be in the same place on every machine,
+ or included within your test code repository.
+<p>By adding a folder containing WebDriver's binaries to your system's
+ path, Selenium will be able to locate the additional binaries without
+ requiring your test code to locate the exact location of the driver.
 <ul>
-    <li>Create a directory to place the executables in, like <em>C:\WebDriver\bin</em></li>
-    <li>Open a new cmd window as administrator and the run the following command to permanently add the directory to your path for all users on your machine:<pre><code>setx /m path "%path%;C:\WebDriver\bin\"</code></pre></li>
-    <li>Close all cmd windows and open a new one.  You can test by trying to run one of the binaries - e.g: <pre><code>chromedriver -v</code></pre>If that worked, you should be all set!</li>
-</ul>
-<h4>On OS X / Linux</h4>
-<ul>
-    <li>In a terminal: <pre><code>export PATH=$PATH:/path/to/dir >> ~/.profile</code></pre></li>
+ <li>Create a directory to place the executables in, like
+  <em>C:\WebDriver\bin</em> or <em>/opt/WebDriver/bin</em></li>
+  <li>Add the directory to your PATH:</li>
+  <ul>
+   <li>On Windows - Open a command prompt as administrator
+     and the run the following
+  command to permanently add the directory to your path for all users on
+  your machine:<pre>setx /m path "%path%;C:\WebDriver\bin\"</pre></li>
+   <li>Bash users on OS X / Linux - In a terminal:
+    <pre>export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile</pre></li>
+  </ul>
+ <li>You are now ready to test your changes.  Close all open command
+ prompts and open a new one.  Type out the name of one of the binaries
+ in the folder you created in the previous step- e.g: <pre>chromedriver</pre>
+ If your PATH is configured correctly, you will see some some output
+ relating to the startup of the driver:
+  <pre>Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
+  <br>Only local connections are allowed.</pre>
+ You can regain control of your command prompt by pressing
+  <em>Ctrl + C</em>.</li>
 </ul>
 
 <h3>Quick Reference</h3>
