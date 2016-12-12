@@ -24,6 +24,13 @@ around CAPTCHA checks:
 
 <h2>File Downloads</h2>
 
+<p>Whilst it is possible to start a download by clicking a link with
+ a browser under Selenium's control - the API does not currently
+ expose download progress, making it less than idea for testing
+ downloaded files. This is because downloading a file isn’t considered
+ an important aspect of emulating user interaction with the web platform.
+ Instead, find the link using Selenium (and any required cookies) and
+ pass it to a HTTP request library like libcurl.
 
 <h2>HTTP Response Codes</h2>
 
@@ -77,7 +84,7 @@ important.
 in the case of Facebook the developer tools service which exposes an
 API for creating test accounts, friends and so forth. Although using
 an API might seem like a bit extra hard work you will be paid back in
-speed, reliabilty and stability. The API is also unlikely to change
+speed, reliability and stability. The API is also unlikely to change
 whereas webpages and HTML locators change often and require you to
 update your test framework.
 
