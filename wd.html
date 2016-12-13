@@ -303,6 +303,23 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <h3>Safari</h3>
 
+<p>Starting with Safari 10 on OS X El Capitan and Sierra, WebDriver support
+ is now included with each release of the browser. To enable support:
+<ol>
+ <li>Enable the Developer menu from Safari preferences.</li>
+ <li>Check the <em>Allow Remote Automation</em> option from with the Develop menu.</li>
+ <li>Run <pre>/usr/bin/safaridriver -p 1337</pre> from the terminal for
+  the first time and type your password at the prompt to authorise WebDriver.</li>
+</ol>
+
+<p>You can then start a driver session using:
+<pre><code class=java>WebDriver driver = new SafariDriver();</code></pre>
+
+<p>Those looking to automate Safari on iOS should look to the
+ <a href="http://appium.io/">Appium project</a>. Whilst Safari was previously
+ available for Windows, Apple have long since dropped support, making it
+ a poor choice of test platform.
+
 
 <h3>Specialized Browsers</h3>
 
