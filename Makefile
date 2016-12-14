@@ -28,7 +28,7 @@ test: validate
 
 validate:
 	@for f in $(CONTENTS) ; do \
-		curl -s -F laxtype=yes -F parser=html5 -F level=error -F out=gnu -F doc=@$$f https://validator.nu ; \
+		curl -s -F laxtype=yes -F parser=html5 -F level=error -F out=gnu -F doc=@$$f https://validator.nu | sed -e 's/"//g'; \
 	done
 
 gettingstarted.tmp: quick.html
