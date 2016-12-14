@@ -86,7 +86,7 @@
      and the run the following
   command to permanently add the directory to your path for all users on
   your machine:<pre>setx /m path "%path%;C:\WebDriver\bin\"</pre></li>
-   <li>Bash users on OS X / Linux - In a terminal:
+   <li>Bash users on macOS and Linux - In a terminal:
     <pre>export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile</pre></li>
   </ul>
  <li>You are now ready to test your changes.  Close all open command
@@ -114,7 +114,7 @@
  <tr>
   <th>Chromium/Chrome
   <td>Windows<br>
-   OS X<br>
+   macOS<br>
    Linux
   <td>Google
   <td><a href="https://chromedriver.storage.googleapis.com/index.html">Downloads</a>
@@ -124,7 +124,7 @@
  <tr>
   <th>Firefox
   <td>Windows<br>
-   OS X<br>
+   macOS<br>
    Linux
   <td>Mozilla
   <td><a href=https://github.com/mozilla/geckodriver/releases>Downloads</a>
@@ -149,16 +149,16 @@
 
  <tr>
   <th>Safari
-  <td>OS X El Capitan &amp; newer
+  <td>macOS El Capitan and newer
   <td>Apple
   <td>Built in
-  <td><a href="https://bugreport.apple.com/logon">Issues</a>
+  <td><a href=https://bugreport.apple.com/logon>Issues</a>
  </tr>
 
  <tr>
   <th>Opera
   <td>Windows<br>
-   OS X<br>
+   macOS<br>
    Linux
   <td>Opera
   <td><a href=https://github.com/operasoftware/operachromiumdriver/releases>Downloads</a>
@@ -173,7 +173,7 @@
  <a href=//sites.google.com/a/chromium.org/chromedriver/downloads>chromedriver</a>
  and put it in a folder that is on your system's path.
 
-<p>On Linux or Mac OS this means modifying
+<p>On Linux or macOS this means modifying
  the <var>PATH</var> environmental variable.
  You can see what directories, separated by a colon,
  that makes up your system's path by executing the following command:
@@ -276,8 +276,8 @@ Microsoft also offer a WedDriver binary for <a href="https://www.microsoft.com/e
  you must set the <var>SELENIUM_SERVER_JAR</var> environmental variable
  to point to the location of the binary JAR.
 
-<p>On Linux and Mac OS X you can do it for your current shell session
- by doing this:
+<p>On Linux and macOS you can do this
+ for your current shell session by running:
 
 <pre><code>% export SELENIUM_SERVER_JAR=/path/to/operadriver.jar</code></pre>
 
@@ -303,13 +303,17 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <h3>Safari</h3>
 
-<p>Starting with Safari 10 on OS X El Capitan and Sierra, WebDriver support
- is now included with each release of the browser. To enable support:
+<p>Starting with Safari 10 on macOS El Capitan and Sierra,
+ WebDriver support is included with each release of the browser.
+ To enable support:
+
 <ol>
- <li>Enable the Developer menu from Safari preferences.</li>
- <li>Check the <em>Allow Remote Automation</em> option from with the Develop menu.</li>
- <li>Run <pre>/usr/bin/safaridriver -p 1337</pre> from the terminal for
-  the first time and type your password at the prompt to authorise WebDriver.</li>
+ <li>Enable the Developer menu from Safari preferences
+ <li>Check the <em>Allow Remote Automation</em> option
+  from with the Develop menu
+ <li>Run <pre>/usr/bin/safaridriver -p 1337</pre> from the terminal
+  for the first time and type your password
+  at the prompt to authorise WebDriver
 </ol>
 
 <p>You can then start a driver session using:
