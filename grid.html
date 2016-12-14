@@ -10,7 +10,7 @@
 
 <h1>Selenium Grid</h1>
 
-<p>Selenium <em>Grid</em> is a smart proxy server
+<p><em>Selenium Grid</em> is a smart proxy server
  that allows Selenium tests to route commands to remote web browser instances.
  Its aim is to provide an easy way to run tests in parallel on multiple machines.
 
@@ -26,7 +26,7 @@
  (instead of in each individual test).
 
 
-<h2 class=pros_and_cons>Pros and Cons</h2>
+<h2 class=pros_and_cons>Pros and cons</h2>
 
 <p>Selenium Grid isn't a silver bullet.
  It solves a subset of common delegation and distribution problems,
@@ -81,7 +81,7 @@
 </dl>
 
 
-<h2>What is a Hub and Node?</h2>
+<h2>What is a hub and node?</h2>
 
 <p>A <em>hub</em> is a central point
  from where your tests will be kicked off.
@@ -100,7 +100,7 @@
  whereas this wouldn't be possible on Linux or Mac.
 
 
-<h2>Rolling Your Own Grid</h2>
+<h2>Rolling your own grid</h2>
 
 <p>To use Selenium Grid
  you must maintain your own infrastructure for the nodes.
@@ -117,7 +117,7 @@
  complete with its own node infrastructure.
 
 
-<h3>Quick Start</h3>
+<h3>Quick start</h3>
 
 <p>This example will show you how to start the Selenium 2 Hub,
  and register both a WebDriver node and a Selenium 1 RC legacy node.
@@ -132,7 +132,7 @@
  <a href=//www.seleniumhq.org/download/>http://www.seleniumhq.org/download/</a>.
 
 
-<h4>Step 1: Start the Hub</h4>
+<h4>Step 1: Start the ub</h4>
 
 <p>The hub is the central point that will receive test requests
  and distribute them to the right nodes.
@@ -204,7 +204,7 @@
  problems with screenshots if your tests take them.
 
 
-<h5>Configuration of Node With Options</h5>
+<h5>Configuration of node with options</h5>
 
 <p>As mentioned, for backwards compatibility
  “wd” and “rc” roles are still a valid subset of the “node” role.
@@ -218,7 +218,7 @@
 <pre><code>-Dwebdriver.chrome.driver=chromedriver.exe</code></pre>
 
 
-<h5>Configuration of Node With JSON</h5>
+<h5>Configuration of node with JSON</h5>
 
 <p>You can also start grid nodes that are configured
  with a JSON configuration file

@@ -19,14 +19,14 @@ server. The client is your WebDriver test and the server is simply a
 Java servlet, which can be hosted in any modern JEE app server.
 
 
-<h2>The RemoteWebDriver Server</h2>
+<h2>The RemoteWebDriver server</h2>
 
 The server will always run on the machine with the browser you want to
 test. There are two ways to use the server: command line or
 configured in code.
 
 
-<h3>Starting the Server from The Command Line</h3>
+<h3>Starting the server from the command line</h3>
 
 Once you have downloaded selenium-server-standalone-{VERSION}.jar
 place it on the computer with the browser you want to test. Then from
@@ -73,7 +73,7 @@ The server has two different timeouts, which can be set as follows:
  polluting the runtime environment.
 
 
-<h3>Configuring the Server in Code</h3>
+<h3>Configuring the server programmatically</h3>
 
 <p>In theory, the process is as simple as mapping the <code>DriverServlet</code> to
 a URL, but it's also possible to host the page in a lightweight
@@ -115,7 +115,7 @@ public class AppServer {
 }</code></pre>
 
 
-<h2 class=running_remotewebdriver_client>Running RemoteWebDriver Client</h2>
+<h2 class=running_remotewebdriver_client>Running RemoteWebDriver client</h2>
 
 <p>First we need to connect to the remote webdriver.
  We do this by pointing the URL to the address of the server running our tests.
@@ -134,7 +134,7 @@ driver.close</code></pre>
  we can add additional desired capabilities.
 
 
-<h3>Desired Capabilities</h3>
+<h3>Desired capabilities</h3>
 
 <p>Desired capabilities can be expanded further.
  All RemoteWebdriver capabilities are sent through JsonWireProtocol.
@@ -151,7 +151,7 @@ caps.version = 27
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps</code></pre>
 
 
-<h3>Local File Detector</h3>
+<h3>Local file detector</h3>
 
 <p>The Local File Detector allows the transfer of files from the client
 machine to the remote server.  For example if a test needs to upload a

@@ -1,6 +1,6 @@
 <!doctype html>
 <meta charset=utf-8>
-<title>Best Practices</title>
+<title>Best practices</title>
 <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 <link rel=stylesheet href=se.css>
@@ -8,7 +8,7 @@
 <link rel=next href=worst.html title="Worst Practices">
 <script src=docs.js></script>
 
-<h1>Best Practices</h1>
+<h1>Best practices</h1>
 
 <p>Functional testing is difficult to get right for many reasons.
  As if application state, complexity, and dependencies don't make testing difficult enough,
@@ -25,7 +25,7 @@
  that have proven successful over the years.
 
 
-<h2>Page Object Models</h2>
+<h2>Page object models</h2>
 
 <p>Page Object is a Design Pattern which has become popular in test
 automation for enhancing test maintenance and reducing code
@@ -143,7 +143,7 @@ should not concern themselves with HOW the UI requires you to go
 about it.
 
 
-<h2>Generating Application State</h2>
+<h2>Generating application state</h2>
 
 <p>Selenium should not be used to prepare a test case.  All repetitive
 actions, and preparation for a test case should be done through other
@@ -156,13 +156,13 @@ testing should not be done using Selenium.  As mentioned previously,
 existing APIs should be leveraged to create data for the AUT.
 
 
-<h2>Mock External Services</h2>
+<h2>Mock external services</h2>
 
 <p>Eliminating the dependencies on external services will greatly improve
 the speed and stability of your tests.
 
 
-<h2>Improved Reporting</h2>
+<h2>Improved reporting</h2>
 
 <p>Selenium is not designed to report on the status of test cases
 run. Taking advantage of the built-in reporting capabilities of unit
@@ -174,9 +174,11 @@ for more information regarding report outputs for several languages.
 <!-- TODO: Add links.-->
 
 
-<h2>Avoid Sharing State</h2>
+<h2>Avoid sharing state</h2>
 
-<h2>Test Independency</h2>
+
+<h2>Test independency</h2>
+
 <p>Write each test as its own unit.  Write the tests in a way that won't be reliant on other tests to complete:
 
 <p>Let's say there is a content management system with which you can create some custom content which then appears on you website as a module after publishing, and it may take some time to sync between the CMS and the application.
@@ -185,7 +187,7 @@ for more information regarding report outputs for several languages.
 <p>Instead you can create a stub content which can be turned on and off within the affected test, and use that for validating the module. However for content creation you can still have a separate test.
 
 
-<h2>Consider Using a Fluent API</h2>
+<h2>Consider using a fluent API</h2>
 
 <p>Martin Fowler coined the term "Fluent API".  Selenium already
 implements something like this in their <code>FluentWait</code> class which is
@@ -257,7 +259,7 @@ gsp.withFluent().setSearchString().clickSearchButton();</code></pre>
 }</code></pre>
 
 
-<h2>Fresh Browser Per Test</h2>
+<h2>Fresh browser per test</h2>
 
 <p>Start each test from a clean known state.
  Ideally spin up a new virtual machine for each test.

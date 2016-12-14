@@ -1,6 +1,6 @@
 <!doctype html>
 <meta charset=utf-8>
-<title>Worst Practices</title>
+<title>Worst practices</title>
 <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 <link rel=stylesheet href=se.css>
@@ -24,7 +24,7 @@ around CAPTCHA checks:
 </ul>
 
 
-<h2>File Downloads</h2>
+<h2>File downloads</h2>
 
 <p>Whilst it is possible to start a download by clicking a link with
  a browser under Selenium's control - the API does not currently
@@ -34,7 +34,8 @@ around CAPTCHA checks:
  Instead, find the link using Selenium (and any required cookies) and
  pass it to a HTTP request library like libcurl.
 
-<h2>HTTP Response Codes</h2>
+
+<h2>HTTP response codes</h2>
 
 <p>For some browser configurations in Selenium RC, Selenium acted as a
 proxy between the browser and the site being automated.  This meant
@@ -74,7 +75,7 @@ codes available to WebDriver, so opting to use a proxy allows you to
 have a solution that works for every browser.
 
 
-<h2>Gmail, Email, and Facebook Logins</h2>
+<h2>GMail, email, and Facebook logins</h2>
 
 <p>For multiple reasons logging into sites like Gmail and Facebook using
 WebDriver is not recommended. Aside from being against the usage terms
@@ -95,14 +96,16 @@ test increases the risk of your test failing because it makes your
 test longer. A general rule of thumb is that longer tests are more
 fragile and unreliable.
 
-<h2>Test Dependency</h2>
+
+<h2>Test dependency</h2>
 <p>
   A common idea and misconception about automated testing is regarding a
   specific test order. Your tests should be able to run in <strong>any</strong> order,
   and not rely on other tests to complete in order to be successful.
 </p>
 
-<h2>Performance Testing</h2>
+
+<h2>Performance testing</h2>
 
 <p>Performance testing using Selenium and WebDriver is generally not
 advised. Not because it is incapable but because it is not optimised
@@ -135,7 +138,7 @@ suggestions.
 <p>Example (open source) packages to use are: Jmeter ?
 
 
-<h2>Link Spidering</h2>
+<h2>Link spidering</h2>
 
 <p>
   Using Selenium to spider through links is not a recommended practice
