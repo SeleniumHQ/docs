@@ -1,4 +1,4 @@
-# [Selenium documentation rewrite](https://seleniumhq.github.io/docs/] [![Build status](https://travis-ci.org/SeleniumHQ/docs.svg)](https://travis-ci.org/SeleniumHQ/docs)
+# [Selenium documentation rewrite](https://seleniumhq.github.io/docs/) [![Build status](https://travis-ci.org/SeleniumHQ/docs.svg)](https://travis-ci.org/SeleniumHQ/docs)
 
 We’re rewriting the Selenium documentation from scratch!
 You can see the current progress of [our draft](//seleniumhq.github.io/docs),
