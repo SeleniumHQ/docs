@@ -177,16 +177,18 @@
 
 <h2>Link spidering</h2>
 
-<p>
-  Using Selenium to spider through links is not a recommended practice
-  not because it can't be done, but because it's definitely not the most
-  ideal tool.  Selenium needs time to startup, and can take several seconds
-  up to a minute depending on how your test is written, just to get to the page
-  and traverse through the DOM.
-</p>
-<p>
-  Instead of using Selenium for this, you could save a ton of time by executing a
-  curl command, or using a library such as BeautifulSoup since these methods don't
-  rely on creating a browser and navigating to a page.  You are saving tons of time
-  by not using Selenium for this task.
-</p>
+<p>Using WebDriver to spider through links
+ is not a recommended practice not because it cannot be done,
+ but because it’s definitely not the most ideal tool.
+ WebDriver needs time to startup,
+ and can take several seconds up to a minute
+ depending on how your test is written,
+ just to get to the page and traverse through the DOM.
+
+<p>Instead of using WebDriver for this,
+ you could save a ton of time
+ by executing a <a href=https://curl.haxx.se/>curl</a> command,
+ or using a library such as BeautifulSoup
+ since these methods don’t rely
+ on creating a browser and navigating to a page.
+ You are saving tonnes of time by not using WebDriver for this task.
