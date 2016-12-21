@@ -211,7 +211,8 @@
  But those roles limit the types of remote connections to their corresponding API,
  while “node” allows both RC and WebDriver remote connections.
 
-<p>Passing JVM properties (using the <code>-D</code> flag)
+<p>Passing JVM properties (using the <code>-D</code> flag
+ <em>before the -jar argument</em>)
  on the command line as well,
  and these will be picked up and propagated to the nodes:
 
@@ -223,7 +224,7 @@
 <p>You can also start grid nodes that are configured
  with a JSON configuration file
 
-<pre><code>java -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json -Dwebdriver.chrome.driver=chromedriver.exe</code></pre>
+<pre><code>java  -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json</code></pre>
 
 <p>And here is an example of a <em>nodeConfig.json</em> file:
 
