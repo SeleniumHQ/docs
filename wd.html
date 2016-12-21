@@ -232,6 +232,13 @@ driver = Selenium::WebDriver.for :chrome</code></pre>
 <pre><code class=rb>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :firefox</code></pre>
 
+<p>If you prefer not to set geckodriver's location using PATH,
+ set the geckodriver binary location using :
+
+<pre><code class=java>System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");</code></pre>
+
+webdriver.gecko.driver
+
 <p>It is currently possible to revert to the older, more feature complete
  Firefox driver, by installing Firefox
  <a href="https://ftp.mozilla.org/pub/firefox/releases/47.0.1/">47.0.1</a>
