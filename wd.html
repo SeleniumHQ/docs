@@ -186,7 +186,7 @@ Only local connections are allowed.</pre>
  You can see what directories, separated by a colon,
  make up your system's path by executing the following command:
 
-<pre><code>% echo $PATH
+<pre><code>$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</code></pre>
 
 <p>To include chromedriver on the path if it isn't already,
@@ -194,7 +194,7 @@ Only local connections are allowed.</pre>
  The following line will set the <var>PATH</var> environmental variable
  its current content, plus an additional path added after the colon:
 
-<pre><code>% export PATH="$PATH:/path/to/chromedriver"</code></pre>
+<pre><code>$ export PATH="$PATH:/path/to/chromedriver"</code></pre>
 
 <p>When chromedriver is available on your path,
  you should be able to execute the _chromedriver_ executable from any directory.
@@ -287,7 +287,7 @@ Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/e
 <p>On Linux and macOS, you can do this
  for your current shell session by running:
 
-<pre><code>% export SELENIUM_SERVER_JAR=/path/to/operadriver.jar</code></pre>
+<pre><code>$ export SELENIUM_SERVER_JAR=/path/to/operadriver.jar</code></pre>
 
 <p>It's possible to set this in your shell's profile (e.g. <em>~/.bashrc</em>)
  to have the variable set every time you launch a new shell session.
@@ -352,14 +352,14 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <p>Ruby is not installed by default on Windows. Download the latest <a href="http://rubyinstaller.org/downloads">version</a> and run the installer. You can leave all settings at default values, except at the <em>Installation Destination and Optional Tasks</em> screen check <em>Add Ruby executables to your PATH</em> checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
 
-<pre><code>gem install selenium-webdriver</code></pre>
+<pre><code>$ gem install selenium-webdriver</code></pre>
 
 
 <h3>Internet Explorer</h3>
 
 <p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows, you have to download the latest <a href="//www.seleniumhq.org/download/">Internet Explorer Driver</a> and put the file into a folder that is in PATH. To find out which directories are in PATH, type <em>echo %PATH%</em> in command prompt.
 
-<pre><code>echo %PATH%
+<pre><code>$ echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</code></pre>
 
 <em>C:\Ruby200\bin</em> looks like a good place. Unzip `IEDriverServer` file and move `IEDriverServer.exe` there.
