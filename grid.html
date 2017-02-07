@@ -31,7 +31,7 @@
 <p>Selenium Grid isn't a silver bullet.
  It solves a subset of common delegation and distribution problems,
  but will for example not manage your infrastructure
- and might not suite your specific needs.
+ and might not suit your specific needs.
 
 
 <h3>Pros</h3>
@@ -129,10 +129,10 @@
  WebDriver, and legacy RC needed to run the grid.
  <em>ant</em> is not required anymore.
  You can download the <em>selenium-server-standalone-.jar</em> from
- <a href=//www.seleniumhq.org/download/>http://www.seleniumhq.org/download/</a>.
+ <a href=http://www.seleniumhq.org/download/>http://www.seleniumhq.org/download/</a>.
 
 
-<h4>Step 1: Start the ub</h4>
+<h4>Step 1: Start the hub</h4>
 
 <p>The hub is the central point that will receive test requests
  and distribute them to the right nodes.
@@ -211,7 +211,8 @@
  But those roles limit the types of remote connections to their corresponding API,
  while “node” allows both RC and WebDriver remote connections.
 
-<p>Passing JVM properties (using the <code>-D</code> flag)
+<p>Passing JVM properties (using the <code>-D</code> flag
+ <em>before the -jar argument</em>)
  on the command line as well,
  and these will be picked up and propagated to the nodes:
 
@@ -223,7 +224,7 @@
 <p>You can also start grid nodes that are configured
  with a JSON configuration file
 
-<pre><code>java -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json -Dwebdriver.chrome.driver=chromedriver.exe</code></pre>
+<pre><code>java  -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json</code></pre>
 
 <p>And here is an example of a <em>nodeConfig.json</em> file:
 
