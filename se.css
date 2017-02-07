@@ -48,6 +48,8 @@ nav#toc {
  margin-left: 50px;
  left: 60%;
  top: 200px;
+ max-height: 85vh;
+ overflow-y: scroll;
 }
 nav#toc h1 {
  margin: 0;
