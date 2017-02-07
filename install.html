@@ -10,13 +10,12 @@
 
 <h1>Selenium installation</h1>
 
-<p>Selenium setup is quite different from setup of other commercial tools.
+<p>Selenium setup is quite different from the setup of other commercial tools.
  You don’t install a tool using Selenium binaries
  but rather set up your test automation project to use such binaries
  in the language of your choice.
  The Selenium binary you would need
  depends on the browsers you want to run your tests upon.
->>>>>>> Fixed various typos in Install page
 
 <h2>Using browser specific JAR</h2>
 
@@ -28,7 +27,7 @@
 <pre><code class=xml>&lt;dependency&gt;
   &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
   &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
-  &lt;version&gt;2.53.1&lt;/version&gt;
+  &lt;version&gt;3.X&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -38,14 +37,14 @@
 <pre><code class=xml>&lt;dependency&gt;
   &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
   &lt;artifactId&gt;selenium-chrome-driver&lt;/artifactId&gt;
-  &lt;version&gt;2.53.1&lt;/version&gt;
+  &lt;version&gt;3.X&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
 
 <h2>Using non browser specific JAR</h2>
 
- than not you would need to run test
+<p> More often than not you would need to run tests
  on more than one browser.
  Hence you would use <i>selenium-java</i>
  Maven dependency in your project.
@@ -56,7 +55,7 @@
 <pre><code class=xml>&lt;dependency&gt;
   &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
   &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
-  &lt;version&gt;2.53.1&lt;/version&gt;
+  &lt;version&gt;3.X&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
