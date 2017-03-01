@@ -10,48 +10,48 @@
 
 <h1>Remote WebDriver</h1>
 
-You can use Remote webdriver the same way you would use webdriver
-locally. The primary difference is that remote webdriver needs to be
-configured so that it can run your tests on a seperate machine.
+You can use WebDriver remotely the same way you would use it
+locally. The primary difference is that a remote WebDriver needs to be
+configured so that it can run your tests on a separate machine.
 
-The RemoteWebDriver is composed of two pieces: a client and a
+A remote WebDriver is composed of two pieces: a client and a
 server. The client is your WebDriver test and the server is simply a
 Java servlet, which can be hosted in any modern JEE app server.
 
 
-<h2>The RemoteWebDriver server</h2>
+<h2>The Remote WebDriver server</h2>
 
 The server will always run on the machine with the browser you want to
-test. There are two ways to use the server: command line or
-configured in code.
+test. The server can be used either from the command line or through code
+configuration.
 
 
 <h3>Starting the server from the command line</h3>
 
-Once you have downloaded selenium-server-standalone-{VERSION}.jar
-place it on the computer with the browser you want to test. Then from
-the directory with the jar run the following
+Once you have downloaded selenium-server-standalone-{VERSION}.jar,
+place it on the computer with the browser you want to test. Then, from
+the directory with the jar, run the following:
 
 <pre><code>java -jar selenium-server-standalone-{VERSION}.jar</code></pre>
 
 
-<h3>Considerations when running server</h3>
+<h3>Considerations for running the server</h3>
 
 The caller is expected to terminate each session properly, calling
 either <code>Selenium#stop()</code> or <code>WebDriver#quit</code>.
 
 The selenium-server keeps in-memory logs for each ongoing session,
 which are cleared when <code>Selenium#stop()</code> or <code>WebDriver#quit</code> is called. If
-you forget to terminate these sessions your server may leak memory. If
-you keep extremely long-running sessions you will probably need to
-stop/quit every now and then (or increase memory with -Xmx jvm option)
+you forget to terminate these sessions, your server may leak memory. If
+you keep extremely long-running sessions, you will probably need to
+stop/quit every now and then (or increase memory with -Xmx jvm option).
 
 
 <h3>Timeouts (from version 2.21)</h3>
 
 The server has two different timeouts, which can be set as follows:
 
-<pre>j<code>ava -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60</code></pre>
+<pre><code>java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60</code></pre>
 
 <dl>
  <dt>browserTimeout</dt>
@@ -115,9 +115,9 @@ public class AppServer {
 }</code></pre>
 
 
-<h2 class=running_remotewebdriver_client>Running RemoteWebDriver client</h2>
+<h2 class=running_remotewebdriver_client>Running Remote WebDriver client</h2>
 
-<p>First we need to connect to the remote webdriver.
+<p>First, we need to connect to the RemoteWebDriver.
  We do this by pointing the URL to the address of the server running our tests.
  In order to customize our configuration, we set desired capabilities.
  Below is an example of instantiating a remote WebDriver object
@@ -130,18 +130,17 @@ driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :des
 driver.get "http://www.google.com"
 driver.close</code></pre>
 
-<p>To further customize our test configuration
- we can add additional desired capabilities.
+<p>To further customize our test configuration, we can add other desired capabilities.
 
 
 <h3>Desired capabilities</h3>
 
 <p>Desired capabilities can be expanded further.
- All RemoteWebdriver capabilities are sent through JsonWireProtocol.
+ All remote Webdriver capabilities are sent through JsonWireProtocol.
  For a list of configurable capabilities, and more information on JsonWireProtocol,
- please visit the <a href="https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities">documentation here</a>.
+ please visit the documentation <a href="https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities">here</a>.
 
-<p>For example, suppose you wanted to run chrome on Windows XP,
+<p>For example, suppose you wanted to run Chrome on Windows XP,
  using Chrome version 27:
 
 <pre><code class=rb>caps = Selenium::WebDriver::Remote::Capabilities.chrome
@@ -154,8 +153,8 @@ driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :des
 <h3>Local file detector</h3>
 
 <p>The Local File Detector allows the transfer of files from the client
-machine to the remote server.  For example if a test needs to upload a
-file to a web application, RemoteWebDriver can automatically transfer
+machine to the remote server.  For example, if a test needs to upload a
+file to a web application, a remote WebDriver can automatically transfer
 the file from the local machine to the remote web server during
 runtime. This allows the file to be uploaded from the remote machine
 running the test. It is not enabled by default and can be enabled in
@@ -169,8 +168,7 @@ the following way:
   str if File.exist?(str)
 end</code></pre>
 
-<p>Once the above code is defined,
- you can upload a file in your test in the following way:
+<p>Once the above code is defined, you can upload a file in your test in the following way:
 
 <pre><code class=java>driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
 WebElement upload = driver.findElement(By.id("myfile"));

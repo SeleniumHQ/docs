@@ -18,7 +18,7 @@ will work for you in your particular environment.
 
 <p>Functional testing is difficult to get right for many reasons.
  As if application state, complexity, and dependencies don't make testing difficult enough,
- dealing with browsers – and especially cross-browser incompatibilities –
+ dealing with browsers (especially with cross-browser incompatibilities)
  makes writing good tests a challenge.
 
 <p>Selenium provides tools to make functional user interaction easier,
@@ -39,12 +39,12 @@ duplication. A page object is an object-oriented class that serves as
 an interface to a page of your AUT. The tests then use the methods of
 this page object class whenever they need to interact with that page
 of the UI. The benefit is that if the UI changes for the page, the
-tests themselves don’t need to change, only the code within the page
-object needs to change. Subsequently all changes to support that new
+tests themselves don’t need to change; only the code within the page
+object needs to change. Subsequently, all changes to support that new
 UI are located in one place.
 
 <p>The Page Object Design Pattern provides the following advantage:
- There is clean separation between test code and page specific code
+ there is clean separation between test code and page specific code
  such as locators (or their use if you’re using a UI map) and layout.
 
 
@@ -52,21 +52,21 @@ UI are located in one place.
 
 <ul>
  <li>If you submit a page and are redirected,
-  it should return the new page object
+  it should return the new page object.
  <li>If you click submit on login
-  and you want to check to see if a user is logged in
-  it should return True or False in a method
+  and you want to check to see if a user is logged in,
+  it should return True or False in a method.
 </ul>
 
 
 <h2>Domain Specific Language</h2>
 
-<p>A domain specific language (DSL) is a system which provides the user
+<p>A domain specific language (DSL) is a system which provides the user with
 an expressive means of solving a problem.  It allows a user to
 interact with the system on their terms – not just programmer-speak.
 
 <p>Your users, in general, don't care how your site looks.  They don't
-care about the decoration or the animations or the graphics.  They
+care about the decoration, animations, or graphics. They
 want to use your system to push their new employees through the
 process with minimal difficulty.  They want to book travel to Alaska.
 They want to configure and buy unicorns at a discount. Your job as the
@@ -100,24 +100,25 @@ intelligence specialists, etc.).
  and available to the method.
 
 <pre><code class=java>/**
- * Takes a username and password, fills out the fields, and clicks "login"
- * @returns An instance of the AccountPage
+ * Takes a username and password, fills out the fields, and clicks "login".
+ * @return An instance of the AccountPage
  */
 public AccountPage loginAsUser(String username, String password) {
   WebElement loginField = driver.findElement(By.id("loginField"));
   loginField.clear();
   loginField.sendKeys(username);
 
-  // Fill out the password field. The locator we're using is "By.id", and we should have it
-  // defined elsewhere in the class
+  // Fill out the password field. The locator we're using is "By.id", and we should
+  // have it defined elsewhere in the class.
   WebElement passwordField = driver.findElement(By.id("password"));
   passwordField.clear();
   passwordField.sendKeys(password);
 
-  // Click the login button, which happens to have the id "submit"
+  // Click the login button, which happens to have the id "submit".
   driver.findElement(By.id("submit")).click();
 
-  // Create and return a new instance of the AccountPage (via the built-in Selenium PageFactory)
+  // Create and return a new instance of the AccountPage (via the built-in Selenium
+  // PageFactory).
   return PageFactory.newInstance(AccountPage.class);
 }</code></pre>
 
@@ -130,16 +131,17 @@ would only ever have to change this method - not your tests.
 <pre><code class=java>public void loginTest() {
     loginAsUser("cbrown", "cl0wn3");
 
-    // Now that we're logged in, do some other stuff--since we used a DSL to support our testers, it's
-    // as easy as choosing from available methods
+    // Now that we're logged in, do some other stuff--since we used a DSL to support
+    // our testers, it's as easy as choosing from available methods.
     do.something();
     do.somethingElse();
     Assert.assertTrue("Something should have been done!", something.wasDone());
 
-    // Note that we still haven't referred to a button or web control anywhere in this script...
+    // Note that we still haven't referred to a button or web control anywhere in this
+    // script...
 }</code></pre>
 
-<p>It bears repeating: One of your primary goals should be writing an
+<p>It bears repeating: one of your primary goals should be writing an
 API that allows your tests to address <strong>the problem at hand, and NOT
 the problem of the UI</strong>. The UI is a secondary concern for your
 users – they don't care about the UI, they just want to get their job
@@ -152,9 +154,9 @@ about it.
 <h2>Generating application state</h2>
 
 <p>Selenium should not be used to prepare a test case.  All repetitive
-actions, and preparation for a test case should be done through other
-methods.  An example, most Web UIs have authentication (e.g., a login
-form).  Eliminating logging in via web browser before every test will
+actions, and preparation for a test case, should be done through other
+methods.  For example, most web UIs have authentication (e.g. a login
+form). Eliminating logging in via web browser before every test will
 improve both the speed and stability of the test. A method should be
 created to gain access to the AUT (e.g. using an API to login and set a
 cookie).  Also, creating methods to pre-load data for
@@ -187,10 +189,10 @@ for more information regarding report outputs for several languages.
 
 <p>Write each test as its own unit.  Write the tests in a way that won't be reliant on other tests to complete:
 
-<p>Let's say there is a content management system with which you can create some custom content which then appears on you website as a module after publishing, and it may take some time to sync between the CMS and the application.
+<p>Let's say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.
 
 <p>A wrong way of testing your module is that the content is created and published in one test, and then checking the module in another test. This is not feasible as the content may not be available immediately for the other test after publishing.
-<p>Instead you can create a stub content which can be turned on and off within the affected test, and use that for validating the module. However for content creation you can still have a separate test.
+<p>Instead, you can create a stub content which can be turned on and off within the affected test, and use that for validating the module. However, for content creation, you can still have a separate test.
 
 
 <h2>Consider using a fluent API</h2>
@@ -234,8 +236,8 @@ gsp.withFluent().setSearchString().clickSearchButton();</code></pre>
   @FindBy(id = "gbqfb") private WebElement searchButton;
   public GoogleSearchPage(WebDriver driver) {
     gspfi = new GSPFluentInterface( this );
-    this.get(); // if load() fails, calls isLoaded() until page is finished loading
-    PageFactory.initElements(driver, this); // initialize WebElements on page
+    this.get(); // If load() fails, calls isLoaded() until page is finished loading
+    PageFactory.initElements(driver, this); // Initialize WebElements on page
   }
 
   public GSPFluentInterface withFluent() {
@@ -268,7 +270,7 @@ gsp.withFluent().setSearchString().clickSearchButton();</code></pre>
 <h2>Fresh browser per test</h2>
 
 <p>Start each test from a clean known state.
- Ideally spin up a new virtual machine for each test.
+ Ideally, spin up a new virtual machine for each test.
  If spinning up a new virtual machine is not practical,
  at least start a new WebDriver for each test.
  For Firefox, start a WebDriver with your known profile.
