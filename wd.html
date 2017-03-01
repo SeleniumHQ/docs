@@ -13,7 +13,7 @@
 <p>The biggest change in Selenium recently
  has been the inclusion of the WebDriver API.
  Driving a browser natively as a user would either locally
- or on a remote machine using the Selenium server
+ or on a remote machine using the Selenium server,
  it marks a leap forward in terms of browser automation.
 
 <p>Selenium WebDriver fits in the same role as RC did,
@@ -47,7 +47,7 @@
 
 <p>Through WebDriver, Selenium supports all major browsers on the market
  such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
- Where possible WebDriver drives the browser
+ Where possible, WebDriver drives the browser
  using the browser's built-in support for automation,
  although not all browsers have official support for remote control.
 
@@ -181,10 +181,10 @@ Only local connections are allowed.</pre>
  <a href=//sites.google.com/a/chromium.org/chromedriver/downloads>chromedriver</a>
  and put it in a folder that is on your system's path.
 
-<p>On Linux or macOS this means modifying
+<p>On Linux or macOS, this means modifying
  the <var>PATH</var> environmental variable.
  You can see what directories, separated by a colon,
- makes up your system's path by executing the following command:
+ make up your system's path by executing the following command:
 
 <pre><code>% echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</code></pre>
@@ -268,31 +268,31 @@ driver = Selenium::WebDriver.for :firefox</code></pre>
 
 <pre><code class=java>System.setProperty("webdriver.ie.driver", "/path/to/iedriver");</code></pre>
 
-Microsoft also offer a WedDriver binary for <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=44069">Internet Explorer 11 on Windows 7 &amp; 8.1</a>. It has not been updated since 2014 and is based of a draft version of the W3 specification. <a href="http://jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html">Jim Evans</a> has an excellent writeup on Microsoft's implementation.
+Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=44069">Internet Explorer 11 on Windows 7 &amp; 8.1</a>. It has not been updated since 2014 and is based of a draft version of the W3 specification. <a href="http://jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html">Jim Evans</a> has an excellent writeup on Microsoft's implementation.
 
 
 <h3>Opera (Presto-based)</h3>
 
 <p>Setting up support for Opera is fairly similar to the Chrome approach
  in that they are both supported by third parties.
- Consequently you need to set up a dependency to
+ Consequently, you need to set up a dependency to
  the <code>com.opera:operadriver</code> artifact (if using Maven)
  or <a href=//www.seleniumhq.org/download/>download a prebuilt standalone server JAR.</a>
  As long as the JAR is available on your classpath, you should be good to go.
 
-<p>If you use Python or Ruby as your language of choice
+<p>If you use Python or Ruby as your language of choice,
  you must set the <var>SELENIUM_SERVER_JAR</var> environmental variable
  to point to the location of the binary JAR.
 
-<p>On Linux and macOS you can do this
+<p>On Linux and macOS, you can do this
  for your current shell session by running:
 
 <pre><code>% export SELENIUM_SERVER_JAR=/path/to/operadriver.jar</code></pre>
 
 <p>It's possible to set this in your shell's profile (e.g. <em>~/.bashrc</em>)
  to have the variable set every time you launch a new shell session.
- Alternatively you can set the variable programmatically in your test runner.
- In Python you'd do something along the lines of
+ Alternatively, you can set the variable programmatically in your test runner.
+ In Python, you'd do something along the lines of
 
 <pre><code class=py>import os
 os.environ["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</code></pre>
@@ -329,7 +329,7 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <p>Those looking to automate Safari on iOS should look to the
  <a href="http://appium.io/">Appium project</a>. Whilst Safari was previously
- available for Windows, Apple have long since dropped support, making it
+ available for Windows, Apple has long since dropped support, making it
  a poor choice of test platform.
 
 
@@ -350,14 +350,14 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <h3>Ruby</h3>
 
-<p>Ruby is not installed by default on Windows. Download the latest <a href="http://rubyinstaller.org/downloads">version</a> and run the installer. You can leave all settings at default values, except at the <em>Installation Destination and Optional Tasks</em> screen check <em>Add Ruby executables to your PATH</em> checkbox. To drive any browser you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
+<p>Ruby is not installed by default on Windows. Download the latest <a href="http://rubyinstaller.org/downloads">version</a> and run the installer. You can leave all settings at default values, except at the <em>Installation Destination and Optional Tasks</em> screen check <em>Add Ruby executables to your PATH</em> checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
 
 <pre><code>gem install selenium-webdriver</code></pre>
 
 
 <h3>Internet Explorer</h3>
 
-<p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows you have to download the latest <a href="//www.seleniumhq.org/download/">Internet Explorer Driver</a> and put the file into a folder that is in PATH. To find out which directories are in PATH type <em>echo %PATH%</em> in command prompt.
+<p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows, you have to download the latest <a href="//www.seleniumhq.org/download/">Internet Explorer Driver</a> and put the file into a folder that is in PATH. To find out which directories are in PATH, type <em>echo %PATH%</em> in command prompt.
 
 <pre><code>echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</code></pre>
@@ -454,7 +454,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 <p><em>Explicit waits</em> are available to Selenium clients
  for imperative, procedural languages.
  They allow your code to halt program execution,
- or freezing the thread,
+ or freeze the thread,
  until the <em>condition</em> you pass it resolves.
  The condition is called with a certain frequency
  until the timeout of the wait is elapsed.
@@ -500,12 +500,12 @@ driver.navigate("file:///race_condition.html")
 el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"))
 assert el.text == "Hello from JavaScript!"</code></pre>
 
-<p>In that example we pass in an anonymous function
+<p>In that example, we pass in an anonymous function
  (but we could also define it explicitly as we did earlier so it may be reused).
  The first and only argument that is passed to our condition
  is always a reference to our driver object, <em>WebDriver</em>
  (called <em>d</em> in the example).
- In a multi-threaded environment you should be careful
+ In a multi-threaded environment, you should be careful
  to operate on the driver reference passed in to the condition
  rather than the reference to the driver in the outer scope.
 
@@ -533,7 +533,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 
 <h4>Expected conditions</h4>
 
-<p>Because it's quite a common occurence
+<p>Because it's quite a common occurrence
  to have to synchronise the DOM and your instructions,
  most clients also come with a set of predefined <em>expected conditions</em>.
  As might be obvious by the name,
@@ -595,7 +595,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 <p><strong>Warning:</strong>
  Do not mix implicit and explicit waits.
  Doing so can cause unpredictable wait times.
- For example setting an implicit wait of 10 seconds
+ For example, setting an implicit wait of 10 seconds
  and an explicit wait of 15 seconds
  could cause a timeout to occur after 20 seconds.
 
@@ -616,7 +616,7 @@ WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</co
 <p>FluentWait instance defines the maximum amount of time to wait for a condition,
  as well as the frequency with which to check the condition.
 
-<p>User may configure the wait to ignore specific types of exceptions whilst waiting,
+<p>Users may configure the wait to ignore specific types of exceptions whilst waiting,
  such as <code>NoSuchElementException</code>s when searching for an element on the page.
 
 <pre><code class=java>// Waiting 30 seconds for an element to be present on the page, checking
