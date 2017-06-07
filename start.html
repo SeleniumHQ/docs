@@ -100,7 +100,49 @@
 how to find elements on the page. WebDriver offers a number of built-in selector
 types, amongst them finding an element by its ID attribute:
 
-<pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));</code></pre>
+    <div class="tabs">
+        <ul class="tabs">
+            <li><a href="#java">java</a></li>
+            <li><a href="#ruby">ruby</a></li>
+            <li><a href="#python">python</a></li>
+            <li><a href="#c-sharp">c#</a></li>
+            <li><a href="#perl">perl</a></li>
+            <li><a href="#php">php</a></li>
+            <li><a href="#jscript">javascript</a></li>
+        </ul>
+
+        <div class="tab" id="ruby">
+            <pre><code class=java>element = driver.find_element(:id, 'cheese')</code></pre>
+        </div>
+
+        <div class="tab" id="python">
+            <pre><code class=java>element = driver.find_element_by_id("cheese")</code></pre>
+        </div>
+
+        <div class="tab" id="c-sharp">
+            <pre><code class=java>IWebElement element = driver.FindElement(By.Id("cheese"));
+            </code></pre>
+        </div>
+
+        <div class="tab" id="perl">
+            <pre><code class=perl>my $element = $driver->find_element("cheese", "id");
+            </code></pre>
+        </div>
+
+        <div class="tab" id="php">
+            <pre><code class=php>$search = $this->webDriver->findElement(WebDriverBy::id('cheese'));
+            </code></pre>
+        </div>
+
+        <div class="tab" id="jscript">
+            <pre><code class=javascript>var element = driver.findElement(webdriver.By.id('cheese'));
+            </code></pre>
+        </div>
+
+        <div class="tab" id="java">
+            <pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));</code></pre>
+        </div>
+    </div>
 
 <p>As seen in the example, locating elements in WebDriver is done on the
 <code>WebDriver</code> instance object.  The <code>findElement(By)</code> method returns
@@ -116,8 +158,52 @@ another fundamental object type, the <code>WebElement</code>.
  you can narrow the scope of your search
  by using the same call on that object instance:
 
-<pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));
+<div class="tabs">
+    <ul class="tabs">
+        <li><a href="#java1">java</a></li>
+        <li><a href="#ruby1">ruby</a></li>
+        <li><a href="#python1">python</a></li>
+        <li><a href="#c-sharp1">c#</a></li>
+        <li><a href="#perl1">perl</a></li>
+        <li><a href="#php1">php</a></li>
+        <li><a href="#jscript1">javascript</a></li>
+    </ul>
+
+    <div class="tab" id="ruby1">
+        <pre><code class=ruby>cheese = driver.find_element(:id, 'cheese')
+cheddar = cheese.find_element(:id, 'cheddar')</code></pre>
+    </div>
+
+    <div class="tab" id="python1">
+        <pre><code class=python>cheese = driver.find_element_by_id("cheese")
+cheddar = cheese.find_element_by_id("cheddar")</code></pre>
+    </div>
+
+    <div class="tab" id="c-sharp1">
+        <pre><code class=c-sharp>IWebElement cheeseElement = driver.FindElement(By.Id("cheese"));
+IWebElement cheddarElement = cheeseElement.FindElement(By.Id("cheddar"));</code></pre>
+    </div>
+
+    <div class="tab" id="perl1">
+        <pre><code class=perl>my $cheese = $driver->find_element("cheese", "id");
+my $cheddar = $cheese->find_element("cheddar", "id");</code></pre>
+    </div>
+
+    <div class="tab" id="php1">
+        <pre><code class=php>$cheese = $this->webDriver->findElement(WebDriverBy::id('cheese'));
+$cheddar = $cheese->findElement(WebDriverBy::id('cheddar'));</code></pre>
+    </div>
+
+    <div class="tab" id="jscript1">
+            <pre><code class=javascript>var cheese = driver.findElement(webdriver.By.id('cheese'));
+var cheddar = cheese.findElement(webdriver.By.id('cheddar'));</code></pre>
+    </div>
+
+    <div class="tab" id="java1">
+        <pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));
 WebElement cheddar = cheese.findElement(By.id("cheddar"));</code></pre>
+    </div>
+</div>
 
 <p>You can do this because both the <em>WebDriver</em> and <em>WebElement</em> types
 implement the <em><a href=//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext</a></em>
@@ -165,8 +251,46 @@ elements. If only one element is found, it will still return a
 collection (of one element). If no elements match the locator, an
 empty list will be returned.
 
-<pre><code class=java>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</code></pre>
+<div class="tabs">
+    <ul class="tabs">
+        <li><a href="#java2">java</a></li>
+        <li><a href="#ruby2">ruby</a></li>
+        <li><a href="#python2">python</a></li>
+        <li><a href="#c-sharp2">c#</a></li>
+        <li><a href="#perl2">perl</a></li>
+        <li><a href="#php2">php</a></li>
+        <li><a href="#jscript2">javascript</a></li>
+    </ul>
 
+    <div class="tab" id="ruby2">
+        <pre><code class=ruby>cheeses = driver.find_elements(:id, 'cheese')</code></pre>
+    </div>
+
+    <div class="tab" id="python2">
+        <pre><code class=python>cheeses = driver.find_elements_by_id("cheese")</code></pre>
+    </div>
+
+    <div class="tab" id="c-sharp2">
+        <pre><code class=c-sharp>IList&lt;IWebElement&gt; cheeses = driver.FindElements(By.id("#cheese"));</code></pre>
+    </div>
+
+    <div class="tab" id="perl2">
+        <pre><code class=perl>my $cheeses = $driver->find_elements("cheese", "id");</code></pre>
+    </div>
+
+    <div class="tab" id="php2">
+        <pre><code class=php>$cheese = $this->webDriver->findElements(WebDriverBy::id('cheese'));
+    </code></pre>
+    </div>
+
+    <div class="tab" id="jscript2">
+            <pre><code class=javascript>driver.findElements(By.id("cheese")).then(cheeses => console.log(cheeses.length));</code></pre>
+    </div>
+
+    <div class="tab" id="java2">
+        <pre><code class=java>List&lt;WebElement&gt; cheeses = driver.findElements(By.id("#cheese"));</code></pre>
+    </div>
+</div>
 
 <h3>Element selection strategies</h3>
 
