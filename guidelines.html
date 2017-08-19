@@ -30,7 +30,7 @@ will work for you in your particular environment.
  amongst many of the users of Selenium
  that have proven successful over the years.
 
-
+<a name="page_object_models"></a>
 <h2>Page object models</h2>
 
 <p>Page Object is a Design Pattern which has become popular in test
@@ -58,7 +58,7 @@ UI are located in one place.
   it should return True or False in a method.
 </ul>
 
-
+<a name="domain_specific_language"></a>
 <h2>Domain Specific Language</h2>
 
 <p>A domain specific language (DSL) is a system which provides the user with
@@ -150,7 +150,7 @@ the user wants to DO, and the things they want to KNOW. The tests
 should not concern themselves with HOW the UI requires you to go
 about it.
 
-
+<a name="generating_application_state"></a>
 <h2>Generating application state</h2>
 
 <p>Selenium should not be used to prepare a test case.  All repetitive
@@ -163,13 +163,13 @@ cookie).  Also, creating methods to pre-load data for
 testing should not be done using Selenium.  As mentioned previously,
 existing APIs should be leveraged to create data for the AUT.
 
-
+<a name="mock_external_services"></a>
 <h2>Mock external services</h2>
 
 <p>Eliminating the dependencies on external services will greatly improve
 the speed and stability of your tests.
 
-
+<a name="improved_reporting"></a>
 <h2>Improved reporting</h2>
 
 <p>Selenium is not designed to report on the status of test cases
@@ -181,10 +181,10 @@ reports are popular for importing results to a Continuous Integration
 for more information regarding report outputs for several languages.
 <!-- TODO: Add links.-->
 
-
+<a name="avoid_sharing_state"></a>
 <h2>Avoid sharing state</h2>
 
-
+<a name="test_independency"></a>
 <h2>Test independency</h2>
 
 <p>Write each test as its own unit.  Write the tests in a way that won't be reliant on other tests to complete:
@@ -194,7 +194,7 @@ for more information regarding report outputs for several languages.
 <p>A wrong way of testing your module is that the content is created and published in one test, and then checking the module in another test. This is not feasible as the content may not be available immediately for the other test after publishing.
 <p>Instead, you can create a stub content which can be turned on and off within the affected test, and use that for validating the module. However, for content creation, you can still have a separate test.
 
-
+<a name="consider_using_a_fluent_api"></a>
 <h2>Consider using a fluent API</h2>
 
 <p>Martin Fowler coined the term "Fluent API".  Selenium already
@@ -266,7 +266,7 @@ gsp.withFluent().setSearchString().clickSearchButton();</code></pre>
   }
 }</code></pre>
 
-
+<a name="fresh_browser_per_test"></a>
 <h2>Fresh browser per test</h2>
 
 <p>Start each test from a clean known state.
