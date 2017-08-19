@@ -18,7 +18,7 @@ A remote WebDriver is composed of two pieces: a client and a
 server. The client is your WebDriver test and the server is simply a
 Java servlet, which can be hosted in any modern JEE app server.
 
-
+<a name="the_remotewebdriver_server"></a>
 <h2>The Remote WebDriver server</h2>
 
 The server will always run on the machine with the browser you want to
@@ -114,8 +114,8 @@ public class AppServer {
   }
 }</code></pre>
 
-
-<h2 class=running_remotewebdriver_client>Running Remote WebDriver client</h2>
+<a name="running_remotewebdriver_client"></a>
+<h2>Running Remote WebDriver client</h2>
 
 <p>First, we need to connect to the RemoteWebDriver.
  We do this by pointing the URL to the address of the server running our tests.
