@@ -8,7 +8,7 @@
 <link rel=next href=guidelines.html title="Guidelines and Recommendations">
 <script src=docs.js></script>
 
-<h1>Remote WebDriver</h1>
+<h1 id="remote_webdriver">Remote WebDriver</h1>
 
 You can use WebDriver remotely the same way you would use it
 locally. The primary difference is that a remote WebDriver needs to be
@@ -19,7 +19,7 @@ server. The client is your WebDriver test and the server is simply a
 Java servlet, which can be hosted in any modern JEE app server.
 
 
-<h2>The Remote WebDriver server</h2>
+<h2 id="the_remotewebdriver_server">The Remote WebDriver server</h2>
 
 The server will always run on the machine with the browser you want to
 test. The server can be used either from the command line or through code
@@ -115,7 +115,7 @@ public class AppServer {
 }</code></pre>
 
 
-<h2 class=running_remotewebdriver_client>Running Remote WebDriver client</h2>
+<h2 id="running_remotewebdriver_client">Running Remote WebDriver client</h2>
 
 <p>First, we need to connect to the RemoteWebDriver.
  We do this by pointing the URL to the address of the server running our tests.
