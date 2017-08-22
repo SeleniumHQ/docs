@@ -8,10 +8,10 @@
 <link rel=next href=attr.html title="Copyright and Attributions">
 <script src=docs.js></script>
 
-<h1>The Java support package</h1>
+<h1 id="the_java_support_package">The Java support package</h1>
 
 
-<h2>Working with colours</h2>
+<h2 id="working_with_colours">Working with colours</h2>
 
 <p>You will occasionally want to validate the colour of something as part of your tests;
  the problem is that colour definitions on the web are not constant.
@@ -72,7 +72,7 @@ assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");</code><
 <p>Colours are no longer a problem.
 
 
-<h2 class=working_with_select_elements>Working with <code>select</code> elements</h2>
+<h2 id="working_with_select_elements">Working with <code>select</code> elements</h2>
 
 <p>Select elements can require quite a bit of boiler plate code to automate.
  To reduce this and make your tests cleaner, there is a
@@ -142,7 +142,7 @@ selectObject.deselectAll();</code></pre>
 
 <pre><code class=java>Boolean doesThisAllowMultipleSelections = selectObject.isMultiple();</code></pre>
 
-<h2 class=mouse_and_keyboard_actions_in_detail>Mouse and keyboard actions in detail</h2>
+<h2 id="mouse_and_keyboard_actions_in_detail">Mouse and keyboard actions in detail</h2>
 <p>Suppose you have an arbitrary web element <strong>e</strong>:</p>
 
 <pre><code class=java>WebElement e = driver.findElement(By.id("testElement"));</code></pre>
@@ -171,4 +171,4 @@ actions.perform();</code></pre>
 
 <pre><code class=java>e.clear();</code></pre>
 
-<h2 class=working_with_webelements>Working with web elements</h2>
+<h2 id="working_with_webelements">Working with web elements</h2>
