@@ -150,7 +150,7 @@
  You start the hub by passing the <code>-role hub</code> flag
  to the standalone server:
 
-<pre><code>java -jar selenium-server-standalone.jar -role hub</code></pre>
+<pre><code>$ java -jar selenium-server-standalone.jar -role hub</code></pre>
 
 <p>The hub will listen to port 4444 by default.
  You can view the status of the hub by opening a browser window and navigating to
@@ -168,7 +168,7 @@
  to configure the hub when you start it.
  You can do it like so:
 
-<pre><code>java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug</code></pre>
+<pre><code>$ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug</code></pre>
 
 <p>Below you will see an example of a <em>hubConfig.json</em> file.
  We will go into more detail on how to provide node configuration files in step 2.
@@ -195,7 +195,7 @@
  or both at the same time,
  you use the same <em>selenium-server-standalone.jar</em> file to start the nodes:
 
-<pre><code>java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444</code></pre>
+<pre><code>$ java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444</code></pre>
 
 <p>The port defaults to 5555 if not specified whenever
  the <code>-role</code> option is provided and is not hub.
@@ -224,7 +224,7 @@
 <p>You can also start grid nodes that are configured
  with a JSON configuration file
 
-<pre><code>java  -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json</code></pre>
+<pre><code>$ java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json</code></pre>
 
 <p>And here is an example of a <em>nodeConfig.json</em> file:
 
