@@ -16,7 +16,16 @@ header {
  background-color: rgb(69,134,84);
  margin-bottom: 2em;
 }
-header h1 { padding: 50px 0; color: white; font-weight: normal; }
+header img {
+ float: left;
+ width: 100px;
+ height: 100px;
+}
+header h1 {
+ padding: 50px 0;
+ color: white;
+ font-weight: normal;
+}
 header a#home_link {
   text-transform: uppercase;
   border-top-left-radius: 2px;
