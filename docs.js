@@ -88,7 +88,7 @@ function insertHeader() {
 	var header = document.createElement("header");
   header.innerHTML =
     "<div class=header>" +
-    " <a href=\"/docs/index.html\"> <img src=\"./images/big-logo.png\" alt=header-logo /> </a>" +
+    " <a href=\"/docs/index.html\"> <img src=\"big-logo.png\" alt=header-logo /> </a>" +
     "</div>" +
     "<h1>Selenium Documentation</h1>"
 
