@@ -85,7 +85,7 @@ function paginate() {
  */
 function insertHeader() {
 	var header = document.createElement("header");
-	header.innerHTML = "<h1>Selenium Documentation</h1>";
+	header.innerHTML = "<img src='selogo.png'/><h1>Selenium Documentation</h1>";
 
   if (getCurrentPage() != 'index')
     header.innerHTML += "<a id='home_link' href='index.html'>back to index</a>";
