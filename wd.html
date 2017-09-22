@@ -332,13 +332,20 @@ driver = Selenium::WebDriver.for :opera</code></pre>
  a poor choice of test platform.
 
 
-<h3>Specialized browsers</h3>
+<h3>Mock browsers</h3>
 
 
 <h4>HtmlUnit</h4>
 
 
 <h4>PhantomJS</h4>
+
+<p>PhantomJS is a headless browser based on Webkit, albeit a version much older than that used by Google Chrome or
+ Safari.  Unlike HtmlUnit driver, it also supports Javascript. Whilst historically a popular choice, it would now be
+ wise to avoid PhantomJS. The project has been unmaintained
+ <a href="https://groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE">since the 5th of August</a>, so whilst the web
+ will continue to change, PhantomJS will not be updated.  This was after Google announced the ability to run Chrome
+ headlessly, something also now offered by Mozilla&apos;s Firefox.</p>
 
 <h2>Browser launching and manipulation</h2>
 
