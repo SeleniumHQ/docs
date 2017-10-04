@@ -32,7 +32,6 @@
 <p>More details about drivers can be found in
  <a href=drivers.html>Driver Idiosyncracies</a>.
 
-
 <h2>Consumer browsers</h2>
 
 <p>The Selenium framework officially supports the following browsers:
@@ -41,12 +40,11 @@
  <tr><th>Browser</th> <th>Maintainer</th> <th>Versions Supported</th></tr>
 
  <tr><td>Chromium</td> <td><a href="//sites.google.com/a/chromium.org/chromedriver/">Chromium</a></td> <td>All versions</td></tr>
- <tr><td>Firefox</td> <td>Selenium</td> <td>4 and newer</td></tr>
+ <tr><td>Firefox</td> <td><a href="https://github.com/mozilla/geckodriver">Mozilla</a></td> <td>54 and newer</td></tr>
  <tr><td>Internet Explorer</td> <td>Selenium</td> <td>6 and newer</td></tr>
  <tr><td>Opera</td> <td>Opera <a href="//github.com/operasoftware/operachromiumdriver">Chromium</a> / <a href="//github.com/operasoftware/operaprestodriver">Presto</a></td> <td>10.5 and newer</td></tr>
- <tr><td>Safari</td> <td>Selenium</td> <td>5.1 and newer</td></tr>
+ <tr><td>Safari</td> <td><a href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/">Apple</a></td> <td>10 and newer</td></tr>
 </table>
-
 
 <h2>Specialised browsers</h2>
 
@@ -71,7 +69,6 @@
  </tr>
 </table>
 
-
 <h2>Other third party drivers and plugins</h2>
 
 <p>Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
@@ -89,7 +86,6 @@
   <td><a href="//github.com/SeleniumHQ/selenium/wiki/ChromeDriver">wiki</a></td>
  </tr>
 </table>
-
 
 <h2>Locating elements</h2>
 
@@ -243,11 +239,10 @@ frequently multiple elements of the same tag present on the page.
 This is mostly useful when calling the <em>findElements(By)</em> method which
 returns a collection of elements.
 
-<p>The recommended best practice is to keep your locators as compact and
+<p>The recommendation is to keep your locators as compact and
 readable as possible.  Asking WebDriver to traverse the DOM structure
 is an expensive operation, and the more you can narrow the scope of
 your search, the better.
-
 
 <h2>Performing actions on the AUT</h2>
 

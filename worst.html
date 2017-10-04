@@ -4,7 +4,7 @@
 <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 <link rel=stylesheet href=se.css>
-<link rel=prev href=best.html title="Best practices">
+<link rel=prev href=guidelines.html title="Guidelines and Recommendations">
 <link rel=next href=grid.html title=Grid>
 <script src=docs.js></script>
 
@@ -15,7 +15,7 @@
 
 <p>CAPTCHA, short for <em>Completely Automated Public Turing test
  to tell Computers and Humans Apart</em>,
- are explicitly designed to prevent automation, so don’t try!
+ is explicitly designed to prevent automation, so don’t try!
  There are two primary strategies to get around CAPTCHA checks:
 
 <ul>
@@ -29,7 +29,7 @@
 <p>Whilst it is possible to start a download
  by clicking a link with a browser under Selenium's control,
  the API does not expose download progress,
- making it less than idea for testing downloaded files.
+ making it less than ideal for testing downloaded files.
  This is because downloading files is not considered an important aspect
  of emulating user interaction with the web platform.
  Instead, find the link using Selenium
@@ -64,10 +64,10 @@
  A simple way to “fail fast” when you encounter one of these error pages
  is to check the page title or content of a reliable point
  (e.g. the &lt;h1&gt; tag) after every page load.
- If you are using the page object model
+ If you are using the page object model,
  you can include this check in your class constructor
  or similar point where the page load is expected.
- Occasionally the HTTP code may even be represented
+ Occasionally, the HTTP code may even be represented
  in the browser's error page
  and you could use WebDriver to read this
  and improve your debugging output.
@@ -90,9 +90,9 @@
  allows you to have a solution that works for every browser.
 
 
-<h2>GMail, email, and Facebook logins</h2>
+<h2>Gmail, email, and Facebook logins</h2>
 
-<p>For multiple reasons logging into sites like Gmail and Facebook
+<p>For multiple reasons, logging into sites like Gmail and Facebook
  using WebDriver is not recommended.
  Aside from being against the usage terms for these sites
  (where you risk having the account shut down),
@@ -101,8 +101,8 @@
 <p>The ideal practice is to use the APIs that email providers offer,
  or in the case of Facebook the developer tools service
  which exposes an API for creating test accounts, friends and so forth.
- Although using an API might seem like a bit extra hard work
- you will be paid back in speed, reliability and stability.
+ Although using an API might seem like a bit of extra hard work,
+ you will be paid back in speed, reliability, and stability.
  The API is also unlikely to change
  whereas webpages and HTML locators change often
  and require you to update your test framework.
@@ -139,7 +139,7 @@
 <p>It may seem ideal to performance test
  in the context of the user but a suite of WebDriver tests
  are subjected to many points of external and internal fragility
- which is beyond your control;
+ which are beyond your control;
  for example browser startup speed,
  speed of HTTP servers,
  response of third party servers that host JavaScript or CSS,
@@ -149,18 +149,18 @@
  It is difficult to separate the difference
  between the performance of your website
  and the performance of external resources,
- and it is also hard to tell what the performance penality is
+ and it is also hard to tell what the performance penalty is
  for using WebDriver in the browser,
  especially if you are injecting scripts.
 
-<p>The other potential attraction is ‘saving time'’ —
- performing functional and performance tests at the same time.
- However functional and performance tests have opposing objectives.
- To test functionality a test may need to be patient
+<p>The other potential attraction is "saving time" —
+ carrying out functional and performance tests at the same time.
+ However, functional and performance tests have opposing objectives.
+ To test functionality, a tester may need to be patient
  and wait for loading,
  but this will cloud the performance testing results and vice versa.
 
-<p>To improve the performance of your website
+<p>To improve the performance of your website,
  you will need to be able to analyse overall performance
  independent of environment differences,
  identify poor code practices,
@@ -180,7 +180,7 @@
 <p>Using WebDriver to spider through links
  is not a recommended practice not because it cannot be done,
  but because it’s definitely not the most ideal tool.
- WebDriver needs time to startup,
+ WebDriver needs time to start up,
  and can take several seconds up to a minute
  depending on how your test is written,
  just to get to the page and traverse through the DOM.
