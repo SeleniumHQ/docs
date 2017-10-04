@@ -233,9 +233,13 @@ driver = Selenium::WebDriver.for :chrome</code></pre>
 driver = Selenium::WebDriver.for :firefox</code></pre>
 
 <p>If you prefer not to set geckodriver's location using PATH,
- set the geckodriver binary location using :
+ set the geckodriver binary location progmatically:
 
 <pre><code class=java>System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");</code></pre>
+
+<p>It is also possible to set the property at run time:
+ 
+<pre><code class=shell>mvn test -Dwebdriver.gecko.driver=/path/to/geckodriver</code></pre>
 
 <p>It is currently possible to revert to the older, more feature complete
  Firefox driver, by installing Firefox
