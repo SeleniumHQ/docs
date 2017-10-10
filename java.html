@@ -10,7 +10,26 @@
 
 <h1>The Java support package</h1>
 
-<h2>Browser navigation</h2>
+<h2>Browser commands</h2>
+
+<p>There are directives which can be applied on the browsers being used for automated testing. These instructions are as follows:</p>
+
+<pre><code class=java>// Get the title of the current page.
+driver.getTitle();
+		
+// Get the URL of the current page.
+driver.getCurrentUrl();
+		
+// Get the source code of the current page.
+driver.getPageSource();
+		
+// Close the current window.
+driver.close();
+		
+// Close all windows that were opened through this WebDriver.
+driver.quit();</code></pre>
+
+<h2>Navigation commands</h2>
 
 <p>There are commands for various webpage loading actions:
 
