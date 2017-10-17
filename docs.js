@@ -15,6 +15,7 @@ window.addEventListener("load", insertFooter);
 window.addEventListener("load", populateHeaderYs);
 window.addEventListener("load", populateTocEls);
 window.addEventListener("load", highlightCode);
+window.addEventListener("load",scrollToElementOnLoad);
 window.addEventListener("scroll", trackHeaders);
 window.addEventListener("scroll", moveToc);
 
@@ -219,3 +220,17 @@ function moveToc(ev) {
 		toc.style.top = firstElSt.y + offset + "px";
 	}
 }
+
+/**
+*Scrolls the page to the hashed element on Page load
+**/
+
+function scrollToElementOnLoad(){ 
+	if(location.hash){
+		var ele=document.getElementById(location.hash.replace('#',''));
+		ele.scrollIntoView();
+	}
+
+}
+
+
