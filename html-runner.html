@@ -37,7 +37,6 @@ java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
 Test Suite example:
 </p>
 
-&lt;li id=cheddar&gt;
 <pre><code class=html>
 [mmasek@aws-sas-test ~]$ cat testsuite.html
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -50,13 +49,14 @@ Test Suite example:
 &lt;body&gt;
 &lt;table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"&qt;&lt;tbody&gt;
 &lt;tr&qt;&lt;td&qt;&lt;b&qt;Test Suite&lt;/b&qt;&lt;/td&qt;&lt;/tr&gt;
-&lt;tr&gt&lt;td&gt&lt;a href="YOUR-TEST-SCENARIO.html"&gtYOUR-TEST-SCENARIO&lt;/a&gt&lt;/td&gt&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href="YOUR-TEST-SCENARIO.html"&gt;YOUR-TEST-SCENARIO&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&qt;&lt;/table&gt;
-&lt;/body>&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 
 </code></pre>
 
+<h3>How to run selenium-html-runner headless</h3>
 <p>Now, the most important part.
 Example of how to run it headless. Your experience might vary depending on software combinations - geckodriver/FF/html-runner releases. You can also grep for scenario result eventually (PASS/FAILED):
 </p>
