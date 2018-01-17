@@ -42,7 +42,6 @@
   <a href="https://en.wikipedia.org/wiki/Same-origin_policy">single-host origin policy.</a>
 </ul>
 
-
 <h2>Driver requirements</h2>
 
 <p>Through WebDriver, Selenium supports all major browsers on the market
@@ -232,6 +231,15 @@ driver = Selenium::WebDriver.for :chrome</code></pre>
 <pre><code class=rb>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :firefox</code></pre>
 
+<p>If you prefer not to set geckodriver's location using PATH,
+ set the geckodriver binary location programmatically:
+
+<pre><code class=java>System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");</code></pre>
+
+<p>It is also possible to set the property at run time:
+ 
+<pre><code class=shell>mvn test -Dwebdriver.gecko.driver=/path/to/geckodriver</code></pre>
+
 <p>It is currently possible to revert to the older, more feature complete
  Firefox driver, by installing Firefox
  <a href="https://ftp.mozilla.org/pub/firefox/releases/47.0.1/">47.0.1</a>
@@ -333,7 +341,7 @@ driver = Selenium::WebDriver.for :opera</code></pre>
  a poor choice of test platform.
 
 
-<h3>Specialized browsers</h3>
+<h3>Mock browsers</h3>
 
 
 <h4>HtmlUnit</h4>
@@ -341,6 +349,12 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <h4>PhantomJS</h4>
 
+<p>PhantomJS is a headless browser based on Webkit, albeit a version much older than that used by Google Chrome or
+ Safari.  Unlike HtmlUnit driver, it also supports Javascript. Whilst historically a popular choice, it would now be
+ wise to avoid PhantomJS. The project has been unmaintained
+ <a href="https://groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE">since the 5th of August</a>, so whilst the web
+ will continue to change, PhantomJS will not be updated.  This was after Google announced the ability to run Chrome
+ headlessly, something also now offered by Mozilla&apos;s Firefox.</p>
 
 <h2>Browser launching and manipulation</h2>
 
@@ -357,7 +371,7 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <h3>Internet Explorer</h3>
 
-<p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows, you have to download the latest <a href="//www.seleniumhq.org/download/">Internet Explorer Driver</a> and put the file into a folder that is in PATH. To find out which directories are in PATH, type <em>echo %PATH%</em> in command prompt.
+<p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows, you have to download the latest <a href="http://www.seleniumhq.org/download/">Internet Explorer Driver</a> and put the file into a folder that is in PATH. To find out which directories are in PATH, type <em>echo %PATH%</em> in command prompt.
 
 <pre><code>$ echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</code></pre>
@@ -373,7 +387,6 @@ WebDriver driver = new InternetExplorerDriver();
 
 <pre><code class=rb>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :internet_explorer</code></pre>
-
 
 <h2>Waits</h2>
 
@@ -646,15 +659,14 @@ fluentWait.until(new Predicate&lt;By&gt;() {
 });
 browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");</code></pre>
 
+<h2>Support classes</h2>
 
-<h2 class=support_classes>Support classes</h2>
+<h2>HTTP proxies</h2>
 
-<h2 class=http_proxies>HTTP proxies</h2>
+<h2>Page loading strategy</h2>
 
-<h2 class="page_load_strategy">Page loading strategy</h2>
+<h2>Web elements</h2>
 
-<h2 class="webelement">Web elements</h2>
+<h2>Keyboard</h2>
 
-<h2 class="keyboard">Keyboard</h2>
-
-<h2 class="mouse">Mouse</h2>
+<h2>Mouse</h2>
