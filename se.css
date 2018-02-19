@@ -8,8 +8,8 @@ html {
 }
 body { margin: 0; color: rgba(68,68,68,.8); overflow-x: hidden; }
 body.front header h1 { padding: 100px 0 }
-body.front h1 { padding-top: 300px }
-body.front nav#toc { top: 300px }
+body.front h1 { padding-top: 350px }
+body.front nav#toc { top: 350px }
 
 header {
  min-height: 100px;
@@ -24,7 +24,7 @@ header a#home_link {
   color: #fff;
   padding-left: 15px;
   padding-right: 15px;
-  float:left;
+  float: left;
   width: auto;
   height: 30px;
   background-color: rgb(79,144,94);
@@ -109,7 +109,7 @@ footer p { margin: 0 }
 footer .links { background-color: rgb(120,161,108) }
 footer .meta { font-size: 85%; color: rgb(120,161,108); }
 footer .meta * { margin: 0 }
-footer .meta > * { margin-left: 70% }
+footer .meta > * { text-align: center; }
 footer .meta a { color: rgb(181,201,182) }
 footer .meta a:hover { border-bottom-color: rgb(181,201,182) }
 footer .meta ul { padding: 0; list-style: none }
@@ -153,6 +153,10 @@ dl dd { margin-bottom: 1em }
 
 @media only screen and (max-width: 820px) {
  body { padding-right: 50px }
+ .container-fluid { padding-top: 50px }
+ h1{
+     font-size: xx-large;
+ }
  nav#toc {
   position: relative;
   left: 0;

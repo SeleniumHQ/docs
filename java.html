@@ -1,192 +1,204 @@
 <!doctype html>
 <meta charset=utf-8>
-<title>The Java support package</title>
-<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-<link rel=stylesheet href=se.css>
-<link rel=prev href=drivers.html title="Driver Idiosyncracies">
-<link rel=next href=attr.html title="Copyright and Attributions">
-<script src=docs.js></script>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>The Java support package</title>
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel=stylesheet href=se.css>
+    <link rel=prev href=drivers.html title="Driver Idiosyncracies">
+    <link rel=next href=attr.html title="Copyright and Attributions">
+    <script src=docs.js></script>
+</head>
 
-<h1>The Java support package</h1>
+<body class="front">
+<div class="container-fluid">
 
-<h2>Browser navigation</h2>
+    <h1>The Java support package</h1>
 
-<p>There are commands for various webpage loading actions:
+    <h2>Browser navigation</h2>
 
-<pre><code class=java>// Navigate to a URL (both of the statements below are
-// functionally equivalent).
-driver.get("https://www.google.com");
-driver.navigate().to("https://www.google.com");
+    <p>There are commands for various webpage loading actions:
 
-// Go forward one page in the browser (if you're not on the
-// last page that was viewed).
-driver.navigate().forward();
+    <pre><code class=java>// Navigate to a URL (both of the statements below are
+    // functionally equivalent).
+    driver.get("https://www.google.com");
+    driver.navigate().to("https://www.google.com");
 
-// Go back one page in the browser (if you're not on the
-// first page that was viewed).
-driver.navigate().back();
+    // Go forward one page in the browser (if you're not on the
+    // last page that was viewed).
+    driver.navigate().forward();
 
-// Refresh the current page.
-driver.navigate().refresh();</code></pre>
+    // Go back one page in the browser (if you're not on the
+    // first page that was viewed).
+    driver.navigate().back();
 
-<h2>Working with colours</h2>
+    // Refresh the current page.
+    driver.navigate().refresh();</code></pre>
 
-<p>You will occasionally want to validate the colour of something as part of your tests;
- the problem is that colour definitions on the web are not constant.
- Wouldn't it be nice if there was an easy way to compare
- a HEX representation of a colour with an RGB representation of a colour,
- or an RGBA representation of a colour with a HSLA representation of a colour?
+    <h2>Working with colours</h2>
 
-<p>Worry not. There's a solution: the <em>Color</em> class!
+    <p>You will occasionally want to validate the colour of something as part of your tests;
+     the problem is that colour definitions on the web are not constant.
+     Wouldn't it be nice if there was an easy way to compare
+     a HEX representation of a colour with an RGB representation of a colour,
+     or an RGBA representation of a colour with a HSLA representation of a colour?
 
-<p>First of all, you will need to import the class:
+    <p>Worry not. There's a solution: the <em>Color</em> class!
 
-<pre><code class=java>import org.openqa.selenium.support.Color;</code></pre>
+    <p>First of all, you will need to import the class:
 
-<p>You can now start creating colour objects.
- Every colour object will need to be created from a string representation of your colour.
- Supported colour representations are:
+    <pre><code class=java>import org.openqa.selenium.support.Color;</code></pre>
 
-<pre><code class=java>private final Color HEX_COLOUR = Color.fromString("#2F7ED8");
-private final Color RGB_COLOUR = Color.fromString("rgb(255, 255, 255)");
-private final Color RGB_COLOUR = Color.fromString("rgb(40%, 20%, 40%)");
-private final Color RGBA_COLOUR = Color.fromString("rgba(255, 255, 255, 0.5)");
-private final Color RGBA_COLOUR = Color.fromString("rgba(40%, 20%, 40%, 0.5)");
-private final Color HSL_COLOUR = Color.fromString("hsl(100, 0%, 50%)");
-private final Color HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)");</code></pre>
+    <p>You can now start creating colour objects.
+     Every colour object will need to be created from a string representation of your colour.
+     Supported colour representations are:
 
-<p>The Color class also supports all of the base colour definitions
- specified in <a href=//www.w3.org/TR/css3-color/#html4>http://www.w3.org/TR/css3-color/#html4</a>.
+    <pre><code class=java>private final Color HEX_COLOUR = Color.fromString("#2F7ED8");
+    private final Color RGB_COLOUR = Color.fromString("rgb(255, 255, 255)");
+    private final Color RGB_COLOUR = Color.fromString("rgb(40%, 20%, 40%)");
+    private final Color RGBA_COLOUR = Color.fromString("rgba(255, 255, 255, 0.5)");
+    private final Color RGBA_COLOUR = Color.fromString("rgba(40%, 20%, 40%, 0.5)");
+    private final Color HSL_COLOUR = Color.fromString("hsl(100, 0%, 50%)");
+    private final Color HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)");</code></pre>
 
-<pre><code class=java>private final Color BLACK = Color.fromString("black");
-private final Color CHOCOLATE = Color.fromString("chocolate");
-private final Color HOTPINK = Color.fromString("hotpink");</code></pre>
+    <p>The Color class also supports all of the base colour definitions
+     specified in <a href=//www.w3.org/TR/css3-color/#html4>http://www.w3.org/TR/css3-color/#html4</a>.
 
-<p>Sometimes browsers will return a colour value of "transparent"
- if no colour has been set on an element.
- The Color class also supports this:
+    <pre><code class=java>private final Color BLACK = Color.fromString("black");
+    private final Color CHOCOLATE = Color.fromString("chocolate");
+    private final Color HOTPINK = Color.fromString("hotpink");</code></pre>
 
-<pre><code class=java>private final Color TRANSPARENT = Color.fromString("transparent");</code></pre>
+    <p>Sometimes browsers will return a colour value of "transparent"
+     if no colour has been set on an element.
+     The Color class also supports this:
 
-<p>You can now safely query an element
- to get its colour/background colour knowing that
- any response will be correctly parsed
- and converted into a valid Color object:
+    <pre><code class=java>private final Color TRANSPARENT = Color.fromString("transparent");</code></pre>
 
-<pre><code class=java>Color loginButtonColour = driver.findElement(By.id("login")).getCssValue("color");
-Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color");</code></pre>
+    <p>You can now safely query an element
+     to get its colour/background colour knowing that
+     any response will be correctly parsed
+     and converted into a valid Color object:
 
-<p>You can then directly compare colour objects:
+    <pre><code class=java>Color loginButtonColour = driver.findElement(By.id("login")).getCssValue("color");
+    Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color");</code></pre>
 
-<pre><code class=java>assert loginButtonBackgroundColour.equals(HOTPINK);</code></pre>
+    <p>You can then directly compare colour objects:
 
-<p>Or you can convert the colour into one of the following formats
- and perform a static validation:
+    <pre><code class=java>assert loginButtonBackgroundColour.equals(HOTPINK);</code></pre>
 
-<pre><code class=java>assert loginButtonBackgroundColour.asHex().equals("#ff69b4");
-assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
-assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");</code></pre>
+    <p>Or you can convert the colour into one of the following formats
+     and perform a static validation:
 
-<p>Colours are no longer a problem.</p>
+    <pre><code class=java>assert loginButtonBackgroundColour.asHex().equals("#ff69b4");
+    assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
+    assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");</code></pre>
 
-<h2>Working with <code>select</code> elements</h2>
+    <p>Colours are no longer a problem.</p>
 
-<p>Select elements can require quite a bit of boiler plate code to automate.
- To reduce this and make your tests cleaner, there is a
- <em>Select</em> class in the Selenium support package.
- To use it, you will need the following import statement:
+    <h2>Working with <code>select</code> elements</h2>
 
-<pre><code class=java>import org.openqa.selenium.support.ui.Select;</code></pre>
+    <p>Select elements can require quite a bit of boiler plate code to automate.
+     To reduce this and make your tests cleaner, there is a
+     <em>Select</em> class in the Selenium support package.
+     To use it, you will need the following import statement:
 
-<p>You are then able to create a Select object using a WebElement that
-references a &lt;select&gt; element.
+    <pre><code class=java>import org.openqa.selenium.support.ui.Select;</code></pre>
 
-<pre><code class=java>WebElement selectElement = driver.findElement(By.id("selectElementID"));
-Select selectObject = new Select(selectElement);</code></pre>
+    <p>You are then able to create a Select object using a WebElement that
+    references a &lt;select&gt; element.
 
-<p>The Select object will now give you a series of commands
- that allow you to interact with a &lt;select&gt; element.
- First of all, there are different ways of selecting an option
- from the &lt;select&gt; element.
+    <pre><code class=java>WebElement selectElement = driver.findElement(By.id("selectElementID"));
+    Select selectObject = new Select(selectElement);</code></pre>
 
-<pre><code class=html>&lt;select&gt;
- &lt;option value=value1&gt;Bread&lt;/option&gt;
- &lt;option value=value2 selected&gt;Milk&lt;/option&gt;
- &lt;option value=value3&gt;Cheese&lt;/option&gt;
-&lt;/select&gt;</code></pre>
+    <p>The Select object will now give you a series of commands
+     that allow you to interact with a &lt;select&gt; element.
+     First of all, there are different ways of selecting an option
+     from the &lt;select&gt; element.
 
-<p>There are three ways to select the first option from the above element:
+    <pre><code class=html>&lt;select&gt;
+     &lt;option value=value1&gt;Bread&lt;/option&gt;
+     &lt;option value=value2 selected&gt;Milk&lt;/option&gt;
+     &lt;option value=value3&gt;Cheese&lt;/option&gt;
+    &lt;/select&gt;</code></pre>
 
-<pre><code class=java>// Select an &lt;option&gt; based upon the &lt;select&gt; element's internal index
-selectObject.selectByIndex(1);
+    <p>There are three ways to select the first option from the above element:
 
-// Select an &lt;option&gt; based upon its value attribute
-selectObject.selectByValue("value1");
+    <pre><code class=java>// Select an &lt;option&gt; based upon the &lt;select&gt; element's internal index
+    selectObject.selectByIndex(1);
 
-// Select an &lt;option&gt; based upon its text
-selectObject.selectByVisibleText("Bread");</code></pre>
+    // Select an &lt;option&gt; based upon its value attribute
+    selectObject.selectByValue("value1");
 
-<p>You can then check which options are selected by using:
+    // Select an &lt;option&gt; based upon its text
+    selectObject.selectByVisibleText("Bread");</code></pre>
 
-<pre><code class=java>// Return a List&lt;WebElement&gt; of options that have been selected
-List&lt;WebElement&gt; allSelectedOptions = selectObject.getAllSelectedOptions();
+    <p>You can then check which options are selected by using:
 
-// Return a WebElement referencing the first selection option found by walking down the DOM
-WebElement firstSelectedOption = selectObject.getFirstSelectedOption();</code></pre>
+    <pre><code class=java>// Return a List&lt;WebElement&gt; of options that have been selected
+    List&lt;WebElement&gt; allSelectedOptions = selectObject.getAllSelectedOptions();
 
-<p>Or you may just be interested in what &lt;option&gt; elements
- the &lt;select&gt; element contains:
+    // Return a WebElement referencing the first selection option found by walking down the DOM
+    WebElement firstSelectedOption = selectObject.getFirstSelectedOption();</code></pre>
 
-<pre><code class=java>// Return a List&lt;WebElement&gt; of options that the &lt;select&gt; element contains
-List&lt;WebElement&gt; allAvailableOptions = selectObject.getOptions();</code></pre>
+    <p>Or you may just be interested in what &lt;option&gt; elements
+     the &lt;select&gt; element contains:
 
-<p>If you want to deselect any elements, you now have four options:
+    <pre><code class=java>// Return a List&lt;WebElement&gt; of options that the &lt;select&gt; element contains
+    List&lt;WebElement&gt; allAvailableOptions = selectObject.getOptions();</code></pre>
 
-<pre><code class=java>// Deselect an &lt;option&gt; based upon the &lt;select&gt; element's internal index
-selectObject.deselectByIndex(1);
+    <p>If you want to deselect any elements, you now have four options:
 
-// Deselect an &lt;option&gt; based upon its value attribute
-selectObject.deselectByValue("value1");
+    <pre><code class=java>// Deselect an &lt;option&gt; based upon the &lt;select&gt; element's internal index
+    selectObject.deselectByIndex(1);
 
-// Deselect an &lt;option&gt; based upon its text
-selectObject.deselectByVisibleText("Bread");
+    // Deselect an &lt;option&gt; based upon its value attribute
+    selectObject.deselectByValue("value1");
 
-// Deselect all selected &lt;option&gt; elements
-selectObject.deselectAll();</code></pre>
+    // Deselect an &lt;option&gt; based upon its text
+    selectObject.deselectByVisibleText("Bread");
 
-<p>Finally, some &lt;select&gt; elements allow you to select more than one option.
- You can find out if your &lt;select&gt; element is one of these by using:
+    // Deselect all selected &lt;option&gt; elements
+    selectObject.deselectAll();</code></pre>
 
-<pre><code class=java>Boolean doesThisAllowMultipleSelections = selectObject.isMultiple();</code></pre>
+    <p>Finally, some &lt;select&gt; elements allow you to select more than one option.
+     You can find out if your &lt;select&gt; element is one of these by using:
 
-<h2>Mouse and keyboard actions in detail</h2>
-<p>Suppose you have an arbitrary web element <strong>e</strong>:</p>
+    <pre><code class=java>Boolean doesThisAllowMultipleSelections = selectObject.isMultiple();</code></pre>
 
-<pre><code class=java>WebElement e = driver.findElement(By.id("testElement"));</code></pre>
+    <h2>Mouse and keyboard actions in detail</h2>
+    <p>Suppose you have an arbitrary web element <strong>e</strong>:</p>
 
-<p>You can simulate mouse clicking on e if it's visible and has a height and width that are greater than 0:</p>
+    <pre><code class=java>WebElement e = driver.findElement(By.id("testElement"));</code></pre>
 
-<pre><code class=java>e.click();</code></pre>
+    <p>You can simulate mouse clicking on e if it's visible and has a height and width that are greater than 0:</p>
 
-<p>Moreover, it's possible to mimic hovering of the cursor over e. In order to do so, you'll need the following import statement:
+    <pre><code class=java>e.click();</code></pre>
 
-<pre><code class=java>import org.openqa.selenium.interactions.Actions;</code></pre>
+    <p>Moreover, it's possible to mimic hovering of the cursor over e. In order to do so, you'll need the following import statement:
 
-<p>With this statement in place, you can now move over the element in question:</p>
+    <pre><code class=java>import org.openqa.selenium.interactions.Actions;</code></pre>
 
-<pre><code class=java>Actions actions = new Actions(driver);
-actions.moveToElement(e);
-actions.perform();</code></pre>
+    <p>With this statement in place, you can now move over the element in question:</p>
 
-<p>If e is an <strong>input</strong> or <strong>textarea</strong> element, the following keyboard actions can be carried out:</p>
+    <pre><code class=java>Actions actions = new Actions(driver);
+    actions.moveToElement(e);
+    actions.perform();</code></pre>
 
-<p>1. Enter a sequence of characters in e:
+    <p>If e is an <strong>input</strong> or <strong>textarea</strong> element, the following keyboard actions can be carried out:</p>
 
-<pre><code class=java>e.sendKeys("Test");</code></pre>
+    <p>1. Enter a sequence of characters in e:
 
-<p>2. Delete the text that's in e (if there is any):
+    <pre><code class=java>e.sendKeys("Test");</code></pre>
 
-<pre><code class=java>e.clear();</code></pre>
+    <p>2. Delete the text that's in e (if there is any):
 
-<h2>Working with web elements</h2>
+    <pre><code class=java>e.clear();</code></pre>
+
+    <h2>Working with web elements</h2>
+</div>
+</body>

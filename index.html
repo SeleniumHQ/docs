@@ -1,41 +1,49 @@
-<!DOCTYPE html><meta charset=utf-8>
-<title>Selenium documentation</title>
-<link rel=icon type="image/vnd.microsoft.icon" href=favicon.ico>
-<link rel="shortcut icon" type="image/vnd.microsoft.icon" href=favicon.ico>
-<link rel=stylesheet href=se.css>
-<link rel=next title="Quick Tour" href=quick.html>
-<script src=docs.js></script>
+<!DOCTYPE html>
+<meta charset=utf-8>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Selenium documentation</title>
+    <link rel=icon type="image/vnd.microsoft.icon" href=favicon.ico>
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href=favicon.ico>
+    <link rel=stylesheet href=se.css>
+    <link rel=next title="Quick Tour" href=quick.html>
+    <script src=docs.js></script>
+</head>
 
-<body class=front>
+<body class="front">
+<div class="container-fluid">
+    <h1>The Selenium Browser Automation Project</h1>
 
-<h1>The Selenium Browser Automation Project</h1>
+    <p>Selenium is an umbrella project for a range of tools and libraries
+        that enable and support the automation of web browsers.
 
-<p>Selenium is an umbrella project for a range of tools and libraries
- that enable and support the automation of web browsers.
+    <p>It provides extensions to emulate user interaction with browsers,
+        a distribution server for scaling browser allocation,
+        and the infrastructure for implementations of the
+        <a href="//www.w3.org/TR/webdriver/">W3C WebDriver specification</a>
+        that lets you write interchangeable code for all major web browsers.
 
-<p>It provides extensions to emulate user interaction with browsers,
- a distribution server for scaling browser allocation,
- and the infrastructure for implementations of the
- <a href="//www.w3.org/TR/webdriver/">W3C WebDriver specification</a>
- that lets you write interchangeable code for all major web browsers.
+    <p>This project is made possible by volunteer contributors
+        who have put in thousands of hours of their own time,
+        and made the source code <a href=attr.html#license>freely available</a>
+        for anyone to use, enjoy, and improve.
 
-<p>This project is made possible by volunteer contributors
- who have put in thousands of hours of their own time,
- and made the source code <a href=attr.html#license>freely available</a>
- for anyone to use, enjoy, and improve.
+    <p>Selenium brings together browser vendors, engineers, and enthusiasts
+        to further an open discussion around automation of the web platform.
+        The project organises <a href="http://seleniumconf.com/">an annual conference</a>
+        to teach and nurture the community.
 
-<p>Selenium brings together browser vendors, engineers, and enthusiasts
- to further an open discussion around automation of the web platform.
- The project organises <a href="http://seleniumconf.com/">an annual conference</a>
- to teach and nurture the community.
+    <p>At the core of Selenium is <em><a href=wd.html>WebDriver</a></em>,
+        an interface to write instruction sets
+        that can be run interchangeably in many browsers.
+        Here is one of the simplest instructions you can make:
 
-<p>At the core of Selenium is <em><a href=wd.html>WebDriver</a></em>,
- an interface to write instruction sets
- that can be run interchangeably in many browsers.
- Here is one of the simplest instructions you can make:
-
-<!-- TODO(ato): We should find a better example.  Perhaps Todo list? -->
-<pre><code class=python>from selenium import webdriver
+        <!-- TODO(ato): We should find a better example.  Perhaps Todo list? -->
+    <pre><code class=python>from selenium import webdriver
 
 driver = webdriver.Firefox()
 driver.get("http://google.com/?hl=en")
@@ -43,137 +51,142 @@ search_box = driver.find_element_by_id("q")
 search_box.send_keys("cheese")
 search_box.submit()</code></pre>
 
-<p>See the <em><a href=quick.html>Quick Tour</a></em>
- for a full explanation
- of what goes on behind the scenes when you run this code.
- You should continue on to the <a href=#narrative>narrative documentation</a>
- to understand how you can <a href=install.html>install</a> and
- successfully use Selenium as a test automation tool,
- and scaling simple tests like this to run
- in large, distributed environments on multiple browsers,
- on several different operating systems.
+    <p>See the <em><a href=quick.html>Quick Tour</a></em>
+        for a full explanation
+        of what goes on behind the scenes when you run this code.
+        You should continue on to the <a href=#narrative>narrative documentation</a>
+        to understand how you can <a href=install.html>install</a> and
+        successfully use Selenium as a test automation tool,
+        and scaling simple tests like this to run
+        in large, distributed environments on multiple browsers,
+        on several different operating systems.
 
 
-<h2>Getting started</h2>
+    <h2>Getting started</h2>
 
-<p>If you are new to Selenium,
- we have a few resources that can help you
- get up to speed right away.
+    <p>If you are new to Selenium,
+        we have a few resources that can help you
+        get up to speed right away.
 
-<div id=gettingstarted><ul>
- <li><a href=quick.html#quick_tour>Quick tour</a>
-  <ul>
-   <li><a href=quick.html#webdriver>WebDriver</a>
-   <li><a href=quick.html#selenium_remote_control>Selenium Remote Control</a>
-   <li><a href=quick.html#selenium_ide>Selenium IDE</a>
-   <li><a href=quick.html#selenium_grid>Selenium Grid</a>
-  </ul></li>
-</ul>
+    <div id=gettingstarted><ul>
+        <li><a href=quick.html#quick_tour>Quick tour</a>
+            <ul>
+                <li><a href=quick.html#webdriver>WebDriver</a>
+                <li><a href=quick.html#selenium_remote_control>Selenium Remote Control</a>
+                <li><a href=quick.html#selenium_ide>Selenium IDE</a>
+                <li><a href=quick.html#selenium_grid>Selenium Grid</a>
+            </ul></li>
+    </ul>
+    </div>
+
+
+    <h2>Narrative documentation</h2>
+
+    <p>Narrative documentation in chapter form
+        explaining how to use Selenium in detail, from bottom up.
+
+    <div id=narrative><ul>
+        <li><a href=intro.html#introduction>Introduction</a>
+            <ul>
+                <li><a href=intro.html#the_selenium_project_and_tools>The Selenium project and tools</a>
+                <li><a href=intro.html#on_test_automation>On test automation</a>
+                <li><a href=intro.html#types_of_testing>Types of testing</a>
+                <li><a href=intro.html#about_this_documentation>About this documentation</a>
+            </ul></li>
+        <li><a href=install.html#selenium_installation>Selenium installation</a>
+            <ul>
+                <li><a href=install.html#using_browser_specific_jar>Using browser specific JAR</a>
+                <li><a href=install.html#using_non_browser_specific_jar>Using non browser specific JAR</a>
+                <li><a href=install.html#using_standalone_jar>Using standalone JAR</a>
+            </ul></li>
+        <li><a href=start.html#getting_started_with_webdriver>Getting started with WebDriver</a>
+            <ul>
+                <li><a href=start.html#consumer_browsers>Consumer browsers</a>
+                <li><a href=start.html#specialised_browsers>Specialised browsers</a>
+                <li><a href=start.html#other_third_party_drivers_and_plugins>Other third party drivers and plugins</a>
+                <li><a href=start.html#locating_elements>Locating elements</a>
+                <li><a href=start.html#performing_actions_on_the_aut>Performing actions on the AUT</a>
+            </ul></li>
+        <li><a href=wd.html#webdriver>WebDriver</a>
+            <ul>
+                <li><a href=wd.html#driver_requirements>Driver requirements</a>
+                <li><a href=wd.html#browser_launching_and_manipulation>Browser launching and manipulation</a>
+                <li><a href=wd.html#waits>Waits</a>
+                <li><a href=wd.html#support_classes>Support classes</a>
+                <li><a href=wd.html#http_proxies>HTTP proxies</a>
+                <li><a href=wd.html#page_loading_strategy>Page loading strategy</a>
+                <li><a href=wd.html#web_elements>Web elements</a>
+                <li><a href=wd.html#keyboard>Keyboard</a>
+                <li><a href=wd.html#mouse>Mouse</a>
+            </ul></li>
+        <li><a href=remote.html#remote_webdriver>Remote WebDriver</a>
+            <ul>
+                <li><a href=remote.html#the_remotewebdriver_server>The RemoteWebDriver server</a>
+                <li><a href=remote.html#running_remotewebdriver_client>Running RemoteWebDriver client</a>
+            </ul></li>
+        <li><a href=guidelines.html#guidelines_and_recommendations>Guidelines and Recommendations</a>
+            <ul>
+                <li><a href=guidelines.html#page_object_models>Page object models</a>
+                <li><a href=guidelines.html#domain_specific_language>Domain Specific Language</a>
+                <li><a href=guidelines.html#generating_application_state>Generating application state</a>
+                <li><a href=guidelines.html#mock_external_services>Mock external services</a>
+                <li><a href=guidelines.html#improved_reporting>Improved reporting</a>
+                <li><a href=guidelines.html#avoid_sharing_state>Avoid sharing state</a>
+                <li><a href=guidelines.html#test_independency>Test independency</a>
+                <li><a href=guidelines.html#consider_using_a_fluent_api>Consider using a fluent API</a>
+                <li><a href=guidelines.html#fresh_browser_per_test>Fresh browser per test</a>
+            </ul></li>
+        <li><a href=worst.html#worst_practices>Worst Practices</a>
+            <ul>
+                <li><a href=worst.html#captchas>Captchas</a>
+                <li><a href=worst.html#file_downloads>File downloads</a>
+                <li><a href=worst.html#http_response_codes>HTTP response codes</a>
+                <li><a href=worst.html#gmail_email_and_facebook_logins>Gmail, email, and Facebook logins</a>
+                <li><a href=worst.html#test_dependency>Test dependency</a>
+                <li><a href=worst.html#performance_testing>Performance testing</a>
+                <li><a href=worst.html#link_spidering>Link spidering</a>
+            </ul></li>
+        <li><a href=grid.html#selenium_grid>Selenium Grid</a>
+            <ul>
+                <li><a href=grid.html#pros_and_cons>Pros and cons</a>
+                <li><a href=grid.html#what_is_a_hub_and_node>What is a hub and node?</a>
+                <li><a href=grid.html#rolling_your_own_grid>Rolling your own grid</a>
+            </ul></li>
+        <li><a href=drivers.html#driver_idiosyncrasies>Driver idiosyncrasies</a>
+            <ul>
+                <li><a href=drivers.html#shared_capabilities>Shared capabilities</a>
+                <li><a href=drivers.html#driver_specific_capabilities>Driver specific capabilities</a>
+            </ul></li>
+        <li><a href=java.html#the_java_support_package>The Java support package</a>
+            <ul>
+                <li><a href=java.html#browser_navigation>Browser navigation</a>
+                <li><a href=java.html#working_with_colours>Working with colours</a>
+                <li><a href=java.html#working_with_select_elements>Working with select elements</a>
+                <li><a href=java.html#mouse_and_keyboard_actions_in_detail>Mouse and keyboard actions in detail</a>
+                <li><a href=java.html#working_with_web_elements>Working with web elements</a>
+            </ul></li>
+    </ul>
+    </div>
+
+
+    <h2>Front matter</h2>
+
+    <div id=frontmatter><ul>
+        <li><a href=attr.html#copyright_and_attributions>Copyright and attributions</a>
+            <ul>
+                <li><a href=attr.html#attributions>Attributions</a>
+                <li><a href=attr.html#html_version_and_source_code>HTML version and source code</a>
+                <li><a href=attr.html#license>License</a>
+            </ul></li>
+        <li><a href=typo.html#typographical_conventions>Typographical conventions</a>
+            <ul>
+                <li><a href=typo.html#capitalisation_of_titles>Capitalisation of titles</a>
+                <li><a href=typo.html#line_length>Line length</a>
+            </ul></li>
+    </ul>
+
+    </div>
 </div>
+</body>
 
 
-<h2>Narrative documentation</h2>
-
-<p>Narrative documentation in chapter form
- explaining how to use Selenium in detail, from bottom up.
-
-<div id=narrative><ul>
- <li><a href=intro.html#introduction>Introduction</a>
-  <ul>
-   <li><a href=intro.html#the_selenium_project_and_tools>The Selenium project and tools</a>
-   <li><a href=intro.html#on_test_automation>On test automation</a>
-   <li><a href=intro.html#types_of_testing>Types of testing</a>
-   <li><a href=intro.html#about_this_documentation>About this documentation</a>
-  </ul></li>
- <li><a href=install.html#selenium_installation>Selenium installation</a>
-  <ul>
-   <li><a href=install.html#using_browser_specific_jar>Using browser specific JAR</a>
-   <li><a href=install.html#using_non_browser_specific_jar>Using non browser specific JAR</a>
-   <li><a href=install.html#using_standalone_jar>Using standalone JAR</a>
-  </ul></li>
- <li><a href=start.html#getting_started_with_webdriver>Getting started with WebDriver</a>
-  <ul>
-   <li><a href=start.html#consumer_browsers>Consumer browsers</a>
-   <li><a href=start.html#specialised_browsers>Specialised browsers</a>
-   <li><a href=start.html#other_third_party_drivers_and_plugins>Other third party drivers and plugins</a>
-   <li><a href=start.html#locating_elements>Locating elements</a>
-   <li><a href=start.html#performing_actions_on_the_aut>Performing actions on the AUT</a>
-  </ul></li>
- <li><a href=wd.html#webdriver>WebDriver</a>
-  <ul>
-   <li><a href=wd.html#driver_requirements>Driver requirements</a>
-   <li><a href=wd.html#browser_launching_and_manipulation>Browser launching and manipulation</a>
-   <li><a href=wd.html#waits>Waits</a>
-   <li><a href=wd.html#support_classes>Support classes</a>
-   <li><a href=wd.html#http_proxies>HTTP proxies</a>
-   <li><a href=wd.html#page_loading_strategy>Page loading strategy</a>
-   <li><a href=wd.html#web_elements>Web elements</a>
-   <li><a href=wd.html#keyboard>Keyboard</a>
-   <li><a href=wd.html#mouse>Mouse</a>
-  </ul></li>
- <li><a href=remote.html#remote_webdriver>Remote WebDriver</a>
-  <ul>
-   <li><a href=remote.html#the_remotewebdriver_server>The RemoteWebDriver server</a>
-   <li><a href=remote.html#running_remotewebdriver_client>Running RemoteWebDriver client</a>
-  </ul></li>
- <li><a href=guidelines.html#guidelines_and_recommendations>Guidelines and Recommendations</a>
-  <ul>
-   <li><a href=guidelines.html#page_object_models>Page object models</a>
-   <li><a href=guidelines.html#domain_specific_language>Domain Specific Language</a>
-   <li><a href=guidelines.html#generating_application_state>Generating application state</a>
-   <li><a href=guidelines.html#mock_external_services>Mock external services</a>
-   <li><a href=guidelines.html#improved_reporting>Improved reporting</a>
-   <li><a href=guidelines.html#avoid_sharing_state>Avoid sharing state</a>
-   <li><a href=guidelines.html#test_independency>Test independency</a>
-   <li><a href=guidelines.html#consider_using_a_fluent_api>Consider using a fluent API</a>
-   <li><a href=guidelines.html#fresh_browser_per_test>Fresh browser per test</a>
-  </ul></li>
- <li><a href=worst.html#worst_practices>Worst Practices</a>
-  <ul>
-   <li><a href=worst.html#captchas>Captchas</a>
-   <li><a href=worst.html#file_downloads>File downloads</a>
-   <li><a href=worst.html#http_response_codes>HTTP response codes</a>
-   <li><a href=worst.html#gmail_email_and_facebook_logins>Gmail, email, and Facebook logins</a>
-   <li><a href=worst.html#test_dependency>Test dependency</a>
-   <li><a href=worst.html#performance_testing>Performance testing</a>
-   <li><a href=worst.html#link_spidering>Link spidering</a>
-  </ul></li>
- <li><a href=grid.html#selenium_grid>Selenium Grid</a>
-  <ul>
-   <li><a href=grid.html#pros_and_cons>Pros and cons</a>
-   <li><a href=grid.html#what_is_a_hub_and_node>What is a hub and node?</a>
-   <li><a href=grid.html#rolling_your_own_grid>Rolling your own grid</a>
-  </ul></li>
- <li><a href=drivers.html#driver_idiosyncrasies>Driver idiosyncrasies</a>
-  <ul>
-   <li><a href=drivers.html#shared_capabilities>Shared capabilities</a>
-   <li><a href=drivers.html#driver_specific_capabilities>Driver specific capabilities</a>
-  </ul></li>
- <li><a href=java.html#the_java_support_package>The Java support package</a>
-  <ul>
-   <li><a href=java.html#browser_navigation>Browser navigation</a>
-   <li><a href=java.html#working_with_colours>Working with colours</a>
-   <li><a href=java.html#working_with_select_elements>Working with select elements</a>
-   <li><a href=java.html#mouse_and_keyboard_actions_in_detail>Mouse and keyboard actions in detail</a>
-   <li><a href=java.html#working_with_web_elements>Working with web elements</a>
-  </ul></li>
-</ul>
-</div>
-
-
-<h2>Front matter</h2>
-
-<div id=frontmatter><ul>
- <li><a href=attr.html#copyright_and_attributions>Copyright and attributions</a>
-  <ul>
-   <li><a href=attr.html#attributions>Attributions</a>
-   <li><a href=attr.html#html_version_and_source_code>HTML version and source code</a>
-   <li><a href=attr.html#license>License</a>
-  </ul></li>
- <li><a href=typo.html#typographical_conventions>Typographical conventions</a>
-  <ul>
-   <li><a href=typo.html#capitalisation_of_titles>Capitalisation of titles</a>
-   <li><a href=typo.html#line_length>Line length</a>
-  </ul></li>
-</ul>
-</div>

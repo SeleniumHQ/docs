@@ -43,17 +43,22 @@ function addAnchors() {
  * Add the table of contents to the DOM.
  */
 function addToc() {
-	var toc = document.createElement("nav");
-	toc.id = "toc";
-	toc.innerHTML = "<h1><a href=index.html>Table of Contents</a></h1>";
-	var hs = $("h1, h2, h3, h4, h5, h6");
-	for (var i=0; i< hs.length; i++) {
-		var level = hs[i].tagName.substring(1);
-		if (level == 1)
-			continue;
-		toc.innerHTML += "<a href=#" + hs[i].id + " class=level" + level + ">" + hs[i].textContent + "</a>"
+    var hs = $("h1, h2, h3, h4, h5, h6");
+    //Checks if more than one heading exists to prevent an empty Table of Contents
+    if(hs.length > 1) {
+        var toc = document.createElement("nav");
+        toc.id = "toc";
+        toc.innerHTML = "<h1><a href=index.html>Table of Contents</a></h1>";
+
+        for (var i=0; i< hs.length; i++) {
+            var level = hs[i].tagName.substring(1);
+            if (level == 1)
+                continue;
+            toc.innerHTML += "<a href=#" + hs[i].id + " class=level" + level + ">" + hs[i].textContent + "</a>"
+        }
+
+        document.body.insertBefore(toc, document.body.firstChild);
 	}
-	document.body.insertBefore(toc, document.body.firstChild);
 }
 
 /**
@@ -141,10 +146,13 @@ function populateHeaderYs() {
  */
 function populateTocEls() {
 	var els = $("nav#toc > a");
-	for (var i=0; i< els.length; i++) {
-		var anchor = els[i].href.substring(els[i].href.indexOf("#"));
-		tocEls[anchor] = els[i];
+	if(els != null){
+        for (var i=0; i< els.length; i++) {
+            var anchor = els[i].href.substring(els[i].href.indexOf("#"));
+            tocEls[anchor] = els[i];
+        }
 	}
+
 }
 
 /**
@@ -162,8 +170,10 @@ function highlightCode() {
 		script.src = "highlight.pack.js";
 		script.onload = function() {
 			var blocks = $("pre code");
-			for (var i = 0; i < blocks.length; i++) {
-				hljs.highlightBlock(blocks[i]);
+			if(blocks != null) {
+                for (var i = 0; i < blocks.length; i++) {
+                    hljs.highlightBlock(blocks[i]);
+                }
 			}
 		}
 		document.head.appendChild(script);
@@ -176,14 +186,16 @@ function highlightCode() {
  * @param ev the scroll event
  */
 function trackHeaders(ev) {
-	var pageY = ev.pageY;
-	var cur = hs[0].id;
-	var gone = Object.keys(headerYs).filter(function(y, h) { return y <= pageY });
-	if (gone.length > 0) {
-		var curY = gone[gone.length - 1];
-		cur = headerYs[curY];
+	if(ev != undefined && hs.id != undefined) {
+        var pageY = ev.pageY;
+        var cur = hs[0].id;
+        var gone = Object.keys(headerYs).filter(function(y, h) { return y <= pageY });
+        if (gone.length > 0) {
+            var curY = gone[gone.length - 1];
+            cur = headerYs[curY];
+        }
+        updateToc(cur);
 	}
-	updateToc(cur);
 }
 
 /**
@@ -207,15 +219,17 @@ function updateToc(id) {
  * @param ev the scroll event
  */
 function moveToc(ev) {
-	var toc = $("nav#toc")[0];
-	var firstEl = $("nav + h1")[0];
-	var firstElSt = firstEl.getBoundingClientRect();
-	var offset = document.body.classList.contains("front") ? 300 : 200;
+	if($("nav#toc") != undefined && $("nav + h1") != undefined) {
+        var toc = $("nav#toc")[0];
+        var firstEl = $("nav + h1")[0];
+        var firstElSt = firstEl.getBoundingClientRect();
+        var offset = document.body.classList.contains("front") ? 300 : 200;
 
-	var firstElRealTop = firstElSt.bottom - (firstElSt.height - offset);
-	if (firstElRealTop - 50 < 0) {
-		toc.style.top = "50px";
-	} else {
-		toc.style.top = firstElSt.y + offset + "px";
+        var firstElRealTop = firstElSt.bottom - (firstElSt.height - offset);
+        if (firstElRealTop - 50 < 0) {
+            toc.style.top = "50px";
+        } else {
+            toc.style.top = firstElSt.y + offset + "px";
+        }
 	}
 }

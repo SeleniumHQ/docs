@@ -1,80 +1,92 @@
 <!doctype html>
 <meta charset=utf-8>
-<title>Installation</title>
-<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-<link rel=stylesheet href=se.css>
-<link rel=prev href=intro.html title=Introduction>
-<link rel=next href=start.html title="Getting Started">
-<script src=docs.js></script>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Installation</title>
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel=stylesheet href=se.css>
+    <link rel=prev href=intro.html title=Introduction>
+    <link rel=next href=start.html title="Getting Started">
+    <script src=docs.js></script>
+</head>
 
-<h1>Selenium installation</h1>
+<body class="front">
+<div class="container-fluid">
 
-<p>Selenium setup is quite different from setup of other commercial tools.
- You don’t install a tool using Selenium binaries
- but rather set up your test automation project to use such binaries
- in the language of your choice.
- The Selenium binaries you would need
- depends on browsers you want to run your tests in.
+    <h1>Selenium installation</h1>
 
-<h2>Using browser specific JAR</h2>
+    <p>Selenium setup is quite different from setup of other commercial tools.
+     You don’t install a tool using Selenium binaries
+     but rather set up your test automation project to use such binaries
+     in the language of your choice.
+     The Selenium binaries you would need
+     depends on browsers you want to run your tests in.
 
-<p>If you want to run tests in only a specific browser,
- then you can add a browser specific dependency in your <i>pom.xml</i> file.
- You should add the following dependency in your <i>pom.xml</i> file to run
- tests only in Firefox:
+    <h2>Using browser specific JAR</h2>
 
-<pre>
-&lt;dependency&gt;
-  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-  &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
-  &lt;version&gt;2.53.1&lt;/version&gt;
-&lt;/dependency&gt;
-</pre>
+    <p>If you want to run tests in only a specific browser,
+     then you can add a browser specific dependency in your <i>pom.xml</i> file.
+     You should add the following dependency in your <i>pom.xml</i> file to run
+     tests only in Firefox:
 
-<p>That's all and you are ready to drive your tests in Firefox.
- Similarly, if you want to run tests only in Chrome,
- then you can use the following dependency:
+    <pre>
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+      &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
+      &lt;version&gt;2.53.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    </pre>
 
-<pre>
-&lt;dependency&gt;
-  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-  &lt;artifactId&gt;selenium-chrome-driver&lt;/artifactId&gt;
-  &lt;version&gt;2.53.1&lt;/version&gt;
-&lt;/dependency&gt;
-</pre>
+    <p>That's all and you are ready to drive your tests in Firefox.
+     Similarly, if you want to run tests only in Chrome,
+     then you can use the following dependency:
 
-
-<h2>Using non browser specific JAR</h2>
-
-<p>More often than not, you would need to run tests
- in more than one browser.
- Hence, you would use a <i>selenium-java</i>
- Maven dependency in your project.
- The <i>selenium-java</i> JAR
- contains the language bindings and the drivers
- but not the server side piece.
-
-<pre>
-&lt;dependency&gt;
-  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-  &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
-  &lt;version&gt;2.53.1&lt;/version&gt;
-&lt;/dependency&gt;
-</pre>
+    <pre>
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+      &lt;artifactId&gt;selenium-chrome-driver&lt;/artifactId&gt;
+      &lt;version&gt;2.53.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    </pre>
 
 
-<h2>Using standalone JAR</h2>
+    <h2>Using non browser specific JAR</h2>
 
-<p>If you plan to use <a href=grid.html>Selenium Grid</a>,
- then you should download the
- <a href=https://www.seleniumhq.org/download/>selenium-server-standalone JAR</a> file.
- This file is never uploaded,
- but all the components are available via
- <a href=http://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-server/>selenium-server</a>.
- The standalone JAR contains everything,
- including the remote Selenium server
- and the client-side bindings.
- This means that if you use the selenium-server-standalone jar
- in your project, then you don't have to add selenium-java
- or a browser specific jar.
+    <p>More often than not, you would need to run tests
+     in more than one browser.
+     Hence, you would use a <i>selenium-java</i>
+     Maven dependency in your project.
+     The <i>selenium-java</i> JAR
+     contains the language bindings and the drivers
+     but not the server side piece.
+
+    <pre>
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+      &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+      &lt;version&gt;2.53.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    </pre>
+
+
+    <h2>Using standalone JAR</h2>
+
+    <p>If you plan to use <a href=grid.html>Selenium Grid</a>,
+     then you should download the
+     <a href=https://www.seleniumhq.org/download/>selenium-server-standalone JAR</a> file.
+     This file is never uploaded,
+     but all the components are available via
+     <a href=http://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-server/>selenium-server</a>.
+     The standalone JAR contains everything,
+     including the remote Selenium server
+     and the client-side bindings.
+     This means that if you use the selenium-server-standalone jar
+     in your project, then you don't have to add selenium-java
+     or a browser specific jar.
+</div>
+</body>

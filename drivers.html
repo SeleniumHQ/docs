@@ -1,46 +1,57 @@
 <!doctype html>
 <meta charset=utf-8>
-<title>Driver idiosyncrasies</title>
-<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-<link rel=stylesheet href=se.css>
-<link rel=prev href=grid.html title=Grid>
-<link rel=next href=java.html title="The Java Support Package">
-<script src=docs.js></script>
-
-<h1>Driver idiosyncrasies</h1>
-
-
-<h2>Shared capabilities</h2>
-
-<h3>pageLoadStrategy</h3>
-<p>When navigating to a new page via URL, by default Selenium will wait
- until the page has fully loaded before responding. This works well for
- beginners, but can cause long wait times on pages that load a large
- number of third party resources. Using a non default strategy can make
- test execution faster in cases like this, but can also introduce flakiness
- where elements on the page change position as elements load in and change
- size.
-
- <p>The page load strategy queries the
- <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState">
-  document.readyState</a> as described in the table below:
-<table>
- <tr><th>Strategy</th><th>Ready State</th><th>Notes</th></tr>
- <tr><td>normal</td><td>complete</td><td>Used by default, waits for all
-  resources to download</td></tr>
- <tr><td>eager</td><td>interactive</td><td>DOM access is ready, but other
-  resources like images may still be loading</td></tr>
- <tr><td>none</td><td>Any</td><td>Does not block WebDriver at all</td></tr>
-</table>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Driver idiosyncrasies</title>
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel=stylesheet href=se.css>
+    <link rel=prev href=grid.html title=Grid>
+    <link rel=next href=java.html title="The Java Support Package">
+    <script src=docs.js></script>
+</head>
+<body class="front">
+<div class="container-fluid">
+    <h1>Driver idiosyncrasies</h1>
 
 
-<h2>Driver specific capabilities</h2>
+    <h2>Shared capabilities</h2>
 
-<h3>Internet Explorer</h3>
+    <h3>pageLoadStrategy</h3>
+    <p>When navigating to a new page via URL, by default Selenium will wait
+        until the page has fully loaded before responding. This works well for
+        beginners, but can cause long wait times on pages that load a large
+        number of third party resources. Using a non default strategy can make
+        test execution faster in cases like this, but can also introduce flakiness
+        where elements on the page change position as elements load in and change
+        size.
 
-<h4>fileUploadDialogTimeout</h4>
+    <p>The page load strategy queries the
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState">
+            document.readyState</a> as described in the table below:
+    <table>
+        <tr><th>Strategy</th><th>Ready State</th><th>Notes</th></tr>
+        <tr><td>normal</td><td>complete</td><td>Used by default, waits for all
+            resources to download</td></tr>
+        <tr><td>eager</td><td>interactive</td><td>DOM access is ready, but other
+            resources like images may still be loading</td></tr>
+        <tr><td>none</td><td>Any</td><td>Does not block WebDriver at all</td></tr>
+    </table>
 
-<p>In some environments, Internet Explorer may timeout when opening the
- File Upload dialog. IEDriver has a default timeout of 1000ms, but you
- can increase the timeout using the fileUploadDialogTimeout capability.
+
+    <h2>Driver specific capabilities</h2>
+
+    <h3>Internet Explorer</h3>
+
+    <h4>fileUploadDialogTimeout</h4>
+
+    <p>In some environments, Internet Explorer may timeout when opening the
+        File Upload dialog. IEDriver has a default timeout of 1000ms, but you
+        can increase the timeout using the fileUploadDialogTimeout capability.
+    </p>
+</div>
+</body>
