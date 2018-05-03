@@ -661,6 +661,47 @@ browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");</code></p
 
 <h2>Support classes</h2>
 
+<h2>JavaScript Alerts, Prompts and Confirmations</h2>
+
+<p>WebDriver provides an API for working with the three types of native
+ popup message offered by JavaScript. These popups are styled by the
+ browser and offer limited customisation.
+
+<p>The simplest of these is referred to as an alert, which shows a
+ custom message, and a single button which dismisses the alert, labelled
+ in most browsers as OK. It can also be dismissed in most browsers by
+ pressing the close button, but this will always do the same thing as
+ the OK button. <a onclick="window.alert('Sample alert')">See an example alert</a>.
+<p>
+<pre>
+ <code class=java>
+//Click the link to activate the alert
+driver.findElement(By.linkText("See an example alert")).click();
+
+//Wait for the alert to be displayed and store it in a variable
+Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+//Store the alert text in a variable
+String text = alert.getText();
+
+//Press the OK button
+alert.accept();
+ </code>
+ <code class="py">
+# Click the link to activate the alert
+driver.find_element_by_link_text("See an example alert").click()
+
+# Wait for the alert to be displayed and store it in a variable
+alert = wait.until(EC.alert_is_present())
+
+# Store the alert text in a variable
+text = alert.text
+
+# Press the OK button
+alert.accept()
+ </code>
+</pre>
+
 <h2>HTTP proxies</h2>
 
 <h2>Page loading strategy</h2>
