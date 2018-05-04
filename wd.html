@@ -661,6 +661,136 @@ browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");</code></p
 
 <h2>Support classes</h2>
 
+<h2>JavaScript Alerts, Prompts and Confirmations</h2>
+
+<p>WebDriver provides an API for working with the three types of native
+ popup message offered by JavaScript. These popups are styled by the
+ browser and offer limited customisation.
+
+<h3>Alerts</h3>
+
+<p>The simplest of these is referred to as an alert, which shows a
+ custom message, and a single button which dismisses the alert, labelled
+ in most browsers as OK. It can also be dismissed in most browsers by
+ pressing the close button, but this will always do the same thing as
+ the OK button. <a onclick="window.alert('Sample alert')">See an example alert</a>.
+
+<p>WebDriver can get the text from the popup and accept or dismiss these
+ alerts.
+
+<pre>
+ <code class=java>
+//Click the link to activate the alert
+driver.findElement(By.linkText("See an example alert")).click();
+
+//Wait for the alert to be displayed and store it in a variable
+Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+//Store the alert text in a variable
+String text = alert.getText();
+
+//Press the OK button
+alert.accept();
+ </code>
+ <code class="py">
+# Click the link to activate the alert
+driver.find_element_by_link_text("See an example alert").click()
+
+# Wait for the alert to be displayed and store it in a variable
+alert = wait.until(expected_conditions.alert_is_present())
+
+# Store the alert text in a variable
+text = alert.text
+
+# Press the OK button
+alert.accept()
+ </code>
+</pre>
+
+<h3>Confirm</h3>
+
+<p>A confirm box is similar to an alert, except the user can also choose
+ to cancel the message. <a onclick="window.confirm('Are you sure?')">See
+ a sample confirm</a>.
+
+<p>This example also shows a different approach to storing an alert:
+
+<pre>
+ <code class=java>
+//Click the link to activate the alert
+driver.findElement(By.linkText("See a sample confirm")).click();
+
+//Wait for the alert to be displayed
+wait.until(ExpectedConditions.alertIsPresent());
+
+//Store the alert in a variable
+Alert alert = driver.switchTo().alert();
+
+//Store the alert in a variable for reuse
+String text = alert.getText();
+
+//Press the Cancel button
+alert.dismiss();
+ </code>
+ <code class="py">
+# Click the link to activate the alert
+driver.find_element_by_link_text("See a sample confirm").click()
+
+# Wait for the alert to be displayed
+wait.until(expected_conditions.alert_is_present())
+
+# Store the alert in a variable for reuse
+alert = driver.switch_to.alert
+
+# Store the alert text in a variable
+text = alert.text
+
+# Press the Cancel button
+alert.dismiss()
+ </code>
+</pre>
+
+<h3>Prompt</h3>
+
+<p>Prompts are similar to confirm boxes, except they also include a text
+ input. Similar to working with form elements, you can use WebDriver&apos;s
+ send keys to fill in a response. This will completely replace the placeholder
+ text. Pressing the cancel button will not submit any text.
+ <a onclick="window.prompt('What is your tool of choice?',navigator.appName)">
+ See a sample prompt</a>.
+
+<pre>
+ <code class=java>
+//Click the link to activate the alert
+driver.findElement(By.linkText("See a sample prompt")).click();
+
+//Wait for the alert to be displayed and store it in a variable
+Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+//Type your message
+alert.sendKeys("Selenium");
+
+//Press the OK button
+alert.accept();
+ </code>
+ <code class="py">
+# Click the link to activate the alert
+driver.find_element_by_link_text("See a sample prompt").click()
+
+# Wait for the alert to be displayed
+wait.until(expected_conditions.alert_is_present())
+
+# Store the alert in a variable for reuse
+alert = Alert(driver)
+
+# Type your message
+alert.send_keys("Selenium")
+
+# Press the OK button
+alert.accept()
+ </code>
+</pre>
+
 <h2>HTTP proxies</h2>
 
 <h2>Page loading strategy</h2>
