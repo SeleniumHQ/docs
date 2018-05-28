@@ -279,35 +279,13 @@ driver = Selenium::WebDriver.for :firefox</code></pre>
 Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=44069">Internet Explorer 11 on Windows 7 &amp; 8.1</a>. It has not been updated since 2014 and is based of a draft version of the W3 specification. <a href="http://jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html">Jim Evans</a> has an excellent writeup on Microsoft's implementation.
 
 
-<h3>Opera (Presto-based)</h3>
+<h3>Opera</h3>
 
-<p>Setting up support for Opera is fairly similar to the Chrome approach
- in that they are both supported by third parties.
- Consequently, you need to set up a dependency to
- the <code>com.opera:operadriver</code> artifact (if using Maven)
- or <a href=//www.seleniumhq.org/download/>download a prebuilt standalone server JAR.</a>
- As long as the JAR is available on your classpath, you should be good to go.
-
-<p>If you use Python or Ruby as your language of choice,
- you must set the <var>SELENIUM_SERVER_JAR</var> environmental variable
- to point to the location of the binary JAR.
-
-<p>On Linux and macOS, you can do this
- for your current shell session by running:
-
-<pre><code>$ export SELENIUM_SERVER_JAR=/path/to/operadriver.jar</code></pre>
-
-<p>It's possible to set this in your shell's profile (e.g. <em>~/.bashrc</em>)
- to have the variable set every time you launch a new shell session.
- Alternatively, you can set the variable programmatically in your test runner.
- In Python, you'd do something along the lines of
-
-<pre><code class=py>import os
-os.environ["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</code></pre>
-
-<p>The equivalent in Ruby:
-
-<pre><code class=rb>ENV["SELENIUM_SERVER_JAR"] = "/path/to/selenium-server-standalone.jar"</code></pre>
+<p>Current releases of Opera are built on top of the Chromium engine,
+ and WebDriver is now supported via the closed-source
+ <a href="https://github.com/operasoftware/operachromiumdriver/releases">Opera Chromium Driver</a>,
+ which can be <a href="#adding_executables_to_your_path">added to your PATH</a>
+ or as a system property.
 
 <p>Instantiating a driver session is similar to Firefox and Chromium:
 
