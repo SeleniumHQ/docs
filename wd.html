@@ -346,11 +346,16 @@ driver = Selenium::WebDriver.for :opera</code></pre>
 
 <h4>HtmlUnit</h4>
 
+<p>HtmlUnit is a "GUI-Less browser for Java programs". It models HTML documents and provides an API that allows you 
+to invoke pages, fill out forms, click links, etc. It has JavaScript support and is able to work with AJAX libraries, 
+simulating Chrome, Firefox or Internet Explorer depending on the configuration used. It has been moved to a 
+<a href="http://htmlunit.sourceforge.net/gettingStarted.html">new</a> location.</p> The source is maintained on svn. 
+
 
 <h4>PhantomJS</h4>
 
 <p>PhantomJS is a headless browser based on Webkit, albeit a version much older than that used by Google Chrome or
- Safari.  Unlike HtmlUnit driver, it also supports Javascript. Whilst historically a popular choice, it would now be
+ Safari. <!-- Unlike HtmlUnit driver, it also supports Javascript ()-->. Whilst historically a popular choice, it would now be
  wise to avoid PhantomJS. The project has been unmaintained
  <a href="https://groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE">since the 5th of August</a>, so whilst the web
  will continue to change, PhantomJS will not be updated.  This was after Google announced the ability to run Chrome
