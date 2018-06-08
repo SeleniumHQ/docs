@@ -371,6 +371,79 @@ WebDriver driver = new InternetExplorerDriver();
 <pre><code class=rb>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :internet_explorer</code></pre>
 
+<h2>Browser Navigation</h2>
+
+<h3>Navigate To</h3>
+
+<p>The first thing you will want to do after launching a browser is to
+ open your website. This can be achieved in a single line:
+
+<pre>
+ <code class=java>
+//Convenient
+driver.get("https://www.seleniumhq.org");
+
+//Longer way
+driver.navigate().to("https://seleniumhq.github.io/docs/");
+ </code>
+ <code class=python>driver.get("https://www.seleniumhq.org")</code>
+ <code class=ruby>
+#Convenient
+driver.get "https://www.seleniumhq.org"
+
+#Longer way
+driver.navigate.to "https://seleniumhq.github.io/docs/"
+ </code>
+ <code class=cs>this.driver.Navigate().GoToUrl(@"http://google.com");</code>
+</pre>
+
+<h3>Get Current URL</h3>
+
+<p>You can read the current URL from the browser&apos;s address bar
+ using:</p>
+<pre>
+ <code class=java>driver.getCurrentUrl();</code>
+ <code class=python>driver.current_url</code>
+ <code class=ruby>driver.current_url</code>
+ <code class=cs>this.driver.Url;</code>
+</pre>
+
+<h3>Back</h3>
+<p>Pressing the browser&apos;s back button:
+<pre>
+ <code class=java>driver.navigate().back();</code>
+ <code class=python>driver.back()</code>
+ <code class=ruby>driver.navigate.back</code>
+ <code class=cs>this.driver.Navigate().Back();</code>
+</pre>
+
+<h3>Forward</h3>
+<p>Pressing the browser&apos;s forward button:
+ <pre>
+  <code class=java>driver.navigate().forward();</code>
+  <code class=python>driver.forward()</code>
+  <code class=ruby>driver.navigate.forward</code>
+  <code class=cs>this.driver.Navigate().Forward();</code>
+ </pre>
+
+<h3>Refresh</h3>
+<p>Refresh the current page:
+<pre>
+  <code class=java>driver.navigate().refresh();</code>
+  <code class=python>driver.refresh()</code>
+  <code class=ruby>driver.navigate.refresh</code>
+  <code class=cs>this.driver.Navigate().Refresh();</code>
+ </pre>
+
+<h3>Get Title</h3>
+<p>You can read the current page title from the browser:</p>
+<pre>
+  <code class=java>driver.getTitle();</code>
+  <code class=python>driver.title</code>
+  <code class=ruby>driver.title</code>
+  <code class=cs>this.driver.Title;</code>
+ </pre>
+
 <h2>Waits</h2>
 
 <p>WebDriver can generally be said to have a blocking API.
