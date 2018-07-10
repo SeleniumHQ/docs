@@ -43,7 +43,7 @@
 <pre><code class=java>
 FirefoxOptions options = new FirefoxOptions();
 options.addPreference("network.proxy.type", 0);
-driver = new RemoteWebDriver(options.toCapabilities());
+driver = new RemoteWebDriver(options);
 </code></pre>
 
 <h4>Setting a custom profile</h4>
@@ -52,7 +52,7 @@ driver = new RemoteWebDriver(options.toCapabilities());
 FirefoxProfile profile = new FirefoxProfile();
 FirefoxOptions options = new FirefoxOptions();
 options.setProfile(profile);
-driver = new RemoteWebDriver(options.toCapabilities());
+driver = new RemoteWebDriver(options);
 </code></pre>
 
 <h3>Internet Explorer</h3>
