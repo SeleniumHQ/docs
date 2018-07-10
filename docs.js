@@ -6,6 +6,90 @@ function $(loc) {
 	return els.length > 0 ? els : els[0];
 }
 
+var languages = [
+    { pretty: "Java",		safe: "java", 		comment: "//"},
+    { pretty: "Python", 	safe: "python", 	comment: "#"},
+    { pretty: "C#", 		safe: "cs", 		comment: "//"},
+    { pretty: "Ruby",		safe: "ruby", 		comment: "#"},
+    { pretty: "JavaScript", safe: "javascript",	comment: "//"}
+];
+
+function chosenLanguage() {
+    return localStorage.language ? localStorage.language : 'Java';
+}
+
+function showOnly(language, target) {
+    localStorage.language = language;
+    for (var i = 0; i < languages.length; i++) {
+    	var codeSamples = $('pre>code:not(.shell).' + languages[i].safe);
+    	for (var j = 0; j < codeSamples.length; j++) {
+            if(language === languages[i].pretty) {
+            	codeSamples[j].style.display = 'block';
+            } else {
+                codeSamples[j].style.display = 'none';
+            }
+        }
+    }
+    var allLanguages = $('.languageSelect>span');
+    for (i = 0; i < allLanguages.length; i++) {
+    	if(allLanguages[i].innerText === language) {
+            allLanguages[i].classList.add('chosen');
+        } else {
+            allLanguages[i].classList.remove('chosen');
+        }
+    }
+    if(target) {
+    	target.scrollIntoView();
+	}
+}
+
+function collapseSnippets() {
+    addLanguageSelect();
+    showOnly(chosenLanguage(), null);
+}
+
+function containsLanguageBindings(pre) {
+    for (var i = 0; i < languages.length; i++) {
+    	if(containsLanguage(pre, languages[i].safe)) {
+    		return true;
+		}
+    }
+    return false;
+}
+
+function containsLanguage(pre, language) {
+    return pre.querySelector('code.' + language);
+}
+
+function addLanguageSelect() {
+    var pre = $("pre");
+    for (var i = 0; i < pre.length; i++) {
+        var languagesDiv = document.createElement('div');
+        languagesDiv.setAttribute('class', 'languageSelect');
+        pre[i].insertBefore(languagesDiv, pre[i].childNodes[0]);
+        if (containsLanguageBindings(pre[i])) {
+            for (var j = 0; j < languages.length; j++) {
+                var span = document.createElement('span');
+                span.innerText = languages[j].pretty;
+                span.classList.add(languages[j].safe);
+                span.onclick = function() {
+                    showOnly(this.innerText, this.parentNode.parentNode);
+                };
+                if (!containsLanguage(pre[i], languages[j].safe)) {
+					span.classList.add('missing');
+                    var code = document.createElement('code');
+                    code.classList.add(languages[j].safe);
+                    code.innerText= languages[j].comment
+						+ 'We don\'t have a ' + languages[j].pretty
+						+ ' code sample yet -  Help us out and raise a PR';
+                    pre[i].appendChild(code);
+                }
+                languagesDiv.appendChild(span);
+            }
+        }
+    }
+}
+
 window.addEventListener("load", addStructure);
 window.addEventListener("load", addAnchors);
 window.addEventListener("load", addToc);
@@ -15,6 +99,7 @@ window.addEventListener("load", insertFooter);
 window.addEventListener("load", populateHeaderYs);
 window.addEventListener("load", populateTocEls);
 window.addEventListener("load", highlightCode);
+window.addEventListener("load", collapseSnippets);
 window.addEventListener("scroll", trackHeaders);
 window.addEventListener("scroll", moveToc);
 

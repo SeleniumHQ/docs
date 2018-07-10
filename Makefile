@@ -6,7 +6,7 @@ NARRATIVE = \
 	start.html \
 	wd.html \
 	remote.html \
-	best.html \
+	guidelines.html \
 	worst.html \
 	grid.html \
 	drivers.html \
