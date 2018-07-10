@@ -85,22 +85,22 @@
      and the run the following command
      to permanently add the directory to your path
      for all users on your machine:
-     <pre>setx /m path "%path%;C:\WebDriver\bin\"</pre>
+     <pre><code class=bat>setx /m path "%path%;C:\WebDriver\bin\"</code></pre>
 
     <li>Bash users on macOS and Linux - In a terminal:
-     <pre>export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile</pre>
+    <pre><code class=shell>export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile</code></pre>
    </ul>
 
  <li><p>You are now ready to test your changes.
   Close all open command prompts and open a new one.
   Type out the name of one of the binaries
   in the folder you created in the previous step,
-  e.g: <pre>chromedriver</pre>.
+  e.g: <pre><code class=shell>chromedriver</code></pre>
   If your <var>PATH</var> is configured correctly,
   you will see some some output relating to the startup of the driver:
 
-  <p><pre>Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
-Only local connections are allowed.</pre>
+  <p><pre><samp>Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
+Only local connections are allowed.</samp></pre>
 
   <p>You can regain control of your command prompt
    by pressing <kbd>Ctrl + C</kbd>.
@@ -185,7 +185,7 @@ Only local connections are allowed.</pre>
  You can see what directories, separated by a colon,
  make up your system's path by executing the following command:
 
-<pre><code>$ echo $PATH
+<pre><code class=shell>$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</code></pre>
 
 <p>To include chromedriver on the path if it isn't already,
@@ -193,22 +193,25 @@ Only local connections are allowed.</pre>
  The following line will set the <var>PATH</var> environmental variable
  its current content, plus an additional path added after the colon:
 
-<pre><code>$ export PATH="$PATH:/path/to/chromedriver"</code></pre>
+<pre><code class=shell>$ export PATH="$PATH:/path/to/chromedriver"</code></pre>
 
 <p>When chromedriver is available on your path,
  you should be able to execute the _chromedriver_ executable from any directory.
 
 <p>To instantiate a Chrome/Chromium session, you can do the following:
 
-<pre><code class=java>WebDriver driver = new ChromeDriver();</code></pre>
+<pre>
+ <code class=java>WebDriver driver = new ChromeDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :chrome</code>
+</pre>
 
 <p>Remember that you have to set the path to the chromedriver executable.
  This is possible using the following line:
 
-<pre><code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code></pre>
-
-<pre><code class=rb>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :chrome</code></pre>
+<pre>
+ <code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code>
+</pre>
 
 <p>The chromedriver is implemented as a WebDriver remote server
  that by exposing Chrome's internal automation proxy interface
@@ -226,10 +229,12 @@ driver = Selenium::WebDriver.for :chrome</code></pre>
 <p>As geckodriver is the new default way of launching Firefox, you can
  instantiate Firefox in the same way as Selenium 2:
 
-<pre><code class=java>WebDriver driver = new FirefoxDriver();</code></pre>
+<pre>
+ <code class=java>WebDriver driver = new FirefoxDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :firefox</code>
+</pre>
 
-<pre><code class=rb>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :firefox</code></pre>
 
 <p>If you prefer not to set geckodriver's location using PATH,
  set the geckodriver binary location programmatically:
@@ -289,11 +294,11 @@ Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/e
 
 <p>Instantiating a driver session is similar to Firefox and Chromium:
 
-<pre><code class=java>WebDriver driver = new OperaDriver();</code></pre>
-
-<pre><code class=rb>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :opera</code></pre>
-
+<pre>
+ <code class=java>WebDriver driver = new OperaDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :opera</code>
+</pre>
 
 <h3>Safari</h3>
 
@@ -305,7 +310,7 @@ driver = Selenium::WebDriver.for :opera</code></pre>
  <li>Enable the Developer menu from Safari preferences
  <li>Check the <em>Allow Remote Automation</em> option
   from with the Develop menu
- <li>Run <pre>/usr/bin/safaridriver -p 1337</pre> from the terminal
+ <li>Run <pre><code class=shell>/usr/bin/safaridriver -p 1337</code></pre> from the terminal
   for the first time and type your password
   at the prompt to authorise WebDriver
 </ol>
@@ -349,26 +354,21 @@ simulating Chrome, Firefox or Internet Explorer depending on the configuration u
 
 <p>Ruby is not installed by default on Windows. Download the latest <a href="http://rubyinstaller.org/downloads">version</a> and run the installer. You can leave all settings at default values, except at the <em>Installation Destination and Optional Tasks</em> screen check <em>Add Ruby executables to your PATH</em> checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
 
-<pre><code>$ gem install selenium-webdriver</code></pre>
+<pre><code class=shell>$ gem install selenium-webdriver</code></pre>
 
 
 <h3>Internet Explorer</h3>
 
 <p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows, you have to download the latest <a href="http://www.seleniumhq.org/download/">Internet Explorer Driver</a> and put the file into a folder that is in PATH. To find out which directories are in PATH, type <em>echo %PATH%</em> in command prompt.
 
-<pre><code>$ echo %PATH%
+<pre><code class=bat>$ echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</code></pre>
 
 <em>C:\Ruby200\bin</em> looks like a good place. Unzip `IEDriverServer` file and move `IEDriverServer.exe` there.
 
 This should open a new Internet Explorer window:
 
-<pre><code>
-System.setProperty("webdriver.ie.driver", /path/to/internetexplorerdriver);
-WebDriver driver = new InternetExplorerDriver();
-</code></pre>
-
-<pre><code class=rb>require "selenium-webdriver"
+<pre><code class=ruby>require "selenium-webdriver"
 driver = Selenium::WebDriver.for :internet_explorer</code></pre>
 
 <h2>Browser Navigation</h2>
@@ -463,7 +463,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
 
 <p>Consider the following document:
 
-<pre class=html><code>&lt;!doctype html&gt;
+<pre><code class=html>&lt;!doctype html&gt;
 &lt;meta charset=utf-8&gt;
 &lt;title&gt;Race Condition Example&lt;title&gt;
 
@@ -479,7 +479,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
 
 <p>The WebDriver instructions might look innocent enough:
 
-<pre class=py><code>driver.navigate("file:///race_condition.html")
+<pre><code class=python>driver.navigate("file:///race_condition.html")
 el = driver.find_element_by_tag_name("p")
 assert el.text == "Hello from JavaScript!"</code></pre>
 
@@ -539,7 +539,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  wait until the dynamically added element from the script
  has been added to the DOM:
 
-<pre class=py><code>from selenium.webdriver.support.ui import WebDriverWait
+<pre><code class=python>from selenium.webdriver.support.ui import WebDriverWait
 
 def document_initialised(driver):
     return driver.execute_script("return initialised")
@@ -563,7 +563,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  and because the wait utility ignores <em>no such element</em> errors by default,
  we can refactor our instructions to be more concise:
 
-<pre class=py><code>from selenium.webdriver.support.ui import WebDriverWait
+<pre><code class=python>from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
 el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"))
@@ -597,7 +597,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 
 <p>The wait lets you pass in an argument to override the timeout:
 
-<pre class=py><code>WebDriverWait(driver, timeout=3).until(some_condition)</code></pre>
+<pre><code class=python>WebDriverWait(driver, timeout=3).until(some_condition)</code></pre>
 
 
 <h4>Expected conditions</h4>
@@ -674,7 +674,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  The default setting is 0, meaning disabled.
  Once set, the implicit wait is set for the life of the session.
 
-<pre class=java><code>WebDriver driver = new FirefoxDriver();
+<pre><code class=java>WebDriver driver = new FirefoxDriver();
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.get("http://somedomain/url_that_delays_loading");
 WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</code></pre>
@@ -748,7 +748,7 @@ String text = alert.getText();
 //Press the OK button
 alert.accept();
  </code>
- <code class="py">
+ <code class="python">
 # Click the link to activate the alert
 driver.find_element_by_link_text("See an example alert").click()
 
@@ -788,7 +788,7 @@ String text = alert.getText();
 //Press the Cancel button
 alert.dismiss();
  </code>
- <code class="py">
+ <code class="python">
 # Click the link to activate the alert
 driver.find_element_by_link_text("See a sample confirm").click()
 
@@ -829,7 +829,7 @@ alert.sendKeys("Selenium");
 //Press the OK button
 alert.accept();
  </code>
- <code class="py">
+ <code class="python">
 # Click the link to activate the alert
 driver.find_element_by_link_text("See a sample prompt").click()
 
