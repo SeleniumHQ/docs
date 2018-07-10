@@ -66,15 +66,17 @@ nav#toc h1 {
  font-size: 100%;
  text-transform: none;
 }
-nav#toc h1 a { color: rgb(234,234,234); background-color: rgb(69,134,84); }
+nav#toc h1 a, .languageSelect>.chosen{ color: rgb(234,234,234); background-color: rgb(69,134,84); }
 nav#toc h1, nav#toc a { border-bottom: 1px solid rgb(224,224,224) }
-nav#toc a {
+nav#toc a, .languageSelect>span {
  background-color: white;
- display: block;
  padding: .5em .8em;
  color: rgba(68,68,68,.8)
 }
-nav#toc > a:hover {
+nav#toc a {
+ display: block;
+}
+nav#toc > a:hover, .languageSelect>span:not(.chosen):hover {
   background-color: #eceeed;
 }
 
@@ -148,6 +150,23 @@ pre {
  word-wrap: break-word;
 }
 pre code { font-size: 100% }
+
+.languageSelect>span {
+ position: relative;
+ top: -10px;
+ background-color: white;
+}
+.languageSelect>span.chosen{
+ padding: 8px;
+ border: 1px;
+}
+.languageSelect>span:not(.chosen) {
+ border: 1px solid rgb(234,234,234);
+}
+.languageSelect>span.missing:not(.chosen) {
+ background-color: rgb(134,84,69);
+ color: white;
+}
 
 ul li { margin-bottom: .8em }
 ul li ul li { margin-bottom: 0 }

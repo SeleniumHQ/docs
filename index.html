@@ -26,7 +26,7 @@
 
 <p>Selenium brings together browser vendors, engineers, and enthusiasts
  to further an open discussion around automation of the web platform.
- The project organises <a href="http://www.seleniumconf.org/">an annual conference</a>
+ The project organises <a href="http://seleniumconf.com/">an annual conference</a>
  to teach and nurture the community.
 
 <p>At the core of Selenium is <em><a href=wd.html>WebDriver</a></em>,
@@ -39,7 +39,7 @@
 
 driver = webdriver.Firefox()
 driver.get("http://google.com/?hl=en")
-search_box = driver.find_element_by_id("q")
+search_box = driver.find_element_by_name("q")
 search_box.send_keys("cheese")
 search_box.submit()</code></pre>
 
@@ -67,6 +67,7 @@ search_box.submit()</code></pre>
    <li><a href=quick.html#selenium_remote_control>Selenium Remote Control</a>
    <li><a href=quick.html#selenium_ide>Selenium IDE</a>
    <li><a href=quick.html#selenium_grid>Selenium Grid</a>
+   <li><a href=quick.html#selenium_html_runner>Selenium HTML Runner</a>
   </ul></li>
 </ul>
 </div>
@@ -133,7 +134,7 @@ search_box.submit()</code></pre>
    <li><a href=worst.html#captchas>Captchas</a>
    <li><a href=worst.html#file_downloads>File downloads</a>
    <li><a href=worst.html#http_response_codes>HTTP response codes</a>
-   <li><a href=worst.html#gmail_email_and_facebook_logins>GMail, email, and Facebook logins</a>
+   <li><a href=worst.html#gmail_email_and_facebook_logins>Gmail, email, and Facebook logins</a>
    <li><a href=worst.html#test_dependency>Test dependency</a>
    <li><a href=worst.html#performance_testing>Performance testing</a>
    <li><a href=worst.html#link_spidering>Link spidering</a>
@@ -151,8 +152,9 @@ search_box.submit()</code></pre>
   </ul></li>
  <li><a href=java.html#the_java_support_package>The Java support package</a>
   <ul>
+   <li><a href=java.html#browser_navigation>Browser navigation</a>
    <li><a href=java.html#working_with_colours>Working with colours</a>
-   <li><a href=java.html#working_with>Working with select elements</a>
+   <li><a href=java.html#working_with_select_elements>Working with select elements</a>
    <li><a href=java.html#mouse_and_keyboard_actions_in_detail>Mouse and keyboard actions in detail</a>
    <li><a href=java.html#working_with_web_elements>Working with web elements</a>
   </ul></li>

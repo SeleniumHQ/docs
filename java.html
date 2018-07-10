@@ -10,6 +10,25 @@
 
 <h1>The Java support package</h1>
 
+<h2>Browser navigation</h2>
+
+<p>There are commands for various webpage loading actions:
+
+<pre><code class=java>// Navigate to a URL (both of the statements below are
+// functionally equivalent).
+driver.get("https://www.google.com");
+driver.navigate().to("https://www.google.com");
+
+// Go forward one page in the browser (if you're not on the
+// last page that was viewed).
+driver.navigate().forward();
+
+// Go back one page in the browser (if you're not on the
+// first page that was viewed).
+driver.navigate().back();
+
+// Refresh the current page.
+driver.navigate().refresh();</code></pre>
 
 <h2>Working with colours</h2>
 
@@ -69,10 +88,9 @@ Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssVal
 assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
 assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");</code></pre>
 
-<p>Colours are no longer a problem.
+<p>Colours are no longer a problem.</p>
 
-
-<h2 class=working_with_select_elements>Working with <code>select</code> elements</h2>
+<h2>Working with <code>select</code> elements</h2>
 
 <p>Select elements can require quite a bit of boiler plate code to automate.
  To reduce this and make your tests cleaner, there is a
@@ -142,7 +160,7 @@ selectObject.deselectAll();</code></pre>
 
 <pre><code class=java>Boolean doesThisAllowMultipleSelections = selectObject.isMultiple();</code></pre>
 
-<h2 class=mouse_and_keyboard_actions_in_detail>Mouse and keyboard actions in detail</h2>
+<h2>Mouse and keyboard actions in detail</h2>
 <p>Suppose you have an arbitrary web element <strong>e</strong>:</p>
 
 <pre><code class=java>WebElement e = driver.findElement(By.id("testElement"));</code></pre>
@@ -171,4 +189,4 @@ actions.perform();</code></pre>
 
 <pre><code class=java>e.clear();</code></pre>
 
-<h2 class=working_with_webelements>Working with web elements</h2>
+<h2>Working with web elements</h2>
