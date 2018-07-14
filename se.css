@@ -146,6 +146,7 @@ pre code { font-size: 100% }
  position: relative;
  top: -10px;
  background-color: white;
+ cursor: pointer;
 }
 .languageSelect>span.chosen{
  padding: 8px;
