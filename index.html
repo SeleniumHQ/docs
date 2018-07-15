@@ -41,18 +41,19 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static java.util.concurrent.TimeUnit.SECONDS;
+import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 public class HelloSelenium {
 
     public static void main(String[] args) {
         WebDriver driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         try {
             driver.get("http://google.com/ncr");
-            driver.findElement(By.name("q")).sendKeys("cheese" + Keys.RETURN);
-            WebElement firstResult = driver.findElement(By.cssSelector("h3>a"));
+            driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
+            WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>a")));
             System.out.println(firstResult.getText());
         } finally {
             driver.quit();
@@ -60,14 +61,16 @@ public class HelloSelenium {
     }
 }</code>
  <code class=python>from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Firefox()
-driver.implicitly_wait(10)
 try:
     driver.get("http://google.com/ncr")
     driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
-    first_result = driver.find_element_by_css_selector("h3>a")
+    first_result = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
     print(first_result.text)
 finally:
     driver.quit()</code>
@@ -75,11 +78,10 @@ finally:
 
 (async function example() {
     let driver = await new Builder().forBrowser('firefox').build();
-    driver.manage().setTimeouts({implicit:10000});
     try {
         await driver.get('http://www.google.com/ncr');
         await driver.findElement(By.name('q')).sendKeys('cheese', Key.RETURN);
-        let firstResult = await driver.findElement(By.css('h3>a'));
+        let firstResult = await driver.wait(until.elementLocated(By.css('h3>a')),10000);
         console.log(await firstResult.getText());
     } finally {
         await driver.quit();
