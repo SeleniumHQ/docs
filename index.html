@@ -72,8 +72,51 @@ with webdriver.Firefox() as driver:
     driver.get("http://google.com/ncr")
     driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
     first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
-    print(first_result.text)
-</code>
+    print(first_result.text)</code>
+ <code class=cs>using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
+
+namespace Selenium.Docs
+{
+    [TestClass]
+    public class HelloSelenium
+    {
+        private static IWebDriver driver;
+
+        [TestMethod]
+        public void Example()
+        {
+            driver = new FirefoxDriver();
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            driver.Navigate().GoToUrl("http://www.google.com/ncr");
+            driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Return);
+            IWebElement firstResult = wait.Until(wd => wd.FindElement(By.CssSelector("h3>a")));
+            Console.WriteLine(firstResult.Text);
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            driver.Quit();
+        }
+    }
+}</code>
+ <code class=ruby>require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :firefox
+wait = Selenium::WebDriver::Wait.new(timeout: 10)
+
+begin
+    driver.get 'http://google.com'
+    driver.find_element(name: 'q').send_keys ['cheese', :return]
+    first_result = wait.until { driver.find_element(css: 'h3>a') }
+    print first_result.text
+ensure
+    driver.quit
+end</code>
  <code class=javascript>const {Builder, By, Key, until} = require('selenium-webdriver');
 
 (async function example() {
