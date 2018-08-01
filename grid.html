@@ -264,3 +264,44 @@
     "maxSessions": 5
   }
 }</code></pre>
+
+<h3>Specifying the Port</h3>
+
+<p>The default TCP/IP port used by the hub is 4444.If another application on your computer is already using this port
+or if you already have a Selenium-Server running, you’ll see the following message in the log output.  </p>
+
+<pre><code>
+10:56:35.490 WARN - Failed to start: SocketListener0@0.0.0.0:4444
+Exception in thread "main" java.net.BindException: Selenium is already running on port 4444. Or some other service is.
+</code></pre>
+
+<p>If this occurs you can either shutdown the other process that is using port 4444, or you can tell Selenium-Grid to use a different port for its hub. 
+Use the -port option for changing the port used by the hub.</p>
+
+<pre><code>  java -jar selenium-server-standalone-<version>.jar -role hub -port <port> </code></pre> 
+
+Ex:
+<pre><code> java -jar selenium-server-standalone-3.13.0.jar -role hub -port 4441 </code></pre>
+
+<p>However if you want to check what process is using port 4444 or to see all other ports used by other running programs on your machine you can use the command. </p>
+<pre><code> netstat -a  </code> </pre>
+
+<p>Above commad will display the process ID along with the port and it will work on Unix/Linux, MacOS and Windows. Although additional options beyond -a may be required. 
+ In Unix you may ‘grep’ the output (use a pipe) from the port number to only display those records you’re concerned with.
+
+Specify unallocated port value to -port argument after refering above results</p>
+
+
+<h3>Common Errors</h3>
+<h5>Unable to acess the jarfile</h5>
+<pre><code>Unable to access jarfile selenium-server-standalone-3.13.0.jar</code></pre>
+
+<p>This error can occur when starting up either a hub or node. This means Java cannot find the selenium-server jar file. Either run the command from the directory where the selenium-server-XXXX.jar file is stored, or specify an explicit path to the jar. </p>
+
+<h3>Troubleshooting</h3>
+<p> For advance troubleshooting you can specify log file to log system messeges like "INFOR" , "ERROR".
+For that start Selenium GRID hub or node with -log argument. Please see the below example
+</p>
+<pre><code>java -jar selenium-server-standalone-3.13.0.jar -role hub -log log.txt</code></pre>
+
+<p>Use your favorite text editor to open log file (log.txt in above example) to find "ERROR" logs if you get issues</p>
