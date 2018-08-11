@@ -394,7 +394,14 @@ driver.get 'https://www.seleniumhq.org'
 #Longer way
 driver.navigate.to 'https://seleniumhq.github.io/docs/'
  </code>
- <code class=cs>this.driver.Navigate().GoToUrl(@"http://google.com");</code>
+ <code class=cs>driver.Navigate().GoToUrl(@"http://google.com");</code>
+ <code class=javascript>
+//Convenient
+await driver.get('https://www.seleniumhq.org');
+
+//Longer way
+await driver.navigate().to('https://seleniumhq.github.io/docs/');
+ </code>
 </pre>
 
 <h3>Get Current URL</h3>
@@ -405,7 +412,8 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
  <code class=java>driver.getCurrentUrl();</code>
  <code class=python>driver.current_url</code>
  <code class=ruby>driver.current_url</code>
- <code class=cs>this.driver.Url;</code>
+ <code class=cs>driver.Url;</code>
+ <code class=javascript>await driver.getCurrentUrl();</code>
 </pre>
 
 <h3>Back</h3>
@@ -414,7 +422,8 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
  <code class=java>driver.navigate().back();</code>
  <code class=python>driver.back()</code>
  <code class=ruby>driver.navigate.back</code>
- <code class=cs>this.driver.Navigate().Back();</code>
+ <code class=cs>driver.Navigate().Back();</code>
+ <code class=javascript>await driver.navigate().back();</code>
 </pre>
 
 <h3>Forward</h3>
@@ -423,7 +432,8 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=java>driver.navigate().forward();</code>
   <code class=python>driver.forward()</code>
   <code class=ruby>driver.navigate.forward</code>
-  <code class=cs>this.driver.Navigate().Forward();</code>
+  <code class=cs>driver.Navigate().Forward();</code>
+  <code class=javascript>await driver.navigate().forward();</code>
  </pre>
 
 <h3>Refresh</h3>
@@ -432,7 +442,8 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=java>driver.navigate().refresh();</code>
   <code class=python>driver.refresh()</code>
   <code class=ruby>driver.navigate.refresh</code>
-  <code class=cs>this.driver.Navigate().Refresh();</code>
+  <code class=cs>driver.Navigate().Refresh();</code>
+  <code class=javascript>await driver.navigate().refresh();</code>
  </pre>
 
 <h3>Get Title</h3>
@@ -441,7 +452,8 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=java>driver.getTitle();</code>
   <code class=python>driver.title</code>
   <code class=ruby>driver.title</code>
-  <code class=cs>this.driver.Title;</code>
+  <code class=cs>driver.Title;</code>
+  <code class=javascript>await driver.getTitle();</code>
  </pre>
 
 <h2>Waits</h2>
