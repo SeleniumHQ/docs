@@ -444,6 +444,276 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=cs>this.driver.Title;</code>
  </pre>
 
+<h2>Windows and tabs</h2>
+<p>WebDriver doesn't make the distinction between windows and tabs.  If
+ your site opens a new tab or window, Selenium will let you work with it
+ using a window handle.  Each window has a unique identifier which remains
+ persistent in a single session. You can get the window handle of the
+ current window by using:</p>
+<pre>
+ <code class=java>driver.getWindowHandle();</code>
+ <code class=python>driver.current_window_handle</code>
+ <code class=cs>driver.CurrentWindowHandle</code>
+ <code class=ruby>driver.window_handle</code>
+ <code class=javascript>await driver.getWindowHandle();</code>
+</pre>
+<h3>Switching windows or tabs</h3>
+<p>Clicking a link which opens in a <a href="https://seleniumhq.github.io/docs/" target="_blank">
+ new window</a> will visible focus the new window or tab on screen, but
+ WebDriver will not know which window the Operating System considers
+ active.  To work with the new window you will need to switch to it.  If
+ you have only two tabs or windows open, and you know which window you
+ start with, by the process of elimination you can loop over both windows
+ or tabs that WebDriver can see, and switch to the one which is not the
+ original.</p>
+<pre>
+ <code class=java>//Store the ID of the original window
+String originalWindow = driver.getWindowHandle();
+
+//Check we don't have other windows open already
+assert driver.getWindowHandles().size() == 1;
+
+//Click the link which opens in a new window
+driver.findElement(By.linkText("new window")).click();
+
+//Wait for the new window or tab
+wait.until(numberOfWindowsToBe(2));
+
+//Loop through until we find a new window handle
+for (String windowHandle : driver.getWindowHandles()) {
+    if(!originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle);
+        break;
+    }
+}
+
+//Wait for the new tab to finish loading content
+wait.until(titleIs("Selenium documentation"));</code>
+ <code class=python>#Store the ID of the original window
+original_window = driver.current_window_handle
+
+#Check we don't have other windows open already
+assert len(driver.window_handles) == 1
+
+#Click the link which opens in a new window
+driver.find_element(By.LINK_TEXT, "new window").click()
+
+#Wait for the new window or tab
+wait.until(EC.number_of_windows_to_be(2))
+
+#Loop through until we find a new window handle
+for window_handle in driver.window_handles:
+    if window_handle != original_window:
+        driver.switch_to.window(window_handle)
+        break
+
+#Wait for the new tab to finish loading content
+wait.until(EC.title_is("Selenium documentation"))</code>
+ <code class=cs>//Store the ID of the original window
+String originalWindow = driver.CurrentWindowHandle;
+
+//Check we don't have other windows open already
+Assert.AreEqual(driver.WindowHandles.Count, 1);
+
+//Click the link which opens in a new window
+driver.FindElement(By.LinkText("new window")).Click();
+
+//Wait for the new window or tab
+wait.Until(wd => wd.WindowHandles.Count == 2);
+
+//Loop through until we find a new window handle
+foreach(String window in driver.WindowHandles)
+{
+    if(originalWindow != window)
+    {
+        driver.SwitchTo().Window(window);
+        break;
+    }
+}
+//Wait for the new tab to finish loading content
+wait.Until(wd => wd.Title == "Selenium documentation");</code>
+ <code class=ruby>#Store the ID of the original window
+original_window = driver.window_handle
+
+#Check we don't have other windows open already
+assert(driver.window_handles.length == 1, 'Expected one window')
+
+#Click the link which opens in a new window
+driver.find_element(link: 'new window').click
+
+#Wait for the new window or tab
+wait.until { driver.window_handles.length == 2 }
+
+#Loop through until we find a new window handle
+driver.window_handles.each do |handle|
+    if handle != original_window
+        driver.switch_to.window handle
+        break
+    end
+end
+
+#Wait for the new tab to finish loading content
+wait.until { driver.title == 'Selenium documentation'}
+ </code>
+ <code class=javascript>//Store the ID of the original window
+const originalWindow = await driver.getWindowHandle();
+
+//Check we don't have other windows open already
+assert((await driver.getAllWindowHandles()).length === 1);
+
+//Click the link which opens in a new window
+await driver.findElement(By.linkText('new window')).click();
+
+//Wait for the new window or tab
+await driver.wait(function() {
+    return driver.getAllWindowHandles().then(function(windows) {
+        return windows.length === 2;
+    });
+}, 10000);
+
+//Loop through until we find a new window handle
+const windows = (await driver.getAllWindowHandles());
+for (let i = 0; i < windows.length; i++) {
+    if(windows[i]!==originalWindow) {
+        await driver.switchTo().window(windows[i]);
+    }
+}
+
+//Wait for the new tab to finish loading content
+await driver.wait(until.titleIs('Selenium documentation'), 10000);</code>
+</pre>
+
+<h3>Closing a window or tab</h3>
+<p>When you are finished with a window or tab <em>and</em> it is not the
+ last window or tab open in your browser, you should close it and switch
+ back to the window you were using previously.  Assuming you followed the
+ code sample in the previous section you will have the previous window
+ handle stored in a variable. Put this together and you will get:</p>
+<pre>
+ <code class=java>//Close the tab or window
+driver.close();
+
+//Switch back to the old tab or window
+driver.switchTo().window(originalWindow);</code>
+ <code class=python>#Close the tab or window
+driver.close()
+
+#Switch back to the old tab or window
+driver.switch_to.window(original_window)</code>
+ <code class=cs>//Close the tab or window
+driver.Close();
+
+//Switch back to the old tab or window
+driver.SwitchTo().Window(originalWindow);</code>
+ <code class=ruby>#Close the tab or window
+driver.close
+
+#Switch back to the old tab or window
+driver.switch_to.window original_window</code>
+ <code class=javascript>//Close the tab or window
+await driver.close();
+
+//Switch back to the old tab or window
+await driver.switchTo().window(originalWindow);
+ </code>
+</pre>
+<p>Forgetting to switch back to another window handle after closing a
+ window will leave WebDriver executing on the now closed page, and will
+ trigger a <strong>No Such Window Exception</strong>.</p>
+<p>If you didn't store
+ your previous window handle, you can alternatively switch back to the
+ first handle using:</p>
+<pre>
+ <code class=java>driver.switchTo().window(driver.getWindowHandles().iterator().next());</code>
+ <code class=python>driver.switch_to.window(driver.window_handles[0])</code>
+ <code class=cs>driver.SwitchTo().Window(driver.WindowHandles[0]);</code>
+ <code class=ruby>driver.switch_to.window driver.window_handles[0]</code>
+ <code class=javascript>const allWindows= await driver.getAllWindowHandles();
+await driver.switchTo().window(allWindows[0]);</code>
+</pre>
+
+<h3>Quiting the browser at the end of a session</h3>
+<p>When you are finished with the browser session you should call quit,
+ instead of close:
+<pre>
+ <code class=java>driver.quit();</code>
+ <code class=python>driver.quit()</code>
+ <code class=cs>driver.Quit();</code>
+ <code class=ruby>driver.quit</code>
+ <code class=javascript>await driver.quit();</code>
+</pre>
+<p>Quit will:
+ <ul>
+  <li>Close all the windows and tabs associated with that WebDriver
+   session</li>
+  <li>The browser process</li>
+  <li>The background driver process</li>
+  <li>Notify Selenium Grid that the browser is no longer in use so it can
+   be used by another session (if you are using Selenium Grid).</li>
+ </ul>
+<p>Failure to call quit will leave extra background processes and ports
+ running on your machine which could cause you problems later.</p>
+<p>Some test frameworks offer methods and annotations which you can hook
+ into to tear down at the end of a test.</p>
+<pre>
+ <code class=java>/**
+ * Example using JUnit
+ * http://junit.sourceforge.net/javadoc/org/junit/AfterClass.html
+ */
+@AfterClass
+public static void tearDown() {
+    driver.quit();
+}</code>
+ <code class=cs>/*
+    Example using Visual Studio's UnitTesting
+    https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
+*/
+[TestCleanup]
+public void TearDown()
+{
+    driver.Quit();
+}</code>
+</pre>
+<p>If not running WebDriver in a test context, you may consider using
+ try  / finally which is offered by most languages so that an exception
+ will still clean up the WebDriver session.</p>
+<pre>
+ <code class=java>try {
+    //WebDriver code here...
+} finally {
+    driver.quit();
+}</code>
+ <code class=python>try:
+    #WebDriver code here...
+finally:
+    driver.quit()</code>
+ <code class=cs>try {
+    #WebDriver code here...
+} finally {
+    driver.Quit();
+}</code>
+ <code class=ruby>begin
+    #WebDriver code here...
+ensure
+    driver.quit
+end</code>
+ <code class=javascript>try {
+    //WebDriver code here...
+} finally {
+    await driver.quit();
+}</code>
+</pre>
+<p>Python&apos;s WebDriver now supports the python context manager,
+ which when using the with keyword can automatically quit the driver at
+ the end of execution.</p>
+<pre>
+ <code class=python always-show>with webdriver.Firefox() as driver:
+    #WebDriver code here...
+
+#WebDriver will automatically quit after indentation</code>
+</pre>
+
+
 <h2>Waits</h2>
 
 <p>WebDriver can generally be said to have a blocking API.
