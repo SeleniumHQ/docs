@@ -201,9 +201,32 @@ Only local connections are allowed.</samp></pre>
 <p>To instantiate a Chrome/Chromium session, you can do the following:
 
 <pre>
- <code class=java>WebDriver driver = new ChromeDriver();</code>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+WebDriver driver = new ChromeDriver();</code>
+ <code class=python>#Simple assignment
+from selenium import webdriver
+
+driver = webdriver.Chrome()</code>
+ <code class=python>#Or use the context manager
+from selenium import webdriver
+
+with webdriver.Chrome() as driver:
+    #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+IWebDriver driver = new ChromeDriver();</code>
  <code class=ruby>require "selenium-webdriver"
+
 driver = Selenium::WebDriver.for :chrome</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+    let driver = await new Builder().forBrowser('chrome').build();
+    //your code inside this block
+})();</code>
 </pre>
 
 <p>Remember that you have to set the path to the chromedriver executable.
@@ -230,9 +253,32 @@ driver = Selenium::WebDriver.for :chrome</code>
  instantiate Firefox in the same way as Selenium 2:
 
 <pre>
- <code class=java>WebDriver driver = new FirefoxDriver();</code>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Firefox.FirefoxDriver;
+
+WebDriver driver = new FirefoxDriver();</code>
+ <code class=python>#Simple assignment
+from selenium import webdriver
+
+driver = webdriver.Firefox()</code>
+ <code class=python>#Or use the context manager
+from selenium import webdriver
+
+with webdriver.Firefox() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+
+IWebDriver driver = new FirefoxDriver();</code>
  <code class=ruby>require "selenium-webdriver"
+
 driver = Selenium::WebDriver.for :firefox</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('firefox').build();
+   //your code inside this block
+})();</code>
 </pre>
 
 
@@ -262,7 +308,34 @@ driver = Selenium::WebDriver.for :firefox</code>
  contains links to all the available binaries. Bugs against the EdgeDriver implementation can be raised with
  <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver">Microsoft</a>.  If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft offer free VMs for testers on the <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/"> Edge Developer site</a>.
 
-<pre><code class=java>WebDriver driver = new EdgeDriver();</code></pre>
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+WebDriver driver = new EdgeDriver();</code>
+<code class=python>#Simple assignment
+from selenium import webdriver
+
+driver = webdriver.Edge()</code>
+<code class=python>#Or use the context manager
+from selenium import webdriver
+
+with webdriver.Edge() as driver:
+   #your code inside this indent</code>
+<code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Edge;
+
+IWebDriver driver = new EdgeDriver();</code>
+<code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :edge</code>
+<code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('MicrosoftEdge').build();
+   //your code inside this block
+})();</code>
+</pre>
 
 <p>If Edge driver is not present in your path, you can set the path using the following line:
 
@@ -275,7 +348,34 @@ driver = Selenium::WebDriver.for :firefox</code>
   Microsoft considers current</a>. Older releases may work, but will be unsupported.
 <p>While the Selenium project provides binaries for both the 32-bit and 64-bit versions of Internet Explorer, there are some <a href="http://jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html">limitations</a> with Internet Explorer 10 &amp; 11 with the 64-bit driver, but using the 32-bit driver continues to work well. It should be noted that as Internet Explorer preferences are saved against the logged in user's account, some <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration">additional setup is required</a>.
 
-<pre><code class=java>WebDriver driver = new InternetExplorerDriver();</code></pre>
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+WebDriver driver = new InternetExplorerDriver();</code>
+ <code class=python>#Simple assignment
+from selenium import webdriver
+
+driver = webdriver.Ie()</code>
+ <code class=python>#Or use the context manager
+from selenium import webdriver
+
+with webdriver.Ie() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
+
+IWebDriver driver = new InternetExplorerDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :internet_explorer</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('internet explorer').build();
+   //your code inside this block
+})();</code>
+</pre>
 
 <p>If Internet Explorer driver is not present in your path, you can set the path using the following line:
 
@@ -295,8 +395,25 @@ Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/e
 <p>Instantiating a driver session is similar to Firefox and Chromium:
 
 <pre>
- <code class=java>WebDriver driver = new OperaDriver();</code>
- <code class=ruby>require "selenium-webdriver"
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.opera.OperaDriver;
+
+WebDriver driver = new OperaDriver();</code>
+<code class=python>#Simple assignment
+from selenium import webdriver
+
+driver = webdriver.Opera()</code>
+<code class=python>#Or use the context manager
+from selenium import webdriver
+
+with webdriver.Opera() as driver:
+   #your code inside this indent</code>
+<code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Opera;
+
+IWebDriver driver = new OperaDriver();</code>
+<code class=ruby>require "selenium-webdriver"
+
 driver = Selenium::WebDriver.for :opera</code>
 </pre>
 
@@ -316,7 +433,34 @@ driver = Selenium::WebDriver.for :opera</code>
 </ol>
 
 <p>You can then start a driver session using:
-<pre><code class=java>WebDriver driver = new SafariDriver();</code></pre>
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+WebDriver driver = new SafariDriver();</code>
+<code class=python>#Simple assignment
+from selenium import webdriver
+
+driver = webdriver.Safari()</code>
+ <code class=python>#Or use the context manager
+from selenium import webdriver
+
+with webdriver.Safari() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Safari;
+
+IWebDriver driver = new SafariDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :safari</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('safari').build();
+   //your code inside this block
+})();</code>
+</pre>
 
 <p>Those looking to automate Safari on iOS should look to the
  <a href="http://appium.io/">Appium project</a>. Whilst Safari was previously
