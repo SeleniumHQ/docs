@@ -30,7 +30,7 @@
  but will for example not manage your infrastructure
  and might not suit your specific needs.
 
-<h2>Main purpose and functionality of a Selenium Grid</h2>
+<h2>Purposes and main functionality of a Selenium Grid</h2>
 <dl>
     <dt>Central entry point for all tests</dt>
     <dt>Management and control of the nodes / environment where the browsers run on</dt>
@@ -49,12 +49,12 @@
     <ul>
         <li>Intermediary and manager</li>
         <li>Accepts requests to run tests</li>
-        <li>Takes instruction from client and executes them remotely on the nodes</li>
+        <li>Takes instructions from client and executes them remotely on the nodes</li>
         <li>Manages threads</li>
     </ul>
 
     <p>A <em>hub</em> is a central point where all your tests are sent to.
-        Each grid consists of exactly one hub. The hub needs to be reachable from the
+        Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the
         respective clients (i.e. CI server, Developer machine etc.)
         The hub will connect one or more nodes
         that tests will be delegated to.
@@ -62,7 +62,7 @@
 
     <dt>Nodes</dt>
     <ul>
-        <li>this is where the browsers live</li>
+        <li>This is where the browsers live</li>
         <li>Registers itself to the hub and commincates its capabilities</li>
         <li>Receives requests from the hub and executes them</li>
     </ul>
