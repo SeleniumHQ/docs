@@ -899,6 +899,15 @@ alert.accept()
 
 <h2>Web elements</h2>
 
+<p>Represents a DOM element. WebElements can be found by searching from the
+ document root using a WebDriver instance, or by searching under another
+ WebElement:
+
+<pre><code class=javascript>driver.get('http://www.google.com')
+    .then(() =>   driver.findElement(By.tagName('form')) )
+    .then((searchForm) => searchForm.findElement(By.name('q')) )
+    .then((searchBox) => searchBox.sendKeys('webdriver') );</code></pre>
+
 <h2>Keyboard</h2>
 
 <h2>Mouse</h2>

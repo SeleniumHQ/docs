@@ -37,6 +37,24 @@
 
 <h2>Driver specific capabilities</h2>
 
+<h3>Firefox</h3>
+<h4>Define Capabilities using FirefoxOptions</h4>
+<p>FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.</p>
+<pre><code class=java>
+FirefoxOptions options = new FirefoxOptions();
+options.addPreference("network.proxy.type", 0);
+driver = new RemoteWebDriver(options);
+</code></pre>
+
+<h4>Setting a custom profile</h4>
+<p>It is possible to create a custom profile for Firefox as demonstrated below.</p>
+<pre><code class=java>
+FirefoxProfile profile = new FirefoxProfile();
+FirefoxOptions options = new FirefoxOptions();
+options.setProfile(profile);
+driver = new RemoteWebDriver(options);
+</code></pre>
+
 <h3>Internet Explorer</h3>
 
 <h4>fileUploadDialogTimeout</h4>
