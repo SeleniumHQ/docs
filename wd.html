@@ -903,8 +903,12 @@ alert.accept()
  document root using a WebDriver instance, or by searching under another
  WebElement:
 
-<pre><code class=javascript>driver.get('http://www.google.com')
-    .then(() =>   driver.findElement(By.tagName('form')) )
+<pre><code class=java>driver.get("http://www.google.com");
+WebElement searchForm = driver.findElement(By.tagName("form"));
+WebElement searchBox = searchForm.findElement(By.name("q"));
+searchBox.sendKeys("webdriver");</code>
+<code class=javascript>driver.get('http://www.google.com')
+    .then(() => driver.findElement(By.tagName('form')) )
     .then((searchForm) => searchForm.findElement(By.name('q')) )
     .then((searchBox) => searchBox.sendKeys('webdriver') );</code></pre>
 
