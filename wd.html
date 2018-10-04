@@ -1441,21 +1441,21 @@ alert.accept()
  WebElement:
 
 <pre>
-  <code class=javascript>
-driver.get('http://www.google.com')
-  .then(() =>   driver.findElement(By.tagName('form')) )
-  .then((searchForm) => searchForm.findElement(By.name('q')) )
-  .then((searchBox) => searchBox.sendKeys('webdriver') );
-  </code>
-  <code class=python>
-driver = Firefox()
+<code class=java>driver.get("http://www.google.com");
+WebElement searchForm = driver.findElement(By.tagName("form"));
+WebElement searchBox = searchForm.findElement(By.name("q"));
+searchBox.sendKeys("webdriver");
+</code><code class=python>driver = Firefox()
 driver.get("http://www.google.com")
 search_form = driver.find_element_by_tag_name("form")
 search_box = search_form.find_element_by_name("q")
 search_box.send_keys("webdriver")
-  </code>
+</code><code class=javascript>driver.get('http://www.google.com')
+  .then(() =>   driver.findElement(By.tagName('form')) )
+  .then((searchForm) => searchForm.findElement(By.name('q')) )
+  .then((searchBox) => searchBox.sendKeys('webdriver') );</code>
 </pre>
-
+    
 <h2>Keyboard</h2>
 
 <h2>Mouse</h2>
