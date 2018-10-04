@@ -511,7 +511,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
 
 <pre><code class=html>&lt;!doctype html&gt;
 &lt;meta charset=utf-8&gt;
-&lt;title&gt;Race Condition Example&lt;title&gt;
+&lt;title&gt;Race Condition Example&lt;/title&gt;
 
 &lt;script&gt;
   var initialised = false;
@@ -525,7 +525,10 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
 
 <p>The WebDriver instructions might look innocent enough:
 
-<pre><code class=python>driver.navigate("file:///race_condition.html")
+<pre><code class=java>driver.get("file:///race_condition.html");
+WebElement el = driver.findElement(By.tagName("p"));
+Assert.assertEquals("Hello from JavaScript!", el.getText());</code>
+<code class=python>driver.navigate("file:///race_condition.html")
 el = driver.find_element_by_tag_name("p")
 assert el.text == "Hello from JavaScript!"</code></pre>
 
@@ -585,7 +588,19 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  wait until the dynamically added element from the script
  has been added to the DOM:
 
-<pre><code class=python>from selenium.webdriver.support.ui import WebDriverWait
+<pre><code class=java>ExpectedCondition initialised = new ExpectedCondition<Boolean>() {
+  public Boolean apply(WebDriver driver) {
+    JavascriptExecutor js = (JavascriptExecutor)driver;
+    return (Boolean) js.executeScript("return initialised");
+  }
+};
+
+driver.get("file:///race_condition.html");
+WebDriverWait wait = new WebDriverWait(driver, 10);
+wait.until(initialised);
+WebElement el = driver.findElement(By.tagName("p"));
+Assert.assertEquals("Hello from JavaScript!", el.getText());</code>
+<code class=python>from selenium.webdriver.support.ui import WebDriverWait
 
 def document_initialised(driver):
     return driver.execute_script("return initialised")
@@ -609,7 +624,15 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  and because the wait utility ignores <em>no such element</em> errors by default,
  we can refactor our instructions to be more concise:
 
-<pre><code class=python>from selenium.webdriver.support.ui import WebDriverWait
+<pre><code class=java>driver.get("file:///race_condition.html");
+WebDriverWait wait = new WebDriverWait(driver, 10);
+WebElement el = wait.until(new ExpectedCondition<WebElement>() {
+  public WebElement apply(WebDriver driver) {
+    return driver.findElement(By.tagName("p"));
+  }
+});
+Assert.assertEquals("Hello from JavaScript!", el.getText());</code>
+<code class=python>from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
 el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"))
@@ -903,8 +926,12 @@ alert.accept()
  document root using a WebDriver instance, or by searching under another
  WebElement:
 
-<pre><code class=javascript>driver.get('http://www.google.com')
-    .then(() =>   driver.findElement(By.tagName('form')) )
+<pre><code class=java>driver.get("http://www.google.com");
+WebElement searchForm = driver.findElement(By.tagName("form"));
+WebElement searchBox = searchForm.findElement(By.name("q"));
+searchBox.sendKeys("webdriver");</code>
+<code class=javascript>driver.get('http://www.google.com')
+    .then(() => driver.findElement(By.tagName('form')) )
     .then((searchForm) => searchForm.findElement(By.name('q')) )
     .then((searchBox) => searchBox.sendKeys('webdriver') );</code></pre>
 
