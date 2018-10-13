@@ -224,7 +224,7 @@
       "platform": "WINDOWS",
       "maxInstances": 5,
       "firefox_binary": "",
-      "cleanSession": true 
+      "cleanSession": true
     },
     {
       "browserName": "chrome",
@@ -236,7 +236,7 @@
       "browserName": "internet explorer",
       "maxInstances": 1,
       "platform": "WINDOWS",
-      "webdriver.ie.driver": "C:/Program Files (x86)/Internet Explorer/iexplore.exe" 
+      "webdriver.ie.driver": "C:/Program Files (x86)/Internet Explorer/iexplore.exe"
     }
   ],
   "configuration": {
@@ -251,3 +251,16 @@
     "maxSessions": 5
   }
 }</code></pre>
+
+<h3>Warning</h3>
+
+<p>The Selenium Grid must be protected from external access using appropriate
+  firewall permissions.
+<p>Failure to protect your grid could result in one or more of the following occurring:
+  <ul>
+    <li>You provide open access to your grid infrastructure</li>
+    <li>You allow 3rd parties to access internal web applications and files</li>
+    <li>You allow 3rd parties to run custom binaries</li>
+  </ul>
+
+ <p>See this blog post on <a href="https://labs.detectify.com">Detectify</a> which gives a good overview of how a publicly exposed grid could be misused:  <a href="https://labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/">Don't Leave your Grid Wide Open</a>.
