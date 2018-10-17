@@ -631,18 +631,8 @@ await driver.switchTo().window(originalWindow);
 </pre>
 <p>Forgetting to switch back to another window handle after closing a
  window will leave WebDriver executing on the now closed page, and will
- trigger a <strong>No Such Window Exception</strong>.</p>
-<p>If you didn't store
- your previous window handle, you can alternatively switch back to the
- first handle using:</p>
-<pre>
- <code class=java>driver.switchTo().window(driver.getWindowHandles().iterator().next());</code>
- <code class=python>driver.switch_to.window(driver.window_handles[0])</code>
- <code class=cs>driver.SwitchTo().Window(driver.WindowHandles[0]);</code>
- <code class=ruby>driver.switch_to.window driver.window_handles[0]</code>
- <code class=javascript>const allWindows= await driver.getAllWindowHandles();
-await driver.switchTo().window(allWindows[0]);</code>
-</pre>
+ trigger a <strong>No Such Window Exception</strong>. You must switch
+ back to a valid window handle in order to continue execution.</p>
 
 <h3>Quiting the browser at the end of a session</h3>
 <p>When you are finished with the browser session you should call quit,
