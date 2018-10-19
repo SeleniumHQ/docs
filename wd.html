@@ -248,6 +248,8 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
  <code class=java>WebDriver driver = new ChromeDriver();</code>
+ <code class=python>from selenium.webdriver import Chrome
+driver = Chrome()</code>
  <code class=ruby>driver = Selenium::WebDriver.for :chrome</code>
 </pre>
 
@@ -256,6 +258,7 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
  <code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code>
+ <code class=python>Chrome(executable_path='/path/to/chromedriver')</code>
  <code class=ruby>Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"</code>
 </pre>
 
@@ -277,6 +280,8 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
  <code class=java>WebDriver driver = new FirefoxDriver();</code>
+ <code class=python>from selenium.webdriver import Firefox
+driver = Firefox()</code>
  <code class=ruby>driver = Selenium::WebDriver.for :firefox</code>
 </pre>
 
@@ -286,6 +291,7 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
   <code class=java>System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");</code>
+  <code class=python>Firefox(executable_path='/path/to/geckodriver')</code>
   <code class=ruby>Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"</code>
 </pre>
 
@@ -312,6 +318,8 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
   <code class=java>WebDriver driver = new EdgeDriver();</code>
+  <code class=python>from selenium.webdriver import Edge
+driver = Edge()</code>
   <code class=ruby>driver = Selenium::WebDriver.for :edge</code>
 </pre>
 
@@ -319,6 +327,7 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
   <code class=java>System.setProperty("webdriver.edge.driver", "C:\path\to\MicrosoftWebDriver.exe");</code>
+  <code class=python>Edge(executable_path='/path/to/MicrosoftWebDriver.exe')</code>
   <code class=ruby>Selenium::WebDriver::Edge.driver_path = "C:\path\to\MicrosoftWebDriver.exe"</code>
 </pre>
 
@@ -331,6 +340,8 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
   <code class=java>WebDriver driver = new InternetExplorerDriver();</code>
+  <code class=python>from selenium.webdriver import Ie
+driver = Ie()</code>
   <code class=ruby>driver = Selenium::WebDriver.for :ie</code>
 </pre>
 
@@ -338,6 +349,7 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
   <code class=java>System.setProperty("webdriver.ie.driver", "C:\path\to\IEDriver.exe");</code>
+  <code class=python>Ie(executable_path='/path/to/IEDriverServer.exe')</code>
   <code class=ruby>Selenium::WebDriver::IE.driver_path = "C:\path\to\IEDriver.exe"</code>
 </pre>
 
@@ -356,7 +368,8 @@ Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/e
 
 <pre>
  <code class=java>WebDriver driver = new OperaDriver();</code>
- <code class=ruby>driver = Selenium::WebDriver.for :opera</code>
+ <code class=python>from selenium.webdriver import Opera
+driver = Opera()</code>
 </pre>
 
 <h3>Safari</h3>
@@ -377,6 +390,8 @@ Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/e
 <p>You can then start a driver session using:
 <pre>
   <code class=java>WebDriver driver = new SafariDriver();</code>
+  <code class=python>from selenium.webdriver import Safari
+driver = Safari()</code>
   <code class=ruby>driver = Selenium::WebDriver.for :safari</code>
 </pre>
 
