@@ -59,7 +59,7 @@
 
 
 <h3>The Parts and Pieces</h3>
-<p>At its minimum, WebDriver talks to a browser through a driver. Communication is two way: WebDriver passes commands to the browser through the driver, and recieves information back via the same route. 
+<p>At its minimum, WebDriver talks to a browser through a driver. Communication is two way: WebDriver passes commands to the browser through the driver, and recieves information back via the same route.
 </br>
 <img src="images/basic_comms.png" width="400px" style="float:none">
 
@@ -248,8 +248,7 @@ Only local connections are allowed.</samp></pre>
 
 <pre>
  <code class=java>WebDriver driver = new ChromeDriver();</code>
- <code class=ruby>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :chrome</code>
+ <code class=ruby>driver = Selenium::WebDriver.for :chrome</code>
 </pre>
 
 <p>Remember that you have to set the path to the chromedriver executable.
@@ -257,6 +256,7 @@ driver = Selenium::WebDriver.for :chrome</code>
 
 <pre>
  <code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code>
+ <code class=ruby>Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"</code>
 </pre>
 
 <p>The chromedriver is implemented as a WebDriver remote server
@@ -277,18 +277,20 @@ driver = Selenium::WebDriver.for :chrome</code>
 
 <pre>
  <code class=java>WebDriver driver = new FirefoxDriver();</code>
- <code class=ruby>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :firefox</code>
+ <code class=ruby>driver = Selenium::WebDriver.for :firefox</code>
 </pre>
 
 
 <p>If you prefer not to set geckodriver's location using PATH,
  set the geckodriver binary location programmatically:
 
-<pre><code class=java>System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");</code></pre>
+<pre>
+  <code class=java>System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");</code>
+  <code class=ruby>Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"</code>
+</pre>
 
 <p>It is also possible to set the property at run time:
- 
+
 <pre><code class=shell>mvn test -Dwebdriver.gecko.driver=/path/to/geckodriver</code></pre>
 
 <p>It is currently possible to revert to the older, more feature complete
@@ -308,11 +310,17 @@ driver = Selenium::WebDriver.for :firefox</code>
  contains links to all the available binaries. Bugs against the EdgeDriver implementation can be raised with
  <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver">Microsoft</a>.  If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft offer free VMs for testers on the <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/"> Edge Developer site</a>.
 
-<pre><code class=java>WebDriver driver = new EdgeDriver();</code></pre>
+<pre>
+  <code class=java>WebDriver driver = new EdgeDriver();</code>
+  <code class=ruby>driver = Selenium::WebDriver.for :edge</code>
+</pre>
 
 <p>If Edge driver is not present in your path, you can set the path using the following line:
 
-<pre><code class=java>System.setProperty("webdriver.edge.driver", "/path/to/edgedriver");</code></pre>
+<pre>
+  <code class=java>System.setProperty("webdriver.edge.driver", "C:\path\to\MicrosoftWebDriver.exe");</code>
+  <code class=ruby>Selenium::WebDriver::Edge.driver_path = "C:\path\to\MicrosoftWebDriver.exe"</code>
+</pre>
 
 
 <h3>Internet Explorer</h3>
@@ -321,11 +329,17 @@ driver = Selenium::WebDriver.for :firefox</code>
   Microsoft considers current</a>. Older releases may work, but will be unsupported.
 <p>While the Selenium project provides binaries for both the 32-bit and 64-bit versions of Internet Explorer, there are some <a href="http://jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html">limitations</a> with Internet Explorer 10 &amp; 11 with the 64-bit driver, but using the 32-bit driver continues to work well. It should be noted that as Internet Explorer preferences are saved against the logged in user's account, some <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration">additional setup is required</a>.
 
-<pre><code class=java>WebDriver driver = new InternetExplorerDriver();</code></pre>
+<pre>
+  <code class=java>WebDriver driver = new InternetExplorerDriver();</code>
+  <code class=ruby>driver = Selenium::WebDriver.for :ie</code>
+</pre>
 
 <p>If Internet Explorer driver is not present in your path, you can set the path using the following line:
 
-<pre><code class=java>System.setProperty("webdriver.ie.driver", "/path/to/iedriver");</code></pre>
+<pre>
+  <code class=java>System.setProperty("webdriver.ie.driver", "C:\path\to\IEDriver.exe");</code>
+  <code class=ruby>Selenium::WebDriver::IE.driver_path = "C:\path\to\IEDriver.exe"</code>
+</pre>
 
 Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=44069">Internet Explorer 11 on Windows 7 &amp; 8.1</a>. It has not been updated since 2014 and is based of a draft version of the W3 specification. <a href="http://jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html">Jim Evans</a> has an excellent writeup on Microsoft's implementation.
 
@@ -342,8 +356,7 @@ Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/e
 
 <pre>
  <code class=java>WebDriver driver = new OperaDriver();</code>
- <code class=ruby>require "selenium-webdriver"
-driver = Selenium::WebDriver.for :opera</code>
+ <code class=ruby>driver = Selenium::WebDriver.for :opera</code>
 </pre>
 
 <h3>Safari</h3>
@@ -362,7 +375,10 @@ driver = Selenium::WebDriver.for :opera</code>
 </ol>
 
 <p>You can then start a driver session using:
-<pre><code class=java>WebDriver driver = new SafariDriver();</code></pre>
+<pre>
+  <code class=java>WebDriver driver = new SafariDriver();</code>
+  <code class=ruby>driver = Selenium::WebDriver.for :safari</code>
+</pre>
 
 <p>Those looking to automate Safari on iOS should look to the
  <a href="http://appium.io/">Appium project</a>. Whilst Safari was previously
@@ -375,10 +391,10 @@ driver = Selenium::WebDriver.for :opera</code>
 
 <h4>HtmlUnit</h4>
 
-<p>HtmlUnit is a "GUI-Less browser for Java programs". It models HTML documents and provides an API that allows you 
-to invoke pages, fill out forms, click links, etc. It has JavaScript support and is able to work with AJAX libraries, 
-simulating Chrome, Firefox or Internet Explorer depending on the configuration used. It has been moved to a 
-<a href="http://htmlunit.sourceforge.net/gettingStarted.html">new</a> location.</p> The source is maintained on svn. 
+<p>HtmlUnit is a "GUI-Less browser for Java programs". It models HTML documents and provides an API that allows you
+to invoke pages, fill out forms, click links, etc. It has JavaScript support and is able to work with AJAX libraries,
+simulating Chrome, Firefox or Internet Explorer depending on the configuration used. It has been moved to a
+<a href="http://htmlunit.sourceforge.net/gettingStarted.html">new</a> location.</p> The source is maintained on svn.
 
 
 <h4>PhantomJS</h4>
@@ -402,6 +418,13 @@ simulating Chrome, Firefox or Internet Explorer depending on the configuration u
 
 <pre><code class=shell>$ gem install selenium-webdriver</code></pre>
 
+Or, if you use <a href="https://bundler.io">Bundler</a>, add this line to your application's Gemfile:
+
+<pre><code class=ruby>gem "selenium-webdriver"</code></pre>
+
+And then execute the following command in prompt:
+
+<pre><code class=shell>$ bundle install</code></pre>
 
 <h3>Internet Explorer</h3>
 
@@ -434,10 +457,10 @@ driver.navigate().to("https://seleniumhq.github.io/docs/");
  </code>
  <code class=python>driver.get("https://www.seleniumhq.org")</code>
  <code class=ruby>
-#Convenient
+# Convenient
 driver.get 'https://www.seleniumhq.org'
 
-#Longer way
+# Longer way
 driver.navigate.to 'https://seleniumhq.github.io/docs/'
  </code>
  <code class=cs>this.driver.Navigate().GoToUrl(@"http://google.com");</code>

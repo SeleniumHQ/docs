@@ -110,12 +110,12 @@ driver = Selenium::WebDriver.for :firefox
 wait = Selenium::WebDriver::Wait.new(timeout: 10)
 
 begin
-    driver.get 'http://google.com'
-    driver.find_element(name: 'q').send_keys 'cheese', :return
-    first_result = wait.until { driver.find_element(css: 'h3>a') }
-    print first_result.text
+  driver.get 'http://google.com'
+  driver.find_element(name: 'q').send_keys 'cheese', :return
+  first_result = wait.until { driver.find_element(css: 'h3>a') }
+  puts first_result.text
 ensure
-    driver.quit
+  driver.quit
 end</code>
  <code class=javascript>const {Builder, By, Key, until} = require('selenium-webdriver');
 
