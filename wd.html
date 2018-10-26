@@ -758,10 +758,20 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  The default setting is 0, meaning disabled.
  Once set, the implicit wait is set for the life of the session.
 
-<pre><code class=java>WebDriver driver = new FirefoxDriver();
+<pre>
+  <code class=java>
+WebDriver driver = new FirefoxDriver();
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.get("http://somedomain/url_that_delays_loading");
-WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));</code></pre>
+WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
+  </code>
+  <code class=python>
+driver = Firefox()
+driver.implicitly_wait(10)
+driver.get("http://somedomain/url_that_delays_loading")
+my_dynamic_element = driver.find_element_by_id("myDynamicElement")
+  </code>
+</pre>
 
 
 <h4>FluentWait</h4>
@@ -941,10 +951,21 @@ alert.accept()
  document root using a WebDriver instance, or by searching under another
  WebElement:
 
-<pre><code class=javascript>driver.get('http://www.google.com')
-    .then(() =>   driver.findElement(By.tagName('form')) )
-    .then((searchForm) => searchForm.findElement(By.name('q')) )
-    .then((searchBox) => searchBox.sendKeys('webdriver') );</code></pre>
+<pre>
+  <code class=javascript>
+driver.get('http://www.google.com')
+  .then(() =>   driver.findElement(By.tagName('form')) )
+  .then((searchForm) => searchForm.findElement(By.name('q')) )
+  .then((searchBox) => searchBox.sendKeys('webdriver') );
+  </code>
+  <code class=python>
+driver = Firefox()
+driver.get("http://www.google.com")
+search_form = driver.find_element_by_tag_name("form")
+search_box = search_form.find_element_by_name("q")
+search_box.send_keys("webdriver")
+  </code>
+</pre>
 
 <h2>Keyboard</h2>
 
