@@ -568,7 +568,7 @@ el = driver.find_element_by_tag_name("p")
 assert el.text == "Hello from JavaScript!"</code></pre>
 
 <p>The issue here is that the default
- <a href=#page_load_strategy>page load strategy</a>
+ <a href=#page_loading_strategy>page load strategy</a>
  used in WebDriver listens for the <var>document.readyState</var>
  to change to <code>"complete"</code> before returning from the call to <em>navigate</em>.
  Because the <code>p</code> element is
@@ -579,7 +579,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  without explicitly waiting&mdash;or blocking&mdash;on those events.
 
 <p>Fortunately, using the normal instruction set available on
- the <em><a href=#webelement>WebElement</a></em> interface&mdash;such
+ the <em><a href=#web_elements>WebElement</a></em> interface&mdash;such
  as <em>WebElement.click</em> and <em>WebElement.sendKeys</em>&mdash;are
  guaranteed to be synchronous,
  in that the function calls won't return
@@ -599,7 +599,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
  most Selenium clients ship with a <em>wait</em> package.
  When employing a wait,
  you are using what is commonly referred to
- as an <em><a href=#explicit_wait>explicit wait</a></em>.
+ as an <em><a href=#explicit_waiting>explicit wait</a></em>.
 
 
 <h3>Explicit waiting</h3>
@@ -732,7 +732,7 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 <h3>Implicit waiting</h3>
 
 <p>There is a second type of wait that is distinct from
- <a href=#explicit_wait>explicit waits</a> called <em>implicit waiting</em>.
+ <a href=#explicit_waiting>explicit waits</a> called <em>implicit waiting</em>.
  By implicitly waiting, WebDriver polls the DOM
  for a certain duration when trying to find <em>any</em> element.
  This can be useful when certain elements on the webpage
