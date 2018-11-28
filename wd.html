@@ -563,9 +563,16 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
 
 <p>The WebDriver instructions might look innocent enough:
 
-<pre><code class=python>driver.navigate("file:///race_condition.html")
+<pre>
+<code class=python>driver.navigate("file:///race_condition.html")
 el = driver.find_element_by_tag_name("p")
-assert el.text == "Hello from JavaScript!"</code></pre>
+assert el.text == "Hello from JavaScript!"</code>
+<code class=java>
+driver.get("file:///race_condition.html");
+WebElement element = driver.findElement(By.tagName("p"));
+assertEquals(element.getText(), "Hello from JavaScript!");
+</code>
+</pre>
 
 <p>The issue here is that the default
  <a href=#page_load_strategy>page load strategy</a>
