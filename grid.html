@@ -181,11 +181,10 @@
 
 <pre><code>$ java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444</code></pre>
 
-<p>The port defaults to 5555 if not specified whenever
- the <code>-role</code> option is provided and is not hub.
- You can run multiple nodes on one machine but if you do so,
- you need to be aware of your systems memory resources and
- problems with screenshots if your tests take them.
+<p>If a port is not specified through the <code>-port</code> flag,
+ a free port will be chosen. You can run multiple nodes on one machine
+ but if you do so, you need to be aware of your systems memory resources
+ and problems with screenshots if your tests take them.
 
 
 <h5>Configuration of node with options</h5>
@@ -252,6 +251,16 @@
   }
 }</code></pre>
 
+<h5>A note about the <code>-host</code> flag</h5>
+
+<p>For both hub and node, if the <code>-host</code> flag is not specified,
+ <code>0.0.0.0</code> will be used by default. This will bind to all the
+ public (non-loopback) IPv4 interfaces of the machine. If you have a special
+ network configuration or any component that creates extra network interfaces,
+ it is advised to set the <code>-host</code> flag with a value that allows the
+ hub/node to be reachable from a different machine.
+
+
 <h2>Docker Selenium</h2>
 <p><a href="https://www.docker.com/">Docker</a> provides a convenient way to
   provision and scale Selenium Grid infrastructure in a unit known as a container.  Containers are standardised units of software that contain everything required
@@ -264,6 +273,6 @@
   within the <a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium</a>
   repository.
 
-  <h3>Prerequisits</h3>
+  <h3>Prerequisite</h3>
   <p>The only requirement to run a grid is to have Docker installed and working.
   <a href="https://www.docker.com/products/docker-desktop">Install Docker</a>
