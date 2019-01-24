@@ -51,7 +51,7 @@ public class HelloSelenium {
         WebDriver driver = new FirefoxDriver();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         try {
-            driver.get("http://google.com/ncr");
+            driver.get("https://google.com/ncr");
             driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
             WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>a")));
             System.out.println(firstResult.getText());
