@@ -479,6 +479,7 @@ driver.get 'https://www.seleniumhq.org'
 driver.navigate.to 'https://seleniumhq.github.io/docs/'
  </code>
  <code class=cs>this.driver.Navigate().GoToUrl(@"http://google.com");</code>
+ <code class=javascript>driver.get("https://seleniumhq.github.io/docs/");</code>
 </pre>
 
 <h3>Get Current URL</h3>
@@ -490,6 +491,12 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
  <code class=python>driver.current_url</code>
  <code class=ruby>driver.current_url</code>
  <code class=cs>this.driver.Url;</code>
+ <code class=javascript>
+ await driver.get('https://seleniumhq.github.io/docs/');
+ const activeUrl = await driver.getCurrentUrl();
+ // Log the current Url loaded in the browser which should be https://seleniumhq.github.io/docs/
+ console.log(activeUrl);
+ </code>
 </pre>
 
 <h3>Back</h3>
@@ -499,6 +506,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
  <code class=python>driver.back()</code>
  <code class=ruby>driver.navigate.back</code>
  <code class=cs>this.driver.Navigate().Back();</code>
+ <code class=javascript>driver.back();</code>
 </pre>
 
 <h3>Forward</h3>
@@ -508,6 +516,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=python>driver.forward()</code>
   <code class=ruby>driver.navigate.forward</code>
   <code class=cs>this.driver.Navigate().Forward();</code>
+  <code class=javascript>driver.forward();</code>
  </pre>
 
 <h3>Refresh</h3>
@@ -517,6 +526,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=python>driver.refresh()</code>
   <code class=ruby>driver.navigate.refresh</code>
   <code class=cs>this.driver.Navigate().Refresh();</code>
+  <code class=javascript>driver.refresh();</code>
  </pre>
 
 <h3>Get Title</h3>
@@ -526,6 +536,12 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=python>driver.title</code>
   <code class=ruby>driver.title</code>
   <code class=cs>this.driver.Title;</code>
+  <code class=javascript>
+  await driver.get("https://seleniumhq.github.io/docs/");
+  const title = driver.getTitle();
+  // Logs the title 
+  console.log(title);
+  </code>
  </pre>
 
 <h2>Waits</h2>
