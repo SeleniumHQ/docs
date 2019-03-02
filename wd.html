@@ -491,12 +491,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
  <code class=python>driver.current_url</code>
  <code class=ruby>driver.current_url</code>
  <code class=cs>this.driver.Url;</code>
- <code class=javascript>
- await driver.get('https://seleniumhq.github.io/docs/');
- const activeUrl = await driver.getCurrentUrl();
- // Log the current Url loaded in the browser which should be https://seleniumhq.github.io/docs/
- console.log(activeUrl);
- </code>
+ <code class=javascript>await driver.getCurrentUrl();</code>
 </pre>
 
 <h3>Back</h3>
@@ -536,12 +531,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=python>driver.title</code>
   <code class=ruby>driver.title</code>
   <code class=cs>this.driver.Title;</code>
-  <code class=javascript>
-  await driver.get("https://seleniumhq.github.io/docs/");
-  const title = driver.getTitle();
-  // Logs the title 
-  console.log(title);
-  </code>
+  <code class=javascript>driver.getTitle();</code>
  </pre>
 
 <h2>Waits</h2>
