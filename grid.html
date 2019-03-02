@@ -159,7 +159,7 @@
 
 <pre><code class=json>{"_comment" : "Configuration for Hub - hubConfig.json",
   "host": ip,
-  "maxSessions": 5,
+  "maxSession": 5,
   "port": 4444,
   "cleanupCycle": 5000,
   "timeout": 300000,
@@ -181,11 +181,10 @@
 
 <pre><code>$ java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444</code></pre>
 
-<p>The port defaults to 5555 if not specified whenever
- the <code>-role</code> option is provided and is not hub.
- You can run multiple nodes on one machine but if you do so,
- you need to be aware of your systems memory resources and
- problems with screenshots if your tests take them.
+<p>If a port is not specified through the <code>-port</code> flag,
+ a free port will be chosen. You can run multiple nodes on one machine
+ but if you do so, you need to be aware of your systems memory resources
+ and problems with screenshots if your tests take them.
 
 
 <h5>Configuration of node with options</h5>
@@ -224,7 +223,7 @@
       "platform": "WINDOWS",
       "maxInstances": 5,
       "firefox_binary": "",
-      "cleanSession": true 
+      "cleanSession": true
     },
     {
       "browserName": "chrome",
@@ -236,7 +235,7 @@
       "browserName": "internet explorer",
       "maxInstances": 1,
       "platform": "WINDOWS",
-      "webdriver.ie.driver": "C:/Program Files (x86)/Internet Explorer/iexplore.exe" 
+      "webdriver.ie.driver": "C:/Program Files (x86)/Internet Explorer/iexplore.exe"
     }
   ],
   "configuration": {
@@ -248,6 +247,32 @@
     "host": ip,
     "register": true,
     "hubPort": 4444,
-    "maxSessions": 5
+    "maxSession": 5
   }
 }</code></pre>
+
+<h5>A note about the <code>-host</code> flag</h5>
+
+<p>For both hub and node, if the <code>-host</code> flag is not specified,
+ <code>0.0.0.0</code> will be used by default. This will bind to all the
+ public (non-loopback) IPv4 interfaces of the machine. If you have a special
+ network configuration or any component that creates extra network interfaces,
+ it is advised to set the <code>-host</code> flag with a value that allows the
+ hub/node to be reachable from a different machine.
+
+
+<h2>Docker Selenium</h2>
+<p><a href="https://www.docker.com/">Docker</a> provides a convenient way to
+  provision and scale Selenium Grid infrastructure in a unit known as a container.  Containers are standardised units of software that contain everything required
+  to run the desired application including all dependencies in a reliable and repeatable
+  way on different machines.
+
+  The Selenium project maintains a set of Docker images which you can download
+  and run to get a working grid up and running quickly.  Nodes are available for
+  both Firefox and Chrome.  Full details of how to provision a grid can be found
+  within the <a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium</a>
+  repository.
+
+  <h3>Prerequisite</h3>
+  <p>The only requirement to run a grid is to have Docker installed and working.
+  <a href="https://www.docker.com/products/docker-desktop">Install Docker</a>
