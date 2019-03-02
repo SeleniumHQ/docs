@@ -51,7 +51,7 @@ public class HelloSelenium {
         WebDriver driver = new FirefoxDriver();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         try {
-            driver.get("http://google.com/ncr");
+            driver.get("https://google.com/ncr");
             driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
             WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>a")));
             System.out.println(firstResult.getText());
@@ -69,7 +69,7 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 #This example requires Selenium WebDriver 3.13 or newer
 with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
-    driver.get("http://google.com/ncr")
+    driver.get("https://google.com/ncr")
     driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
     first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
     print(first_result.text)</code>
@@ -110,7 +110,7 @@ driver = Selenium::WebDriver.for :firefox
 wait = Selenium::WebDriver::Wait.new(timeout: 10)
 
 begin
-  driver.get 'http://google.com'
+  driver.get 'https://google.com/ncr'
   driver.find_element(name: 'q').send_keys 'cheese', :return
   first_result = wait.until { driver.find_element(css: 'h3>a') }
   puts first_result.text
@@ -122,7 +122,7 @@ end</code>
 (async function example() {
     let driver = await new Builder().forBrowser('firefox').build();
     try {
-        await driver.get('http://www.google.com/ncr');
+        await driver.get('https://www.google.com/ncr');
         await driver.findElement(By.name('q')).sendKeys('cheese', Key.RETURN);
         let firstResult = await driver.wait(until.elementLocated(By.css('h3>a')),10000);
         console.log(await firstResult.getText());
@@ -244,13 +244,13 @@ end</code>
    <li><a href=drivers.html#shared_capabilities>Shared capabilities</a>
    <li><a href=drivers.html#driver_specific_capabilities>Driver specific capabilities</a>
   </ul></li>
- <li><a href=java.html#the_java_support_package>The Java support package</a>
+ <li><a href=support.html#support_packages>Support Packages</a>
   <ul>
-   <li><a href=java.html#browser_navigation>Browser navigation</a>
-   <li><a href=java.html#working_with_colours>Working with colours</a>
-   <li><a href=java.html#working_with>Working with</a>
-   <li><a href=java.html#mouse_and_keyboard_actions_in_detail>Mouse and keyboard actions in detail</a>
-   <li><a href=java.html#working_with_web_elements>Working with web elements</a>
+   <li><a href=support.html#browser_navigation>Browser navigation</a>
+   <li><a href=support.html#working_with_colours>Working with colours</a>
+   <li><a href=support.html#working_with>Working with</a>
+   <li><a href=support.html#mouse_and_keyboard_actions_in_detail>Mouse and keyboard actions in detail</a>
+   <li><a href=support.html#working_with_web_elements>Working with web elements</a>
   </ul></li>
 </ul>
 </div>
