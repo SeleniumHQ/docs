@@ -592,7 +592,7 @@ assertEquals(element.getText(), "Hello from JavaScript!");
  without explicitly waiting&mdash;or blocking&mdash;on those events.
 
 <p>Fortunately, using the normal instruction set available on
- the <em><a href=#webelement>WebElement</a></em> interface&mdash;such
+ the <em><a href=#web_element>WebElement</a></em> interface&mdash;such
  as <em>WebElement.click</em> and <em>WebElement.sendKeys</em>&mdash;are
  guaranteed to be synchronous,
  in that the function calls won't return
@@ -615,7 +615,7 @@ assertEquals(element.getText(), "Hello from JavaScript!");
  as an <em><a href=#explicit_wait>explicit wait</a></em>.
 
 
-<h3>Explicit waiting</h3>
+<h3>Explicit Wait</h3>
 
 <p><em>Explicit waits</em> are available to Selenium clients
  for imperative, procedural languages.
@@ -742,10 +742,10 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 </ul>
 
 
-<h3>Implicit waiting</h3>
+<h3>Implicit Wait</h3>
 
 <p>There is a second type of wait that is distinct from
- <a href=#explicit_wait>explicit waits</a> called <em>implicit waiting</em>.
+ <a href=#explicit_wait>explicit wait</a> called <em>implicit wait</em>.
  By implicitly waiting, WebDriver polls the DOM
  for a certain duration when trying to find <em>any</em> element.
  This can be useful when certain elements on the webpage
@@ -753,10 +753,9 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 
 <p>Implicit waiting for elements to appear is disabled by default
  and will need to be manually enabled on a per-session basis.
- Mixing <a href=#explicit_wait>explicit waits</a> and implicit waiting
- will cause unintended consequences,
- namely waits sleeping for the maximum time
- even if the element is available or condition is true.
+ Mixing <a href=#explicit_wait>explicit waits</a> and implicit waitis
+ will cause unintended consequences, namely waits sleeping for the maximum
+ time even if the element is available or condition is true.
 
 <p><strong>Warning:</strong>
  Do not mix implicit and explicit waits.
@@ -956,9 +955,9 @@ alert.accept()
 
 <h2>HTTP proxies</h2>
 
-<h2>Page loading strategy</h2>
+<h2>Page Load Strategy</h2>
 
-<h2>Web elements</h2>
+<h2>Web Element</h2>
 
 <p>Represents a DOM element. WebElements can be found by searching from the
  document root using a WebDriver instance, or by searching under another
