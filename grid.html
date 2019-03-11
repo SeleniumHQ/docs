@@ -25,98 +25,85 @@
  and to manage different browser versions and browser configurations centrally
  (instead of in each individual test).
 
-<h2>Pros and cons</h2>
-
 <p>Selenium Grid isn't a silver bullet.
  It solves a subset of common delegation and distribution problems,
  but will for example not manage your infrastructure
  and might not suit your specific needs.
 
-
-<h3>Pros</h3>
-
+<div id="purposes">
+<h2>Purposes and main functionality of a Selenium Grid</h2>
+</div>
 <dl>
- <dt>Scale</dt>
- <dd>Scale by distributing tests on several machines
-  using parallel execution.</dd>
-
- <dt>Central</dt>
- <dd>Manage multiple environments from a central point,
-  making it easy to run the tests against a large combination
-  of browsers and operating systems.</dd>
-
- <dt>Minimize</dt>
- <dd>Minimize the maintenance time for the grid
-  by allowing you to implement custom hooks
-  to leverage a virtual infrastructure of registered nodes.</dd>
-
- <dt>Cross-Platform</dt>
- <dd>If your tests are running on one particular platform,
-  by using a node on another platform
-  you effectively have cross-platform testing.</dd>
-
- <dt>Smart</dt>
- <dd>Grid can route commands to a certain version of a browser
-  if you have two or more nodes registered,
-  each pointing to a different version of the browser binary.</dd>
+    <dt>Central entry point for all tests</dt>
+    <dt>Management and control of the nodes / environment where the browsers run on</dt>
+    <dt>Scaling</dt>
+    <dt>Running tests in parallel</dt>
+    <dt>Cross platform testing</dt>
+    <dt>Load balancing</dt>
 </dl>
 
 
-<h3>Cons</h3>
+<div id="components">
+<h2>Components of a Selenium Grid</h2>
+</div>
+
+<img src="images/grid.png">
 
 <dl>
- <dt>Prompted input</dt>
- <dd>You have no capabilities for user input
-  if your tests want to prompt for user input
-  whereas you would if your tests ran locally.</dd>
+    <dt>Hub</dt>
+    <ul>
+        <li>Intermediary and manager</li>
+        <li>Accepts requests to run tests</li>
+        <li>Takes instructions from client and executes them remotely on the nodes</li>
+        <li>Manages threads</li>
+    </ul>
 
- <dt>Maintainability</dt>
- <dd>You also need to maintain the health
-  of other computer systems which run your nodes.</dd>
+    <p>A <em>hub</em> is a central point where all your tests are sent to.
+        Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the
+        respective clients (i.e. CI server, Developer machine etc.)
+        The hub will connect one or more nodes
+        that tests will be delegated to.
 
- <dt>Limited power</dt>
- <dd>Certain third party libraries have limitations
-  that prevent them from being used in conjunction with Grid.</dd>
+
+    <dt>Nodes</dt>
+    <ul>
+        <li>This is where the browsers live</li>
+        <li>Registers itself to the hub and commincates its capabilities</li>
+        <li>Receives requests from the hub and executes them</li>
+    </ul>
+
+    <p><em>Nodes</em> are different Selenium instances
+        that will execute tests on individual computer systems.
+        There can be many nodes in a grid.
+        The machines which are nodes need do not need to be the same platform
+        or have the same browser selection as that of the hub or the other nodes.
+        A node on Windows might have the capability of
+        offering Internet Explorer as a browser option,
+        whereas this wouldn't be possible on Linux or Mac.
 </dl>
 
-<h2>What is a hub and node?</h2>
 
-<p>A <em>hub</em> is a central point
- from where your tests will be kicked off.
- There will only be one hub in a grid
- and it's launched from one system.
- The hub will connect one or more nodes
- that tests will be delegated to.
 
-<p><em>Nodes</em> are different Selenium instances
- that will execute tests on individual computer systems.
- There can be many nodes in a grid.
- The machines which are nodes need not be the same platform
- or have the same browser selection as that of the hub or the other nodes.
- A node on Windows might have the capability of
- offering Internet Explorer as a browser option,
- whereas this wouldn't be possible on Linux or Mac.
-
-<h2>Rolling your own grid</h2>
+<div id="setup">
+<h2>Setting up your own Selenium Grid</h2>
+</div>
 
 <p>To use Selenium Grid,
- you must maintain your own infrastructure for the nodes.
- Without this infrastructure, Grid will not function.
- Many organizations use IaaS providers
+ you need to maintain your own infrastructure for the nodes.
+ As this can be a cumbersome and time intense effort,
+ many organizations use IaaS providers
  such as Amazon EC2 and Google Compute
  to provide this infrastructure.
 
-<p>Other options include outsourcing the infrastructure management
- to providers such as Sauce Labs or Testing Bot.
- They provide grid nodes as a service,
- but it's certainly possible to also run nodes on your own hardware.
- This chapter will go into detail about the option of rolling your own grid,
+<p>Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.
+ It is certainly possible to also run nodes on your own hardware.
+ This chapter will go into detail about the option of running your own grid,
  complete with its own node infrastructure.
 
 
 <h3>Quick start</h3>
 
-<p>This example will show you how to start the Selenium 2 Hub,
+<p>This example will show you how to start the Selenium 2 Grid Hub,
  and register both a WebDriver node and a Selenium 1 RC legacy node.
  We’ll also show you how to call the grid from Java.
  The hub and nodes are shown here running on the same machine,
@@ -172,7 +159,7 @@
 
 <pre><code class=json>{"_comment" : "Configuration for Hub - hubConfig.json",
   "host": ip,
-  "maxSessions": 5,
+  "maxSession": 5,
   "port": 4444,
   "cleanupCycle": 5000,
   "timeout": 300000,
@@ -194,11 +181,10 @@
 
 <pre><code>$ java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444</code></pre>
 
-<p>The port defaults to 5555 if not specified whenever
- the <code>-role</code> option is provided and is not hub.
- You can run multiple nodes on one machine but if you do so,
- you need to be aware of your systems memory resources and
- problems with screenshots if your tests take them.
+<p>If a port is not specified through the <code>-port</code> flag,
+ a free port will be chosen. You can run multiple nodes on one machine
+ but if you do so, you need to be aware of your systems memory resources
+ and problems with screenshots if your tests take them.
 
 
 <h5>Configuration of node with options</h5>
@@ -237,7 +223,7 @@
       "platform": "WINDOWS",
       "maxInstances": 5,
       "firefox_binary": "",
-      "cleanSession": true 
+      "cleanSession": true
     },
     {
       "browserName": "chrome",
@@ -249,7 +235,7 @@
       "browserName": "internet explorer",
       "maxInstances": 1,
       "platform": "WINDOWS",
-      "webdriver.ie.driver": "C:/Program Files (x86)/Internet Explorer/iexplore.exe" 
+      "webdriver.ie.driver": "C:/Program Files (x86)/Internet Explorer/iexplore.exe"
     }
   ],
   "configuration": {
@@ -261,6 +247,32 @@
     "host": ip,
     "register": true,
     "hubPort": 4444,
-    "maxSessions": 5
+    "maxSession": 5
   }
 }</code></pre>
+
+<h5>A note about the <code>-host</code> flag</h5>
+
+<p>For both hub and node, if the <code>-host</code> flag is not specified,
+ <code>0.0.0.0</code> will be used by default. This will bind to all the
+ public (non-loopback) IPv4 interfaces of the machine. If you have a special
+ network configuration or any component that creates extra network interfaces,
+ it is advised to set the <code>-host</code> flag with a value that allows the
+ hub/node to be reachable from a different machine.
+
+
+<h2>Docker Selenium</h2>
+<p><a href="https://www.docker.com/">Docker</a> provides a convenient way to
+  provision and scale Selenium Grid infrastructure in a unit known as a container.  Containers are standardised units of software that contain everything required
+  to run the desired application including all dependencies in a reliable and repeatable
+  way on different machines.
+
+  The Selenium project maintains a set of Docker images which you can download
+  and run to get a working grid up and running quickly.  Nodes are available for
+  both Firefox and Chrome.  Full details of how to provision a grid can be found
+  within the <a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium</a>
+  repository.
+
+  <h3>Prerequisite</h3>
+  <p>The only requirement to run a grid is to have Docker installed and working.
+  <a href="https://www.docker.com/products/docker-desktop">Install Docker</a>
