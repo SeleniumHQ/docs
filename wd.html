@@ -247,10 +247,32 @@ Only local connections are allowed.</samp></pre>
 <p>To instantiate a Chrome/Chromium session, you can do the following:
 
 <pre>
- <code class=java>WebDriver driver = new ChromeDriver();</code>
- <code class=python>from selenium.webdriver import Chrome
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+WebDriver driver = new ChromeDriver();</code>
+ <code class=python>#Simple assignment
+from selenium.webdriver import Chrome
+
 driver = Chrome()</code>
- <code class=ruby>driver = Selenium::WebDriver.for :chrome</code>
+ <code class=python>#Or use the context manager
+from selenium.webdriver import Chrome
+
+with Chrome() as driver:
+    #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+IWebDriver driver = new ChromeDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :chrome</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+    let driver = await new Builder().forBrowser('chrome').build();
+    //your code inside this block
+})();</code>
 </pre>
 
 <p>Remember that you have to set the path to the chromedriver executable.
@@ -279,10 +301,32 @@ driver = Chrome()</code>
  instantiate Firefox in the same way as Selenium 2:
 
 <pre>
- <code class=java>WebDriver driver = new FirefoxDriver();</code>
- <code class=python>from selenium.webdriver import Firefox
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Firefox.FirefoxDriver;
+
+WebDriver driver = new FirefoxDriver();</code>
+ <code class=python>#Simple assignment
+from selenium.webdriver import Firefox
+
 driver = Firefox()</code>
- <code class=ruby>driver = Selenium::WebDriver.for :firefox</code>
+ <code class=python>#Or use the context manager
+from selenium.webdriver import Firefox
+
+with Firefox() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+
+IWebDriver driver = new FirefoxDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :firefox</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('firefox').build();
+   //your code inside this block
+})();</code>
 </pre>
 
 
@@ -317,10 +361,32 @@ driver = Firefox()</code>
  <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver">Microsoft</a>.  If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft offer free VMs for testers on the <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/"> Edge Developer site</a>.
 
 <pre>
-  <code class=java>WebDriver driver = new EdgeDriver();</code>
-  <code class=python>from selenium.webdriver import Edge
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+WebDriver driver = new EdgeDriver();</code>
+<code class=python>#Simple assignment
+from selenium.webdriver import Edge
+
 driver = Edge()</code>
-  <code class=ruby>driver = Selenium::WebDriver.for :edge</code>
+<code class=python>#Or use the context manager
+from selenium.webdriver import Edge
+
+with Edge() as driver:
+   #your code inside this indent</code>
+<code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Edge;
+
+IWebDriver driver = new EdgeDriver();</code>
+<code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :edge</code>
+<code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('MicrosoftEdge').build();
+   //your code inside this block
+})();</code>
 </pre>
 
 <p>If Edge driver is not present in your path, you can set the path using the following line:
@@ -339,10 +405,32 @@ driver = Edge()</code>
 <p>While the Selenium project provides binaries for both the 32-bit and 64-bit versions of Internet Explorer, there are some <a href="http://jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html">limitations</a> with Internet Explorer 10 &amp; 11 with the 64-bit driver, but using the 32-bit driver continues to work well. It should be noted that as Internet Explorer preferences are saved against the logged in user's account, some <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration">additional setup is required</a>.
 
 <pre>
-  <code class=java>WebDriver driver = new InternetExplorerDriver();</code>
-  <code class=python>from selenium.webdriver import Ie
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+WebDriver driver = new InternetExplorerDriver();</code>
+ <code class=python>#Simple assignment
+from selenium.webdriver import Ie
+
 driver = Ie()</code>
-  <code class=ruby>driver = Selenium::WebDriver.for :ie</code>
+ <code class=python>#Or use the context manager
+from selenium.webdriver import Ie
+
+with Ie() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
+
+IWebDriver driver = new InternetExplorerDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :internet_explorer</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('internet explorer').build();
+   //your code inside this block
+})();</code>
 </pre>
 
 <p>If Internet Explorer driver is not present in your path, you can set the path using the following line:
@@ -367,9 +455,26 @@ Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/e
 <p>Instantiating a driver session is similar to Firefox and Chromium:
 
 <pre>
- <code class=java>WebDriver driver = new OperaDriver();</code>
- <code class=python>from selenium.webdriver import Opera
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.opera.OperaDriver;
+
+WebDriver driver = new OperaDriver();</code>
+<code class=python>#Simple assignment
+from selenium.webdriver import Opera
+
 driver = Opera()</code>
+<code class=python>#Or use the context manager
+from selenium.webdriver import Opera
+
+with Opera() as driver:
+   #your code inside this indent</code>
+<code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Opera;
+
+IWebDriver driver = new OperaDriver();</code>
+<code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :opera</code>
 </pre>
 
 <h3>Safari</h3>
@@ -389,10 +494,32 @@ driver = Opera()</code>
 
 <p>You can then start a driver session using:
 <pre>
-  <code class=java>WebDriver driver = new SafariDriver();</code>
-  <code class=python>from selenium.webdriver import Safari
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+WebDriver driver = new SafariDriver();</code>
+<code class=python>#Simple assignment
+from selenium.webdriver import Safari
+
 driver = Safari()</code>
-  <code class=ruby>driver = Selenium::WebDriver.for :safari</code>
+ <code class=python>#Or use the context manager
+from selenium.webdriver import Safari
+
+with Safari() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Safari;
+
+IWebDriver driver = new SafariDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :safari</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('safari').build();
+   //your code inside this block
+})();</code>
 </pre>
 
 <p>Those looking to automate Safari on iOS should look to the
@@ -478,7 +605,7 @@ driver.get 'https://www.seleniumhq.org'
 # Longer way
 driver.navigate.to 'https://seleniumhq.github.io/docs/'
  </code>
- <code class=cs>this.driver.Navigate().GoToUrl(@"http://google.com");</code>
+ <code class=cs>driver.Navigate().GoToUrl(@"http://google.com");</code>
  <code class=javascript>driver.get("https://seleniumhq.github.io/docs/");</code>
 </pre>
 
@@ -490,7 +617,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
  <code class=java>driver.getCurrentUrl();</code>
  <code class=python>driver.current_url</code>
  <code class=ruby>driver.current_url</code>
- <code class=cs>this.driver.Url;</code>
+ <code class=cs>driver.Url;</code>
  <code class=javascript>await driver.getCurrentUrl();</code>
 </pre>
 
@@ -500,7 +627,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
  <code class=java>driver.navigate().back();</code>
  <code class=python>driver.back()</code>
  <code class=ruby>driver.navigate.back</code>
- <code class=cs>this.driver.Navigate().Back();</code>
+ <code class=cs>driver.Navigate().Back();</code>
  <code class=javascript>driver.back();</code>
 </pre>
 
@@ -510,7 +637,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=java>driver.navigate().forward();</code>
   <code class=python>driver.forward()</code>
   <code class=ruby>driver.navigate.forward</code>
-  <code class=cs>this.driver.Navigate().Forward();</code>
+  <code class=cs>driver.Navigate().Forward();</code>
   <code class=javascript>driver.forward();</code>
  </pre>
 
@@ -520,7 +647,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=java>driver.navigate().refresh();</code>
   <code class=python>driver.refresh()</code>
   <code class=ruby>driver.navigate.refresh</code>
-  <code class=cs>this.driver.Navigate().Refresh();</code>
+  <code class=cs>driver.Navigate().Refresh();</code>
   <code class=javascript>driver.refresh();</code>
  </pre>
 
@@ -530,7 +657,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=java>driver.getTitle();</code>
   <code class=python>driver.title</code>
   <code class=ruby>driver.title</code>
-  <code class=cs>this.driver.Title;</code>
+  <code class=cs>driver.Title;</code>
   <code class=javascript>driver.getTitle();</code>
  </pre>
 
