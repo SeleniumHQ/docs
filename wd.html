@@ -932,6 +932,50 @@ end</code>
 #WebDriver will automatically quit after indentation</code>
 </pre>
 
+<h2>Window Management</h2>
+<p>Screen resolution can impact how your web application renders, so
+ WebDriver provides mechanisms for moving and resizing the browser
+ window.
+
+<h3>Get Window Size</h3>
+<p>Fetches the size of the browser window in pixels.
+<pre>
+ <code class=java>//Access each dimension individually
+int width = driver.manage().window().getSize().getWidth();
+int height = driver.manage().window().getSize().getHeight();
+
+//Or store the dimensions and query them later
+Dimension size = driver.manage().window().getSize();
+int width1 = size.getWidth();
+int height1 = size.getHeight();</code>
+</pre>
+
+<h3>Set Window Size</h3>
+<p>Restores the window and sets the window size.
+<pre>
+ <code class=java>driver.manage().window().setSize(new Dimension(1024, 768));</code>
+</pre>
+
+<h3>Set Window Position</h3>
+<p>Moves the window to the chosen position.
+<pre>
+ <code class=java>//Move the window to the top left of the primary monitor
+driver.manage().window().setPosition(new Point(0,0));</code>
+</pre>
+
+<h3>Maximise Window</h3>
+<p>Enlarges the window. For most operating systems, the window will fill
+ the screen, without blocking the operating system&apos;s own menus and
+ toolbars.
+<pre>
+ <code class=java>driver.manage().window().maximize();</code>
+</pre>
+
+<h3>Fullscreen Window</h3>
+<p>Fills the entire screen, similar to pressing F11 in most browsers.
+<pre>
+ <code class=java>driver.manage().window().fullscreen();</code>
+</pre>
 
 <h2>Waits</h2>
 
