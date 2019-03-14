@@ -956,6 +956,19 @@ int height1 = size.getHeight();</code>
  <code class=java>driver.manage().window().setSize(new Dimension(1024, 768));</code>
 </pre>
 
+<h3>Get Window Position</h3>
+<p>Fetches the coordinates of the top left coordinate of the browser window.
+<pre>
+ <code class=java>//Access each dimension individually
+int x = driver.manage().window().getPosition().getX();
+int y = driver.manage().window()..getPosition().getY();
+
+//Or store the dimensions and query them later
+Point position = driver.manage().window().getPosition();
+int x1 = position.getX();
+int y1 = position.getY();</code>
+</pre>
+
 <h3>Set Window Position</h3>
 <p>Moves the window to the chosen position.
 <pre>
