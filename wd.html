@@ -948,12 +948,21 @@ int height = driver.manage().window().getSize().getHeight();
 Dimension size = driver.manage().window().getSize();
 int width1 = size.getWidth();
 int height1 = size.getHeight();</code>
+ <code class=python>//Access each dimension individually
+width = driver.get_window_size().get("width")
+height = driver.get_window_size().get("height")
+
+//Or store the dimensions and query them later
+size = driver.get_window_size()
+width1 = size.get("width")
+height1 = size.get("height")</code>
 </pre>
 
 <h3>Set Window Size</h3>
 <p>Restores the window and sets the window size.
 <pre>
  <code class=java>driver.manage().window().setSize(new Dimension(1024, 768));</code>
+ <code class=python>driver.set_window_size(1024,768)</code>
 </pre>
 
 <h3>Get Window Position</h3>
@@ -967,6 +976,14 @@ int y = driver.manage().window()..getPosition().getY();
 Point position = driver.manage().window().getPosition();
 int x1 = position.getX();
 int y1 = position.getY();</code>
+ <code class=python>//Access each dimension individually
+x = driver.get_window_position().get('x')
+y = driver.get_window_position().get('y')
+
+//Or store the dimensions and query them later
+position = driver.get_window_position()
+x1 = position.get('x')
+y1 = position.get('y')</code>
 </pre>
 
 <h3>Set Window Position</h3>
@@ -974,6 +991,8 @@ int y1 = position.getY();</code>
 <pre>
  <code class=java>//Move the window to the top left of the primary monitor
 driver.manage().window().setPosition(new Point(0,0));</code>
+ <code class=python>//Move the window to the top left of the primary monitor
+driver.set_window_position(0, 0)</code>
 </pre>
 
 <h3>Maximise Window</h3>
@@ -982,12 +1001,14 @@ driver.manage().window().setPosition(new Point(0,0));</code>
  toolbars.
 <pre>
  <code class=java>driver.manage().window().maximize();</code>
+ <code class=python>driver.maximize_window()</code>
 </pre>
 
 <h3>Fullscreen Window</h3>
 <p>Fills the entire screen, similar to pressing F11 in most browsers.
 <pre>
  <code class=java>driver.manage().window().fullscreen();</code>
+ <code class=python>driver.fullscreen_window()</code>
 </pre>
 
 <h2>Waits</h2>
