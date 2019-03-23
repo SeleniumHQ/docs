@@ -317,30 +317,50 @@ select_object.deselect_all</code>
 <h2>Mouse and keyboard actions in detail</h2>
 <p>Suppose you have an arbitrary web element <strong>e</strong>:</p>
 
-<pre><code class=java>WebElement e = driver.findElement(By.id("testElement"));</code></pre>
+<pre>
+ <code class=java>WebElement e = driver.findElement(By.id("testElement"));</code>
+ <code class=python>e = driver.find_element_by_id("testElement")</code>
+</pre>
 
 <p>You can simulate mouse clicking on e if it's visible and has a height and width that are greater than 0:</p>
 
-<pre><code class=java>e.click();</code></pre>
+<pre>
+ <code class=java>e.click();</code>
+ <code class=python>e.click()</code>
+</pre>
 
 <p>Moreover, it's possible to mimic hovering of the cursor over e. In order to do so, you'll need the following import statement:
 
-<pre><code class=java>import org.openqa.selenium.interactions.Actions;</code></pre>
+<pre>
+ <code class=java>import org.openqa.selenium.interactions.Actions;</code>
+ <code class=python>from selenium.webdriver import ActionChains</code>
+</pre>
 
 <p>With this statement in place, you can now move over the element in question:</p>
 
-<pre><code class=java>Actions actions = new Actions(driver);
+<pre>
+ <code class=java>Actions actions = new Actions(driver);
 actions.moveToElement(e);
-actions.perform();</code></pre>
+actions.perform();</code>
+ <code class=python>actions = ActionChains(driver)
+actions.move_to_element(e)
+actions.perform()</code>
+</pre>
 
 <p>If e is an <strong>input</strong> or <strong>textarea</strong> element, the following keyboard actions can be carried out:</p>
 
 <p>1. Enter a sequence of characters in e:
 
-<pre><code class=java>e.sendKeys("Test");</code></pre>
+<pre>
+ <code class=java>e.sendKeys("Test");</code>
+ <code class=python>e.send_keys("Test")</code>
+</pre>
 
 <p>2. Delete the text that's in e (if there is any):
 
-<pre><code class=java>e.clear();</code></pre>
+<pre>
+ <code class=java>e.clear();</code>
+ <code class=python>e.clear()</code>
+</pre>
 
 <h2>Working with web elements</h2>
