@@ -260,6 +260,26 @@
  it is advised to set the <code>-host</code> flag with a value that allows the
  hub/node to be reachable from a different machine.
 
+<h5>Specifying the Port</h5>
+
+<p>The default TCP/IP port used by the hub is 4444. If you need to change the port please use above mentioned configurations</p>
+
+<h4>Troubleshooting</h4>
+
+<h5>Using Log file</h5>
+<p> For advance troubleshooting you can specify log file to log system messeges.
+For that start Selenium GRID hub or node with -log argument. Please see the below example
+</p>
+<pre><code>java -jar selenium-server-standalone.jar -role hub -log log.txt</code></pre>
+
+<p>Use your favorite text editor to open log file (log.txt in above example) to find "ERROR" logs if you get issues</p>
+
+<h5>Using -debug argument</h5>
+<p> Also you can use -debug argument to print debug logs on console.
+For that start Selenium GRID hub or node with -debug argument. Please see the below example
+</p>
+<pre><code>java -jar selenium-server-standalone.jar -role hub -debug</code></pre>
+
 
 <h2>Docker Selenium</h2>
 <p><a href="https://www.docker.com/">Docker</a> provides a convenient way to
@@ -276,3 +296,5 @@
   <h3>Prerequisite</h3>
   <p>The only requirement to run a grid is to have Docker installed and working.
   <a href="https://www.docker.com/products/docker-desktop">Install Docker</a>
+
+
