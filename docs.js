@@ -23,7 +23,7 @@ function showOnly(language, target) {
     for (var i = 0; i < languages.length; i++) {
     	var codeSamples = $('pre>code:not(.shell).' + languages[i].safe);
     	for (var j = 0; j < codeSamples.length; j++) {
-            if(language === languages[i].pretty) {
+            if(language === languages[i].pretty || codeSamples[j].hasAttribute("always-show")) {
             	codeSamples[j].style.display = 'block';
             } else {
                 codeSamples[j].style.display = 'none';
@@ -58,7 +58,7 @@ function containsLanguageBindings(pre) {
 }
 
 function containsLanguage(pre, language) {
-    return pre.querySelector('code.' + language);
+    return pre.querySelector('code:not([always-show]).' + language);
 }
 
 function addLanguageSelect() {
