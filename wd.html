@@ -1046,13 +1046,7 @@ driver.set_window_position(0, 0)</code>
 
 <p>The WebDriver instructions might look innocent enough:
 
-<<<<<<< HEAD
 <pre>
-=======
-<pre><code class=java>driver.get("file:///race_condition.html");
-WebElement el = driver.findElement(By.tagName("p"));
-Assert.assertEquals("Hello from JavaScript!", el.getText());</code>
->>>>>>> Java alternative for explicit wait code example
 <code class=python>driver.navigate("file:///race_condition.html")
 el = driver.find_element_by_tag_name("p")
 assert el.text == "Hello from JavaScript!"</code>
