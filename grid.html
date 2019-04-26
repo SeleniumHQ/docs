@@ -280,6 +280,21 @@ For that start Selenium GRID hub or node with -debug argument. Please see the be
 </p>
 <pre><code>java -jar selenium-server-standalone.jar -role hub -debug</code></pre>
 
+<h3>Warning</h3>
+
+<p>The Selenium Grid must be protected from external access using appropriate
+  firewall permissions.
+<p>Failure to protect your Grid could result in one or more of the following occurring:
+  <ul>
+    <li>You provide open access to your Grid infrastructure</li>
+    <li>You allow 3rd parties to access internal web applications and files</li>
+    <li>You allow 3rd parties to run custom binaries</li>
+  </ul>
+
+ <p>See this blog post on <a href="https://labs.detectify.com">Detectify</a> which gives a good 
+  overview of how a publicly exposed grid could be misused: 
+  <a href="https://labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/">Don't Leave your Grid Wide Open</a>.
+
 
 <h2>Docker Selenium</h2>
 <p><a href="https://www.docker.com/">Docker</a> provides a convenient way to
@@ -296,5 +311,3 @@ For that start Selenium GRID hub or node with -debug argument. Please see the be
   <h3>Prerequisite</h3>
   <p>The only requirement to run a grid is to have Docker installed and working.
   <a href="https://www.docker.com/products/docker-desktop">Install Docker</a>
-
-
