@@ -96,7 +96,13 @@
 how to find elements on the page. WebDriver offers a number of built-in selector
 types, amongst them finding an element by its ID attribute:
 
-<pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));</code></pre>
+<pre>
+  <code class=java>WebElement cheese = driver.findElement(By.id("cheese"));</code>
+  <code class=python>driver.find_element_by_id("cheese")</code>
+  <code class=cs>IWebElement element = driver.FindElement(By.Id("cheese"));</code>
+  <code class=ruby>driver.find_element(id: "cheese")</code>
+  <code class=javascript>driver.findElement(By.id('cheese'))</code>
+</pre>
 
 <p>As seen in the example, locating elements in WebDriver is done on the
 <code>WebDriver</code> instance object.  The <code>findElement(By)</code> method returns
@@ -112,8 +118,20 @@ another fundamental object type, the <code>WebElement</code>.
  you can narrow the scope of your search
  by using the same call on that object instance:
 
-<pre><code class=java>WebElement cheese = driver.findElement(By.id("cheese"));
-WebElement cheddar = cheese.findElement(By.id("cheddar"));</code></pre>
+<pre>
+  <code class=java>
+    WebElement cheese = driver.findElement(By.id("cheese"));
+    WebElement cheddar = cheese.findElement(By.id("cheddar"));
+  </code>
+  <code class=python>
+    cheese = driver.find_element_by_id("cheese")
+    cheddar = cheese.find_elements_by_id("cheddar")
+  </code>
+  <code class=ruby>
+    cheese = driver.find_element(id: "cheese")
+    cheddar = cheese.find_elements(id: "cheddar")
+  </code>
+</pre>
 
 <p>You can do this because both the <em>WebDriver</em> and <em>WebElement</em> types
 implement the <em><a href=//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext</a></em>
@@ -138,7 +156,7 @@ specific locator: WebDriver supports looking up elements
 by CSS locators, allowing us to combine the two previous locators into
 one search:
 
-<pre><code class=java>driver.findElement(By.cssSelector("#cheese #cheddar"));</code></pre>
+<pre><code class=java>driver.findElement(By.cssSelector("#cheese #cheddar"));</code><code class=python>cheddar = driver.find_element_by_css_selector("#cheese #cheddar")</code></pre>
 
 
 <h3>Locating multiple elements</h3>
@@ -161,7 +179,11 @@ elements. If only one element is found, it will still return a
 collection (of one element). If no elements match the locator, an
 empty list will be returned.
 
-<pre><code class=java>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</code></pre>
+<pre>
+  <code class=java>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</code>
+  <code class=python>mucho_cheese = driver.find_elements_by_css_selector("#cheese li")</code>
+  <code class=ruby>mucho_cheese = driver.find_elements(css: "#cheese li")</code>
+</pre>
 
 
 <h3>Element selection strategies</h3>
@@ -248,20 +270,50 @@ your search, the better.
 
 <p>You can set an element's text using the sendKeys method as follows:
 
-<pre><code class=java>String name = "Charles";
-driver.findElement(By.name("name")).sendKeys(name);</code></pre>
+<pre>
+  <code class=java>
+    String name = "Charles";
+    driver.findElement(By.name("name")).sendKeys(name);
+  </code>
+  <code class=python>
+    name = "Charles"
+    driver.find_element_by_name("name").send_keys(name)
+  </code>
+  <code class=ruby>
+    name = "Charles"
+    driver.find_element(name: "name").send_keys(name)
+  </code>
+</pre>
 
 <p>Some web applications use JavaScript libraries to add drag-and-drop
 functionality. The following is a basic example of dragging one
 element onto another element:
 
-<pre><code class=java>WebElement source = driver.findElement(By.id("source"));
-WebElement target = driver.findElement(By.id("target"));
-new Actions(driver).dragAndDrop(source, target).build().perform();</code></pre>
+<pre>
+  <code class=java>
+    WebElement source = driver.findElement(By.id("source"));
+    WebElement target = driver.findElement(By.id("target"));
+    new Actions(driver).dragAndDrop(source, target).build().perform();
+  </code>
+  <code class=python>
+    source = driver.find_element_by_id("source")
+    target = driver.find_element_by_id("target")
+    ActionChains(driver).drag_and_drop(source, target).perform()
+  </code>
+  <code class=ruby>
+    source = driver.find_element(id: "source")
+    target = driver.find_element(id: "target")
+    driver.action.drag_and_drop(source, target).perform
+  </code>
+</pre>
 
 
 <h3>Clicking on an element</h3>
 
 <p>You can click on an element using the click method:
 
-<pre><code class=java>driver.findElement(By.cssSelector("input[type='submit']")).click();</code></pre>
+<pre>
+  <code class=java>driver.findElement(By.cssSelector("input[type='submit']")).click();</code>
+  <code class=python>driver.find_element_by_css_selector("input[type='submit']").click()</code>
+  <code class=ruby>driver.find_element(css: "input[type='submit']").click</code>
+</pre>
