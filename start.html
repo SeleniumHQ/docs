@@ -127,6 +127,10 @@ another fundamental object type, the <code>WebElement</code>.
     cheese = driver.find_element_by_id("cheese")
     cheddar = cheese.find_elements_by_id("cheddar")
   </code>
+  <code class=cs>
+    IWebElement element = driver.FindElement(By.Id("cheese"));
+    IWebElement element = driver.FindElement(By.Id("cheddar"));
+  </code>
   <code class=ruby>
     cheese = driver.find_element(id: "cheese")
     cheddar = cheese.find_elements(id: "cheddar")
