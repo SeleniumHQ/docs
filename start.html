@@ -160,7 +160,11 @@ specific locator: WebDriver supports looking up elements
 by CSS locators, allowing us to combine the two previous locators into
 one search:
 
-<pre><code class=java>driver.findElement(By.cssSelector("#cheese #cheddar"));</code><code class=python>cheddar = driver.find_element_by_css_selector("#cheese #cheddar")</code></pre>
+<pre>
+  <code class=java>driver.findElement(By.cssSelector("#cheese #cheddar"));</code>
+  <code class=python>cheddar = driver.find_element_by_css_selector("#cheese #cheddar")</code>
+  <code class=cs>cheddar = driver.FindElement(By.CssSelector("#cheese #cheddar"));</code>			
+</pre>
 
 
 <h3>Locating multiple elements</h3>
