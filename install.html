@@ -11,56 +11,83 @@
 <h1>Selenium installation</h1>
 
 <p>Selenium setup is quite different from the setup of other commercial tools.
- You don’t install a tool using Selenium binaries
- but rather set up your test automation project to use such binaries
- in the language of your choice.
- The Selenium binary you would need
- depends on the browsers you want to run your tests upon.
+ To use Selenium in your automation project you need to install the
+ language bindings libraries for your language of choice. In addition you will need
+ WebDriver binaries for the browsers you want to automate and run test on.
 
-<h2>Using browser specific JAR</h2>
-
-<p> If you want to run tests only in a specific browser,
- you can add the dependency for that browser in your <i>pom.xml</i> file.
- For example, you should add following dependency in your <i>pom.xml</i> 
- file to run your tests only in Firefox:
-
-<pre><code class=xml>&lt;dependency&gt;
-  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-  &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
-  &lt;version&gt;3.X&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-
-<p> In a similar manner, if you want to run tests only in Chrome,
- you should add the following dependency:
-
-<pre><code class=xml>&lt;dependency&gt;
-  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-  &lt;artifactId&gt;selenium-chrome-driver&lt;/artifactId&gt;
-  &lt;version&gt;3.X&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-
-
-<h2>Using non browser specific JAR</h2>
-
-<p> More often than not you would need to run tests
- on more than one browser.
- Hence you would use <i>selenium-java</i>
- Maven dependency in your project.
- The <i>selenium-java</i> JAR
- contains the language bindings and the drivers
- but not the server side piece.
+<h2>Installing Selenium libraries</h2>
+First you need to install the Selenium bindings for your automation project.
+The installation process for libraries depends on the language you choose to use.
+<h3>Java</h3>
+<p> Installation of Selenium libraries for Java can be done using Maven.
+  Add the <i>selenium-java</i> dependency in your project pom.xml:
 
 <pre><code class=xml>&lt;dependency&gt;
   &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
   &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
   &lt;version&gt;3.X&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
+&lt;/dependency&gt;</code></pre>
 
+<p> The <i>selenium-java</i> dependency supports running your automation
+    project with all Selenium supported browsers. If you want to run tests
+    only in a specific browser, you can add the dependency for that browser
+    in your <i>pom.xml</i> file.
+    For example, you should add following dependency in your <i>pom.xml</i> 
+    file to run your tests only in Firefox:
+   
+   <pre><code class=xml>&lt;dependency&gt;
+     &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+     &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
+     &lt;version&gt;3.X&lt;/version&gt;
+   &lt;/dependency&gt;
+   </code></pre>
+   
+   <p> In a similar manner, if you want to run tests only in Chrome,
+    you should add the following dependency:
+   
+   <pre><code class=xml>&lt;dependency&gt;
+     &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+     &lt;artifactId&gt;selenium-chrome-driver&lt;/artifactId&gt;
+     &lt;version&gt;3.X&lt;/version&gt;
+   &lt;/dependency&gt;
+   </code></pre>
 
-<h2>Using standalone JAR</h2>
+<h3>Python</h3> 
+Installation of Selenium libraries for Python can be done using pip:
+
+<pre><code class=shell>pip install selenium</code></pre>
+
+Alternatively you can download the 
+<a href="https://pypi.org/project/selenium/#files">PyPI source archive</a> 
+(selenium-x.x.x.tar.gz) and install it using <i>setup.py</i>:
+
+<pre><code class=shell>python setup.py install</code></pre>
+
+<h3>C#</h3> 
+Installation of Selenium libraries for C# can be done using NuGet:
+
+<pre><code class=shell># Using package manager,
+Install-Package Selenium.WebDriver
+# or using .Net CLI,
+dotnet add package Selenium.WebDriver</code></pre>
+
+<h3>Ruby</h3> 
+Installation of Selenium libraries for Ruby can be done using gem:
+
+<pre><code class=shell>gem install selenium-webdriver</code></pre>
+
+<h3>JavaScript</h3> 
+Installation of Selenium libraries for JavaScript can be done using npm:
+
+<pre><code class=shell>npm install selenium-webdriver</code></pre>
+
+<h2>Installing WebDriver Binaries</h2>
+<p> To execute your project and control browser you need to have
+    browser-specific WebDriver binaries installed.
+<p> Download the <a href=wd.html#quick_reference>WebDriver binary</a>
+    supported by your browser and place it in the <a href=wd.html#adding_executables_to_your_path>System PATH</a>.
+
+<h2>Installing standalone server</h2>
 
 
 <p> If you plan to use <a href=grid.html>Selenium Grid</a>
