@@ -1248,7 +1248,13 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 
 <p>The wait lets you pass in an argument to override the timeout:
 
-<pre><code class=python>WebDriverWait(driver, timeout=3).until(some_condition)</code></pre>
+<pre>
+<code class=java>
+	//new WebDriverWait(driver,3).until(some_condition(WebElement))
+	new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+</code>
+<code class=python>WebDriverWait(driver, timeout=3).until(some_condition)</code>
+</pre>
 
 
 <h4>Expected conditions</h4>
