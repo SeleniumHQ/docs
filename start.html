@@ -101,7 +101,7 @@ types, amongst them finding an element by its ID attribute:
   <code class=python>driver.find_element_by_id("cheese")</code>
   <code class=cs>IWebElement element = driver.FindElement(By.Id("cheese"));</code>
   <code class=ruby>driver.find_element(id: "cheese")</code>
-  <code class=javascript>driver.findElement(By.id('cheese'))</code>
+  <code class=javascript>const cheese = await driver.findElement(By.id('cheese'));</code>
 </pre>
 
 <p>As seen in the example, locating elements in WebDriver is done on the
@@ -135,6 +135,10 @@ another fundamental object type, the <code>WebElement</code>.
     cheese = driver.find_element(id: "cheese")
     cheddar = cheese.find_elements(id: "cheddar")
   </code>
+  <code class=javascript>
+    const cheese = await driver.findElement(By.id('cheese'));
+    const cheddar = await cheese.findElement(By.id('cheddar'));
+  </code>
 </pre>
 
 <p>You can do this because both the <em>WebDriver</em> and <em>WebElement</em> types
@@ -163,7 +167,8 @@ one search:
 <pre>
   <code class=java>driver.findElement(By.cssSelector("#cheese #cheddar"));</code>
   <code class=python>cheddar = driver.find_element_by_css_selector("#cheese #cheddar")</code>
-  <code class=cs>cheddar = driver.FindElement(By.CssSelector("#cheese #cheddar"));</code>			
+  <code class=cs>cheddar = driver.FindElement(By.CssSelector("#cheese #cheddar"));</code>
+  <code class=javascript>const cheddar = await driver.findElement(By.css('#cheese #cheddar'));</code>
 </pre>
 
 
@@ -191,6 +196,7 @@ empty list will be returned.
   <code class=java>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</code>
   <code class=python>mucho_cheese = driver.find_elements_by_css_selector("#cheese li")</code>
   <code class=ruby>mucho_cheese = driver.find_elements(css: "#cheese li")</code>
+  <code class=javascript>const muchoCheese = await driver.findElements(By.css('#cheese li'));</code>
 </pre>
 
 
@@ -291,6 +297,10 @@ your search, the better.
     name = "Charles"
     driver.find_element(name: "name").send_keys(name)
   </code>
+  <code class=javascript>
+    const name = "Charles";
+    await driver.findElement(By.name('name')).sendKeys(name);
+  </code>
 </pre>
 
 <p>Some web applications use JavaScript libraries to add drag-and-drop
@@ -313,6 +323,12 @@ element onto another element:
     target = driver.find_element(id: "target")
     driver.action.drag_and_drop(source, target).perform
   </code>
+  <code class=javascript>
+    const actions = driver.actions({bridge: true});
+    const source = await driver.findElement(By.id('source'));
+    const target = await driver.findElement(By.id('target'));
+    await actions.dragAndDrop(source, target).perform();
+  </code>
 </pre>
 
 
@@ -324,4 +340,5 @@ element onto another element:
   <code class=java>driver.findElement(By.cssSelector("input[type='submit']")).click();</code>
   <code class=python>driver.find_element_by_css_selector("input[type='submit']").click()</code>
   <code class=ruby>driver.find_element(css: "input[type='submit']").click</code>
+  <code class=javascript>await driver.findElement(By.css("input[type='submit']")).click();</code>
 </pre>
