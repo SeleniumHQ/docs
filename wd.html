@@ -893,6 +893,14 @@ public void TearDown()
 {
     driver.Quit();
 }</code>
+ <code class=javascript>/**
+ * Example using Mocha
+ * https://mochajs.org/#hooks
+ */
+after('Tear down', async function () {
+  await driver.quit();
+});
+ </code>
 </pre>
 <p>If not running WebDriver in a test context, you may consider using
  try  / finally which is offered by most languages so that an exception
@@ -953,7 +961,11 @@ end</code>
  using something like:</p>
 <pre><code class=java>//This won't work
 driver.findElement(By.tagName("button")).click();
-</code></pre>
+</code>
+ <code class=javascript>// This won't work
+await driver.findElement(By.css('button')).click();
+ </code>
+</pre>
 <p>However, if there are no buttons outside of the iframe, you might
     instead get a <em>no such element</em> error.  This happens because Selenium is
  only aware of the elements in the top level document.  To interact with
@@ -974,10 +986,19 @@ driver.switchTo().frame(iframe);
 //Now we can click the button
 driver.findElement(By.tagName("button")).click();
  </code>
+ <code class=javascript>// Store the web element
+const iframe = await driver.findElement(By.css('#modal > iframe'));
+
+// Switch to the frame
+await driver.switchTo().frame(iframe);
+
+// Now we can click the button
+await driver.findElement(By.css('button')).click();
+ </code>
 </pre>
 
 <h3>Using a name or ID</h3>
-<p>If your frame or iframe has a id or name attribute, this can be used
+<p>If your frame or iframe has an id or name attribute, this can be used
  instead.  If the name or ID is not unique on the page, then the first
  one found will be switched to.</p>
 
@@ -990,6 +1011,15 @@ driver.switchTo().frame("myframe");
 
 //Now we can click the button
 driver.findElement(By.tagName("button")).click();</code>
+ <code class=javascript>// Using the ID
+await driver.switchTo().frame('buttonframe');
+
+// Or using the name instead
+await driver.switchTo().frame('myframe');
+
+// Now we can click the button
+await driver.findElement(By.css('button')).click();
+ </code>
 </pre>
 
 <h3>Using an index</h3>
@@ -999,6 +1029,9 @@ driver.findElement(By.tagName("button")).click();</code>
 <pre>
  <code class=java>//Switches to the second frame
 driver.switchTo().frame(1);</code>
+ <code class=javascript>// Switches to the second frame
+await driver.switchTo().frame(1);
+ </code>
 </pre>
 
 <h3>Leaving a frame</h3>
@@ -1008,6 +1041,9 @@ driver.switchTo().frame(1);</code>
 <pre>
  <code class=java>//Return to the top level
 driver.switchTo().defaultContent();</code>
+ <code class=javascript>// Return to the top level
+await driver.switchTo().defaultContent();
+ </code>
 </pre>
 
 <h2>Window Management</h2>
@@ -1034,6 +1070,14 @@ height = driver.get_window_size().get("height")
 size = driver.get_window_size()
 width1 = size.get("width")
 height1 = size.get("height")</code>
+ <code class=javascript>// Access each dimension individually
+const { width, height } = await driver.manage().window().getRect();
+
+// Or store the dimensions and query them later
+const rect = await driver.manage().window().getRect();
+const width1 = rect.width;
+const height1 = rect.height;
+ </code>
 </pre>
 
 <h3>Set Window Size</h3>
@@ -1041,6 +1085,9 @@ height1 = size.get("height")</code>
 <pre>
  <code class=java>driver.manage().window().setSize(new Dimension(1024, 768));</code>
  <code class=python>driver.set_window_size(1024,768)</code>
+ <code class=javascript>
+await driver.manage().window().setRect({ width: 1024, height: 768 });
+ </code>
 </pre>
 
 <h3>Get Window Position</h3>
@@ -1062,6 +1109,14 @@ y = driver.get_window_position().get('y')
 position = driver.get_window_position()
 x1 = position.get('x')
 y1 = position.get('y')</code>
+ <code class=javascript>// Access each dimension individually
+const { x, y } = await driver.manage().window().getRect();
+
+// Or store the dimensions and query them later
+const rect = await driver.manage().window().getRect();
+const x1 = rect.x;
+const y1 = rect.y;
+ </code>
 </pre>
 
 <h3>Set Window Position</h3>
@@ -1071,6 +1126,9 @@ y1 = position.get('y')</code>
 driver.manage().window().setPosition(new Point(0,0));</code>
  <code class=python>//Move the window to the top left of the primary monitor
 driver.set_window_position(0, 0)</code>
+ <code class=javascript>// Move the window to the top left of the primary monitor
+await driver.manage().window().setRect({ x: 0, y: 0 });
+ </code>
 </pre>
 
 <h3>Maximise Window</h3>
@@ -1080,6 +1138,7 @@ driver.set_window_position(0, 0)</code>
 <pre>
  <code class=java>driver.manage().window().maximize();</code>
  <code class=python>driver.maximize_window()</code>
+ <code class=javascript>await driver.manage().window().maximize();</code>
 </pre>
 
 <h3>Fullscreen Window</h3>
@@ -1087,6 +1146,7 @@ driver.set_window_position(0, 0)</code>
 <pre>
  <code class=java>driver.manage().window().fullscreen();</code>
  <code class=python>driver.fullscreen_window()</code>
+ <code class=javascript>await driver.manage().window().fullscreen();</code>
 </pre>
 
 <h2>Waits</h2>
@@ -1110,7 +1170,7 @@ driver.set_window_position(0, 0)</code>
 
 <pre><code class=html>&lt;!doctype html&gt;
 &lt;meta charset=utf-8&gt;
-&lt;title&gt;Race Condition Example&lt;title&gt;
+&lt;title&gt;Race Condition Example&lt;/title&gt;
 
 &lt;script&gt;
   var initialised = false;
@@ -1125,14 +1185,19 @@ driver.set_window_position(0, 0)</code>
 <p>The WebDriver instructions might look innocent enough:
 
 <pre>
-<code class=python>driver.navigate("file:///race_condition.html")
-el = driver.find_element_by_tag_name("p")
-assert el.text == "Hello from JavaScript!"</code>
-<code class=java>
+ <code class=java>
 driver.get("file:///race_condition.html");
 WebElement element = driver.findElement(By.tagName("p"));
 assertEquals(element.getText(), "Hello from JavaScript!");
-</code>
+ </code>
+ <code class=python>driver.navigate("file:///race_condition.html")
+el = driver.find_element_by_tag_name("p")
+assert el.text == "Hello from JavaScript!"</code>
+ <code class=javascript>
+await driver.get('file:///race_condition.html');
+const element = await driver.findElement(By.css('p'));
+assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
+ </code>
 </pre>
 
 <p>The issue here is that the default
@@ -1196,11 +1261,11 @@ assertEquals(element.getText(), "Hello from JavaScript!");
 WebDriver driver = new ChromeDriver();
 driver.get("https://google.com/ncr");
 driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
-// Initialize and wait till element(link) became clickable - timeout in 10 seconds 
+// Initialize and wait till element(link) became clickable - timeout in 10 seconds
 WebElement firstResult = new WebDriverWait(driver, 10)
         .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
 // Print the first result
-System.out.println(firstResult.getText());      
+System.out.println(firstResult.getText());
 	</code>
 	<code class=python>
 from selenium.webdriver.support.ui import WebDriverWait
@@ -1211,7 +1276,16 @@ driver.navigate("file:///race_condition.html")
 WebDriverWait(driver).until(document_initialised)
 el = driver.find_element_by_tag_name("p")
 assert el.text == "Hello from JavaScript!"
-  </code>
+ </code>
+ <code class=javascript>
+const documentInitialised = () =>
+    driver.executeScript('return initialised');
+
+await driver.get('file:///race_condition.html');
+await driver.wait(() => documentInitialised(), 10000);
+const element = await driver.findElement(By.css('p'));
+assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
+ </code>
 </pre>
 
 <p>We pass in the <em>condition</em> as a function reference
