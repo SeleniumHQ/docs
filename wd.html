@@ -268,6 +268,7 @@ IWebDriver driver = new ChromeDriver();</code>
 
 driver = Selenium::WebDriver.for :chrome</code>
  <code class=javascript>const {Builder} = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 
 (async function myFunction() {
     let driver = await new Builder().forBrowser('chrome').build();
@@ -282,6 +283,7 @@ driver = Selenium::WebDriver.for :chrome</code>
  <code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code>
  <code class=python>Chrome(executable_path='/path/to/chromedriver')</code>
  <code class=ruby>Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"</code>
+ <code class=javascript>chrome.setDefaultService(new chrome.ServiceBuilder('path/to/chromedriver').build());</code>
 </pre>
 
 <p>The chromedriver is implemented as a WebDriver remote server
@@ -606,7 +608,7 @@ driver.get 'https://www.seleniumhq.org'
 driver.navigate.to 'https://seleniumhq.github.io/docs/'
  </code>
  <code class=cs>driver.Navigate().GoToUrl(@"http://google.com");</code>
- <code class=javascript>driver.get("https://seleniumhq.github.io/docs/");</code>
+ <code class=javascript>await driver.get('https://seleniumhq.github.io/docs/');</code>
 </pre>
 
 <h3>Get Current URL</h3>
@@ -628,7 +630,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
  <code class=python>driver.back()</code>
  <code class=ruby>driver.navigate.back</code>
  <code class=cs>driver.Navigate().Back();</code>
- <code class=javascript>driver.back();</code>
+ <code class=javascript>await driver.navigate().back();</code>
 </pre>
 
 <h3>Forward</h3>
@@ -638,7 +640,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=python>driver.forward()</code>
   <code class=ruby>driver.navigate.forward</code>
   <code class=cs>driver.Navigate().Forward();</code>
-  <code class=javascript>driver.forward();</code>
+  <code class=javascript>await driver.navigate().forward();</code>
  </pre>
 
 <h3>Refresh</h3>
@@ -648,7 +650,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=python>driver.refresh()</code>
   <code class=ruby>driver.navigate.refresh</code>
   <code class=cs>driver.Navigate().Refresh();</code>
-  <code class=javascript>driver.refresh();</code>
+  <code class=javascript>await driver.navigate().refresh();</code>
  </pre>
 
 <h3>Get Title</h3>
@@ -658,7 +660,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
   <code class=python>driver.title</code>
   <code class=ruby>driver.title</code>
   <code class=cs>driver.Title;</code>
-  <code class=javascript>driver.getTitle();</code>
+  <code class=javascript>await driver.getTitle();</code>
  </pre>
 
 <h2>Windows and tabs</h2>
@@ -676,7 +678,7 @@ driver.navigate.to 'https://seleniumhq.github.io/docs/'
 </pre>
 <h3>Switching windows or tabs</h3>
 <p>Clicking a link which opens in a <a href="https://seleniumhq.github.io/docs/" target="_blank">
- new window</a> will visible focus the new window or tab on screen, but
+ new window</a> will focus the new window or tab on screen, but
  WebDriver will not know which window the Operating System considers
  active.  To work with the new window you will need to switch to it.  If
  you have only two tabs or windows open, and you know which window you
