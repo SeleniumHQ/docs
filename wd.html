@@ -796,19 +796,18 @@ assert((await driver.getAllWindowHandles()).length === 1);
 await driver.findElement(By.linkText('new window')).click();
 
 //Wait for the new window or tab
-await driver.wait(function() {
-    return driver.getAllWindowHandles().then(function(windows) {
-        return windows.length === 2;
-    });
-}, 10000);
+await driver.wait(
+    async () => (await driver.getAllWindowHandles()).length === 2,
+    10000
+  );
 
 //Loop through until we find a new window handle
-const windows = (await driver.getAllWindowHandles());
-for (let i = 0; i < windows.length; i++) {
-    if(windows[i]!==originalWindow) {
-        await driver.switchTo().window(windows[i]);
-    }
-}
+const windows = await driver.getAllWindowHandles();
+windows.forEach(async handle => {
+  if (handle !== originalWindow) {
+    await driver.switchTo().window(handle);
+  }
+});
 
 //Wait for the new tab to finish loading content
 await driver.wait(until.titleIs('Selenium documentation'), 10000);</code>
