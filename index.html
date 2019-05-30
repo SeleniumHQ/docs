@@ -86,7 +86,7 @@ class HelloSelenium
         using (IWebDriver driver = new FirefoxDriver())
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            driver.Navigate().GoToUrl("http://www.google.com/");
+            driver.Navigate().GoToUrl("https://www.google.com/ncr");
             driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
             IWebElement firstResult = wait.Until(ExpectedConditions.ElementExists(By.CssSelector("h3>a")));
             Console.WriteLine(firstResult.Text);
