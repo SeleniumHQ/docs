@@ -190,6 +190,7 @@ empty list will be returned.
 <pre>
   <code class=java>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</code>
   <code class=python>mucho_cheese = driver.find_elements_by_css_selector("#cheese li")</code>
+  <code class=cs>IReadOnlyList&lt;IWebElement&gt; muchoCheese = driver.FindElements(By.CssSelector("#cheese li"));</code>
   <code class=ruby>mucho_cheese = driver.find_elements(css: "#cheese li")</code>
 </pre>
 
@@ -287,6 +288,10 @@ your search, the better.
     name = "Charles"
     driver.find_element_by_name("name").send_keys(name)
   </code>
+  <code class=cs>
+    string name = "Charles";
+    driver.FindElement(By.Name("name")).SendKeys(name);
+  </code>
   <code class=ruby>
     name = "Charles"
     driver.find_element(name: "name").send_keys(name)
@@ -308,6 +313,11 @@ element onto another element:
     target = driver.find_element_by_id("target")
     ActionChains(driver).drag_and_drop(source, target).perform()
   </code>
+  <code class=cs>
+    IWebElement source = driver.FindElement(By.Id("source"));
+    IWebElement target = driver.FindElement(By.Id("target"));
+    new Actions(driver).DragAndDrop(source, target).Build().Perform();
+  </code>
   <code class=ruby>
     source = driver.find_element(id: "source")
     target = driver.find_element(id: "target")
@@ -323,5 +333,6 @@ element onto another element:
 <pre>
   <code class=java>driver.findElement(By.cssSelector("input[type='submit']")).click();</code>
   <code class=python>driver.find_element_by_css_selector("input[type='submit']").click()</code>
+  <code class=cs>driver.FindElement(By.CssSelector("input[type='submit']")).Click();</code>
   <code class=ruby>driver.find_element(css: "input[type='submit']").click</code>
 </pre>
