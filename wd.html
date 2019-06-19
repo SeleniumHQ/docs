@@ -59,7 +59,7 @@
 
 
 <h3>The Parts and Pieces</h3>
-<p>At its minimum, WebDriver talks to a browser through a driver. Communication is two way: WebDriver passes commands to the browser through the driver, and recieves information back via the same route.
+<p>At its minimum, WebDriver talks to a browser through a driver. Communication is two way: WebDriver passes commands to the browser through the driver, and receives information back via the same route.
 </br>
 <img src="images/basic_comms.png" width="400px" style="float:none">
 
@@ -103,7 +103,7 @@
  please see <em><a href=drivers.html>Driver Idiosyncracies</a></em>.
 
 <p>Even though all the drivers share a single user-facing interface
- for contolling the browser,
+ for controlling the browser,
  they have slightly different ways of setting up browser sessions.
  Since many of the driver implementations are provided by third parties,
  they are not included in the standard Selenium distribution.
@@ -851,7 +851,7 @@ await driver.switchTo().window(originalWindow);
  trigger a <strong>No Such Window Exception</strong>. You must switch
  back to a valid window handle in order to continue execution.</p>
 
-<h3>Quiting the browser at the end of a session</h3>
+<h3>Quitting the browser at the end of a session</h3>
 <p>When you are finished with the browser session you should call quit,
  instead of close:
 <pre>
