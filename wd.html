@@ -1553,17 +1553,10 @@ search_box = search_form.find_element_by_name("q")
 search_box.send_keys("webdriver")
   </code>
   <code class=java>
-// Initialize WebDriver
 WebDriver driver = new FirefoxDriver();
-		
-// Launch the browser and navigate to the URL
 driver.get("http://www.google.com");
-        
-// Locate the webelement
 WebElement searchForm = driver.findElement(By.tagName("form"));
 WebElement searchbox = driver.findElement(By.name("q"));
-        
-// type on the searchbox
 searchbox.sendKeys("webdriver");
   </code>
 </pre>
