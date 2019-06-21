@@ -59,7 +59,7 @@
 
 
 <h3>The Parts and Pieces</h3>
-<p>At its minimum, WebDriver talks to a browser through a driver. Communication is two way: WebDriver passes commands to the browser through the driver, and recieves information back via the same route.
+<p>At its minimum, WebDriver talks to a browser through a driver. Communication is two way: WebDriver passes commands to the browser through the driver, and receives information back via the same route.
 </br>
 <img src="images/basic_comms.png" width="400px" style="float:none">
 
@@ -103,7 +103,7 @@
  please see <em><a href=drivers.html>Driver Idiosyncracies</a></em>.
 
 <p>Even though all the drivers share a single user-facing interface
- for contolling the browser,
+ for controlling the browser,
  they have slightly different ways of setting up browser sessions.
  Since many of the driver implementations are provided by third parties,
  they are not included in the standard Selenium distribution.
@@ -851,7 +851,7 @@ await driver.switchTo().window(originalWindow);
  trigger a <strong>No Such Window Exception</strong>. You must switch
  back to a valid window handle in order to continue execution.</p>
 
-<h3>Quiting the browser at the end of a session</h3>
+<h3>Quitting the browser at the end of a session</h3>
 <p>When you are finished with the browser session you should call quit,
  instead of close:
 <pre>
@@ -1190,15 +1190,28 @@ assertEquals(element.getText(), "Hello from JavaScript!");
  wait until the dynamically added element from the script
  has been added to the DOM:
 
-<pre><code class=python>from selenium.webdriver.support.ui import WebDriverWait
-
+<pre>
+	<code class=java>
+WebDriver driver = new ChromeDriver();
+driver.get("https://google.com/ncr");
+driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
+// Initialize and wait till element(link) became clickable - timeout in 10 seconds 
+WebElement firstResult = new WebDriverWait(driver, 10)
+        .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+// Print the first result
+System.out.println(firstResult.getText());      
+	</code>
+	<code class=python>
+from selenium.webdriver.support.ui import WebDriverWait
 def document_initialised(driver):
     return driver.execute_script("return initialised")
 
 driver.navigate("file:///race_condition.html")
 WebDriverWait(driver).until(document_initialised)
 el = driver.find_element_by_tag_name("p")
-assert el.text == "Hello from JavaScript!"</code></pre>
+assert el.text == "Hello from JavaScript!"
+  </code>
+</pre>
 
 <p>We pass in the <em>condition</em> as a function reference
  that the <em>wait</em> will run repeatedly until its return value is truthy.
@@ -1248,7 +1261,15 @@ assert el.text == "Hello from JavaScript!"</code></pre>
 
 <p>The wait lets you pass in an argument to override the timeout:
 
-<pre><code class=python>WebDriverWait(driver, timeout=3).until(some_condition)</code></pre>
+<pre>
+  <code class=java>
+//new WebDriverWait(driver,3).until(some_condition(WebElement))
+new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+  </code>
+  <code class=python>
+WebDriverWait(driver, timeout=3).until(some_condition)
+  </code>
+</pre>
 
 
 <h4>Expected conditions</h4>
@@ -1530,6 +1551,13 @@ driver.get("http://www.google.com")
 search_form = driver.find_element_by_tag_name("form")
 search_box = search_form.find_element_by_name("q")
 search_box.send_keys("webdriver")
+  </code>
+  <code class=java>
+WebDriver driver = new FirefoxDriver();
+driver.get("http://www.google.com");
+WebElement searchForm = driver.findElement(By.tagName("form"));
+WebElement searchbox = driver.findElement(By.name("q"));
+searchbox.sendKeys("webdriver");
   </code>
 </pre>
 
