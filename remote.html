@@ -141,11 +141,31 @@ driver.close</code></pre>
 <p>For example, suppose you wanted to run Chrome on Windows XP,
  using Chrome version 27:
 
-<pre><code class=ruby>caps = Selenium::WebDriver::Remote::Capabilities.chrome
+<pre>
+<code class=java>
+WebDriver driver = null;		
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setPlatform(Platform.XP);
+capabilities.setBrowserName("chrome");
+capabilities.setVersion("27");
+		
+try {
+  driver = new RemoteWebDriver(new URL("http://www.example.com"),capabilities);
+} catch (MalformedURLException e) {
+		e.printStackTrace();
+}
+				
+driver.get("http://www.google.com");
+driver.close();
+</code>
+<code class=ruby>
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
 caps.platform = Windows XP
 caps.version = 27
 
-driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps</code></pre>
+driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
+</code>
+</pre>
 
 
 <h3>Local file detector</h3>
