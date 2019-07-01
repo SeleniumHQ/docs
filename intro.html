@@ -182,7 +182,7 @@
  on multiple operating systems,
  but the enumeration of all the possible browsers,
  their different versions, and the many operating systems they run on
- will quickly become a non-trival undertaking.
+ will quickly become a non-trivial undertaking.
 
 
 <h3>Let’s start with an example</h3>
@@ -266,7 +266,19 @@ User user = UserFactory.createCommonUser(); //This method is defined elsewhere.
 // Logging in on this site takes you to your personal "My Account" page, so the
 // AccountPage object is returned by the loginAs method, allowing you to then
 // perform actions from the AccountPage.
-AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());</code></pre>
+AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());</code>
+<code class=python># Create a user who has read-only permissions--they can configure a unicorn,
+# but they do not have payment information set up, nor do they have
+# administrative privileges. At the time the user is created, its email
+# address and password are randomly generated--you don't even need to
+# know them.
+user = user_factory.create_common_user() #This method is defined elsewhere.
+
+# Log in as this user.
+# Logging in on this site takes you to your personal "My Account" page, so the
+# AccountPage object is returned by the loginAs method, allowing you to then
+# perform actions from the AccountPage.
+account_page = login_as(user.get_email(), user.get_password())</code></pre>
 
 <p>As you can imagine, the <code>UserFactory</code> can be extended
  to provide methods such as <code>createAdminUser()</code>, and <code>createUserWithPayment()</code>.
@@ -312,7 +324,21 @@ AddUnicornPage addUnicornPage = accountPage.addUnicorn();
 // Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
 // its createUnicorn() method. This method will take Sparkles' attributes,
 // fill out the form, and click submit.
-UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles);</code></pre>
+UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles);</code>
+<code class=python># The Unicorn is a top-level Object--it has attributes, which are set here.
+# This only stores the values; it does not fill out any web forms or interact
+# with the browser in any way.
+sparkles = Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS)
+
+# Since we're already "on" the account page, we have to use it to get to the
+# actual place where you configure unicorns. Calling the "Add Unicorn" method
+# takes us there.
+add_unicorn_page = account_page.add_unicorn()
+
+# Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
+# its createUnicorn() method. This method will take Sparkles' attributes,
+# fill out the form, and click submit.
+unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)</code></pre>
 
 <p>Now that you've configured your unicorn,
  you need to move on to step 3: making sure it actually worked.
@@ -320,7 +346,11 @@ UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.createUnicorn(s
 <pre><code class=java>// The exists() method from UnicornConfirmationPage will take the Sparkles 
 // object--a specification of the attributes you want to see, and compare
 // them with the fields on the page.
-Assert.assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles));</code></pre>
+Assert.assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles));</code>
+<code class=python># The exists() method from UnicornConfirmationPage will take the Sparkles
+# object--a specification of the attributes you want to see, and compare
+# them with the fields on the page.
+assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been created, with all attributes intact"</code></pre>
 
 <p>Note that the tester still hasn't done anything but talk about unicorns in this code–
  no buttons, no locators, no browser controls.
