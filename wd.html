@@ -281,7 +281,7 @@ driver = Selenium::WebDriver.for :chrome</code>
 <pre>
  <code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code>
  <code class=python>Chrome(executable_path='/path/to/chromedriver')</code>
- <code class=cs>new ChromeDriver("/path/to/chromedriver")</code>
+ <code class=cs>new ChromeDriver("/path/to/chromedriver");</code>
  <code class=ruby>Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"</code>
 </pre>
 
@@ -1101,7 +1101,7 @@ position = driver.get_window_position()
 x1 = position.get('x')
 y1 = position.get('y')</code>
  <code class=cs>//Access each dimension individually
-int x = driver.Manage().Window.Position.X;;
+int x = driver.Manage().Window.Position.X;
 int y = driver.Manage().Window.Position.Y;
 
 //Or store the dimensions and query them later
