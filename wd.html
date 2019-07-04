@@ -282,6 +282,7 @@ const chrome = require('selenium-webdriver/chrome');
 <pre>
  <code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code>
  <code class=python>Chrome(executable_path='/path/to/chromedriver')</code>
+ <code class=cs>new ChromeDriver("/path/to/chromedriver");</code>
  <code class=ruby>Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"</code>
  <code class=javascript>chrome.setDefaultService(new chrome.ServiceBuilder('path/to/chromedriver').build());</code>
 </pre>
@@ -338,6 +339,7 @@ driver = Selenium::WebDriver.for :firefox</code>
 <pre>
   <code class=java>System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");</code>
   <code class=python>Firefox(executable_path='/path/to/geckodriver')</code>
+  <code class=cs>new FirefoxDriver("/path/to/geckodriver");</code>
   <code class=ruby>Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"</code>
 </pre>
 
@@ -396,6 +398,7 @@ driver = Selenium::WebDriver.for :edge</code>
 <pre>
   <code class=java>System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe");</code>
   <code class=python>Edge(executable_path='/path/to/MicrosoftWebDriver.exe')</code>
+  <code class=cs>new EdgeDriver("/path/to/geckodriver");</code>
   <code class=ruby>Selenium::WebDriver::Edge.driver_path = "C:\path\to\MicrosoftWebDriver.exe"</code>
 </pre>
 
@@ -440,6 +443,7 @@ driver = Selenium::WebDriver.for :internet_explorer</code>
 <pre>
   <code class=java>System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe");</code>
   <code class=python>Ie(executable_path='/path/to/IEDriverServer.exe')</code>
+  <code class=cs>new InternetExplorerDriver("/path/to/geckodriver");</code>
   <code class=ruby>Selenium::WebDriver::IE.driver_path = "C:\path\to\IEDriver.exe"</code>
 </pre>
 
@@ -741,7 +745,7 @@ with webdriver.Firefox() as driver:
     # Wait for the new tab to finish loading content
     wait.until(EC.title_is("Selenium documentation"))</code>
  <code class=cs>//Store the ID of the original window
-String originalWindow = driver.CurrentWindowHandle;
+string originalWindow = driver.CurrentWindowHandle;
 
 //Check we don't have other windows open already
 Assert.AreEqual(driver.WindowHandles.Count, 1);
@@ -753,7 +757,7 @@ driver.FindElement(By.LinkText("new window")).Click();
 wait.Until(wd => wd.WindowHandles.Count == 2);
 
 //Loop through until we find a new window handle
-foreach(String window in driver.WindowHandles)
+foreach(string window in driver.WindowHandles)
 {
     if(originalWindow != window)
     {
@@ -959,12 +963,16 @@ end</code>
 </code></pre>
 <p>If it wasn't for the iframe we would expect to click on the button
  using something like:</p>
-<pre><code class=java>//This won't work
+<pre>
+  <code class=java>//This won't work
 driver.findElement(By.tagName("button")).click();
-</code>
- <code class=javascript>// This won't work
+  </code>
+  <code class=cs>//This won't work
+driver.FindElement(By.TagName("button")).Click();
+  </code>
+  <code class=javascript>// This won't work
 await driver.findElement(By.css('button')).click();
- </code>
+  </code>
 </pre>
 <p>However, if there are no buttons outside of the iframe, you might
     instead get a <em>no such element</em> error.  This happens because Selenium is
@@ -977,7 +985,7 @@ await driver.findElement(By.css('button')).click();
 <p>Switching using a webelement is the most flexible option.  You can
  find the frame using your preferred selector and switch to it.</p>
 <pre>
- <code class=java>//Store the web element
+  <code class=java>//Store the web element
 WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"));
 
 //Switch to the frame
@@ -985,8 +993,17 @@ driver.switchTo().frame(iframe);
 
 //Now we can click the button
 driver.findElement(By.tagName("button")).click();
- </code>
- <code class=javascript>// Store the web element
+  </code>
+  <code class=cs>//Store the web element
+IWebElement iframe = driver.FindElement(By.CssSelector("#modal>iframe"));
+
+//Switch to the frame
+driver.SwitchTo().Frame(iframe);
+
+//Now we can click the button
+driver.FindElement(By.TagName("button")).Click();
+  </code>
+  <code class=javascript>// Store the web element
 const iframe = await driver.findElement(By.css('#modal > iframe'));
 
 // Switch to the frame
@@ -994,7 +1011,7 @@ await driver.switchTo().frame(iframe);
 
 // Now we can click the button
 await driver.findElement(By.css('button')).click();
- </code>
+  </code>
 </pre>
 
 <h3>Using a name or ID</h3>
@@ -1010,8 +1027,18 @@ driver.switchTo().frame("buttonframe");
 driver.switchTo().frame("myframe");
 
 //Now we can click the button
-driver.findElement(By.tagName("button")).click();</code>
- <code class=javascript>// Using the ID
+driver.findElement(By.tagName("button")).click();
+  </code>
+  <code class=cs>//Using the ID
+driver.SwitchTo().Frame("buttonframe");
+
+//Or using the name instead
+driver.SwitchTo().Frame("myframe");
+
+//Now we can click the button
+driver.FindElement(By.TagName("button")).Click();
+  </code>
+  <code class=javascript>// Using the ID
 await driver.switchTo().frame('buttonframe');
 
 // Or using the name instead
@@ -1019,7 +1046,7 @@ await driver.switchTo().frame('myframe');
 
 // Now we can click the button
 await driver.findElement(By.css('button')).click();
- </code>
+  </code>
 </pre>
 
 <h3>Using an index</h3>
@@ -1027,11 +1054,15 @@ await driver.findElement(By.css('button')).click();
     queried using <em>window.frames</em> in javascript.</p>
 
 <pre>
- <code class=java>//Switches to the second frame
-driver.switchTo().frame(1);</code>
- <code class=javascript>// Switches to the second frame
+  <code class=java>//Switches to the second frame
+driver.switchTo().frame(1);
+  </code>
+  <code class=cs>//Switches to the second frame
+driver.SwitchTo().Frame(1);
+  </code>
+  <code class=javascript>// Switches to the second frame
 await driver.switchTo().frame(1);
- </code>
+  </code>
 </pre>
 
 <h3>Leaving a frame</h3>
@@ -1039,11 +1070,15 @@ await driver.switchTo().frame(1);
  like so:
 </p>
 <pre>
- <code class=java>//Return to the top level
-driver.switchTo().defaultContent();</code>
- <code class=javascript>// Return to the top level
+  <code class=java>//Return to the top level
+driver.switchTo().defaultContent();
+  </code>
+  <code class=cs>//Return to the top level
+driver.SwitchTo().DefaultContent();
+  </code>
+  <code class=javascript>// Return to the top level
 await driver.switchTo().defaultContent();
- </code>
+  </code>
 </pre>
 
 <h2>Window Management</h2>
@@ -1054,7 +1089,7 @@ await driver.switchTo().defaultContent();
 <h3>Get Window Size</h3>
 <p>Fetches the size of the browser window in pixels.
 <pre>
- <code class=java>//Access each dimension individually
+  <code class=java>//Access each dimension individually
 int width = driver.manage().window().getSize().getWidth();
 int height = driver.manage().window().getSize().getHeight();
 
@@ -1069,33 +1104,43 @@ height = driver.get_window_size().get("height")
 //Or store the dimensions and query them later
 size = driver.get_window_size()
 width1 = size.get("width")
-height1 = size.get("height")</code>
- <code class=javascript>// Access each dimension individually
+height1 = size.get("height")
+  </code>
+  <code class=cs>//Access each dimension individually
+int width = driver.Manage().Window.Size.Width;
+int height = driver.Manage().Window.Size.Height;
+
+//Or store the dimensions and query them later
+System.Drawing.Size size = driver.Manage().Window.Size;
+int width1 = size.Width;
+int height1 = size.Height;
+  </code>
+  <code class=javascript>// Access each dimension individually
 const { width, height } = await driver.manage().window().getRect();
 
 // Or store the dimensions and query them later
 const rect = await driver.manage().window().getRect();
 const width1 = rect.width;
 const height1 = rect.height;
- </code>
+  </code>
 </pre>
 
 <h3>Set Window Size</h3>
 <p>Restores the window and sets the window size.
 <pre>
  <code class=java>driver.manage().window().setSize(new Dimension(1024, 768));</code>
+ <code class=python>driver.set_window_size(1024, 768)</code>
+ <code class=cs>driver.Manage().Window.Size = new Size(1024, 768);</code>
  <code class=python>driver.set_window_size(1024,768)</code>
- <code class=javascript>
-await driver.manage().window().setRect({ width: 1024, height: 768 });
- </code>
+ <code class=javascript>await driver.manage().window().setRect({ width: 1024, height: 768 });</code>
 </pre>
 
 <h3>Get Window Position</h3>
 <p>Fetches the coordinates of the top left coordinate of the browser window.
 <pre>
- <code class=java>//Access each dimension individually
+  <code class=java>//Access each dimension individually
 int x = driver.manage().window().getPosition().getX();
-int y = driver.manage().window()..getPosition().getY();
+int y = driver.manage().window().getPosition().getY();
 
 //Or store the dimensions and query them later
 Point position = driver.manage().window().getPosition();
@@ -1108,24 +1153,36 @@ y = driver.get_window_position().get('y')
 //Or store the dimensions and query them later
 position = driver.get_window_position()
 x1 = position.get('x')
-y1 = position.get('y')</code>
- <code class=javascript>// Access each dimension individually
+y1 = position.get('y')
+  </code>
+  <code class=cs>//Access each dimension individually
+int x = driver.Manage().Window.Position.X;
+int y = driver.Manage().Window.Position.Y;
+
+//Or store the dimensions and query them later
+Point position = driver.Manage().Window.Position;
+int x1 = position.X;
+int y1 = position.Y;
+  </code>
+  <code class=javascript>// Access each dimension individually
 const { x, y } = await driver.manage().window().getRect();
 
 // Or store the dimensions and query them later
 const rect = await driver.manage().window().getRect();
 const x1 = rect.x;
 const y1 = rect.y;
- </code>
+  </code>
 </pre>
 
 <h3>Set Window Position</h3>
 <p>Moves the window to the chosen position.
 <pre>
  <code class=java>//Move the window to the top left of the primary monitor
-driver.manage().window().setPosition(new Point(0,0));</code>
+driver.manage().window().setPosition(new Point(0, 0));</code>
  <code class=python>//Move the window to the top left of the primary monitor
 driver.set_window_position(0, 0)</code>
+ <code class=cs>//Move the window to the top left of the primary monitor
+driver.Manage().Window.Position = new Point(0, 0);</code>
  <code class=javascript>// Move the window to the top left of the primary monitor
 await driver.manage().window().setRect({ x: 0, y: 0 });
  </code>
@@ -1138,6 +1195,7 @@ await driver.manage().window().setRect({ x: 0, y: 0 });
 <pre>
  <code class=java>driver.manage().window().maximize();</code>
  <code class=python>driver.maximize_window()</code>
+ <code class=cs>driver.Manage().Window.Maximize();</code>
  <code class=javascript>await driver.manage().window().maximize();</code>
 </pre>
 
@@ -1146,6 +1204,7 @@ await driver.manage().window().setRect({ x: 0, y: 0 });
 <pre>
  <code class=java>driver.manage().window().fullscreen();</code>
  <code class=python>driver.fullscreen_window()</code>
+ <code class=java>driver.Manage().Window.FullScreen();</code>
  <code class=javascript>await driver.manage().window().fullscreen();</code>
 </pre>
 
@@ -1185,19 +1244,26 @@ await driver.manage().window().setRect({ x: 0, y: 0 });
 <p>The WebDriver instructions might look innocent enough:
 
 <pre>
- <code class=java>
+  <code class=java>
 driver.get("file:///race_condition.html");
 WebElement element = driver.findElement(By.tagName("p"));
 assertEquals(element.getText(), "Hello from JavaScript!");
- </code>
- <code class=python>driver.navigate("file:///race_condition.html")
+  </code>
+  <code class=cs>
+driver.Navigate().GoToUrl("file:///race_condition.html");
+IWebElement element = driver.FindElement(By.TagName("p"));
+assertEquals(element.Text, "Hello from JavaScript!");
+  </code>
+  <code class=python>
+driver.navigate("file:///race_condition.html")
 el = driver.find_element_by_tag_name("p")
-assert el.text == "Hello from JavaScript!"</code>
- <code class=javascript>
+assert el.text == "Hello from JavaScript!"
+  </code>
+  <code class=javascript>
 await driver.get('file:///race_condition.html');
 const element = await driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
- </code>
+  </code>
 </pre>
 
 <p>The issue here is that the default
@@ -1517,6 +1583,19 @@ text = alert.text
 # Press the OK button
 alert.accept()
  </code>
+ <code class=cs>
+//Click the link to activate the alert
+driver.FindElement(By.LinkText("See an example alert")).Click();
+
+//Wait for the alert to be displayed and store it in a variable
+IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
+
+//Store the alert text in a variable
+string text = alert.Text;
+
+//Press the OK button
+alert.Accept();
+ </code>
 </pre>
 
 <h3>Confirm</h3>
@@ -1560,6 +1639,22 @@ text = alert.text
 # Press the Cancel button
 alert.dismiss()
  </code>
+ <code class=cs>
+//Click the link to activate the alert
+driver.FindElement(By.LinkText("See a sample confirm")).Click();
+
+//Wait for the alert to be displayed
+wait.Until(ExpectedConditions.AlertIsPresent());
+
+//Store the alert in a variable
+IAlert alert = driver.SwitchTo().Alert();
+
+//Store the alert in a variable for reuse
+string text = alert.Text;
+
+//Press the Cancel button
+alert.Dismiss();
+ </code>
 </pre>
 
 <h3>Prompt</h3>
@@ -1600,6 +1695,19 @@ alert.send_keys("Selenium")
 
 # Press the OK button
 alert.accept()
+ </code>
+ <code class=cs>
+//Click the link to activate the alert
+driver.FindElement(By.LinkText("See a sample prompt")).Click();
+
+//Wait for the alert to be displayed and store it in a variable
+IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
+
+//Type your message
+alert.SendKeys("Selenium");
+
+//Press the OK button
+alert.Accept();
  </code>
 </pre>
 
