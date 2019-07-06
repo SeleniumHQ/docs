@@ -122,11 +122,21 @@ public class AppServer {
  pointing to our remote web server, <em>www.example.com</em>,
  running our tests on Firefox.
 
-<pre><code class=ruby>require 'selenium-webdriver'
+<pre>
+<code class=java>
+FirefoxOptions firefoxOptions = new FirefoxOptions();
+RemoteWebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
+driver.get("http://www.google.com");
+driver.quit();
+</code>
+<code class=ruby>
+require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :remote, url: "http://www.example.com", desired_capabilities: :firefox
 driver.get "http://www.google.com"
-driver.close</code></pre>
+driver.close
+</code>
+</pre>
 
 <p>To further customize our test configuration, we can add other desired capabilities.
 
