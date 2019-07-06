@@ -125,7 +125,7 @@ public class AppServer {
 <pre>
 <code class=java>
 FirefoxOptions firefoxOptions = new FirefoxOptions();
-RemoteWebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
+WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
 driver.get("http://www.google.com");
 driver.quit();
 </code>
@@ -149,29 +149,21 @@ driver.close
  please visit the documentation <a href="https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities">here</a>.
 
 <p>For example, suppose you wanted to run Chrome on Windows XP,
- using Chrome version 27:
+ using Chrome version 67:
 
 <pre>
 <code class=java>
-WebDriver driver = null;		
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setPlatform(Platform.XP);
-capabilities.setBrowserName("chrome");
-capabilities.setVersion("27");
-		
-try {
-  driver = new RemoteWebDriver(new URL("http://www.example.com"),capabilities);
-} catch (MalformedURLException e) {
-		e.printStackTrace();
-}
-				
+ChromeOptions chromeOptions = new ChromeOptions();
+chromeOptions.setCapability("browserVersion", "67");
+chromeOptions.setCapability("platformName", "Windows XP");
+WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions);
 driver.get("http://www.google.com");
-driver.close();
+driver.quit();
 </code>
 <code class=ruby>
 caps = Selenium::WebDriver::Remote::Capabilities.chrome
 caps.platform = Windows XP
-caps.version = 27
+caps.version = 67
 
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
 </code>
