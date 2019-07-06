@@ -125,7 +125,7 @@ public class AppServer {
 <pre>
 <code class=java>
 FirefoxOptions firefoxOptions = new FirefoxOptions();
-RemoteWebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
+WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
 driver.get("http://www.google.com");
 driver.quit();
 </code>
@@ -149,13 +149,25 @@ driver.close
  please visit the documentation <a href="https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities">here</a>.
 
 <p>For example, suppose you wanted to run Chrome on Windows XP,
- using Chrome version 27:
+ using Chrome version 67:
 
-<pre><code class=ruby>caps = Selenium::WebDriver::Remote::Capabilities.chrome
+<pre>
+<code class=java>
+ChromeOptions chromeOptions = new ChromeOptions();
+chromeOptions.setCapability("browserVersion", "67");
+chromeOptions.setCapability("platformName", "Windows XP");
+WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions);
+driver.get("http://www.google.com");
+driver.quit();
+</code>
+<code class=ruby>
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
 caps.platform = Windows XP
-caps.version = 27
+caps.version = 67
 
-driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps</code></pre>
+driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
+</code>
+</pre>
 
 
 <h3>Local file detector</h3>
