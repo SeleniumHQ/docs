@@ -124,12 +124,10 @@ public class AppServer {
 
 <pre>
 <code class=java>
-WebDriver driver = null;		
-DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-
-driver = new RemoteWebDriver(new URL("http://www.example.com"),capabilities);
+FirefoxOptions firefoxOptions = new FirefoxOptions();
+RemoteWebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
 driver.get("http://www.google.com");
-driver.close();
+driver.quit();
 </code>
 <code class=ruby>
 require 'selenium-webdriver'
