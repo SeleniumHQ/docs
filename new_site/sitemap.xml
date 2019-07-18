@@ -3,13 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/browsers/</loc>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/getting_started/</loc>
     <lastmod>2019-07-15T23:43:32-05:00</lastmod>
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_selenium_libraries/</loc>
+    <lastmod>2019-07-17T20:12:05-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/the_selenium_project_and_tools/</loc>
     <lastmod>2019-07-15T23:43:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_webdriver_binaries/</loc>
+    <lastmod>2019-07-17T20:12:05-05:00</lastmod>
   </url>
   
   <url>
@@ -23,6 +37,16 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_standalone_server/</loc>
+    <lastmod>2019-07-17T20:12:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/selenium_installation/</loc>
+    <lastmod>2019-07-17T20:12:05-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/types_of_testing/</loc>
     <lastmod>2019-07-15T23:43:32-05:00</lastmod>
   </url>
@@ -30,6 +54,10 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/about_this_documentation/</loc>
     <lastmod>2019-07-15T23:43:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/</loc>
   </url>
   
   <url>
