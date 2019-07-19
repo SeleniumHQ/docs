@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Getting Started :: Selenium Documentation</title>
+    <title>Performing actions on the AUT* :: Selenium Documentation</title>
 
     
     <link href="/docs/new_site/css/nucleus.css?1563503238" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/docs/new_site/getting_started/">
+  <body class="" data-url="/docs/new_site/get_started_with_webdriver/performing_actions_on_the_aut/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -93,8 +93,8 @@
   
     
     <li data-nav-id="/docs/new_site/getting_started/" title="Getting Started" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/docs/new_site/getting_started/">
@@ -347,7 +347,7 @@
   
     
     <li data-nav-id="/docs/new_site/get_started_with_webdriver/" title="Get started with WebDriver" class="dd-item 
-        
+        parent
         
         
         ">
@@ -430,7 +430,7 @@
  
   
     
-      <li data-nav-id="/docs/new_site/get_started_with_webdriver/performing_actions_on_the_aut/" title="Performing actions on the AUT*" class="dd-item ">
+      <li data-nav-id="/docs/new_site/get_started_with_webdriver/performing_actions_on_the_aut/" title="Performing actions on the AUT*" class="dd-item active">
         <a href="/docs/new_site/get_started_with_webdriver/performing_actions_on_the_aut/">
         Performing actions on the AUT*
         <i class="fas fa-check read-icon"></i>
@@ -498,7 +498,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/getting_started/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/get_started_with_webdriver/performing_actions_on_the_aut.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -513,6 +513,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -523,7 +525,13 @@
             
           
           
-            <a href='/docs/new_site/'>Selenium Documentation</a> > Getting Started
+            
+            
+          
+          
+            <a href='/docs/new_site/'>Selenium Documentation</a> > <a href='/docs/new_site/get_started_with_webdriver/'>Get started with WebDriver</a> > Performing actions on the AUT*
+          
+         
           
          
           
@@ -532,6 +540,23 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#clicking-on-an-element">Clicking on an element</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -539,9 +564,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Performing actions on the AUT*
+            </h1>
           
 
         
@@ -549,28 +577,232 @@
 
 
 
-	
 
-<h1 id="getting-started">Getting Started</h1>
-
-<p>If you are new to Selenium,
-we have a few resources that can help you
-get up to speed right away.</p>
-
-<ul>
-<li><a href="/docs/new_site/getting_started/quick/">Quick tour</a>
-
-<ul>
-<li><a href="/docs/new_site/getting_started/quick/#webdriver">WebDriver</a></li>
-<li><a href="/docs/new_site/getting_started/quick/#selenium_remote_control">Remote Control</a></li>
-<li><a href="/docs/new_site/getting_started/quick/#selenium_ide">IDE</a></li>
-<li><a href="/docs/new_site/getting_started/quick/#selenium_grid">Grid</a></li>
-<li><a href="/docs/new_site/getting_started/quick/#selenium_html_runner">HTML Runner</a></li>
-</ul></li>
-</ul>
+<p>You can set an element&rsquo;s text using the sendKeys method as follows:</p>
 
 
 
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    <label for="tab0code0">Java</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0" checked>
+    <label for="tab1code0">Python</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0" checked>
+    <label for="tab2code0">C#</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0" checked>
+    <label for="tab3code0">Ruby</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0" checked>
+    <label for="tab4code0">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+String name <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Charles&#34;</span><span style="color:#719e07">;</span>
+driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;name&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span>name<span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+name <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Charles&#34;</span>
+driver<span style="color:#719e07">.</span>find_element_by_name(<span style="color:#2aa198">&#34;name&#34;</span>)<span style="color:#719e07">.</span>send_keys(name)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#dc322f">string</span> name = <span style="color:#2aa198">&#34;Charles&#34;</span>;
+driver.FindElement(By.Name(<span style="color:#2aa198">&#34;name&#34;</span>)).SendKeys(name);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#b58900">name</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Charles&#34;</span>
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#34;name&#34;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#b58900">name</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#719e07">const</span> name <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Charles&#34;</span>;
+<span style="color:#268bd2">await</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;name&#39;</span>)).sendKeys(name);
+  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Some web applications use JavaScript libraries to add drag-and-drop
+functionality. The following is a basic example of dragging one
+element onto another element:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+    <label for="tab0code1">Java</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1" checked>
+    <label for="tab1code1">Python</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1" checked>
+    <label for="tab2code1">C#</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1" checked>
+    <label for="tab3code1">Ruby</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1" checked>
+    <label for="tab4code1">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+WebElement source <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;source&#34;</span><span style="color:#719e07">));</span>
+WebElement target <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;target&#34;</span><span style="color:#719e07">));</span>
+<span style="color:#719e07">new</span> Actions<span style="color:#719e07">(</span>driver<span style="color:#719e07">).</span>dragAndDrop<span style="color:#719e07">(</span>source<span style="color:#719e07">,</span> target<span style="color:#719e07">).</span>build<span style="color:#719e07">().</span>perform<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+source <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;source&#34;</span>)
+target <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;target&#34;</span>)
+ActionChains(driver)<span style="color:#719e07">.</span>drag_and_drop(source, target)<span style="color:#719e07">.</span>perform()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+IWebElement source = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;source&#34;</span>));
+IWebElement target = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;target&#34;</span>));
+<span style="color:#719e07">new</span> Actions(driver).DragAndDrop(source, target).Build().Perform();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+source <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#34;source&#34;</span>)
+target <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#34;target&#34;</span>)
+driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>drag_and_drop(source, target)<span style="color:#719e07">.</span>perform
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#719e07">const</span> actions <span style="color:#719e07">=</span> driver.actions({bridge<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+<span style="color:#719e07">const</span> source <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;source&#39;</span>));
+<span style="color:#719e07">const</span> target <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;target&#39;</span>));
+<span style="color:#268bd2">await</span> actions.dragAndDrop(source, target).perform();
+  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="clicking-on-an-element">Clicking on an element</h3>
+
+<p>You can click on an element using the click method:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    <label for="tab0code2">Java</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2" checked>
+    <label for="tab1code2">Python</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2" checked>
+    <label for="tab2code2">C#</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2" checked>
+    <label for="tab3code2">Ruby</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2" checked>
+    <label for="tab4code2">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;input[type=&#39;submit&#39;]&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+driver<span style="color:#719e07">.</span>find_element_by_css_selector(<span style="color:#2aa198">&#34;input[type=&#39;submit&#39;]&#34;</span>)<span style="color:#719e07">.</span>click()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+driver.FindElement(By.CssSelector(<span style="color:#2aa198">&#34;input[type=&#39;submit&#39;]&#34;</span>)).Click();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">css</span>: <span style="color:#2aa198">&#34;input[type=&#39;submit&#39;]&#34;</span>)<span style="color:#719e07">.</span>click
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#268bd2">await</span> driver.findElement(By.css(<span style="color:#2aa198">&#34;input[type=&#39;submit&#39;]&#34;</span>)).click();
+  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>*<strong>AUT</strong>: Application under test</p>
 
 
 <footer class=" footline" >
@@ -578,12 +810,10 @@ get up to speed right away.</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/getting_started/">
-      “Getting Started”
-    </a> was last updated on: 15 Jul 2019 23:43:32 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/5fd9d20f1679ded104e02cdce1937e79735a1c4a">Adding draft version of the new docs site using Hugo (#237) (5fd9d20)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/get_started_with_webdriver/performing_actions_on_the_aut/">
+      “Performing actions on the AUT*”
+    </a> was last updated on: 01 Jan 0001 00:00:00 &#43;0000
 </h5>
-        
-            </div> 
         
         </div> 
         
@@ -615,20 +845,6 @@ get up to speed right away.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -639,137 +855,6 @@ get up to speed right away.</p>
                     
                     
 
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -855,6 +940,155 @@ get up to speed right away.</p>
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -879,10 +1113,10 @@ get up to speed right away.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/docs/new_site/" title="Selenium Documentation"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/docs/new_site/get_started_with_webdriver/locating_elements/" title="Locating elements"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/docs/new_site/getting_started/quick/" title="Quick Tour" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/docs/new_site/get_started_with_webdriver/browsers/" title="Browsers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -913,3 +1147,4 @@ get up to speed right away.</p>
 
   </body>
 </html>
+
