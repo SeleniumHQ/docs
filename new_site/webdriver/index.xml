@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebDriver on Selenium Documentation</title>
+    <link>https://seleniumhq.github.io/docs/new_site/webdriver/</link>
+    <description>Recent content in WebDriver on Selenium Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://seleniumhq.github.io/docs/new_site/webdriver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understanding the componets</title>
+      <link>https://seleniumhq.github.io/docs/new_site/webdriver/understanding_the_componets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/new_site/webdriver/understanding_the_componets/</guid>
+      <description>Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
+Terminology  API: Application Programming Interface. This is the set of &amp;ldquo;commands&amp;rdquo; you use to manipulate WebDriver. Library: A code module which contains the APIs and the code necessary to implement them.</description>
+    </item>
+    
+    <item>
+      <title>Driver requirements</title>
+      <link>https://seleniumhq.github.io/docs/new_site/webdriver/driver_requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/new_site/webdriver/driver_requirements/</guid>
+      <description>Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
+WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible. This is possible at varying levels in different browsers. For more details on the different driver idiosyncracies, please see Driver Idiosyncracies.</description>
+    </item>
+    
+    <item>
+      <title>Browser manipulation</title>
+      <link>https://seleniumhq.github.io/docs/new_site/webdriver/browser_manipulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/new_site/webdriver/browser_manipulation/</guid>
+      <description>Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
+gem install selenium-webdriver Or, if you use Bundler, add this line to your application&amp;rsquo;s Gemfile:</description>
+    </item>
+    
+  </channel>
+</rss>

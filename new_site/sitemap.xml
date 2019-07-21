@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/new_site/get_started_with_webdriver/browsers/</loc>
-    <lastmod>2019-07-18T21:29:08-05:00</lastmod>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/browsers/</loc>
+    <lastmod>2019-07-20T22:43:15-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/getting_started/</loc>
-    <lastmod>2019-07-15T23:43:32-05:00</lastmod>
+    <lastmod>2019-07-20T22:43:15-05:00</lastmod>
   </url>
   
   <url>
@@ -20,6 +20,16 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/the_selenium_project_and_tools/</loc>
     <lastmod>2019-07-15T23:43:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/webdriver/understanding_the_componets/</loc>
+    <lastmod>2019-07-20T22:47:29-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/webdriver/driver_requirements/</loc>
+    <lastmod>2019-07-20T22:47:29-05:00</lastmod>
   </url>
   
   <url>
@@ -38,8 +48,13 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/new_site/get_started_with_webdriver/third_party_drivers_and_plugins/</loc>
-    <lastmod>2019-07-18T21:29:08-05:00</lastmod>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/</loc>
+    <lastmod>2019-07-20T22:43:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/webdriver/browser_manipulation/</loc>
+    <lastmod>2019-07-20T22:47:29-05:00</lastmod>
   </url>
   
   <url>
@@ -48,8 +63,8 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/new_site/get_started_with_webdriver/locating_elements/</loc>
-    <lastmod>2019-07-18T21:29:08-05:00</lastmod>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/locating_elements/</loc>
+    <lastmod>2019-07-20T22:43:15-05:00</lastmod>
   </url>
   
   <url>
@@ -68,18 +83,23 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/new_site/get_started_with_webdriver/performing_actions_on_the_aut/</loc>
-    <lastmod>2019-07-18T21:29:08-05:00</lastmod>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/</loc>
+    <lastmod>2019-07-20T22:43:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/performing_actions_on_the_aut/</loc>
+    <lastmod>2019-07-20T22:43:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/webdriver/</loc>
+    <lastmod>2019-07-20T22:47:29-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/categories/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://seleniumhq.github.io/docs/new_site/get_started_with_webdriver/</loc>
-    <lastmod>2019-07-18T21:29:08-05:00</lastmod>
   </url>
   
   <url>
@@ -89,7 +109,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/</loc>
-    <lastmod>2019-07-15T23:43:32-05:00</lastmod>
+    <lastmod>2019-07-20T22:43:15-05:00</lastmod>
   </url>
   
   <url>
