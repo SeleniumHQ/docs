@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Installing WebDriver binaries :: Selenium Documentation</title>
+    <title>Getting started with WebDriver :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1563680051" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/selenium_installation/installing_webdriver_binaries/">
+  <body class="" data-url="/getting_started_with_webdriver/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -256,7 +256,7 @@
   
     
     <li data-nav-id="/selenium_installation/" title="Selenium installation" class="dd-item 
-        parent
+        
         
         
         ">
@@ -301,7 +301,7 @@
  
   
     
-      <li data-nav-id="/selenium_installation/installing_webdriver_binaries/" title="Installing WebDriver binaries" class="dd-item active">
+      <li data-nav-id="/selenium_installation/installing_webdriver_binaries/" title="Installing WebDriver binaries" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_webdriver_binaries/">
         Installing WebDriver binaries
         <i class="fas fa-check read-icon"></i>
@@ -347,8 +347,8 @@
   
     
     <li data-nav-id="/getting_started_with_webdriver/" title="Getting started with WebDriver" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/">
@@ -589,7 +589,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/selenium_installation/installing_webdriver_binaries.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/getting_started_with_webdriver/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -604,8 +604,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -616,13 +614,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/selenium_installation/'>Selenium installation</a> > Installing WebDriver binaries
-          
-         
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > Getting started with WebDriver
           
          
           
@@ -631,20 +623,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#installing-webdriver-binaries">Installing WebDriver binaries</a></li>
-</ul></li>
-</ul>
-</nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -652,12 +630,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              Installing WebDriver binaries
-            </h1>
           
 
         
@@ -665,14 +640,33 @@
 
 
 
+	
 
-<h2 id="installing-webdriver-binaries">Installing WebDriver binaries</h2>
+<h1 id="getting-started-with-webdriver">Getting started with WebDriver</h1>
 
-<p>To execute your project and control browser you need to have
-browser-specific WebDriver binaries installed.</p>
+<p>Selenium supports automation of all the major browsers in the market
+through the use of <em>WebDriver</em>.
+WebDriver is an API and protocol that defines a language-neutral interface
+for controlling the behaviour of web browsers.
+Each browser is backed by a specific WebDriver implementation, called a <em>driver</em>.
+The driver is the component responsible for delegating down to the browser,
+and handles communication to and from Selenium and the browser.</p>
 
-<p>Download the <a href="wd.md#quick_reference">WebDriver binary</a>
-supported by your browser and place it in the <a href="wd.md#adding_executables_to_your_path">System PATH</a>.</p>
+<p>This separation is part of a conscious effort to have browser vendors
+take responsibility for the implementation for their browsers.
+Selenium makes use of these third party drivers where possible,
+but also provides its own drivers maintained by the project
+for the cases when this is not a reality.</p>
+
+<p>The Selenium framework ties all of these pieces together
+through a user-facing interface that enables the different browser backends
+to be used transparently,
+enabling cross-browser and cross-platform automation.</p>
+
+<p>More details about drivers can be found in <a href="drivers.md">Driver Idiosyncrasies</a>.</p>
+
+
+
 
 
 <footer class=" footline" >
@@ -680,10 +674,12 @@ supported by your browser and place it in the <a href="wd.md#adding_executables_
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_webdriver_binaries/">
-      “Installing WebDriver binaries”
-    </a> was last updated on: 17 Jul 2019 21:44:55 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/9ea1d3ec708e7af8c91402fece00e0fbdf0dad2c">Migrating installation content to Hugo (#240) (9ea1d3e)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/">
+      “Getting started with WebDriver”
+    </a> was last updated on: 01 Jan 0001 00:00:00 &#43;0000
 </h5>
+        
+            </div> 
         
         </div> 
         
@@ -830,7 +826,6 @@ supported by your browser and place it in the <a href="wd.md#adding_executables_
             
                 
                     
-                    
                 
                 
 
@@ -843,26 +838,6 @@ supported by your browser and place it in the <a href="wd.md#adding_executables_
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -880,8 +855,21 @@ supported by your browser and place it in the <a href="wd.md#adding_executables_
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -902,6 +890,7 @@ supported by your browser and place it in the <a href="wd.md#adding_executables_
             
                 
                     
+                    
                 
                 
 
@@ -914,6 +903,9 @@ supported by your browser and place it in the <a href="wd.md#adding_executables_
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1050,10 +1042,10 @@ supported by your browser and place it in the <a href="wd.md#adding_executables_
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_selenium_libraries/" title="Installing Selenium libraries"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_standalone_server/" title="Installing Standalone server"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_standalone_server/" title="Installing Standalone server" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/browsers/" title="Browsers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1084,4 +1076,3 @@ supported by your browser and place it in the <a href="wd.md#adding_executables_
 
   </body>
 </html>
-
