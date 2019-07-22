@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/</loc>
+    <lastmod>2019-07-22T17:27:40-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/the_selenium_project_and_tools/</loc>
     <lastmod>2019-07-15T23:43:32-05:00</lastmod>
   </url>
@@ -45,6 +50,11 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/on_test_automation/</loc>
     <lastmod>2019-07-15T23:43:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_client/</loc>
+    <lastmod>2019-07-22T17:27:40-05:00</lastmod>
   </url>
   
   <url>
@@ -94,12 +104,12 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/waits/</loc>
-    <lastmod>2019-07-21T21:11:50-05:00</lastmod>
+    <lastmod>2019-07-21T21:17:28-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/support_classes/</loc>
-    <lastmod>2019-07-21T21:11:50-05:00</lastmod>
+    <lastmod>2019-07-21T21:17:28-05:00</lastmod>
   </url>
   
   <url>
@@ -109,32 +119,37 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/js_alerts_prompts_and_confirmations/</loc>
-    <lastmod>2019-07-21T21:11:50-05:00</lastmod>
+    <lastmod>2019-07-21T21:17:28-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/remote_webdriver/</loc>
+    <lastmod>2019-07-22T17:27:40-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/http_proxies/</loc>
-    <lastmod>2019-07-21T21:11:50-05:00</lastmod>
+    <lastmod>2019-07-21T21:17:28-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/page_loading_strategy/</loc>
-    <lastmod>2019-07-21T21:11:50-05:00</lastmod>
+    <lastmod>2019-07-21T21:17:28-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/web_element/</loc>
-    <lastmod>2019-07-21T21:11:50-05:00</lastmod>
+    <lastmod>2019-07-21T21:17:28-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/keyboard/</loc>
-    <lastmod>2019-07-21T21:11:50-05:00</lastmod>
+    <lastmod>2019-07-21T21:17:28-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/mouse/</loc>
-    <lastmod>2019-07-21T21:11:50-05:00</lastmod>
+    <lastmod>2019-07-21T21:17:28-05:00</lastmod>
   </url>
   
   <url>

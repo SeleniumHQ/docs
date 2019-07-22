@@ -33,6 +33,17 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
     </item>
     
     <item>
+      <title>Remote WebDriver server</title>
+      <link>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/</guid>
+      <description>The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
+Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test. Then, from the directory with the jar, run the following:
+java -jar selenium-server-standalone-{VERSION}.jar Considerations for running the server The caller is expected to terminate each session properly, calling either Selenium#stop() or WebDriver#quit.</description>
+    </item>
+    
+    <item>
       <title>The Selenium project and tools</title>
       <link>https://seleniumhq.github.io/docs/new_site/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -80,6 +91,16 @@ Download the WebDriver binary supported by your browser and place it in the Syst
       <guid>https://seleniumhq.github.io/docs/new_site/introduction/on_test_automation/</guid>
       <description>First, start by asking yourself whether or not you really need to use a browser. Odds are good that, at some point, if you&amp;rsquo;re working on a complex web application, you will need to open a browser and actually test it.
 Functional end-user tests such as Selenium tests are expensive to run, however. Furthermore, they typically require substantial infrastructure to be in place to be run effectively. It&amp;rsquo;s a good rule to always ask yourself if what you want to test can be done using more lightweight test approaches such as unit tests or with a lower-level approach.</description>
+    </item>
+    
+    <item>
+      <title>Remote WebDriver client</title>
+      <link>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_client/</guid>
+      <description>First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
+Java Python C# Ruby JavaScript FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
     </item>
     
     <item>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>About this documentation :: Selenium Documentation</title>
+    <title>Remote WebDriver server :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1563834469" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/introduction/about_this_documentation/">
+  <body class="" data-url="/remote_webdriver/remote_webdriver_server/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -146,7 +146,7 @@
   
     
     <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -229,7 +229,7 @@
  
   
     
-      <li data-nav-id="/introduction/about_this_documentation/" title="About this documentation" class="dd-item active">
+      <li data-nav-id="/introduction/about_this_documentation/" title="About this documentation" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/introduction/about_this_documentation/">
         About this documentation
         <i class="fas fa-check read-icon"></i>
@@ -700,7 +700,7 @@
   
     
     <li data-nav-id="/remote_webdriver/" title="Remote WebDriver" class="dd-item 
-        
+        parent
         
         
         ">
@@ -726,7 +726,7 @@
  
   
     
-      <li data-nav-id="/remote_webdriver/remote_webdriver_server/" title="Remote WebDriver server" class="dd-item ">
+      <li data-nav-id="/remote_webdriver/remote_webdriver_server/" title="Remote WebDriver server" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/">
         Remote WebDriver server
         <i class="fas fa-check read-icon"></i>
@@ -813,7 +813,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/introduction/about_this_documentation.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/remote_webdriver/remote_webdriver_server.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -844,7 +844,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/introduction/'>Introduction</a> > About this documentation
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/remote_webdriver/'>Remote WebDriver</a> > Remote WebDriver server
           
          
           
@@ -857,7 +857,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#starting-the-server-from-the-command-line">Starting the server from the command line</a></li>
+<li><a href="#considerations-for-running-the-server">Considerations for running the server</a></li>
+<li><a href="#timeouts-from-version-2-21">Timeouts (from version 2.21)</a></li>
+<li><a href="#configuring-the-server-programmatically">Configuring the server programmatically</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -873,7 +883,7 @@
           
             <h1>
               
-              About this documentation
+              Remote WebDriver server
             </h1>
           
 
@@ -881,37 +891,106 @@
 
 
 
-<p>These docs, like the code itself, are maintained 100% by volunteers
-within the Selenium community.
-Many have been using it since its inception,
-but many more have only been using it for a short while,
-and have given their time to help improve the on-boarding experience
-for new users.</p>
 
-<p>If there is an issue with the documentation, we want to know!
-The best way to communicate an issue is to visit
-<a href="//github.com/seleniumhq/docs/issues">https://github.com/seleniumhq/docs/issues</a>
-and search to see whether or not the issue has been filed already.
-If not, feel free to open one!</p>
 
-<p>Many members of the community frequent
-the <em>#selenium</em> IRC channel at <a href="//freenode.net/">irc.freenode.net</a>.
-Feel free to drop in and ask questions
-and if you get help which you think could be of use within these documents,
-be sure to add your contribution!
-We can update these documents,
-but it&rsquo;s much easier for everyone when we get contributions
-from outside the normal committers.</p>
+<p>The server will always run on the machine with the browser you want to
+test. The server can be used either from the command line or through code
+configuration.</p>
 
+<h2 id="starting-the-server-from-the-command-line">Starting the server from the command line</h2>
+
+<p>Once you have downloaded <code>selenium-server-standalone-{VERSION}.jar</code>,
+place it on the computer with the browser you want to test. Then, from
+the directory with the jar, run the following:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar</code></pre></div>
+<h2 id="considerations-for-running-the-server">Considerations for running the server</h2>
+
+<p>The caller is expected to terminate each session properly, calling
+either <code>Selenium#stop()</code> or <code>WebDriver#quit</code>.</p>
+
+<p>The selenium-server keeps in-memory logs for each ongoing session,
+which are cleared when <code>Selenium#stop()</code> or <code>WebDriver#quit</code> is called. If
+you forget to terminate these sessions, your server may leak memory. If
+you keep extremely long-running sessions, you will probably need to
+stop/quit every now and then (or increase memory with -Xmx jvm option).</p>
+
+<h2 id="timeouts-from-version-2-21">Timeouts (from version 2.21)</h2>
+
+<p>The server has two different timeouts, which can be set as follows:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar -timeout<span style="color:#719e07">=</span><span style="color:#2aa198">20</span> -browserTimeout<span style="color:#719e07">=</span><span style="color:#2aa198">60</span></code></pre></div>
+<ul>
+<li>browserTimeout
+
+<ul>
+<li>Controls how long the browser is allowed to hang (value in seconds).</li>
+</ul></li>
+<li>timeout
+
+<ul>
+<li>Controls how long the client is allowed to be gone
+before the session is reclaimed (value in seconds).</li>
+</ul></li>
+</ul>
+
+<p>The system property <code>selenium.server.session.timeout</code>
+is no longer supported as of 2.21.</p>
+
+<p>Please note that the <code>browserTimeout</code>
+is intended as a backup timeout mechanism
+when the ordinary timeout mechanism fails,
+which should be used mostly in grid/server environments
+to ensure that crashed/lost processes do not stay around for too long,
+polluting the runtime environment.</p>
+
+<h2 id="configuring-the-server-programmatically">Configuring the server programmatically</h2>
+
+<p>In theory, the process is as simple as mapping the <code>DriverServlet</code> to
+a URL, but it&rsquo;s also possible to host the page in a lightweight
+container, such as Jetty configured entirely in code. Steps to do this
+follow.</p>
+
+<p>Download the <code>selenium-server.zip</code> and unpack. Put the JARs on the
+CLASSPATH. Create a new class called <code>AppServer</code>. Here, I&rsquo;m using
+Jetty, so you&rsquo;ll need to <a href="//www.eclipse.org/jetty/download.html">download</a>
+that as well:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> org.mortbay.jetty.Connector<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.mortbay.jetty.Server<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.mortbay.jetty.nio.SelectChannelConnector<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.mortbay.jetty.security.SslSocketConnector<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.mortbay.jetty.webapp.WebAppContext<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">import</span> javax.servlet.Servlet<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> java.io.File<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">import</span> org.openqa.selenium.remote.server.DriverServlet<span style="color:#719e07">;</span>
+
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">AppServer</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">private</span> Server server <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Server<span style="color:#719e07">();</span>
+
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">AppServer</span><span style="color:#719e07">()</span> <span style="color:#268bd2">throws</span> Exception <span style="color:#719e07">{</span>
+    WebAppContext context <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebAppContext<span style="color:#719e07">();</span>
+    context<span style="color:#719e07">.</span>setContextPath<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;&#34;</span><span style="color:#719e07">);</span>
+    context<span style="color:#719e07">.</span>setWar<span style="color:#719e07">(</span><span style="color:#719e07">new</span> File<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;.&#34;</span><span style="color:#719e07">));</span>
+    server<span style="color:#719e07">.</span>addHandler<span style="color:#719e07">(</span>context<span style="color:#719e07">);</span>
+
+    context<span style="color:#719e07">.</span>addServlet<span style="color:#719e07">(</span>DriverServlet<span style="color:#719e07">.</span>class<span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;/wd/*&#34;</span><span style="color:#719e07">);</span>
+
+    SelectChannelConnector connector <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SelectChannelConnector<span style="color:#719e07">();</span>
+    connector<span style="color:#719e07">.</span>setPort<span style="color:#719e07">(</span>3001<span style="color:#719e07">);</span>
+    server<span style="color:#719e07">.</span>addConnector<span style="color:#719e07">(</span>connector<span style="color:#719e07">);</span>
+
+    server<span style="color:#719e07">.</span>start<span style="color:#719e07">();</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span></code></pre></div>
 
 <footer class=" footline" >
 	
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/introduction/about_this_documentation/">
-      “About this documentation”
-    </a> was last updated on: 15 Jul 2019 23:43:32 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/5fd9d20f1679ded104e02cdce1937e79735a1c4a">Adding draft version of the new docs site using Hugo (#237) (5fd9d20)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/">
+      “Remote WebDriver server”
+    </a> was last updated on: 22 Jul 2019 17:27:40 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/28c7de638369c9bd25395561093472b38c19e88e">Adding remote WebDriver section (28c7de6)</a>
 </h5>
         
         </div> 
@@ -979,7 +1058,6 @@ from outside the normal committers.</p>
             
                 
                     
-                    
                 
                 
 
@@ -992,9 +1070,6 @@ from outside the normal committers.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1044,7 +1119,6 @@ from outside the normal committers.</p>
             
                 
                     
-                    
                 
                 
 
@@ -1063,9 +1137,6 @@ from outside the normal committers.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1403,6 +1474,7 @@ from outside the normal committers.</p>
             
                 
                     
+                    
                 
                 
 
@@ -1415,6 +1487,7 @@ from outside the normal committers.</p>
             
             
                 
+                    
                     
                 
                 
@@ -1431,6 +1504,9 @@ from outside the normal committers.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1455,10 +1531,10 @@ from outside the normal committers.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/introduction/types_of_testing/" title="Types of testing"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/" title="Remote WebDriver"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/selenium_installation/" title="Selenium installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_client/" title="Remote WebDriver client" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

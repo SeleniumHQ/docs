@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>About this documentation :: Selenium Documentation</title>
+    <title>Remote WebDriver :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1563834469" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/introduction/about_this_documentation/">
+  <body class="" data-url="/remote_webdriver/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -146,7 +146,7 @@
   
     
     <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -229,7 +229,7 @@
  
   
     
-      <li data-nav-id="/introduction/about_this_documentation/" title="About this documentation" class="dd-item active">
+      <li data-nav-id="/introduction/about_this_documentation/" title="About this documentation" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/introduction/about_this_documentation/">
         About this documentation
         <i class="fas fa-check read-icon"></i>
@@ -700,8 +700,8 @@
   
     
     <li data-nav-id="/remote_webdriver/" title="Remote WebDriver" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/">
@@ -813,7 +813,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/introduction/about_this_documentation.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/remote_webdriver/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -828,8 +828,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -840,13 +838,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/introduction/'>Introduction</a> > About this documentation
-          
-         
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > Remote WebDriver
           
          
           
@@ -855,13 +847,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -869,39 +854,30 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              About this documentation
-            </h1>
           
 
         
 
 
 
-<p>These docs, like the code itself, are maintained 100% by volunteers
-within the Selenium community.
-Many have been using it since its inception,
-but many more have only been using it for a short while,
-and have given their time to help improve the on-boarding experience
-for new users.</p>
 
-<p>If there is an issue with the documentation, we want to know!
-The best way to communicate an issue is to visit
-<a href="//github.com/seleniumhq/docs/issues">https://github.com/seleniumhq/docs/issues</a>
-and search to see whether or not the issue has been filed already.
-If not, feel free to open one!</p>
+	
 
-<p>Many members of the community frequent
-the <em>#selenium</em> IRC channel at <a href="//freenode.net/">irc.freenode.net</a>.
-Feel free to drop in and ask questions
-and if you get help which you think could be of use within these documents,
-be sure to add your contribution!
-We can update these documents,
-but it&rsquo;s much easier for everyone when we get contributions
-from outside the normal committers.</p>
+<h1 id="remote-webdriver">Remote WebDriver</h1>
+
+<p>You can use WebDriver remotely the same way you would use it
+locally. The primary difference is that a remote WebDriver needs to be
+configured so that it can run your tests on a separate machine.</p>
+
+<p>A remote WebDriver is composed of two pieces: a client and a
+server. The client is your WebDriver test and the server is simply a
+Java servlet, which can be hosted in any modern JEE app server.</p>
+
+
+
 
 
 <footer class=" footline" >
@@ -909,10 +885,12 @@ from outside the normal committers.</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/introduction/about_this_documentation/">
-      “About this documentation”
-    </a> was last updated on: 15 Jul 2019 23:43:32 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/5fd9d20f1679ded104e02cdce1937e79735a1c4a">Adding draft version of the new docs site using Hugo (#237) (5fd9d20)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/">
+      “Remote WebDriver”
+    </a> was last updated on: 22 Jul 2019 17:27:40 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/28c7de638369c9bd25395561093472b38c19e88e">Adding remote WebDriver section (28c7de6)</a>
 </h5>
+        
+            </div> 
         
         </div> 
         
@@ -979,7 +957,6 @@ from outside the normal committers.</p>
             
                 
                     
-                    
                 
                 
 
@@ -992,9 +969,6 @@ from outside the normal committers.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1044,7 +1018,6 @@ from outside the normal committers.</p>
             
                 
                     
-                    
                 
                 
 
@@ -1063,9 +1036,6 @@ from outside the normal committers.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1403,6 +1373,7 @@ from outside the normal committers.</p>
             
                 
                     
+                    
                 
                 
 
@@ -1415,6 +1386,9 @@ from outside the normal committers.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1455,10 +1429,10 @@ from outside the normal committers.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/introduction/types_of_testing/" title="Types of testing"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/webdriver/mouse/" title="Mouse"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/selenium_installation/" title="Selenium installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/" title="Remote WebDriver server" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1489,4 +1463,3 @@ from outside the normal committers.</p>
 
   </body>
 </html>
-
