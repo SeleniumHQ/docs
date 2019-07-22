@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Quick Tour :: Selenium Documentation</title>
+    <title>Support classes :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1563761520" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/getting_started/quick/">
+  <body class="" data-url="/webdriver/support_classes/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -93,7 +93,7 @@
   
     
     <li data-nav-id="/getting_started/" title="Getting Started" class="dd-item 
-        parent
+        
         
         
         ">
@@ -119,7 +119,7 @@
  
   
     
-      <li data-nav-id="/getting_started/quick/" title="Quick Tour" class="dd-item active">
+      <li data-nav-id="/getting_started/quick/" title="Quick Tour" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/getting_started/quick/">
         Quick Tour
         <i class="fas fa-check read-icon"></i>
@@ -457,7 +457,7 @@
   
     
     <li data-nav-id="/webdriver/" title="WebDriver" class="dd-item 
-        
+        parent
         
         
         ">
@@ -559,7 +559,7 @@
  
   
     
-      <li data-nav-id="/webdriver/support_classes/" title="Support classes" class="dd-item ">
+      <li data-nav-id="/webdriver/support_classes/" title="Support classes" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/webdriver/support_classes/">
         Support classes
         <i class="fas fa-check read-icon"></i>
@@ -741,7 +741,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/getting_started/quick.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/webdriver/support_classes.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -772,7 +772,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/getting_started/'>Getting Started</a> > Quick Tour
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/webdriver/'>WebDriver</a> > Support classes
           
          
           
@@ -785,18 +785,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#webdriver">WebDriver</a></li>
-<li><a href="#remote-control">Remote Control</a></li>
-<li><a href="#ide">IDE</a></li>
-<li><a href="#grid">Grid</a></li>
-<li><a href="#html-runner">HTML Runner</a></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -812,7 +801,7 @@
           
             <h1>
               
-              Quick Tour
+              Support classes
             </h1>
           
 
@@ -822,65 +811,14 @@
 
 
 
-<p>Selenium is not just one tool or API
-but it composes many tools.</p>
-
-<h2 id="webdriver">WebDriver</h2>
-
-<p><em><a href="wd.md">WebDriver</a></em> is also known as Selenium 2. If you are
-beginning with desktop website test automation then you
-are going to be using WebDriver APIs. WebDriver uses browser
-automation APIs provided by browser vendors to control browser and
-run tests. This is as if a real user is operating the browser. Since
-WebDriver does not require its API to be compiled with application
-code, it is not intrusive in nature. Hence, you are testing the
-same application which you push live.</p>
-
-<h2 id="remote-control">Remote Control</h2>
-
-<p><em><a href="rc.md">Remote Control</a></em> is also known as Selenium 1.
-Selenium RC was the most prominent Selenium tool
-before the advent of Selenium WebDriver. Selenium RC would use a
-proxy server and inject JavaScript into a browser to be able to control
-it. Given the intrusive nature Selenium RC had on a browser,
-you could never be sure if what you were testing was the same as
-the application you wanted to push live. Selenium 2 APIs yet contain Selenium RC APIs but
-Selenium 3 would completely get rid of Selenium RC APIs. If you are
-still using Selenium RC then you must <em><a href="rctowd.md">migrate</a></em> to Selenium WebDriver.</p>
-
-<h2 id="ide">IDE</h2>
-
-<p><em><a href="https://www.seleniumhq.org/selenium-ide">IDE</a></em> is a
-Firefox plugin which can be used to record test steps in Firefox itself.
-Selenium IDE can be used to generate <em>quick and dirty</em>
- test code in a variety of programming languages (i.e. C#,
-Java, Python, and Ruby). Given the maintainability of code generated
-through Selenium IDE, it is not recommended to use it for anything
-more than getting acquainted with element locators or generating
-<em>throw away code</em>. We&rsquo;re sure that once you get used to the
-WebDriver API, you will never use Selenium IDE.</p>
-
-<h2 id="grid">Grid</h2>
-
-<p>Soon after development of WebDriver tests, you may face a need of
-running your tests on multiple browser and operating system combinations.
-This is where <em><a href="grid.md">Grid</a></em> comes to the rescue.</p>
-
-<h2 id="html-runner">HTML Runner</h2>
-
-<p>This tool allows you to run Test Suites from the command
-line. Test Suites are HTML exports from Selenium IDE or compatible
-tools. <em><a href="html-runner.md">HTML Runner</a></em></p>
-
-
 <footer class=" footline" >
 	
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/getting_started/quick/">
-      “Quick Tour”
-    </a> was last updated on: 15 Jul 2019 23:43:32 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/5fd9d20f1679ded104e02cdce1937e79735a1c4a">Adding draft version of the new docs site using Hugo (#237) (5fd9d20)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/webdriver/support_classes/">
+      “Support classes”
+    </a> was last updated on: 21 Jul 2019 21:11:50 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/864ecc8facaeb73968da566a326650392258fb54">Adding remaining WebDriver sections (864ecc8)</a>
 </h5>
         
         </div> 
@@ -913,40 +851,6 @@ tools. <em><a href="html-runner.md">HTML Runner</a></em></p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -957,118 +861,6 @@ tools. <em><a href="html-runner.md">HTML Runner</a></em></p>
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1230,6 +1022,22 @@ tools. <em><a href="html-runner.md">HTML Runner</a></em></p>
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -1266,6 +1074,142 @@ tools. <em><a href="html-runner.md">HTML Runner</a></em></p>
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1370,10 +1314,10 @@ tools. <em><a href="html-runner.md">HTML Runner</a></em></p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/getting_started/" title="Getting Started"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/webdriver/waits/" title="Waits"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/webdriver/js_alerts_prompts_and_confirmations/" title="JavaScript alerts, prompts and confirmations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
