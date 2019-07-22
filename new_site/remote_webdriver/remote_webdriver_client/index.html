@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>About this documentation :: Selenium Documentation</title>
+    <title>Remote WebDriver client :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1563834469" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/introduction/about_this_documentation/">
+  <body class="" data-url="/remote_webdriver/remote_webdriver_client/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -146,7 +146,7 @@
   
     
     <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -229,7 +229,7 @@
  
   
     
-      <li data-nav-id="/introduction/about_this_documentation/" title="About this documentation" class="dd-item active">
+      <li data-nav-id="/introduction/about_this_documentation/" title="About this documentation" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/introduction/about_this_documentation/">
         About this documentation
         <i class="fas fa-check read-icon"></i>
@@ -700,7 +700,7 @@
   
     
     <li data-nav-id="/remote_webdriver/" title="Remote WebDriver" class="dd-item 
-        
+        parent
         
         
         ">
@@ -745,7 +745,7 @@
  
   
     
-      <li data-nav-id="/remote_webdriver/remote_webdriver_client/" title="Remote WebDriver client" class="dd-item ">
+      <li data-nav-id="/remote_webdriver/remote_webdriver_client/" title="Remote WebDriver client" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_client/">
         Remote WebDriver client
         <i class="fas fa-check read-icon"></i>
@@ -813,7 +813,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/introduction/about_this_documentation.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/remote_webdriver/remote_webdriver_client.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -844,7 +844,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/introduction/'>Introduction</a> > About this documentation
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/remote_webdriver/'>Remote WebDriver</a> > Remote WebDriver client
           
          
           
@@ -857,7 +857,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#desired-capabilities">Desired capabilities</a></li>
+<li><a href="#local-file-detector">Local file detector</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -873,7 +881,7 @@
           
             <h1>
               
-              About this documentation
+              Remote WebDriver client
             </h1>
           
 
@@ -881,27 +889,327 @@
 
 
 
-<p>These docs, like the code itself, are maintained 100% by volunteers
-within the Selenium community.
-Many have been using it since its inception,
-but many more have only been using it for a short while,
-and have given their time to help improve the on-boarding experience
-for new users.</p>
 
-<p>If there is an issue with the documentation, we want to know!
-The best way to communicate an issue is to visit
-<a href="//github.com/seleniumhq/docs/issues">https://github.com/seleniumhq/docs/issues</a>
-and search to see whether or not the issue has been filed already.
-If not, feel free to open one!</p>
 
-<p>Many members of the community frequent
-the <em>#selenium</em> IRC channel at <a href="//freenode.net/">irc.freenode.net</a>.
-Feel free to drop in and ask questions
-and if you get help which you think could be of use within these documents,
-be sure to add your contribution!
-We can update these documents,
-but it&rsquo;s much easier for everyone when we get contributions
-from outside the normal committers.</p>
+<p>First, we need to connect to the RemoteWebDriver.
+We do this by pointing the URL to the address of the server running our tests.
+In order to customize our configuration, we set desired capabilities.
+Below is an example of instantiating a remote WebDriver object
+pointing to our remote web server, <em>www.example.com</em>,
+running our tests on Firefox.</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    <label for="tab0code0">Java</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0" checked>
+    <label for="tab1code0">Python</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0" checked>
+    <label for="tab2code0">C#</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0" checked>
+    <label for="tab3code0">Ruby</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0" checked>
+    <label for="tab4code0">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+FirefoxOptions firefoxOptions <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions<span style="color:#719e07">();</span>
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver<span style="color:#719e07">(</span><span style="color:#719e07">new</span> URL<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">),</span> firefoxOptions<span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.google.com&#34;</span><span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:remote</span>, <span style="color:#2aa198">url</span>: <span style="color:#2aa198">&#34;http://www.example.com&#34;</span>, <span style="color:#2aa198">desired_capabilities</span>: <span style="color:#2aa198">:firefox</span>
+driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#34;http://www.google.com&#34;</span>
+driver<span style="color:#719e07">.</span>close
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>To further customize our test configuration, we can add other desired capabilities.</p>
+
+<h2 id="desired-capabilities">Desired capabilities</h2>
+
+<p>Desired capabilities can be expanded further.
+All remote Webdriver capabilities are sent through JsonWireProtocol.
+For a list of configurable capabilities, and more information on JsonWireProtocol,
+please visit the documentation
+<a href="//github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities">here</a>.</p>
+
+<p>For example, suppose you wanted to run Chrome on Windows XP,
+using Chrome version 67:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+    <label for="tab0code1">Java</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1" checked>
+    <label for="tab1code1">Python</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1" checked>
+    <label for="tab2code1">C#</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1" checked>
+    <label for="tab3code1">Ruby</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1" checked>
+    <label for="tab4code1">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+ChromeOptions chromeOptions <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions<span style="color:#719e07">();</span>
+chromeOptions<span style="color:#719e07">.</span>setCapability<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;browserVersion&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;67&#34;</span><span style="color:#719e07">);</span>
+chromeOptions<span style="color:#719e07">.</span>setCapability<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;platformName&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;Windows XP&#34;</span><span style="color:#719e07">);</span>
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver<span style="color:#719e07">(</span><span style="color:#719e07">new</span> URL<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">),</span> chromeOptions<span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.google.com&#34;</span><span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+caps <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Remote</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Capabilities</span><span style="color:#719e07">.</span>chrome
+caps<span style="color:#719e07">.</span>platform <span style="color:#719e07">=</span> <span style="color:#cb4b16">Windows</span> <span style="color:#cb4b16">XP</span>
+caps<span style="color:#719e07">.</span>version <span style="color:#719e07">=</span> <span style="color:#2aa198">67</span>
+
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:remote</span>, <span style="color:#2aa198">:url</span> <span style="color:#719e07">=&gt;</span> <span style="color:#2aa198">&#34;http://www.example.com&#34;</span>, <span style="color:#2aa198">:desired_capabilities</span> <span style="color:#719e07">=&gt;</span> caps
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<h2 id="local-file-detector">Local file detector</h2>
+
+<p>The Local File Detector allows the transfer of files from the client
+machine to the remote server.  For example, if a test needs to upload a
+file to a web application, a remote WebDriver can automatically transfer
+the file from the local machine to the remote web server during
+runtime. This allows the file to be uploaded from the remote machine
+running the test. It is not enabled by default and can be enabled in
+the following way:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    <label for="tab0code2">Java</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2" checked>
+    <label for="tab1code2">Python</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2" checked>
+    <label for="tab2code2">C#</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2" checked>
+    <label for="tab3code2">Ruby</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2" checked>
+    <label for="tab4code2">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+driver<span style="color:#719e07">.</span>setFileDetector<span style="color:#719e07">(</span><span style="color:#719e07">new</span> LocalFileDetector<span style="color:#719e07">());</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+@driver<span style="color:#719e07">.</span>file_detector <span style="color:#719e07">=</span> <span style="color:#b58900">lambda</span> <span style="color:#719e07">do</span> <span style="color:#719e07">|</span>args<span style="color:#719e07">|</span>
+  <span style="color:#586e75"># args =&gt; [&#34;/path/to/file&#34;]</span>
+  str <span style="color:#719e07">=</span> args<span style="color:#719e07">.</span>first<span style="color:#719e07">.</span>to_s
+  str <span style="color:#719e07">if</span> <span style="color:#cb4b16">File</span><span style="color:#719e07">.</span>exist?(str)
+<span style="color:#719e07">end</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Once the above code is defined, you can upload a file in your test in the following way:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
+    <label for="tab0code3">Java</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3" checked>
+    <label for="tab1code3">Python</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3" checked>
+    <label for="tab2code3">C#</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3" checked>
+    <label for="tab3code3">Ruby</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3" checked>
+    <label for="tab4code3">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://sso.dev.saucelabs.com/test/guinea-file-upload&#34;</span><span style="color:#719e07">);</span>
+WebElement upload <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;myfile&#34;</span><span style="color:#719e07">));</span>
+upload<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/darkbulb.jpg&#34;</span><span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+@driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>to <span style="color:#2aa198">&#34;http://sso.dev.saucelabs.com/test/guinea-file-upload&#34;</span>
+    element <span style="color:#719e07">=</span> @driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:id</span>, <span style="color:#2aa198">&#39;myfile&#39;</span>)
+    element<span style="color:#719e07">.</span>send_keys <span style="color:#2aa198">&#34;/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg&#34;</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
 
 
 <footer class=" footline" >
@@ -909,9 +1217,9 @@ from outside the normal committers.</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/introduction/about_this_documentation/">
-      “About this documentation”
-    </a> was last updated on: 15 Jul 2019 23:43:32 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/5fd9d20f1679ded104e02cdce1937e79735a1c4a">Adding draft version of the new docs site using Hugo (#237) (5fd9d20)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_client/">
+      “Remote WebDriver client”
+    </a> was last updated on: 22 Jul 2019 17:27:40 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/28c7de638369c9bd25395561093472b38c19e88e">Adding remote WebDriver section (28c7de6)</a>
 </h5>
         
         </div> 
@@ -979,7 +1287,6 @@ from outside the normal committers.</p>
             
                 
                     
-                    
                 
                 
 
@@ -992,9 +1299,6 @@ from outside the normal committers.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1044,7 +1348,6 @@ from outside the normal committers.</p>
             
                 
                     
-                    
                 
                 
 
@@ -1063,9 +1366,6 @@ from outside the normal committers.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1403,6 +1703,7 @@ from outside the normal committers.</p>
             
                 
                     
+                    
                 
                 
 
@@ -1415,6 +1716,9 @@ from outside the normal committers.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1431,6 +1735,7 @@ from outside the normal committers.</p>
             
             
                 
+                    
                     
                 
                 
@@ -1455,10 +1760,10 @@ from outside the normal committers.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/introduction/types_of_testing/" title="Types of testing"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/" title="Remote WebDriver server"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/selenium_installation/" title="Selenium installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/" title="Remote WebDriver server" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
