@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Guidelines and recommendations :: Selenium Documentation</title>
+    <title>Gmail, email and Facebook logins :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564012593" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/guidelines_and_recommendations/">
+  <body class="" data-url="/worst_practices/gmail_email_and_facebook_logins/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -772,8 +772,8 @@
   
     
     <li data-nav-id="/guidelines_and_recommendations/" title="Guidelines and recommendations" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/">
@@ -977,7 +977,7 @@
   
     
     <li data-nav-id="/worst_practices/" title="Worst practices" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1060,7 +1060,7 @@
  
   
     
-      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email and Facebook logins" class="dd-item ">
+      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email and Facebook logins" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/worst_practices/gmail_email_and_facebook_logins/">
         Gmail, email and Facebook logins
         <i class="fas fa-check read-icon"></i>
@@ -1185,7 +1185,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/guidelines_and_recommendations/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/worst_practices/gmail_email_and_facebook_logins.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1200,6 +1200,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1210,7 +1212,13 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > Guidelines and recommendations
+            
+            
+          
+          
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/worst_practices/'>Worst practices</a> > Gmail, email and Facebook logins
+          
+         
           
          
           
@@ -1219,6 +1227,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1226,42 +1241,44 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Gmail, email and Facebook logins
+            </h1>
           
 
         
 
 
 
+<p>For multiple reasons, logging into sites like Gmail and Facebook
+using WebDriver is not recommended.
+Aside from being against the usage terms for these sites
+(where you risk having the account shut down),
+it is slow and unreliable.</p>
 
-	
+<p>The ideal practice is to use the APIs that email providers offer,
+or in the case of Facebook the developer tools service
+which exposes an API for creating test accounts, friends and so forth.
+Although using an API might seem like a bit of extra hard work,
+you will be paid back in speed, reliability, and stability.
+The API is also unlikely to change
+whereas webpages and HTML locators change often
+and require you to update your test framework.</p>
 
-<h1 id="guidelines-and-recommendations">Guidelines and recommendations</h1>
+<p>Logging in to third party sites using WebDriver
+at any point of your test increases the risk
+of your test failing because it makes your test longer.
+A general rule of thumb is that longer tests
+are more fragile and unreliable.</p>
 
-<p>A note on &ldquo;Best Practices&rdquo;: We&rsquo;ve intentionally avoided the phrase &ldquo;Best
-Practices&rdquo; in this documentation. No one approach works for all situations.
-We prefer the idea of &ldquo;Guidelines and Recommendations.&rdquo; We encourage
-you to read through these and thoughtfully decide what approaches
-will work for you in your particular environment.</p>
-
-<p>Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies don&rsquo;t make testing difficult enough,
-dealing with browsers (especially with cross-browser incompatibilities)
-makes writing good tests a challenge.</p>
-
-<p>Selenium provides tools to make functional user interaction easier,
-but doesn&rsquo;t help you write well-architected test suites.
-In this chapter we offer advice, guidelines, and recommendations.
-on how to approach functional web page automation.</p>
-
-<p>This chapter records software design patterns popular
-amongst many of the users of Selenium
-that have proven successful over the years.</p>
-
-
-
+<p>WebDriver implementations that are
+<a href="//w3c.github.io/webdriver/webdriver-spec.html">W3C conformant</a>
+also annotate the <code>navigator</code> object
+with a <code>webdriver</code> property
+so that Denial of Service attacks can be mitigated.</p>
 
 
 <footer class=" footline" >
@@ -1269,12 +1286,10 @@ that have proven successful over the years.</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/">
-      “Guidelines and recommendations”
-    </a> was last updated on: 23 Jul 2019 23:20:13 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/e3de8f8c70e64b9c468a0903eb81cc85e29b2799">Adding Guidelines and Recommendations section to Hugo (#247) (e3de8f8)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/worst_practices/gmail_email_and_facebook_logins/">
+      “Gmail, email and Facebook logins”
+    </a> was last updated on: 24 Jul 2019 18:56:13 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/b620dd4eaa8ca73c0afc9c7719c7c73cba1f0495">Adding Worst practices to Hugo (b620dd4)</a>
 </h5>
-        
-            </div> 
         
         </div> 
         
@@ -1805,7 +1820,6 @@ that have proven successful over the years.</p>
             
                 
                     
-                    
                 
                 
 
@@ -1813,73 +1827,6 @@ that have proven successful over the years.</p>
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1961,22 +1908,6 @@ that have proven successful over the years.</p>
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -2041,10 +1972,98 @@ that have proven successful over the years.</p>
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2101,10 +2120,10 @@ that have proven successful over the years.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_client/" title="Remote WebDriver client"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/worst_practices/http_response_codes/" title="HTTP response codes"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/page_object_models/" title="Page object models" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/worst_practices/test_dependency/" title="Test dependency" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2135,3 +2154,4 @@ that have proven successful over the years.</p>
 
   </body>
 </html>
+

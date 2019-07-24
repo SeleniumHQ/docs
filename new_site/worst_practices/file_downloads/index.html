@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Guidelines and recommendations :: Selenium Documentation</title>
+    <title>File downloads :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564012593" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/guidelines_and_recommendations/">
+  <body class="" data-url="/worst_practices/file_downloads/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -772,8 +772,8 @@
   
     
     <li data-nav-id="/guidelines_and_recommendations/" title="Guidelines and recommendations" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/">
@@ -977,7 +977,7 @@
   
     
     <li data-nav-id="/worst_practices/" title="Worst practices" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1022,7 +1022,7 @@
  
   
     
-      <li data-nav-id="/worst_practices/file_downloads/" title="File downloads" class="dd-item ">
+      <li data-nav-id="/worst_practices/file_downloads/" title="File downloads" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/worst_practices/file_downloads/">
         File downloads
         <i class="fas fa-check read-icon"></i>
@@ -1185,7 +1185,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/guidelines_and_recommendations/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/worst_practices/file_downloads.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1200,6 +1200,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1210,7 +1212,13 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > Guidelines and recommendations
+            
+            
+          
+          
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/worst_practices/'>Worst practices</a> > File downloads
+          
+         
           
          
           
@@ -1219,6 +1227,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1226,42 +1241,28 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              File downloads
+            </h1>
           
 
         
 
 
 
-
-	
-
-<h1 id="guidelines-and-recommendations">Guidelines and recommendations</h1>
-
-<p>A note on &ldquo;Best Practices&rdquo;: We&rsquo;ve intentionally avoided the phrase &ldquo;Best
-Practices&rdquo; in this documentation. No one approach works for all situations.
-We prefer the idea of &ldquo;Guidelines and Recommendations.&rdquo; We encourage
-you to read through these and thoughtfully decide what approaches
-will work for you in your particular environment.</p>
-
-<p>Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies don&rsquo;t make testing difficult enough,
-dealing with browsers (especially with cross-browser incompatibilities)
-makes writing good tests a challenge.</p>
-
-<p>Selenium provides tools to make functional user interaction easier,
-but doesn&rsquo;t help you write well-architected test suites.
-In this chapter we offer advice, guidelines, and recommendations.
-on how to approach functional web page automation.</p>
-
-<p>This chapter records software design patterns popular
-amongst many of the users of Selenium
-that have proven successful over the years.</p>
-
-
-
+<p>Whilst it is possible to start a download
+by clicking a link with a browser under Selenium&rsquo;s control,
+the API does not expose download progress,
+making it less than ideal for testing downloaded files.
+This is because downloading files is not considered an important aspect
+of emulating user interaction with the web platform.
+Instead, find the link using Selenium
+(and any required cookies)
+and pass it to a HTTP request library like
+<a href="//curl.haxx.se/libcurl/">libcurl</a>.</p>
 
 
 <footer class=" footline" >
@@ -1269,12 +1270,10 @@ that have proven successful over the years.</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/">
-      “Guidelines and recommendations”
-    </a> was last updated on: 23 Jul 2019 23:20:13 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/e3de8f8c70e64b9c468a0903eb81cc85e29b2799">Adding Guidelines and Recommendations section to Hugo (#247) (e3de8f8)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/worst_practices/file_downloads/">
+      “File downloads”
+    </a> was last updated on: 24 Jul 2019 18:56:13 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/b620dd4eaa8ca73c0afc9c7719c7c73cba1f0495">Adding Worst practices to Hugo (b620dd4)</a>
 </h5>
-        
-            </div> 
         
         </div> 
         
@@ -1805,7 +1804,6 @@ that have proven successful over the years.</p>
             
                 
                     
-                    
                 
                 
 
@@ -1819,8 +1817,37 @@ that have proven successful over the years.</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
                     
                 
                 
@@ -1929,10 +1956,30 @@ that have proven successful over the years.</p>
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1950,37 +1997,6 @@ that have proven successful over the years.</p>
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1998,21 +2014,8 @@ that have proven successful over the years.</p>
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -2101,10 +2104,10 @@ that have proven successful over the years.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_client/" title="Remote WebDriver client"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/worst_practices/captchas/" title="Captchas"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/page_object_models/" title="Page object models" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/worst_practices/http_response_codes/" title="HTTP response codes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2135,3 +2138,4 @@ that have proven successful over the years.</p>
 
   </body>
 </html>
+
