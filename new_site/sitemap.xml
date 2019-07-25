@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/support_packages/browser_navigation/</loc>
+    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/browsers/</loc>
     <lastmod>2019-07-20T22:46:27-05:00</lastmod>
   </url>
@@ -39,7 +44,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/shared_capabilities/</loc>
-    <lastmod>2019-07-25T00:00:35-05:00</lastmod>
+    <lastmod>2019-07-25T00:04:43-05:00</lastmod>
   </url>
   
   <url>
@@ -69,7 +74,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/driver_specific_capabilities/</loc>
-    <lastmod>2019-07-25T00:00:35-05:00</lastmod>
+    <lastmod>2019-07-25T00:04:43-05:00</lastmod>
   </url>
   
   <url>
@@ -100,6 +105,11 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/</loc>
     <lastmod>2019-07-20T22:46:27-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/support_packages/working_with_colours/</loc>
+    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
   </url>
   
   <url>
@@ -143,6 +153,11 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/support_packages/working_with_select_elements/</loc>
+    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/about_this_documentation/</loc>
     <lastmod>2019-07-15T23:43:32-05:00</lastmod>
   </url>
@@ -160,6 +175,11 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/mock_external_services/</loc>
     <lastmod>2019-07-23T23:20:13-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/support_packages/mouse_and_keyboard_actions_in_detail/</loc>
+    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
   </url>
   
   <url>
@@ -190,6 +210,11 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/</loc>
     <lastmod>2019-07-20T22:54:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/support_packages/working_with_web_elements/</loc>
+    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
   </url>
   
   <url>
@@ -264,7 +289,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/</loc>
-    <lastmod>2019-07-25T00:00:35-05:00</lastmod>
+    <lastmod>2019-07-25T00:04:43-05:00</lastmod>
   </url>
   
   <url>
@@ -275,6 +300,11 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/mouse/</loc>
     <lastmod>2019-07-21T21:17:28-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/support_packages/</loc>
+    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
   </url>
   
   <url>
