@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/support_packages/browser_navigation/</loc>
-    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
+    <lastmod>2019-07-25T00:26:44-05:00</lastmod>
   </url>
   
   <url>
@@ -15,6 +15,11 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/captchas/</loc>
     <lastmod>2019-07-24T23:45:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/front_matter/copyright_and_attributions/</loc>
+    <lastmod>2019-07-25T01:23:58-05:00</lastmod>
   </url>
   
   <url>
@@ -108,8 +113,13 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/front_matter/typographical_conventions/</loc>
+    <lastmod>2019-07-25T01:23:58-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/support_packages/working_with_colours/</loc>
-    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
+    <lastmod>2019-07-25T00:26:44-05:00</lastmod>
   </url>
   
   <url>
@@ -154,7 +164,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/support_packages/working_with_select_elements/</loc>
-    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
+    <lastmod>2019-07-25T00:26:44-05:00</lastmod>
   </url>
   
   <url>
@@ -179,7 +189,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/support_packages/mouse_and_keyboard_actions_in_detail/</loc>
-    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
+    <lastmod>2019-07-25T00:26:44-05:00</lastmod>
   </url>
   
   <url>
@@ -214,7 +224,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/support_packages/working_with_web_elements/</loc>
-    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
+    <lastmod>2019-07-25T00:26:44-05:00</lastmod>
   </url>
   
   <url>
@@ -304,7 +314,12 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/support_packages/</loc>
-    <lastmod>2019-07-25T00:23:25-05:00</lastmod>
+    <lastmod>2019-07-25T00:26:44-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/front_matter/</loc>
+    <lastmod>2019-07-25T01:23:58-05:00</lastmod>
   </url>
   
   <url>
