@@ -52,6 +52,15 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
     </item>
     
     <item>
+      <title>Purposes and main functionalities</title>
+      <link>https://seleniumhq.github.io/docs/new_site/grid/purposes_and_main_functionalities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/new_site/grid/purposes_and_main_functionalities/</guid>
+      <description> Central entry point for all tests Management and control of the nodes / environment where the browsers run on Scaling Running tests in parallel Cross platform testing Load balancing  </description>
+    </item>
+    
+    <item>
       <title>Remote WebDriver server</title>
       <link>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -80,6 +89,15 @@ It allows users to simulate common activities performed by end-users; entering t
       <guid>https://seleniumhq.github.io/docs/new_site/webdriver/understanding_the_componets/</guid>
       <description>Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
 Terminology  API: Application Programming Interface. This is the set of &amp;ldquo;commands&amp;rdquo; you use to manipulate WebDriver. Library: A code module which contains the APIs and the code necessary to implement them.</description>
+    </item>
+    
+    <item>
+      <title>Components of a Grid</title>
+      <link>https://seleniumhq.github.io/docs/new_site/grid/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/new_site/grid/components_of_a_grid/</guid>
+      <description>Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent to. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.) The hub will connect one or more nodes that tests will be delegated to.</description>
     </item>
     
     <item>
@@ -197,6 +215,16 @@ Selenium WebDriver is a completely different approach to browser automation, pre
       <guid>https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/locating_elements/</guid>
       <description>Locating one element One of the most fundamental techniques to learn when using WebDriver is how to find elements on the page. WebDriver offers a number of built-in selector types, amongst them finding an element by its ID attribute:
 Java Python C# Ruby JavaScript WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   driver.find_element(id: &amp;#34;cheese&amp;#34;)   const cheese = await driver.findElement(By.id(&amp;#39;cheese&amp;#39;));     As seen in the example, locating elements in WebDriver is done on the WebDriver instance object.</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own Grid</title>
+      <link>https://seleniumhq.github.io/docs/new_site/grid/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/new_site/grid/setting_up_your_own_grid/</guid>
+      <description>To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
+Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud. It is certainly possible to also run nodes on your own hardware.</description>
     </item>
     
     <item>

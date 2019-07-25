@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Introduction :: Selenium Documentation</title>
+    <title>Setting up your own Grid :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564030327" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/introduction/">
+  <body class="" data-url="/grid/setting_up_your_own_grid/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -146,8 +146,8 @@
   
     
     <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://seleniumhq.github.io/docs/new_site/introduction/">
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/grid/" title="Grid" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1208,7 +1208,7 @@
  
   
     
-      <li data-nav-id="/grid/setting_up_your_own_grid/" title="Setting up your own Grid" class="dd-item ">
+      <li data-nav-id="/grid/setting_up_your_own_grid/" title="Setting up your own Grid" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/grid/setting_up_your_own_grid/">
         Setting up your own Grid
         <i class="fas fa-check read-icon"></i>
@@ -1276,7 +1276,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/introduction/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/grid/setting_up_your_own_grid.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1291,6 +1291,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1301,7 +1303,13 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > Introduction
+            
+            
+          
+          
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/grid/'>Grid</a> > Setting up your own Grid
+          
+         
           
          
           
@@ -1310,6 +1318,39 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#quick-start">Quick start</a>
+<ul>
+<li><a href="#step-1-start-the-hub">Step 1: Start the Hub</a></li>
+<li><a href="#step-2-start-the-nodes">Step 2: Start the Nodes</a>
+<ul>
+<li><a href="#configuration-of-node-with-options">Configuration of Node with options</a></li>
+<li><a href="#configuration-of-node-with-json">Configuration of Node with JSON</a></li>
+<li><a href="#specifying-the-port">Specifying the port</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#troubleshooting">Troubleshooting</a>
+<ul>
+<li><a href="#using-log-file">Using Log file</a></li>
+<li><a href="#using-debug-argument">Using <code>-debug</code> argument</a></li>
+</ul></li>
+<li><a href="#warning">Warning</a></li>
+<li><a href="#docker-selenium">Docker Selenium</a>
+<ul>
+<li><a href="#prerequisite">Prerequisite</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1317,9 +1358,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Setting up your own Grid
+            </h1>
           
 
         
@@ -1327,14 +1371,217 @@
 
 
 
-	
 
-<h1 id="introduction">Introduction</h1>
+<p>To use Selenium Grid,
+you need to maintain your own infrastructure for the nodes.
+As this can be a cumbersome and time intense effort,
+many organizations use IaaS providers
+such as Amazon EC2 and Google Compute
+to provide this infrastructure.</p>
 
-<p>Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of web browsers.</p>
+<p>Other options include using providers such as Sauce Labs or Testing Bot
+who provide a Selenium Grid as a service in the cloud.
+It is certainly possible to also run nodes on your own hardware.
+This chapter will go into detail about the option of running your own grid,
+complete with its own node infrastructure.</p>
 
+<h2 id="quick-start">Quick start</h2>
 
+<p>This example will show you how to start the Selenium 2 Grid Hub,
+and register both a WebDriver node and a Selenium 1 RC legacy node.
+We’ll also show you how to call the grid from Java.
+The hub and nodes are shown here running on the same machine,
+but of course you can copy the selenium-server-standalone to multiple machines.</p>
 
+<p>The <code>selenium-server-standalone</code> package includes the hub,
+WebDriver, and legacy RC needed to run the Grid,
+<em>ant</em> is not required anymore.
+You can download the <code>selenium-server-standalone-.jar</code> from
+<a href="http://www.seleniumhq.org/download/">http://www.seleniumhq.org/download/</a>.</p>
+
+<h3 id="step-1-start-the-hub">Step 1: Start the Hub</h3>
+
+<p>The Hub is the central point that will receive test requests
+and distribute them to the right nodes.
+The distribution is done on a capabilities basis,
+meaning a test requiring a set of capabilities
+will only be distributed to nodes offering that set or subset of capabilities.</p>
+
+<p>Because a test&rsquo;s desired capabilities are just what the name implies, <em>desired</em>,
+the hub cannot guarantee that it will locate a node
+fully matching the requested desired capabilities set.</p>
+
+<p>Open a command prompt
+and navigate to the directory where you copied
+the <code>selenium-server-standalone.jar</code> file.
+You start the hub by passing the <code>-role hub</code> flag
+to the standalone server:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone.jar -role hub</code></pre></div>
+<p>The Hub will listen to port 4444 by default.
+You can view the status of the hub by opening a browser window and navigating to
+<a href="http://localhost:4444/grid/console">http://localhost:4444/grid/console</a>.</p>
+
+<p>To change the default port,
+you can add the optional <code>-port</code> flag
+with an integer representing the port to listen to when you run the command.
+Also, all of the other options you see in the JSON config file (seen below)
+are possible command-line flags.</p>
+
+<p>You certainly can get by with only the simple command shown above,
+but if you need more advanced configuration,
+then you may also for convenience specify a JSON format config file
+to configure the hub when you start it.
+You can do it like so:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug</code></pre></div>
+<p>Below you will see an example of a <code>hubConfig.json</code> file.
+We will go into more detail on how to provide node configuration files in step 2.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#268bd2">&#34;_comment&#34;</span> : <span style="color:#2aa198">&#34;Configuration for Hub - hubConfig.json&#34;</span>,
+  <span style="color:#268bd2">&#34;host&#34;</span>: ip,
+  <span style="color:#268bd2">&#34;maxSession&#34;</span>: <span style="color:#2aa198">5</span>,
+  <span style="color:#268bd2">&#34;port&#34;</span>: <span style="color:#2aa198">4444</span>,
+  <span style="color:#268bd2">&#34;cleanupCycle&#34;</span>: <span style="color:#2aa198">5000</span>,
+  <span style="color:#268bd2">&#34;timeout&#34;</span>: <span style="color:#2aa198">300000</span>,
+  <span style="color:#268bd2">&#34;newSessionWaitTimeout&#34;</span>: <span style="color:#2aa198">-1</span>,
+  <span style="color:#268bd2">&#34;servlets&#34;</span>: [],
+  <span style="color:#268bd2">&#34;prioritizer&#34;</span>: <span style="color:#cb4b16">null</span>,
+  <span style="color:#268bd2">&#34;capabilityMatcher&#34;</span>: <span style="color:#2aa198">&#34;org.openqa.grid.internal.utils.DefaultCapabilityMatcher&#34;</span>,
+  <span style="color:#268bd2">&#34;throwOnCapabilityNotPresent&#34;</span>: <span style="color:#cb4b16">true</span>,
+  <span style="color:#268bd2">&#34;nodePolling&#34;</span>: <span style="color:#2aa198">180000</span>,
+  <span style="color:#268bd2">&#34;platform&#34;</span>: <span style="color:#2aa198">&#34;WINDOWS&#34;</span>}</code></pre></div>
+<h3 id="step-2-start-the-nodes">Step 2: Start the Nodes</h3>
+
+<p>Regardless of whether you want to run a grid with new WebDriver functionality,
+or a grid with Selenium 1 RC functionality,
+or both at the same time,
+you use the same <code>selenium-server-standalone.jar</code> file to start the nodes:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444</code></pre></div>
+<p>If a port is not specified through the <code>-port</code> flag,
+a free port will be chosen. You can run multiple nodes on one machine
+but if you do so, you need to be aware of your systems memory resources
+and problems with screenshots if your tests take them.</p>
+
+<h4 id="configuration-of-node-with-options">Configuration of Node with options</h4>
+
+<p>As mentioned, for backwards compatibility
+“wd” and “rc” roles are still a valid subset of the “node” role.
+But those roles limit the types of remote connections to their corresponding API,
+while “node” allows both RC and WebDriver remote connections.</p>
+
+<p>Passing JVM properties (using the <code>-D</code> flag
+<em>before the -jar argument</em>)
+on the command line as well,
+and these will be picked up and propagated to the nodes:</p>
+
+<p><code>-Dwebdriver.chrome.driver=chromedriver.exe</code></p>
+
+<h4 id="configuration-of-node-with-json">Configuration of Node with JSON</h4>
+
+<p>You can also start grid nodes that are configured
+with a JSON configuration file</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -Dwebdriver.chrome.driver<span style="color:#719e07">=</span>chromedriver.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json</code></pre></div>
+<p>And here is an example of a <code>nodeConfig.json</code> file:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#268bd2">&#34;capabilities&#34;</span>: [
+    {
+      <span style="color:#268bd2">&#34;browserName&#34;</span>: <span style="color:#2aa198">&#34;firefox&#34;</span>,
+      <span style="color:#268bd2">&#34;acceptSslCerts&#34;</span>: <span style="color:#cb4b16">true</span>,
+      <span style="color:#268bd2">&#34;javascriptEnabled&#34;</span>: <span style="color:#cb4b16">true</span>,
+      <span style="color:#268bd2">&#34;takesScreenshot&#34;</span>: <span style="color:#cb4b16">false</span>,
+      <span style="color:#268bd2">&#34;firefox_profile&#34;</span>: <span style="color:#2aa198">&#34;&#34;</span>,
+      <span style="color:#268bd2">&#34;browser-version&#34;</span>: <span style="color:#2aa198">&#34;27&#34;</span>,
+      <span style="color:#268bd2">&#34;platform&#34;</span>: <span style="color:#2aa198">&#34;WINDOWS&#34;</span>,
+      <span style="color:#268bd2">&#34;maxInstances&#34;</span>: <span style="color:#2aa198">5</span>,
+      <span style="color:#268bd2">&#34;firefox_binary&#34;</span>: <span style="color:#2aa198">&#34;&#34;</span>,
+      <span style="color:#268bd2">&#34;cleanSession&#34;</span>: <span style="color:#cb4b16">true</span>
+    },
+    {
+      <span style="color:#268bd2">&#34;browserName&#34;</span>: <span style="color:#2aa198">&#34;chrome&#34;</span>,
+      <span style="color:#268bd2">&#34;maxInstances&#34;</span>: <span style="color:#2aa198">5</span>,
+      <span style="color:#268bd2">&#34;platform&#34;</span>: <span style="color:#2aa198">&#34;WINDOWS&#34;</span>,
+      <span style="color:#268bd2">&#34;webdriver.chrome.driver&#34;</span>: <span style="color:#2aa198">&#34;C:/Program Files (x86)/Google/Chrome/Application/chrome.exe&#34;</span>
+    },
+    {
+      <span style="color:#268bd2">&#34;browserName&#34;</span>: <span style="color:#2aa198">&#34;internet explorer&#34;</span>,
+      <span style="color:#268bd2">&#34;maxInstances&#34;</span>: <span style="color:#2aa198">1</span>,
+      <span style="color:#268bd2">&#34;platform&#34;</span>: <span style="color:#2aa198">&#34;WINDOWS&#34;</span>,
+      <span style="color:#268bd2">&#34;webdriver.ie.driver&#34;</span>: <span style="color:#2aa198">&#34;C:/Program Files (x86)/Internet Explorer/iexplore.exe&#34;</span>
+    }
+  ],
+  <span style="color:#268bd2">&#34;configuration&#34;</span>: {
+    <span style="color:#268bd2">&#34;_comment&#34;</span> : <span style="color:#2aa198">&#34;Configuration for Node&#34;</span>,
+    <span style="color:#268bd2">&#34;cleanUpCycle&#34;</span>: <span style="color:#2aa198">2000</span>,
+    <span style="color:#268bd2">&#34;timeout&#34;</span>: <span style="color:#2aa198">30000</span>,
+    <span style="color:#268bd2">&#34;proxy&#34;</span>: <span style="color:#2aa198">&#34;org.openqa.grid.selenium.proxy.WebDriverRemoteProxy&#34;</span>,
+    <span style="color:#268bd2">&#34;port&#34;</span>: <span style="color:#2aa198">5555</span>,
+    <span style="color:#268bd2">&#34;host&#34;</span>: ip,
+    <span style="color:#268bd2">&#34;register&#34;</span>: <span style="color:#cb4b16">true</span>,
+    <span style="color:#268bd2">&#34;hubPort&#34;</span>: <span style="color:#2aa198">4444</span>,
+    <span style="color:#268bd2">&#34;maxSession&#34;</span>: <span style="color:#2aa198">5</span>
+  }
+}</code></pre></div>
+<p>A note about the <code>-host</code> flag</p>
+
+<p>For both hub and node, if the <code>-host</code> flag is not specified,
+<code>0.0.0.0</code> will be used by default. This will bind to all the
+public (non-loopback) IPv4 interfaces of the machine. If you have a special
+network configuration or any component that creates extra network interfaces,
+it is advised to set the <code>-host</code> flag with a value that allows the
+hub/node to be reachable from a different machine.</p>
+
+<h4 id="specifying-the-port">Specifying the port</h4>
+
+<p>The default TCP/IP port used by the hub is 4444. If you need to change the port
+please use above mentioned configurations</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="using-log-file">Using Log file</h3>
+
+<p>For advance troubleshooting you can specify log file to log system messages.
+For that start Selenium GRID hub or node with -log argument. Please see the below example</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone.jar -role hub -log log.txt</code></pre></div>
+<p>Use your favorite text editor to open log file (log.txt in above example) to find
+&ldquo;ERROR&rdquo; logs if you get issues.</p>
+
+<h3 id="using-debug-argument">Using <code>-debug</code> argument</h3>
+
+<p>Also you can use <code>-debug</code> argument to print debug logs on console.
+For that start Selenium Grid Hub or Node with <code>-debug</code> argument. Please see
+the below example</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone.jar -role hub -debug</code></pre></div>
+<h2 id="warning">Warning</h2>
+
+<p>The Selenium Grid must be protected from external access using appropriate
+firewall permissions.</p>
+
+<p>Failure to protect your Grid could result in one or more of the following occurring:
+* You provide open access to your Grid infrastructure
+* You allow 3rd parties to access internal web applications and files
+* You allow 3rd parties to run custom binaries</p>
+
+<p>See this blog post on <a href="//labs.detectify.com">Detectify</a> which gives a good
+overview of how a publicly exposed Grid could be misused:
+<a href="//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/">Don&rsquo;t Leave your Grid Wide Open</a>.</p>
+
+<h2 id="docker-selenium">Docker Selenium</h2>
+
+<p><a href="//www.docker.com/">Docker</a> provides a convenient way to
+provision and scale Selenium Grid infrastructure in a unit known as a container.
+Containers are standardised units of software that contain everything required
+to run the desired application including all dependencies in a reliable and repeatable
+way on different machines.</p>
+
+<p>The Selenium project maintains a set of Docker images which you can download
+and run to get a working grid up and running quickly. Nodes are available for
+both Firefox and Chrome. Full details of how to provision a grid can be found
+within the <a href="//github.com/SeleniumHQ/docker-selenium">Docker Selenium</a>
+repository.</p>
+
+<h3 id="prerequisite">Prerequisite</h3>
+
+<p>The only requirement to run a Grid is to have Docker installed and working.
+<a href="//www.docker.com/products/docker-desktop">Install Docker</a>.</p>
 
 
 <footer class=" footline" >
@@ -1342,12 +1589,10 @@
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/introduction/">
-      “Introduction”
-    </a> was last updated on: 15 Jul 2019 23:43:32 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/5fd9d20f1679ded104e02cdce1937e79735a1c4a">Adding draft version of the new docs site using Hugo (#237) (5fd9d20)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/grid/setting_up_your_own_grid/">
+      “Setting up your own Grid”
+    </a> was last updated on: 24 Jul 2019 23:52:00 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/4e25df58436408e5ad5ad3667bead120bbde4f1d">Adding Grid content to Hugo (4e25df5)</a>
 </h5>
-        
-            </div> 
         
         </div> 
         
@@ -1414,7 +1659,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1427,9 +1671,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2170,6 +2411,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2182,6 +2424,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2214,6 +2459,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2238,10 +2484,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/getting_started/quick/" title="Quick Tour"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/grid/components_of_a_grid/" title="Components of a Grid"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/introduction/the_selenium_project_and_tools/" title="The Selenium project and tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/grid/purposes_and_main_functionalities/" title="Purposes and main functionalities" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2272,3 +2518,4 @@
 
   </body>
 </html>
+
