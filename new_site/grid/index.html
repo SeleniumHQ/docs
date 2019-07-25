@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Introduction :: Selenium Documentation</title>
+    <title>Grid :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564030327" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/introduction/">
+  <body class="" data-url="/grid/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -146,8 +146,8 @@
   
     
     <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="https://seleniumhq.github.io/docs/new_site/introduction/">
@@ -1144,8 +1144,8 @@
   
     
     <li data-nav-id="/grid/" title="Grid" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://seleniumhq.github.io/docs/new_site/grid/">
@@ -1276,7 +1276,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/introduction/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/grid/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1301,7 +1301,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > Introduction
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > Grid
           
          
           
@@ -1329,9 +1329,27 @@
 
 	
 
-<h1 id="introduction">Introduction</h1>
+<h1 id="grid">Grid</h1>
 
-<p>Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of web browsers.</p>
+<p><em>Selenium Grid</em> is a smart proxy server
+that allows Selenium tests to route commands to remote web browser instances.
+Its aim is to provide an easy way to run tests in parallel on multiple machines.</p>
+
+<p>With Selenium Grid,
+one server acts as the hub that routes JSON formatted test commands
+to one or more registered Grid nodes.
+Tests contact the hub to obtain access to remote browser instances.
+The hub has a list of registered servers that it provides access to,
+and allows us to control these instances.</p>
+
+<p>Selenium Grid allows us to run tests in parallel on multiple machines,
+and to manage different browser versions and browser configurations centrally
+(instead of in each individual test).</p>
+
+<p>Selenium Grid isn&rsquo;t a silver bullet.
+It solves a subset of common delegation and distribution problems,
+but will for example not manage your infrastructure
+and might not suit your specific needs.</p>
 
 
 
@@ -1342,9 +1360,9 @@
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/introduction/">
-      “Introduction”
-    </a> was last updated on: 15 Jul 2019 23:43:32 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/5fd9d20f1679ded104e02cdce1937e79735a1c4a">Adding draft version of the new docs site using Hugo (#237) (5fd9d20)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/grid/">
+      “Grid”
+    </a> was last updated on: 24 Jul 2019 23:52:00 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/4e25df58436408e5ad5ad3667bead120bbde4f1d">Adding Grid content to Hugo (4e25df5)</a>
 </h5>
         
             </div> 
@@ -1414,154 +1432,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1698,19 +1568,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1726,25 +1583,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1777,70 +1615,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -2034,6 +1808,246 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2170,6 +2184,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2182,6 +2197,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2238,10 +2256,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/getting_started/quick/" title="Quick Tour"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/worst_practices/link_spidering/" title="Link spidering"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/introduction/the_selenium_project_and_tools/" title="The Selenium project and tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/grid/purposes_and_main_functionalities/" title="Purposes and main functionalities" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

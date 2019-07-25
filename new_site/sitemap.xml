@@ -9,7 +9,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/captchas/</loc>
-    <lastmod>2019-07-24T18:56:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:45:43-05:00</lastmod>
   </url>
   
   <url>
@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/grid/purposes_and_main_functionalities/</loc>
+    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/</loc>
     <lastmod>2019-07-22T17:30:42-05:00</lastmod>
   </url>
@@ -43,6 +48,11 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/grid/components_of_a_grid/</loc>
+    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/domain_specific_language/</loc>
     <lastmod>2019-07-23T23:20:13-05:00</lastmod>
   </url>
@@ -54,7 +64,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/file_downloads/</loc>
-    <lastmod>2019-07-24T18:56:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:45:43-05:00</lastmod>
   </url>
   
   <url>
@@ -94,7 +104,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/http_response_codes/</loc>
-    <lastmod>2019-07-24T18:56:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:45:43-05:00</lastmod>
   </url>
   
   <url>
@@ -110,6 +120,11 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/selenium_installation/</loc>
     <lastmod>2019-07-17T21:44:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/grid/setting_up_your_own_grid/</loc>
+    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
   </url>
   
   <url>
@@ -129,7 +144,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/gmail_email_and_facebook_logins/</loc>
-    <lastmod>2019-07-24T18:56:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
   </url>
   
   <url>
@@ -159,7 +174,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/test_dependency/</loc>
-    <lastmod>2019-07-24T18:56:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:45:43-05:00</lastmod>
   </url>
   
   <url>
@@ -179,7 +194,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/performance_testing/</loc>
-    <lastmod>2019-07-24T18:56:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:45:43-05:00</lastmod>
   </url>
   
   <url>
@@ -189,7 +204,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/</loc>
-    <lastmod>2019-07-23T23:20:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
   </url>
   
   <url>
@@ -199,7 +214,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/link_spidering/</loc>
-    <lastmod>2019-07-24T18:56:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:45:43-05:00</lastmod>
   </url>
   
   <url>
@@ -219,12 +234,17 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/</loc>
-    <lastmod>2019-07-24T18:56:13-05:00</lastmod>
+    <lastmod>2019-07-24T23:45:43-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/fresh_browser_per_test/</loc>
     <lastmod>2019-07-23T23:20:13-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/grid/</loc>
+    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
   </url>
   
   <url>
