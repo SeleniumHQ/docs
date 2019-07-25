@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Third party drivers and plugins :: Selenium Documentation</title>
+    <title>Browser navigation :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564032212" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/getting_started_with_webdriver/third_party_drivers_and_plugins/">
+  <body class="" data-url="/support_packages/browser_navigation/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -347,7 +347,7 @@
   
     
     <li data-nav-id="/getting_started_with_webdriver/" title="Getting started with WebDriver" class="dd-item 
-        parent
+        
         
         
         ">
@@ -392,7 +392,7 @@
  
   
     
-      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item active">
+      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/">
         Third party drivers and plugins
         <i class="fas fa-check read-icon"></i>
@@ -1307,7 +1307,7 @@
   
     
     <li data-nav-id="/support_packages/" title="Support packages" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1333,7 +1333,7 @@
  
   
     
-      <li data-nav-id="/support_packages/browser_navigation/" title="Browser navigation" class="dd-item ">
+      <li data-nav-id="/support_packages/browser_navigation/" title="Browser navigation" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/support_packages/browser_navigation/">
         Browser navigation
         <i class="fas fa-check read-icon"></i>
@@ -1477,7 +1477,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/getting_started_with_webdriver/third_party_drivers_and_plugins.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/support_packages/browser_navigation.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1508,7 +1508,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/'>Getting started with WebDriver</a> > Third party drivers and plugins
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/support_packages/'>Support packages</a> > Browser navigation
           
          
           
@@ -1537,7 +1537,7 @@
           
             <h1>
               
-              Third party drivers and plugins
+              Browser navigation
             </h1>
           
 
@@ -1545,39 +1545,113 @@
 
 
 
-<p>Selenium can be extended through the use of plugins. Here are a number of
-plugins created and maintained by third parties. For more information on how
-to create your own plugin or have it listed, consult the docs.</p>
+<p>There are commands for various webpage loading actions:</p>
 
-<p>Please note that these plugins are not supported, maintained, hosted, or
-endorsed by the Selenium project. In addition, be advised that the plugins
-listed below are not necessarily licensed under the Apache License v.2.0.
-Some of the plugins are available under another free and open source software
-license; others are only available under a proprietary license. Any questions
-about plugins and their license of distribution need to be raised with their
-respective developer(s).</p>
 
-<table>
-<thead>
-<tr>
-<th>Browser</th>
-<th>Latest version</th>
-<th>Changelog</th>
-<th>Issues</th>
-<th>Wiki</th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td><a href="//sites.google.com/a/chromium.org/chromedriver/">Google ChromeDriver</a></td>
-<td><a href="//chromedriver.storage.googleapis.com/index.html">2.29</a></td>
-<td><a href="//chromedriver.storage.googleapis.com/2.29/notes.txt">changelog</a></td>
-<td><a href="//bugs.chromium.org/p/chromedriver/issues/list">issues</a></td>
-<td><a href="//github.com/SeleniumHQ/selenium/wiki/ChromeDriver">wiki</a></td>
-</tr>
-</tbody>
-</table>
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    <label for="tab0code0">Java</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0" checked>
+    <label for="tab1code0">Python</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0" checked>
+    <label for="tab2code0">C#</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0" checked>
+    <label for="tab3code0">Ruby</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0" checked>
+    <label for="tab4code0">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Navigate to a URL (both of the statements below are
+</span><span style="color:#586e75">// functionally equivalent).
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://www.google.com&#34;</span><span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>to<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://www.google.com&#34;</span><span style="color:#719e07">);</span>
+
+<span style="color:#586e75">// Go forward one page in the browser (if you&#39;re not on the
+</span><span style="color:#586e75">// last page that was viewed).
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>forward<span style="color:#719e07">();</span>
+
+<span style="color:#586e75">// Go back one page in the browser (if you&#39;re not on the
+</span><span style="color:#586e75">// first page that was viewed).
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>back<span style="color:#719e07">();</span>
+
+<span style="color:#586e75">// Refresh the current page.
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>refresh<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Navigate to a URL.</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
+
+<span style="color:#586e75"># Go forward one page in the browser (if you&#39;re not on the</span>
+<span style="color:#586e75"># last page that was viewed).</span>
+driver<span style="color:#719e07">.</span>forward()
+
+<span style="color:#586e75"># Go back one page in the browser (if you&#39;re not on the</span>
+<span style="color:#586e75"># first page that was viewed).</span>
+driver<span style="color:#719e07">.</span>back()
+
+<span style="color:#586e75"># Refresh the current page.</span>
+driver<span style="color:#719e07">.</span>refresh()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Navigate to a URL (both of the statements below are</span>
+<span style="color:#586e75"># functionally equivalent).</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
+driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>to(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
+
+<span style="color:#586e75"># Go forward one page in the browser (if you&#39;re not on the</span>
+<span style="color:#586e75"># last page that was viewed).</span>
+driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>forward
+
+<span style="color:#586e75"># Go back one page in the browser (if you&#39;re not on the</span>
+<span style="color:#586e75"># first page that was viewed).</span>
+driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>back
+
+<span style="color:#586e75"># Refresh the current page.</span>
+driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>refresh
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
 
 
 <footer class=" footline" >
@@ -1585,9 +1659,9 @@ respective developer(s).</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/">
-      “Third party drivers and plugins”
-    </a> was last updated on: 20 Jul 2019 22:46:27 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/f089d4baa831ecc163dfea9361e1445e1d9ac45a">Renaming section and adjusting links (#242) (f089d4b)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/support_packages/browser_navigation/">
+      “Browser navigation”
+    </a> was last updated on: 25 Jul 2019 00:23:25 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/9b55637b640f45afe549130c6443159348e801f1">Adding Support packages content to Hugo (9b55637)</a>
 </h5>
         
         </div> 
@@ -1799,7 +1873,6 @@ respective developer(s).</p>
             
                 
                     
-                    
                 
                 
 
@@ -1812,26 +1885,6 @@ respective developer(s).</p>
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1849,8 +1902,21 @@ respective developer(s).</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -2527,6 +2593,7 @@ respective developer(s).</p>
             
                 
                     
+                    
                 
                 
 
@@ -2539,6 +2606,7 @@ respective developer(s).</p>
             
             
                 
+                    
                     
                 
                 
@@ -2555,6 +2623,9 @@ respective developer(s).</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2627,10 +2698,10 @@ respective developer(s).</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/browsers/" title="Browsers"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/support_packages/" title="Support packages"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/locating_elements/" title="Locating elements" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_colours/" title="Working with colours" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

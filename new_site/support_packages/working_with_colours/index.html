@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Third party drivers and plugins :: Selenium Documentation</title>
+    <title>Working with colours :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564032212" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/getting_started_with_webdriver/third_party_drivers_and_plugins/">
+  <body class="" data-url="/support_packages/working_with_colours/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -347,7 +347,7 @@
   
     
     <li data-nav-id="/getting_started_with_webdriver/" title="Getting started with WebDriver" class="dd-item 
-        parent
+        
         
         
         ">
@@ -392,7 +392,7 @@
  
   
     
-      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item active">
+      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/">
         Third party drivers and plugins
         <i class="fas fa-check read-icon"></i>
@@ -1307,7 +1307,7 @@
   
     
     <li data-nav-id="/support_packages/" title="Support packages" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1352,7 +1352,7 @@
  
   
     
-      <li data-nav-id="/support_packages/working_with_colours/" title="Working with colours" class="dd-item ">
+      <li data-nav-id="/support_packages/working_with_colours/" title="Working with colours" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_colours/">
         Working with colours
         <i class="fas fa-check read-icon"></i>
@@ -1477,7 +1477,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/getting_started_with_webdriver/third_party_drivers_and_plugins.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/support_packages/working_with_colours.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1508,7 +1508,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/'>Getting started with WebDriver</a> > Third party drivers and plugins
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/support_packages/'>Support packages</a> > Working with colours
           
          
           
@@ -1537,7 +1537,7 @@
           
             <h1>
               
-              Third party drivers and plugins
+              Working with colours
             </h1>
           
 
@@ -1545,39 +1545,535 @@
 
 
 
-<p>Selenium can be extended through the use of plugins. Here are a number of
-plugins created and maintained by third parties. For more information on how
-to create your own plugin or have it listed, consult the docs.</p>
+<p>You will occasionally want to validate the colour of something as part of your tests;
+the problem is that colour definitions on the web are not constant.
+Wouldn&rsquo;t it be nice if there was an easy way to compare
+a HEX representation of a colour with an RGB representation of a colour,
+or an RGBA representation of a colour with a HSLA representation of a colour?</p>
 
-<p>Please note that these plugins are not supported, maintained, hosted, or
-endorsed by the Selenium project. In addition, be advised that the plugins
-listed below are not necessarily licensed under the Apache License v.2.0.
-Some of the plugins are available under another free and open source software
-license; others are only available under a proprietary license. Any questions
-about plugins and their license of distribution need to be raised with their
-respective developer(s).</p>
+<p>Worry not. There&rsquo;s a solution: the <em>Color</em> class!</p>
 
-<table>
-<thead>
-<tr>
-<th>Browser</th>
-<th>Latest version</th>
-<th>Changelog</th>
-<th>Issues</th>
-<th>Wiki</th>
-</tr>
-</thead>
+<p>First of all, you will need to import the class:</p>
 
-<tbody>
-<tr>
-<td><a href="//sites.google.com/a/chromium.org/chromedriver/">Google ChromeDriver</a></td>
-<td><a href="//chromedriver.storage.googleapis.com/index.html">2.29</a></td>
-<td><a href="//chromedriver.storage.googleapis.com/2.29/notes.txt">changelog</a></td>
-<td><a href="//bugs.chromium.org/p/chromedriver/issues/list">issues</a></td>
-<td><a href="//github.com/SeleniumHQ/selenium/wiki/ChromeDriver">wiki</a></td>
-</tr>
-</tbody>
-</table>
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    <label for="tab0code0">Java</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0" checked>
+    <label for="tab1code0">Python</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0" checked>
+    <label for="tab2code0">C#</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0" checked>
+    <label for="tab3code0">Ruby</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0" checked>
+    <label for="tab4code0">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">import</span> org.openqa.selenium.support.Color<span style="color:#719e07">;</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">from</span> selenium.webdriver.support.color <span style="color:#719e07">import</span> Color
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#719e07">include</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Support</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>You can now start creating colour objects.
+Every colour object will need to be created from a string representation of
+your colour.
+Supported colour representations are:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+    <label for="tab0code1">Java</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1" checked>
+    <label for="tab1code1">Python</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1" checked>
+    <label for="tab2code1">C#</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1" checked>
+    <label for="tab3code1">Ruby</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1" checked>
+    <label for="tab4code1">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color HEX_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#2F7ED8&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color RGB_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgb(255, 255, 255)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color RGB_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgb(40%, 20%, 40%)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color RGBA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgba(255, 255, 255, 0.5)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color RGBA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgba(40%, 20%, 40%, 0.5)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color HSL_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;hsl(100, 0%, 50%)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color HSLA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;hsla(100, 0%, 50%, 0.5)&#34;</span><span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+HEX_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;#2F7ED8&#39;</span>)
+RGB_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;rgb(255, 255, 255)&#39;</span>)
+RGB_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;rgb(40%, 20%, 40%)&#39;</span>)
+RGBA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;rgba(255, 255, 255, 0.5)&#39;</span>)
+RGBA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;rgba(40%, 20%, 40%, 0.5)&#39;</span>)
+HSL_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;hsl(100, 0%, 50%)&#39;</span>)
+HSLA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;hsla(100, 0%, 50%, 0.5)&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#cb4b16">HEX_COLOUR</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;#2F7ED8&#39;</span>)
+<span style="color:#cb4b16">RGB_COLOUR</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;rgb(255, 255, 255)&#39;</span>)
+<span style="color:#cb4b16">RGB_COLOUR</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;rgb(40%, 20%, 40%)&#39;</span>)
+<span style="color:#cb4b16">RGBA_COLOUR</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;rgba(255, 255, 255, 0.5)&#39;</span>)
+<span style="color:#cb4b16">RGBA_COLOUR</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;rgba(40%, 20%, 40%, 0.5)&#39;</span>)
+<span style="color:#cb4b16">HSL_COLOUR</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;hsl(100, 0%, 50%)&#39;</span>)
+<span style="color:#cb4b16">HSLA_COLOUR</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;hsla(100, 0%, 50%, 0.5)&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>The Color class also supports all of the base colour definitions
+specified in
+<a href="//www.w3.org/TR/css3-color/#html4">http://www.w3.org/TR/css3-color/#html4</a>.</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    <label for="tab0code2">Java</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2" checked>
+    <label for="tab1code2">Python</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2" checked>
+    <label for="tab2code2">C#</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2" checked>
+    <label for="tab3code2">Ruby</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2" checked>
+    <label for="tab4code2">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color BLACK <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;black&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color CHOCOLATE <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;chocolate&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color HOTPINK <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;hotpink&#34;</span><span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+BLACK <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;black&#39;</span>)
+CHOCOLATE <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;chocolate&#39;</span>)
+HOTPINK <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;hotpink&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#cb4b16">BLACK</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;black&#39;</span>)
+<span style="color:#cb4b16">CHOCOLATE</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;chocolate&#39;</span>)
+<span style="color:#cb4b16">HOTPINK</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;hotpink&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Sometimes browsers will return a colour value of &ldquo;transparent&rdquo;
+if no colour has been set on an element.
+The Color class also supports this:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
+    <label for="tab0code3">Java</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3" checked>
+    <label for="tab1code3">Python</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3" checked>
+    <label for="tab2code3">C#</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3" checked>
+    <label for="tab3code3">Ruby</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3" checked>
+    <label for="tab4code3">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color TRANSPARENT <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;transparent&#34;</span><span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+TRANSPARENT <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;transparent&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#cb4b16">TRANSPARENT</span> <span style="color:#719e07">=</span> <span style="color:#cb4b16">Color</span><span style="color:#719e07">.</span>from_string(<span style="color:#2aa198">&#39;transparent&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>You can now safely query an element
+to get its colour/background colour knowing that
+any response will be correctly parsed
+and converted into a valid Color object:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode4" id="tab0code4" aria-controls="javacode4" checked>
+    <label for="tab0code4">Java</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab1code4" aria-controls="pythoncode4" checked>
+    <label for="tab1code4">Python</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab2code4" aria-controls="cscode4" checked>
+    <label for="tab2code4">C#</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab3code4" aria-controls="rubycode4" checked>
+    <label for="tab3code4">Ruby</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4" checked>
+    <label for="tab4code4">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+Color loginButtonColour <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;login&#34;</span><span style="color:#719e07">)).</span>getCssValue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;color&#34;</span><span style="color:#719e07">);</span>
+Color loginButtonBackgroundColour <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;login&#34;</span><span style="color:#719e07">)).</span>getCssValue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;background-color&#34;</span><span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+login_button_colour <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#39;login&#39;</span>)<span style="color:#719e07">.</span>value_of_css_property(<span style="color:#2aa198">&#39;color&#39;</span>)
+login_button_background_colour <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#39;login&#39;</span>)<span style="color:#719e07">.</span>value_of_css_property(<span style="color:#2aa198">&#39;background-color&#39;</span>);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+login_button_colour <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;login&#39;</span>)<span style="color:#719e07">.</span>css_value(<span style="color:#2aa198">&#39;color&#39;</span>)
+login_button_background_colour <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;login&#39;</span>)<span style="color:#719e07">.</span>css_value(<span style="color:#2aa198">&#39;background-color&#39;</span>);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>You can then directly compare colour objects:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode5" id="tab0code5" aria-controls="javacode5" checked>
+    <label for="tab0code5">Java</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab1code5" aria-controls="pythoncode5" checked>
+    <label for="tab1code5">Python</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab2code5" aria-controls="cscode5" checked>
+    <label for="tab2code5">C#</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab3code5" aria-controls="rubycode5" checked>
+    <label for="tab3code5">Ruby</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5" checked>
+    <label for="tab4code5">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">assert</span> loginButtonBackgroundColour<span style="color:#719e07">.</span>equals<span style="color:#719e07">(</span>HOTPINK<span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">assert</span> login_button_background_colour <span style="color:#719e07">==</span> HOTPINK
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+assert(login_button_background_colour <span style="color:#719e07">==</span> <span style="color:#cb4b16">HOTPINK</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Or you can convert the colour into one of the following formats
+and perform a static validation:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode6" id="tab0code6" aria-controls="javacode6" checked>
+    <label for="tab0code6">Java</label>
+  
+  <input type="radio" name="tabsetcode6" id="tab1code6" aria-controls="pythoncode6" checked>
+    <label for="tab1code6">Python</label>
+  
+  <input type="radio" name="tabsetcode6" id="tab2code6" aria-controls="cscode6" checked>
+    <label for="tab2code6">C#</label>
+  
+  <input type="radio" name="tabsetcode6" id="tab3code6" aria-controls="rubycode6" checked>
+    <label for="tab3code6">Ruby</label>
+  
+  <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6" checked>
+    <label for="tab4code6">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">assert</span> loginButtonBackgroundColour<span style="color:#719e07">.</span>asHex<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#ff69b4&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#719e07">assert</span> loginButtonBackgroundColour<span style="color:#719e07">.</span>asRgba<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgba(255, 105, 180, 1)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#719e07">assert</span> loginButtonBackgroundColour<span style="color:#719e07">.</span>asRgb<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgb(255, 105, 180)&#34;</span><span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">assert</span> login_button_background_colour<span style="color:#719e07">.</span><span style="color:#b58900">hex</span> <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;#ff69b4&#39;</span>
+<span style="color:#719e07">assert</span> login_button_background_colour<span style="color:#719e07">.</span>rgba <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;rgba(255, 105, 180, 1)&#39;</span>
+<span style="color:#719e07">assert</span> login_button_background_colour<span style="color:#719e07">.</span>rgb <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;rgb(255, 105, 180)&#39;</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+assert(login_button_background_colour<span style="color:#719e07">.</span>hex <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;#ff69b4&#39;</span>)
+assert(login_button_background_colour<span style="color:#719e07">.</span>rgba <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;rgba(255, 105, 180, 1)&#39;</span>)
+assert(login_button_background_colour<span style="color:#719e07">.</span>rgb <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;rgb(255, 105, 180)&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Colours are no longer a problem.</p>
 
 
 <footer class=" footline" >
@@ -1585,9 +2081,9 @@ respective developer(s).</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/">
-      “Third party drivers and plugins”
-    </a> was last updated on: 20 Jul 2019 22:46:27 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/f089d4baa831ecc163dfea9361e1445e1d9ac45a">Renaming section and adjusting links (#242) (f089d4b)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_colours/">
+      “Working with colours”
+    </a> was last updated on: 25 Jul 2019 00:23:25 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/9b55637b640f45afe549130c6443159348e801f1">Adding Support packages content to Hugo (9b55637)</a>
 </h5>
         
         </div> 
@@ -1799,7 +2295,6 @@ respective developer(s).</p>
             
                 
                     
-                    
                 
                 
 
@@ -1812,26 +2307,6 @@ respective developer(s).</p>
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1849,8 +2324,21 @@ respective developer(s).</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -2527,6 +3015,7 @@ respective developer(s).</p>
             
                 
                     
+                    
                 
                 
 
@@ -2539,6 +3028,9 @@ respective developer(s).</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2556,6 +3048,7 @@ respective developer(s).</p>
             
                 
                     
+                    
                 
                 
 
@@ -2571,6 +3064,9 @@ respective developer(s).</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2627,10 +3123,10 @@ respective developer(s).</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/browsers/" title="Browsers"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/support_packages/browser_navigation/" title="Browser navigation"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/locating_elements/" title="Locating elements" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_select_elements/" title="Working with select elements" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

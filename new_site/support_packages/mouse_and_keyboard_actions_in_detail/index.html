@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Third party drivers and plugins :: Selenium Documentation</title>
+    <title>Mouse and keyboard actions in detail :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564032212" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/getting_started_with_webdriver/third_party_drivers_and_plugins/">
+  <body class="" data-url="/support_packages/mouse_and_keyboard_actions_in_detail/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -347,7 +347,7 @@
   
     
     <li data-nav-id="/getting_started_with_webdriver/" title="Getting started with WebDriver" class="dd-item 
-        parent
+        
         
         
         ">
@@ -392,7 +392,7 @@
  
   
     
-      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item active">
+      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/">
         Third party drivers and plugins
         <i class="fas fa-check read-icon"></i>
@@ -1307,7 +1307,7 @@
   
     
     <li data-nav-id="/support_packages/" title="Support packages" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1390,7 +1390,7 @@
  
   
     
-      <li data-nav-id="/support_packages/mouse_and_keyboard_actions_in_detail/" title="Mouse and keyboard actions in detail" class="dd-item ">
+      <li data-nav-id="/support_packages/mouse_and_keyboard_actions_in_detail/" title="Mouse and keyboard actions in detail" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/support_packages/mouse_and_keyboard_actions_in_detail/">
         Mouse and keyboard actions in detail
         <i class="fas fa-check read-icon"></i>
@@ -1477,7 +1477,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/getting_started_with_webdriver/third_party_drivers_and_plugins.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/support_packages/mouse_and_keyboard_actions_in_detail.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1508,7 +1508,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/'>Getting started with WebDriver</a> > Third party drivers and plugins
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/support_packages/'>Support packages</a> > Mouse and keyboard actions in detail
           
          
           
@@ -1537,7 +1537,7 @@
           
             <h1>
               
-              Third party drivers and plugins
+              Mouse and keyboard actions in detail
             </h1>
           
 
@@ -1545,39 +1545,424 @@
 
 
 
-<p>Selenium can be extended through the use of plugins. Here are a number of
-plugins created and maintained by third parties. For more information on how
-to create your own plugin or have it listed, consult the docs.</p>
+<p>Suppose you have an arbitrary web element <strong>e:</strong></p>
 
-<p>Please note that these plugins are not supported, maintained, hosted, or
-endorsed by the Selenium project. In addition, be advised that the plugins
-listed below are not necessarily licensed under the Apache License v.2.0.
-Some of the plugins are available under another free and open source software
-license; others are only available under a proprietary license. Any questions
-about plugins and their license of distribution need to be raised with their
-respective developer(s).</p>
 
-<table>
-<thead>
-<tr>
-<th>Browser</th>
-<th>Latest version</th>
-<th>Changelog</th>
-<th>Issues</th>
-<th>Wiki</th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td><a href="//sites.google.com/a/chromium.org/chromedriver/">Google ChromeDriver</a></td>
-<td><a href="//chromedriver.storage.googleapis.com/index.html">2.29</a></td>
-<td><a href="//chromedriver.storage.googleapis.com/2.29/notes.txt">changelog</a></td>
-<td><a href="//bugs.chromium.org/p/chromedriver/issues/list">issues</a></td>
-<td><a href="//github.com/SeleniumHQ/selenium/wiki/ChromeDriver">wiki</a></td>
-</tr>
-</tbody>
-</table>
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    <label for="tab0code0">Java</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0" checked>
+    <label for="tab1code0">Python</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0" checked>
+    <label for="tab2code0">C#</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0" checked>
+    <label for="tab3code0">Ruby</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0" checked>
+    <label for="tab4code0">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+WebElement e <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;testElement&#34;</span><span style="color:#719e07">));</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+e <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;testElement&#34;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>You can simulate mouse clicking on e if it&rsquo;s visible and has a height and width
+that are greater than 0:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+    <label for="tab0code1">Java</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1" checked>
+    <label for="tab1code1">Python</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1" checked>
+    <label for="tab2code1">C#</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1" checked>
+    <label for="tab3code1">Ruby</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1" checked>
+    <label for="tab4code1">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+e<span style="color:#719e07">.</span>click<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+e<span style="color:#719e07">.</span>click()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Moreover, it&rsquo;s possible to mimic hovering of the cursor over <strong>e</strong>. In order
+to do so, you&rsquo;ll need the following import statement:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    <label for="tab0code2">Java</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2" checked>
+    <label for="tab1code2">Python</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2" checked>
+    <label for="tab2code2">C#</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2" checked>
+    <label for="tab3code2">Ruby</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2" checked>
+    <label for="tab4code2">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">import</span> org.openqa.selenium.interactions.Actions<span style="color:#719e07">;</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">from</span> selenium.webdriver <span style="color:#719e07">import</span> ActionChains
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>With this statement in place, you can now move over the element in question:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
+    <label for="tab0code3">Java</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3" checked>
+    <label for="tab1code3">Python</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3" checked>
+    <label for="tab2code3">C#</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3" checked>
+    <label for="tab3code3">Ruby</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3" checked>
+    <label for="tab4code3">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+Actions actions <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions<span style="color:#719e07">(</span>driver<span style="color:#719e07">);</span>
+actions<span style="color:#719e07">.</span>moveToElement<span style="color:#719e07">(</span>e<span style="color:#719e07">);</span>
+actions<span style="color:#719e07">.</span>perform<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+actions <span style="color:#719e07">=</span> ActionChains(driver)
+actions<span style="color:#719e07">.</span>move_to_element(e)
+actions<span style="color:#719e07">.</span>perform()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>If <strong>e</strong> is an <strong>input</strong> or <strong>textarea</strong> element, the following keyboard
+actions can be carried out:</p>
+
+<ol>
+<li>Enter a sequence of characters in e:</li>
+</ol>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode4" id="tab0code4" aria-controls="javacode4" checked>
+    <label for="tab0code4">Java</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab1code4" aria-controls="pythoncode4" checked>
+    <label for="tab1code4">Python</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab2code4" aria-controls="cscode4" checked>
+    <label for="tab2code4">C#</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab3code4" aria-controls="rubycode4" checked>
+    <label for="tab3code4">Ruby</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4" checked>
+    <label for="tab4code4">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+e<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Test&#34;</span><span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+e<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;Test&#34;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p><p>2. Delete the text that&rsquo;s in e (if there is any):</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode5" id="tab0code5" aria-controls="javacode5" checked>
+    <label for="tab0code5">Java</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab1code5" aria-controls="pythoncode5" checked>
+    <label for="tab1code5">Python</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab2code5" aria-controls="cscode5" checked>
+    <label for="tab2code5">C#</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab3code5" aria-controls="rubycode5" checked>
+    <label for="tab3code5">Ruby</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5" checked>
+    <label for="tab4code5">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+e<span style="color:#719e07">.</span>clear<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+e<span style="color:#719e07">.</span>clear()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
 
 
 <footer class=" footline" >
@@ -1585,9 +1970,9 @@ respective developer(s).</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/">
-      “Third party drivers and plugins”
-    </a> was last updated on: 20 Jul 2019 22:46:27 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/f089d4baa831ecc163dfea9361e1445e1d9ac45a">Renaming section and adjusting links (#242) (f089d4b)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/support_packages/mouse_and_keyboard_actions_in_detail/">
+      “Mouse and keyboard actions in detail”
+    </a> was last updated on: 25 Jul 2019 00:23:25 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/9b55637b640f45afe549130c6443159348e801f1">Adding Support packages content to Hugo (9b55637)</a>
 </h5>
         
         </div> 
@@ -1799,7 +2184,6 @@ respective developer(s).</p>
             
                 
                     
-                    
                 
                 
 
@@ -1812,26 +2196,6 @@ respective developer(s).</p>
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1849,8 +2213,21 @@ respective developer(s).</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -2527,6 +2904,7 @@ respective developer(s).</p>
             
                 
                     
+                    
                 
                 
 
@@ -2539,6 +2917,9 @@ respective developer(s).</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2588,6 +2969,7 @@ respective developer(s).</p>
             
                 
                     
+                    
                 
                 
 
@@ -2603,6 +2985,9 @@ respective developer(s).</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2627,10 +3012,10 @@ respective developer(s).</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/browsers/" title="Browsers"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_select_elements/" title="Working with select elements"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/locating_elements/" title="Locating elements" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_web_elements/" title="Working with web elements" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Third party drivers and plugins :: Selenium Documentation</title>
+    <title>Working with select elements :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564032212" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/getting_started_with_webdriver/third_party_drivers_and_plugins/">
+  <body class="" data-url="/support_packages/working_with_select_elements/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -347,7 +347,7 @@
   
     
     <li data-nav-id="/getting_started_with_webdriver/" title="Getting started with WebDriver" class="dd-item 
-        parent
+        
         
         
         ">
@@ -392,7 +392,7 @@
  
   
     
-      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item active">
+      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/">
         Third party drivers and plugins
         <i class="fas fa-check read-icon"></i>
@@ -1307,7 +1307,7 @@
   
     
     <li data-nav-id="/support_packages/" title="Support packages" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1371,7 +1371,7 @@
  
   
     
-      <li data-nav-id="/support_packages/working_with_select_elements/" title="Working with select elements" class="dd-item ">
+      <li data-nav-id="/support_packages/working_with_select_elements/" title="Working with select elements" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_select_elements/">
         Working with select elements
         <i class="fas fa-check read-icon"></i>
@@ -1477,7 +1477,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/getting_started_with_webdriver/third_party_drivers_and_plugins.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/support_packages/working_with_select_elements.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1508,7 +1508,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/'>Getting started with WebDriver</a> > Third party drivers and plugins
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/support_packages/'>Support packages</a> > Working with select elements
           
          
           
@@ -1537,7 +1537,7 @@
           
             <h1>
               
-              Third party drivers and plugins
+              Working with select elements
             </h1>
           
 
@@ -1545,39 +1545,565 @@
 
 
 
-<p>Selenium can be extended through the use of plugins. Here are a number of
-plugins created and maintained by third parties. For more information on how
-to create your own plugin or have it listed, consult the docs.</p>
+<p>Select elements can require quite a bit of boiler plate code to automate.
+To reduce this and make your tests cleaner, there is a
+<code>Select</code> class in the Selenium support package.
+To use it, you will need the following import statement:</p>
 
-<p>Please note that these plugins are not supported, maintained, hosted, or
-endorsed by the Selenium project. In addition, be advised that the plugins
-listed below are not necessarily licensed under the Apache License v.2.0.
-Some of the plugins are available under another free and open source software
-license; others are only available under a proprietary license. Any questions
-about plugins and their license of distribution need to be raised with their
-respective developer(s).</p>
 
-<table>
-<thead>
-<tr>
-<th>Browser</th>
-<th>Latest version</th>
-<th>Changelog</th>
-<th>Issues</th>
-<th>Wiki</th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td><a href="//sites.google.com/a/chromium.org/chromedriver/">Google ChromeDriver</a></td>
-<td><a href="//chromedriver.storage.googleapis.com/index.html">2.29</a></td>
-<td><a href="//chromedriver.storage.googleapis.com/2.29/notes.txt">changelog</a></td>
-<td><a href="//bugs.chromium.org/p/chromedriver/issues/list">issues</a></td>
-<td><a href="//github.com/SeleniumHQ/selenium/wiki/ChromeDriver">wiki</a></td>
-</tr>
-</tbody>
-</table>
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    <label for="tab0code0">Java</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0" checked>
+    <label for="tab1code0">Python</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0" checked>
+    <label for="tab2code0">C#</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0" checked>
+    <label for="tab3code0">Ruby</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0" checked>
+    <label for="tab4code0">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">import</span> org.openqa.selenium.support.ui.Select<span style="color:#719e07">;</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">from</span> selenium.webdriver.support.select <span style="color:#719e07">import</span> Select
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#719e07">include</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Support</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>You are then able to create a Select object using a WebElement that
+references a <code>&lt;select&gt;</code> element.</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+    <label for="tab0code1">Java</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1" checked>
+    <label for="tab1code1">Python</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1" checked>
+    <label for="tab2code1">C#</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1" checked>
+    <label for="tab3code1">Ruby</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1" checked>
+    <label for="tab4code1">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+WebElement selectElement <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;selectElementID&#34;</span><span style="color:#719e07">));</span>
+Select selectObject <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Select<span style="color:#719e07">(</span>selectElement<span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+select_element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#39;selectElementID&#39;</span>)
+select_object <span style="color:#719e07">=</span> Select(select_element)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+select_element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;selectElementID&#39;</span>)
+select_object <span style="color:#719e07">=</span> <span style="color:#cb4b16">Select</span>(select_element)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>The Select object will now give you a series of commands
+that allow you to interact with a <code>&lt;select&gt;</code> element.
+First of all, there are different ways of selecting an option
+from the <code>&lt;select&gt;</code> element.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">select</span>&gt;
+ &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value1</span>&gt;Bread&lt;/<span style="color:#268bd2">option</span>&gt;
+ &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value2</span> selected&gt;Milk&lt;/<span style="color:#268bd2">option</span>&gt;
+ &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value3</span>&gt;Cheese&lt;/<span style="color:#268bd2">option</span>&gt;
+&lt;/<span style="color:#268bd2">select</span>&gt;</code></pre></div>
+<p>There are three ways to select the first option from the above element:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    <label for="tab0code2">Java</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2" checked>
+    <label for="tab1code2">Python</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2" checked>
+    <label for="tab2code2">C#</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2" checked>
+    <label for="tab3code2">Ruby</label>
+  
+  <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2" checked>
+    <label for="tab4code2">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>selectByIndex<span style="color:#719e07">(</span>1<span style="color:#719e07">);</span>
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>selectByValue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;value1&#34;</span><span style="color:#719e07">);</span>
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>selectByVisibleText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Bread&#34;</span><span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
+select_object<span style="color:#719e07">.</span>select_by_index(<span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75"># Select an &lt;option&gt; based upon its value attribute</span>
+select_object<span style="color:#719e07">.</span>select_by_value(<span style="color:#2aa198">&#39;value1&#39;</span>)
+
+<span style="color:#586e75"># Select an &lt;option&gt; based upon its text</span>
+select_object<span style="color:#719e07">.</span>select_by_visible_text(<span style="color:#2aa198">&#39;Bread&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
+select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:index</span>, <span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75"># Select an &lt;option&gt; based upon its value attribute</span>
+select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:value</span>, <span style="color:#2aa198">&#39;value1&#39;</span>)
+
+<span style="color:#586e75"># Select an &lt;option&gt; based upon its text</span>
+select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:text</span>, <span style="color:#2aa198">&#39;Bread&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>You can then check which options are selected by using:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
+    <label for="tab0code3">Java</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3" checked>
+    <label for="tab1code3">Python</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3" checked>
+    <label for="tab2code3">C#</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3" checked>
+    <label for="tab3code3">Ruby</label>
+  
+  <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3" checked>
+    <label for="tab4code3">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that have been selected
+</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> allSelectedOptions <span style="color:#719e07">=</span> selectObject<span style="color:#719e07">.</span>getAllSelectedOptions<span style="color:#719e07">();</span>
+
+<span style="color:#586e75">// Return a WebElement referencing the first selection option found by walking down the DOM
+</span><span style="color:#586e75"></span>WebElement firstSelectedOption <span style="color:#719e07">=</span> selectObject<span style="color:#719e07">.</span>getFirstSelectedOption<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Return a list[WebElement] of options that have been selected</span>
+all_selected_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>all_selected_options
+
+<span style="color:#586e75"># Return a WebElement referencing the first selection option found by walking down the DOM</span>
+first_selected_option <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>first_selected_option
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Return an Array[Element] of options that have been selected</span>
+all_selected_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>selected_options
+
+<span style="color:#586e75"># Return a WebElement referencing the first selection option found by walking down the DOM</span>
+first_selected_option <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>first_selected_option
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Or you may just be interested in what <code>&lt;option&gt;</code> elements
+the <code>&lt;select&gt;</code> element contains:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode4" id="tab0code4" aria-controls="javacode4" checked>
+    <label for="tab0code4">Java</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab1code4" aria-controls="pythoncode4" checked>
+    <label for="tab1code4">Python</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab2code4" aria-controls="cscode4" checked>
+    <label for="tab2code4">C#</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab3code4" aria-controls="rubycode4" checked>
+    <label for="tab3code4">Ruby</label>
+  
+  <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4" checked>
+    <label for="tab4code4">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that the &lt;select&gt; element contains
+</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> allAvailableOptions <span style="color:#719e07">=</span> selectObject<span style="color:#719e07">.</span>getOptions<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Return a list[WebElement] of options that the &amp;lt;select&amp;gt; element contains</span>
+all_available_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>options
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Return an Array[Element] of options that the &amp;lt;select&amp;gt; element contains</span>
+all_available_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>options
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>If you want to deselect any elements, you now have four options:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode5" id="tab0code5" aria-controls="javacode5" checked>
+    <label for="tab0code5">Java</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab1code5" aria-controls="pythoncode5" checked>
+    <label for="tab1code5">Python</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab2code5" aria-controls="cscode5" checked>
+    <label for="tab2code5">C#</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab3code5" aria-controls="rubycode5" checked>
+    <label for="tab3code5">Ruby</label>
+  
+  <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5" checked>
+    <label for="tab4code5">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>deselectByIndex<span style="color:#719e07">(</span>1<span style="color:#719e07">);</span>
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>deselectByValue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;value1&#34;</span><span style="color:#719e07">);</span>
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>deselectByVisibleText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Bread&#34;</span><span style="color:#719e07">);</span>
+
+<span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>deselectAll<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
+select_object<span style="color:#719e07">.</span>deselect_by_index(<span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its value attribute</span>
+select_object<span style="color:#719e07">.</span>deselect_by_value(<span style="color:#2aa198">&#39;value1&#39;</span>)
+
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its text</span>
+select_object<span style="color:#719e07">.</span>deselect_by_visible_text(<span style="color:#2aa198">&#39;Bread&#39;</span>)
+
+<span style="color:#586e75"># Deselect all selected &lt;option&gt; elements</span>
+select_object<span style="color:#719e07">.</span>deselect_all()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
+select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:index</span>, <span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its value attribute</span>
+select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:value</span>, <span style="color:#2aa198">&#39;value1&#39;</span>)
+
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its text</span>
+select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:text</span>, <span style="color:#2aa198">&#39;Bread&#39;</span>)
+
+<span style="color:#586e75"># Deselect all selected &lt;option&gt; elements</span>
+select_object<span style="color:#719e07">.</span>deselect_all
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Finally, some <code>&lt;select&gt;</code> elements allow you to select more than one option.
+You can find out if your <code>&lt;select&gt;</code> element is one of these by using:</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode6" id="tab0code6" aria-controls="javacode6" checked>
+    <label for="tab0code6">Java</label>
+  
+  <input type="radio" name="tabsetcode6" id="tab1code6" aria-controls="pythoncode6" checked>
+    <label for="tab1code6">Python</label>
+  
+  <input type="radio" name="tabsetcode6" id="tab2code6" aria-controls="cscode6" checked>
+    <label for="tab2code6">C#</label>
+  
+  <input type="radio" name="tabsetcode6" id="tab3code6" aria-controls="rubycode6" checked>
+    <label for="tab3code6">Ruby</label>
+  
+  <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6" checked>
+    <label for="tab4code6">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+Boolean doesThisAllowMultipleSelections <span style="color:#719e07">=</span> selectObject<span style="color:#719e07">.</span>isMultiple<span style="color:#719e07">();</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>is_multiple
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>multiple?
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
 
 
 <footer class=" footline" >
@@ -1585,9 +2111,9 @@ respective developer(s).</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/third_party_drivers_and_plugins/">
-      “Third party drivers and plugins”
-    </a> was last updated on: 20 Jul 2019 22:46:27 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/f089d4baa831ecc163dfea9361e1445e1d9ac45a">Renaming section and adjusting links (#242) (f089d4b)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_select_elements/">
+      “Working with select elements”
+    </a> was last updated on: 25 Jul 2019 00:23:25 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/9b55637b640f45afe549130c6443159348e801f1">Adding Support packages content to Hugo (9b55637)</a>
 </h5>
         
         </div> 
@@ -1799,7 +2325,6 @@ respective developer(s).</p>
             
                 
                     
-                    
                 
                 
 
@@ -1812,26 +2337,6 @@ respective developer(s).</p>
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1849,8 +2354,21 @@ respective developer(s).</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -2527,6 +3045,7 @@ respective developer(s).</p>
             
                 
                     
+                    
                 
                 
 
@@ -2539,6 +3058,9 @@ respective developer(s).</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2572,6 +3094,7 @@ respective developer(s).</p>
             
                 
                     
+                    
                 
                 
 
@@ -2587,6 +3110,9 @@ respective developer(s).</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2627,10 +3153,10 @@ respective developer(s).</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/browsers/" title="Browsers"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/support_packages/working_with_colours/" title="Working with colours"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/getting_started_with_webdriver/locating_elements/" title="Locating elements" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/support_packages/mouse_and_keyboard_actions_in_detail/" title="Mouse and keyboard actions in detail" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
