@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Gmail, email and Facebook logins :: Selenium Documentation</title>
+    <title>Driver specific capabilities :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564030844" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/worst_practices/gmail_email_and_facebook_logins/">
+  <body class="" data-url="/driver_idiosyncrasies/driver_specific_capabilities/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -977,7 +977,7 @@
   
     
     <li data-nav-id="/worst_practices/" title="Worst practices" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1060,7 +1060,7 @@
  
   
     
-      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email and Facebook logins" class="dd-item active">
+      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email and Facebook logins" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/worst_practices/gmail_email_and_facebook_logins/">
         Gmail, email and Facebook
         <i class="fas fa-check read-icon"></i>
@@ -1235,7 +1235,7 @@
   
     
     <li data-nav-id="/driver_idiosyncrasies/" title="Driver idiosyncrasies" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1280,7 +1280,7 @@
  
   
     
-      <li data-nav-id="/driver_idiosyncrasies/driver_specific_capabilities/" title="Driver specific capabilities" class="dd-item ">
+      <li data-nav-id="/driver_idiosyncrasies/driver_specific_capabilities/" title="Driver specific capabilities" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/driver_specific_capabilities/">
         Driver specific capabilities
         <i class="fas fa-check read-icon"></i>
@@ -1348,7 +1348,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/worst_practices/gmail_email_and_facebook_logins.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/driver_idiosyncrasies/driver_specific_capabilities.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1379,7 +1379,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/worst_practices/'>Worst practices</a> > Gmail, email and Facebook logins
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/'>Driver idiosyncrasies</a> > Driver specific capabilities
           
          
           
@@ -1392,7 +1392,22 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#firefox">Firefox</a>
+<ul>
+<li><a href="#define-capabilities-using-firefoxoptions">Define Capabilities using <code>FirefoxOptions</code></a></li>
+<li><a href="#setting-a-custom-profile">Setting a custom profile</a></li>
+</ul></li>
+<li><a href="#internet-explorer">Internet Explorer</a>
+<ul>
+<li><a href="#fileuploaddialogtimeout">fileUploadDialogTimeout</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1408,7 +1423,7 @@
           
             <h1>
               
-              Gmail, email and Facebook logins
+              Driver specific capabilities
             </h1>
           
 
@@ -1416,32 +1431,163 @@
 
 
 
-<p>For multiple reasons, logging into sites like Gmail and Facebook
-using WebDriver is not recommended.
-Aside from being against the usage terms for these sites
-(where you risk having the account shut down),
-it is slow and unreliable.</p>
 
-<p>The ideal practice is to use the APIs that email providers offer,
-or in the case of Facebook the developer tools service
-which exposes an API for creating test accounts, friends and so forth.
-Although using an API might seem like a bit of extra hard work,
-you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change
-whereas webpages and HTML locators change often
-and require you to update your test framework.</p>
 
-<p>Logging in to third party sites using WebDriver
-at any point of your test increases the risk
-of your test failing because it makes your test longer.
-A general rule of thumb is that longer tests
-are more fragile and unreliable.</p>
+<h2 id="firefox">Firefox</h2>
 
-<p>WebDriver implementations that are
-<a href="//w3c.github.io/webdriver/webdriver-spec.html">W3C conformant</a>
-also annotate the <code>navigator</code> object
-with a <code>webdriver</code> property
-so that Denial of Service attacks can be mitigated.</p>
+<h3 id="define-capabilities-using-firefoxoptions">Define Capabilities using <code>FirefoxOptions</code></h3>
+
+<p><code>FirefoxOptions</code> is the new way to define capabilities for the Firefox
+browser and should generally be used in preference to DesiredCapabilities.</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    <label for="tab0code0">Java</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0" checked>
+    <label for="tab1code0">Python</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0" checked>
+    <label for="tab2code0">C#</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0" checked>
+    <label for="tab3code0">Ruby</label>
+  
+  <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0" checked>
+    <label for="tab4code0">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+FirefoxOptions options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions<span style="color:#719e07">();</span>
+options<span style="color:#719e07">.</span>addPreference<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;network.proxy.type&#34;</span><span style="color:#719e07">,</span> 0<span style="color:#719e07">);</span>
+driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver<span style="color:#719e07">(</span>options<span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="setting-a-custom-profile">Setting a custom profile</h3>
+
+<p>It is possible to create a custom profile for Firefox as demonstrated below.</p>
+
+
+
+
+<div class="tabset">
+  
+  <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+    <label for="tab0code1">Java</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1" checked>
+    <label for="tab1code1">Python</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1" checked>
+    <label for="tab2code1">C#</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1" checked>
+    <label for="tab3code1">Ruby</label>
+  
+  <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1" checked>
+    <label for="tab4code1">JavaScript</label>
+    
+  <div class="tab-panels">
+  
+
+
+<section id="javacode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+FirefoxProfile profile <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxProfile<span style="color:#719e07">();</span>
+FirefoxOptions options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions<span style="color:#719e07">();</span>
+options<span style="color:#719e07">.</span>setProfile<span style="color:#719e07">(</span>profile<span style="color:#719e07">);</span>
+driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver<span style="color:#719e07">(</span>options<span style="color:#719e07">);</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<h2 id="internet-explorer">Internet Explorer</h2>
+
+<h3 id="fileuploaddialogtimeout">fileUploadDialogTimeout</h3>
+
+<p>In some environments, Internet Explorer may timeout when opening the
+File Upload dialog. IEDriver has a default timeout of 1000ms, but you
+can increase the timeout using the fileUploadDialogTimeout capability.</p>
 
 
 <footer class=" footline" >
@@ -1449,9 +1595,9 @@ so that Denial of Service attacks can be mitigated.</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/worst_practices/gmail_email_and_facebook_logins/">
-      “Gmail, email and Facebook logins”
-    </a> was last updated on: 24 Jul 2019 23:55:37 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/086830db31262283ddc85e225d1967aa6629914a">Adding Grid content to Hugo (#249) (086830d)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/driver_specific_capabilities/">
+      “Driver specific capabilities”
+    </a> was last updated on: 25 Jul 2019 00:00:35 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/335d89733233458c6a464644ce39c833e80135ac">Adding Driver idiosyncrasies content to Hugo (335d897)</a>
 </h5>
         
         </div> 
@@ -2143,7 +2289,6 @@ so that Denial of Service attacks can be mitigated.</p>
             
                 
                     
-                    
                 
                 
 
@@ -2156,9 +2301,6 @@ so that Denial of Service attacks can be mitigated.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2208,7 +2350,6 @@ so that Denial of Service attacks can be mitigated.</p>
             
                 
                     
-                    
                 
                 
 
@@ -2224,9 +2365,6 @@ so that Denial of Service attacks can be mitigated.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2343,6 +2481,7 @@ so that Denial of Service attacks can be mitigated.</p>
             
                 
                     
+                    
                 
                 
 
@@ -2355,6 +2494,9 @@ so that Denial of Service attacks can be mitigated.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2371,6 +2513,7 @@ so that Denial of Service attacks can be mitigated.</p>
             
             
                 
+                    
                     
                 
                 
@@ -2395,10 +2538,10 @@ so that Denial of Service attacks can be mitigated.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/worst_practices/http_response_codes/" title="HTTP response codes"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/shared_capabilities/" title="Shared capabilities"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/worst_practices/test_dependency/" title="Test dependency" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/shared_capabilities/" title="Shared capabilities" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
