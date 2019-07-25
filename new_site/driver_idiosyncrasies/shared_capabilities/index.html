@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Gmail, email and Facebook logins :: Selenium Documentation</title>
+    <title>Shared capabilities :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564030844" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/worst_practices/gmail_email_and_facebook_logins/">
+  <body class="" data-url="/driver_idiosyncrasies/shared_capabilities/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -977,7 +977,7 @@
   
     
     <li data-nav-id="/worst_practices/" title="Worst practices" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1060,7 +1060,7 @@
  
   
     
-      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email and Facebook logins" class="dd-item active">
+      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email and Facebook logins" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/worst_practices/gmail_email_and_facebook_logins/">
         Gmail, email and Facebook
         <i class="fas fa-check read-icon"></i>
@@ -1235,7 +1235,7 @@
   
     
     <li data-nav-id="/driver_idiosyncrasies/" title="Driver idiosyncrasies" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1261,7 +1261,7 @@
  
   
     
-      <li data-nav-id="/driver_idiosyncrasies/shared_capabilities/" title="Shared capabilities" class="dd-item ">
+      <li data-nav-id="/driver_idiosyncrasies/shared_capabilities/" title="Shared capabilities" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/shared_capabilities/">
         Shared capabilities
         <i class="fas fa-check read-icon"></i>
@@ -1348,7 +1348,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/worst_practices/gmail_email_and_facebook_logins.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/driver_idiosyncrasies/shared_capabilities.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1379,7 +1379,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/worst_practices/'>Worst practices</a> > Gmail, email and Facebook logins
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/'>Driver idiosyncrasies</a> > Shared capabilities
           
          
           
@@ -1392,7 +1392,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#pageloadstrategy">pageLoadStrategy</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1408,7 +1418,7 @@
           
             <h1>
               
-              Gmail, email and Facebook logins
+              Shared capabilities
             </h1>
           
 
@@ -1416,32 +1426,51 @@
 
 
 
-<p>For multiple reasons, logging into sites like Gmail and Facebook
-using WebDriver is not recommended.
-Aside from being against the usage terms for these sites
-(where you risk having the account shut down),
-it is slow and unreliable.</p>
 
-<p>The ideal practice is to use the APIs that email providers offer,
-or in the case of Facebook the developer tools service
-which exposes an API for creating test accounts, friends and so forth.
-Although using an API might seem like a bit of extra hard work,
-you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change
-whereas webpages and HTML locators change often
-and require you to update your test framework.</p>
 
-<p>Logging in to third party sites using WebDriver
-at any point of your test increases the risk
-of your test failing because it makes your test longer.
-A general rule of thumb is that longer tests
-are more fragile and unreliable.</p>
+<h3 id="pageloadstrategy">pageLoadStrategy</h3>
 
-<p>WebDriver implementations that are
-<a href="//w3c.github.io/webdriver/webdriver-spec.html">W3C conformant</a>
-also annotate the <code>navigator</code> object
-with a <code>webdriver</code> property
-so that Denial of Service attacks can be mitigated.</p>
+<p>When navigating to a new page via URL, by default Selenium will wait
+until the page has fully loaded before responding. This works well for
+beginners, but can cause long wait times on pages that load a large
+number of third party resources. Using a non default strategy can make
+test execution faster in cases like this, but can also introduce flakiness
+where elements on the page change position as elements load in and change
+size.</p>
+
+<p>The page load strategy queries the
+<a href="//developer.mozilla.org/en-US/docs/Web/API/Document/readyState">document.readyState</a>
+as described in the table below:</p>
+
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Ready State</th>
+<th>Notes</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>normal</td>
+<td>complete</td>
+<td>Used by default, waits for all resources to download</td>
+</tr>
+
+<tr>
+<td>eager</td>
+<td>interactive</td>
+<td>DOM access is ready, but other resources like images may still be loading</td>
+</tr>
+
+<tr>
+<td>none</td>
+<td>Any</td>
+<td>Does not block WebDriver at all</td>
+</tr>
+</tbody>
+</table>
 
 
 <footer class=" footline" >
@@ -1449,9 +1478,9 @@ so that Denial of Service attacks can be mitigated.</p>
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/worst_practices/gmail_email_and_facebook_logins/">
-      “Gmail, email and Facebook logins”
-    </a> was last updated on: 24 Jul 2019 23:55:37 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/086830db31262283ddc85e225d1967aa6629914a">Adding Grid content to Hugo (#249) (086830d)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/shared_capabilities/">
+      “Shared capabilities”
+    </a> was last updated on: 25 Jul 2019 00:00:35 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/335d89733233458c6a464644ce39c833e80135ac">Adding Driver idiosyncrasies content to Hugo (335d897)</a>
 </h5>
         
         </div> 
@@ -2143,7 +2172,6 @@ so that Denial of Service attacks can be mitigated.</p>
             
                 
                     
-                    
                 
                 
 
@@ -2156,9 +2184,6 @@ so that Denial of Service attacks can be mitigated.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2208,7 +2233,6 @@ so that Denial of Service attacks can be mitigated.</p>
             
                 
                     
-                    
                 
                 
 
@@ -2224,9 +2248,6 @@ so that Denial of Service attacks can be mitigated.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2343,6 +2364,7 @@ so that Denial of Service attacks can be mitigated.</p>
             
                 
                     
+                    
                 
                 
 
@@ -2355,6 +2377,7 @@ so that Denial of Service attacks can be mitigated.</p>
             
             
                 
+                    
                     
                 
                 
@@ -2371,6 +2394,9 @@ so that Denial of Service attacks can be mitigated.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2395,10 +2421,10 @@ so that Denial of Service attacks can be mitigated.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/worst_practices/http_response_codes/" title="HTTP response codes"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/" title="Driver idiosyncrasies"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/worst_practices/test_dependency/" title="Test dependency" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/driver_specific_capabilities/" title="Driver specific capabilities" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

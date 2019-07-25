@@ -29,12 +29,17 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/grid/purposes_and_main_functionalities/</loc>
-    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
+    <lastmod>2019-07-24T23:55:37-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/</loc>
     <lastmod>2019-07-22T17:30:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/shared_capabilities/</loc>
+    <lastmod>2019-07-25T00:00:35-05:00</lastmod>
   </url>
   
   <url>
@@ -49,7 +54,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/grid/components_of_a_grid/</loc>
-    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
+    <lastmod>2019-07-24T23:55:37-05:00</lastmod>
   </url>
   
   <url>
@@ -60,6 +65,11 @@
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/driver_requirements/</loc>
     <lastmod>2019-07-20T22:54:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/driver_specific_capabilities/</loc>
+    <lastmod>2019-07-25T00:00:35-05:00</lastmod>
   </url>
   
   <url>
@@ -124,7 +134,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/grid/setting_up_your_own_grid/</loc>
-    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
+    <lastmod>2019-07-24T23:55:37-05:00</lastmod>
   </url>
   
   <url>
@@ -144,7 +154,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/worst_practices/gmail_email_and_facebook_logins/</loc>
-    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
+    <lastmod>2019-07-24T23:55:37-05:00</lastmod>
   </url>
   
   <url>
@@ -204,7 +214,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/</loc>
-    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
+    <lastmod>2019-07-24T23:55:37-05:00</lastmod>
   </url>
   
   <url>
@@ -244,12 +254,17 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/grid/</loc>
-    <lastmod>2019-07-24T23:52:00-05:00</lastmod>
+    <lastmod>2019-07-24T23:55:37-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/webdriver/web_element/</loc>
     <lastmod>2019-07-21T21:17:28-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/driver_idiosyncrasies/</loc>
+    <lastmod>2019-07-25T00:00:35-05:00</lastmod>
   </url>
   
   <url>
