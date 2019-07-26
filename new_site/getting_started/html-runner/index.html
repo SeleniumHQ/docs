@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://seleniumhq.github.io/docs/new_site/images/favicon.png" type="image/png">
 
-    <title>Mock external services :: Selenium Documentation</title>
+    <title>HTML runner :: Selenium Documentation</title>
 
     
     <link href="https://seleniumhq.github.io/docs/new_site/css/nucleus.css?1564119703" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/guidelines_and_recommendations/mock_external_services/">
+  <body class="" data-url="/getting_started/html-runner/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -93,7 +93,7 @@
   
     
     <li data-nav-id="/getting_started/" title="Getting Started" class="dd-item 
-        
+        parent
         
         
         ">
@@ -138,7 +138,7 @@
  
   
     
-      <li data-nav-id="/getting_started/html-runner/" title="HTML runner" class="dd-item ">
+      <li data-nav-id="/getting_started/html-runner/" title="HTML runner" class="dd-item active">
         <a href="https://seleniumhq.github.io/docs/new_site/getting_started/html-runner/">
         HTML runner
         <i class="fas fa-check read-icon"></i>
@@ -791,7 +791,7 @@
   
     
     <li data-nav-id="/guidelines_and_recommendations/" title="Guidelines and recommendations" class="dd-item 
-        parent
+        
         
         
         ">
@@ -874,7 +874,7 @@
  
   
     
-      <li data-nav-id="/guidelines_and_recommendations/mock_external_services/" title="Mock external services" class="dd-item active">
+      <li data-nav-id="/guidelines_and_recommendations/mock_external_services/" title="Mock external services" class="dd-item ">
         <a href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/mock_external_services/">
         Mock external services
         <i class="fas fa-check read-icon"></i>
@@ -1568,7 +1568,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/guidelines_and_recommendations/mock_external_services.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/getting_started/html-runner.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1599,7 +1599,7 @@
             
           
           
-            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/'>Guidelines and recommendations</a> > Mock external services
+            <a href='https://seleniumhq.github.io/docs/new_site/'>Selenium Documentation</a> > <a href='https://seleniumhq.github.io/docs/new_site/getting_started/'>Getting Started</a> > HTML runner
           
          
           
@@ -1612,7 +1612,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#common-information">Common information</a></li>
+<li><a href="#example-linux-environment">Example Linux environment</a></li>
+<li><a href="#how-to-run-selenium-html-runner-headless">How to run selenium-html-runner headless</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1628,7 +1637,7 @@
           
             <h1>
               
-              Mock external services
+              HTML runner
             </h1>
           
 
@@ -1636,18 +1645,90 @@
 
 
 
-<p>Eliminating the dependencies on external services will greatly improve
-the speed and stability of your tests.</p>
 
+
+<p><em>Selenium HTML-runner</em> allows you to run Test Suites from a
+command line. Test Suites are HTML exports from Selenium IDE or
+campatible tools.</p>
+
+<h2 id="common-information">Common information</h2>
+
+<ul>
+<li>Combination of releases of geckodriver / firefox /
+selenium-html-runner matters. There might be a software
+compatibility matrix somewhere.</li>
+<li>selenium-html-runner runs only Test Suite (not Test Case - what
+is for example an export from Monitis Transaction Monitor). Be
+sure you comply with this.</li>
+<li>For Linux users with no DISPLAY - you need to start html-runner
+with Virtual display (search for xvfb)</li>
+</ul>
+
+<h2 id="example-linux-environment">Example Linux environment</h2>
+
+<p>Install / download following software packages:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#719e07">[</span>user@localhost ~<span style="color:#719e07">]</span>$ cat /etc/redhat-release
+CentOS Linux release <span style="color:#2aa198">7</span>.4.1708 <span style="color:#719e07">(</span>Core<span style="color:#719e07">)</span>
+
+<span style="color:#719e07">[</span>user@localhost ~<span style="color:#719e07">]</span>$ rpm -qa | egrep -i <span style="color:#2aa198">&#34;xvfb|java-1.8|firefox&#34;</span>
+xorg-x11-server-Xvfb-1.19.3-11.el7.x86_64
+firefox-52.4.0-1.el7.centos.x86_64
+java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64
+java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64</code></pre></div>
+<p>Test Suite example:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[user@localhost ~]$ cat testsuite.html
+<span style="color:#719e07">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#719e07">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
+&lt;<span style="color:#268bd2">html</span> xmlns<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;http://www.w3.org/1999/xhtml&#34;</span> xml:lang<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;en&#34;</span> lang<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+  &lt;<span style="color:#268bd2">meta</span> content<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/html; charset=UTF-8&#34;</span> http-equiv<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content-type&#34;</span> /&gt;
+  &lt;<span style="color:#268bd2">title</span>&gt;Test Suite&lt;/<span style="color:#268bd2">title</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+&lt;<span style="color:#268bd2">table</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;suiteTable&#34;</span> cellpadding<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;1&#34;</span> cellspacing<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;1&#34;</span> border<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;1&#34;</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;selenium&#34;</span>&gt;&lt;<span style="color:#268bd2">tbody</span>&gt;
+&lt;<span style="color:#268bd2">tr</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">b</span>&gt;Test Suite&lt;/<span style="color:#268bd2">b</span>&gt;&lt;/<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">tr</span>&gt;
+&lt;<span style="color:#268bd2">tr</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;YOUR-TEST-SCENARIO.html&#34;</span>&gt;YOUR-TEST-SCENARIO&lt;/<span style="color:#268bd2">a</span>&gt;&lt;/<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">tr</span>&gt;
+&lt;/<span style="color:#268bd2">tbody</span>&gt;&lt;/<span style="color:#268bd2">table</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h2 id="how-to-run-selenium-html-runner-headless">How to run selenium-html-runner headless</h2>
+
+<p>Now, the most important part, an example of how to run the
+selenium-html-runner! Your experience might vary depending on software
+combinations - geckodriver/FF/html-runner releases.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">xvfb-run java -Dwebdriver.gecko.driver<span style="color:#719e07">=</span>/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite <span style="color:#2aa198">&#34;firefox&#34;</span> <span style="color:#2aa198">&#34;https://YOUR-BASE-URL&#34;</span> <span style="color:#2aa198">&#34;</span><span style="color:#719e07">$(</span><span style="color:#b58900">pwd</span><span style="color:#719e07">)</span><span style="color:#2aa198">/testsuite.html&#34;</span> <span style="color:#2aa198">&#34;results.html&#34;</span> ; grep result: -A1 results.html/firefox.results.html</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#719e07">[</span>user@localhost ~<span style="color:#719e07">]</span>$ xvfb-run java -Dwebdriver.gecko.driver<span style="color:#719e07">=</span>/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite <span style="color:#2aa198">&#34;*firefox&#34;</span> <span style="color:#2aa198">&#34;https://YOUR-BASE-URL&#34;</span> <span style="color:#2aa198">&#34;</span><span style="color:#719e07">$(</span><span style="color:#b58900">pwd</span><span style="color:#719e07">)</span><span style="color:#2aa198">/testsuite.html&#34;</span> <span style="color:#2aa198">&#34;results.html&#34;</span> ; grep result: -A1 results.html/firefox.results.html
+Multi-window mode is longer used as an option and will be ignored.
+<span style="color:#2aa198">1510061109691</span>   geckodriver     INFO    geckodriver <span style="color:#2aa198">0</span>.18.0
+<span style="color:#2aa198">1510061109708</span>   geckodriver     INFO    Listening on <span style="color:#2aa198">127</span>.0.0.1:2885
+<span style="color:#2aa198">1510061110162</span>   geckodriver::marionette INFO    Starting browser /usr/bin/firefox with args <span style="color:#719e07">[</span><span style="color:#2aa198">&#34;-marionette&#34;</span><span style="color:#719e07">]</span>
+<span style="color:#2aa198">1510061111084</span>   Marionette      INFO    Listening on port <span style="color:#2aa198">43229</span>
+<span style="color:#2aa198">1510061111187</span>   Marionette      WARN    TLS certificate errors will be ignored <span style="color:#719e07">for</span> this session
+Nov <span style="color:#2aa198">07</span>, <span style="color:#2aa198">2017</span> <span style="color:#2aa198">1</span>:25:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.714:INFO::main: Logging initialized @3915ms to org.seleniumhq.jetty9.util.log.StdErrLog
+<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.804:INFO:osjs.Server:main: jetty-9.4.z-SNAPSHOT
+<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.822:INFO:osjsh.ContextHandler:main: Started o.s.j.s.h.ContextHandler@87a85e1<span style="color:#719e07">{</span>/tests,null,AVAILABLE<span style="color:#719e07">}</span>
+<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.843:INFO:osjs.AbstractConnector:main: Started ServerConnector@52102734<span style="color:#719e07">{</span>HTTP/1.1,<span style="color:#719e07">[</span>http/1.1<span style="color:#719e07">]}{</span><span style="color:#2aa198">0</span>.0.0.0:31892<span style="color:#719e07">}</span>
+<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.843:INFO:osjs.Server:main: Started @4045ms
+Nov <span style="color:#2aa198">07</span>, <span style="color:#2aa198">2017</span> <span style="color:#2aa198">1</span>:25:13 PM org.openqa.selenium.server.htmlrunner.CoreTestCase run
+INFO: |open | /auth_mellon.php |  |
+Nov <span style="color:#2aa198">07</span>, <span style="color:#2aa198">2017</span> <span style="color:#2aa198">1</span>:25:14 PM org.openqa.selenium.server.htmlrunner.CoreTestCase run
+INFO: |waitForPageToLoad | <span style="color:#2aa198">3000</span> |  |
+.
+.
+.etc
+
+&lt;td&gt;result:&lt;/td&gt;
+&lt;td&gt;PASS&lt;/td&gt;</code></pre></div>
 
 <footer class=" footline" >
 	
 </footer>
 
 <h5 class="meta-data">
-    <a href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/mock_external_services/">
-      “Mock external services”
-    </a> was last updated on: 23 Jul 2019 23:20:13 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/e3de8f8c70e64b9c468a0903eb81cc85e29b2799">Adding Guidelines and Recommendations section to Hugo (#247) (e3de8f8)</a>
+    <a href="https://seleniumhq.github.io/docs/new_site/getting_started/html-runner/">
+      “HTML runner”
+    </a> was last updated on: 26 Jul 2019 00:40:23 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/8eb0650892a79386ed49adbb4c2c1623d4369b45">Fixing a few broken links (8eb0650)</a>
 </h5>
         
         </div> 
@@ -1680,8 +1761,6 @@ the speed and stability of your tests.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1695,6 +1774,9 @@ the speed and stability of your tests.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1712,85 +1794,6 @@ the speed and stability of your tests.</p>
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1811,69 +1814,8 @@ the speed and stability of your tests.</p>
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1994,6 +1936,118 @@ the speed and stability of your tests.</p>
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -2139,6 +2193,86 @@ the speed and stability of your tests.</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2187,42 +2321,6 @@ the speed and stability of your tests.</p>
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -2259,26 +2357,6 @@ the speed and stability of your tests.</p>
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -2751,10 +2829,10 @@ the speed and stability of your tests.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/generating_application_state/" title="Generating application state"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://seleniumhq.github.io/docs/new_site/getting_started/quick/" title="Quick tour"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/guidelines_and_recommendations/improved_reporting/" title="Improved reporting" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://seleniumhq.github.io/docs/new_site/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
