@@ -19,12 +19,12 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/front_matter/copyright_and_attributions/</loc>
-    <lastmod>2019-07-25T01:23:58-05:00</lastmod>
+    <lastmod>2019-07-25T01:26:29-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/getting_started/</loc>
-    <lastmod>2019-07-20T22:46:27-05:00</lastmod>
+    <lastmod>2019-07-26T00:40:23-05:00</lastmod>
   </url>
   
   <url>
@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started/quick/</loc>
+    <lastmod>2019-07-26T00:40:23-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/remote_webdriver/remote_webdriver_server/</loc>
     <lastmod>2019-07-22T17:30:42-05:00</lastmod>
   </url>
@@ -54,7 +59,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/the_selenium_project_and_tools/</loc>
-    <lastmod>2019-07-15T23:43:32-05:00</lastmod>
+    <lastmod>2019-07-26T00:40:23-05:00</lastmod>
   </url>
   
   <url>
@@ -88,8 +93,13 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/new_site/getting_started/html-runner/</loc>
+    <lastmod>2019-07-26T00:40:23-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_webdriver_binaries/</loc>
-    <lastmod>2019-07-17T21:44:55-05:00</lastmod>
+    <lastmod>2019-07-26T00:40:23-05:00</lastmod>
   </url>
   
   <url>
@@ -99,7 +109,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/introduction/on_test_automation/</loc>
-    <lastmod>2019-07-15T23:43:32-05:00</lastmod>
+    <lastmod>2019-07-26T00:40:23-05:00</lastmod>
   </url>
   
   <url>
@@ -114,7 +124,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/front_matter/typographical_conventions/</loc>
-    <lastmod>2019-07-25T01:23:58-05:00</lastmod>
+    <lastmod>2019-07-25T01:26:29-05:00</lastmod>
   </url>
   
   <url>
@@ -139,7 +149,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/selenium_installation/installing_standalone_server/</loc>
-    <lastmod>2019-07-17T21:44:55-05:00</lastmod>
+    <lastmod>2019-07-26T00:40:23-05:00</lastmod>
   </url>
   
   <url>
@@ -319,7 +329,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/new_site/front_matter/</loc>
-    <lastmod>2019-07-25T01:23:58-05:00</lastmod>
+    <lastmod>2019-07-25T01:26:29-05:00</lastmod>
   </url>
   
   <url>
@@ -328,13 +338,8 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/new_site/getting_started/quick/</loc>
-    <lastmod>2019-07-15T23:43:32-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://seleniumhq.github.io/docs/new_site/</loc>
-    <lastmod>2019-07-20T22:46:27-05:00</lastmod>
+    <lastmod>2019-07-26T00:40:23-05:00</lastmod>
   </url>
   
   <url>
