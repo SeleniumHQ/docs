@@ -10,13 +10,13 @@ deploy:
     script: chmod +x $TRAVIS_BUILD_DIR/deploy.sh && $TRAVIS_BUILD_DIR/deploy.sh
     skip_cleanup: true
     on:
-      all_branches: true
-# notifications:
-#   irc:
-#     channels:
-#       - "chat.freenode.net#selenium"
-#     on_success: change
-#     on_failure: always
-#     template:
-#       - "%{repository} (%{commit}): %{message}"
-#       - "Build details: %{build_url}"
+      branch: gh-pages
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#selenium"
+    on_success: change
+    on_failure: always
+    template:
+      - "%{repository} (%{commit}): %{message}"
+      - "Build details: %{build_url}"

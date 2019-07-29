@@ -17,7 +17,5 @@ fi
 mv docs_source_files/public site
 
 git add .
-git commit -m "Publishing site"
-git --no-pager branch
-# git push
-# git push origin gh-pages
+git commit -m "Publishing site on `date`, commit ${TRAVIS_COMMIT} and job ${TRAVIS_JOB_NUMBER}" || true
+git push --force origin HEAD:gh-pages
