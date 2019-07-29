@@ -15,7 +15,7 @@ deploy:
     skip_cleanup: true
     on:
       branch: gh-pages
-      condition: sender != "selenium-ci"
+      condition: sender != selenium-ci
 notifications:
   irc:
     channels:
