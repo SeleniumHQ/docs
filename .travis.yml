@@ -1,8 +1,13 @@
-language: c
-script: make test
-branches:
-  only:
-    - gh-pages
+---
+install:
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.56.0/hugo_0.56.0_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.56.0_Linux-64bit.deb
+script:
+  - cd docs_source_files && hugo
+deploy:
+  - provider: script
+    script: ./deploy.sh
+    skip_cleanup: true
 notifications:
   irc:
     channels:
@@ -12,4 +17,3 @@ notifications:
     template:
       - "%{repository} (%{commit}): %{message}"
       - "Build details: %{build_url}"
-sudo: false
