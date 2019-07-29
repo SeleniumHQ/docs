@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.56.0" />
     <meta name="description" content="Selenium Documentation">
 
 
@@ -12,20 +12,20 @@
     <title>JavaScript alerts, prompts and confirmations :: Selenium Documentation</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1564197627" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1564197627" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1564197627" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1564197627" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1564197627" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1564197627" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1564197627" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1564197627" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1564197627" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1564365242" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1564365242" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1564365242" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1564365242" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1564365242" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1564365242" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1564365242" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1564365242" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1564365242" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1564197627" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1564365242" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1564197627"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1564365242"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1564197627"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1564197627"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1564365242"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1564365242"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1564197627"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1564365242"></script>
 
     
   </div>
@@ -1699,16 +1699,16 @@ alerts.</p>
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>linkText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;See an example alert&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).click();
 
 <span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
-</span><span style="color:#586e75"></span>Alert alert <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>alertIsPresent<span style="color:#719e07">());</span>
+</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> wait.until(ExpectedConditions.alertIsPresent());
 
 <span style="color:#586e75">//Store the alert text in a variable
-</span><span style="color:#586e75"></span>String text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>getText<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>String <span style="color:#268bd2">text</span> <span style="color:#719e07">=</span> alert.getText();
 
 <span style="color:#586e75">//Press the OK button
-</span><span style="color:#586e75"></span>alert<span style="color:#719e07">.</span>accept<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>alert.accept();
   </code></pre></div>
 </section>
   
@@ -1813,19 +1813,19 @@ a sample confirm</a>.</p>
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>linkText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;See a sample confirm&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).click();
 
 <span style="color:#586e75">//Wait for the alert to be displayed
-</span><span style="color:#586e75"></span>wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>alertIsPresent<span style="color:#719e07">());</span>
+</span><span style="color:#586e75"></span>wait.until(ExpectedConditions.alertIsPresent());
 
 <span style="color:#586e75">//Store the alert in a variable
-</span><span style="color:#586e75"></span>Alert alert <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>alert<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> driver.switchTo().alert();
 
 <span style="color:#586e75">//Store the alert in a variable for reuse
-</span><span style="color:#586e75"></span>String text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>getText<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>String <span style="color:#268bd2">text</span> <span style="color:#719e07">=</span> alert.getText();
 
 <span style="color:#586e75">//Press the Cancel button
-</span><span style="color:#586e75"></span>alert<span style="color:#719e07">.</span>dismiss<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>alert.dismiss();
   </code></pre></div>
 </section>
   
@@ -1937,16 +1937,16 @@ See a sample prompt</a>.</p>
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>linkText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;See a sample prompt&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample prompt&#34;</span>)).click();
 
 <span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
-</span><span style="color:#586e75"></span>Alert alert <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>alertIsPresent<span style="color:#719e07">());</span>
+</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> wait.until(ExpectedConditions.alertIsPresent());
 
 <span style="color:#586e75">//Type your message
-</span><span style="color:#586e75"></span>alert<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Selenium&#34;</span><span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>alert.sendKeys(<span style="color:#2aa198">&#34;Selenium&#34;</span>);
 
 <span style="color:#586e75">//Press the OK button
-</span><span style="color:#586e75"></span>alert<span style="color:#719e07">.</span>accept<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>alert.accept();
   </code></pre></div>
 </section>
   
@@ -3134,20 +3134,20 @@ alert<span style="color:#719e07">.</span>accept()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1564197627"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1564197627"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1564197627"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1564197627"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1564197627"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1564197627"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1564197627"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1564365242"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1564365242"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1564365242"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1564365242"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1564365242"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1564365242"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1564365242"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1564197627"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1564197627"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1564197627"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1564365242"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1564365242"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1564365242"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1564197627" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1564197627"></script>
+    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1564365242" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1564365242"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
