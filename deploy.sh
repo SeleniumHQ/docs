@@ -18,4 +18,6 @@ mv docs_source_files/public site
 
 git add .
 git commit -m "Publishing site"
-git push origin gh-pages
+git --no-pager branch
+# git push
+# git push origin gh-pages
