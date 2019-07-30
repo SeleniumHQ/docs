@@ -1,8 +1,20 @@
-language: c
-script: make test
+---
+install:
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.56.0/hugo_0.56.0_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.56.0_Linux-64bit.deb
+  - sudo rm hugo_0.56.0_Linux-64bit.deb
 branches:
   only:
     - gh-pages
+    - /.*/  
+script:
+  - cd docs_source_files && hugo && cd ..
+deploy:
+  - provider: script
+    script: chmod +x $TRAVIS_BUILD_DIR/deploy.sh && $TRAVIS_BUILD_DIR/deploy.sh
+    skip_cleanup: true
+    on:
+      branch: gh-pages
 notifications:
   irc:
     channels:
@@ -12,4 +24,3 @@ notifications:
     template:
       - "%{repository} (%{commit}): %{message}"
       - "Build details: %{build_url}"
-sudo: false
