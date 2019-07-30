@@ -8,9 +8,9 @@ feature matches its requirements.
 This generally involves the customer's feedback or specification.
 
 For web applications, the automation of this testing can be done
-directly with Selenium by simulating userexpected behavior.
-This simulation could be done byrecord/playback or through the
-different supported languages as explained inthis documentation.
+directly with Selenium by simulating user expected behavior.
+This simulation could be done by record/playback or through the
+different supported languages as explained in this documentation.
 Note: Acceptance testing is a subtype of **_functional testing_**,
 which some people might also refer to.
             
@@ -19,9 +19,14 @@ This type of test is done in order to determine if a product's
 feature functions properly, without issues.
              
 This generally include: the tests work without errors 
-(404, exceptions...), in an usable way (right redirections),   in an accessible way and matching itsspecifications            (see **_acceptance testing_** above).
+(404, exceptions...), in an usable way (right redirections),   
+in an accessible way and matching its specifications            
+(see **_acceptance testing_** above).
 
-For web applications, the automation of thistesting can be     done directly with Selenium by simulatingexpected returns.     This simulation could be done byrecord/playback or through     the different supported languages as explainedin this documentation.
+For web applications, the automation of this testing can be
+done directly with Selenium by simulating expected returns.     
+This simulation could be done by record/playback or through     
+the different supported languages as explainedin this documentation.
 
 ### Performance testing
 As its name indicates, performance tests are done in order
@@ -58,7 +63,8 @@ as this is generally measured per system and not per function/feature.
 ### Regression testing
 This testing is generally done after a change, fix or feature addition. 
 
-In order to ensure that the change has not broken any of the existing functionality, some already executed tests are executed again. 
+In order to ensure that the change has not broken any of the existing 
+functionality, some already executed tests are executed again. 
             
 The set of re-executed test can be full or partial
 and can include several different types, depending
