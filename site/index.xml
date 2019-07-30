@@ -312,7 +312,8 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/introduction/types_of_testing/</guid>
-      <description>TODO: Add paragraphs about acceptance testing, performance testing, load testing, regression testing, test driven development, and/or behavior-driven development (JBehave, Capybara, &amp;amp; Robot Framework), with how they relate to Selenium.</description>
+      <description>Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
+For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
     </item>
     
     <item>
