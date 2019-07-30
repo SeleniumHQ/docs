@@ -142,7 +142,25 @@ el = driver.find_element_by_tag_name("p")
 assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Using "OpenQA.Selenium" for IWebDriver, IWebElement
+// Using "OpenQA.Selenium.Support.UI" for WebDriverWait
+
+// Initial web driver
+IWebDriver webDriver = new OpenQA.Selenium.Firefox.FirefoxDriver();
+
+// Go to url https://google.com
+webDriver.Navigate().GoToUrl("https://www.google.com/");
+
+// Select search box and send keyword "cat" then send key enter
+webDriver.FindElement(By.Name("q")).SendKeys("cats" + Keys.Enter);
+
+// Initialize and wait util element(link) became clickable - timeout in 10 seconds
+WebDriverWait webDriverWait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
+IWebElement firstSearchResult = webDriverWait.Until(wDriver => wDriver.FindElement(By.XPath("//a/h3")));
+
+// Print first search result
+Console.WriteLine(firstSearchResult.Text);
+
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
