@@ -17,7 +17,10 @@ options.addPreference("network.proxy.type", 0);
 driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR
+from selenium.webdriver.firefox.options import Options
+options = Options()
+options.add_argument("--headless")
+driver = webdriver.Firefox(options=options)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
@@ -43,7 +46,12 @@ options.setProfile(profile);
 driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+options=Options()
+firefox_profile = FirefoxProfile(profile)
+options.profile(firefox_profile)
+driver = webdriver.Firefox(options=options)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
