@@ -3,7 +3,7 @@ title: "Copyright and attributions"
 weight: 1
 ---
 
-## **The Selenium Documentation**
+## **The Documentation of Selenium**
 
 Copyright {{< copyright >}}, Software Freedom Conservancy.
 
