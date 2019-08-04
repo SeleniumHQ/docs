@@ -1,6 +1,6 @@
 ---
-title: "Purposes and main functionalities"
-menuTitle: "Purposes and functionalities"
+title: "Propósitos y funcionalidades principales"
+menuTitle: "Propósitos y funcionalidades"
 weight: 1
 ---
 

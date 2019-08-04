@@ -1,5 +1,5 @@
 ---
-title: "Shared capabilities"
+title: "Capacidades compartidas"
 weight: 1
 ---
 

@@ -3,8 +3,6 @@ title: "Installing WebDriver binaries"
 weight: 2
 ---
 
-## Installing WebDriver binaries
-
 To execute your project and control browser you need to have
 browser-specific WebDriver binaries installed.
 

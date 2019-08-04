@@ -1,5 +1,5 @@
 ---
-title: "Setting up your own Grid"
+title: "Configurando tu propio Grid"
 weight: 3
 ---
 

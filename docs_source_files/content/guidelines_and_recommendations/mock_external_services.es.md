@@ -1,5 +1,5 @@
 ---
-title: "Mock external services"
+title: "Mock de servicios externos"
 weight: 4
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Browser manipulation"
+title: "Manipulación de Navegadores"
 weight: 3
 ---
 

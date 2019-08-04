@@ -1,5 +1,5 @@
 ---
-title: "Driver specific capabilities"
+title: "Capacidades especificas de los controladores"
 weight: 2
 ---
 

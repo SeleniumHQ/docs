@@ -1,5 +1,5 @@
 ---
-title: "JavaScript alerts, prompts and confirmations"
+title: "Alertas, avisos y confirmaciones de JavaScript"
 weight: 6
 ---
 

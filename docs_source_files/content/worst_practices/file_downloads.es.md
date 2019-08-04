@@ -1,5 +1,5 @@
 ---
-title: "File downloads"
+title: "Descarga de archivos"
 weight: 2
 ---
 

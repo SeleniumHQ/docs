@@ -1,5 +1,5 @@
 ---
-title: "Performance testing"
+title: "Pruebas de desempeño"
 weight: 6
 ---
 

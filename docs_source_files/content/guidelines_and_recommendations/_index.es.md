@@ -1,6 +1,6 @@
 ---
-title: "Guidelines and recommendations"
-menuTitle: "Guidelines"
+title: "Guías y recomendaciones"
+menuTitle: "Guías y recomendaciones"
 chapter: true
 weight: 7
 ---
@@ -11,7 +11,7 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Guidelines and recommendations
+# Guías y recomendaciones
 
 A note on "Best Practices": We've intentionally avoided the phrase "Best
 Practices" in this documentation. No one approach works for all situations.

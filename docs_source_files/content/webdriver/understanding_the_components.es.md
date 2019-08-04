@@ -1,7 +1,13 @@
 ---
-title: "Understanding the componets"
+title: "Entendiendo los componentes"
 weight: 1
 ---
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
 Building a test suite using WebDriver will require you to understand and 
 effectively use a number of different components. As with everything in 

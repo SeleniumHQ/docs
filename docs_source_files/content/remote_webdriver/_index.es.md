@@ -1,5 +1,5 @@
 ---
-title: "Remote WebDriver"
+title: "WebDriver remoto"
 chapter: true
 weight: 6
 ---
@@ -10,7 +10,7 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Remote WebDriver
+# WebDriver remoto
 
 You can use WebDriver remotely the same way you would use it
 locally. The primary difference is that a remote WebDriver needs to be

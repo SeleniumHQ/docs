@@ -1,5 +1,5 @@
 ---
-title: "Support classes"
+title: "Clases de apoyo"
 weight: 5
 ---
 

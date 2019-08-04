@@ -1,5 +1,5 @@
 ---
-title: "Working with colours"
+title: "Trabajando con colores"
 weight: 2
 ---
 

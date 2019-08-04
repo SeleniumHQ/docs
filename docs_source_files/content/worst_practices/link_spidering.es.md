@@ -1,5 +1,5 @@
 ---
-title: "Link spidering"
+title: "Rastreo de enlaces"
 weight: 7
 ---
 

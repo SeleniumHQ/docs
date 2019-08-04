@@ -1,5 +1,5 @@
 ---
-title: "Quick tour"
+title: "Tour rápido"
 weight: 1
 ---
 

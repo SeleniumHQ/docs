@@ -1,5 +1,5 @@
 ---
-title: "Working with select elements"
+title: "Trabajando con elementos select"
 weight: 3
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Browser navigation"
+title: "Navegación"
 weight: 1
 ---
 

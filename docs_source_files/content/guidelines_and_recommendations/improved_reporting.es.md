@@ -1,5 +1,5 @@
 ---
-title: "Improved reporting"
+title: "Mejores reportes"
 weight: 5
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Generating application state"
+title: "Generar el estado de la aplicación"
 weight: 3
 ---
 

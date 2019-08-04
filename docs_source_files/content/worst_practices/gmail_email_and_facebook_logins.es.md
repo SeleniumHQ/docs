@@ -1,6 +1,6 @@
 ---
-title: "Gmail, email and Facebook logins"
-menuTitle: "Gmail, email and Facebook"
+title: "Gmail, email y Facebook logins"
+menuTitle: "Gmail, email y Facebook"
 weight: 4
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Locating elements"
+title: "Localizando elementos"
 weight: 3
 ---
 

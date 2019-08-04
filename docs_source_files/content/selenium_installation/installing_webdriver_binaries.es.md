@@ -1,5 +1,5 @@
 ---
-title: "Installing WebDriver binaries"
+title: "Instalación de las librerías WebDriver"
 weight: 2
 ---
 
@@ -8,8 +8,6 @@ weight: 2
 English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
-
-## Installing WebDriver binaries
 
 To execute your project and control browser you need to have
 browser-specific WebDriver binaries installed.

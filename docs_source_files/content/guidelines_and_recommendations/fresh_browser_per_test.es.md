@@ -1,5 +1,5 @@
 ---
-title: "Fresh browser per test"
+title: "Nueva instancia del navegador por prueba"
 weight: 9
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Mouse and keyboard actions in detail"
+title: "Acciones en detalle del mouse y teclado"
 weight: 4
 ---
 

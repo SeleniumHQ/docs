@@ -1,5 +1,5 @@
 ---
-title: "Worst practices"
+title: "Peores prácticas"
 chapter: true
 weight: 8
 ---
@@ -10,4 +10,4 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Worst practices
+# Peores prácticas

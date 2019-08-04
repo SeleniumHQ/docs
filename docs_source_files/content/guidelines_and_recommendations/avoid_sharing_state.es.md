@@ -1,5 +1,5 @@
 ---
-title: "Avoid sharing state"
+title: "Evitar compartir estados"
 weight: 6
 ---
 

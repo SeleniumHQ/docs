@@ -1,5 +1,5 @@
 ---
-title: "Test dependency"
+title: "Dependencia entre pruebas"
 weight: 5
 ---
 

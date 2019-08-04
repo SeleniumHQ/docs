@@ -1,5 +1,5 @@
 ---
-title: "Driver idiosyncrasies"
+title: "Carácter de los controladores"
 chapter: true
 weight: 10
 ---
@@ -11,4 +11,4 @@ it by sending us pull requests!
 {{% /notice %}}
 
 
-# Driver idiosyncrasies
+# Carácter de los controladores

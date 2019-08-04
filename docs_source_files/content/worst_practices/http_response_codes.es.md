@@ -1,5 +1,5 @@
 ---
-title: "HTTP response codes"
+title: "Códigos de respuesta HTTP"
 weight: 3
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Performing actions on the AUT*"
+title: "Ejecutando acciones en la AUT*"
 weight: 4
 ---
 
@@ -89,4 +89,4 @@ await driver.findElement(By.css("input[type='submit']")).click();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-***AUT**: Application under test
+***AUT**: Aplicación bajo pruebas (Application under test en inglés)

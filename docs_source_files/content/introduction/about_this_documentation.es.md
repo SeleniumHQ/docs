@@ -1,5 +1,5 @@
 ---
-title: "About this documentation"
+title: "Acerca de esta documentación"
 weight: 4
 ---
 

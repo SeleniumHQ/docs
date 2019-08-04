@@ -1,5 +1,5 @@
 ---
-title: "Browsers"
+title: "Navegadores"
 weight: 1
 ---
 

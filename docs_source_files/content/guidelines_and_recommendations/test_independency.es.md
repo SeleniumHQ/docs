@@ -1,5 +1,5 @@
 ---
-title: "Test independency"
+title: "Independencia en las pruebas"
 weight: 7
 ---
 

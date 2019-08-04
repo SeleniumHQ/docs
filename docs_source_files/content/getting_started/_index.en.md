@@ -1,10 +1,10 @@
 ---
-title: "Getting Started"
+title: "Getting started"
 chapter: true
 weight: 1
 ---
 
-# Getting Started
+# Getting started
 
 If you are new to Selenium,
 we have a few resources that can help you

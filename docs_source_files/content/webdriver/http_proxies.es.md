@@ -1,5 +1,5 @@
 ---
-title: "Http proxies"
+title: "Proxies Http"
 weight: 7
 ---
 

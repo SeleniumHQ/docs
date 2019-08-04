@@ -1,5 +1,5 @@
 ---
-title: "Installing Standalone server"
+title: "Instalación del servidor Standalone"
 weight: 3
 ---
 
@@ -8,8 +8,6 @@ weight: 3
 English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
-
-## Installing Standalone server
 
 If you plan to use [Grid]({{< ref "/grid/_index.md" >}}) then you should download the
 [selenium-server-standalone JAR](//www.seleniumhq.org/download/) file.

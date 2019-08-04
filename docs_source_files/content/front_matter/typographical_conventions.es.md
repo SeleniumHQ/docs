@@ -1,5 +1,5 @@
 ---
-title: "Typographical conventions"
+title: "Convenciones tipográficas"
 weight: 2
 ---
 

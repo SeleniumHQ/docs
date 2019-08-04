@@ -1,5 +1,5 @@
 ---
-title: "Keyboard"
+title: "Teclado"
 weight: 10
 ---
 

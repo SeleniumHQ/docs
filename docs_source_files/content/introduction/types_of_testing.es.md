@@ -1,5 +1,5 @@
 ---
-title: "Types of testing"
+title: "Tipos de pruebas"
 weight: 3
 ---
 

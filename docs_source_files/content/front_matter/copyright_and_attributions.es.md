@@ -1,5 +1,6 @@
 ---
-title: "Copyright and attributions"
+title: "Derechos de autor y atribuciones"
+menuTitle: "Derechos de autor"
 weight: 1
 ---
 
@@ -9,7 +10,7 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-## **The Documentation of Documentation**
+## **The Documentation of Selenium**
 
 Copyright {{< copyright >}}, Software Freedom Conservancy.
 

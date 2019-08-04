@@ -1,5 +1,5 @@
 ---
-title: "Getting Started"
+title: "Primeros pasos"
 chapter: true
 weight: 1
 ---
@@ -10,7 +10,7 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Getting Started
+# Primeros pasos
 
 If you are new to Selenium,
 we have a few resources that can help you

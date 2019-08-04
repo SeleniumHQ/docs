@@ -1,5 +1,5 @@
 ---
-title: "Driver requirements"
+title: "Requerimientos de los controladores"
 weight: 2
 ---
 

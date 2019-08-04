@@ -1,5 +1,5 @@
 ---
-title: "Getting started with WebDriver"
+title: "Primeros pasos con WebDriver"
 chapter: true
 weight: 4
 ---
@@ -10,7 +10,7 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Getting started with WebDriver
+# Primeros pasos con WebDriver
 
 Selenium supports automation of all the major browsers in the market
 through the use of _WebDriver_.

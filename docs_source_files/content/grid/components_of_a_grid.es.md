@@ -1,5 +1,5 @@
 ---
-title: "Components of a Grid"
+title: "Componentes de un Grid"
 weight: 2
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Support packages"
+title: "Paquetes de soporte"
 chapter: true
 weight: 11
 ---
@@ -10,5 +10,5 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Support packages
+# Paquetes de soporte
 

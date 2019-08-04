@@ -1,5 +1,5 @@
 ---
-title: "On test automation"
+title: "Sobre automatización de pruebas"
 weight: 2
 ---
 

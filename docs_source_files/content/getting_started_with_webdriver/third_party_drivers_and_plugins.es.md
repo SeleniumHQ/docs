@@ -1,5 +1,5 @@
 ---
-title: "Third party drivers and plugins"
+title: "Controladores de otros fabricantes y plugins"
 weight: 2
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Page loading strategy"
+title: "Estrategia de carga de página"
 weight: 8
 ---
 
