@@ -8,7 +8,7 @@ het bestaat uit verschillende instrumenten.
 
 ## WebDriver
 
-_[WebDriver]({{< ref "/webdriver/_index.md" >}})_ is also known as Selenium 2.
+_[WebDriver]({{< ref "/webdriver/_index.nl.md" >}})_ is also known as Selenium 2.
 If you are beginning with desktop website test automation then you
 are going to be using WebDriver APIs. WebDriver uses browser
 automation APIs provided by browser vendors to control browser and
@@ -51,12 +51,12 @@ WebDriver API, you will never use Selenium IDE.
 
 Soon after development of WebDriver tests, you may face a need of
 running your tests on multiple browser and operating system combinations.
-This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes to the rescue.
+This is where _[Grid]({{< ref "/grid/_index.nl.md" >}})_ comes to the rescue.
 
 
 ## HTML Runner
 
 This tool allows you to run Test Suites from the command
 line. Test Suites are HTML exports from Selenium IDE or compatible
-tools. _[HTML Runner]({{< ref "/getting_started/html-runner.md" >}})_
+tools. _[HTML Runner]({{< ref "/getting_started/html-runner.nl.md" >}})_
 

@@ -124,7 +124,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 {{< / code-tab >}}
 
 
-See the _[Quick Tour]({{< ref "/getting_started/quick.en.md" >}})_ for a full explanation
+See the _[Quick Tour]({{< ref "/getting_started/quick.nl.md" >}})_ for a full explanation
 of what goes on behind the scenes when you run this code.
 You should continue on to the [narrative documentation]({{< ref "/introduction/_index.md" >}})
 to understand how you can [install]({{< ref "/selenium_installation/_index.md" >}}) and
@@ -139,10 +139,10 @@ If you are new to Selenium,
 we have a few resources that can help you
 get up to speed right away.
 
-* [Quick tour]({{< ref "/getting_started/quick.en.md" >}})
-  * [WebDriver]({{< ref "/getting_started/quick.en.md#webdriver" >}})
-  * [Remote Control]({{< ref "/getting_started/quick.en.md#remote-control" >}})
-  * [IDE]({{< ref "/getting_started/quick.en.md#ide" >}})
-  * [Grid]({{< ref "/getting_started/quick.en.md#grid" >}})
-  * [HTML Runner]({{< ref "/getting_started/quick.en.md#html-runner" >}})
+* [Quick tour]({{< ref "/getting_started/quick.nl.md" >}})
+  * [WebDriver]({{< ref "/getting_started/quick.nl.md#webdriver" >}})
+  * [Remote Control]({{< ref "/getting_started/quick.nl.md#remote-control" >}})
+  * [IDE]({{< ref "/getting_started/quick.nl.md#ide" >}})
+  * [Grid]({{< ref "/getting_started/quick.nl.md#grid" >}})
+  * [HTML Runner]({{< ref "/getting_started/quick.nl.md#html-runner" >}})
 
