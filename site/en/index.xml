@@ -540,5 +540,16 @@ Java Python C# Ruby JavaScript WebDriver driver = new FirefoxDriver(); driver.ge
       <description></description>
     </item>
     
+    <item>
+      <title>Contributing to the Selenium Documentation</title>
+      <link>https://seleniumhq.github.io/docs/site/en/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/en/contributing/</guid>
+      <description>Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
+Part of the documentation of Selenium is still served from our www.seleniumhq.org repository. We are however phasing out this documentation which focuses too much on Selenium RC and other antiquated pieces, in favour of this rewrite.
+The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch.</description>
+    </item>
+    
   </channel>
 </rss>
