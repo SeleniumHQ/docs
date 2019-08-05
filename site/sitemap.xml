@@ -9,6 +9,13 @@
 	</sitemap>
 	
 	<sitemap>
+	   	<loc>https://seleniumhq.github.io/docs/site/nl/sitemap.xml</loc>
+		
+	   	<lastmod>2019-08-05T15:33:16+02:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
 	   	<loc>https://seleniumhq.github.io/docs/site/es/sitemap.xml</loc>
 		
 	   	<lastmod>2019-08-04T23:30:26-05:00</lastmod>
