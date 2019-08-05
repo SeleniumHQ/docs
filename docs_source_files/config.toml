@@ -28,3 +28,13 @@ enableGitInfo = true
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
+
+[languages]
+  [languages.en]
+    contentDir = "content/english"
+    languageName = "English"
+    weight = 10
+  [languages.nl]
+    contentDir = "content/dutch"
+    languageName = "Dutch"
+    weight = 20
