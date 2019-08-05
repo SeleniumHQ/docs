@@ -23,7 +23,7 @@ to further an open discussion around automation of the web platform.
 The project organises [an annual conference](//seleniumconf.com/)
 to teach and nurture the community.
 
-At the core of Selenium is _[WebDriver]({{< ref "/webdriver/_index.md" >}})_, 
+At the core of Selenium is _[WebDriver]({{< ref "/webdriver/_index.nl.md" >}})_, 
 an interface to write instruction sets that can be run interchangeably in many 
 browsers. Here is one of the simplest instructions you can make:
 
