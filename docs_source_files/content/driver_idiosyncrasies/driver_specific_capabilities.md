@@ -19,7 +19,7 @@ driver = new RemoteWebDriver(options);
   {{< code-panel language="python" >}}
 from selenium.webdriver.firefox.options import Options
 options = Options()
-options.add_argument("--headless")
+options.headless = True
 driver = webdriver.Firefox(options=options)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -49,9 +49,9 @@ driver = new RemoteWebDriver(options);
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 options=Options()
-firefox_profile = FirefoxProfile(profile)
-options.profile(firefox_profile)
-driver = webdriver.Firefox(options=options)
+firefox_profile = FirefoxProfile()
+firefox_profile.set_preference("javascript.enabled", False)
+options.profile = firefox_profile
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
