@@ -12,20 +12,20 @@
     <title>Locating elements :: Selenium documentatie</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565032636" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565075238" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565032636" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565075238" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565032636"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565075238"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565032636"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565032636"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565075238"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565075238"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/nl";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565032636"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565075238"></script>
 
     
   </div>
@@ -1599,7 +1599,7 @@
                   
                     
                     
-                      <option id="nl" value="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/locating_elements/" selected>Nederlands</option>
+                      <option id="nl" value="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/locating_elements/" selected>Dutch</option>
                     
                   
               
@@ -1733,101 +1733,18 @@
 
 
 
+
+<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!</p>
+</div>
+
+
 <h3 id="locating-one-element">Locating one element</h3>
 
 <p>One of the most fundamental techniques to learn when using WebDriver is
 how to find elements on the page. WebDriver offers a number of built-in selector
 types, amongst them finding an element by its ID attribute:</p>
-
-
-
-
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
-    
-    <label for="tab0code0">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
-    
-    <label for="tab1code0">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
-    
-    <label for="tab2code0">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
-    
-    <label for="tab3code0">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
-    
-    <label for="tab4code0">JavaScript</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">cheese</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;cheese&#34;</span>));  
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;cheese&#34;</span>)
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-IWebElement element = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;cheese&#34;</span>));  
-  
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#34;cheese&#34;</span>)  
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#719e07">const</span> cheese <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;cheese&#39;</span>));
-  
-</code></pre></div>
-</section>
-</div>
-</div>
-
-<p>As seen in the example, locating elements in WebDriver is done on the
-<code>WebDriver</code> instance object. The <code>findElement(By)</code> method returns
-another fundamental object type, the <code>WebElement</code>.</p>
-
-<ul>
-<li><code>WebDriver</code> represents the browser</li>
-<li><code>WebElement</code> represents a particular DOM node
-(a control, e.g. a link or input field, etc.)</li>
-</ul>
-
-<p>Once you have a reference to a web element that&rsquo;s been “found”,
-you can narrow the scope of your search
-by using the same call on that object instance:</p>
 
 
 
@@ -1865,6 +1782,96 @@ by using the same call on that object instance:</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+WebElement <span style="color:#268bd2">cheese</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;cheese&#34;</span>));  
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;cheese&#34;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+IWebElement element = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;cheese&#34;</span>));  
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#34;cheese&#34;</span>)  
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#719e07">const</span> cheese <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;cheese&#39;</span>));
+  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<p>As seen in the example, locating elements in WebDriver is done on the
+<code>WebDriver</code> instance object. The <code>findElement(By)</code> method returns
+another fundamental object type, the <code>WebElement</code>.</p>
+
+<ul>
+<li><code>WebDriver</code> represents the browser</li>
+<li><code>WebElement</code> represents a particular DOM node
+(a control, e.g. a link or input field, etc.)</li>
+</ul>
+
+<p>Once you have a reference to a web element that&rsquo;s been “found”,
+you can narrow the scope of your search
+by using the same call on that object instance:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    
+    <label for="tab0code2">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2">
+    
+    <label for="tab1code2">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2">
+    
+    <label for="tab2code2">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2">
+    
+    <label for="tab3code2">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
+    
+    <label for="tab4code2">JavaScript</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 WebElement <span style="color:#268bd2">cheese</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;cheese&#34;</span>));
 WebElement <span style="color:#268bd2">cheddar</span> <span style="color:#719e07">=</span> cheese.findElement(By.id(<span style="color:#2aa198">&#34;cheddar&#34;</span>));
   </code></pre></div>
@@ -1872,7 +1879,7 @@ WebElement <span style="color:#268bd2">cheddar</span> <span style="color:#719e07
   
 
 
-<section id="pythoncode1" class="tab-panel">
+<section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;cheese&#34;</span>)
 cheddar <span style="color:#719e07">=</span> cheese<span style="color:#719e07">.</span>find_elements_by_id(<span style="color:#2aa198">&#34;cheddar&#34;</span>)
@@ -1881,7 +1888,7 @@ cheddar <span style="color:#719e07">=</span> cheese<span style="color:#719e07">.
   
 
 
-<section id="csharpcode1" class="tab-panel">
+<section id="csharpcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 IWebElement cheese = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;cheese&#34;</span>));
 IWebElement cheddar = cheese.FindElement(By.Id(<span style="color:#2aa198">&#34;cheddar&#34;</span>));
@@ -1891,7 +1898,7 @@ IWebElement cheddar = cheese.FindElement(By.Id(<span style="color:#2aa198">&#34;
   
 
 
-<section id="rubycode1" class="tab-panel">
+<section id="rubycode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#34;cheese&#34;</span>)
 cheddar <span style="color:#719e07">=</span> cheese<span style="color:#719e07">.</span>find_elements(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#34;cheddar&#34;</span>)
@@ -1900,7 +1907,7 @@ cheddar <span style="color:#719e07">=</span> cheese<span style="color:#719e07">.
   
 
 
-<section id="javascriptcode1" class="tab-panel">
+<section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#719e07">const</span> cheese <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;cheese&#39;</span>));
 <span style="color:#719e07">const</span> cheddar <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> cheese.findElement(By.id(<span style="color:#2aa198">&#39;cheddar&#39;</span>));
@@ -1939,35 +1946,35 @@ one search:</p>
 <div class="tabset">
   
     
-      <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
     
-    <label for="tab0code2">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2">
-    
-    <label for="tab1code2">Python</label>
+    <label for="tab0code3">Java</label>
     
     
-      <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2">
+      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
     
-    <label for="tab2code2">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2">
-    
-    <label for="tab3code2">Ruby</label>
+    <label for="tab1code3">Python</label>
     
     
-      <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
+      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
     
-    <label for="tab4code2">JavaScript</label>
+    <label for="tab2code3">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
+    
+    <label for="tab3code3">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
+    
+    <label for="tab4code3">JavaScript</label>
       
   <div class="tab-panels">
   
 
 
-<section id="javacode2" class="tab-panel">
+<section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#cheese #cheddar&#34;</span>));
   </code></pre></div>
@@ -1975,7 +1982,7 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#cheese #ched
   
 
 
-<section id="pythoncode2" class="tab-panel">
+<section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 cheddar <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_css_selector(<span style="color:#2aa198">&#34;#cheese #cheddar&#34;</span>)
   </code></pre></div>
@@ -1983,7 +1990,7 @@ cheddar <span style="color:#719e07">=</span> driver<span style="color:#719e07">.
   
 
 
-<section id="csharpcode2" class="tab-panel">
+<section id="csharpcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 driver.FindElement(By.CssSelector(<span style="color:#2aa198">&#34;#cheese #cheddar&#34;</span>));
   
@@ -1992,7 +1999,7 @@ driver.FindElement(By.CssSelector(<span style="color:#2aa198">&#34;#cheese #ched
   
 
 
-<section id="rubycode2" class="tab-panel">
+<section id="rubycode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_elements(<span style="color:#2aa198">css</span>: <span style="color:#2aa198">&#34;#cheese #cheddar&#34;</span>)
   </code></pre></div>
@@ -2000,7 +2007,7 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
   
 
 
-<section id="javascriptcode2" class="tab-panel">
+<section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#719e07">const</span> cheddar <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;#cheese #cheddar&#39;</span>));
   
@@ -2033,35 +2040,35 @@ empty list will be returned.</p>
 <div class="tabset">
   
     
-      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
+      <input type="radio" name="tabsetcode4" id="tab0code4" aria-controls="javacode4" checked>
     
-    <label for="tab0code3">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
-    
-    <label for="tab1code3">Python</label>
+    <label for="tab0code4">Java</label>
     
     
-      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
+      <input type="radio" name="tabsetcode4" id="tab1code4" aria-controls="pythoncode4">
     
-    <label for="tab2code3">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
-    
-    <label for="tab3code3">Ruby</label>
+    <label for="tab1code4">Python</label>
     
     
-      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
+      <input type="radio" name="tabsetcode4" id="tab2code4" aria-controls="cscode4">
     
-    <label for="tab4code3">JavaScript</label>
+    <label for="tab2code4">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab3code4" aria-controls="rubycode4">
+    
+    <label for="tab3code4">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
+    
+    <label for="tab4code4">JavaScript</label>
       
   <div class="tab-panels">
   
 
 
-<section id="javacode3" class="tab-panel">
+<section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">muchoCheese</span> <span style="color:#719e07">=</span> driver.findElements(By.cssSelector(<span style="color:#2aa198">&#34;#cheese li&#34;</span>));
   </code></pre></div>
@@ -2069,7 +2076,7 @@ List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07"
   
 
 
-<section id="pythoncode3" class="tab-panel">
+<section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_elements_by_css_selector(<span style="color:#2aa198">&#34;#cheese li&#34;</span>)
   </code></pre></div>
@@ -2077,7 +2084,7 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
   
 
 
-<section id="csharpcode3" class="tab-panel">
+<section id="csharpcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 IReadOnlyList&lt;IWebElement&gt; muchoCheese = driver.FindElements(By.CssSelector(“#cheese li”));
   
@@ -2086,7 +2093,7 @@ IReadOnlyList&lt;IWebElement&gt; muchoCheese = driver.FindElements(By.CssSelecto
   
 
 
-<section id="rubycode3" class="tab-panel">
+<section id="rubycode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_elements(<span style="color:#2aa198">css</span>: <span style="color:#2aa198">&#34;#cheese li&#34;</span>)
   </code></pre></div>
@@ -2094,7 +2101,7 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
   
 
 
-<section id="javascriptcode3" class="tab-panel">
+<section id="javascriptcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#719e07">const</span> muchoCheese <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElements(By.css(<span style="color:#2aa198">&#39;#cheese li&#39;</span>));
   
@@ -2193,7 +2200,7 @@ your search, the better.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/locating_elements/">
       “Locating elements”
-    </a> was last updated on: 05 Aug 2019 15:33:16 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/2e4a8e5d7d20d0ec515a6b4a206239acdfe5f7a2">Add Dutch translation (#288) (2e4a8e5)</a>
+    </a> was last updated on: 06 Aug 2019 09:05:51 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/156cd8488a5abf860153a2e709746e61a49778a3">Adding translation status note for Dutch (#290) (156cd84)</a>
 </h5>
         
         </div> 
@@ -3310,20 +3317,20 @@ your search, the better.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565032636"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565075238"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565075238"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565075238"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565075238"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565075238"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565075238"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565075238"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565032636"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565075238"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565075238"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565075238"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565032636" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565032636"></script>
+    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565075238" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565075238"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -17,9 +17,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/nl/front_matter/copyright_and_attributions/</guid>
-      <description>The Selenium Documentation Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
-Er is veel tijd en werk gestroken in het maken van deze documentatie met als doel zo correct en compleet mogelijk te zijn maar dit impliceert geen geschiktheid of garantie. Deze informatie wordt aangeboden op een &amp;ldquo;as-is&amp;rdquo; basis. De auteur en de uitgever
-Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied.</description>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ The Selenium Documentation Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
+Er is veel tijd en werk gestroken in het maken van deze documentatie met als doel zo correct en compleet mogelijk te zijn maar dit impliceert geen geschiktheid of garantie. Deze informatie wordt aangeboden op een &amp;ldquo;as-is&amp;rdquo; basis.</description>
     </item>
     
     <item>
@@ -28,8 +28,8 @@ Every effort has been made to make this documentation as complete and as accurat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/nl/front_matter/typographical_conventions/</guid>
-      <description>Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.
-Line length When editing the documentation’s source, which is written in plain HTML, limit your line lengths to around 72 characters.</description>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
     </item>
     
   </channel>

@@ -12,20 +12,20 @@
     <title>Mouse and keyboard actions in detail :: Selenium documentatie</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565032636" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565032636" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565075238" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565075238" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565032636" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565075238" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565032636"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565075238"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565032636"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565032636"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565075238"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565075238"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/nl";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565032636"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565075238"></script>
 
     
   </div>
@@ -1599,7 +1599,7 @@
                   
                     
                     
-                      <option id="nl" value="https://seleniumhq.github.io/docs/site/nl/support_packages/mouse_and_keyboard_actions_in_detail/" selected>Nederlands</option>
+                      <option id="nl" value="https://seleniumhq.github.io/docs/site/nl/support_packages/mouse_and_keyboard_actions_in_detail/" selected>Dutch</option>
                     
                   
               
@@ -1718,86 +1718,14 @@
 
 
 
+
+<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!</p>
+</div>
+
+
 <p>Suppose you have an arbitrary web element <strong>e:</strong></p>
-
-
-
-
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
-    
-    <label for="tab0code0">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
-    
-    <label for="tab1code0">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
-    
-    <label for="tab2code0">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
-    
-    <label for="tab3code0">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
-    
-    <label for="tab4code0">JavaScript</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">e</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;testElement&#34;</span>));
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-e <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;testElement&#34;</span>)
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  
-</code></pre></div>
-</section>
-</div>
-</div>
-
-<p>You can simulate mouse clicking on e if it&rsquo;s visible and has a height and width
-that are greater than 0:</p>
 
 
 
@@ -1835,7 +1763,7 @@ that are greater than 0:</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-e.click();
+WebElement <span style="color:#268bd2">e</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;testElement&#34;</span>));
   </code></pre></div>
 </section>
   
@@ -1843,7 +1771,7 @@ e.click();
 
 <section id="pythoncode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-e<span style="color:#719e07">.</span>click()
+e <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;testElement&#34;</span>)
   </code></pre></div>
 </section>
   
@@ -1875,8 +1803,8 @@ e<span style="color:#719e07">.</span>click()
 </div>
 </div>
 
-<p>Moreover, it&rsquo;s possible to mimic hovering of the cursor over <strong>e</strong>. In order
-to do so, you&rsquo;ll need the following import statement:</p>
+<p>You can simulate mouse clicking on e if it&rsquo;s visible and has a height and width
+that are greater than 0:</p>
 
 
 
@@ -1914,7 +1842,7 @@ to do so, you&rsquo;ll need the following import statement:</p>
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.interactions.Actions;
+e.click();
   </code></pre></div>
 </section>
   
@@ -1922,7 +1850,7 @@ to do so, you&rsquo;ll need the following import statement:</p>
 
 <section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">from</span> selenium.webdriver <span style="color:#719e07">import</span> ActionChains
+e<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
   
@@ -1954,7 +1882,8 @@ to do so, you&rsquo;ll need the following import statement:</p>
 </div>
 </div>
 
-<p>With this statement in place, you can now move over the element in question:</p>
+<p>Moreover, it&rsquo;s possible to mimic hovering of the cursor over <strong>e</strong>. In order
+to do so, you&rsquo;ll need the following import statement:</p>
 
 
 
@@ -1992,9 +1921,7 @@ to do so, you&rsquo;ll need the following import statement:</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-Actions <span style="color:#268bd2">actions</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions(driver);
-actions.moveToElement(e);
-actions.perform();
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.interactions.Actions;
   </code></pre></div>
 </section>
   
@@ -2002,9 +1929,7 @@ actions.perform();
 
 <section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-actions <span style="color:#719e07">=</span> ActionChains(driver)
-actions<span style="color:#719e07">.</span>move_to_element(e)
-actions<span style="color:#719e07">.</span>perform()
+<span style="color:#719e07">from</span> selenium.webdriver <span style="color:#719e07">import</span> ActionChains
   </code></pre></div>
 </section>
   
@@ -2036,12 +1961,7 @@ actions<span style="color:#719e07">.</span>perform()
 </div>
 </div>
 
-<p>If <strong>e</strong> is an <strong>input</strong> or <strong>textarea</strong> element, the following keyboard
-actions can be carried out:</p>
-
-<ol>
-<li>Enter a sequence of characters in e:</li>
-</ol>
+<p>With this statement in place, you can now move over the element in question:</p>
 
 
 
@@ -2079,7 +1999,9 @@ actions can be carried out:</p>
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-e.sendKeys(<span style="color:#2aa198">&#34;Test&#34;</span>);
+Actions <span style="color:#268bd2">actions</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions(driver);
+actions.moveToElement(e);
+actions.perform();
   </code></pre></div>
 </section>
   
@@ -2087,7 +2009,9 @@ e.sendKeys(<span style="color:#2aa198">&#34;Test&#34;</span>);
 
 <section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-e<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;Test&#34;</span>)
+actions <span style="color:#719e07">=</span> ActionChains(driver)
+actions<span style="color:#719e07">.</span>move_to_element(e)
+actions<span style="color:#719e07">.</span>perform()
   </code></pre></div>
 </section>
   
@@ -2119,7 +2043,12 @@ e<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;
 </div>
 </div>
 
-<p><p>2. Delete the text that&rsquo;s in e (if there is any):</p>
+<p>If <strong>e</strong> is an <strong>input</strong> or <strong>textarea</strong> element, the following keyboard
+actions can be carried out:</p>
+
+<ol>
+<li>Enter a sequence of characters in e:</li>
+</ol>
 
 
 
@@ -2157,7 +2086,7 @@ e<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;
 
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-e.clear();
+e.sendKeys(<span style="color:#2aa198">&#34;Test&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -2165,7 +2094,7 @@ e.clear();
 
 <section id="pythoncode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-e<span style="color:#719e07">.</span>clear()
+e<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;Test&#34;</span>)
   </code></pre></div>
 </section>
   
@@ -2197,6 +2126,84 @@ e<span style="color:#719e07">.</span>clear()
 </div>
 </div>
 
+<p><p>2. Delete the text that&rsquo;s in e (if there is any):</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode6" id="tab0code6" aria-controls="javacode6" checked>
+    
+    <label for="tab0code6">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab1code6" aria-controls="pythoncode6">
+    
+    <label for="tab1code6">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab2code6" aria-controls="cscode6">
+    
+    <label for="tab2code6">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab3code6" aria-controls="rubycode6">
+    
+    <label for="tab3code6">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6">
+    
+    <label for="tab4code6">JavaScript</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+e.clear();
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+e<span style="color:#719e07">.</span>clear()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
 
 <footer class=" footline" >
 	
@@ -2205,7 +2212,7 @@ e<span style="color:#719e07">.</span>clear()
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/nl/support_packages/mouse_and_keyboard_actions_in_detail/">
       “Mouse and keyboard actions in detail”
-    </a> was last updated on: 05 Aug 2019 15:33:16 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/2e4a8e5d7d20d0ec515a6b4a206239acdfe5f7a2">Add Dutch translation (#288) (2e4a8e5)</a>
+    </a> was last updated on: 06 Aug 2019 09:05:51 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/156cd8488a5abf860153a2e709746e61a49778a3">Adding translation status note for Dutch (#290) (156cd84)</a>
 </h5>
         
         </div> 
@@ -3322,20 +3329,20 @@ e<span style="color:#719e07">.</span>clear()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565032636"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565075239"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565075239"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565075239"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565075239"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565075239"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565075239"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565075239"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565032636"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565032636"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565075239"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565075239"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565075239"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565032636" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565032636"></script>
+    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565075239" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565075239"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
