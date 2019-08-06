@@ -1,15 +1,14 @@
 ---
-title: "File downloads"
+title: "Bestand downloads"
 weight: 2
 ---
 
-Whilst it is possible to start a download
-by clicking a link with a browser under Selenium's control,
-the API does not expose download progress,
-making it less than ideal for testing downloaded files.
-This is because downloading files is not considered an important aspect
-of emulating user interaction with the web platform.
-Instead, find the link using Selenium
-(and any required cookies)
-and pass it to a HTTP request library like
-[libcurl](//curl.haxx.se/libcurl/).
+Het is mogelijk om een download te starten door op een
+download knop te klikken. Echter houdt de API geen rekening
+met de voortgang van de download. Hierdoor is het niet ideaal
+om het downloaden van bestanden te testen.
+Bestanden downloaden word niet beschouwd als een belangrijk aspect
+binnen het nabootsen van gebruikers.
+Wat je wel kan doen is de link van het bestand zoeken via Selenium,
+en indien nodig de cookies. Vervolgens deze gegevens doorgeven aan 
+een HTTP request bibliotheek zoals [libcurl](//curl.haxx.se/libcurl/).

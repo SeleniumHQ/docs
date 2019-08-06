@@ -1,7 +1,7 @@
 ---
-title: "Worst practices"
+title: "Slechte gewoontes"
 chapter: true
 weight: 8
 ---
 
-# Worst practices
+# Slechte gewoontes
