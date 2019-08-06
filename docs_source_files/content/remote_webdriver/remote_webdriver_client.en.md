@@ -18,7 +18,11 @@ driver.get("http://www.google.com");
 driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+driver = webdriver.Remote(command_executor='http://www.example.com', desired_capabilities=webdriver.DesiredCapabilities.FIREFOX)
+driver.get('http://www.google.com')
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
@@ -60,7 +64,12 @@ driver.get("http://www.google.com");
 driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+from selenium import webdriver
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--user-agent="Chrome/67 (Windows XP)"')
+driver = webdriver.Remote(command_executor='http://www.example.com', options = chrome_options)
+driver.get('http://www.google.com')
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
