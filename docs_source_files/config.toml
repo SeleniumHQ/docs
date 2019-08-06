@@ -54,6 +54,11 @@ name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
 url = "front_matter/copyright_and_attributions"
 weight = 20
 
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
+url = "contributing"
+weight = 30
+
 [Languages.es]
 title = "Documentación de Selenium"
 weight = 2
@@ -74,3 +79,34 @@ weight = 11
 name = "<i class='fas fa-fw fa-bullhorn'></i> Créditos"
 url = "front_matter/copyright_and_attributions"
 weight = 20
+
+[[Languages.es.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Cómo contribuír"
+url = "contributing"
+weight = 30
+
+[Languages.nl]
+title = "Selenium documentatie"
+weight = 3
+languageName = "Nederlands"
+
+[[Languages.nl.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/docs"
+weight = 10
+
+[[Languages.nl.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Meld een probleem"
+url = "https://github.com/seleniumhq/docs/issues"
+weight = 11
+
+[[Languages.nl.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.nl.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Hoe bij te dragen"
+url = "contributing"
+weight = 30

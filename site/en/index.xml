@@ -166,7 +166,7 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       
       <guid>https://seleniumhq.github.io/docs/site/en/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   # We don&amp;#39;t have a Python code sample yet - Help us out and raise a PR   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      Setting a custom profile It is possible to create a custom profile for Firefox as demonstrated below.</description>
+Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      Setting a custom profile It is possible to create a custom profile for Firefox as demonstrated below.</description>
     </item>
     
     <item>
@@ -538,6 +538,17 @@ Java Python C# Ruby JavaScript WebDriver driver = new FirefoxDriver(); driver.ge
       
       <guid>https://seleniumhq.github.io/docs/site/en/webdriver/mouse/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Contributing to the Selenium Documentation</title>
+      <link>https://seleniumhq.github.io/docs/site/en/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/en/contributing/</guid>
+      <description>Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
+Part of the documentation of Selenium is still served from our www.seleniumhq.org repository. We are however phasing out this documentation which focuses too much on Selenium RC and other antiquated pieces, in favour of this rewrite.
+The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch.</description>
     </item>
     
   </channel>

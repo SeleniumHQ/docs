@@ -12,20 +12,20 @@
     <title>Capacidades especificas de los controladores :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1564979509" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1564979509" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1564979509" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1564979509" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1564979509" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1564979509" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1564979509" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1564979509" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1564979509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565080486" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565080486" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565080486" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565080486" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565080486" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565080486" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565080486" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565080486" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565080486" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1564979509" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565080486" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1564979509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565080486"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1564979509"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1564979509"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565080486"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565080486"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1564979509"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565080486"></script>
 
     
   </div>
@@ -1541,6 +1541,10 @@
                   <a class="padding" href="https://seleniumhq.github.io/docs/site/es/front_matter/copyright_and_attributions"><i class='fas fa-fw fa-bullhorn'></i> Créditos</a>
               </li>
           
+              <li> 
+                  <a class="padding" href="https://seleniumhq.github.io/docs/site/es/contributing"><i class='fas fa-fw fa-bullhorn'></i> Cómo contribuír</a>
+              </li>
+          
         </ul>
       </section>
     
@@ -1569,6 +1573,8 @@
               
                   
               
+                  
+              
           
               
               
@@ -1578,6 +1584,22 @@
                     
                     
                       <option id="es" value="https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/driver_specific_capabilities/" selected>Español</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="nl" value="https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/driver_specific_capabilities/">Nederlands</option>
                     
                   
               
@@ -1773,7 +1795,10 @@ driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</spa
 
 <section id="pythoncode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+<span style="color:#719e07">from</span> selenium.webdriver.firefox.options <span style="color:#719e07">import</span> Options
+options <span style="color:#719e07">=</span> Options()
+options<span style="color:#719e07">.</span>headless <span style="color:#719e07">=</span> <span style="color:#268bd2">True</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Firefox(options<span style="color:#719e07">=</span>options)
   </code></pre></div>
 </section>
   
@@ -1856,7 +1881,12 @@ driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</spa
 
 <section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+<span style="color:#719e07">from</span> selenium.webdriver.firefox.options <span style="color:#719e07">import</span> Options
+<span style="color:#719e07">from</span> selenium.webdriver.firefox.firefox_profile <span style="color:#719e07">import</span> FirefoxProfile
+options<span style="color:#719e07">=</span>Options()
+firefox_profile <span style="color:#719e07">=</span> FirefoxProfile()
+firefox_profile<span style="color:#719e07">.</span>set_preference(<span style="color:#2aa198">&#34;javascript.enabled&#34;</span>, <span style="color:#268bd2">False</span>)
+options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=</span> firefox_profile
   </code></pre></div>
 </section>
   
@@ -1904,7 +1934,7 @@ can increase the timeout using the fileUploadDialogTimeout capability.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/driver_specific_capabilities/">
       “Capacidades especificas de los controladores”
-    </a> was last updated on: 04 Aug 2019 20:07:02 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/a40e6a2b09370ba25f9d6a6aa6f5b6a1fdb9f8e3">Setting file structure to allow translations, starting with Spanish (#281) (a40e6a2)</a>
+    </a> was last updated on: 06 Aug 2019 14:03:30 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/dc08c688ee95f89f3cba965e3cc3908e2a014639"> Update driver_specific_capabilities.en.md (#291) (dc08c68)</a>
 </h5>
         
         </div> 
@@ -3021,20 +3051,20 @@ can increase the timeout using the fileUploadDialogTimeout capability.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1564979509"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1564979509"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1564979509"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1564979509"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1564979509"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1564979509"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1564979509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565080486"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565080486"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565080486"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565080486"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565080486"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565080486"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565080486"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1564979509"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1564979509"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1564979509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565080486"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565080486"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565080486"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1564979509" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1564979509"></script>
+    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565080486" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565080486"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
