@@ -117,6 +117,12 @@ weight = 4
 languageName = "中文简体"
 
 [[Languages.zh-cn.menu.shortcuts]]
+[Languages.fr]
+title = "Documentation Selenium"
+weight = 4
+languageName = "Français"
+
+[[Languages.fr.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
 url = "https://github.com/SeleniumHQ/docs"
@@ -134,5 +140,19 @@ weight = 20
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
+url = "contributing"
+weight = 30
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
+url = "https://github.com/seleniumhq/docs/issues"
+weight = 11
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Crédits"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Comment contribuer"
 url = "contributing"
 weight = 30
