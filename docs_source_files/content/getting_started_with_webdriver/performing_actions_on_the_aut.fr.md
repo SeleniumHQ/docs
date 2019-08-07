@@ -3,6 +3,12 @@ title: "Réaliser des action sur l'AUT*"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 You can set an element's text using the sendKeys method as follows:
 
 {{< code-tab >}}

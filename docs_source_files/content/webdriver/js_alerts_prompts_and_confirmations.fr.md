@@ -3,6 +3,12 @@ title: "Alerts, prompts et confirmations Javascript"
 weight: 6
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 WebDriver provides an API for working with the three types of native
 popup message offered by JavaScript. These popups are styled by the
 browser and offer limited customisation.

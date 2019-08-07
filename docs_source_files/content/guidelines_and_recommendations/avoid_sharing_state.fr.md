@@ -3,6 +3,12 @@ title: "Eviter de partager l'état"
 weight: 6
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Although mentioned in several places it is worth mentioning again. Ensure 
 tests are isolated from one another.
 

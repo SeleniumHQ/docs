@@ -3,6 +3,12 @@ title: "Installer le serveur Standalone"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 If you plan to use [Grid]({{< ref "/grid/_index.md" >}}) then you should download the
 [selenium-server-standalone JAR](//www.seleniumhq.org/download/) file.
  The _selenium-server-standalone_ jar is never uploaded, but all the components are available via

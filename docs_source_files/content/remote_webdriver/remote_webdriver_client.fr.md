@@ -3,6 +3,12 @@ title: "Le client Remote WebDriver"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 First, we need to connect to the RemoteWebDriver.
 We do this by pointing the URL to the address of the server running our tests.
 In order to customize our configuration, we set desired capabilities.

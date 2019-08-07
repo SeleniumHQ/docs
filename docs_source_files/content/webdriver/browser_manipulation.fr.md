@@ -3,6 +3,12 @@ title: "Manipulation du navigateur"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 <!-- #codeExamples -->
 <!-- Remember to cover profile and extensions here -->
 

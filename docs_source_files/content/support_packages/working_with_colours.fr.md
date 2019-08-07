@@ -3,6 +3,12 @@ title: "Travailler avec les couleurs"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 You will occasionally want to validate the colour of something as part of your tests;
 the problem is that colour definitions on the web are not constant.
 Wouldn't it be nice if there was an easy way to compare

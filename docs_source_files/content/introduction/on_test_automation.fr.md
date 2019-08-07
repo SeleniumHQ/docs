@@ -3,6 +3,12 @@ title: "A propos du test automatisé"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 First, start by asking yourself whether or not you really need to use a browser.
 Odds are good that, at some point, if you're working on a complex web application,
 you will need to open a browser and actually test it.
@@ -28,7 +34,7 @@ Browser automation has the reputation of being “flaky”,
 but in reality that is because users frequently demand too much of it.
 In later chapters, we will return to techniques you can use
 to mitigate apparent intermittent problems in tests,
-in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.en.md" >}})
+in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.fr.md" >}})
 between the browser and WebDriver.
 
 By keeping your tests short
@@ -166,7 +172,7 @@ to provide methods such as `createAdminUser()`, and `createUserWithPayment()`.
 The point is, these two lines of code do not distract you from the ultimate purpose of this test:
 configuring a unicorn.
 
-The intricacies of the [Page Object model]({{< ref "/guidelines_and_recommendations/page_object_models.en.md" >}})
+The intricacies of the [Page Object model]({{< ref "/guidelines_and_recommendations/page_object_models.fr.md" >}})
 will be discussed in later chapters, but we will introduce the concept here:
 
 Your tests should be composed of actions,

@@ -3,6 +3,12 @@ title: "Reporting amélioré"
 weight: 5
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Selenium is not designed to report on the status of test cases
 run. Taking advantage of the built-in reporting capabilities of unit
 test frameworks is a good start.  Most unit test frameworks have

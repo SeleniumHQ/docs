@@ -3,6 +3,12 @@ title: "Les pré-requis de WebDriver"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Through WebDriver, Selenium supports all major browsers on the market
 such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
 Where possible, WebDriver drives the browser

@@ -3,6 +3,12 @@ title: "Waits"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 WebDriver can generally be said to have a blocking API.
 Because it is an out-of-process library that
 _instructs_ the browser what to do,
@@ -65,7 +71,7 @@ assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
 {{< / code-tab >}}
 
 The issue here is that the default
-[page load strategy]({{< ref "/webdriver/page_loading_strategy.en.md" >}})
+[page load strategy]({{< ref "/webdriver/page_loading_strategy.fr.md" >}})
 used in WebDriver listens for the `document.readyState`
 to change to `"complete"` before returning from the call to _navigate_.
 Because the `p` element is
@@ -76,15 +82,15 @@ about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.
 
 Fortunately, using the normal instruction set available on
-the [_WebElement_]({{< ref "/webdriver/web_element.en.md" >}}) interface—such
+the [_WebElement_]({{< ref "/webdriver/web_element.fr.md" >}}) interface—such
  as _WebElement.click_ and _WebElement.sendKeys_—are
  guaranteed to be synchronous,
  in that the function calls won't return
  (or the callback won't trigger in callback-style languages)
  until the command has been completed in the browser.
  The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/webdriver/keyboard.en.md" >}}) 
- and [_Mouse_]({{< ref "/webdriver/mouse.en.md" >}}),
+ [_Keyboard_]({{< ref "/webdriver/keyboard.fr.md" >}}) 
+ and [_Mouse_]({{< ref "/webdriver/mouse.fr.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 
