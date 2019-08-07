@@ -17,6 +17,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started/"
                 />
@@ -37,6 +47,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/support_packages/browser_navigation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/support_packages/browser_navigation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/browser_navigation/"
                 />
@@ -44,7 +64,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/browsers/</loc>
-    <lastmod>2019-08-06T09:05:51+02:00</lastmod>
+    <lastmod>2019-08-07T10:17:04+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -54,6 +74,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/getting_started_with_webdriver/browsers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/browsers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started_with_webdriver/browsers/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -77,6 +107,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/captchas/"
                 />
@@ -84,7 +124,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/front_matter/copyright_and_attributions/</loc>
-    <lastmod>2019-08-06T09:05:51+02:00</lastmod>
+    <lastmod>2019-08-07T16:25:51+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -94,6 +134,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/front_matter/copyright_and_attributions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/front_matter/copyright_and_attributions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/front_matter/copyright_and_attributions/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -117,6 +167,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/driver_idiosyncrasies/shared_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/driver_idiosyncrasies/shared_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/shared_capabilities/"
                 />
@@ -137,6 +197,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_selenium_libraries/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_selenium_libraries/"
                 />
@@ -144,7 +214,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started/quick/</loc>
-    <lastmod>2019-08-06T09:05:51+02:00</lastmod>
+    <lastmod>2019-08-07T10:17:04+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -154,6 +224,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/getting_started/quick/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started/quick/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started/quick/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -177,6 +257,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/page_object_models/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/page_object_models/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/page_object_models/"
                 />
@@ -194,6 +284,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/grid/purposes_and_main_functionalities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/grid/purposes_and_main_functionalities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -217,6 +317,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/remote_webdriver/remote_webdriver_server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/remote_webdriver/remote_webdriver_server/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/remote_webdriver/remote_webdriver_server/"
                 />
@@ -234,6 +344,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/introduction/the_selenium_project_and_tools/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/introduction/the_selenium_project_and_tools/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/introduction/the_selenium_project_and_tools/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -262,6 +382,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/grid/components_of_a_grid/"
                 />
@@ -279,6 +409,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/guidelines_and_recommendations/domain_specific_language/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/domain_specific_language/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/domain_specific_language/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -302,6 +442,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/driver_requirements/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/driver_requirements/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/driver_requirements/"
                 />
@@ -309,7 +459,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/driver_specific_capabilities/</loc>
-    <lastmod>2019-08-05T15:33:16+02:00</lastmod>
+    <lastmod>2019-08-06T14:03:30+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -319,6 +469,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -342,6 +502,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/file_downloads/"
                 />
@@ -349,7 +519,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started/html-runner/</loc>
-    <lastmod>2019-08-05T15:33:16+02:00</lastmod>
+    <lastmod>2019-08-07T10:17:04+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -359,6 +529,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/getting_started/html-runner/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started/html-runner/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started/html-runner/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -382,6 +562,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_webdriver_binaries/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_webdriver_binaries/"
                 />
@@ -399,6 +589,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/introduction/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -422,6 +622,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/introduction/on_test_automation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/introduction/on_test_automation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/introduction/on_test_automation/"
                 />
@@ -439,6 +649,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/remote_webdriver/remote_webdriver_client/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/remote_webdriver/remote_webdriver_client/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/remote_webdriver/remote_webdriver_client/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -462,6 +682,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/"
                 />
@@ -479,6 +709,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/front_matter/typographical_conventions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/front_matter/typographical_conventions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/front_matter/typographical_conventions/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -502,6 +742,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/support_packages/working_with_colours/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/support_packages/working_with_colours/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_colours/"
                 />
@@ -519,6 +769,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/webdriver/browser_manipulation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/browser_manipulation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/browser_manipulation/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -542,6 +802,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/generating_application_state/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/generating_application_state/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/generating_application_state/"
                 />
@@ -559,6 +829,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/worst_practices/http_response_codes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/http_response_codes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/worst_practices/http_response_codes/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -582,6 +862,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_standalone_server/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_standalone_server/"
                 />
@@ -589,7 +879,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/locating_elements/</loc>
-    <lastmod>2019-08-06T09:05:51+02:00</lastmod>
+    <lastmod>2019-08-07T10:17:04+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -599,6 +889,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/getting_started_with_webdriver/locating_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/locating_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started_with_webdriver/locating_elements/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -622,6 +922,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/"
                 />
@@ -639,6 +949,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/grid/setting_up_your_own_grid/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -662,6 +982,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/introduction/types_of_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/introduction/types_of_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/introduction/types_of_testing/"
                 />
@@ -682,8 +1012,48 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/support_packages/working_with_select_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/support_packages/working_with_select_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_select_elements/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/</loc>
+    <lastmod>2019-08-07T10:17:04+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://seleniumhq.github.io/docs/site/en/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://seleniumhq.github.io/docs/site/es/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/"
                 />
   </url>
   
@@ -702,28 +1072,18 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/introduction/about_this_documentation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/introduction/about_this_documentation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/introduction/about_this_documentation/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/</loc>
-    <lastmod>2019-08-06T09:05:51+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://seleniumhq.github.io/docs/site/en/getting_started_with_webdriver/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://seleniumhq.github.io/docs/site/es/getting_started_with_webdriver/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/"
                 />
   </url>
   
@@ -739,6 +1099,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/worst_practices/gmail_email_and_facebook_logins/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/gmail_email_and_facebook_logins/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/worst_practices/gmail_email_and_facebook_logins/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -762,6 +1132,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/mock_external_services/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/mock_external_services/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/mock_external_services/"
                 />
@@ -779,6 +1159,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/support_packages/mouse_and_keyboard_actions_in_detail/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/support_packages/mouse_and_keyboard_actions_in_detail/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -802,6 +1192,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/performing_actions_on_the_aut/"
                 />
@@ -819,6 +1219,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/webdriver/waits/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/waits/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/waits/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -842,6 +1252,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/improved_reporting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/improved_reporting/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/improved_reporting/"
                 />
@@ -859,6 +1279,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/webdriver/support_classes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/support_classes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/support_classes/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -882,6 +1312,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/test_dependency/"
                 />
@@ -899,6 +1339,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -922,6 +1372,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/support_packages/working_with_web_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/support_packages/working_with_web_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_web_elements/"
                 />
@@ -939,6 +1399,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/guidelines_and_recommendations/avoid_sharing_state/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/avoid_sharing_state/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/avoid_sharing_state/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -962,6 +1432,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/js_alerts_prompts_and_confirmations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/js_alerts_prompts_and_confirmations/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/js_alerts_prompts_and_confirmations/"
                 />
@@ -979,6 +1459,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/worst_practices/performance_testing/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1002,6 +1492,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/remote_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/remote_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/remote_webdriver/"
                 />
@@ -1019,6 +1519,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/guidelines_and_recommendations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1042,6 +1552,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/http_proxies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/http_proxies/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/http_proxies/"
                 />
@@ -1059,6 +1579,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/worst_practices/link_spidering/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1082,6 +1612,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/test_independency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/test_independency/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/test_independency/"
                 />
@@ -1099,6 +1639,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/consider_using_a_fluent_api/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1122,6 +1672,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/page_loading_strategy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/page_loading_strategy/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/page_loading_strategy/"
                 />
@@ -1139,6 +1699,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/worst_practices/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/worst_practices/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1162,6 +1732,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/fresh_browser_per_test/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/fresh_browser_per_test/"
                 />
@@ -1179,6 +1759,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/grid/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1202,6 +1792,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/web_element/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/web_element/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/web_element/"
                 />
@@ -1219,6 +1819,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/driver_idiosyncrasies/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1242,6 +1852,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/keyboard/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/keyboard/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/keyboard/"
                 />
@@ -1259,6 +1879,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/webdriver/mouse/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/mouse/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/webdriver/mouse/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1282,6 +1912,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/support_packages/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/support_packages/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/"
                 />
@@ -1299,6 +1939,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/front_matter/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/front_matter/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/front_matter/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1322,6 +1972,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/categories/"
                 />
@@ -1339,6 +1999,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/contributing/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1362,6 +2032,16 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/tags/"
                 />
@@ -1379,6 +2059,16 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://seleniumhq.github.io/docs/site/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/"
                 />
     <xhtml:link
                 rel="alternate"

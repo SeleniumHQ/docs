@@ -17,9 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/nl/getting_started/quick/</guid>
-      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- Selenium is niet slechts een instrument of API, het bestaat uit verschillende instrumenten.
-WebDriver WebDriver is also known as Selenium 2. If you are beginning with desktop website test automation then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests.</description>
+      <description>Selenium is niet enkel een instrument of API, het bestaat uit verschillende instrumenten.
+WebDriver WebDriver staat ook bekend als Selenium 2. Als je begint met het automatiseren van websites, dan zul je de WebDriver API&amp;rsquo;s gebruiken. WebDriver gebruikt automatisatie API&amp;rsquo;s die door de browsers zelf worden aangeboden. Laatstgenoemden worden gebruikt om de browser aan te sturen. Op die manier word een echte gebruiker gesimuleerd.WebDriver staat los van de applicatieve code en is daarom niet-intrusief.</description>
     </item>
     
     <item>
