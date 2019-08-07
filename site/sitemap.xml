@@ -22,4 +22,11 @@
 		
 	</sitemap>
 	
+	<sitemap>
+	   	<loc>https://seleniumhq.github.io/docs/site/zh-cn/sitemap.xml</loc>
+		
+	   	<lastmod>2019-08-07T17:32:57+08:00</lastmod>
+		
+	</sitemap>
+	
 </sitemapindex>
