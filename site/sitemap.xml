@@ -11,14 +11,14 @@
 	<sitemap>
 	   	<loc>https://seleniumhq.github.io/docs/site/es/sitemap.xml</loc>
 		
-	   	<lastmod>2019-08-06T14:03:30+05:30</lastmod>
+	   	<lastmod>2019-08-07T16:25:51+02:00</lastmod>
 		
 	</sitemap>
 	
 	<sitemap>
 	   	<loc>https://seleniumhq.github.io/docs/site/nl/sitemap.xml</loc>
 		
-	   	<lastmod>2019-08-07T10:17:04+02:00</lastmod>
+	   	<lastmod>2019-08-07T16:25:51+02:00</lastmod>
 		
 	</sitemap>
 	
@@ -26,6 +26,13 @@
 	   	<loc>https://seleniumhq.github.io/docs/site/zh-cn/sitemap.xml</loc>
 		
 	   	<lastmod>2019-08-07T17:32:57+08:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>https://seleniumhq.github.io/docs/site/fr/sitemap.xml</loc>
+		
+	   	<lastmod>2019-08-07T16:25:51+02:00</lastmod>
 		
 	</sitemap>
 	
