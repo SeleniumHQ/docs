@@ -3,24 +3,20 @@ title: "Runner HTML"
 weight: 2
 ---
 
-_Selenium HTML-runner_ allows you to run Test Suites from a
-command line. Test Suites are HTML exports from Selenium IDE or
-campatible tools.
+_Selenium HTML-runner_ permet d'exécuter des Test Suites depuis la ligne de commande.
+Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
 
+## Informations générales
 
-## Common information
+* Les combinaisons de version de geckodriver / firefox /
+selenium-html-runner sont importantes. Il doit y avoir
+une matrice de compatibilité quelque part.
+* selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor). Assurez-vous de vous y conformer.
+* Pour les utilisateurs Linux sans affichage - vous devez exécuter html-runner 
+  avec un affichage virtuel (cherchez xvfb)
 
-* Combination of releases of geckodriver / firefox /
-selenium-html-runner matters. There might be a software
-compatibility matrix somewhere.
-* selenium-html-runner runs only Test Suite (not Test Case - what
-is for example an export from Monitis Transaction Monitor). Be
-sure you comply with this.
-* For Linux users with no DISPLAY - you need to start html-runner
-with Virtual display (search for xvfb)
-
-## Example Linux environment
-Install / download following software packages:
+## Exemple sur environnement Linux
+Installer / télécharger les packages suivants:
 
 ```shell
 [user@localhost ~]$ cat /etc/redhat-release
@@ -33,7 +29,7 @@ java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64
 java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
 ```
 
-Test Suite example:
+Example de Test Suite:
 
 ```html
 [user@localhost ~]$ cat testsuite.html
@@ -54,11 +50,10 @@ Test Suite example:
 ```
 
 
-## How to run selenium-html-runner headless
+## Comment exécuter selenium-html-runner en mode headless
 
-Now, the most important part, an example of how to run the
-selenium-html-runner! Your experience might vary depending on software
-combinations - geckodriver/FF/html-runner releases.
+Pour la partie la plus importante, voici un exemple d'exécution de selenium-html-runner !
+Votre expérience peut varier selon les combinaisons logicielles - versions de geckodriver/FF/html-runner.
 
 ```shell
 xvfb-run java -Dwebdriver.gecko.driver=/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite "firefox" "https://YOUR-BASE-URL" "$(pwd)/testsuite.html" "results.html" ; grep result: -A1 results.html/firefox.results.html

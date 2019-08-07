@@ -3,60 +3,59 @@ title: "Tour rapide"
 weight: 1
 ---
 
-Selenium is not just one tool or API
-but it composes many tools.
+Selenium n'est pas juste un outil ou une API
+mais est composé de nombreux outils.
 
 ## WebDriver
 
-_[WebDriver]({{< ref "/webdriver/_index.md" >}})_ is also known as Selenium 2.
-If you are beginning with desktop website test automation then you
-are going to be using WebDriver APIs. WebDriver uses browser
-automation APIs provided by browser vendors to control browser and
-run tests. This is as if a real user is operating the browser. Since
-WebDriver does not require its API to be compiled with application
-code, it is not intrusive in nature. Hence, you are testing the
-same application which you push live.
-
+_[WebDriver]({{< ref "/webdriver/_index.md" >}})_ aussi connu sous le nom de Selenium 2.
+Si vous débutez dans l'automatisation de test de site web _desktop_ vous allez utiliser les APIs WebDriver.
+WebDriver utilise les APIs d'automatisation fournies par les distributeurs de navigateur 
+pour les contrôler et exécuter les tests. 
+C'est comme si un utilisateur réel utilisait le navigateur. 
+Puisque WebDriver n'a pas besoin que ses APIs soient compilées avec le code de l'application testée,
+il est non intrusif par nature. Ainsi vous testez exactement l'application qui sera en production.
 
 ## Remote Control
 
-[_Remote Control_](https://www.seleniumhq.org/docs/05_selenium_rc.jsp)
-is also known as Selenium 1. 
-Selenium RC was the most prominent Selenium tool
-before the advent of Selenium WebDriver. Selenium RC would use a
-proxy server and inject JavaScript into a browser to be able to control
-it. Given the intrusive nature Selenium RC had on a browser,
-you could never be sure if what you were testing was the same as 
-the application you wanted to push live. Selenium 2 APIs yet contain Selenium RC APIs but
-Selenium 3 would completely get rid of Selenium RC APIs. If you are
-still using Selenium RC then you must 
-[_migrate_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0)
-to Selenium WebDriver.
+[_Remote Control_](https://www.seleniumhq.org/docs/05_selenium_rc.jsp) aussi connu sous le nom de Selenium 1.
+Selenium RC était l'outil Selenium central avant l'avènement de Selenium WebDriver.
+Selenium RC utilise un serveur proxy et injecte du Javascript dans le navigateur 
+afin de pouvoir en prendre le contrôle.
+Etant donné la nature intrusive de Selenium RC sur la navigateur, 
+vous ne pouvez jamais être sûr de tester la même application 
+que celle qui sera déployée en production. 
+A noter que les APIs Selenium 2 contiennent les APIs Selenium RC,
+mais les APIs Selenium 3, elles, se débarrasseront complètement de Selenium RC.
+Si vous utilisez toujours Selenium RC, vous devez 
+[_migrer_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0)
+vers Selenium WebDriver.
 
 
 ## IDE
 
-_[IDE](https://www.seleniumhq.org/selenium-ide)_ is a
-Firefox plugin which can be used to record test steps in Firefox itself. 
-Selenium IDE can be used to generate _quick and dirty_
- test code in a variety of programming languages (i.e. C#,
-Java, Python, and Ruby). Given the maintainability of code generated
-through Selenium IDE, it is not recommended to use it for anything
-more than getting acquainted with element locators or generating
-_throw away code_. We're sure that once you get used to the
-WebDriver API, you will never use Selenium IDE.
+_[IDE](https://www.seleniumhq.org/selenium-ide)_ est un plugin Firefox
+qui peut être utilisé pour enregistrer les étapes d'un test depuis firefox lui-même.
+Selenium IDE peut être utiliser pour générer des tests en mode _quick and dirty_
+dans une variété de langage (à savoir C#, Java, Python et Ruby).
+Etant donné la maintenabilité du code généré via Selenium IDE,
+il n'est pas recommandé de l'utiliser pour autre chose que
+de se familiariser avec des locators de web element
+ou générer du code temporaire (_throw away code_).
+Nous sommes sûr qu'une fois habitué à l'API WebDriver, 
+vous n'utiliserez plus jamais Selenium IDE.
 
 
 ## Grid
 
-Soon after development of WebDriver tests, you may face a need of
-running your tests on multiple browser and operating system combinations.
-This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes to the rescue.
+Peu après le développement de tests basés sur WebDriver,
+il se peut que vous rencontriez le besoin d'exécuter ceux-ci
+sur des combinaisons différentes de navigateurs / système d'exploitation.
+C'est ici que _[Grid]({{< ref "/grid/_index.md" >}})_ intervient pour vous aider.
 
 
 ## HTML Runner
 
-This tool allows you to run Test Suites from the command
-line. Test Suites are HTML exports from Selenium IDE or compatible
-tools. _[HTML Runner]({{< ref "/getting_started/html-runner.fr.md" >}})_
+Cet outil permet de permet d'exécuter des Test Suites depuis la ligne de commande.
+Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible. _[HTML Runner]({{< ref "/getting_started/html-runner.fr.md" >}})_
 

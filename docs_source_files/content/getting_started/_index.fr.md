@@ -4,11 +4,11 @@ chapter: true
 weight: 1
 ---
 
-# Getting started
+# Pour débuter
 
-If you are new to Selenium,
-we have a few resources that can help you
-get up to speed right away.
+Si Selenium est nouveau pour vous,
+nous vous proposons quelques ressources qui
+pourront vous aider à vous mettre à niveau très rapidement.
 
 * [Quick tour]({{< ref "/getting_started/quick.fr.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.fr.md#webdriver" >}})

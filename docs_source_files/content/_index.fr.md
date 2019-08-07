@@ -136,7 +136,7 @@ Si Selenium est nouveau pour vous,
 nous vous proposons quelques ressources qui
 pourront vous aider à vous mettre à niveau très rapidement.
 
-* [Quick tour]({{< ref "/getting_started/quick.fr.md" >}})
+* [Tour rapide]({{< ref "/getting_started/quick.fr.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.fr.md#webdriver" >}})
   * [Remote Control]({{< ref "/getting_started/quick.fr.md#remote-control" >}})
   * [IDE]({{< ref "/getting_started/quick.fr.md#ide" >}})
