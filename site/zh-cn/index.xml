@@ -56,18 +56,6 @@ Every effort has been made to make this documentation as complete and as accurat
     </item>
     
     <item>
-      <title>Installing Selenium libraries</title>
-      <link>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; The selenium-java dependency supports running your automation project with all Selenium supported browsers.</description>
-    </item>
-    
-    <item>
       <title>Page object models</title>
       <link>https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -128,6 +116,21 @@ It allows users to simulate common activities performed by end-users; entering t
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
 Terminology  API: Application Programming Interface. This is the set of &amp;ldquo;commands&amp;rdquo; you use to manipulate WebDriver. Library: A code module which contains the APIs and the code necessary to implement them.</description>
+    </item>
+    
+    <item>
+      <title>安装 Selenium 库</title>
+      <link>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/</guid>
+      <description>首先，您需要为自动化项目安装 Selenium 绑定库。 库的安装过程取决于您选择使用的语言。
+Java 可以使用 Maven 安装 Java 的 Selenium 库。 在项目 pom.xml 中添加 selenium-java 依赖项：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 依赖项支持在所有 Selenium 支持的浏览器中运行自动化项目。 如果只想在特定的浏览器中运行测试，可以在 pom.xml 文件中添加该浏览器的依赖项。 例如，您应该在 pom.xml 文件中添加以下依赖项，以便于只在 Firefox 中运行测试：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-firefox-driver&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 同样，如果你只想在 Chrome 上运行测试，您应该添加以下依赖项：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-chrome-driver&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Python 可以使用 pip 安装 Python 的 Selenium 库：
+pip install selenium 或者，您也可以下载 PyPI source archive (selenium-x.x.x.tar.gz) 并使用 setup.py 进行安装：
+python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</description>
     </item>
     
     <item>
@@ -209,17 +212,6 @@ Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); op
     </item>
     
     <item>
-      <title>Installing WebDriver binaries</title>
-      <link>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- To execute your project and control browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
-    </item>
-    
-    <item>
       <title>On test automation</title>
       <link>https://seleniumhq.github.io/docs/site/zh-cn/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -274,6 +266,16 @@ Line length When editing the documentation’s source, which is written in plain
     </item>
     
     <item>
+      <title>安装 WebDriver 二进制文件</title>
+      <link>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/</guid>
+      <description>要执行项目并控制浏览器，需要安装特定于浏览器的 WebDriver 二进制文件。
+下载 WebDriver 二进制文件 并放入 系统 PATH 环境变量 中.</description>
+    </item>
+    
+    <item>
       <title>Browser manipulation</title>
       <link>https://seleniumhq.github.io/docs/site/zh-cn/webdriver/browser_manipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -302,16 +304,6 @@ Line length When editing the documentation’s source, which is written in plain
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.
 Selenium WebDriver is a completely different approach to browser automation, preferring to act more like a user and this is represented in the way you write tests with WebDriver.</description>
-    </item>
-    
-    <item>
-      <title>Installing Standalone server</title>
-      <link>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, then you don&amp;rsquo;t have to add selenium-java or a browser specific jar.</description>
     </item>
     
     <item>
@@ -356,6 +348,16 @@ For web applications, the automation of this testing can be done directly with S
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
 Java Python C# Ruby JavaScript import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      You are then able to create a Select object using a WebElement that references a &amp;lt;select&amp;gt; element.</description>
+    </item>
+    
+    <item>
+      <title>安装独立服务器</title>
+      <link>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/</guid>
+      <description>如果您打算使用 Grid， 那么你应该下载 selenium-server-standalone JAR 文件， selenium-server-standalone jar 文件不会被上传， 但是所有的组件都可以通过 selenium-server 提供。 standalone JAR 文件包含所有内容，包括远程 Selenium 服务器和客户端绑定。 这意味着，如果在项目中使用 selenium-server-standalone JAR，则不必添加 selenium-java 或浏览器特定的 jar。
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
     <item>
