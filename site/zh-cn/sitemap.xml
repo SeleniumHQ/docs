@@ -123,36 +123,6 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/</loc>
-    <lastmod>2019-08-07T17:32:57+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://seleniumhq.github.io/docs/site/en/selenium_installation/installing_selenium_libraries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_selenium_libraries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_selenium_libraries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_selenium_libraries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/"
-                />
-  </url>
-  
-  <url>
     <loc>https://seleniumhq.github.io/docs/site/zh-cn/guidelines_and_recommendations/page_object_models/</loc>
     <lastmod>2019-08-07T17:32:57+08:00</lastmod>
     <xhtml:link
@@ -354,6 +324,36 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/</loc>
+    <lastmod>2019-08-08T15:53:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://seleniumhq.github.io/docs/site/en/selenium_installation/installing_selenium_libraries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_selenium_libraries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_selenium_libraries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_selenium_libraries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_selenium_libraries/"
                 />
   </url>
   
@@ -568,36 +568,6 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/</loc>
-    <lastmod>2019-08-07T17:32:57+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://seleniumhq.github.io/docs/site/en/selenium_installation/installing_webdriver_binaries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_webdriver_binaries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_webdriver_binaries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_webdriver_binaries/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/"
-                />
-  </url>
-  
-  <url>
     <loc>https://seleniumhq.github.io/docs/site/zh-cn/introduction/on_test_automation/</loc>
     <lastmod>2019-08-07T17:32:57+08:00</lastmod>
     <xhtml:link
@@ -778,6 +748,36 @@
   </url>
   
   <url>
+    <loc>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/</loc>
+    <lastmod>2019-08-08T15:53:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://seleniumhq.github.io/docs/site/en/selenium_installation/installing_webdriver_binaries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_webdriver_binaries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_webdriver_binaries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_webdriver_binaries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_webdriver_binaries/"
+                />
+  </url>
+  
+  <url>
     <loc>https://seleniumhq.github.io/docs/site/zh-cn/webdriver/browser_manipulation/</loc>
     <lastmod>2019-08-07T17:32:57+08:00</lastmod>
     <xhtml:link
@@ -868,36 +868,6 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/</loc>
-    <lastmod>2019-08-07T17:32:57+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://seleniumhq.github.io/docs/site/en/selenium_installation/installing_standalone_server/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_standalone_server/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_standalone_server/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_standalone_server/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/"
-                />
-  </url>
-  
-  <url>
     <loc>https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/locating_elements/</loc>
     <lastmod>2019-08-07T17:32:57+08:00</lastmod>
     <xhtml:link
@@ -929,7 +899,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/</loc>
-    <lastmod>2019-08-07T17:32:57+08:00</lastmod>
+    <lastmod>2019-08-08T15:53:34+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1044,6 +1014,36 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://seleniumhq.github.io/docs/site/zh-cn/support_packages/working_with_select_elements/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/</loc>
+    <lastmod>2019-08-08T15:53:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://seleniumhq.github.io/docs/site/en/selenium_installation/installing_standalone_server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_standalone_server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_standalone_server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_standalone_server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/selenium_installation/installing_standalone_server/"
                 />
   </url>
   
