@@ -4,15 +4,11 @@ menuTitle: "Propósitos y funcionalidades"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-* Central entry point for all tests
-* Management and control of the nodes / environment where the browsers run on
-* Scaling
-* Running tests in parallel
-* Cross platform testing
-* Load balancing
+* Punto de entrada central para todas las pruebas
+* Gestión y control de los nodos / entorno donde se ejecutan los navegadores
+* Escalado
+* Ejecución de pruebas en paralelo
+* Prueba de plataforma cruzada (_Cross-platform and cross-browser_)
+* Balanceo de carga
+
