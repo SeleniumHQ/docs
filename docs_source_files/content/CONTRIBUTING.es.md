@@ -3,16 +3,9 @@ title: Contribuyendo a la documentación de Selenium
 disableToc: true
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Página traducida de
-Inglés a español. ¿Hablas español? ¡Ayúdanos a traducir o mejorar la traducción
-enviándonos solicitudes de extracción (pull-request)!
-{{% /notice %}}
-
-
 Selenium es un gran proyecto de software y la documentación es clave para comprender cómo funcionan las cosas y aprender formas efectivas de explotar su potencial.
 
-Parte de la documentación de Selenium todavía se sirve de nuestro[** www.seleniumhq.org ** repositorio](https://github.com/SeleniumHQ/www.seleniumhq.org). Sin embargo, estamos eliminando gradualmente esta documentación que se centra demasiado en Selenium RC y otras piezas anticuadas, a favor de esta reescritura.
+Parte de la documentación de Selenium todavía se sirve de nuestro[repositorio ** www.seleniumhq.org ** ](https://github.com/SeleniumHQ/www.seleniumhq.org). Sin embargo, estamos eliminando gradualmente esta documentación que se centra demasiado en Selenium RC y otras piezas anticuadas, a favor de esta reescritura.
 
 La nueva documentación es un proyecto que comenzó a reescribir la documentación de Selenium desde cero. Este es un esfuerzo continuo (no dirigido a ninguna versión específica) para proporcionar un manual actualizado sobre cómo usar Selenium de manera efectiva. Esperamos traer las piezas de la documentación antigua que aún tienen sentido.
 
@@ -22,21 +15,13 @@ Los aportes a los nuevos documentos siguen el proceso descrito en la sección a 
 
 El proyecto Selenium agradece las contribuciones de todos. Hay varias formas de colaborar:
 
-## Reportar un hallazgo (_issue_)
+## Reportar un problema
 
-Al informar un nuevo hallazgo o al comentar problemas existentes, asegúrese de que las discusiones estén relacionadas con temas técnicos concretos con el software Selenium o su documentación.
+Al informar un nuevo problema o al comentar problemas existentes, asegúrese de que las discusiones estén relacionadas con temas técnicos concretos con el software Selenium o su documentación.
 
-Todos los componentes de Selenium cambian bastante rápido en el tiempo, por lo que esto puede hacer que la documentación esté desactualizada. Si considera que este es el caso, como se mencionó, no dude en crear un problema (_issue_) para eso. También es posible que sepa cómo actualizar la documentación, así que envíenos una solicitud de extracción (_pull request_) con los cambios relacionados.
+Todos los componentes de Selenium cambian bastante rápido en el tiempo, por lo que esto puede hacer que la documentación esté desactualizada. Si considera que este es el caso, como se mencionó, no dude en reportar un problema. También es posible que sepa cómo actualizar la documentación, así que envíenos una solicitud  (_pull request_) con los cambios relacionados.
 
-Si no está seguro de si lo que encontró es un problema o no, consulte primero a la [lista de correo de selenium-users@](https://groups.google.com/forum/#!forum/selenium-users), o únase a nosotros en el canal `# selenium` en [irc.freenode.org](https://webchat.freenode.net/) o [Slack](https://seleniumhq.herokuapp.com/).
-
-## Contributions
-
-The Selenium project welcomes new contributors. Individuals making
-significant and valuable contributions over time are made _Committers_
-and given commit-access to the project.
-
-This document will guide you through the contribution process.
+Si no está seguro de si lo que encontró es un problema o no, consulte primero a la [lista de correo de selenium-users@](https://groups.google.com/forum/#!forum/selenium-users), o únase a nosotros en el canal `#selenium` en [irc.freenode.org](https://webchat.freenode.net/) o [Slack](https://seleniumhq.herokuapp.com/).
 
 ## Contribuciones
 
@@ -46,7 +31,7 @@ Este documento lo guiará a través del proceso de contribución.
 
 ### Step 1: Bifurcar (_Fork_)
 
-Haga _fork_ al proyecto [on Github](https://github.com/seleniumhq/docs)
+Haga _fork_ al proyecto [en Github](https://github.com/seleniumhq/docs)
 y verifique su copia localmente.
 
 ```shell
@@ -54,8 +39,6 @@ y verifique su copia localmente.
 % cd docs
 % git remote add upstream git://github.com/seleniumhq/docs.git
 ```
-
-https://gohugo.io/getting-started/installing/
 
 #### Dependencias: Hugo
 
@@ -67,7 +50,7 @@ para renderizar el sitio localmente.
 
 ### Step 2: Ramificación (_Branch_)
 
-Cree una rama de características (_feature branch_) y comience a hackear:
+Cree una rama nueva (_feature branch_) y comience a hackear:
 
 ```shell
 % git checkout -b my-feature-branch
@@ -128,7 +111,7 @@ Si está actualizando los documentos, agregando nuevos o eliminando los obsoleto
 Antes de que podamos aceptar, primero le pedimos a las personas que firmen un
 [Acuerdo de licencia de colaborador](https://spreadsheets.google.com/spreadsheet/viewform?hl=en_US&formkey=dFFjXzBzM1VwekFlOWFWMjFFRjJMRFE6MQ#gid=0) (o CLA). Pedimos esto para que sepamos que los contribuyentes tienen el derecho de donar el código.
 
-Cuando abre su solicitud de extracción (_pull request_), le pedimos que indique que ha firmado el CLA. Esto reducirá el tiempo que nos lleva integrarlo.
+Cuando abre su solicitud (_pull request_), le pedimos que indique que ha firmado el CLA. Esto reducirá el tiempo que nos lleva integrarlo.
 
 ### Paso 8: Empuje (_Push_)
 
@@ -138,11 +121,11 @@ Cuando abre su solicitud de extracción (_pull request_), le pedimos que indique
 
 Vaya a https://github.com/yourusername/docs.git y presione _Pull Request_ y complete el formulario. **Indique que ha firmado el CLA** (consulte el Paso 6).
 
-Las solicitudes de extracción generalmente se revisan en unos pocos días. Si hay comentarios que abordar, aplique sus cambios en los nuevos commits (preferiblemente [arreglos o _fixups_](http://git-scm.com/docs/git-commit)) y avance a la misma rama (_branch_).
+Las solicitudes generalmente se revisan en unos pocos días. Si hay comentarios que abordar, aplique sus cambios en los nuevos commits (preferiblemente [arreglos o _fixups_](http://git-scm.com/docs/git-commit)) y avance a la misma rama (_branch_).
 
 ### Paso 9: Integración
 
-Cuando se completa la revisión del código, un committer tomará su PR (_pull request_) y lo integrará en la rama (_branch_) gh-pages de los documentos. Como nos gusta mantener un historial lineal en la rama maestra, normalmente aplastaremos y cambiaremos (_squash and rebase_) el historial de su rama.
+Cuando se completa la revisión del código, un committer tomará su PR (_pull request_) y lo integrará en la rama (_branch_) gh-pages de los documentos. Como nos gusta mantener un historial lineal en la rama maestra, normalmente resumiremos los cambios (_squash and rebase_) del historial de su rama.
 
 ## Comunicación
 
