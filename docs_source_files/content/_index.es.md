@@ -114,7 +114,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 
 
 Consulte la _[Guía rápida]({{< ref "/getting_started/quick.es.md" >}})_ para obtener una explicación completa de lo que sucede detrás de escena cuando ejecuta este código.
-Debe continuar con la [documentación narrativa]({{< ref "/introduction/_index.md" >}}) para comprender cómo puede [instalar]({{< ref "/selenium_installation/_index.md" >} }) y utilizar con éxito Selenium como herramienta de automatización de pruebas, y escalar pruebas simples como esta para ejecutar en entornos grandes y distribuidos en múltiples navegadores, en varios sistemas operativos diferentes.
+Debe continuar con la [documentación narrativa]({{< ref "/introduction/_index.md" >}}) para comprender cómo puede [instalar]({{< ref "/selenium_installation/_index.md" >}}) y utilizar con éxito Selenium como herramienta de automatización de pruebas, y escalar pruebas simples como esta para ejecutar en entornos grandes y distribuidos en múltiples navegadores, en varios sistemas operativos diferentes.
 
 
 ## Empezando
