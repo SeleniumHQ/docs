@@ -4,12 +4,6 @@ chapter: true
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-  
 # WebDriver
 
 El cambio más grande en Selenium, recientemente, ha sido la inclusión de la API WebDriver. Manejar un navegador de forma nativa como lo haría un usuario localmente o en una máquina remota usando el servidor Selenium, marca un salto adelante en términos de automatización del navegador.
