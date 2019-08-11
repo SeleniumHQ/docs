@@ -3,11 +3,6 @@ title: "Sobre automatización de pruebas"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Página traducida de
-Inglés a español. ¿Hablas español? ¡Ayúdanos a traducir o mejorar la traducción
-enviándonos solicitudes de extracción (pull-request)!
-{{% /notice %}}
 
 Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarlo.
 
