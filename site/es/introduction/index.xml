@@ -50,8 +50,8 @@ For web applications, the automation of this testing can be done directly with S
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/introduction/about_this_documentation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the on-boarding experience for new users.</description>
+      <description>Estos documentos, como el código en sí, son mantenidos al 100% por voluntarios dentro de la comunidad de Selenium. Muchos lo han estado usando desde su inicio, pero muchos más lo han estado usando desde hace poco y han dado su tiempo para ayudar a mejorar la experiencia de iniciación para los nuevos usuarios.
+Si hay un problema con la documentación, ¡queremos saberlo! La mejor manera de comunicar un problema es visitar https://github.</description>
     </item>
     
   </channel>
