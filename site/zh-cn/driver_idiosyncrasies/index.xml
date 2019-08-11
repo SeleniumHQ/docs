@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Driver idiosyncrasies on Selenium 文档</title>
+    <title>驱动特性 on Selenium 文档</title>
     <link>https://seleniumhq.github.io/docs/site/zh-cn/driver_idiosyncrasies/</link>
-    <description>Recent content in Driver idiosyncrasies on Selenium 文档</description>
+    <description>Recent content in 驱动特性 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
