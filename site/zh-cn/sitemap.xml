@@ -1048,36 +1048,6 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/</loc>
-    <lastmod>2019-08-07T17:32:57+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://seleniumhq.github.io/docs/site/en/getting_started_with_webdriver/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://seleniumhq.github.io/docs/site/es/getting_started_with_webdriver/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://seleniumhq.github.io/docs/site/fr/getting_started_with_webdriver/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/"
-                />
-  </url>
-  
-  <url>
     <loc>https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/gmail_email_and_facebook_logins/</loc>
     <lastmod>2019-08-07T17:32:57+08:00</lastmod>
     <xhtml:link
@@ -1224,6 +1194,36 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/waits/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/</loc>
+    <lastmod>2019-08-12T01:15:28+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://seleniumhq.github.io/docs/site/en/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://seleniumhq.github.io/docs/site/es/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/"
                 />
   </url>
   
@@ -1828,36 +1828,6 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/site/zh-cn/driver_idiosyncrasies/</loc>
-    <lastmod>2019-08-07T17:32:57+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://seleniumhq.github.io/docs/site/en/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://seleniumhq.github.io/docs/site/fr/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://seleniumhq.github.io/docs/site/zh-cn/driver_idiosyncrasies/"
-                />
-  </url>
-  
-  <url>
     <loc>https://seleniumhq.github.io/docs/site/zh-cn/webdriver/keyboard/</loc>
     <lastmod>2019-08-07T17:32:57+08:00</lastmod>
     <xhtml:link
@@ -1884,6 +1854,36 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/keyboard/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/site/zh-cn/driver_idiosyncrasies/</loc>
+    <lastmod>2019-08-12T01:15:28+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://seleniumhq.github.io/docs/site/en/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/driver_idiosyncrasies/"
                 />
   </url>
   
