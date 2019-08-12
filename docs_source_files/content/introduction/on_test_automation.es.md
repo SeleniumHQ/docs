@@ -4,17 +4,17 @@ weight: 2
 ---
 
 
-Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarlo.
+Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
 
-Sin embargo, las pruebas funcionales del usuario final, como las pruebas de Selenium, son caras de ejecutar. Además, por lo general requieren una infraestructura sustancial para poder funcionar de manera efectiva. Es una buena regla preguntarse siempre si lo que desea probar se puede hacer utilizando enfoques de prueba más livianos, como pruebas unitarias o con un enfoque de nivel inferior.
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar. Además, por lo general requieren una infraestructura sustancial para poder funcionar de manera efectiva. Es una buena regla preguntarse siempre si lo que desea probar se puede hacer utilizando enfoques de prueba más livianos, como pruebas unitarias o con un enfoque de nivel inferior.
 
-Una vez que haya tomado la determinación de que está en el negocio de las pruebas del navegador web, y tenga su entorno Selenium listo para comenzar a escribir las pruebas, generalmente realizará una combinación de tres pasos:
+Una vez que haya tomado la determinación de que está en el negocio de las pruebas con un navegador web, y tenga su entorno Selenium listo para comenzar a escribir las pruebas, generalmente realizará una combinación de tres pasos:
 
 * Configurar los datos
 * Realizar un conjunto discreto de acciones
 * Evaluar los resultados
 
-Deberá mantener estos pasos lo más cortos posible; una o dos operaciones deberían ser suficientes la mayor parte del tiempo. La automatización del navegador tiene la reputación de ser "escamosa", pero en realidad eso se debe a que los usuarios suelen exigir demasiado. En capítulos posteriores, volveremos a las técnicas que puede usar para mitigar aparentes problemas intermitentes en las pruebas, en particular sobre cómo [superar las condiciones de carrera]({{<ref "/webdriver/waits.es.md">}}) entre el navegador y WebDriver.
+Deberá mantener estos pasos lo más cortos posible; una o dos operaciones deberían ser suficientes la mayor parte del tiempo. La automatización del navegador tiene la reputación de ser "inestable", pero en realidad eso se debe a que los usuarios suelen exigir demasiado. En capítulos posteriores, volveremos a las técnicas que puede usar para mitigar aparentes problemas intermitentes en las pruebas, en particular sobre cómo [superar las condiciones de carrera]({{<ref "/webdriver/waits.es.md">}}) entre el navegador y WebDriver.
 
 Al mantener sus pruebas cortas y usar el navegador web solo cuando no tiene absolutamente ninguna alternativa, puede realizar muchas pruebas con un minimo desgaste.
 
@@ -23,9 +23,9 @@ Una ventaja distintiva de las pruebas de Selenium es su capacidad inherente para
 
 ### Requisitos de prueba
 
-Como se mencionó anteriormente, las pruebas de Selenium pueden ser costosas de ejecutar. Incluso depende del navegador con el que esté ejecutando las pruebas, pero históricamente el comportamiento de los navegadores ha variado tanto que a menudo ha sido un objetivo declarado realizar pruebas cruzadas contra múltiples navegadores (_cross browser_).
+Como se mencionó anteriormente, las pruebas de Selenium pueden ser costosas de ejecutar. Incluso depende del navegador con el que esté ejecutando las pruebas, pero históricamente el comportamiento de los navegadores ha variado tanto que a menudo ha sido un objetivo declarado realizar pruebas con múltiples navegadores (_cross browser_).
 
-Selenium le permite ejecutar las mismas instrucciones en múltiples navegadores en múltiples sistemas operativos, pero la enumeración de todos los navegadores posibles, sus diferentes versiones y los muchos sistemas operativos en los que se ejecutan se le convertirá rápidamente en una tarea compleja.
+Selenium le permite ejecutar las mismas instrucciones en múltiples navegadores y en múltiples sistemas operativos, pero la enumeración de todos los navegadores posibles, sus diferentes versiones y los muchos sistemas operativos en los que se ejecutan se le convertirá rápidamente en una tarea compleja.
 
 
 ### Comencemos con un ejemplo
@@ -42,7 +42,7 @@ El flujo de trabajo general (lo que llamaremos el "camino feliz") es algo como e
 
 
 Sería tentador escribir un gran script Selenium para realizar todas estas operaciones, muchos lo intentarán.
-**¡Resistir la tentación!**
+**¡Resista la tentación!**
 Hacerlo dará como resultado una prueba que
 a) lleva mucho tiempo,
 b) estará sujeto a algunos problemas comunes relacionados con los problemas de tiempo de renderizado de la página, y
@@ -65,9 +65,9 @@ Para comenzar, debe crear una cuenta. Aquí tienes algunas opciones a resolver:
 * ¿Quieres crear una nueva cuenta?
 * ¿Hay alguna propiedad especial de dicho usuario que deba tenerse en cuenta antes de que comience la configuración?
 
-Independientemente de cómo responda estas preguntas, la solución es hacer que forme parte de la flujo de "configurar los datos" de la prueba –si Larry ha expuesto una API que le permite a usted (o cualquier persona) crear y actualizar cuentas de usuario, asegúrese de usarla para responder esta situación– si es posible, lo deseable es iniciar el navegador solo después de tener un usuario "en la mano", cuyas credenciales le permitan iniciar sesión.
+Independientemente de cómo responda estas preguntas, la solución es hacer que forme parte del flujo de "configurar los datos" de la prueba –si Larry ha expuesto una API que le permite a usted (o cualquier persona) crear y actualizar cuentas de usuario, asegúrese de usarla para responder esta situación– si es posible, lo deseable es iniciar el navegador solo después de tener un usuario disponible, cuyas credenciales le permitan iniciar sesión.
 
-Si cada prueba para cada flujo de trabajo comienza con la creación de una cuenta de usuario, se agregarán muchos segundos a la ejecución de cada prueba. Llamar a una API y hablar con una base de datos son operaciones rápidas y "sin cabeza" (_headless_) que no requieren el costoso proceso de abrir un navegador, navegar a las páginas correctas, hacer clic y esperar a que se envíen los formularios, etc.
+Si cada prueba para cada flujo de trabajo comienza con la creación de una cuenta de usuario, se agregarán muchos segundos a la ejecución de cada prueba. Llamar a una API y hablar con una base de datos son operaciones rápidas y sin interfaz gráfica (_headless_) que no requieren el costoso proceso de abrir un navegador, navegar a las páginas correctas, hacer clic y esperar a que se envíen los formularios, etc.
 
 Idealmente, puede abordar esta fase de configuración en una línea de código, que se ejecutará antes de que se inicie cualquier navegador:
 
@@ -113,37 +113,6 @@ account_page = login_as(user.get_email(), user.get_password())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As you can imagine, the `UserFactory` can be extended
-to provide methods such as `createAdminUser()`, and `createUserWithPayment()`.
-The point is, these two lines of code do not distract you from the ultimate purpose of this test:
-configuring a unicorn.
-
-The intricacies of the [Page Object model]({{< ref "/guidelines_and_recommendations/page_object_models.es.md" >}})
-will be discussed in later chapters, but we will introduce the concept here:
-
-Your tests should be composed of actions,
-performed from the user's point of view,
-within the context of pages in the site.
-These pages are stored as objects,
-which will contain specific information about how the web page is composed
-and how actions are performed–
-very little of which should concern you as a tester.
-
-What kind of unicorn do you want?
-You might want pink, but not necessarily.
-Purple has been quite popular lately.
-Does she need sunglasses? Star tattoos?
-These choices, while difficult, are your primary concern as a tester–
-you need to ensure that your order fulfillment center
-sends out the right unicorn to the right person,
-and that starts with these choices.
-
-Notice that nowhere in that paragraph do we talk about buttons,
-fields, drop-downs, radio buttons, or web forms.
-**Neither should your tests!**
-You want to write your code like the user trying to solve their problem.
-Here is one way of doing this (continuing from the previous example):
-
 Como se puede imaginar, la `UserFactory` se puede ampliar para proporcionar métodos como `createAdminUser()` y `createUserWithPayment()`. El punto es que estas dos líneas de código no le distraigan del objetivo final de esta prueba: configurar un unicornio.
 
 Las complejidades del [Modelo de objeto de página (_Page Object Model_)]({{<ref "/guidelines_and_recommendations/page_object_models.es.md">}}) se analizarán en capítulos posteriores, pero presentaremos el concepto aquí:
@@ -153,7 +122,7 @@ Sus pruebas deben estar compuestas de acciones, realizadas desde el punto de vis
 ¿Qué tipo de unicornio quieres? Es posible que desee rosa, pero no necesariamente. El morado ha sido muy popular últimamente. ¿El necesita gafas de sol? ¿Tatuajes de estrellas? Estas elecciones, si bien son difíciles, son su principal preocupación como probador: debe asegurarse de que su centro de cumplimiento de pedidos envíe el unicornio correcto a la persona adecuada, y eso comienza con estas elecciones.
 
 Observe que en ninguna parte de ese párrafo hablamos de botones, campos, menús desplegables, botones de opción o formularios web.
-** ¡Tampoco debería hacerlo sus pruebas! **
+**¡Tampoco debería hacerlo sus pruebas!**
 Lo deseable es escribir el código como el usuario que intenta resolver su problema. Aquí hay una forma de hacerlo (continuando con el ejemplo anterior):
 
 {{< code-tab >}}
@@ -227,7 +196,7 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
 {{< / code-tab >}}
 
 Tenga en cuenta que el _tester_ aún no ha hecho nada más que hablar de unicornios en este código, sin botones, sin localizadores, sin controles del navegador.
-Este método de "modelado" de la aplicación le permite mantener estos comandos de nivel de prueba en su lugar y sin cambios, incluso si Larry decide la próxima semana que ya no le gusta Ruby-on-Rails y decide volver a implementar todo el sitio en los  enlaces más recientes de Haskell con un front-end de Fortran.
+Este método de "modelado" de la aplicación le permite mantener estos comandos de nivel de prueba en su lugar y sin cambios, incluso si Larry decide la próxima semana que ya no le gusta Ruby-on-Rails y decide volver a implementar todo el sitio con las librerías más recientes de Haskell y con un front-end en Fortran.
 
 Los objetos de su página requerirán un pequeño mantenimiento para cumplir con el rediseño del sitio, pero estas pruebas seguirán siendo las mismas. Tomando este diseño básico, querrá continuar con sus flujos de trabajo con la menor cantidad posible de pasos orientados hacia el navegador. Su próximo flujo de trabajo implicará agregar un unicornio al carrito de compras. Probablemente requeriá muchas iteraciones de esta prueba para asegurarse de que el carrito mantenga su estado correctamente:
 ¿Hay más de un unicornio en el carrito antes de comenzar?
