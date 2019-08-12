@@ -243,9 +243,8 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- First, start by asking yourself whether or not you really need to use a browser. Odds are good that, at some point, if you&amp;rsquo;re working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however.</description>
+      <description>Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar. Además, por lo general requieren una infraestructura sustancial para poder funcionar de manera efectiva. Es una buena regla preguntarse siempre si lo que desea probar se puede hacer utilizando enfoques de prueba más livianos, como pruebas unitarias o con un enfoque de nivel inferior.</description>
     </item>
     
     <item>
@@ -369,8 +368,8 @@ Java Python C# Ruby JavaScript WebElement e = driver.findElement(By.id(&amp;#34;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/introduction/about_this_documentation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the on-boarding experience for new users.</description>
+      <description>Estos documentos, como el código en sí, son mantenidos al 100% por voluntarios dentro de la comunidad de Selenium. Muchos lo han estado usando desde su inicio, pero muchos más lo han estado usando desde hace poco y han dado su tiempo para ayudar a mejorar la experiencia de iniciación para los nuevos usuarios.
+Si hay un problema con la documentación, ¡queremos saberlo! La mejor manera de comunicar un problema es visitar https://github.</description>
     </item>
     
     <item>
@@ -581,14 +580,14 @@ Java Python C# Ruby JavaScript WebDriver driver = new FirefoxDriver(); driver.ge
     </item>
     
     <item>
-      <title>Contributing to the Selenium Documentation</title>
+      <title>Contribuyendo a la documentación de Selenium</title>
       <link>https://seleniumhq.github.io/docs/site/es/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/contributing/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
-Part of the documentation of Selenium is still served from our www.seleniumhq.org repository. We are however phasing out this documentation which focuses too much on Selenium RC and other antiquated pieces, in favour of this rewrite.</description>
+      <description>Selenium es un gran proyecto de software y la documentación es clave para comprender cómo funcionan las cosas y aprender formas efectivas de explotar su potencial.
+Parte de la documentación de Selenium todavía se sirve de nuestrorepositorio ** www.seleniumhq.org ** . Sin embargo, estamos eliminando gradualmente esta documentación que se centra demasiado en Selenium RC y otras piezas anticuadas, a favor de esta reescritura.
+La nueva documentación es un proyecto que comenzó a reescribir la documentación de Selenium desde cero.</description>
     </item>
     
   </channel>
