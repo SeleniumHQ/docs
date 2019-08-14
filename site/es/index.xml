@@ -165,9 +165,8 @@ Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); op
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
-Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project.</description>
+      <description>El Selenium se puede ampliar o extender mediante el uso de complementos (plugins). Aquí hay una serie de complementos creados y mantenidos por terceros. Para obtener más información sobre cómo crear su propio complemento o tenerlo en la lista, consulte los documentos.
+Tenga en cuenta que estos complementos no son compatibles, mantenidos, alojados o respaldados por el proyecto Selenium. Además, tenga en cuenta que los complementos que se enumeran a continuación no están necesariamente autorizados bajo la licencia Apache v.</description>
     </item>
     
     <item>
