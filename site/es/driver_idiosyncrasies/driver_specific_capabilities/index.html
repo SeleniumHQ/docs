@@ -12,20 +12,20 @@
     <title>Capacidades especificas de los controladores :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565769527" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565769527" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565769527" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565769527" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565769527" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565769527" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565769527" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565769527" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565769527" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565769795" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565769795" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565769795" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565769795" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565769795" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565769795" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565769795" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565769795" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565769795" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565769527" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565769795" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565769527"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565769795"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565769527"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565769527"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565769795"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565769795"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565769527"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565769795"></script>
 
     
   </div>
@@ -1749,8 +1749,8 @@
 <ul>
 <li><a href="#firefox">Firefox</a>
 <ul>
-<li><a href="#define-capabilities-using-firefoxoptions">Define Capabilities using <code>FirefoxOptions</code></a></li>
-<li><a href="#setting-a-custom-profile">Setting a custom profile</a></li>
+<li><a href="#definir-capacidades-capabilities-usando-firefoxoptions">Definir Capacidades (<em>Capabilities</em>) usando <code>FirefoxOptions</code></a></li>
+<li><a href="#configuración-de-un-perfil-personalizado">Configuración de un perfil personalizado</a></li>
 </ul></li>
 <li><a href="#internet-explorer">Internet Explorer</a>
 <ul>
@@ -1784,19 +1784,96 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
 <h2 id="firefox">Firefox</h2>
 
-<h3 id="define-capabilities-using-firefoxoptions">Define Capabilities using <code>FirefoxOptions</code></h3>
+<h3 id="definir-capacidades-capabilities-usando-firefoxoptions">Definir Capacidades (<em>Capabilities</em>) usando <code>FirefoxOptions</code></h3>
 
-<p><code>FirefoxOptions</code> is the new way to define capabilities for the Firefox
-browser and should generally be used in preference to DesiredCapabilities.</p>
+<p><code>FirefoxOptions</code> es la nueva forma de definir capacidades para el navegador Firefox y, por lo general, debe usarse con preferencia a las capacidades deseadas.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    
+    <label for="tab0code0">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
+    
+    <label for="tab1code0">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
+    
+    <label for="tab2code0">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
+    
+    <label for="tab3code0">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
+    
+    <label for="tab4code0">JavaScript</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+FirefoxOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions();
+options.addPreference(<span style="color:#2aa198">&#34;network.proxy.type&#34;</span>, 0);
+driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">from</span> selenium.webdriver.firefox.options <span style="color:#719e07">import</span> Options
+options <span style="color:#719e07">=</span> Options()
+options<span style="color:#719e07">.</span>headless <span style="color:#719e07">=</span> <span style="color:#268bd2">True</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Firefox(options<span style="color:#719e07">=</span>options)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Todavía no tenemos una muestra de código C#: ayúdenos y genere un PR (_pull request_)
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="configuración-de-un-perfil-personalizado">Configuración de un perfil personalizado</h3>
+
+<p>Es posible crear un perfil personalizado para Firefox como se muestra a continuación.</p>
 
 
 
@@ -1834,91 +1911,6 @@ browser and should generally be used in preference to DesiredCapabilities.</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-FirefoxOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions();
-options.addPreference(<span style="color:#2aa198">&#34;network.proxy.type&#34;</span>, 0);
-driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">from</span> selenium.webdriver.firefox.options <span style="color:#719e07">import</span> Options
-options <span style="color:#719e07">=</span> Options()
-options<span style="color:#719e07">.</span>headless <span style="color:#719e07">=</span> <span style="color:#268bd2">True</span>
-driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Firefox(options<span style="color:#719e07">=</span>options)
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  
-</code></pre></div>
-</section>
-</div>
-</div>
-
-<h3 id="setting-a-custom-profile">Setting a custom profile</h3>
-
-<p>It is possible to create a custom profile for Firefox as demonstrated below.</p>
-
-
-
-
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
-    
-    <label for="tab0code2">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2">
-    
-    <label for="tab1code2">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2">
-    
-    <label for="tab2code2">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2">
-    
-    <label for="tab3code2">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
-    
-    <label for="tab4code2">JavaScript</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 FirefoxProfile <span style="color:#268bd2">profile</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxProfile();
 FirefoxOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions();
 options.setProfile(profile);
@@ -1928,7 +1920,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</spa
   
 
 
-<section id="pythoncode2" class="tab-panel">
+<section id="pythoncode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#719e07">from</span> selenium.webdriver.firefox.options <span style="color:#719e07">import</span> Options
 <span style="color:#719e07">from</span> selenium.webdriver.firefox.firefox_profile <span style="color:#719e07">import</span> FirefoxProfile
@@ -1941,26 +1933,26 @@ options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=
   
 
 
-<section id="csharpcode2" class="tab-panel">
+<section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+<span style="color:#586e75">// Todavía no tenemos una muestra de código C#: ayúdenos y genere un PR (_pull request_)
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
   
 
 
-<section id="rubycode2" class="tab-panel">
+<section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+<span style="color:#586e75"># Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)</span>
   </code></pre></div>
 </section>
   
 
 
-<section id="javascriptcode2" class="tab-panel">
+<section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+<span style="color:#586e75">// Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
@@ -1971,9 +1963,7 @@ options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=
 
 <h3 id="fileuploaddialogtimeout">fileUploadDialogTimeout</h3>
 
-<p>In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.</p>
+<p>En algunos entornos, Internet Explorer puede agotar el tiempo de espera al abrir el cuadro de diálogo Cargar archivo. IEDriver tiene un tiempo de espera predeterminado de 1000 ms, pero puede aumentar el tiempo de espera usando la <em>capability</em> fileUploadDialogTimeout.</p>
 
 
 <footer class=" footline" >
@@ -1983,7 +1973,7 @@ can increase the timeout using the fileUploadDialogTimeout capability.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/driver_specific_capabilities/">
       “Capacidades especificas de los controladores”
-    </a> was last updated on: 07 Aug 2019 15:02:50 &#43;0000: <a href="https://github.com/SeleniumHQ/docs/commit/cb72b2833b9f4d0607125d69f88e872609a06377">Publishing site on Wed Aug  7 15:02:50 UTC 2019, commit 50304689238bcd2d62651ace3425d230bdae80fa and job 615.1, [skip ci] (cb72b283)</a>
+    </a> was last updated on: 14 Aug 2019 03:02:23 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/5d26efbb53ec138e300b3dc955000e8de7e4244c">Update driver_specific_capabilities.es.md (#323) (5d26efbb)</a>
 </h5>
         
         </div> 
@@ -3100,20 +3090,20 @@ can increase the timeout using the fileUploadDialogTimeout capability.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565769527"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565769527"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565769527"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565769527"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565769527"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565769527"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565769527"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565769795"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565769795"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565769795"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565769795"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565769795"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565769795"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565769795"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565769527"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565769527"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565769527"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565769795"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565769795"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565769795"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565769527" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565769527"></script>
+    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565769795" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565769795"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
