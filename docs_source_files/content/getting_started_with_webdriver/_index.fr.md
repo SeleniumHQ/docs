@@ -10,26 +10,27 @@ English to French. Do you speak French? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Getting started with WebDriver
+# Débuter avec WebDriver
 
-Selenium supports automation of all the major browsers in the market
-through the use of _WebDriver_.
-WebDriver is an API and protocol that defines a language-neutral interface
-for controlling the behaviour of web browsers.
-Each browser is backed by a specific WebDriver implementation, called a *driver*.
-The driver is the component responsible for delegating down to the browser,
-and handles communication to and from Selenium and the browser.
+Selenium permet l'automatisation des navigateurs les plus courants du marché 
+à travers l'utilisation de _WebDriver_.
+WebDriver est une API et un protocole définissant une interface agnostique 
+(non orientée vers un langage spécifique) 
+permettant de controller le comportement des navigateurs web.
+Chaque navigateur est appuyé par une implémentation spécifique de WebDriver,
+appelée un *driver*.
+Ce driver est le composant responsable de la délégation vers le navigateur,
+et gère la communication entre Selenium et le navigateur.
 
-This separation is part of a conscious effort to have browser vendors
-take responsibility for the implementation for their browsers.
-Selenium makes use of these third party drivers where possible,
-but also provides its own drivers maintained by the project
-for the cases when this is not a reality.
+Cette séparation fait partie d'un effor conscient afin de responsabiliser
+les fournisseurs de navigateurs quant à l'implémentation de ceux-ci.
+Selenium tire parti de drivers tierces lorsque c'est possible,
+mais fournit également ces propres drivers, maintenus par le projet,
+lorsque nécessaire.
 
-The Selenium framework ties all of these pieces together
-through a user-facing interface that enables the different browser backends
-to be used transparently,
-enabling cross-browser and cross-platform automation.
+Le framework Selenium relie toutes ces pièces ensemnle via une interface
+user-friendly qui permet d'utiliser différents navigateurs de manière transparente,
+permettant ainsi l'automatisation cross-platform et cross-browser.
 
-More details about drivers can be found in 
-[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}}).
+Plus de détail à propos des driver peut être trouvé au chapitre
+[Singularités du Driver]({{< ref "/driver_idiosyncrasies/_index.md" >}}).
