@@ -12,4 +12,4 @@ it by sending us pull requests!
 
 # Introduction
 
-Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of web browsers. 
+Selenium est un projet englobant un ensemble d'outil et de librairies rendant possible l'automatisation de navigateur web. 
