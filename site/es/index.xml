@@ -49,9 +49,8 @@ Every effort has been made to make this documentation as complete and as accurat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/introduction/the_selenium_project_and_tools/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium controls web browsers Selenium is many things, but at its core it&amp;rsquo;s a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
-It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
+      <description>Selenium controla navegadores web Selenium es muchas cosas, pero en esencia es un conjunto de herramientas para la automatización del navegador web que utiliza las mejores técnicas disponibles para controlar de forma remota las instancias del navegador y emular la interacción de un usuario con el navegador.
+Permite a los testers simular actividades comunes realizadas por los usuarios finales; ingresar texto en los campos, seleccionar valores desplegables y casillas de verificación, y hacer clic en los enlaces de los documentos.</description>
     </item>
     
     <item>
@@ -243,9 +242,8 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- First, start by asking yourself whether or not you really need to use a browser. Odds are good that, at some point, if you&amp;rsquo;re working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however.</description>
+      <description>Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar. Además, por lo general requieren una infraestructura sustancial para poder funcionar de manera efectiva. Es una buena regla preguntarse siempre si lo que desea probar se puede hacer utilizando enfoques de prueba más livianos, como pruebas unitarias o con un enfoque de nivel inferior.</description>
     </item>
     
     <item>
@@ -336,9 +334,8 @@ Java Python C# Ruby JavaScript WebElement cheese = driver.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/introduction/types_of_testing/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation.</description>
+      <description>Prueba de aceptación Este tipo de prueba se realiza para determinar si la característica de un producto cumple con sus requisitos. Esto generalmente implica la retroalimentación o especificación del cliente.
+Para aplicaciones web, la automatización de este tipo de prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario. Esta simulación se puede realizar mediante grabación / reproducción o mediante los diferentes lenguajes de programación admitidos, tal como se explica en esta documentación.</description>
     </item>
     
     <item>
@@ -369,8 +366,8 @@ Java Python C# Ruby JavaScript WebElement e = driver.findElement(By.id(&amp;#34;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/introduction/about_this_documentation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the on-boarding experience for new users.</description>
+      <description>Estos documentos, como el código en sí, son mantenidos al 100% por voluntarios dentro de la comunidad de Selenium. Muchos lo han estado usando desde su inicio, pero muchos más lo han estado usando desde hace poco y han dado su tiempo para ayudar a mejorar la experiencia de iniciación para los nuevos usuarios.
+Si hay un problema con la documentación, ¡queremos saberlo! La mejor manera de comunicar un problema es visitar https://github.</description>
     </item>
     
     <item>
