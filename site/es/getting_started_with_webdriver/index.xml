@@ -17,9 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/getting_started_with_webdriver/browsers/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Consumer browsers The Selenium framework officially supports the following browsers:
-   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.</description>
+      <description>Navegadores (Browsers) de consumidores El marco Selenium admite oficialmente los siguientes navegadores:
+   Navegador Desarrollador Versiones soportadas     Chromium Chromium Todas las versiones   Firefox Mozilla 54 y recientes   Internet Explorer Selenium 6 y recientes   Opera Opera Chromium / Presto 10.5 y recientes   Safari Apple 10 y recientes    Navegadores especializados También hay un conjunto de navegadores especializados que generalmente se usan en entornos de desarrollo.</description>
     </item>
     
     <item>
