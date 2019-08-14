@@ -65,6 +65,16 @@ Terminology  API: Application Programming Interface.</description>
     </item>
     
     <item>
+      <title>Guía rápida</title>
+      <link>https://seleniumhq.github.io/docs/site/es/getting_started/quick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/es/getting_started/quick/</guid>
+      <description>Selenium no es solo una herramienta o API, sino que compone muchas herramientas.
+WebDriver WebDriver también se conoce como Selenium 2. Si está comenzando con la automatización de pruebas de sitios web de escritorio, entonces va a utilizar las API de WebDriver. WebDriver utiliza las API de automatización del navegador proporcionadas por los desarrolladores de los navegadores para controlar el navegador y ejecutar pruebas. Esto es como si un usuario real estuviera manipulando el navegador.</description>
+    </item>
+    
+    <item>
       <title>Instalación de las librerías Selenium</title>
       <link>https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_selenium_libraries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -116,17 +126,6 @@ Java Python C# Ruby JavaScript // Navigate to a URL (both of the statements belo
       <guid>https://seleniumhq.github.io/docs/site/es/grid/purposes_and_main_functionalities/</guid>
       <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
   Central entry point for all tests Management and control of the nodes / environment where the browsers run on Scaling Running tests in parallel Cross platform testing Load balancing  </description>
-    </item>
-    
-    <item>
-      <title>Tour rápido</title>
-      <link>https://seleniumhq.github.io/docs/site/es/getting_started/quick/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://seleniumhq.github.io/docs/site/es/getting_started/quick/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium is not just one tool or API but it composes many tools.
-WebDriver WebDriver is also known as Selenium 2. If you are beginning with desktop website test automation then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests.</description>
     </item>
     
     <item>
