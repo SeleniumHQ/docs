@@ -13,5 +13,5 @@ Con Selenium Grid, un servidor actúa como el centro que enruta los comandos de 
 
 Selenium Grid nos permite ejecutar pruebas en paralelo en múltiples máquinas, y administrar diferentes versiones y configuraciones de navegador de forma centralizada (en lugar de en cada prueba individual).
 
-Selenium Grid no es una bala de plata. Resuelve un subconjunto de problemas comunes de delegación y distribución, pero, por ejemplo, no administrará su infraestructura y podría no satisfacer sus necesidades específicas.
+Selenium Grid no es una solución mágica para todas las situaciones. Resuelve un subconjunto de problemas comunes de delegación y distribución, pero, por ejemplo, no administrará su infraestructura y podría no satisfacer algunas de sus necesidades específicas.
 
