@@ -66,7 +66,7 @@ Independientemente de si desea ejecutar una grid con la nueva funcionalidad WebD
 java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444
 ```
 
-Si no se especifica un puerto a través de la bandera `-port`, se elegirá un puerto libre. Puede ejecutar múltiples nodos en una máquina, pero si lo hace, debe conocer los recursos de memoria de su sistema y los problemas con las capturas de pantalla si sus pruebas los toman.
+Si no se especifica un puerto a través de la argumento `-port`, se elegirá un puerto libre. Puede ejecutar múltiples nodos en una máquina, pero si lo hace, debe conocer los recursos de memoria de su sistema y los problemas con las capturas de pantalla si sus pruebas los toman.
 
 
 #### Configuración de Nodo con opciones
@@ -130,7 +130,7 @@ Y este es un ejemplo del archivo `nodeConfig.json`:
 }
 ```
 
-Una nota sobre la bandera `-host`
+Una nota sobre la argumento `-host`
 
 Tanto para el concentrador como para el nodo, si no se especifica el indicador `-host`, se usará` 0.0.0.0` por defecto. Esto se unirá a todas las interfaces IPv4 públicas (sin loopback) de la máquina. Si tiene una configuración de red especial o algún componente que cree interfaces de red adicionales, se recomienda establecer el indicador `-host` con un valor que permita que se pueda acceder al concentrador / nodo desde una máquina diferente.
 
