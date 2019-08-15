@@ -3,12 +3,6 @@ title: "Réaliser des action sur l'AUT*"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 Il est possible de renseigner le texte d'un élément web grâce à la méthode _sendKeys_, comme suit:
 
 {{< code-tab >}}
