@@ -4,8 +4,6 @@ weight: 1
 ---
 
 
-First you need to install the Selenium bindings for your automation project.
-The installation process for libraries depends on the language you choose to use.
 Primero debe instalar las librerías de Selenium para su proyecto de automatización. El proceso de instalación de las librerías depende del lenguaje que elija usar.
 
 ## _Java_
