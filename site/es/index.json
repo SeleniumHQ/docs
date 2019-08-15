@@ -81,7 +81,7 @@
 	"title": "Propósitos y funcionalidades principales",
 	"tags": [],
 	"description": "",
-	"content": "  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!\n  Central entry point for all tests Management and control of the nodes / environment where the browsers run on Scaling Running tests in parallel Cross platform testing Load balancing  "
+	"content": " Punto de entrada central para todas las pruebas Gestión y control de los nodos / entorno donde se ejecutan los navegadores Ejecución de pruebas a gran escala Ejecución de pruebas en paralelo Pruebas de diferentes plataformas (Cross-platform and cross-browser) Balanceo de carga  "
 },
 {
 	"uri": "https://seleniumhq.github.io/docs/site/es/remote_webdriver/remote_webdriver_server/",
