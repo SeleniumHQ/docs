@@ -3,20 +3,8 @@ title: "Capacidades compartidas"
 weight: 1
 ---
 
-## pageLoadStrategy
-When navigating to a new page via URL, by default Selenium will wait
-until the page has fully loaded before responding. This works well for
-beginners, but can cause long wait times on pages that load a large
-number of third party resources. Using a non default strategy can make
-test execution faster in cases like this, but can also introduce flakiness
-where elements on the page change position as elements load in and change
-size.
 
-The page load strategy queries the
-[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
-as described in the table below:
-
-## pageLoadStrategy
+## Estrategia de carga de la página (_pageLoadStrategy_)
 
 Al navegar a una nueva página a través de URL, por defecto Selenium esperará hasta que la página se haya cargado completamente antes de responder. Esto funciona bien para principiantes, pero puede causar largos tiempos de espera en páginas que cargan una gran cantidad de recursos de terceros. El uso de una estrategia no predeterminada puede hacer que la ejecución de la prueba sea más rápida en casos como este, pero también puede introducir inestabilidad donde los elementos en la página cambian de posición a medida que los elementos se cargan y cambian de tamaño.
 
