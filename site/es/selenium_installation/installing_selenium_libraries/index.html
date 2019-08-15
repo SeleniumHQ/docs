@@ -12,20 +12,20 @@
     <title>Instalación de las librerías Selenium :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565850322" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565850322" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565850322" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565850322" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565850322" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565850322" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565850322" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565850322" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565850322" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/nucleus.css?1565850525" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/fontawesome-all.min.css?1565850525" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hybrid.css?1565850525" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/featherlight.min.css?1565850525" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/perfect-scrollbar.min.css?1565850525" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/auto-complete.css?1565850525" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/atom-one-dark-reasonable.css?1565850525" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/theme.css?1565850525" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/css/hugo-theme.css?1565850525" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565850322" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/css/theme-selenium.css?1565850525" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565850322"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery-3.3.1.min.js?1565850525"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565850322"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565850322"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/lunr.min.js?1565850525"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/auto-complete.js?1565850525"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565850322"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/js/search.js?1565850525"></script>
 
     
   </div>
@@ -1780,38 +1780,24 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>First you need to install the Selenium bindings for your automation project.
-The installation process for libraries depends on the language you choose to use.</p>
+<p>Primero debe instalar las librerías de Selenium para su proyecto de automatización. El proceso de instalación de las librerías depende del lenguaje que elija usar.</p>
 
 <h2 id="java"><em>Java</em></h2>
 
-<p>Installation of Selenium libraries for Java can be done using Maven.
-Add the <em>selenium-java</em> dependency in your project pom.xml:</p>
+<p>La instalación de las bibliotecas Selenium para Java se puede hacer usando Maven.
+Agregue la dependencia <em>selenium-java</em> en el archivo <em>pom.xml</em> de su proyecto:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-java<span style="color:#268bd2">&lt;/artifactId&gt;</span>
   <span style="color:#268bd2">&lt;version&gt;</span>3.X<span style="color:#268bd2">&lt;/version&gt;</span>
 <span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
-<p>The <em>selenium-java</em> dependency supports running your automation
-project with all Selenium supported browsers. If you want to run tests
-only in a specific browser, you can add the dependency for that browser
-in your <em>pom.xml</em> file.
-For example, you should add following dependency in your <em>pom.xml</em>
-file to run your tests only in Firefox:</p>
+<p>La dependencia de <em>selenium-java</em> admite la ejecución de su proyecto de automatización con todos los navegadores compatibles con Selenium. Si desea ejecutar pruebas solo en un navegador específico, puede agregar la dependencia para ese navegador en su archivo <em>pom.xml</em>. Por ejemplo, debe agregar la siguiente dependencia en su archivo <em>pom.xml</em> para ejecutar sus pruebas solo en Firefox:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-firefox-driver<span style="color:#268bd2">&lt;/artifactId&gt;</span>
   <span style="color:#268bd2">&lt;version&gt;</span>3.X<span style="color:#268bd2">&lt;/version&gt;</span>
 <span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
-<p>In a similar manner, if you want to run tests only in Chrome,
-you should add the following dependency:</p>
+<p>De manera similar, si desea ejecutar pruebas solo en Chrome, debe agregar la siguiente dependencia:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-chrome-driver<span style="color:#268bd2">&lt;/artifactId&gt;</span>
@@ -1819,25 +1805,25 @@ you should add the following dependency:</p>
 <span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
 <h2 id="python"><em>Python</em></h2>
 
-<p>Installation of Selenium libraries for Python can be done using pip:</p>
+<p>La instalación de las librerías de Selenium en Python se puede hacer usando pip:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install selenium</code></pre></div>
-<p>Alternatively you can download the <a href="https://pypi.org/project/selenium/#files">PyPI source archive</a>
-(selenium-x.x.x.tar.gz) and install it using <em>setup.py</em>:</p>
+<p>Alternativamente, puede descargar el <a href="https://pypi.org/project/selenium/#files">archivo fuente PyPI</a>
+(selenium-x.x.x.tar.gz) e instalarlo usando <em>setup.py</em>:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python setup.py install</code></pre></div>
 <h2 id="c"><em>C#</em></h2>
 
-<p>Installation of Selenium libraries for C# can be done using NuGet:</p>
+<p>La instalación de las librerías de Selenium para C# se puede hacer usando NuGet:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#586e75"># Using package manager</span>
 Install-Package Selenium.WebDriver
 <span style="color:#586e75"># or using .Net CLI</span>
 dotnet add package Selenium.WebDriver</code></pre></div>
 <h2 id="ruby"><em>Ruby</em></h2>
 
-<p>Installation of Selenium libraries for Ruby can be done using gem:</p>
+<p>La instalación de las librerías de Selenium para Ruby se puede hacer usando gem:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem install selenium-webdriver</code></pre></div>
 <h2 id="javascript"><em>JavaScript</em></h2>
 
-<p>Installation of Selenium libraries for JavaScript can be done using npm:</p>
+<p>La instalación de las librerías de Selenium para JavaScript se puede hacer usando npm:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install selenium-webdriver</code></pre></div>
 
 <footer class=" footline" >
@@ -1847,7 +1833,7 @@ dotnet add package Selenium.WebDriver</code></pre></div>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_selenium_libraries/">
       “Instalación de las librerías Selenium”
-    </a> was last updated on: 09 Aug 2019 07:08:04 &#43;0000: <a href="https://github.com/SeleniumHQ/docs/commit/30b0afdadcd36db419a4d58a6ea15c5818f4a9ab">Publishing site on Fri Aug  9 07:08:04 UTC 2019, commit 25a30bc445cdf74286fdfe79feaac58ec92e9617 and job 625.1, [skip ci] (30b0afda)</a>
+    </a> was last updated on: 15 Aug 2019 01:27:54 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/a4720c9a61ffd6f507ad6d3bd5512f452305e974">Update installing_selenium_libraries.es.md (#326) (a4720c9a)</a>
 </h5>
         
         </div> 
@@ -2961,20 +2947,20 @@ dotnet add package Selenium.WebDriver</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565850323"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565850323"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565850323"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565850323"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565850323"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565850323"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565850323"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/clipboard.min.js?1565850525"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.min.js?1565850525"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/perfect-scrollbar.jquery.min.js?1565850525"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/jquery.sticky.js?1565850525"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/featherlight.min.js?1565850525"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/html5shiv-printshiv.min.js?1565850525"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/highlight.pack.js?1565850525"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565850323"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565850323"></script>
-    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565850323"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/modernizr.custom-3.6.0.js?1565850525"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/learn.js?1565850525"></script>
+    <script src="https://seleniumhq.github.io/docs/site/js/hugo-learn.js?1565850525"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565850323" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565850323"></script>
+    <link href="https://seleniumhq.github.io/docs/site/mermaid/mermaid.css?1565850525" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/mermaid/mermaid.js?1565850525"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
