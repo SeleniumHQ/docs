@@ -9,6 +9,6 @@ weight: 1
 * Gestión y control de los nodos / entorno donde se ejecutan los navegadores
 * Ejecución de pruebas a gran escala
 * Ejecución de pruebas en paralelo
-* Prueba de plataforma cruzada (_Cross-platform and cross-browser_)
+* Pruebas de diferentes plataformas (_Cross-platform and cross-browser_)
 * Balanceo de carga
 
