@@ -3,12 +3,6 @@ title: "A propos de cette documentation"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 Cette documentation, tout comme le code lui-même, est maintenue à 100% 
 par des volontaires de la communauté Selenium.
 Beaucoup font partie des utilisateurs de la première heure,
