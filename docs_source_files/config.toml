@@ -20,7 +20,7 @@ enableGitInfo = true
 
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "selenium"  
+  themeVariant = "selenium"
   editURL = "https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/"
   ghrepo = "https://github.com/SeleniumHQ/docs/"
   description = "Documentation for Selenium"
@@ -37,6 +37,7 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Documentation for Selenium"
 weight = 1
 languageName = "English"
+baseURL = "https://seleniumhq.github.io/docs/site/en"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -63,6 +64,7 @@ weight = 30
 title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
+baseURL = "https://seleniumhq.github.io/docs/site/es"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Repo en GitHub"
@@ -89,6 +91,7 @@ weight = 30
 title = "Selenium documentatie"
 weight = 3
 languageName = "Nederlands"
+baseURL = "https://seleniumhq.github.io/docs/site/nl"
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -110,3 +113,57 @@ weight = 20
 name = "<i class='fas fa-fw fa-bullhorn'></i> Hoe bij te dragen"
 url = "contributing"
 weight = 30
+
+[Languages.zh-cn]
+title = "Selenium 文档"
+weight = 4
+languageName = "中文简体"
+baseURL = "https://seleniumhq.github.io/docs/site/zh-cn"
+
+[[Languages.zh-cn.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/docs"
+weight = 10
+
+[[Languages.zh-cn.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
+url = "https://github.com/seleniumhq/docs/issues"
+weight = 11
+
+[[Languages.zh-cn.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.zh-cn.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
+url = "contributing"
+weight = 30
+
+[Languages.fr]
+title = "Documentation Selenium"
+weight = 5
+languageName = "Français"
+baseURL = "https://seleniumhq.github.io/docs/site/fr"
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
+url = "https://github.com/seleniumhq/docs/issues"
+weight = 11
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Crédits"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Comment contribuer"
+url = "contributing"
+weight = 30
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/docs"
+weight = 10
