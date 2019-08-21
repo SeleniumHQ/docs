@@ -3,12 +3,6 @@ title: "Acties op de AUT*"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Dutch. Do you speak Dutch? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 Je kan de tekst van een element invullen aan de hand van de sendKeys methode:
 
 {{< code-tab >}}
