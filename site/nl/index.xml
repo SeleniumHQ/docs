@@ -181,6 +181,16 @@ Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); op
     </item>
     
     <item>
+      <title>Externe drivers en plugins</title>
+      <link>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
+      <description>Selenium ondersteunt externe plugins. Hieronder vind je plugins die ontwikkeld zijn en onderhouden worden door externe partijen. Meer informatie omtrent het ontwikkelen van je eigen plugin of het publiceren ervan kan je de documentatie raadplegen.
+Deze plugins worden niet ondersteund, onderhouden, gehost of aanbevolen door het Selenium project. De plugins die hieronder opgelijst staan, dragen niet altijd de Apache License v2.0. Sommige plugins vallen onder een andere gratis of open source licentie; anderen zijn enkel beschikbaar onder patent.</description>
+    </item>
+    
+    <item>
       <title>File downloads</title>
       <link>https://seleniumhq.github.io/docs/site/nl/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -230,17 +240,6 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       <guid>https://seleniumhq.github.io/docs/site/nl/remote_webdriver/remote_webdriver_client/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
-    </item>
-    
-    <item>
-      <title>Third party drivers and plugins</title>
-      <link>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
-      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
-Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project.</description>
     </item>
     
     <item>
@@ -310,8 +309,7 @@ Please note that these plugins are not supported, maintained, hosted, or endorse
       
       <guid>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/locating_elements/</guid>
       <description>Localisatie van elementen  Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- Localisatie van elementen One of the most fundamental techniques to learn when using WebDriver is how to find elements on the page. WebDriver offers a number of built-in selector types, amongst them finding an element by its ID attribute:
-Java Python C# Ruby JavaScript WebElement cheese = driver.</description>
+ Localisatie van elementen Een van de meest fundamentele technieken die nodig zijn om WebDriver onder de knie te krijgen, is het lokaliseren van elementen op een pagina. WebDriver beschikt over een aantal ingebouwde selector types, een van hen is het lokaliseren van een element op basis van zijn ID:</description>
     </item>
     
     <item>
@@ -358,6 +356,16 @@ Java Python C# Ruby JavaScript import org.</description>
     </item>
     
     <item>
+      <title>Acties op de AUT*</title>
+      <link>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
+      <description>Je kan de tekst van een element invullen aan de hand van de sendKeys methode:
+Java Python C# Ruby JavaScript String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);     Sommige applicaties gebruiken Javascript libraries om drag-en-drop functionaliteit toe te voegen. Hieronder vind je een simpel voorbeeld waarbij een element versleept word naar een ander element:</description>
+    </item>
+    
+    <item>
       <title>Gmail, email and Facebook logins</title>
       <link>https://seleniumhq.github.io/docs/site/nl/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -387,17 +395,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Suppose you have an arbitrary web element e:
 Java Python C# Ruby JavaScript WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      You can simulate mouse clicking on e if it&amp;rsquo;s visible and has a height and width that are greater than 0:</description>
-    </item>
-    
-    <item>
-      <title>Performing actions on the AUT*</title>
-      <link>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
-      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- You can set an element&amp;rsquo;s text using the sendKeys method as follows:
-Java Python C# Ruby JavaScript String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.</description>
     </item>
     
     <item>
