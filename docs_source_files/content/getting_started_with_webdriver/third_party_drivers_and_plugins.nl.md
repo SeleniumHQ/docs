@@ -3,12 +3,6 @@ title: "Externe drivers en plugins"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Dutch. Do you speak Dutch? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 Selenium ondersteunt externe plugins. Hieronder vind je plugins die ontwikkeld
 zijn en onderhouden worden door externe partijen. Meer informatie omtrent
 het ontwikkelen van je eigen plugin of het publiceren ervan kan je de documentatie
