@@ -12,20 +12,20 @@
     <title>JavaScript alerts, prompts and confirmations :: Selenium documentatie</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/nucleus.css?1566156495" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/fontawesome-all.min.css?1566156495" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/hybrid.css?1566156495" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/featherlight.min.css?1566156495" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/perfect-scrollbar.min.css?1566156495" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/auto-complete.css?1566156495" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/atom-one-dark-reasonable.css?1566156495" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/theme.css?1566156495" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/hugo-theme.css?1566156495" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/nucleus.css?1566329493" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/fontawesome-all.min.css?1566329493" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/hybrid.css?1566329493" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/featherlight.min.css?1566329493" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/perfect-scrollbar.min.css?1566329493" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/auto-complete.css?1566329493" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/atom-one-dark-reasonable.css?1566329493" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/theme.css?1566329493" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/hugo-theme.css?1566329493" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/nl/css/theme-selenium.css?1566156495" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/nl/css/theme-selenium.css?1566329493" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery-3.3.1.min.js?1566156495"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery-3.3.1.min.js?1566329493"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/lunr.min.js?1566156495"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/auto-complete.js?1566156495"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/lunr.min.js?1566329493"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/auto-complete.js?1566329493"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/search.js?1566156495"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/search.js?1566329493"></script>
 
     
   </div>
@@ -1899,7 +1899,22 @@ alert<span style="color:#719e07">.</span>accept()
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#39;See an example alert&#39;</span>)).click();
+
+<span style="color:#586e75">// Wait for the alert to be displayed
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.wait(until.alertIsPresent());
+
+<span style="color:#586e75">// Store the alert in a variable
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alert <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.switchTo().alert();
+
+<span style="color:#586e75">//Store the alert text in a variable
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alertText <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> alert.getText();
+
+<span style="color:#586e75">//Press the OK button
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> alert.accept();
+
+<span style="color:#586e75">// Note: To use await, the above code should be inside an async function
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
@@ -2022,7 +2037,22 @@ alert<span style="color:#719e07">.</span>dismiss()
 
 <section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#39;See an example alert&#39;</span>)).click();
+
+<span style="color:#586e75">// Wait for the alert to be displayed
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.wait(until.alertIsPresent());
+
+<span style="color:#586e75">// Store the alert in a variable
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alert <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.switchTo().alert();
+
+<span style="color:#586e75">//Store the alert text in a variable
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alertText <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> alert.getText();
+
+<span style="color:#586e75">//Press the Cancel button
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> alert.dismiss();
+
+<span style="color:#586e75">// Note: To use await, the above code should be inside an async function
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
@@ -2140,7 +2170,22 @@ alert<span style="color:#719e07">.</span>accept()
 
 <section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#39;See an example alert&#39;</span>)).click();
+
+<span style="color:#586e75">// Wait for the alert to be displayed
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.wait(until.alertIsPresent());
+
+<span style="color:#586e75">// Store the alert in a variable
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alert <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.switchTo().alert();
+
+<span style="color:#586e75">//Type your message
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> alert.sendKeys(<span style="color:#2aa198">&#34;Selenium&#34;</span>);
+
+<span style="color:#586e75">//Press the OK button
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> alert.accept();
+
+<span style="color:#586e75">//Note: To use await, the above code should be inside an async function 
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
@@ -2155,7 +2200,7 @@ alert<span style="color:#719e07">.</span>accept()
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/nl/webdriver/js_alerts_prompts_and_confirmations/">
       “JavaScript alerts, prompts and confirmations”
-    </a> was last updated on: 12 Aug 2019 08:56:57 &#43;0000: <a href="https://github.com/SeleniumHQ/docs/commit/6d61aba80df5362d8366eb5d864d7c88bebc5a69">Publishing site on Mon Aug 12 08:56:57 UTC 2019, commit f60320a19866a8b0244c14baefb06e8838e46d62 and job 679.1, [skip ci] (6d61aba8)</a>
+    </a> was last updated on: 21 Aug 2019 01:00:30 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/2728061582d6fb9f544398b66562ebc077d07b5c">Modify: Updated JS come sample to translated pages. (#345) (27280615)</a>
 </h5>
         
         </div> 
@@ -3272,20 +3317,20 @@ alert<span style="color:#719e07">.</span>accept()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/clipboard.min.js?1566156495"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.min.js?1566156495"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.jquery.min.js?1566156495"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery.sticky.js?1566156495"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/featherlight.min.js?1566156495"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/html5shiv-printshiv.min.js?1566156495"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/highlight.pack.js?1566156495"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/clipboard.min.js?1566329493"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.min.js?1566329493"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.jquery.min.js?1566329493"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery.sticky.js?1566329493"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/featherlight.min.js?1566329493"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/html5shiv-printshiv.min.js?1566329493"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/highlight.pack.js?1566329493"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/modernizr.custom-3.6.0.js?1566156495"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/learn.js?1566156495"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/hugo-learn.js?1566156495"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/modernizr.custom-3.6.0.js?1566329493"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/learn.js?1566329493"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/hugo-learn.js?1566329493"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.css?1566156495" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.js?1566156495"></script>
+    <link href="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.css?1566329493" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.js?1566329493"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
