@@ -438,7 +438,7 @@
 	"title": "Keyboard",
 	"tags": [],
 	"description": "",
-	"content": "  Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!\n "
+	"content": "  Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!\n Represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.\nsendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.\nJava Python C# Ruby JavaScript // We don\u0026#39;t have a Java code sample yet - Help us out and raise a PR    // We don\u0026#39;t have a Python code sample yet - Help us out and raise a PR   // We don\u0026#39;t have a C# code sample yet - Help us out and raise a PR    // We don\u0026#39;t have a Ruby code sample yet - Help us out and raise a PR   const {Builder, By, Key} = require(\u0026#39;selenium-webdriver\u0026#39;); (async function example() { let driver = await new Builder().forBrowser(\u0026#39;chrome\u0026#39;).build(); try { // Navigate to Url  await driver.get(\u0026#39;https://www.google.com\u0026#39;); // Enter text \u0026#34;webdriver\u0026#34; and perform keyboard action \u0026#34;Enter\u0026#34;  await driver.findElement(By.name(\u0026#39;q\u0026#39;)).sendKeys(\u0026#39;webdriver\u0026#39;, Key.ENTER); } finally { await driver.quit(); } })();     "
 },
 {
 	"uri": "https://seleniumhq.github.io/docs/site/nl/webdriver/mouse/",
