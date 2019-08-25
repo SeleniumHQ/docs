@@ -17,9 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/webdriver/understanding_the_components/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
-Terminology  API: Application Programming Interface.</description>
+      <description>Construir una suite de test usando WebDriver requerirá que entiendas y uses de forma efectiva diferentes componentes. Como con todo en el desarrollo de software, la gente usa diferentes términos para la misma idea. A continuación hay un desglose de cómo los términos son usados en esa descripción.
+Terminología  API: Interfaz de Programación de Aplicaciones. Es un conjunto de &amp;ldquo;comandos&amp;rdquo; que se utilizan para manipular el WebDriver. Library: Un módulo de código que contiene las APIs y el código necesario para implementarlos.</description>
     </item>
     
     <item>
