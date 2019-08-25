@@ -3,6 +3,11 @@ title: "Entendiendo los componentes"
 weight: 1
 ---
 
+Construir una suite de test usando WebDriver requerirá que entiendas y 
+uses de forma efectiva diferentes componentes. Como con todo en
+el desarrollo de software, la gente usa diferentes términos para la misma idea.
+A continuación hay un desglose de cómo los términos son usados en esa descripción.
+
 ### Terminología
 
 * **API:** Interfaz de Programación de Aplicaciones. Es un conjunto de "comandos" 
