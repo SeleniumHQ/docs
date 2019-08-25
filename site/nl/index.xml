@@ -129,10 +129,10 @@ It allows users to simulate common activities performed by end-users; entering t
     
     <item>
       <title>Understanding the componets</title>
-      <link>https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_componets/</link>
+      <link>https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_componets/</guid>
+      <guid>https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_components/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
 Terminology  API: Application Programming Interface.</description>
