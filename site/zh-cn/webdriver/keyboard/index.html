@@ -12,20 +12,20 @@
     <title>Keyboard :: Selenium 文档</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/nucleus.css?1566391808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/fontawesome-all.min.css?1566391808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hybrid.css?1566391808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/featherlight.min.css?1566391808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/perfect-scrollbar.min.css?1566391808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/auto-complete.css?1566391808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/atom-one-dark-reasonable.css?1566391808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme.css?1566391808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hugo-theme.css?1566391808" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/nucleus.css?1566755939" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/fontawesome-all.min.css?1566755939" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hybrid.css?1566755939" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/featherlight.min.css?1566755939" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/perfect-scrollbar.min.css?1566755939" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/auto-complete.css?1566755939" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/atom-one-dark-reasonable.css?1566755939" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme.css?1566755939" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hugo-theme.css?1566755939" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme-selenium.css?1566391808" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme-selenium.css?1566755939" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery-3.3.1.min.js?1566391808"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery-3.3.1.min.js?1566755939"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/lunr.min.js?1566391808"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/auto-complete.js?1566391808"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/lunr.min.js?1566755939"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/auto-complete.js?1566755939"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/search.js?1566391808"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/search.js?1566755939"></script>
 
     
   </div>
@@ -1743,7 +1743,14 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#sendkeys">sendKeys</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1769,6 +1776,105 @@
 
 
 
+<p>Represents a KeyBoard event. KeyBoard actions are performed by using low-level
+interface which allows us to provide virtualized device input to the web browser.</p>
+
+<h2 id="sendkeys">sendKeys</h2>
+
+<p>The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    
+    <label for="tab0code0">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
+    
+    <label for="tab1code0">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
+    
+    <label for="tab2code0">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
+    
+    <label for="tab3code0">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
+    
+    <label for="tab4code0">JavaScript</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// We don&#39;t have a Java code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">//</span> We don<span style="color:#2aa198">&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#dc322f">//</span> <span style="color:#cb4b16">We</span> don&#39;t have a <span style="color:#cb4b16">Ruby</span> code sample yet <span style="color:#719e07">-</span>  <span style="color:#cb4b16">Help</span> us out <span style="color:#719e07">and</span> <span style="color:#719e07">raise</span> a <span style="color:#cb4b16">PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#719e07">const</span> {Builder, By, Key} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> example() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+
+    <span style="color:#719e07">try</span> {
+        <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>        <span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+
+        <span style="color:#586e75">// Enter text &#34;webdriver&#34; and perform keyboard action &#34;Enter&#34;
+</span><span style="color:#586e75"></span>        <span style="color:#268bd2">await</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>)).sendKeys(<span style="color:#2aa198">&#39;webdriver&#39;</span>, Key.ENTER);
+    }
+    <span style="color:#719e07">finally</span> {
+        <span style="color:#268bd2">await</span> driver.quit();
+    }
+})();
+  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+
 <footer class=" footline" >
 	
 </footer>
@@ -1776,7 +1882,7 @@
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/keyboard/">
       “Keyboard”
-    </a> was last updated on: 13 Aug 2019 11:27:58 &#43;0000: <a href="https://github.com/SeleniumHQ/docs/commit/4f905708f6ef37a10289bea8823c937f2c55445c">Publishing site on Tue Aug 13 11:27:58 UTC 2019, commit 96ce4a259a8d149a6d4ad4d7c187ea19bc74f850 and job 694.1, [skip ci] (4f905708)</a>
+    </a> was last updated on: 23 Aug 2019 20:14:11 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/e0acf92ed656cb5dfbe19534f4ade03838cb2e8a">Update: updating doc with missing # for sendKeys (#351) (e0acf92e)</a>
 </h5>
         
         </div> 
@@ -2893,20 +2999,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/clipboard.min.js?1566391808"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.min.js?1566391808"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.jquery.min.js?1566391808"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery.sticky.js?1566391808"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/featherlight.min.js?1566391808"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/html5shiv-printshiv.min.js?1566391808"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/highlight.pack.js?1566391808"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/clipboard.min.js?1566755939"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.min.js?1566755939"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.jquery.min.js?1566755939"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery.sticky.js?1566755939"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/featherlight.min.js?1566755939"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/html5shiv-printshiv.min.js?1566755939"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/highlight.pack.js?1566755939"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/modernizr.custom-3.6.0.js?1566391808"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/learn.js?1566391808"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/hugo-learn.js?1566391808"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/modernizr.custom-3.6.0.js?1566755939"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/learn.js?1566755939"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/hugo-learn.js?1566755939"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.css?1566391808" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.js?1566391808"></script>
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.css?1566755939" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.js?1566755939"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
