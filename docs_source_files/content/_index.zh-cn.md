@@ -112,7 +112,8 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
         console.log(await firstResult.getAttribute('textContent'));
     }
     catch (e) {
-        console.log(e)
+        console.log(e);
+        throw e;
     }
     finally {
         await driver.quit();
