@@ -24,7 +24,7 @@ public class HelloSelenium {
             // Navigate to Url
             driver.get("https://google.com");
 
-            // Enter text "webDriver" and perform keyboard action "Enter"
+            // Enter text "q" and perform keyboard action "Enter"
             driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER);
         } finally {
             driver.quit();

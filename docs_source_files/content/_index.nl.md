@@ -121,7 +121,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
         // Navigate to Url
         await driver.get('https://www.google.com');
 
-        // Enter text "webdriver" and perform keyboard action "Enter"
+        // Enter text "cheese" and perform keyboard action "Enter"
         await driver.findElement(By.name('q')).sendKeys('cheese', Key.ENTER);
 
         let firstResult = await driver.wait(until.elementLocated(By.css('h3>div')),10000);
