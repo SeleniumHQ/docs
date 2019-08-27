@@ -13,10 +13,10 @@
     
     <item>
       <title>Understanding the componets</title>
-      <link>https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_componets/</link>
+      <link>https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_componets/</guid>
+      <guid>https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_components/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
 Terminology  API: Application Programming Interface.</description>
@@ -111,8 +111,10 @@ Java Python C# Ruby JavaScript WebDriver driver = new FirefoxDriver(); driver.ge
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/nl/webdriver/keyboard/</guid>
-      <description>  Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- </description>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
+sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
+Java Python C# Ruby JavaScript // We don&amp;#39;t have a Java code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a Python code sample yet - Help us out and raise a PR   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR   const {Builder, By, Key} = require(&amp;#39;selenium-webdriver&amp;#39;); (async function example() { let driver = await new Builder().</description>
     </item>
     
     <item>

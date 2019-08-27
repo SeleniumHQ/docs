@@ -72,8 +72,6 @@ and check out your copy locally.
 % git remote add upstream git://github.com/seleniumhq/docs.git
 ```
 
-https://gohugo.io/getting-started/installing/
-
 #### Dependencies: Hugo
 
 The docs use [Hugo](https://gohugo.io/) to build and render the site.
@@ -175,7 +173,7 @@ it.
 
 Go to https://github.com/yourusername/docs.git and press the _Pull
 Request_ and fill out the form. **Please indicate that you've signed
-the CLA** (see Step 6).
+the CLA** (see Step 7).
 
 Pull requests are usually reviewed within a few days. If there are
 comments to address, apply your changes in new commits (preferably

@@ -5,7 +5,7 @@ disableToc: true
 
 Selenium es un gran proyecto de software y la documentación es clave para comprender cómo funcionan las cosas y aprender formas efectivas de explotar su potencial.
 
-Parte de la documentación de Selenium todavía se sirve de nuestro[repositorio ** www.seleniumhq.org ** ](https://github.com/SeleniumHQ/www.seleniumhq.org). Sin embargo, estamos eliminando gradualmente esta documentación que se centra demasiado en Selenium RC y otras piezas anticuadas, a favor de esta reescritura.
+Parte de la documentación de Selenium todavía se sirve de nuestro [repositorio ** www.seleniumhq.org ** ](https://github.com/SeleniumHQ/www.seleniumhq.org). Sin embargo, estamos eliminando gradualmente esta documentación que se centra demasiado en Selenium RC y otras piezas anticuadas, a favor de esta reescritura.
 
 La nueva documentación es un proyecto que comenzó a reescribir la documentación de Selenium desde cero. Este es un esfuerzo continuo (no dirigido a ninguna versión específica) para proporcionar un manual actualizado sobre cómo usar Selenium de manera efectiva. Esperamos traer las piezas de la documentación antigua que aún tienen sentido.
 
@@ -119,7 +119,7 @@ Cuando abre su solicitud (_pull request_), le pedimos que indique que ha firmado
 % git push origin my-feature-branch
 ```
 
-Vaya a https://github.com/yourusername/docs.git y presione _Pull Request_ y complete el formulario. **Indique que ha firmado el CLA** (consulte el Paso 6).
+Vaya a https://github.com/yourusername/docs.git y presione _Pull Request_ y complete el formulario. **Indique que ha firmado el CLA** (consulte el Paso 7).
 
 Las solicitudes generalmente se revisan en unos pocos días. Si hay comentarios que abordar, aplique sus cambios en los nuevos commits (preferiblemente [arreglos o _fixups_](http://git-scm.com/docs/git-commit)) y avance a la misma rama (_branch_).
 

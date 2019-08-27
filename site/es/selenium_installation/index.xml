@@ -17,10 +17,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+      <description>Primero debe instalar las librerías de Selenium para su proyecto de automatización. El proceso de instalación de las librerías depende del lenguaje que elija usar.
+Java La instalación de las bibliotecas Selenium para Java se puede hacer usando Maven. Agregue la dependencia selenium-java en el archivo pom.xml de su proyecto:
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; La dependencia de selenium-java admite la ejecución de su proyecto de automatización con todos los navegadores compatibles con Selenium.</description>
     </item>
     
     <item>
@@ -29,9 +28,8 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- To execute your project and control browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
+      <description>Para ejecutar su proyecto y controlar el navegador, debe tener instalados los binarios de WebDriver específicos del navegador.
+Descargue el binario del WebDriver compatible con su navegador y colóquelo en el RUTA o PATH del sistema.</description>
     </item>
     
     <item>
@@ -40,8 +38,8 @@ Download the WebDriver binary supported by your browser and place it in the Syst
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/es/selenium_installation/installing_standalone_server/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, then you don&amp;rsquo;t have to add selenium-java or a browser specific jar.</description>
+      <description>Si planeas usar Grid debes descargar el fichero selenium-server-standalone JAR. El jar selenium-server-standalone nunca se carga, pero todos los componentes están disponibles a través de selenium-server. El standalone JAR contiene todo, incluso el servidor remoto de Selenium y los enlaces del lado del cliente. Ésto quiere decir que si usas el selenium-server-standalone jar en tu proyecto, no tienes que añadir selenium-java o un jar de navegador específico.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.</description>
     </item>
     
   </channel>
