@@ -31,14 +31,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 public class HelloSelenium {
 
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         try {
             driver.get("https://google.com/ncr");
@@ -58,13 +58,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
-#Cet exemple requiert Selenium WebDriver 3.13 ou plus récent
+#This example requires Selenium WebDriver 3.13 or newer
 with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
     driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
-    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
-    print(first_result.text)
+    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>div")))
+    print(first_result.get_attribute("textContent"))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using System;
@@ -82,8 +82,8 @@ class HelloSelenium
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             driver.Navigate().GoToUrl("https://www.google.com/ncr");
             driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
-            IWebElement firstResult = wait.Until(ExpectedConditions.ElementExists(By.CssSelector("h3>a")));
-            Console.WriteLine(firstResult.Text);
+            IWebElement firstResult = wait.Until(ExpectedConditions.ElementExists(By.CssSelector("h3>div")));
+            Console.WriteLine(firstResult.GetAttribute("textContent"));
         }
     }
 }
@@ -97,8 +97,8 @@ wait = Selenium::WebDriver::Wait.new(timeout: 10)
 begin
   driver.get 'https://google.com/ncr'
   driver.find_element(name: 'q').send_keys 'cheese', :return
-  first_result = wait.until { driver.find_element(css: 'h3>a') }
-  puts first_result.text
+  first_result = wait.until { driver.find_element(css: 'h3>div') }
+  puts first_result.attribute('textContent')
 ensure
   driver.quit
 end
@@ -107,25 +107,17 @@ end
 const {Builder, By, Key, until} = require('selenium-webdriver');
 
 (async function example() {
-    let driver = await new Builder().forBrowser('chrome').build();
+    let driver = await new Builder().forBrowser('firefox').build();
 
-    try {
-        // Navigate to Url
-        await driver.get('https://www.google.com');
+    // Navigate to Url
+    await driver.get('https://www.google.com');
 
-        // Enter text "cheese" and perform keyboard action "Enter"
-        await driver.findElement(By.name('q')).sendKeys('cheese', Key.ENTER);
+    // Enter text "cheese" and perform keyboard action "Enter"
+    await driver.findElement(By.name('q')).sendKeys('cheese', Key.ENTER);
 
-        let firstResult = await driver.wait(until.elementLocated(By.css('h3>div')),10000);
-        console.log(await firstResult.getAttribute('textContent'));
-    }
-    catch (e) {
-        console.log(e);
-        throw e;
-    }
-    finally {
-        await driver.quit();
-    }
+    let firstResult = await driver.wait(until.elementLocated(By.css('h3>div')), 10000);
+    console.log(await firstResult.getAttribute('textContent'));
+
 })();
   {{< / code-panel >}}
 {{< / code-tab >}}
