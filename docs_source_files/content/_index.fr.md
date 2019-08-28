@@ -58,7 +58,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
-#Cet exemple requiert Selenium WebDriver 3.13 ou plus rÃ©cent
+#Cet exemple requiert Selenium WebDriver 3.13 ou plus récent
 with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
