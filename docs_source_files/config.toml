@@ -169,8 +169,8 @@ url = "https://github.com/SeleniumHQ/docs"
 weight = 10
 
 [Languages.ja]
-title = "セレニウムドキュメント"
-weight = 1
+title = "Seleniumドキュメント"
+weight = 6
 languageName = "日本語"
 baseURL = "https://seleniumhq.github.io/docs/site/ja"
 
