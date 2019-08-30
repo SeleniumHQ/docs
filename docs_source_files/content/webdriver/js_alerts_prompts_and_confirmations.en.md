@@ -63,7 +63,7 @@ alert.Accept();
 driver.find_element(:link_text, 'See an example alert').click
 
 # Store the alert reference in a variable
-alert =  driver.switch_to.alert
+alert = driver.switch_to.alert
 
 # Store the alert text in a variable
 alert_text = alert.text
@@ -153,7 +153,7 @@ alert.Dismiss();
 driver.find_element(:link_text, 'See a sample confirm').click
 
 # Store the alert reference in a variable
-alert =  driver.switch_to.alert
+alert = driver.switch_to.alert
 
 # Store the alert text in a variable
 alert_text = alert.text
@@ -239,7 +239,7 @@ alert.Accept();
 driver.find_element(:link_text, 'See a sample prompt').click
 
 # Store the alert reference in a variable
-alert =  driver.switch_to.alert
+alert = driver.switch_to.alert
 
 # Type a message
 alert.send_keys("selenium")
