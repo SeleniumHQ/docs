@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -27,6 +27,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/getting_started/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started/"
                 />
@@ -34,7 +39,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/support_packages/browser_navigation/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -57,6 +62,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/support_packages/browser_navigation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/browser_navigation/"
                 />
@@ -64,7 +74,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/browsers/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -87,6 +97,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/getting_started_with_webdriver/browsers/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/browsers/"
                 />
@@ -94,7 +109,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/worst_practices/captchas/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -117,6 +132,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/captchas/"
                 />
@@ -124,7 +144,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/front_matter/copyright_and_attributions/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -147,6 +167,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/front_matter/copyright_and_attributions/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/front_matter/copyright_and_attributions/"
                 />
@@ -154,7 +179,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/shared_capabilities/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -177,6 +202,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/driver_idiosyncrasies/shared_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/shared_capabilities/"
                 />
@@ -184,7 +214,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_selenium_libraries/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -207,6 +237,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/selenium_installation/installing_selenium_libraries/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_selenium_libraries/"
                 />
@@ -214,7 +249,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started/quick/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -237,6 +272,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/getting_started/quick/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started/quick/"
                 />
@@ -244,7 +284,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/page_object_models/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -267,6 +307,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/page_object_models/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/page_object_models/"
                 />
@@ -274,7 +319,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/grid/purposes_and_main_functionalities/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -297,6 +342,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/grid/purposes_and_main_functionalities/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/grid/purposes_and_main_functionalities/"
                 />
@@ -304,7 +354,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/remote_webdriver/remote_webdriver_server/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -327,6 +377,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/remote_webdriver/remote_webdriver_server/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/remote_webdriver/remote_webdriver_server/"
                 />
@@ -334,7 +389,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/introduction/the_selenium_project_and_tools/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -354,6 +409,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/introduction/the_selenium_project_and_tools/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/introduction/the_selenium_project_and_tools/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -387,6 +447,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/understanding_the_components/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/understanding_the_components/"
                 />
@@ -394,7 +459,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/grid/components_of_a_grid/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -417,6 +482,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/grid/components_of_a_grid/"
                 />
@@ -424,7 +494,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/domain_specific_language/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -447,6 +517,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/domain_specific_language/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/domain_specific_language/"
                 />
@@ -454,7 +529,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/webdriver/driver_requirements/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -477,6 +552,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/driver_requirements/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/driver_requirements/"
                 />
@@ -484,7 +564,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/driver_specific_capabilities/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -504,6 +584,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -537,6 +622,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/"
                 />
@@ -544,7 +634,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/worst_practices/file_downloads/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -567,6 +657,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/file_downloads/"
                 />
@@ -574,7 +669,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started/html-runner/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -597,6 +692,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/getting_started/html-runner/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started/html-runner/"
                 />
@@ -604,7 +704,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_webdriver_binaries/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -627,6 +727,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/selenium_installation/installing_webdriver_binaries/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_webdriver_binaries/"
                 />
@@ -634,7 +739,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/introduction/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -657,6 +762,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/introduction/"
                 />
@@ -664,7 +774,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/introduction/on_test_automation/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -687,6 +797,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/introduction/on_test_automation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/introduction/on_test_automation/"
                 />
@@ -694,7 +809,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/remote_webdriver/remote_webdriver_client/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -717,6 +832,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/remote_webdriver/remote_webdriver_client/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/remote_webdriver/remote_webdriver_client/"
                 />
@@ -724,7 +844,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/front_matter/typographical_conventions/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -747,6 +867,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/front_matter/typographical_conventions/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/front_matter/typographical_conventions/"
                 />
@@ -754,7 +879,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_colours/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -777,6 +902,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/support_packages/working_with_colours/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_colours/"
                 />
@@ -784,7 +914,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/webdriver/browser_manipulation/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -807,6 +937,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/browser_manipulation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/browser_manipulation/"
                 />
@@ -814,7 +949,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/generating_application_state/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -837,6 +972,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/generating_application_state/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/generating_application_state/"
                 />
@@ -844,7 +984,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/worst_practices/http_response_codes/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -867,6 +1007,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/worst_practices/http_response_codes/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/http_response_codes/"
                 />
@@ -874,7 +1019,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/selenium_installation/installing_standalone_server/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -894,6 +1039,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/selenium_installation/installing_standalone_server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/selenium_installation/installing_standalone_server/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -927,6 +1077,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/getting_started_with_webdriver/locating_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/locating_elements/"
                 />
@@ -934,7 +1089,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/selenium_installation/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -957,6 +1112,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/selenium_installation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/selenium_installation/"
                 />
@@ -964,7 +1124,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/grid/setting_up_your_own_grid/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -987,6 +1147,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/grid/setting_up_your_own_grid/"
                 />
@@ -994,7 +1159,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/introduction/types_of_testing/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1017,6 +1182,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/introduction/types_of_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/introduction/types_of_testing/"
                 />
@@ -1024,7 +1194,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_select_elements/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1047,6 +1217,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/support_packages/working_with_select_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_select_elements/"
                 />
@@ -1054,7 +1229,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1077,6 +1252,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/getting_started_with_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/"
                 />
@@ -1084,7 +1264,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/introduction/about_this_documentation/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1104,6 +1284,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/introduction/about_this_documentation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/introduction/about_this_documentation/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1137,6 +1322,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/performing_actions_on_the_aut/"
                 />
@@ -1144,7 +1334,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/worst_practices/gmail_email_and_facebook_logins/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1167,6 +1357,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/worst_practices/gmail_email_and_facebook_logins/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/gmail_email_and_facebook_logins/"
                 />
@@ -1174,7 +1369,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/mock_external_services/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1197,6 +1392,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/mock_external_services/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/mock_external_services/"
                 />
@@ -1204,7 +1404,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/support_packages/mouse_and_keyboard_actions_in_detail/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1224,6 +1424,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/support_packages/mouse_and_keyboard_actions_in_detail/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/support_packages/mouse_and_keyboard_actions_in_detail/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1257,6 +1462,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/waits/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/waits/"
                 />
@@ -1264,7 +1474,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/improved_reporting/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1287,6 +1497,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/improved_reporting/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/improved_reporting/"
                 />
@@ -1294,7 +1509,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/webdriver/support_classes/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1317,6 +1532,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/support_classes/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/support_classes/"
                 />
@@ -1324,7 +1544,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/worst_practices/test_dependency/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1347,6 +1567,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/test_dependency/"
                 />
@@ -1354,7 +1579,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/webdriver/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1377,6 +1602,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/"
                 />
@@ -1384,7 +1614,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_web_elements/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1407,6 +1637,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/support_packages/working_with_web_elements/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_web_elements/"
                 />
@@ -1414,7 +1649,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/avoid_sharing_state/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1434,6 +1669,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/guidelines_and_recommendations/avoid_sharing_state/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/avoid_sharing_state/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1467,6 +1707,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/js_alerts_prompts_and_confirmations/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/js_alerts_prompts_and_confirmations/"
                 />
@@ -1474,7 +1719,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/worst_practices/performance_testing/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1497,6 +1742,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/performance_testing/"
                 />
@@ -1504,7 +1754,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/remote_webdriver/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1527,6 +1777,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/remote_webdriver/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/remote_webdriver/"
                 />
@@ -1534,7 +1789,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1557,6 +1812,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/"
                 />
@@ -1564,7 +1824,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/webdriver/http_proxies/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1587,6 +1847,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/http_proxies/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/http_proxies/"
                 />
@@ -1594,7 +1859,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/worst_practices/link_spidering/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1617,6 +1882,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/link_spidering/"
                 />
@@ -1624,7 +1894,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/test_independency/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1647,6 +1917,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/test_independency/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/test_independency/"
                 />
@@ -1654,7 +1929,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/consider_using_a_fluent_api/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1677,6 +1952,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/consider_using_a_fluent_api/"
                 />
@@ -1684,7 +1964,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/webdriver/page_loading_strategy/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1707,6 +1987,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/page_loading_strategy/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/page_loading_strategy/"
                 />
@@ -1714,7 +1999,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/worst_practices/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1737,6 +2022,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/worst_practices/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/worst_practices/"
                 />
@@ -1744,7 +2034,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/fresh_browser_per_test/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1767,6 +2057,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/guidelines_and_recommendations/fresh_browser_per_test/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/guidelines_and_recommendations/fresh_browser_per_test/"
                 />
@@ -1774,7 +2069,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/grid/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1794,6 +2089,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/grid/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1827,6 +2127,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/web_element/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/web_element/"
                 />
@@ -1834,7 +2139,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1854,6 +2159,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/driver_idiosyncrasies/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -1887,6 +2197,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/keyboard/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/keyboard/"
                 />
@@ -1894,7 +2209,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/webdriver/mouse/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1917,6 +2232,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/webdriver/mouse/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/webdriver/mouse/"
                 />
@@ -1924,7 +2244,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/support_packages/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1947,6 +2267,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/support_packages/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/support_packages/"
                 />
@@ -1954,7 +2279,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/nl/front_matter/</loc>
-    <lastmod>2019-08-14T07:54:16+00:00</lastmod>
+    <lastmod>2019-08-14T07:59:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1974,6 +2299,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/front_matter/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/front_matter/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -2007,6 +2337,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/categories/"
                 />
@@ -2034,6 +2369,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/contributing/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -2067,6 +2407,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://seleniumhq.github.io/docs/site/nl/tags/"
                 />
@@ -2094,6 +2439,11 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://seleniumhq.github.io/docs/site/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/"
                 />
     <xhtml:link
                 rel="alternate"
