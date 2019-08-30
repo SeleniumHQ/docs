@@ -12,20 +12,20 @@
     <title>Teclado :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1567155172" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1567155172" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1567155172" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1567155172" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1567155172" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1567155172" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1567155172" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1567155172" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1567155172" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1567189353" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1567189353" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1567189353" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1567189353" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1567189353" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1567189353" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1567189353" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1567189353" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1567189353" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1567155172" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1567189353" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1567155172"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1567189353"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1567155172"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1567155172"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1567189353"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1567189353"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1567155172"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1567189353"></script>
 
     
   </div>
@@ -1859,11 +1859,11 @@ interface which allows us to provide virtualized device input to the web browser
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Keys;
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.firefox.FirefoxDriver;
 
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HelloSelenium {
     <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
+        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
         <span style="color:#719e07">try</span> {
             <span style="color:#586e75">// Navigate to Url
 </span><span style="color:#586e75"></span>            driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
@@ -1899,7 +1899,18 @@ interface which allows us to provide virtualized device input to the web browser
 
 <section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#dc322f">//</span> <span style="color:#cb4b16">We</span> don&#39;t have a <span style="color:#cb4b16">Ruby</span> code sample yet <span style="color:#719e07">-</span>  <span style="color:#cb4b16">Help</span> us out <span style="color:#719e07">and</span> <span style="color:#719e07">raise</span> a <span style="color:#cb4b16">PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:firefox</span>
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to URL</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
+
+  <span style="color:#586e75"># Enter text &#34;cheese&#34; and perform keyboard action &#34;Enter&#34;</span>
+  driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)<span style="color:#719e07">.</span>send_keys <span style="color:#2aa198">&#39;cheese&#39;</span>, <span style="color:#2aa198">:return</span>
+
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -1910,7 +1921,7 @@ interface which allows us to provide virtualized device input to the web browser
 <span style="color:#719e07">const</span> {Builder, By, Key} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 
 (<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> example() {
-    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
 
     <span style="color:#719e07">try</span> {
         <span style="color:#586e75">// Navigate to Url
@@ -1937,7 +1948,7 @@ interface which allows us to provide virtualized device input to the web browser
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/webdriver/keyboard/">
       “Teclado”
-    </a> was last updated on: 28 Aug 2019 23:38:46 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/fe5b1553dff8fafdbec29a4b080947d2e8e41534">Update: Updating sample code for java and JavaScript (#357) (fe5b1553)</a>
+    </a> was last updated on: 30 Aug 2019 23:51:38 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/e941fbd70039045a2563e656639bfa73fbd79081">[docs]: Updated alert &amp; keyboard doc (#359) (e941fbd7)</a>
 </h5>
         
         </div> 
@@ -3054,20 +3065,20 @@ interface which allows us to provide virtualized device input to the web browser
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1567155172"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1567155172"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1567155172"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1567155172"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1567155172"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/html5shiv-printshiv.min.js?1567155172"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1567155172"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1567189353"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1567189353"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1567189353"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1567189353"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1567189353"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/html5shiv-printshiv.min.js?1567189353"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1567189353"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1567155172"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1567155172"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1567155172"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1567189353"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1567189353"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1567189353"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1567155172" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1567155172"></script>
+    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1567189353" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1567189353"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

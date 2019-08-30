@@ -12,20 +12,20 @@
     <title>Keyboard :: Seleniumドキュメント</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/nucleus.css?1567155180" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/fontawesome-all.min.css?1567155180" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/hybrid.css?1567155180" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/featherlight.min.css?1567155180" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/perfect-scrollbar.min.css?1567155180" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/auto-complete.css?1567155180" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/atom-one-dark-reasonable.css?1567155180" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/theme.css?1567155180" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/hugo-theme.css?1567155180" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/nucleus.css?1567189360" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/fontawesome-all.min.css?1567189360" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/hybrid.css?1567189360" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/featherlight.min.css?1567189360" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/perfect-scrollbar.min.css?1567189360" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/auto-complete.css?1567189360" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/atom-one-dark-reasonable.css?1567189360" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/theme.css?1567189360" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/hugo-theme.css?1567189360" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/ja/css/theme-selenium.css?1567155180" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/ja/css/theme-selenium.css?1567189360" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery-3.3.1.min.js?1567155180"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery-3.3.1.min.js?1567189360"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/lunr.min.js?1567155180"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/auto-complete.js?1567155180"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/lunr.min.js?1567189360"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/auto-complete.js?1567189360"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/search.js?1567155180"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/search.js?1567189360"></script>
 
     
   </div>
@@ -1773,7 +1773,14 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#sendkeys">sendKeys</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1798,10 +1805,139 @@
 
 
 
+
+
 <div class="notices info" ><p><i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!</p>
 </div>
 
+
+<p>Represents a KeyBoard event. KeyBoard actions are performed by using low-level
+interface which allows us to provide virtualized device input to the web browser.</p>
+
+<h2 id="sendkeys">sendKeys</h2>
+
+<p>The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+    
+    <label for="tab0code1">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1">
+    
+    <label for="tab1code1">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1">
+    
+    <label for="tab2code1">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1">
+    
+    <label for="tab3code1">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
+    
+    <label for="tab4code1">JavaScript</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Keys;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.firefox.FirefoxDriver;
+
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HelloSelenium {
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
+        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
+        <span style="color:#719e07">try</span> {
+            <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>            driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
+
+            <span style="color:#586e75">// Enter text &#34;q&#34; and perform keyboard action &#34;Enter&#34;
+</span><span style="color:#586e75"></span>            driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;q&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
+        } <span style="color:#719e07">finally</span> {
+            driver.quit();
+        }
+    }
+}
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">//</span> We don<span style="color:#2aa198">&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:firefox</span>
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to URL</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
+
+  <span style="color:#586e75"># Enter text &#34;cheese&#34; and perform keyboard action &#34;Enter&#34;</span>
+  driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)<span style="color:#719e07">.</span>send_keys <span style="color:#2aa198">&#39;cheese&#39;</span>, <span style="color:#2aa198">:return</span>
+
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#719e07">const</span> {Builder, By, Key} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> example() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
+
+    <span style="color:#719e07">try</span> {
+        <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>        <span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+
+        <span style="color:#586e75">// Enter text &#34;webdriver&#34; and perform keyboard action &#34;Enter&#34;
+</span><span style="color:#586e75"></span>        <span style="color:#268bd2">await</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>)).sendKeys(<span style="color:#2aa198">&#39;webdriver&#39;</span>, Key.ENTER);
+    }
+    <span style="color:#719e07">finally</span> {
+        <span style="color:#268bd2">await</span> driver.quit();
+    }
+})();
+  
+</code></pre></div>
+</section>
+</div>
+</div>
 
 
 <footer class=" footline" >
@@ -1811,7 +1947,7 @@
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/ja/webdriver/keyboard/">
       “Keyboard”
-    </a> was last updated on: 30 Aug 2019 03:51:59 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/c601cae3631634a84afcc193bf32991846da85d7">Add Japanese translation (#358) (c601cae3)</a>
+    </a> was last updated on: 30 Aug 2019 23:51:38 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/e941fbd70039045a2563e656639bfa73fbd79081">[docs]: Updated alert &amp; keyboard doc (#359) (e941fbd7)</a>
 </h5>
         
         </div> 
@@ -2928,20 +3064,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/clipboard.min.js?1567155180"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.min.js?1567155180"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.jquery.min.js?1567155180"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery.sticky.js?1567155180"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/featherlight.min.js?1567155180"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/html5shiv-printshiv.min.js?1567155180"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/highlight.pack.js?1567155180"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/clipboard.min.js?1567189360"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.min.js?1567189360"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.jquery.min.js?1567189360"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery.sticky.js?1567189360"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/featherlight.min.js?1567189360"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/html5shiv-printshiv.min.js?1567189360"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/highlight.pack.js?1567189360"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/modernizr.custom-3.6.0.js?1567155180"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/learn.js?1567155180"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/hugo-learn.js?1567155180"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/modernizr.custom-3.6.0.js?1567189360"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/learn.js?1567189360"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/hugo-learn.js?1567189360"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.css?1567155180" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.js?1567155180"></script>
+    <link href="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.css?1567189360" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.js?1567189360"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
