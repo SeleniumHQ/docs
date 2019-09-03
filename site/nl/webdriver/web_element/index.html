@@ -12,20 +12,20 @@
     <title>Web element :: Selenium documentatie</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/nucleus.css?1567454875" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/fontawesome-all.min.css?1567454875" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/hybrid.css?1567454875" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/featherlight.min.css?1567454875" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/perfect-scrollbar.min.css?1567454875" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/auto-complete.css?1567454875" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/atom-one-dark-reasonable.css?1567454875" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/theme.css?1567454875" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/hugo-theme.css?1567454875" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/nucleus.css?1567491697" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/fontawesome-all.min.css?1567491697" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/hybrid.css?1567491697" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/featherlight.min.css?1567491697" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/perfect-scrollbar.min.css?1567491697" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/auto-complete.css?1567491697" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/atom-one-dark-reasonable.css?1567491697" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/theme.css?1567491697" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/hugo-theme.css?1567491697" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/nl/css/theme-selenium.css?1567454875" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/nl/css/theme-selenium.css?1567491697" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery-3.3.1.min.js?1567454875"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery-3.3.1.min.js?1567491697"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/lunr.min.js?1567454875"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/auto-complete.js?1567454875"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/lunr.min.js?1567491697"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/auto-complete.js?1567491697"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/search.js?1567454875"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/search.js?1567491697"></script>
 
     
   </div>
@@ -1868,8 +1868,12 @@ search_box<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa1
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+IWebDriver driver = <span style="color:#719e07">new</span> FirefoxDriver();
+driver.Url = <span style="color:#2aa198">&#34;http://www.google.com&#34;</span>;
+IWebElement searchForm = driver.FindElement(By.TagName(<span style="color:#2aa198">&#34;form&#34;</span>));
+IWebElement searchbox = driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>));
+searchbox.SendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>);
+  
 </code></pre></div>
 </section>
   
@@ -1917,7 +1921,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</spa
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/nl/webdriver/web_element/">
       “Web element”
-    </a> was last updated on: 21 Aug 2019 01:00:30 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/2728061582d6fb9f544398b66562ebc077d07b5c">Modify: Updated JS come sample to translated pages. (#345) (27280615)</a>
+    </a> was last updated on: 03 Sep 2019 09:20:43 &#43;0300: <a href="https://github.com/SeleniumHQ/docs/commit/1cc7a2eeb968ab5abe16ff5f229c7324f72aa8d8">Web element writing with C # language. (#363) (1cc7a2ee)</a>
 </h5>
         
         </div> 
@@ -3034,20 +3038,20 @@ driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</spa
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/clipboard.min.js?1567454875"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.min.js?1567454875"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.jquery.min.js?1567454875"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery.sticky.js?1567454875"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/featherlight.min.js?1567454875"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/html5shiv-printshiv.min.js?1567454875"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/highlight.pack.js?1567454875"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/clipboard.min.js?1567491697"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.min.js?1567491697"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.jquery.min.js?1567491697"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery.sticky.js?1567491697"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/featherlight.min.js?1567491697"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/html5shiv-printshiv.min.js?1567491697"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/highlight.pack.js?1567491697"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/modernizr.custom-3.6.0.js?1567454875"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/learn.js?1567454875"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/hugo-learn.js?1567454875"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/modernizr.custom-3.6.0.js?1567491697"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/learn.js?1567491697"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/hugo-learn.js?1567491697"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.css?1567454875" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.js?1567454875"></script>
+    <link href="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.css?1567491697" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.js?1567491697"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
