@@ -12,20 +12,20 @@
     <title>Browser manipulation :: Selenium 文档</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/nucleus.css?1567755855" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/fontawesome-all.min.css?1567755855" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hybrid.css?1567755855" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/featherlight.min.css?1567755855" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/perfect-scrollbar.min.css?1567755855" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/auto-complete.css?1567755855" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/atom-one-dark-reasonable.css?1567755855" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme.css?1567755855" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hugo-theme.css?1567755855" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/nucleus.css?1568148897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/fontawesome-all.min.css?1568148897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hybrid.css?1568148897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/featherlight.min.css?1568148897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/perfect-scrollbar.min.css?1568148897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/auto-complete.css?1568148897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/atom-one-dark-reasonable.css?1568148897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme.css?1568148897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hugo-theme.css?1568148897" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme-selenium.css?1567755855" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme-selenium.css?1568148897" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery-3.3.1.min.js?1567755855"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery-3.3.1.min.js?1568148897"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/lunr.min.js?1567755855"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/auto-complete.js?1567755855"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/lunr.min.js?1568148897"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/auto-complete.js?1568148897"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/search.js?1567755855"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/search.js?1568148897"></script>
 
     
   </div>
@@ -1952,7 +1952,11 @@ driver.Navigate().GoToUrl(<span style="color:#2aa198">@&#34;http://google.com&#3
 
 <section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+<span style="color:#586e75"># Convenient way</span>
+driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://www.seleniumhq.org&#39;</span>
+
+<span style="color:#586e75"># Longer Way</span>
+driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>to <span style="color:#2aa198">&#39;https://www.seleniumhq.org&#39;</span>
   </code></pre></div>
 </section>
   
@@ -3082,7 +3086,8 @@ using something like:</p>
 
 <section id="rubycode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+<span style="color:#586e75"># This won&#39;t work</span>
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:tag_name</span>,<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click
   </code></pre></div>
 </section>
   
@@ -4005,7 +4010,7 @@ toolbars.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/browser_manipulation/">
       “Browser manipulation”
-    </a> was last updated on: 02 Sep 2019 23:07:01 &#43;0300: <a href="https://github.com/SeleniumHQ/docs/commit/7fec8b90799128f2e6f48833a138d7c55002c752">C # comment line syntax correction (#362) (7fec8b90)</a>
+    </a> was last updated on: 11 Sep 2019 02:16:40 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/7e7130a6a2f6a2e97fb77f71ba1cc1bad6def97c">[docs]: Updated ruby sample code for browser manipulation (#366) (7e7130a6)</a>
 </h5>
         
         </div> 
@@ -5122,20 +5127,20 @@ toolbars.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/clipboard.min.js?1567755855"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.min.js?1567755855"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.jquery.min.js?1567755855"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery.sticky.js?1567755855"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/featherlight.min.js?1567755855"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/html5shiv-printshiv.min.js?1567755855"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/highlight.pack.js?1567755855"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/clipboard.min.js?1568148897"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.min.js?1568148897"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.jquery.min.js?1568148897"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery.sticky.js?1568148897"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/featherlight.min.js?1568148897"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/html5shiv-printshiv.min.js?1568148897"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/highlight.pack.js?1568148897"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/modernizr.custom-3.6.0.js?1567755855"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/learn.js?1567755855"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/hugo-learn.js?1567755855"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/modernizr.custom-3.6.0.js?1568148897"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/learn.js?1568148897"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/hugo-learn.js?1568148897"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.css?1567755855" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.js?1567755855"></script>
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.css?1568148897" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.js?1568148897"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
