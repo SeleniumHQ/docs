@@ -661,7 +661,11 @@ driver.switch_to.frame(1)
 driver.SwitchTo().Frame(1);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# switching to second iframe based on index
+iframe = driver.find_elements_by_tag_name('iframe')[1]
+
+# switch to selected iframe
+driver.switch_to.frame(iframe)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Switches to the second frame
