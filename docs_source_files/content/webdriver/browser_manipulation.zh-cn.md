@@ -684,7 +684,8 @@ like so:
 driver.switchTo().defaultContent();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR
+# switch back to default content
+driver.switch_to.default_content()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Return to the top level
