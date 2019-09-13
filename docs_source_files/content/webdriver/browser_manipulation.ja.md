@@ -617,7 +617,11 @@ driver.switchTo().frame("myframe");
 driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# Switch frame by id
+driver.switch_to.frame('buttonframe')
+
+# Now, Click on the button
+driver.find_element_by_tag_name('button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Using the ID
