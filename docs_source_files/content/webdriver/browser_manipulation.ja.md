@@ -518,7 +518,8 @@ using something like:
 driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# This Wont work
+driver.find_element_by_tag_name('button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //This won't work
@@ -558,7 +559,14 @@ driver.switchTo().frame(iframe);
 driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# Store iframe web element
+iframe = driver.find_element_by_css_selector("#modal > iframe")
+
+# switch to selected iframe
+driver.switch_to.frame(iframe)
+
+# Now click on button
+driver.find_element_by_tag_name('button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Store the web element
