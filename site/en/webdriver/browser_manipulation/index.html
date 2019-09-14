@@ -12,20 +12,20 @@
     <title>Browser manipulation :: Documentation for Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/en/css/nucleus.css?1568295336" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/fontawesome-all.min.css?1568295336" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/hybrid.css?1568295336" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/featherlight.min.css?1568295336" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/perfect-scrollbar.min.css?1568295336" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/auto-complete.css?1568295336" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/atom-one-dark-reasonable.css?1568295336" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/theme.css?1568295336" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/hugo-theme.css?1568295336" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/nucleus.css?1568463066" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/fontawesome-all.min.css?1568463066" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/hybrid.css?1568463066" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/featherlight.min.css?1568463066" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/perfect-scrollbar.min.css?1568463066" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/auto-complete.css?1568463066" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/atom-one-dark-reasonable.css?1568463066" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/theme.css?1568463066" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/hugo-theme.css?1568463066" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/en/css/theme-selenium.css?1568295336" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/en/css/theme-selenium.css?1568463066" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery-3.3.1.min.js?1568295336"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery-3.3.1.min.js?1568463066"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/lunr.min.js?1568295336"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/auto-complete.js?1568295336"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/lunr.min.js?1568463066"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/auto-complete.js?1568463066"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/search.js?1568295336"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/search.js?1568463066"></script>
 
     
   </div>
@@ -3062,7 +3062,8 @@ using something like:</p>
 
 <section id="pythoncode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#586e75"># This Wont work</span>
+driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
   
@@ -3160,7 +3161,14 @@ find the frame using your preferred selector and switch to it.</p>
 
 <section id="pythoncode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#586e75"># Store iframe web element</span>
+iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_css_selector(<span style="color:#2aa198">&#34;#modal &gt; iframe&#34;</span>)
+
+<span style="color:#586e75"># switch to selected iframe</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(iframe)
+
+<span style="color:#586e75"># Now click on button</span>
+driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
   
@@ -3270,7 +3278,11 @@ one found will be switched to.</p>
 
 <section id="pythoncode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#586e75"># Switch frame by id</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>)
+
+<span style="color:#586e75"># Now, Click on the button</span>
+driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
   
@@ -3556,11 +3568,11 @@ window.</p>
 
 <section id="pythoncode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">//</span>Access each dimension individually
+<span style="color:#586e75"># Access each dimension individually</span>
 width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;width&#34;</span>)
 height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;height&#34;</span>)
 
-<span style="color:#719e07">//</span>Or store the dimensions <span style="color:#719e07">and</span> query them later
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
 size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()
 width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;width&#34;</span>)
 height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;height&#34;</span>)
@@ -3732,11 +3744,11 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 <section id="pythoncode19" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">//</span> Access each dimension individually
+<span style="color:#586e75"># Access each dimension individually</span>
 x <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;x&#39;</span>)
 y <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;y&#39;</span>)
 
-<span style="color:#719e07">//</span> Or store the dimensions <span style="color:#719e07">and</span> query them later
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
 position <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()
 x1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;x&#39;</span>)
 y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;y&#39;</span>)
@@ -3833,7 +3845,7 @@ y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</s
 
 <section id="pythoncode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">//</span> Move the window to the top left of the primary monitor
+<span style="color:#586e75"># Move the window to the top left of the primary monitor</span>
 driver<span style="color:#719e07">.</span>set_window_position(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>)
   </code></pre></div>
 </section>
@@ -4022,7 +4034,7 @@ toolbars.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/en/webdriver/browser_manipulation/">
       “Browser manipulation”
-    </a> was last updated on: 12 Sep 2019 19:04:33 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/e4e04aea4c9d4c11c8e5f332e10b09800595d798">[docs]: Updated python and ruby code for browser manipulation (#368) (e4e04aea)</a>
+    </a> was last updated on: 14 Sep 2019 17:39:44 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/624e9105e624016616c7f802263617d03d7f6bde">[docs]: Updated python sample code for browser manipulation (#369) (624e9105)</a>
 </h5>
         
         </div> 
@@ -5139,20 +5151,20 @@ toolbars.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/clipboard.min.js?1568295336"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.min.js?1568295336"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.jquery.min.js?1568295336"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery.sticky.js?1568295336"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/featherlight.min.js?1568295336"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/html5shiv-printshiv.min.js?1568295336"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/highlight.pack.js?1568295336"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/clipboard.min.js?1568463066"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.min.js?1568463066"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.jquery.min.js?1568463066"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery.sticky.js?1568463066"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/featherlight.min.js?1568463066"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/html5shiv-printshiv.min.js?1568463066"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/highlight.pack.js?1568463066"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/modernizr.custom-3.6.0.js?1568295336"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/learn.js?1568295336"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/hugo-learn.js?1568295336"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/modernizr.custom-3.6.0.js?1568463066"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/learn.js?1568463066"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/hugo-learn.js?1568463066"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.css?1568295336" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.js?1568295336"></script>
+    <link href="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.css?1568463066" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.js?1568463066"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
