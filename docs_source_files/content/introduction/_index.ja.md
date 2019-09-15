@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "紹介"
 chapter: true
 weight: 2
 ---
@@ -9,6 +9,6 @@ weight: 2
 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
 {{% /notice %}}
 
-# Introduction
+# 紹介
 
-Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of web browsers.
+Seleniumはブラウザー自動化を可能にし、それを支えるツール群とライブラリー群のプロジェクトです。
