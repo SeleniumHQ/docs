@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Selenium Browser Automation Project on Seleniumドキュメント</title>
+    <title>Seleniumブラウザー自動化プロジェクト on Seleniumドキュメント</title>
     <link>https://seleniumhq.github.io/docs/site/ja/</link>
-    <description>Recent content in The Selenium Browser Automation Project on Seleniumドキュメント</description>
+    <description>Recent content in Seleniumブラウザー自動化プロジェクト on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
@@ -595,15 +595,28 @@ Java Python C# Ruby JavaScript import org.openqa.selenium.By; import org.openqa.
     </item>
     
     <item>
-      <title>Contributing to the Selenium Documentation</title>
+      <title>Seleniumドキュメンテーションに貢献</title>
       <link>https://seleniumhq.github.io/docs/site/ja/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/ja/contributing/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
-Part of the documentation of Selenium is still served from our www.seleniumhq.org repository. We are however phasing out this documentation which focuses too much on Selenium RC and other antiquated pieces, in favour of this rewrite.
-The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch.</description>
+      <description>Seleniumは大きなソフトウェアプロジェクトです、そしてドキュメンテーションはどのように機能しているかを理解し、ソフトウェアの持ち得る可能性の効果的な利用方法を学ぶための鍵です。
+ドキュメンテーションの一部はまだwww.seleniumhq.org リポジトリから配信されています。 このドキュメンテーションはSelenium RCと他の旧式の機能にあまりにも重点が置かれているので私達は段階的に廃止し、新しく書き直しをしていきます。
+この新しいドキュメンテーションプロジェクトはSeleniumのドキュメンテーションを一から書き直すことから始まりました。これは更新されたSeleniumを効果的に使用する為のハンドブックを提供する為の継続的な努力です（特定なリリースを目標するのではない）。私達は古いドキュメンテーションのうちまだ有効なものを移行したいと思っています。
+新しいドキュメンテーションの貢献には下記の貢献についてのセクションに書いてある手順をもとにしてます。多少の時間をかけて読むことによってドキュメンテーションに馴染んでください。 もっと詳しく読む
+Seleniumプロジェクトはすべての人からの貢献を歓迎します。手伝うにはいくつかの方法があります:
+課題を報告する 新たに問題を報告する時や、既存の課題についてコメントする時にはSeleniumソフトウェアそのものかそれに関わるドキュメンテーションの具体的な技術問題に付いてのみ討議するようにしてください。
+すべてのSeleniumのコンポーネントは時間と共にかなり早く更新されます、なのでこれがドキュメンテーションを形骸化を招くかもしれません。もしそのようなことを発見した場合には、迷わず問題を報告してください。または、ひょっとしてドキュメンテーションの更新方法を知っているならば、修正点を含むプルリクエストを提出してください。
+もし、見つけたものが問題かどうか確信がないときはselenium-users@ メーリングリストで質問してください,またはirc.freenode.orgかSlackの#seleniumチャンネルに参加してください。
+貢献 Seleniumプロジェクトは新たな貢献者を歓迎します。 重要かつ価値のある貢献をある程度の期間して頂いた方にはコミッター(Committers)になっていただきプロジェクトへのcommit-accessの権限が譲与されます。
+このドキュメンテーションは貢献プロセスを案内します。
+ステップ　１： フォーク (Fork) Githubのプロジェクトをフォークして ローカル環境にチェックアウトしてください。
+% git clone git@github.com:username/docs.git % cd docs % git remote add upstream git://github.com/seleniumhq/docs.git https://gohugo.io/getting-started/installing/
+依存関係： ヒューゴ (Hugo) ドキュメンテーションはヒューゴ (Hugo) を用いてサイトの生成とレンダーしています。 変更点をコミットする前にすべてをローカル環境で確認するために、 ヒューゴ (Hugo)をインストール して サイトをローカル環境でレンダーするためにローカルサーバーを実行してください。
+ステップ　２：ブランチ (Branch) フィーチャーブランチを作成して、取り組み始める:
+% git checkout -b my-feature-branch 私達はHEAD-based開発を実践しています、すなわち全ての変更はmaster上に直接反映されます。
+ステップ　３：コミット(Commit) 初めにgitにあなたの名前とメールアドレスを登録済みか確認してください:
+% git config --global user.name &amp;#39;Santa Claus&amp;#39; % git config --global user.</description>
     </item>
     
   </channel>
