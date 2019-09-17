@@ -3,11 +3,6 @@ title: Seleniumドキュメンテーションに貢献
 disableToc: true
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
-
 Seleniumは大きなソフトウェアプロジェクトです、そしてドキュメンテーションはどのように機能しているかを理解し、ソフトウェアの持ち得る可能性の効果的な利用方法を学ぶための鍵です。
 
 ドキュメンテーションの一部はまだ[**www.seleniumhq.org** リポジトリ](https://github.com/SeleniumHQ/www.seleniumhq.org)から配信されています。
