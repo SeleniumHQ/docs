@@ -703,41 +703,6 @@
   </url>
   
   <url>
-    <loc>https://seleniumhq.github.io/docs/site/ja/introduction/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://seleniumhq.github.io/docs/site/en/introduction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://seleniumhq.github.io/docs/site/es/introduction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://seleniumhq.github.io/docs/site/nl/introduction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://seleniumhq.github.io/docs/site/zh-cn/introduction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://seleniumhq.github.io/docs/site/fr/introduction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://seleniumhq.github.io/docs/site/ja/introduction/"
-                />
-  </url>
-  
-  <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/introduction/on_test_automation/</loc>
     <lastmod>2019-08-30T03:51:59-05:00</lastmod>
     <xhtml:link
@@ -909,6 +874,41 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://seleniumhq.github.io/docs/site/ja/support_packages/working_with_colours/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/site/ja/introduction/</loc>
+    <lastmod>2019-09-17T00:57:36-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://seleniumhq.github.io/docs/site/en/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://seleniumhq.github.io/docs/site/es/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://seleniumhq.github.io/docs/site/nl/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/introduction/"
                 />
   </url>
   
@@ -2349,7 +2349,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/contributing/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-09-17T00:57:36-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2379,6 +2379,41 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://seleniumhq.github.io/docs/site/ja/contributing/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://seleniumhq.github.io/docs/site/ja/</loc>
+    <lastmod>2019-09-17T00:57:36-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://seleniumhq.github.io/docs/site/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://seleniumhq.github.io/docs/site/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://seleniumhq.github.io/docs/site/nl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://seleniumhq.github.io/docs/site/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://seleniumhq.github.io/docs/site/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://seleniumhq.github.io/docs/site/ja/"
                 />
   </url>
   
@@ -2414,41 +2449,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://seleniumhq.github.io/docs/site/ja/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://seleniumhq.github.io/docs/site/ja/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://seleniumhq.github.io/docs/site/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://seleniumhq.github.io/docs/site/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://seleniumhq.github.io/docs/site/nl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://seleniumhq.github.io/docs/site/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://seleniumhq.github.io/docs/site/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://seleniumhq.github.io/docs/site/ja/"
                 />
   </url>
   
