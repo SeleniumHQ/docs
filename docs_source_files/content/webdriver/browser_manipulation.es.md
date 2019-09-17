@@ -754,7 +754,14 @@ int width1 = size.Width;
 int height1 = size.Height;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# Access each dimension individually
+width = driver.manage.window.size.width
+height = driver.manage.window.size.height
+
+# Or store the dimensions and query them later
+size = driver.manage.window.size
+width1 = size.width
+height1 = size.height
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Access each dimension individually
