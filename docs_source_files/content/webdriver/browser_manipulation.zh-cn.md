@@ -844,7 +844,7 @@ driver.set_window_position(0, 0)
 driver.Manage().Window.Position = new Point(0, 0);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+driver.manage.window.move_to(0,0)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Move the window to the top left of the primary monitor
