@@ -12,20 +12,20 @@
     <title>Browser manipulation :: Selenium documentatie</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/nucleus.css?1568700999" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/fontawesome-all.min.css?1568700999" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/hybrid.css?1568700999" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/featherlight.min.css?1568700999" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/perfect-scrollbar.min.css?1568700999" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/auto-complete.css?1568700999" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/atom-one-dark-reasonable.css?1568700999" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/theme.css?1568700999" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/nl/css/hugo-theme.css?1568700999" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/nucleus.css?1568816158" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/fontawesome-all.min.css?1568816158" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/hybrid.css?1568816158" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/featherlight.min.css?1568816158" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/perfect-scrollbar.min.css?1568816158" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/auto-complete.css?1568816158" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/atom-one-dark-reasonable.css?1568816158" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/theme.css?1568816158" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/nl/css/hugo-theme.css?1568816158" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/nl/css/theme-selenium.css?1568700999" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/nl/css/theme-selenium.css?1568816158" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery-3.3.1.min.js?1568700999"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery-3.3.1.min.js?1568816158"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/lunr.min.js?1568700999"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/auto-complete.js?1568700999"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/lunr.min.js?1568816158"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/auto-complete.js?1568816158"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/search.js?1568700999"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/nl/js/search.js?1568816158"></script>
 
     
   </div>
@@ -3606,7 +3606,14 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 <section id="rubycode18" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#586e75"># Access each dimension individually</span>
+width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size<span style="color:#719e07">.</span>width
+height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size<span style="color:#719e07">.</span>height
+
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
+size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size
+width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>width
+height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>height
   </code></pre></div>
 </section>
   
@@ -3684,7 +3691,7 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 
 <section id="rubycode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>set_window_size(<span style="color:#2aa198">1024</span>,<span style="color:#2aa198">768</span>)</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>resize_to(<span style="color:#2aa198">1024</span>,<span style="color:#2aa198">768</span>)</code></pre></div>
 </section>
   
 
@@ -3871,7 +3878,7 @@ driver<span style="color:#719e07">.</span>set_window_position(<span style="color
 
 <section id="rubycode21" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR    </span>
+driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>move_to(<span style="color:#2aa198">0</span>,<span style="color:#2aa198">0</span>)
   </code></pre></div>
 </section>
   
@@ -4037,7 +4044,7 @@ toolbars.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/nl/webdriver/browser_manipulation/">
       “Browser manipulation”
-    </a> was last updated on: 17 Sep 2019 11:45:45 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/b27fcfc41c1b42c2a889cae3418fd1cfded61745">[docs]: Updated ruby sample code for browser manipulation (#371) (b27fcfc4)</a>
+    </a> was last updated on: 18 Sep 2019 19:44:48 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/c783f8a9749ba8785c96f652d983597a2b535f60">[docs]: Updated ruby sample code for browser manipulation (#372) (c783f8a9)</a>
 </h5>
         
         </div> 
@@ -5154,20 +5161,20 @@ toolbars.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/clipboard.min.js?1568700999"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.min.js?1568700999"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.jquery.min.js?1568700999"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery.sticky.js?1568700999"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/featherlight.min.js?1568700999"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/html5shiv-printshiv.min.js?1568700999"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/highlight.pack.js?1568700999"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/clipboard.min.js?1568816158"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.min.js?1568816158"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/perfect-scrollbar.jquery.min.js?1568816158"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/jquery.sticky.js?1568816158"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/featherlight.min.js?1568816158"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/html5shiv-printshiv.min.js?1568816158"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/highlight.pack.js?1568816158"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/modernizr.custom-3.6.0.js?1568700999"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/learn.js?1568700999"></script>
-    <script src="https://seleniumhq.github.io/docs/site/nl/js/hugo-learn.js?1568700999"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/modernizr.custom-3.6.0.js?1568816158"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/learn.js?1568816158"></script>
+    <script src="https://seleniumhq.github.io/docs/site/nl/js/hugo-learn.js?1568816158"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.css?1568700999" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.js?1568700999"></script>
+    <link href="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.css?1568816158" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/nl/mermaid/mermaid.js?1568816158"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
