@@ -114,4 +114,4 @@ the browser interaction part to the browser vendor's home turf,
 and asking them to take responsibility of the backend, browser-facing implementations.
 Recently this work has evolved into a W3C standardisation process
 where the goal is to turn the WebDriver component in Selenium
-into the _du jeur_ remote control library for user agents.
+into the _du jour_ remote control library for user agents.
