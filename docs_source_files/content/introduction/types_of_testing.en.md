@@ -18,7 +18,7 @@ which some people might also refer to.
 This type of test is done in order to determine if a product's
 feature functions properly, without issues.
              
-This generally include: the tests work without errors 
+This generally includes: the tests work without errors 
 (404, exceptions...), in an usable way (right redirections),   
 in an accessible way and matching its specifications            
 (see **_acceptance testing_** above).

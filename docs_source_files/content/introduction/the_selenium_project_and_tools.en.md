@@ -6,7 +6,7 @@ weight: 1
 ### Selenium controls web browsers
 
 _Selenium_ is many things,
-but at its core it's a toolset for web browser automation
+but at its core it is a toolset for web browser automation
 that uses the best techniques available
 to remotely control browser instances
 and emulate a user's interaction with the browser.
@@ -61,7 +61,7 @@ provided for the most common languages,
 these tests will run tirelessly in parallel,
 reporting back to you when errors occur.
 
-It's an aim to help make this a reality for you,
+It is an aim to help make this a reality for you,
 by providing users with tools and documentation to not only control browsers,
 but to make it easy to scale and deploy such grids.
 

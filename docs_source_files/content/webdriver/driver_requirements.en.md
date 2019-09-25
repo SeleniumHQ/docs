@@ -58,7 +58,7 @@ export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
   Close all open command prompts and open a new one.
   Type out the name of one of the binaries
   in the folder you created in the previous step,
-  e.g: 
+  e.g.: 
 
   ```shell
   chromedriver
@@ -102,7 +102,7 @@ $ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-To include chromedriver on the path if it isn't already,
+To include chromedriver on the path, if it is not already,
 make sure you include the chromedriver binary's parent directory.
 The following line will set the `PATH` environmental variable
 its current content, plus an additional path added after the colon:
@@ -271,13 +271,13 @@ and specifying a desired capability of **marionette** as
 
 Edge is Microsoft's newest browser, included with Windows 10 and Server 2016.
 Updates to Edge are bundled with major Windows updates,
-so you'll need to download a binary which matches the build number of your 
+so you will need to download a binary which matches the build number of your 
 currently installed build of Windows.
 The [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
 contains links to all the available binaries. Bugs against the EdgeDriver 
 implementation can be raised with 
 [Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver). 
-If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft
+If you would like to run tests against Edge, but are not running Windows 10, Microsoft
 offer free VMs for testers on the [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
 
 {{< code-tab >}}

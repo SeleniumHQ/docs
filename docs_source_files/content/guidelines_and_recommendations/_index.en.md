@@ -14,12 +14,12 @@ you to read through these and thoughtfully decide what approaches
 will work for you in your particular environment.
 
 Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies don't make testing difficult enough,
+As if application state, complexity, and dependencies do not make testing difficult enough,
 dealing with browsers (especially with cross-browser incompatibilities)
 makes writing good tests a challenge.
 
 Selenium provides tools to make functional user interaction easier,
-but doesn't help you write well-architected test suites.
+but does not help you write well-architected test suites.
 In this chapter we offer advice, guidelines, and recommendations.
 on how to approach functional web page automation.
 

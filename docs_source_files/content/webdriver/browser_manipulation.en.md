@@ -153,7 +153,7 @@ You can read the current page title from the browser:
 
 
 ## Windows and tabs
-WebDriver doesn't make the distinction between windows and tabs. If
+WebDriver does not make a distinction between windows and tabs. If
 your site opens a new tab or window, Selenium will let you work with it
 using a window handle.  Each window has a unique identifier which remains
 persistent in a single session. You can get the window handle of the
@@ -505,7 +505,7 @@ see the following:
 </div>
 ```
 
-If it wasn't for the iframe we would expect to click on the button
+If it was not for the iframe we would expect to click on the button
 using something like:
 
 {{< code-tab >}}
