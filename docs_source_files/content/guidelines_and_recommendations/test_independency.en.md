@@ -4,7 +4,7 @@ weight: 7
 ---
 
 Write each test as its own unit. Write the tests in a way that won't be
-reliant on other tests to complete:
+reliant on other tests to complete.
 
 Let's say there is a content management system with which you can create
 some custom content which then appears on your website as a module after 

@@ -26,4 +26,6 @@ such as locators (or their use if you’re using a UI map) and layout.
   and you want to check to see if a user is logged in,
   it should return True or False in a method.
   
-  ***AUT**: Application under tes
+
+  ***AUT**: Application under test
+
