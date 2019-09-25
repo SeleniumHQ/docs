@@ -104,11 +104,11 @@ Here you have some choices to make:
   taken into account before configuration begins?
 
 Regardless of how you answer this question,
-the solution is to make it part of the "set up the data" portion of the test–
-if Larry has exposed an API which enables you (or anyone)
+the solution is to make it part of the "set up the data" portion of the test.
+If Larry has exposed an API which enables you (or anyone)
 to create and update user accounts,
-be sure to use that to answer this question–
-if possible, you want to launch the browser only after you have a user "in hand",
+be sure to use that to answer this question.
+If possible, you want to launch the browser only after you have a user "in hand",
 whose credentials you can just log in with.
 
 If each test for each workflow begins with the creation of a user account,
