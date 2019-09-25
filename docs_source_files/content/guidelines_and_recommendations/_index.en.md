@@ -9,7 +9,7 @@ weight: 7
 
 A note on "Best Practices": We've intentionally avoided the phrase "Best
 Practices" in this documentation. No one approach works for all situations.
-We prefer the idea of "Guidelines and Recommendations." We encourage
+We prefer the idea of "Guidelines and Recommendations". We encourage
 you to read through these and thoughtfully decide what approaches
 will work for you in your particular environment.
 
