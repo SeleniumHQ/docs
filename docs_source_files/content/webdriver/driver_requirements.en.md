@@ -71,7 +71,7 @@ Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on 
 Only local connections are allowed.
 ```
 
-You can regain control of your command prompt by pressing <kbd>Ctrl + C</kbd>
+You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd>
 
 
 ### Quick reference
@@ -179,8 +179,8 @@ chrome.setDefaultService(new chrome.ServiceBuilder('path/to/chromedriver').build
 {{< / code-tab >}}
 
 The chromedriver is implemented as a WebDriver remote server
-that by exposing Chrome's internal automation proxy interface
-instructs the browser what to do.
+that instructs the browser what to do by exposing Chrome's 
+internal automation proxy interface.
 
 
 ### Firefox
@@ -417,7 +417,7 @@ Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
 
 Microsoft also offer a WebDriver binary for
 [Internet Explorer 11 on Windows 7 & 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069). 
-It has not been updated since 2014 and is based of a draft version of the 
+It has not been updated since 2014 and is based on a draft version of the 
 W3 specification. [Jim Evans](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)
 has an excellent writeup on Microsoft's implementation.
 
@@ -550,7 +550,7 @@ PhantomJS is a headless browser based on Webkit, albeit a version much older
 than that used by Google Chrome or Safari. Whilst historically a popular 
 choice, it would now be wise to avoid PhantomJS. The project has been 
 unmaintained 
-[since the 5th of August](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE), 
+[since the 5th of August 2017](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE), 
 so whilst the web will continue to change, PhantomJS will not be updated. 
 This was after Google announced the ability to run Chrome headlessly, 
 something also now offered by Mozilla's Firefox.
