@@ -59,12 +59,12 @@ polluting the runtime environment.
 
 In theory, the process is as simple as mapping the `DriverServlet` to
 a URL, but it is also possible to host the page in a lightweight
-container, such as Jetty configured entirely in code. Steps to do this
-follow.
+container, such as Jetty, configured entirely in code.
 
-Download the `selenium-server.zip` and unpack. Put the JARs on the
-CLASSPATH. Create a new class called `AppServer`. Here, we are using
-Jetty, so you will need to [download](//www.eclipse.org/jetty/download.html) 
+* Download the `selenium-server.zip` and unpack. 
+* Put the JARs on the CLASSPATH. 
+* Create a new class called `AppServer`. 
+Here, we are using Jetty, so you will need to [download](//www.eclipse.org/jetty/download.html) 
 that as well:
 
 ```java

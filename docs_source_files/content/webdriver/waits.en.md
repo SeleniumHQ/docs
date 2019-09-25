@@ -87,7 +87,7 @@ It “might” be intermittent because no guarantees can be made
 about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.
 
-Fortunately, using the normal instruction set available on
+Fortunately, the normal instruction set available on
 the [_WebElement_]({{< ref "/webdriver/web_element.en.md" >}}) interface—such
  as _WebElement.click_ and _WebElement.sendKeys_—are
  guaranteed to be synchronous,

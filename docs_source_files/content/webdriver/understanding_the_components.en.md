@@ -19,7 +19,7 @@ files for Java, .dll files for .NET, etc.
 are created by the browser vendors themselves. Drivers are generally 
 executable modules that run on the system with the browser itself,
 not on the system executing the test suite. (Although those may be the 
-same system.) _NOTE: Some people refer to the drivers as proxies._
+same system.) NOTE: _Some people refer to the drivers as proxies._
 * **Framework:** An additional library used as a support for WebDriver 
 suites. These frameworks may be test frameworks such as JUnit or NUnit. 
 They may also be frameworks supporting natural language features such 
