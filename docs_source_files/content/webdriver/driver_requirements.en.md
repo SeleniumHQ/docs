@@ -4,7 +4,7 @@ weight: 2
 ---
 
 Through WebDriver, Selenium supports all major browsers on the market
-such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
+such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari.
 Where possible, WebDriver drives the browser
 using the browser's built-in support for automation,
 although not all browsers have official support for remote control.
@@ -29,9 +29,9 @@ for getting you started with the different browsers.
 ### Adding Executables to your PATH
 Most drivers require an extra executable for Selenium to communicate
 with the browser. You can manually specify where the executable lives
-before starting WebDriver, but this can make your tests less portable,
+before starting WebDriver, but this can make your tests less portable
 as the executables will need to be in the same place on every machine,
-or included within your test code repository.
+or include the executable within your test code repository.
 
 By adding a folder containing WebDriver's binaries to your system's
 path, Selenium will be able to locate the additional binaries without
