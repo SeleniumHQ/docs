@@ -478,7 +478,7 @@ try {
 {{< / code-tab >}}
 
 Python's WebDriver now supports the python context manager,
-which when using the "with" keyword can automatically quit the driver at
+which when using the `with` keyword can automatically quit the driver at
 the end of execution.
 
 ```python
