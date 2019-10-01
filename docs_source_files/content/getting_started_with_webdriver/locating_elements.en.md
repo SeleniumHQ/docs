@@ -122,7 +122,7 @@ to have to retrieve each of the items individually, a superior
 technique for retrieving cheese is to make use of the pluralized
 version `findElements(By)`. This method returns a collection of web
 elements. If only one element is found, it will still return a
-collection (of one element). If no element match the locator, an
+collection (of one element). If no element matches the locator, an
 empty list will be returned.
 
 {{< code-tab >}}

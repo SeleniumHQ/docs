@@ -23,7 +23,7 @@ e = driver.find_element_by_id("testElement")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can simulate mouse clicking on e if itis visible and has a height and width
+You can simulate mouse clicking on e if it is visible and has a height and width
 that are greater than 0:
 
 {{< code-tab >}}
