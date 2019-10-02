@@ -12,20 +12,20 @@
     <title>On test automation :: Documentation for Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/en/css/nucleus.css?1568816154" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/fontawesome-all.min.css?1568816154" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/hybrid.css?1568816154" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/featherlight.min.css?1568816154" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/perfect-scrollbar.min.css?1568816154" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/auto-complete.css?1568816154" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/atom-one-dark-reasonable.css?1568816154" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/theme.css?1568816154" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/hugo-theme.css?1568816154" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/nucleus.css?1570045929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/fontawesome-all.min.css?1570045929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/hybrid.css?1570045929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/featherlight.min.css?1570045929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/perfect-scrollbar.min.css?1570045929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/auto-complete.css?1570045929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/atom-one-dark-reasonable.css?1570045929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/theme.css?1570045929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/hugo-theme.css?1570045929" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/en/css/theme-selenium.css?1568816154" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/en/css/theme-selenium.css?1570045929" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery-3.3.1.min.js?1568816154"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery-3.3.1.min.js?1570045929"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/lunr.min.js?1568816154"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/auto-complete.js?1568816154"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/lunr.min.js?1570045929"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/auto-complete.js?1570045929"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/search.js?1568816154"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/search.js?1570045929"></script>
 
     
   </div>
@@ -1811,17 +1811,17 @@
 
 
 <p>First, start by asking yourself whether or not you really need to use a browser.
-Odds are good that, at some point, if you&rsquo;re working on a complex web application,
+Odds are that, at some point, if you are working on a complex web application,
 you will need to open a browser and actually test it.</p>
 
 <p>Functional end-user tests such as Selenium tests are expensive to run, however.
 Furthermore, they typically require substantial infrastructure
 to be in place to be run effectively.
-It&rsquo;s a good rule to always ask yourself if what you want to test
+It is a good rule to always ask yourself if what you want to test
 can be done using more lightweight test approaches such as unit tests
 or with a lower-level approach.</p>
 
-<p>Once you have made the determination that you&rsquo;re in the web browser testing business,
+<p>Once you have made the determination that you are in the web browser testing business,
 and you have your Selenium environment ready to begin writing tests,
 you will generally perform some combination of three steps:</p>
 
@@ -1832,7 +1832,7 @@ you will generally perform some combination of three steps:</p>
 </ul>
 
 <p>You will want to keep these steps as short as possible;
-one to two operations should be enough much of the time.
+one or two operations should be enough most of the time.
 Browser automation has the reputation of being “flaky”,
 but in reality that is because users frequently demand too much of it.
 In later chapters, we will return to techniques you can use
@@ -1853,7 +1853,7 @@ they also encompass large business-critical portions at one time.</p>
 <h3 id="testing-requirements">Testing requirements</h3>
 
 <p>As mentioned before, Selenium tests can be expensive to run.
-To what extent depends on the browser you&rsquo;re running the tests against,
+To what extent depends on the browser you are running the tests against,
 but historically browsers&rsquo; behaviour has varied so much that it has often
 been a stated goal to cross-test against multiple browsers.</p>
 
@@ -1865,18 +1865,18 @@ will quickly become a non-trivial undertaking.</p>
 
 <h3 id="let-s-start-with-an-example">Let’s start with an example</h3>
 
-<p>Larry has written a web site which allows users to order their own
+<p>Larry has written a web site which allow users to order their own
 custom unicorns.</p>
 
-<p>The general workflow (what we&rsquo;ll call the “happy path”) is something
+<p>The general workflow (what we will call the “happy path”) is something
 like this:</p>
 
 <ul>
 <li>Create an account</li>
-<li>Configure their unicorn</li>
-<li>Add her to the shopping cart</li>
+<li>Configure the unicorn</li>
+<li>Add it to the shopping cart</li>
 <li>Check out and pay</li>
-<li>Give feedback about their unicorn</li>
+<li>Give feedback about the unicorn</li>
 </ul>
 
 <p>It would be tempting to write one grand Selenium script
@@ -1886,13 +1886,13 @@ Doing so will result in a test that
 a) takes a long time,
 b) will be subject to some common issues around page rendering timing issues, and
 c) is such that if it fails,
-it won&rsquo;t give you a concise, “glanceable” method for diagnosing what went wrong.</p>
+it will not give you a concise, “glanceable” method for diagnosing what went wrong.</p>
 
 <p>The preferred strategy for testing this scenario would be
 to break it down to a series of independent, speedy tests,
 each of which has one “reason” to exist.</p>
 
-<p>Let&rsquo;s pretend you want to test the second step:
+<p>Let us pretend you want to test the second step:
 Configuring your unicorn.
 It will perform the following actions:</p>
 
@@ -1901,9 +1901,9 @@ It will perform the following actions:</p>
 <li>Configure a unicorn</li>
 </ul>
 
-<p>Note that we&rsquo;re skipping the rest of these steps,
+<p>Note that we are skipping the rest of these steps,
 we will test the rest of the workflow in other small, discrete test cases,
-after we&rsquo;re done with this one.</p>
+after we are done with this one.</p>
 
 <p>To start off, you need to create an account.
 Here you have some choices to make:</p>
@@ -1916,11 +1916,11 @@ taken into account before configuration begins?</li>
 </ul>
 
 <p>Regardless of how you answer this question,
-the solution is to make it part of the &ldquo;set up the data&rdquo; portion of the test–
-if Larry has exposed an API which enables you (or anyone)
+the solution is to make it part of the &ldquo;set up the data&rdquo; portion of the test.
+If Larry has exposed an API which enables you (or anyone)
 to create and update user accounts,
-be sure to use that to answer this question–
-if possible, you want to launch the browser only after you have a user &ldquo;in hand&rdquo;,
+be sure to use that to answer this question.
+If possible, you want to launch the browser only after you have a user &ldquo;in hand&rdquo;,
 whose credentials you can just log in with.</p>
 
 <p>If each test for each workflow begins with the creation of a user account,
@@ -2103,7 +2103,7 @@ Here is one way of doing this (continuing from the previous example):</p>
 </span><span style="color:#586e75">// with the browser in any way.
 </span><span style="color:#586e75"></span>Unicorn <span style="color:#268bd2">sparkles</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Unicorn(<span style="color:#2aa198">&#34;Sparkles&#34;</span>, UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
 
-<span style="color:#586e75">// Since we&#39;re already &#34;on&#34; the account page, we have to use it to get to the
+<span style="color:#586e75">// Since we are already &#34;on&#34; the account page, we have to use it to get to the
 </span><span style="color:#586e75">// actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method
 </span><span style="color:#586e75">// takes us there.
 </span><span style="color:#586e75"></span>AddUnicornPage <span style="color:#268bd2">addUnicornPage</span> <span style="color:#719e07">=</span> accountPage.addUnicorn();
@@ -2164,7 +2164,7 @@ unicorn_confirmation_page <span style="color:#719e07">=</span> add_unicorn_page<
 </div>
 </div>
 
-<p>Now that you&rsquo;ve configured your unicorn,
+<p>Now that you have configured your unicorn,
 you need to move on to step 3: making sure it actually worked.</p>
 
 
@@ -2249,7 +2249,7 @@ you need to move on to step 3: making sure it actually worked.</p>
 </div>
 </div>
 
-<p>Note that the tester still hasn&rsquo;t done anything but talk about unicorns in this code–
+<p>Note that the tester still has not done anything but talk about unicorns in this code–
 no buttons, no locators, no browser controls.
 This method of <em>modelling</em> the application
 allows you to keep these test-level commands in place and unchanging,
@@ -2272,7 +2272,7 @@ Will it only keep the existing one or will it add another?</p>
 <p>Each time you move through the workflow,
 you want to try to avoid having to create an account,
 login as the user, and configure the unicorn.
-Ideally, you&rsquo;ll be able to create an account
+Ideally, you will be able to create an account
 and pre-configure a unicorn via the API or database.
 Then all you have to do is log in as the user, locate Sparkles,
 and add her to the cart.</p>
@@ -2285,7 +2285,7 @@ and add her to the cart.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/en/introduction/on_test_automation/">
       “On test automation”
-    </a> was last updated on: 18 Aug 2019 19:28:26 &#43;0000: <a href="https://github.com/SeleniumHQ/docs/commit/75abc59094a953cd5874457f922f130c02993580">Publishing site on Sun Aug 18 19:28:26 UTC 2019, commit 045e4444a3eb4d290e1a3e31b6c61a1ba017ff35 and job 758.1, [skip ci] (75abc590)</a>
+    </a> was last updated on: 02 Oct 2019 21:51:03 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/48a192ab3267461e9cc9e330c9fccab85aebcc1a">Update small things on website (#380) (48a192ab)</a>
 </h5>
         
         </div> 
@@ -3402,20 +3402,20 @@ and add her to the cart.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/clipboard.min.js?1568816154"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.min.js?1568816154"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.jquery.min.js?1568816154"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery.sticky.js?1568816154"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/featherlight.min.js?1568816154"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/html5shiv-printshiv.min.js?1568816154"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/highlight.pack.js?1568816154"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/clipboard.min.js?1570045929"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.min.js?1570045929"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.jquery.min.js?1570045929"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery.sticky.js?1570045929"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/featherlight.min.js?1570045929"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/html5shiv-printshiv.min.js?1570045929"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/highlight.pack.js?1570045929"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/modernizr.custom-3.6.0.js?1568816154"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/learn.js?1568816154"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/hugo-learn.js?1568816154"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/modernizr.custom-3.6.0.js?1570045929"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/learn.js?1570045929"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/hugo-learn.js?1570045929"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.css?1568816154" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.js?1568816154"></script>
+    <link href="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.css?1570045929" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.js?1570045929"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

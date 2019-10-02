@@ -28,7 +28,7 @@ Java Python C# Ruby JavaScript // Navigate to a URL (both of the statements belo
       
       <guid>https://seleniumhq.github.io/docs/site/en/getting_started_with_webdriver/browsers/</guid>
       <description>Consumer browsers The Selenium framework officially supports the following browsers:
-   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.5 and newer   Safari Apple 10 and newer    Specialised browsers There is also a set of specialized browsers out there typically used in development environments.</description>
+   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.5 and newer   Safari Apple 10 and newer    Specialized browsers There is also a set of specialized browsers out there typically used in development environments.</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ Java Python C# Ruby JavaScript // Navigate to a URL (both of the statements belo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/worst_practices/captchas/</guid>
-      <description>CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so don’t try! There are two primary strategies to get around CAPTCHA checks:
+      <description>CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so do not try! There are two primary strategies to get around CAPTCHA checks:
  Disable CAPTCHAs in your test environment Add a hook to allow tests to bypass the CAPTCHA  </description>
     </item>
     
@@ -68,7 +68,7 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/guidelines_and_recommendations/page_object_models/</guid>
-      <description>Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with that page of the UI. The benefit is that if the UI changes for the page, the tests themselves don’t need to change; only the code within the page object needs to change.</description>
+      <description>Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI. The benefit is that if the UI changes for the page, the tests themselves do not need to change; only the code within the page object needs to change.</description>
     </item>
     
     <item>
@@ -77,7 +77,7 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/grid/purposes_and_main_functionalities/</guid>
-      <description> Central entry point for all tests Management and control of the nodes / environment where the browsers run on Scaling Running tests in parallel Cross platform testing Load balancing  </description>
+      <description> Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@ java -jar selenium-server-standalone-{VERSION}.jar Considerations for running th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/introduction/the_selenium_project_and_tools/</guid>
-      <description>Selenium controls web browsers Selenium is many things, but at its core it&amp;rsquo;s a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
+      <description>Selenium controls web browsers Selenium is many things, but at its core it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
 It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents. It also provides many other controls such as mouse movement, arbitrary JavaScript execution, and much more.</description>
     </item>
     
@@ -136,7 +136,7 @@ Terminology  API: Application Programming Interface. This is the set of &amp;ldq
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/grid/components_of_a_grid/</guid>
-      <description>Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent to. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.) The hub will connect one or more nodes that tests will be delegated to.</description>
+      <description>Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.) The hub will connect one or more nodes that tests will be delegated to.</description>
     </item>
     
     <item>
@@ -146,7 +146,7 @@ Terminology  API: Application Programming Interface. This is the set of &amp;ldq
       
       <guid>https://seleniumhq.github.io/docs/site/en/guidelines_and_recommendations/domain_specific_language/</guid>
       <description>A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, don&amp;rsquo;t care how your site looks. They don&amp;rsquo;t care about the decoration, animations, or graphics. They want to use your system to push their new employees through the process with minimal difficulty.</description>
+Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics. They want to use your system to push their new employees through the process with minimal difficulty; they want to book travel to Alaska; they want to configure and buy unicorns at a discount.</description>
     </item>
     
     <item>
@@ -155,7 +155,7 @@ Your users, in general, don&amp;rsquo;t care how your site looks. They don&amp;r
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/webdriver/driver_requirements/</guid>
-      <description>Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
+      <description>Through WebDriver, Selenium supports all major browsers on the market such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
 WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible. This is possible at varying levels in different browsers. For more details on the different driver idiosyncracies, please see Driver Idiosyncracies.</description>
     </item>
     
@@ -185,7 +185,7 @@ Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); op
       
       <guid>https://seleniumhq.github.io/docs/site/en/getting_started/html-runner/</guid>
       <description>Selenium HTML-runner allows you to run Test Suites from a command line. Test Suites are HTML exports from Selenium IDE or campatible tools.
-Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - what is for example an export from Monitis Transaction Monitor). Be sure you comply with this. For Linux users with no DISPLAY - you need to start html-runner with Virtual display (search for xvfb)  Example Linux environment Install / download following software packages:</description>
+Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - for example an export from Monitis Transaction Monitor). Be sure you comply with this. For Linux users with no DISPLAY - you need to start html-runner with Virtual display (search for xvfb)  Example Linux environment Install / download following software packages:</description>
     </item>
     
     <item>
@@ -194,7 +194,7 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>To execute your project and control browser you need to have browser-specific WebDriver binaries installed.
+      <description>To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.
 Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
     </item>
     
@@ -204,8 +204,8 @@ Download the WebDriver binary supported by your browser and place it in the Syst
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/introduction/on_test_automation/</guid>
-      <description>First, start by asking yourself whether or not you really need to use a browser. Odds are good that, at some point, if you&amp;rsquo;re working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however. Furthermore, they typically require substantial infrastructure to be in place to be run effectively. It&amp;rsquo;s a good rule to always ask yourself if what you want to test can be done using more lightweight test approaches such as unit tests or with a lower-level approach.</description>
+      <description>First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
+Functional end-user tests such as Selenium tests are expensive to run, however. Furthermore, they typically require substantial infrastructure to be in place to be run effectively. It is a good rule to always ask yourself if what you want to test can be done using more lightweight test approaches such as unit tests or with a lower-level approach.</description>
     </item>
     
     <item>
@@ -214,7 +214,7 @@ Functional end-user tests such as Selenium tests are expensive to run, however. 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/remote_webdriver/remote_webdriver_client/</guid>
-      <description>First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
+      <description>To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
 Java Python C# Ruby JavaScript FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
     </item>
     
@@ -244,8 +244,8 @@ Line length When editing the documentation’s source, which is written in plain
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/support_packages/working_with_colours/</guid>
-      <description>You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Wouldn&amp;rsquo;t it be nice if there was an easy way to compare a HEX representation of a colour with an RGB representation of a colour, or an RGBA representation of a colour with a HSLA representation of a colour?
-Worry not. There&amp;rsquo;s a solution: the Color class!</description>
+      <description>You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?
+Worry not. There is a solution: the Color class!</description>
     </item>
     
     <item>
@@ -254,7 +254,7 @@ Worry not. There&amp;rsquo;s a solution: the Color class!</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/webdriver/browser_manipulation/</guid>
-      <description>Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
+      <description>Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check where you need to check the Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
 gem install selenium-webdriver Or, if you use Bundler, add this line to your application&amp;rsquo;s Gemfile:</description>
     </item>
     
@@ -264,7 +264,7 @@ gem install selenium-webdriver Or, if you use Bundler, add this line to your app
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>Selenium should not be used to prepare a test case. All repetitive actions, and preparation for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT (e.g. using an API to login and set a cookie).</description>
+      <description>Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.g. using an API to login and set a cookie).</description>
     </item>
     
     <item>
@@ -274,7 +274,7 @@ gem install selenium-webdriver Or, if you use Bundler, add this line to your app
       
       <guid>https://seleniumhq.github.io/docs/site/en/worst_practices/http_response_codes/</guid>
       <description>For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.
-Selenium WebDriver is a completely different approach to browser automation, preferring to act more like a user and this is represented in the way you write tests with WebDriver.</description>
+Selenium WebDriver is a completely different approach to browser automation, preferring to act more like a user.</description>
     </item>
     
     <item>
@@ -283,7 +283,7 @@ Selenium WebDriver is a completely different approach to browser automation, pre
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/selenium_installation/installing_standalone_server/</guid>
-      <description>If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, then you don&amp;rsquo;t have to add selenium-java or a browser specific jar.
+      <description>If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
@@ -314,7 +314,7 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
       
       <guid>https://seleniumhq.github.io/docs/site/en/introduction/types_of_testing/</guid>
       <description>Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
+For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
     </item>
     
     <item>
@@ -323,7 +323,7 @@ For web applications, the automation of this testing can be done directly with S
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/support_packages/working_with_select_elements/</guid>
-      <description>Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
+      <description>Select elements can require quite a bit of boiler plate code to automate. To reduce this, and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
 Java Python C# Ruby JavaScript import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      You are then able to create a Select object using a WebElement that references a &amp;lt;select&amp;gt; element.</description>
     </item>
     
@@ -363,7 +363,7 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       
       <guid>https://seleniumhq.github.io/docs/site/en/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      You can simulate mouse clicking on e if it&amp;rsquo;s visible and has a height and width that are greater than 0:</description>
+Java Python C# Ruby JavaScript WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      You can simulate mouse clicking on e if it is visible and has a height and width that are greater than 0:</description>
     </item>
     
     <item>
@@ -382,7 +382,7 @@ Java Python C# Ruby JavaScript String name = &amp;#34;Charles&amp;#34;; driver.f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/webdriver/waits/</guid>
-      <description>WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.
+      <description>WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver does not track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.
 From experience, most intermittents that arise from use of Selenium and WebDriver are connected to race conditions that occur between the browser and the user&amp;rsquo;s instructions.</description>
     </item>
     
@@ -429,8 +429,8 @@ From experience, most intermittents that arise from use of Selenium and WebDrive
       
       <guid>https://seleniumhq.github.io/docs/site/en/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
-Don&amp;rsquo;t share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.
-Clean up stale data in the application that might be picked up by another test e.</description>
+ Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.
+ Clean up stale data in the application that might be picked up by another test e.</description>
     </item>
     
     <item>
@@ -439,7 +439,7 @@ Clean up stale data in the application that might be picked up by another test e
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
+      <description>WebDriver provides an API for working with the three types of native popup messages offered by JavaScript. These popups are styled by the browser and offer limited customisation.
 Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK. It can also be dismissed in most browsers by pressing the close button, but this will always do the same thing as the OK button.</description>
     </item>
     
@@ -449,7 +449,7 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/worst_practices/performance_testing/</guid>
-      <description>Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable but because it is not optimised for the job and you are unlikely to get good results.
+      <description>Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable, but because it is not optimised for the job and you are unlikely to get good results.
 It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
     </item>
     
@@ -468,8 +468,8 @@ It may seem ideal to performance test in the context of the user but a suite of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/worst_practices/link_spidering/</guid>
-      <description>Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.
-Instead of using WebDriver for this, you could save a ton of time by executing a curl command, or using a library such as BeautifulSoup since these methods don’t rely on creating a browser and navigating to a page.</description>
+      <description>Using WebDriver to spider through links is not a recommended practice. Not because it cannot be done, but because WebDriver is definitely not the most ideal tool for this. WebDriver needs time to start up, and can take several seconds, up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.
+Instead of using WebDriver for this, you could save a ton of time by executing a curl command, or using a library such as BeautifulSoup since these methods do not rely on creating a browser and navigating to a page.</description>
     </item>
     
     <item>
@@ -478,8 +478,8 @@ Instead of using WebDriver for this, you could save a ton of time by executing a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/guidelines_and_recommendations/test_independency/</guid>
-      <description>Write each test as its own unit. Write the tests in a way that won&amp;rsquo;t be reliant on other tests to complete:
-Let&amp;rsquo;s say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.
+      <description>Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
+Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.
 A wrong way of testing your module is that the content is created and published in one test, and then checking the module in another test.</description>
     </item>
     
@@ -489,7 +489,7 @@ A wrong way of testing your module is that the content is created and published 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
-      <description>Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:
+      <description>Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:
 driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); The Google page object class with this fluent behavior might look like this:</description>
     </item>
     
@@ -518,7 +518,7 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/webdriver/web_element/</guid>
-      <description>Represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
+      <description>WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
 Java Python C# Ruby JavaScript WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) search_form = driver.find_element_by_tag_name(&amp;#34;form&amp;#34;) search_box = search_form.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.Url = &amp;#34;http://www.google.com&amp;#34;; IWebElement searchForm = driver.</description>
     </item>
     
@@ -528,7 +528,7 @@ Java Python C# Ruby JavaScript WebDriver driver = new FirefoxDriver(); driver.ge
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/docs/site/en/webdriver/keyboard/</guid>
-      <description>Represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
+      <description>Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
 Java Python C# Ruby JavaScript import org.openqa.selenium.By; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.firefox.FirefoxDriver; public class HelloSelenium { public static void main(String[] args) { WebDriver driver = new FirefoxDriver(); try { // Navigate to Url  driver.</description>
     </item>
