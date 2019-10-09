@@ -111,6 +111,9 @@ account_page = login_as(user.get_email(), user.get_password())
   {{< code-panel language="javascript" >}}
 // Todavía no tenemos una muestra de código JavaScript - ayúdenos y genere un PR (pull request)
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Como se puede imaginar, la `UserFactory` se puede ampliar para proporcionar métodos como `createAdminUser()` y `createUserWithPayment()`. El punto es que estas dos líneas de código no le distraigan del objetivo final de esta prueba: configurar un unicornio.
@@ -167,6 +170,9 @@ unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< code-panel language="javascript" >}}
 // Todavía no tenemos una muestra de código en JavaScript - ayúdanos y genera un PR (pull request)
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Ahora que ha configurado su unicornio, debe continuar al paso 3: asegurarse de que realmente funcionó.
@@ -192,6 +198,9 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Todavía no tenemos una muestra de código en JavaScript - ayúdanos y genera un PR (pull request)
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 

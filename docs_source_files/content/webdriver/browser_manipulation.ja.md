@@ -93,6 +93,9 @@ driver.navigate.to 'https://www.seleniumhq.org'
   {{< code-panel language="javascript" >}}
 await driver.get('https://seleniumhq.github.io/docs/');
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get current URL
@@ -105,6 +108,9 @@ You can read the current URL from the browser's address bar using:
   {{< code-panel language="csharp" >}}driver.Url;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.current_url{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getCurrentUrl();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Back
@@ -117,6 +123,9 @@ Pressing the browser's back button:
   {{< code-panel language="csharp" >}}driver.Navigate().Back();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.back{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().back();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -129,6 +138,9 @@ Pressing the browser's forward button:
   {{< code-panel language="csharp" >}}driver.Navigate().Forward();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.forward{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().forward();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Refresh
@@ -141,6 +153,9 @@ Refresh the current page:
   {{< code-panel language="csharp" >}}driver.Navigate().Refresh();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.refresh{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().refresh();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get title
@@ -153,6 +168,9 @@ You can read the current page title from the browser:
   {{< code-panel language="csharp" >}}driver.Title;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.title{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getTitle();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -169,6 +187,9 @@ current window by using:
   {{< code-panel language="csharp" >}}driver.CurrentWindowHandle;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.window_handle{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getWindowHandle();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Switching windows or tabs
@@ -317,6 +338,9 @@ windows.forEach(async handle => {
 //Wait for the new tab to finish loading content
 await driver.wait(until.titleIs('Selenium documentation'), 10000);
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -364,6 +388,9 @@ await driver.close();
 //Switch back to the old tab or window
 await driver.switchTo().window(originalWindow);
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Forgetting to switch back to another window handle after closing a
@@ -382,6 +409,9 @@ instead of close:
   {{< code-panel language="csharp" >}}driver.Quit();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.quit{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.quit();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 * Quit will:
@@ -435,6 +465,9 @@ after('Tear down', async function () {
   await driver.quit();
 });
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 If not running WebDriver in a test context, you may consider using
@@ -475,6 +508,9 @@ try {
 } finally {
     await driver.quit();
 }
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -532,6 +568,9 @@ driver.find_element(:tag_name,'button').click
   {{< code-panel language="javascript" >}}
 // This won't work
 await driver.findElement(By.css('button')).click();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -598,6 +637,9 @@ await driver.switchTo().frame(iframe);
 // Now we can click the button
 await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Using a name or ID
@@ -650,6 +692,9 @@ await driver.switchTo().frame('myframe');
 // Now we can click the button
 await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Using an index
@@ -681,6 +726,9 @@ driver.switch_to.frame(iframe)
 // Switches to the second frame
 await driver.switchTo().frame(1);
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -709,6 +757,9 @@ driver.switch_to.default_content
   {{< code-panel language="javascript" >}}
 // Return to the top level
 await driver.switchTo().defaultContent();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -770,6 +821,9 @@ const rect = await driver.manage().window().getRect();
 const width1 = rect.width;
 const height1 = rect.height;
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Set window size
@@ -781,6 +835,9 @@ Restores the window and sets the window size.
   {{< code-panel language="csharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.resize_to(1024,768){{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().setRect({ width: 1024, height: 768 });{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get window position
@@ -830,6 +887,9 @@ const rect = await driver.manage().window().getRect();
 const x1 = rect.x;
 const y1 = rect.y;
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ## Set window position
@@ -856,6 +916,9 @@ driver.manage.window.move_to(0,0)
 // Move the window to the top left of the primary monitor
 await driver.manage().window().setRect({ x: 0, y: 0 });
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Maximise window
@@ -869,6 +932,9 @@ toolbars.
   {{< code-panel language="csharp" >}}driver.Manage().Window.Maximize();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.maximize{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().maximize();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Fullscreen window
@@ -881,4 +947,7 @@ Fills the entire screen, similar to pressing F11 in most browsers.
   {{< code-panel language="csharp" >}}driver.Manage().Window.FullScreen();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.full_screen{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().fullscreen();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}

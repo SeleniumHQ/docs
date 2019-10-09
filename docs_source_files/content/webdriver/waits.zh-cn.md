@@ -79,6 +79,9 @@ await driver.get('file:///race_condition.html');
 const element = await driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 The issue here is that the default
@@ -188,6 +191,9 @@ await driver.wait(() => documentInitialised(), 10000);
 const element = await driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 We pass in the _condition_ as a function reference
@@ -223,6 +229,9 @@ assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -270,6 +279,9 @@ WebDriverWait(driver, timeout=3).until(some_condition)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -370,6 +382,9 @@ let webElement = await driver.findElement(By.id("myDynamicElement"));
 
 }());
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ## FluentWait
@@ -409,6 +424,9 @@ element = wait.until(EC.element_to_be_clickable((By.XPATH, "//div")))
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 

@@ -155,6 +155,9 @@ const chrome = require('selenium-webdriver/chrome');
     //your code inside this block
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Remember that you have to set the path to the chromedriver executable.
@@ -175,6 +178,9 @@ Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 chrome.setDefaultService(new chrome.ServiceBuilder('path/to/chromedriver').build());
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -231,6 +237,9 @@ const {Builder} = require('selenium-webdriver');
    //your code inside this block
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 If you prefer not to set geckodriver's location using PATH,
@@ -251,6 +260,9 @@ Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -317,6 +329,9 @@ const {Builder} = require('selenium-webdriver');
    //your code inside this block
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 If Edge driver is not present in your path, you can set the path using 
@@ -337,6 +352,9 @@ Selenium::WebDriver::Edge.driver_path = "C:/path/to/MicrosoftWebDriver.exe"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -392,6 +410,9 @@ const {Builder} = require('selenium-webdriver');
    //your code inside this block
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 If Internet Explorer driver is not present in your path, you can set the path 
@@ -412,6 +433,9 @@ Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -463,6 +487,9 @@ driver = Selenium::WebDriver.for :opera
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -520,6 +547,9 @@ const {Builder} = require('selenium-webdriver');
    let driver = await new Builder().forBrowser('safari').build();
    //your code inside this block
 })();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 

@@ -94,6 +94,9 @@ await alert.accept();
 
 // Note: To use await, the above code should be inside an async function
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ## Confirm
@@ -184,6 +187,9 @@ await alert.dismiss();
 
 // Note: To use await, the above code should be inside an async function
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ## Prompt
@@ -269,5 +275,8 @@ await alert.sendKeys("Selenium");
 await alert.accept();
 
 //Note: To use await, the above code should be inside an async function
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
