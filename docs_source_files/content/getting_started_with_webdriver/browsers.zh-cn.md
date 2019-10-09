@@ -22,10 +22,6 @@ weight: 1
 
 ## 专业级浏览器
 
-There is also a set of specialized browsers out there
-typically used in development environments.
-We can make use of some of these browsers for automation purposes also,
-and Selenium ties in support for the following specialized drivers:
 还有一些通常在开发环境中使用的专业级浏览器。
 我们也可以使用其中一些浏览器实现自动化的目的，
 Selenium支持以下专业驱动:
