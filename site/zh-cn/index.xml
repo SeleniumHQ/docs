@@ -23,17 +23,6 @@ Java Python C# Ruby JavaScript // Navigate to a URL (both of the statements belo
     </item>
     
     <item>
-      <title>Browsers</title>
-      <link>https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/browsers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/browsers/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Consumer browsers The Selenium framework officially supports the following browsers:
-   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.5 and newer   Safari Apple 10 and newer    Specialised browsers There is also a set of specialized browsers out there typically used in development environments.</description>
-    </item>
-    
-    <item>
       <title>Captchas</title>
       <link>https://seleniumhq.github.io/docs/site/zh-cn/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -150,6 +139,18 @@ python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</des
 WebDriver WebDriver 也被称为 Selenium 2。 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
 Remote Control Remote Control 也被称为 Selenium 1。 Selenium RC 是 Selenium WebDriver 出现之前最突出的 Selenium 工具。 Selenium RC 将使用一个代理服务器，并将 JavaScript 注入到浏览器中，以便能够控制它。 考虑到 Selenium RC 在浏览器上的侵入性， 您永远不能确定您测试的应用程序是否与您想要推送的应用程序相同。 Selenium 2 APIs 包含有 Selenium RC APIs， 但是 Selenium 3 会完全摆脱 Selenium RC APIs。 如果您还在使用 Selenium RC，则必须 迁移 到 Selenium WebDriver.
 IDE IDE 是一个 Firefox 插件， 可以用来记录 Firefox 本身的测试步骤。 Selenium IDE 可用于快速生成各种编程语言（C#、Java、Python 和 Ruby）的测试代码。 考虑到通过 Selenium IDE 生成的代码的可维护性，除了熟悉元素定位器或生成丢弃的代码之外， 不推荐将其用于其他任何用途。 我们确信，一旦您习惯了 WebDriver API，您将永远不会使用 Selenium IDE。</description>
+    </item>
+    
+    <item>
+      <title>浏览器</title>
+      <link>https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/browsers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/docs/site/zh-cn/getting_started_with_webdriver/browsers/</guid>
+      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
+ 消费级浏览器 当前Selenium框架支持以下浏览器:
+   浏览器 维护者 支持的版本     Chromium Chromium 所有版本   Firefox Mozilla 54及以上版本   Internet Explorer Selenium 6及以上版本   Opera Opera Chromium / Presto 10.5及以上版本   Safari Apple 10及以上版本    专业级浏览器 还有一些通常在开发环境中使用的专业级浏览器。 我们也可以使用其中一些浏览器实现自动化的目的， Selenium支持以下专业驱动:
+   驱动名称 用途 维护者     HtmlUnitDriver Rhino支持的无头浏览器模拟器 Selenium项目组    </description>
     </item>
     
     <item>
