@@ -12,20 +12,20 @@
     <title>Esperas :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1570045931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1570045931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1570045931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1570045931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1570045931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1570045931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1570045931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1570045931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1570045931" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571179801" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571179801" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571179801" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571179801" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571179801" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571179801" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571179801" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571179801" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571179801" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1570045931" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571179801" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1570045931"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571179801"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1570045931"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1570045931"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571179801"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571179801"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1570045931"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571179801"></script>
 
     
   </div>
@@ -2067,8 +2067,15 @@ el <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</spa
 
 <section id="csharpcode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+driver = <span style="color:#719e07">new</span> ChromeDriver();
+driver.Url = <span style="color:#2aa198">&#34;https://www.google.com/ncr&#34;</span>;
+driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>)).SendKeys(<span style="color:#2aa198">&#34;cheese&#34;</span> + Keys.Enter);
+            
+WebDriverWait wait = <span style="color:#719e07">new</span> WebDriverWait(driver, TimeSpan.FromSeconds(<span style="color:#2aa198">10</span>));
+IWebElement firstResult = wait.Until(e =&gt; e.FindElement(By.XPath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)));
+
+Console.WriteLine(firstResult.Text);
+  
 </code></pre></div>
 </section>
   
@@ -2157,15 +2164,17 @@ we can refactor our instructions to be more concise:</p>
     <label for="tab4code7">JavaScript</label>
       
   <div class="tab-panels">
-  
+    
 
 
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// We don&#39;t have a Java code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  </code></pre></div>
-</section>
-  
+WebElement <span style="color:#268bd2">foo</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, 3)
+            .until(driver <span style="color:#719e07">-&gt;</span> driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)));
+assertEquals(foo.getText(), <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>); 
+    </code></pre></div>
+</section> 
+
 
 
 <section id="pythoncode7" class="tab-panel">
@@ -2428,8 +2437,11 @@ my_dynamic_element <span style="color:#719e07">=</span> driver<span style="color
 
 <section id="csharpcode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
+driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(<span style="color:#2aa198">10</span>);
+driver.Url = <span style="color:#2aa198">&#34;http://somedomain/url_that_delays_loading&#34;</span>;
+IWebElement dynamicElement = driver.FindElement(By.Name(<span style="color:#2aa198">&#34;dynamicElement&#34;</span>));
+  
 </code></pre></div>
 </section>
   
@@ -2577,7 +2589,7 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/webdriver/waits/">
       “Esperas”
-    </a> was last updated on: 06 Sep 2019 13:10:17 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/2592830b795d0e7ba45566e435d25aacca704de4">[docs]: Updated Ruby sample code for waits document (#365) (2592830b)</a>
+    </a> was last updated on: 16 Oct 2019 00:49:04 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/2a955a79f37cc667dcfcf9bf383e8b85f0d41b35">Csharp examples (#387) (2a955a79)</a>
 </h5>
         
         </div> 
@@ -3694,20 +3706,19 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1570045931"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1570045931"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1570045931"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1570045931"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1570045931"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/html5shiv-printshiv.min.js?1570045931"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1570045931"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571179801"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571179801"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571179801"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571179801"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571179801"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571179801"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1570045931"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1570045931"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1570045931"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571179801"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571179801"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571179801"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1570045931" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1570045931"></script>
+    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571179801" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571179801"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

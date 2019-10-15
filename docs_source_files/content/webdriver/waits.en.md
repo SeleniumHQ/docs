@@ -95,7 +95,7 @@ the [_WebElement_]({{< ref "/webdriver/web_element.en.md" >}}) interface—such
  (or the callback will not trigger in callback-style languages)
  until the command has been completed in the browser.
  The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/webdriver/keyboard.en.md" >}}) 
+ [_Keyboard_]({{< ref "/webdriver/keyboard.en.md" >}})
  and [_Mouse_]({{< ref "/webdriver/mouse.en.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
@@ -154,7 +154,14 @@ el = driver.find_element_by_tag_name("p")
 assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+driver = new ChromeDriver();
+driver.Url = "https://www.google.com/ncr";
+driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
+            
+WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+IWebElement firstResult = wait.Until(e => e.FindElement(By.XPath("//a/h3")));
+
+Console.WriteLine(firstResult.Text);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -201,7 +208,9 @@ we can refactor our instructions to be more concise:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// We don't have a Java code sample yet -  Help us out and raise a PR
+WebElement foo = new WebDriverWait(driver, 3)
+          .until(driver -> driver.findElement(By.name("q")));
+assertEquals(foo.getText(), "Hello from JavaScript!"); 
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium.webdriver.support.ui import WebDriverWait
@@ -214,10 +223,10 @@ assert el.text == "Hello from JavaScript!"
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -261,10 +270,10 @@ WebDriverWait(driver, timeout=3).until(some_condition)
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -338,7 +347,10 @@ driver.get("http://somedomain/url_that_delays_loading")
 my_dynamic_element = driver.find_element_by_id("myDynamicElement")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+IWebDriver driver = new ChromeDriver();
+driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+driver.Url = "http://somedomain/url_that_delays_loading";
+IWebElement dynamicElement = driver.FindElement(By.Name("dynamicElement"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -400,10 +412,10 @@ element = wait.until(EC.element_to_be_clickable((By.XPATH, "//div")))
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
