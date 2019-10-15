@@ -12,20 +12,20 @@
     <title>Driver specific capabilities :: Documentation for Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/en/css/nucleus.css?1571179798" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/fontawesome-all.min.css?1571179798" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/hybrid.css?1571179798" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/featherlight.min.css?1571179798" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/perfect-scrollbar.min.css?1571179798" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/auto-complete.css?1571179798" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/atom-one-dark-reasonable.css?1571179798" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/theme.css?1571179798" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/hugo-theme.css?1571179798" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/nucleus.css?1571180932" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/fontawesome-all.min.css?1571180932" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/hybrid.css?1571180932" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/featherlight.min.css?1571180932" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/perfect-scrollbar.min.css?1571180932" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/auto-complete.css?1571180932" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/atom-one-dark-reasonable.css?1571180932" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/theme.css?1571180932" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/hugo-theme.css?1571180932" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/en/css/theme-selenium.css?1571179798" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/en/css/theme-selenium.css?1571180932" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery-3.3.1.min.js?1571179798"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery-3.3.1.min.js?1571180932"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/lunr.min.js?1571179798"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/auto-complete.js?1571179798"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/lunr.min.js?1571180932"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/auto-complete.js?1571180932"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/search.js?1571179798"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/search.js?1571180932"></script>
 
     
   </div>
@@ -1878,8 +1878,10 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 
 <section id="csharpcode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> FirefoxOptions();
+options.Proxy.Kind = ProxyKind.Direct;
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> FirefoxDriver(options);
+  
 </code></pre></div>
 </section>
   
@@ -1966,8 +1968,11 @@ options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> FirefoxOptions();
+<span style="color:#dc322f">var</span> profile = <span style="color:#719e07">new</span> FirefoxProfile();
+options.Profile = profile;
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  
 </code></pre></div>
 </section>
   
@@ -1999,6 +2004,84 @@ File Upload dialog. IEDriver has a default timeout of 1000ms, but you
 can increase the timeout using the fileUploadDialogTimeout capability.</p>
 
 
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    
+    <label for="tab0code2">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2">
+    
+    <label for="tab1code2">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2">
+    
+    <label for="tab2code2">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2">
+    
+    <label for="tab3code2">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
+    
+    <label for="tab4code2">JavaScript</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// We don&#39;t have a Java code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> InternetExplorerOptions();
+options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#2aa198">2000</span>);
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+
 <footer class=" footline" >
 	
 </footer>
@@ -2006,7 +2089,7 @@ can increase the timeout using the fileUploadDialogTimeout capability.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/en/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver specific capabilities”
-    </a> was last updated on: 23 Aug 2019 13:56:40 &#43;0000: <a href="https://github.com/SeleniumHQ/docs/commit/1ce6fb4f4072804dd9f5e2e27d829f188d44fdd2">Publishing site on Fri Aug 23 13:56:40 UTC 2019, commit e7ed839df64c73bddd1f2945e86f68614bc42a9d and job 778.1, [skip ci] (1ce6fb4f)</a>
+    </a> was last updated on: 16 Oct 2019 02:08:00 &#43;0300: <a href="https://github.com/SeleniumHQ/docs/commit/d479af2c1656e34a9d1608ad97fbbe9b116a6c2f">Added C# examples (#382) (d479af2c)</a>
 </h5>
         
         </div> 
@@ -3123,19 +3206,19 @@ can increase the timeout using the fileUploadDialogTimeout capability.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/clipboard.min.js?1571179798"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.min.js?1571179798"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.jquery.min.js?1571179798"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery.sticky.js?1571179798"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/featherlight.min.js?1571179798"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/highlight.pack.js?1571179798"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/clipboard.min.js?1571180932"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.min.js?1571180932"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.jquery.min.js?1571180932"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery.sticky.js?1571180932"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/featherlight.min.js?1571180932"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/highlight.pack.js?1571180932"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/modernizr.custom-3.6.0.js?1571179798"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/learn.js?1571179798"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/hugo-learn.js?1571179798"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/modernizr.custom-3.6.0.js?1571180932"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/learn.js?1571180932"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/hugo-learn.js?1571180932"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.css?1571179798" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.js?1571179798"></script>
+    <link href="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.css?1571180932" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.js?1571180932"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
