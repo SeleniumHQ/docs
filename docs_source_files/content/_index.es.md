@@ -115,6 +115,9 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
     }
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 

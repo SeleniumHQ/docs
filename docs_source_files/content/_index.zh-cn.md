@@ -115,6 +115,9 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
     }
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 请参阅 _[快速浏览]({{< ref "/getting_started/quick.zh-cn.md" >}})_ 以获得运行此代码时幕后发生的事情的完整解释。

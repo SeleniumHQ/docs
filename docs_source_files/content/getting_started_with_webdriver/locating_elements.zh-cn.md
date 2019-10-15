@@ -30,6 +30,9 @@ driver.find_element(id: "cheese")
   {{< code-panel language="javascript" >}}
 const cheese = await driver.findElement(By.id('cheese'));
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 As seen in the example, locating elements in WebDriver is done on the
@@ -64,6 +67,9 @@ cheddar = cheese.find_elements(id: "cheddar")
   {{< code-panel language="javascript" >}}
 const cheese = await driver.findElement(By.id('cheese'));
 const cheddar = await cheese.findElement(By.id('cheddar'));
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -106,6 +112,9 @@ mucho_cheese = driver.find_elements(css: "#cheese #cheddar")
   {{< code-panel language="javascript" >}}
 const cheddar = await driver.findElement(By.css('#cheese #cheddar'));
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Locating multiple elements
@@ -145,6 +154,9 @@ mucho_cheese = driver.find_elements(css: "#cheese li")
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const muchoCheese = await driver.findElements(By.css('#cheese li'));
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 

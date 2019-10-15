@@ -36,6 +36,9 @@ driver = webdriver.Firefox(options=options)
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -66,6 +69,9 @@ options.profile = firefox_profile
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 

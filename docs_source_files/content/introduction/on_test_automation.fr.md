@@ -165,6 +165,9 @@ account_page = login_as(user.get_email(), user.get_password())
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 As you can imagine, the `UserFactory` can be extended
@@ -240,6 +243,9 @@ unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Now that you've configured your unicorn,
@@ -266,6 +272,9 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
