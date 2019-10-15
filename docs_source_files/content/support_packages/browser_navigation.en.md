@@ -62,6 +62,20 @@ driver.navigate.refresh
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// Navigate to a URL (both of the statements below are
+// functionally equivalent).
+driver.get("https://www.google.com")
+driver.navigate().to("https://www.google.com")
+
+// Go forward one page in the browser (if you're not on the
+// last page that was viewed).
+driver.navigate().forward()
+
+// Go back one page in the browser (if you're not on the
+// first page that was viewed).
+driver.navigate().back()
+
+// Refresh the current page.
+driver.navigate().refresh()
   {{< / code-panel >}}
 {{< / code-tab >}}
