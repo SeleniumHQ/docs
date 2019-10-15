@@ -27,7 +27,8 @@ const name = "Charles";
 await driver.findElement(By.name('name')).sendKeys(name);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+val name = "Charles"
+driver.findElement(By.name("name")).sendKeys(name)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -63,7 +64,9 @@ const target = await driver.findElement(By.id('target'));
 await actions.dragAndDrop(source, target).perform();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+val source = driver.findElement(By.id("source"))
+val target = driver.findElement(By.id("target"))
+Actions(driver).dragAndDrop(source, target).build().perform()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -88,7 +91,7 @@ driver.find_element(css: "input[type='submit']").click
 await driver.findElement(By.css("input[type='submit']")).click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+driver.findElement(By.cssSelector("input[type='submit']")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 

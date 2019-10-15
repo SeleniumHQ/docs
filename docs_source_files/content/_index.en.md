@@ -137,7 +137,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 
 class HelloSelenium {
 
-    public static void main(String[] args) {
+    public main(args: Array<String>) {
         val driver = new FirefoxDriver()
         val wait = new WebDriverWait(driver, 10)
         try {
@@ -150,9 +150,6 @@ class HelloSelenium {
         }
     }
 }
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
   {{< / code-panel >}}
 {{< / code-tab >}}
 
