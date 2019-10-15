@@ -162,7 +162,7 @@ const chrome = require('selenium-webdriver/chrome');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -186,7 +186,7 @@ Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"
 chrome.setDefaultService(new chrome.ServiceBuilder('path/to/chromedriver').build());
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -244,7 +244,7 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -268,7 +268,7 @@ Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -336,7 +336,7 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -360,7 +360,7 @@ Selenium::WebDriver::Edge.driver_path = "C:\path\to\MicrosoftWebDriver.exe"
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -417,7 +417,7 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -441,7 +441,7 @@ Selenium::WebDriver::IE.driver_path = "C:\path\to\IEDriver.exe"
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -495,7 +495,7 @@ driver = Selenium::WebDriver.for :opera
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -555,7 +555,7 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 

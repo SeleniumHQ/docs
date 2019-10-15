@@ -112,7 +112,7 @@ account_page = login_as(user.get_email(), user.get_password())
 // Todavía no tenemos una muestra de código JavaScript - ayúdenos y genere un PR (pull request)
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -171,7 +171,7 @@ unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
 // Todavía no tenemos una muestra de código en JavaScript - ayúdanos y genera un PR (pull request)
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -200,7 +200,7 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
 // Todavía no tenemos una muestra de código en JavaScript - ayúdanos y genera un PR (pull request)
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 

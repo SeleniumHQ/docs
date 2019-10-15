@@ -31,7 +31,7 @@ include Selenium::WebDriver::Support
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -58,7 +58,7 @@ select_object = Select(select_element)
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -115,7 +115,7 @@ select_object.select_by(:text, 'Bread')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -150,7 +150,7 @@ first_selected_option = select_object.first_selected_option
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -178,7 +178,7 @@ all_available_options = select_object.options
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -231,7 +231,7 @@ select_object.deselect_all
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -255,6 +255,6 @@ does_this_allow_multiple_selections = select_object.multiple?
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}

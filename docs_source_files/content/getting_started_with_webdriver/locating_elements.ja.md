@@ -31,7 +31,7 @@ driver.find_element(id: "cheese")
 const cheese = await driver.findElement(By.id('cheese'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -69,7 +69,7 @@ const cheese = await driver.findElement(By.id('cheese'));
 const cheddar = await cheese.findElement(By.id('cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -113,7 +113,7 @@ mucho_cheese = driver.find_elements(css: "#cheese #cheddar")
 const cheddar = await driver.findElement(By.css('#cheese #cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -156,7 +156,7 @@ mucho_cheese = driver.find_elements(css: "#cheese li")
 const muchoCheese = await driver.findElements(By.css('#cheese li'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 

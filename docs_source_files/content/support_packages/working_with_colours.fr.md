@@ -36,7 +36,7 @@ include Selenium::WebDriver::Support
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -80,7 +80,7 @@ HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -111,7 +111,7 @@ HOTPINK = Color.from_string('hotpink')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -136,7 +136,7 @@ TRANSPARENT = Color.from_string('transparent')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -165,7 +165,7 @@ login_button_background_colour = driver.find_element(id: 'login').css_value('bac
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -189,7 +189,7 @@ assert(login_button_background_colour == HOTPINK)
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -219,7 +219,7 @@ assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
