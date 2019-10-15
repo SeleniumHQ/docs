@@ -22,7 +22,7 @@ e = driver.find_element_by_id("testElement")
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+val element = driver.findElement(By.id("testElement"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -46,7 +46,7 @@ e.click()
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+e.click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -70,7 +70,7 @@ from selenium.webdriver import ActionChains
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+import org.openqa.selenium.interactions.Actions
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -97,7 +97,9 @@ actions.perform()
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+val actions = Actions(driver)
+actions.moveToElement(e);
+actions.perform();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -123,7 +125,7 @@ e.send_keys("Test")
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+e.sendKeys("Test")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -146,6 +148,6 @@ e.clear()
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet TODO Boris
+e.clear()
   {{< / code-panel >}}
 {{< / code-tab >}}
