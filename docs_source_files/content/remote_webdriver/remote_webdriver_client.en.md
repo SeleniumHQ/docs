@@ -155,4 +155,3 @@ val upload: WebElement = driver.findElement(By.id("myfile"))
 upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
 {{< / code-tab >}}
-

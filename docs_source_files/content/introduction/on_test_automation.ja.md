@@ -165,7 +165,18 @@ account_page = login_as(user.get_email(), user.get_password())
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+// Create a user who has read-only permissions--they can configure a unicorn,
+// but they do not have payment information set up, nor do they have
+// administrative privileges. At the time the user is created, its email
+// address and password are randomly generated--you don't even need to
+// know them.
+val user = UserFactory.createCommonUser() //This method is defined elsewhere.
+
+// Log in as this user.
+// Logging in on this site takes you to your personal "My Account" page, so the
+// AccountPage object is returned by the loginAs method, allowing you to then
+// perform actions from the AccountPage.
+val accountPage = loginAs(user.getEmail(), user.getPassword())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -243,7 +254,21 @@ unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+// The Unicorn is a top-level Object--it has attributes, which are set here. 
+// This only stores the values; it does not fill out any web forms or interact
+// with the browser in any way.
+val sparkles = Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS)
+
+// Since we are already "on" the account page, we have to use it to get to the
+// actual place where you configure unicorns. Calling the "Add Unicorn" method
+// takes us there.
+val addUnicornPage = accountPage.addUnicorn()
+
+// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
+// its createUnicorn() method. This method will take Sparkles' attributes,
+// fill out the form, and click submit.
+unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
+
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -273,11 +298,15 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+// The exists() method from UnicornConfirmationPage will take the Sparkles 
+// object--a specification of the attributes you want to see, and compare
+// them with the fields on the page.
+//CHECK Boris
+assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Note that the tester still hasn't done anything but talk about unicorns in this code–
+Note that the tester still has not done anything but talk about unicorns in this code–
 no buttons, no locators, no browser controls.
 This method of _modelling_ the application
 allows you to keep these test-level commands in place and unchanging,
@@ -300,7 +329,7 @@ Will it only keep the existing one or will it add another?
 Each time you move through the workflow,
 you want to try to avoid having to create an account,
 login as the user, and configure the unicorn.
-Ideally, you'll be able to create an account
+Ideally, you will be able to create an account
 and pre-configure a unicorn via the API or database.
 Then all you have to do is log in as the user, locate Sparkles,
 and add her to the cart.

@@ -11,11 +11,11 @@ it by sending us pull requests!
 
 You will occasionally want to validate the colour of something as part of your tests;
 the problem is that colour definitions on the web are not constant.
-Wouldn't it be nice if there was an easy way to compare
-a HEX representation of a colour with an RGB representation of a colour,
-or an RGBA representation of a colour with a HSLA representation of a colour?
+Would it not be nice if there was an easy way to compare
+a HEX representation of a colour with a RGB representation of a colour,
+or a RGBA representation of a colour with a HSLA representation of a colour?
 
-Worry not. There's a solution: the _Color_ class!
+Worry not. There is a solution: the _Color_ class!
 
 First of all, you will need to import the class:
 
@@ -35,9 +35,7 @@ include Selenium::WebDriver::Support
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}import org.openqa.selenium.support.Color{{< / code-panel >}}
 {{< / code-tab >}}
 
 You can now start creating colour objects.
@@ -80,7 +78,13 @@ HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+private val HEX_COLOUR = Color.fromString("#2F7ED8")
+private val RGB_COLOUR = Color.fromString("rgb(255, 255, 255)")
+private val RGB_COLOUR_PERCENT = Color.fromString("rgb(40%, 20%, 40%)")
+private val RGBA_COLOUR = Color.fromString("rgba(255, 255, 255, 0.5)")
+private val RGBA_COLOUR_PERCENT = Color.fromString("rgba(40%, 20%, 40%, 0.5)")
+private val HSL_COLOUR = Color.fromString("hsl(100, 0%, 50%)")
+private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -111,7 +115,9 @@ HOTPINK = Color.from_string('hotpink')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+private val BLACK = Color.fromString("black")
+private val CHOCOLATE = Color.fromString("chocolate")
+private val HOTPINK = Color.fromString("hotpink")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -136,7 +142,7 @@ TRANSPARENT = Color.from_string('transparent')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+private val TRANSPARENT = Color.fromString("transparent")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -165,7 +171,8 @@ login_button_background_colour = driver.find_element(id: 'login').css_value('bac
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val loginButtonColour = driver.findElement(By.id("login")).getCssValue("color")
+val loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -189,7 +196,7 @@ assert(login_button_background_colour == HOTPINK)
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+assert(loginButtonBackgroundColour.equals(HOTPINK))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -219,7 +226,9 @@ assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))
+assert(loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)"))
+assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 

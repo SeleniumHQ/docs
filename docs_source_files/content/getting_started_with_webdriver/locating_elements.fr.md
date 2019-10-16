@@ -33,7 +33,7 @@ driver.find_element(id: "fromage")
 const fromage = await driver.findElement(By.id('fromage'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val cheese: WebElement = driver.findElement(By.id("cheese"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -71,7 +71,8 @@ const fromage = await driver.findElement(By.id('fromage'));
 const cheddar = await fromage.findElement(By.id('cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val cheese = driver.findElement(By.id("cheese"))
+val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -113,7 +114,7 @@ mucho_cheese = driver.find_elements(css: "#fromage #cheddar")
 const cheddar = await driver.findElement(By.css('#fromage #cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+driver.findElement(By.cssSelector("#cheese #cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -155,7 +156,7 @@ plein_de_fromage = driver.find_elements(css: "#fromage li")
 const pleinDeFromage = await driver.findElements(By.css('#fromage li'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese li"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 

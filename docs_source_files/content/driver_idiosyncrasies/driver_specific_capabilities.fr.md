@@ -40,7 +40,9 @@ var driver = new FirefoxDriver(options);
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val options = new FirefoxOptions()
+options.addPreference("network.proxy.type", 0)
+driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -77,7 +79,9 @@ var driver = new RemoteWebDriver(options);
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val options = FirefoxOptions()
+options.profile = FirefoxProfile()
+driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
 

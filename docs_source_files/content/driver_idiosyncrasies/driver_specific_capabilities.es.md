@@ -3,7 +3,6 @@ title: "Capacidades especificas de los controladores"
 weight: 2
 ---
 
-
 ## Firefox
 
 ### Definir Capacidades (_Capabilities_) usando `FirefoxOptions`
@@ -34,7 +33,9 @@ var driver = new FirefoxDriver(options);
 // Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val options = new FirefoxOptions()
+options.addPreference("network.proxy.type", 0)
+driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -71,10 +72,11 @@ var driver = new RemoteWebDriver(options);
 // Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val options = FirefoxOptions()
+options.profile = FirefoxProfile()
+driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
-
 
 ## Internet Explorer
 
