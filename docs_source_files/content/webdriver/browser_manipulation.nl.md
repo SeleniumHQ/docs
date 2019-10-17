@@ -96,7 +96,11 @@ driver.navigate.to 'https://www.seleniumhq.org'
 await driver.get('https://seleniumhq.github.io/docs/');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Convenient
+driver.get("https://www.seleniumhq.org")
+
+//Longer way
+driver.navigate().to("https://seleniumhq.github.io/docs/")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -110,9 +114,7 @@ You can read the current URL from the browser's address bar using:
   {{< code-panel language="csharp" >}}driver.Url;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.current_url{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getCurrentUrl();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.getCurrentUrl();{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Back
@@ -125,9 +127,7 @@ Pressing the browser's back button:
   {{< code-panel language="csharp" >}}driver.Navigate().Back();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.back{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().back();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().back() {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -140,9 +140,7 @@ Pressing the browser's forward button:
   {{< code-panel language="csharp" >}}driver.Navigate().Forward();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.forward{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().forward();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().forward();{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Refresh
@@ -155,9 +153,7 @@ Refresh the current page:
   {{< code-panel language="csharp" >}}driver.Navigate().Refresh();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.refresh{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().refresh();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().refresh(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get title
@@ -170,9 +166,7 @@ You can read the current page title from the browser:
   {{< code-panel language="csharp" >}}driver.Title;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.title{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getTitle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.getTitle(){{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -189,9 +183,7 @@ current window by using:
   {{< code-panel language="csharp" >}}driver.CurrentWindowHandle;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.window_handle{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getWindowHandle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.getWindowHandle(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Switching windows or tabs
@@ -341,7 +333,29 @@ windows.forEach(async handle => {
 await driver.wait(until.titleIs('Selenium documentation'), 10000);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Store the ID of the original window
+val originalWindow = driver.getWindowHandle()
+
+//Check we don't have other windows open already
+assert(driver.getWindowHandles().size() === 1)
+
+//Click the link which opens in a new window
+driver.findElement(By.linkText("new window")).click()
+
+//Wait for the new window or tab
+wait.until(numberOfWindowsToBe(2))
+
+//Loop through until we find a new window handle
+for (windowHandle in driver.getWindowHandles()) {
+      if (!originalWindow.contentEquals(windowHandle)) {
+          driver.switchTo().window(windowHandle)
+           break
+      }
+}
+
+//Wait for the new tab to finish loading content
+wait.until(titleIs("Selenium documentation"))
+ 
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -391,7 +405,12 @@ await driver.close();
 await driver.switchTo().window(originalWindow);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Close the tab or window
+driver.close()
+
+//Switch back to the old tab or window
+driver.switchTo().window(originalWindow)
+
   {{< / code-panel >}}
 {{< / code-tab >}}
 

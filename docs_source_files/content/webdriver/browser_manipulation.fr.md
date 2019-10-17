@@ -96,7 +96,11 @@ driver.navigate.to 'https://www.seleniumhq.org'
 await driver.get('https://seleniumhq.github.io/docs/');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Convenient
+driver.get("https://www.seleniumhq.org")
+
+//Longer way
+driver.navigate().to("https://seleniumhq.github.io/docs/")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -110,9 +114,7 @@ You can read the current URL from the browser's address bar using:
   {{< code-panel language="csharp" >}}driver.Url;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.current_url{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getCurrentUrl();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.getCurrentUrl();{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Back
@@ -125,9 +127,7 @@ Pressing the browser's back button:
   {{< code-panel language="csharp" >}}driver.Navigate().Back();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.back{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().back();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().back() {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -140,9 +140,7 @@ Pressing the browser's forward button:
   {{< code-panel language="csharp" >}}driver.Navigate().Forward();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.forward{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().forward();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().forward();{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Refresh

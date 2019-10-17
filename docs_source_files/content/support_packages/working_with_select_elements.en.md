@@ -49,7 +49,7 @@ select_element = driver.find_element(id: 'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val selectElement = driver.findElement(By.id("selectElementID"))
@@ -107,7 +107,7 @@ select_object.select_by(:value, 'value1')
 select_object.select_by(:text, 'Bread')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Select an <option> based upon the <select> element's internal index
@@ -149,7 +149,7 @@ all_selected_options = select_object.selected_options
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Return a List<WebElement> of options that have been selected
@@ -181,7 +181,7 @@ all_available_options = select_object.options
 all_available_options = select_object.options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Return a List<WebElement> of options that the <select> element contains
@@ -235,7 +235,7 @@ select_object.deselect_by(:text, 'Bread')
 select_object.deselect_all
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Deselect an <option> based upon the <select> element's internal index
@@ -269,7 +269,7 @@ does_this_allow_multiple_selections = select_object.is_multiple
 does_this_allow_multiple_selections = select_object.multiple?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val doesThisAllowMultipleSelections = selectObject.isMultiple
