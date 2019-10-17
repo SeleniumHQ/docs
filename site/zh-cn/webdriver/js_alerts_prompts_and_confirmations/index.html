@@ -12,20 +12,20 @@
     <title>JavaScript alerts, prompts and confirmations :: Selenium 文档</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/nucleus.css?1571323118" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/fontawesome-all.min.css?1571323118" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hybrid.css?1571323118" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/featherlight.min.css?1571323118" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/perfect-scrollbar.min.css?1571323118" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/auto-complete.css?1571323118" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/atom-one-dark-reasonable.css?1571323118" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme.css?1571323118" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hugo-theme.css?1571323118" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/nucleus.css?1571326509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/fontawesome-all.min.css?1571326509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hybrid.css?1571326509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/featherlight.min.css?1571326509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/perfect-scrollbar.min.css?1571326509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/auto-complete.css?1571326509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/atom-one-dark-reasonable.css?1571326509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme.css?1571326509" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/hugo-theme.css?1571326509" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme-selenium.css?1571323118" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/zh-cn/css/theme-selenium.css?1571326509" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery-3.3.1.min.js?1571323118"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery-3.3.1.min.js?1571326509"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/lunr.min.js?1571323118"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/auto-complete.js?1571323118"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/lunr.min.js?1571326509"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/auto-complete.js?1571326509"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/search.js?1571323118"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/zh-cn/js/search.js?1571326509"></script>
 
     
   </div>
@@ -1858,6 +1858,11 @@ alerts.</p>
       <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
     
     <label for="tab4code1">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+    
+    <label for="tab5code1">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -1957,6 +1962,24 @@ alert<span style="color:#719e07">.</span>accept
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).click()
+
+<span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> alert = wait.until(ExpectedConditions.alertIsPresent())
+
+<span style="color:#586e75">//Store the alert text in a variable
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> text = alert.getText()
+
+<span style="color:#586e75">//Press the OK button
+</span><span style="color:#586e75"></span>alert.accept()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -1997,6 +2020,11 @@ a sample confirm</a>.</p>
       <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
     
     <label for="tab4code2">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab5code2" aria-controls="kotlincode2">
+    
+    <label for="tab5code2">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2105,6 +2133,27 @@ alert<span style="color:#719e07">.</span>dismiss
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).click()
+
+<span style="color:#586e75">//Wait for the alert to be displayed
+</span><span style="color:#586e75"></span>wait.until(ExpectedConditions.alertIsPresent())
+
+<span style="color:#586e75">//Store the alert in a variable
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> alert = driver.switchTo().alert()
+
+<span style="color:#586e75">//Store the alert in a variable for reuse
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> text = alert.text
+
+<span style="color:#586e75">//Press the Cancel button
+</span><span style="color:#586e75"></span>alert.dismiss()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2146,6 +2195,11 @@ See a sample prompt</a>.</p>
       <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
     
     <label for="tab4code3">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
+    
+    <label for="tab5code3">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2248,6 +2302,24 @@ alert<span style="color:#719e07">.</span>accept
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample prompt&#34;</span>)).click()
+
+<span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> alert = wait.until(ExpectedConditions.alertIsPresent())
+
+<span style="color:#586e75">//Type your message
+</span><span style="color:#586e75"></span>alert.sendKeys(<span style="color:#2aa198">&#34;Selenium&#34;</span>)
+
+<span style="color:#586e75">//Press the OK button
+</span><span style="color:#586e75"></span>alert.accept()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2259,7 +2331,7 @@ alert<span style="color:#719e07">.</span>accept
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/zh-cn/webdriver/js_alerts_prompts_and_confirmations/">
       “JavaScript alerts, prompts and confirmations”
-    </a> was last updated on: 30 Aug 2019 23:51:38 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/e941fbd70039045a2563e656639bfa73fbd79081">[docs]: Updated alert &amp; keyboard doc (#359) (e941fbd7)</a>
+    </a> was last updated on: 10 Oct 2019 00:14:35 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/0af645fe22f8b18f57aeab1561ab276865728b88">TabDefinition (0af645fe)</a>
 </h5>
         
         </div> 
@@ -3376,19 +3448,19 @@ alert<span style="color:#719e07">.</span>accept
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/clipboard.min.js?1571323118"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.min.js?1571323118"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.jquery.min.js?1571323118"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery.sticky.js?1571323118"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/featherlight.min.js?1571323118"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/highlight.pack.js?1571323118"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/clipboard.min.js?1571326509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.min.js?1571326509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/perfect-scrollbar.jquery.min.js?1571326509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/jquery.sticky.js?1571326509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/featherlight.min.js?1571326509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/highlight.pack.js?1571326509"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/modernizr.custom-3.6.0.js?1571323118"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/learn.js?1571323118"></script>
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/hugo-learn.js?1571323118"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/modernizr.custom-3.6.0.js?1571326509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/learn.js?1571326509"></script>
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/js/hugo-learn.js?1571326509"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.css?1571323118" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.js?1571323118"></script>
+    <link href="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.css?1571326509" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/zh-cn/mermaid/mermaid.js?1571326509"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

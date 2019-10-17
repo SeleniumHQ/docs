@@ -12,20 +12,20 @@
     <title>Waits :: Seleniumドキュメント</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/nucleus.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/fontawesome-all.min.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/hybrid.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/featherlight.min.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/perfect-scrollbar.min.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/auto-complete.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/atom-one-dark-reasonable.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/theme.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/hugo-theme.css?1571323122" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/nucleus.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/fontawesome-all.min.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/hybrid.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/featherlight.min.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/perfect-scrollbar.min.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/auto-complete.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/atom-one-dark-reasonable.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/theme.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/hugo-theme.css?1571326512" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/ja/css/theme-selenium.css?1571323122" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/ja/css/theme-selenium.css?1571326512" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery-3.3.1.min.js?1571323122"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery-3.3.1.min.js?1571326512"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/lunr.min.js?1571323122"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/auto-complete.js?1571323122"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/lunr.min.js?1571326512"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/auto-complete.js?1571326512"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/search.js?1571323122"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/search.js?1571326512"></script>
 
     
   </div>
@@ -1878,6 +1878,11 @@ when trying to find an element.</p>
       <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
     
     <label for="tab4code1">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+    
+    <label for="tab5code1">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -1941,6 +1946,16 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 assert.strictEqual(<span style="color:#268bd2">await</span> element.getText(), <span style="color:#2aa198">&#39;Hello from JavaScript!&#39;</span>);
   
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;file:///race_condition.html&#34;</span>)
+<span style="color:#719e07">val</span> element = driver.findElement(By.tagName(<span style="color:#2aa198">&#34;p&#34;</span>))
+assert(element.text == <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>)
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2029,6 +2044,11 @@ has been added to the DOM:</p>
       <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6">
     
     <label for="tab4code6">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab5code6" aria-controls="kotlincode6">
+    
+    <label for="tab5code6">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2115,6 +2135,20 @@ assert.strictEqual(<span style="color:#268bd2">await</span> element.getText(), <
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>)
+driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;cheese&#34;</span> + Keys.ENTER)
+<span style="color:#586e75">// Initialize and wait till element(link) became clickable - timeout in 10 seconds
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> firstResult = WebDriverWait(driver, <span style="color:#2aa198">10</span>)
+      .until(ExpectedConditions.elementToBeClickable(By.xpath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)))
+<span style="color:#586e75">// Print the first result
+</span><span style="color:#586e75"></span>println(firstResult.text)
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2161,6 +2195,11 @@ we can refactor our instructions to be more concise:</p>
       <input type="radio" name="tabsetcode7" id="tab4code7" aria-controls="javascriptcode7">
     
     <label for="tab4code7">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab5code7" aria-controls="kotlincode7">
+    
+    <label for="tab5code7">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2210,6 +2249,17 @@ el <span style="color:#719e07">=</span> WebDriverWait(driver)<span style="color:
 <span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;file:///race_condition.html&#34;</span>)
+<span style="color:#719e07">val</span> ele = WebDriverWait(getWebDriver(), <span style="color:#2aa198">10</span>)
+            .until(ExpectedConditions.presenceOfElementLocated(By.tagName(<span style="color:#2aa198">&#34;p&#34;</span>)))
+assert(ele.text == <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>)
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2270,6 +2320,11 @@ as the penalty for not hitting a successful condition can be expensive.</p>
       <input type="radio" name="tabsetcode8" id="tab4code8" aria-controls="javascriptcode8">
     
     <label for="tab4code8">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab5code8" aria-controls="kotlincode8">
+    
+    <label for="tab5code8">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2314,6 +2369,14 @@ WebDriverWait(driver, timeout<span style="color:#719e07">=</span><span style="co
 <span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+WebDriverWait(driver, <span style="color:#2aa198">3</span>).until(ExpectedConditions.elementToBeClickable(By.xpath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)))
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2407,6 +2470,11 @@ Once set, the implicit wait is set for the life of the session.</p>
       <input type="radio" name="tabsetcode9" id="tab4code9" aria-controls="javascriptcode9">
     
     <label for="tab4code9">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode9" id="tab5code9" aria-controls="kotlincode9">
+    
+    <label for="tab5code9">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2465,9 +2533,30 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 
 <section id="javascriptcode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  
+(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span>(){
+
+<span style="color:#586e75">// Apply timeout for 10 seconds
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.manage().setTimeouts( { implicit<span style="color:#719e07">:</span> <span style="color:#2aa198">10000</span> } );
+
+<span style="color:#586e75">// Navigate to url
+</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;http://somedomain/url_that_delays_loading&#39;</span>);
+
+<span style="color:#268bd2">let</span> webElement <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;myDynamicElement&#34;</span>));
+
+}());
+  
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">val</span> driver = FirefoxDriver()
+driver.manage().timeouts().implicitlyWait(<span style="color:#2aa198">10</span>, TimeUnit.SECONDS)
+driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;http://somedomain/url_that_delays_loading&#34;</span>)
+<span style="color:#719e07">val</span> myDynamicElement = driver.findElement(By.id(<span style="color:#2aa198">&#34;myDynamicElement&#34;</span>))
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2509,6 +2598,11 @@ such as <code>NoSuchElementException</code> when searching for an element on the
       <input type="radio" name="tabsetcode10" id="tab4code10" aria-controls="javascriptcode10">
     
     <label for="tab4code10">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode10" id="tab5code10" aria-controls="kotlincode10">
+    
+    <label for="tab5code10">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2567,6 +2661,19 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">val</span> wait = FluentWait&lt;WebDriver&gt;(getWebDriver())
+        .withTimeout(Duration.ofSeconds(<span style="color:#2aa198">30</span>))
+        .pollingEvery(Duration.ofSeconds(<span style="color:#2aa198">3</span>))
+        .ignoring(NoSuchElementException<span style="color:#719e07">::</span><span style="color:#719e07">class</span>.java)
+
+<span style="color:#719e07">val</span> foo = wait.until {it.findElement(By.id(<span style="color:#2aa198">&#34;foo&#34;</span>)) }
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2578,7 +2685,7 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/ja/webdriver/waits/">
       “Waits”
-    </a> was last updated on: 17 Oct 2019 14:03:30 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/57ebe599e14036466174937e9fedfc5fa7ac3ec8">Changed deprecated method call for FluentWait () (#388) (57ebe599)</a>
+    </a> was last updated on: 10 Oct 2019 00:14:35 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/0af645fe22f8b18f57aeab1561ab276865728b88">TabDefinition (0af645fe)</a>
 </h5>
         
         </div> 
@@ -3695,19 +3802,19 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/clipboard.min.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.min.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.jquery.min.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery.sticky.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/featherlight.min.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/highlight.pack.js?1571323122"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/clipboard.min.js?1571326513"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.min.js?1571326513"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.jquery.min.js?1571326513"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery.sticky.js?1571326513"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/featherlight.min.js?1571326513"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/highlight.pack.js?1571326513"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/modernizr.custom-3.6.0.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/learn.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/hugo-learn.js?1571323122"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/modernizr.custom-3.6.0.js?1571326513"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/learn.js?1571326513"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/hugo-learn.js?1571326513"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.css?1571323122" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.js?1571323122"></script>
+    <link href="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.css?1571326513" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.js?1571326513"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

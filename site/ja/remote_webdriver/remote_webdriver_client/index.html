@@ -12,20 +12,20 @@
     <title>Remote WebDriver client :: Seleniumドキュメント</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/nucleus.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/fontawesome-all.min.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/hybrid.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/featherlight.min.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/perfect-scrollbar.min.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/auto-complete.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/atom-one-dark-reasonable.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/theme.css?1571323122" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/ja/css/hugo-theme.css?1571323122" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/nucleus.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/fontawesome-all.min.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/hybrid.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/featherlight.min.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/perfect-scrollbar.min.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/auto-complete.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/atom-one-dark-reasonable.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/theme.css?1571326512" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/ja/css/hugo-theme.css?1571326512" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/ja/css/theme-selenium.css?1571323122" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/ja/css/theme-selenium.css?1571326512" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery-3.3.1.min.js?1571323122"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery-3.3.1.min.js?1571326512"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/lunr.min.js?1571323122"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/auto-complete.js?1571323122"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/lunr.min.js?1571326512"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/auto-complete.js?1571326512"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/search.js?1571323122"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/ja/js/search.js?1571326512"></script>
 
     
   </div>
@@ -1849,6 +1849,11 @@ running our tests on Firefox.</p>
       <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
     
     <label for="tab4code1">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+    
+    <label for="tab5code1">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -1900,6 +1905,17 @@ driver<span style="color:#719e07">.</span>close
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+firefoxOptions = FirefoxOptions()
+driver: WebDriver = new RemoteWebDriver(new URL(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>), firefoxOptions)
+driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver.quit()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -1945,6 +1961,11 @@ using Chrome version 67:</p>
       <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
     
     <label for="tab4code2">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab5code2" aria-controls="kotlincode2">
+    
+    <label for="tab5code2">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -1998,6 +2019,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">val</span> chromeOptions = ChromeOptions()
+chromeOptions.setCapability(<span style="color:#2aa198">&#34;browserVersion&#34;</span>, <span style="color:#2aa198">&#34;67&#34;</span>);
+chromeOptions.setCapability(<span style="color:#2aa198">&#34;platformName&#34;</span>, <span style="color:#2aa198">&#34;Windows XP&#34;</span>);
+<span style="color:#719e07">val</span> driver: WebDriver = new RemoteWebDriver(new URL(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>), chromeOptions)
+driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver.quit();
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2040,6 +2074,11 @@ the following way:</p>
       <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
     
     <label for="tab4code3">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
+    
+    <label for="tab5code3">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2088,6 +2127,14 @@ driver.setFileDetector(<span style="color:#719e07">new</span> LocalFileDetector(
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+driver.setFileDetector(new LocalFileDetector())
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2122,6 +2169,11 @@ driver.setFileDetector(<span style="color:#719e07">new</span> LocalFileDetector(
       <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
     
     <label for="tab4code4">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab5code4" aria-controls="kotlincode4">
+    
+    <label for="tab5code4">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2170,6 +2222,16 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;http://sso.dev.saucelabs.com/test/guinea-file-upload&#34;</span>)
+<span style="color:#719e07">val</span> upload: WebElement = driver.findElement(By.id(<span style="color:#2aa198">&#34;myfile&#34;</span>))
+upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/darkbulb.jpg&#34;</span>)
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2181,7 +2243,7 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/ja/remote_webdriver/remote_webdriver_client/">
       “Remote WebDriver client”
-    </a> was last updated on: 30 Aug 2019 03:51:59 -0500: <a href="https://github.com/SeleniumHQ/docs/commit/c601cae3631634a84afcc193bf32991846da85d7">Add Japanese translation (#358) (c601cae3)</a>
+    </a> was last updated on: 10 Oct 2019 00:14:35 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/0af645fe22f8b18f57aeab1561ab276865728b88">TabDefinition (0af645fe)</a>
 </h5>
         
         </div> 
@@ -3298,19 +3360,19 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/clipboard.min.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.min.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.jquery.min.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery.sticky.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/featherlight.min.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/highlight.pack.js?1571323122"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/clipboard.min.js?1571326512"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.min.js?1571326512"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/perfect-scrollbar.jquery.min.js?1571326512"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/jquery.sticky.js?1571326512"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/featherlight.min.js?1571326512"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/highlight.pack.js?1571326512"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/modernizr.custom-3.6.0.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/learn.js?1571323122"></script>
-    <script src="https://seleniumhq.github.io/docs/site/ja/js/hugo-learn.js?1571323122"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/modernizr.custom-3.6.0.js?1571326512"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/learn.js?1571326512"></script>
+    <script src="https://seleniumhq.github.io/docs/site/ja/js/hugo-learn.js?1571326512"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.css?1571323122" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.js?1571323122"></script>
+    <link href="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.css?1571326512" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/ja/mermaid/mermaid.js?1571326512"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

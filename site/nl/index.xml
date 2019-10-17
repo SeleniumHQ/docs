@@ -19,7 +19,7 @@
       <guid>https://seleniumhq.github.io/docs/site/nl/support_packages/browser_navigation/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  There are commands for various webpage loading actions:
-Java Python C# Ruby JavaScript // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
+Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
     </item>
     
     <item>
@@ -177,7 +177,7 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       
       <guid>https://seleniumhq.github.io/docs/site/nl/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Firefox Definieer Capabilities met FirefoxOptions FirefoxOptions is de nieuwe manier om capabilities te bepalen voor Firefox. Het is aangeraden om FirefoxOptions te gebruiken in plaats van DesiredCapabilities.
-Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      Setting a custom profile Het is mogelijk om een eigen Firefox profiel te gebruiken zoals hieronder word getoond.</description>
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val options = new FirefoxOptions() options.</description>
     </item>
     
     <item>
@@ -259,7 +259,7 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       
       <guid>https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_colours/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Wouldn&amp;rsquo;t it be nice if there was an easy way to compare a HEX representation of a colour with an RGB representation of a colour, or an RGBA representation of a colour with a HSLA representation of a colour?</description>
+ You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
     </item>
     
     <item>
@@ -342,7 +342,7 @@ For web applications, the automation of this testing can be done directly with S
       <guid>https://seleniumhq.github.io/docs/site/nl/support_packages/working_with_select_elements/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript import org.</description>
+Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
@@ -362,7 +362,7 @@ Java Python C# Ruby JavaScript import org.</description>
       
       <guid>https://seleniumhq.github.io/docs/site/nl/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>Je kan de tekst van een element invullen aan de hand van de sendKeys methode:
-Java Python C# Ruby JavaScript String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);     Sommige applicaties gebruiken Javascript libraries om drag-en-drop functionaliteit toe te voegen. Hieronder vind je een simpel voorbeeld waarbij een element versleept word naar een ander element:</description>
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     Sommige applicaties gebruiken Javascript libraries om drag-en-drop functionaliteit toe te voegen.</description>
     </item>
     
     <item>
@@ -394,7 +394,7 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <guid>https://seleniumhq.github.io/docs/site/nl/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR      You can simulate mouse clicking on e if it&amp;rsquo;s visible and has a height and width that are greater than 0:</description>
+Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val element = driver.</description>
     </item>
     
     <item>
@@ -549,7 +549,7 @@ Let&amp;rsquo;s say there is a content management system with which you can crea
       <guid>https://seleniumhq.github.io/docs/site/nl/webdriver/web_element/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
-Java Python C# Ruby JavaScript WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.</description>
     </item>
     
     <item>
@@ -561,7 +561,7 @@ Java Python C# Ruby JavaScript WebDriver driver = new FirefoxDriver(); driver.ge
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-Java Python C# Ruby JavaScript import org.</description>
+Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>

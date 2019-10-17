@@ -12,20 +12,20 @@
     <title>Driver requirements :: Documentation for Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/en/css/nucleus.css?1571323111" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/fontawesome-all.min.css?1571323111" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/hybrid.css?1571323111" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/featherlight.min.css?1571323111" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/perfect-scrollbar.min.css?1571323111" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/auto-complete.css?1571323111" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/atom-one-dark-reasonable.css?1571323111" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/theme.css?1571323111" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/en/css/hugo-theme.css?1571323111" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/nucleus.css?1571326501" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/fontawesome-all.min.css?1571326501" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/hybrid.css?1571326501" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/featherlight.min.css?1571326501" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/perfect-scrollbar.min.css?1571326501" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/auto-complete.css?1571326501" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/atom-one-dark-reasonable.css?1571326501" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/theme.css?1571326501" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/en/css/hugo-theme.css?1571326501" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/en/css/theme-selenium.css?1571323111" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/en/css/theme-selenium.css?1571326501" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery-3.3.1.min.js?1571323111"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery-3.3.1.min.js?1571326501"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/lunr.min.js?1571323111"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/auto-complete.js?1571323111"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/lunr.min.js?1571326501"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/auto-complete.js?1571326501"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/search.js?1571323111"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/en/js/search.js?1571326501"></script>
 
     
   </div>
@@ -2003,6 +2003,11 @@ you should be able to execute the <em>chromedriver</em> executable from any dire
       <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
     
     <label for="tab4code1">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+    
+    <label for="tab5code1">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2070,6 +2075,17 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+
+<span style="color:#719e07">val</span> driver: WebDriver = ChromeDriver()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2105,6 +2121,11 @@ This is possible using the following line:</p>
       <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
     
     <label for="tab4code2">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab5code2" aria-controls="kotlincode2">
+    
+    <label for="tab5code2">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2148,6 +2169,14 @@ Chrome(executable_path<span style="color:#719e07">=</span><span style="color:#2a
 chrome.setDefaultService(<span style="color:#719e07">new</span> chrome.ServiceBuilder(<span style="color:#2aa198">&#39;path/to/chromedriver&#39;</span>).build());
   
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+System.setProperty(<span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span>, <span style="color:#2aa198">&#34;/path/to/chromedriver&#34;</span>)
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2196,6 +2225,11 @@ instantiate Firefox in the same way as Selenium 2:</p>
       <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
     
     <label for="tab4code3">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
+    
+    <label for="tab5code3">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2261,6 +2295,17 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.Firefox.FirefoxDriver
+
+<span style="color:#719e07">val</span> driver: WebDriver = FirefoxDriver()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2296,6 +2341,11 @@ set the geckodriver binary location programmatically:</p>
       <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
     
     <label for="tab4code4">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab5code4" aria-controls="kotlincode4">
+    
+    <label for="tab5code4">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2339,6 +2389,14 @@ Firefox(executable_path<span style="color:#719e07">=</span><span style="color:#2
 <span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+System.setProperty(<span style="color:#2aa198">&#34;webdriver.gecko.driver&#34;</span>, <span style="color:#2aa198">&#34;/path/to/geckodriver&#34;</span>)
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2393,6 +2451,11 @@ offer free VMs for testers on the <a href="//developer.microsoft.com/en-us/micro
       <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5">
     
     <label for="tab4code5">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab5code5" aria-controls="kotlincode5">
+    
+    <label for="tab5code5">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2458,6 +2521,17 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.edge.EdgeDriver
+
+<span style="color:#719e07">val</span> driver: WebDriver = EdgeDriver()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2493,6 +2567,11 @@ the following line:</p>
       <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6">
     
     <label for="tab4code6">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab5code6" aria-controls="kotlincode6">
+    
+    <label for="tab5code6">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2536,6 +2615,14 @@ Edge(executable_path<span style="color:#719e07">=</span><span style="color:#2aa1
 <span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+System.setProperty(<span style="color:#2aa198">&#34;webdriver.edge.driver&#34;</span>, <span style="color:#2aa198">&#34;C:/path/to/MicrosoftWebDriver.exe&#34;</span>)
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2585,6 +2672,11 @@ preferences are saved against the logged in user&rsquo;s account, some
       <input type="radio" name="tabsetcode7" id="tab4code7" aria-controls="javascriptcode7">
     
     <label for="tab4code7">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab5code7" aria-controls="kotlincode7">
+    
+    <label for="tab5code7">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2650,6 +2742,17 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerDriver
+
+<span style="color:#719e07">val</span> driver: WebDriver = InternetExplorerDriver()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2685,6 +2788,11 @@ using the following line:</p>
       <input type="radio" name="tabsetcode8" id="tab4code8" aria-controls="javascriptcode8">
     
     <label for="tab4code8">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab5code8" aria-controls="kotlincode8">
+    
+    <label for="tab5code8">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2728,6 +2836,14 @@ Ie(executable_path<span style="color:#719e07">=</span><span style="color:#2aa198
 <span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+System.setProperty(<span style="color:#2aa198">&#34;webdriver.ie.driver&#34;</span>, <span style="color:#2aa198">&#34;C:/path/to/IEDriver.exe&#34;</span>)
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2777,6 +2893,11 @@ system property.</p>
       <input type="radio" name="tabsetcode9" id="tab4code9" aria-controls="javascriptcode9">
     
     <label for="tab4code9">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode9" id="tab5code9" aria-controls="kotlincode9">
+    
+    <label for="tab5code9">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2837,6 +2958,17 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.opera.OperaDriver
+
+<span style="color:#719e07">val</span> driver: WebDriver = OperaDriver()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2887,6 +3019,11 @@ time and type your password at the prompt to authorise WebDriver</p>
       <input type="radio" name="tabsetcode10" id="tab4code10" aria-controls="javascriptcode10">
     
     <label for="tab4code10">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode10" id="tab5code10" aria-controls="kotlincode10">
+    
+    <label for="tab5code10">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2952,6 +3089,17 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.safari.SafariDriver
+
+<span style="color:#719e07">val</span> driver: WebDriver = SafariDriver()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2991,7 +3139,7 @@ something also now offered by Mozilla&rsquo;s Firefox.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/en/webdriver/driver_requirements/">
       “Driver requirements”
-    </a> was last updated on: 02 Oct 2019 21:51:03 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/48a192ab3267461e9cc9e330c9fccab85aebcc1a">Update small things on website (#380) (48a192ab)</a>
+    </a> was last updated on: 10 Oct 2019 00:14:35 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/0af645fe22f8b18f57aeab1561ab276865728b88">TabDefinition (0af645fe)</a>
 </h5>
         
         </div> 
@@ -4108,19 +4256,19 @@ something also now offered by Mozilla&rsquo;s Firefox.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/clipboard.min.js?1571323111"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.min.js?1571323111"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.jquery.min.js?1571323111"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery.sticky.js?1571323111"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/featherlight.min.js?1571323111"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/highlight.pack.js?1571323111"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/clipboard.min.js?1571326501"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.min.js?1571326501"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/perfect-scrollbar.jquery.min.js?1571326501"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/jquery.sticky.js?1571326501"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/featherlight.min.js?1571326501"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/highlight.pack.js?1571326501"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/modernizr.custom-3.6.0.js?1571323111"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/learn.js?1571323111"></script>
-    <script src="https://seleniumhq.github.io/docs/site/en/js/hugo-learn.js?1571323111"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/modernizr.custom-3.6.0.js?1571326501"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/learn.js?1571326501"></script>
+    <script src="https://seleniumhq.github.io/docs/site/en/js/hugo-learn.js?1571326501"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.css?1571323111" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.js?1571323111"></script>
+    <link href="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.css?1571326501" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/en/mermaid/mermaid.js?1571326501"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

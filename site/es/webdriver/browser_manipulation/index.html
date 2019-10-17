@@ -12,20 +12,20 @@
     <title>Manipulación de Navegadores :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571323114" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571323114" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571323114" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571323114" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571323114" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571323114" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571323114" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571323114" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571326504" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571323114" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571326504" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571326504"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571323114"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571323114"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571326504"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571326504"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571323114"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571326504"></script>
 
     
   </div>
@@ -1790,6 +1790,7 @@
 </ul></li>
 <li><a href="#windows-and-tabs">Windows and tabs</a>
 <ul>
+<li><a href="#get-window-handle">Get window handle</a></li>
 <li><a href="#switching-windows-or-tabs">Switching windows or tabs</a></li>
 <li><a href="#closing-a-window-or-tab">Closing a window or tab</a></li>
 <li><a href="#quitting-the-browser-at-the-end-of-a-session">Quitting the browser at the end of a session</a></li>
@@ -1917,6 +1918,11 @@ open your website. This can be achieved in a single line:</p>
       <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
     
     <label for="tab4code1">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+    
+    <label for="tab5code1">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -1969,6 +1975,18 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Convenient
+</span><span style="color:#586e75"></span>driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://www.seleniumhq.org&#34;</span>)
+
+<span style="color:#586e75">//Longer way
+</span><span style="color:#586e75"></span>driver.navigate().to(<span style="color:#2aa198">&#34;https://seleniumhq.github.io/docs/&#34;</span>)
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2005,6 +2023,11 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
       <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
     
     <label for="tab4code2">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab5code2" aria-controls="kotlincode2">
+    
+    <label for="tab5code2">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2038,6 +2061,12 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 <section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.getCurrentUrl();
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getCurrentUrl();</code></pre></div>
 </section>
 </div>
 </div>
@@ -2075,6 +2104,11 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
       <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
     
     <label for="tab4code3">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
+    
+    <label for="tab5code3">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2108,6 +2142,12 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 <section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.navigate().back();
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.navigate().back() </code></pre></div>
 </section>
 </div>
 </div>
@@ -2145,6 +2185,11 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
       <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
     
     <label for="tab4code4">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab5code4" aria-controls="kotlincode4">
+    
+    <label for="tab5code4">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2178,6 +2223,12 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 <section id="javascriptcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.navigate().forward();
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.navigate().forward();</code></pre></div>
 </section>
 </div>
 </div>
@@ -2215,6 +2266,11 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
       <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5">
     
     <label for="tab4code5">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab5code5" aria-controls="kotlincode5">
+    
+    <label for="tab5code5">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2248,6 +2304,12 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 <section id="javascriptcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.navigate().refresh();
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.navigate().refresh()</code></pre></div>
 </section>
 </div>
 </div>
@@ -2285,6 +2347,11 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
       <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6">
     
     <label for="tab4code6">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab5code6" aria-controls="kotlincode6">
+    
+    <label for="tab5code6">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2319,12 +2386,20 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.getTitle();
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getTitle()</code></pre></div>
+</section>
 </div>
 </div>
 
 <h2 id="windows-and-tabs">Windows and tabs</h2>
 
-<p>WebDriver doesn&rsquo;t make the distinction between windows and tabs. If
+<h3 id="get-window-handle">Get window handle</h3>
+
+<p>WebDriver does not make the distinction between windows and tabs. If
 your site opens a new tab or window, Selenium will let you work with it
 using a window handle.  Each window has a unique identifier which remains
 persistent in a single session. You can get the window handle of the
@@ -2359,6 +2434,11 @@ current window by using:</p>
       <input type="radio" name="tabsetcode7" id="tab4code7" aria-controls="javascriptcode7">
     
     <label for="tab4code7">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab5code7" aria-controls="kotlincode7">
+    
+    <label for="tab5code7">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2392,6 +2472,12 @@ current window by using:</p>
 <section id="javascriptcode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.getWindowHandle();
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getWindowHandle()</code></pre></div>
 </section>
 </div>
 </div>
@@ -2436,6 +2522,11 @@ to the one which is not the original.</p>
       <input type="radio" name="tabsetcode8" id="tab4code8" aria-controls="javascriptcode8">
     
     <label for="tab4code8">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab5code8" aria-controls="kotlincode8">
+    
+    <label for="tab5code8">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2599,6 +2690,36 @@ windows.forEach(<span style="color:#268bd2">async</span> handle =&gt; {
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Store the ID of the original window
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> originalWindow = driver.getWindowHandle()
+
+<span style="color:#586e75">//Check we don&#39;t have other windows open already
+</span><span style="color:#586e75"></span>assert(driver.getWindowHandles().size() === <span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75">//Click the link which opens in a new window
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;new window&#34;</span>)).click()
+
+<span style="color:#586e75">//Wait for the new window or tab
+</span><span style="color:#586e75"></span>wait.until(numberOfWindowsToBe(<span style="color:#2aa198">2</span>))
+
+<span style="color:#586e75">//Loop through until we find a new window handle
+</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (windowHandle <span style="color:#719e07">in</span> driver.getWindowHandles()) {
+      <span style="color:#719e07">if</span> (!originalWindow.contentEquals(windowHandle)) {
+          driver.switchTo().window(windowHandle)
+           <span style="color:#719e07">break</span>
+      }
+}
+
+<span style="color:#586e75">//Wait for the new tab to finish loading content
+</span><span style="color:#586e75"></span>wait.until(titleIs(<span style="color:#2aa198">&#34;Selenium documentation&#34;</span>))
+ 
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2639,6 +2760,11 @@ handle stored in a variable. Put this together and you will get:</p>
       <input type="radio" name="tabsetcode9" id="tab4code9" aria-controls="javascriptcode9">
     
     <label for="tab4code9">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode9" id="tab5code9" aria-controls="kotlincode9">
+    
+    <label for="tab5code9">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2703,6 +2829,19 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>driver.close()
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow)
+
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2745,6 +2884,11 @@ instead of close:</p>
       <input type="radio" name="tabsetcode10" id="tab4code10" aria-controls="javascriptcode10">
     
     <label for="tab4code10">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode10" id="tab5code10" aria-controls="kotlincode10">
+    
+    <label for="tab5code10">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2779,6 +2923,12 @@ instead of close:</p>
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.quit();
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.quit()</code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2788,8 +2938,8 @@ instead of close:</p>
 <ul>
 <li>Close all the windows and tabs associated with that WebDriver
 session</li>
-<li>The browser process</li>
-<li>The background driver process</li>
+<li>Close the browser process</li>
+<li>Close the background driver process</li>
 <li>Notify Selenium Grid that the browser is no longer in use so it can
 be used by another session (if you are using Selenium Grid)</li>
 </ul></li>
@@ -2830,6 +2980,11 @@ into to tear down at the end of a test.</p>
       <input type="radio" name="tabsetcode11" id="tab4code11" aria-controls="javascriptcode11">
     
     <label for="tab4code11">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode11" id="tab5code11" aria-controls="kotlincode11">
+    
+    <label for="tab5code11">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2895,6 +3050,22 @@ after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, <span style="color
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+  
+<span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Example using JUnit
+</span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+</span><span style="color:#586e75"> */</span>
+@AfterAll
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">tearDown</span>() {
+    driver.quit()
+}
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2931,6 +3102,11 @@ will still clean up the WebDriver session.</p>
       <input type="radio" name="tabsetcode12" id="tab4code12" aria-controls="javascriptcode12">
     
     <label for="tab4code12">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab5code12" aria-controls="kotlincode12">
+    
+    <label for="tab5code12">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2994,6 +3170,18 @@ will still clean up the WebDriver session.</p>
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode12" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">try</span> {
+    <span style="color:#586e75">//WebDriver code here...
+</span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
+    driver.quit()
+}
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3053,6 +3241,11 @@ using something like:</p>
       <input type="radio" name="tabsetcode13" id="tab4code13" aria-controls="javascriptcode13">
     
     <label for="tab4code13">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode13" id="tab5code13" aria-controls="kotlincode13">
+    
+    <label for="tab5code13">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3102,6 +3295,15 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode13" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//This won&#39;t work
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3146,6 +3348,11 @@ find the frame using your preferred selector and switch to it.</p>
       <input type="radio" name="tabsetcode14" id="tab4code14" aria-controls="javascriptcode14">
     
     <label for="tab4code14">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode14" id="tab5code14" aria-controls="kotlincode14">
+    
+    <label for="tab5code14">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3225,6 +3432,21 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode14" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Store the web element
+</span><span style="color:#586e75"></span>WebElement iframe = driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>))
+
+<span style="color:#586e75">//Switch to the frame
+</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe)
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3263,6 +3485,11 @@ one found will be switched to.</p>
       <input type="radio" name="tabsetcode15" id="tab4code15" aria-controls="javascriptcode15">
     
     <label for="tab4code15">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode15" id="tab5code15" aria-controls="kotlincode15">
+    
+    <label for="tab5code15">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3336,6 +3563,21 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Using the ID
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>)
+
+<span style="color:#586e75">//Or using the name instead
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>)
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3373,6 +3615,11 @@ queried using <em>window.frames</em> in JavaScript.</p>
       <input type="radio" name="tabsetcode16" id="tab4code16" aria-controls="javascriptcode16">
     
     <label for="tab4code16">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode16" id="tab5code16" aria-controls="kotlincode16">
+    
+    <label for="tab5code16">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3425,6 +3672,15 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Switches to the second frame  
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">1</span>)
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3462,6 +3718,11 @@ like so:</p>
       <input type="radio" name="tabsetcode17" id="tab4code17" aria-controls="javascriptcode17">
     
     <label for="tab4code17">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode17" id="tab5code17" aria-controls="kotlincode17">
+    
+    <label for="tab5code17">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3511,6 +3772,15 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode17" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>driver.switchTo().defaultContent()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3553,6 +3823,11 @@ window.</p>
       <input type="radio" name="tabsetcode18" id="tab4code18" aria-controls="javascriptcode18">
     
     <label for="tab4code18">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode18" id="tab5code18" aria-controls="kotlincode18">
+    
+    <label for="tab5code18">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3631,6 +3906,21 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode18" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> width = driver.manage().window().getSize().getWidth()
+<span style="color:#719e07">val</span> height = driver.manage().window().getSize().getHeight()
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> size = driver.manage().window().getSize()
+<span style="color:#719e07">val</span> width1 = size.getWidth()
+<span style="color:#719e07">val</span> height1 = size.getHeight()
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3666,6 +3956,11 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
       <input type="radio" name="tabsetcode19" id="tab4code19" aria-controls="javascriptcode19">
     
     <label for="tab4code19">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode19" id="tab5code19" aria-controls="kotlincode19">
+    
+    <label for="tab5code19">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3699,6 +3994,12 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 <section id="javascriptcode19" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().setRect({ width<span style="color:#719e07">:</span> <span style="color:#2aa198">1024</span>, height<span style="color:#719e07">:</span> <span style="color:#2aa198">768</span> });
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode19" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().size(Dimension(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>))</code></pre></div>
 </section>
 </div>
 </div></p>
@@ -3736,6 +4037,11 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
       <input type="radio" name="tabsetcode20" id="tab4code20" aria-controls="javascriptcode20">
     
     <label for="tab4code20">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode20" id="tab5code20" aria-controls="kotlincode20">
+    
+    <label for="tab5code20">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3807,6 +4113,22 @@ y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</s
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode20" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> x = driver.manage().window().position.x
+<span style="color:#719e07">val</span> y = driver.manage().window().position.y
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> position = driver.manage().window().position
+<span style="color:#719e07">val</span> x1 = position.x
+int y1 = position.y
+  
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3843,6 +4165,11 @@ y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</s
       <input type="radio" name="tabsetcode21" id="tab4code21" aria-controls="javascriptcode21">
     
     <label for="tab4code21">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode21" id="tab5code21" aria-controls="kotlincode21">
+    
+    <label for="tab5code21">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3891,6 +4218,15 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
   
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode21" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>driver.manage().window().position = Point(<span style="color:#2aa198">0</span>,<span style="color:#2aa198">0</span>)
+    </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -3929,6 +4265,11 @@ toolbars.</p>
       <input type="radio" name="tabsetcode22" id="tab4code22" aria-controls="javascriptcode22">
     
     <label for="tab4code22">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode22" id="tab5code22" aria-controls="kotlincode22">
+    
+    <label for="tab5code22">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -3962,6 +4303,12 @@ toolbars.</p>
 <section id="javascriptcode22" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().maximize();
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode22" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().maximize()</code></pre></div>
 </section>
 </div>
 </div>
@@ -3999,6 +4346,11 @@ toolbars.</p>
       <input type="radio" name="tabsetcode23" id="tab4code23" aria-controls="javascriptcode23">
     
     <label for="tab4code23">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab5code23" aria-controls="kotlincode23">
+    
+    <label for="tab5code23">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -4033,6 +4385,12 @@ toolbars.</p>
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().fullscreen();
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().fullscreen()</code></pre></div>
+</section>
 </div>
 </div>
 
@@ -4044,7 +4402,7 @@ toolbars.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/webdriver/browser_manipulation/">
       “Manipulación de Navegadores”
-    </a> was last updated on: 18 Sep 2019 19:44:48 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/c783f8a9749ba8785c96f652d983597a2b535f60">[docs]: Updated ruby sample code for browser manipulation (#372) (c783f8a9)</a>
+    </a> was last updated on: 10 Oct 2019 00:14:35 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/0af645fe22f8b18f57aeab1561ab276865728b88">TabDefinition (0af645fe)</a>
 </h5>
         
         </div> 
@@ -5161,19 +5519,19 @@ toolbars.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571326504"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571326504"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571323114" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571323114"></script>
+    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571326504" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571326504"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

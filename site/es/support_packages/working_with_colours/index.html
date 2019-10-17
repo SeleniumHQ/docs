@@ -12,20 +12,20 @@
     <title>Trabajando con colores :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571323113" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571323113" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571323113" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571323113" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571323113" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571323113" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571323113" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571323113" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571323113" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571326504" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571326504" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571323113" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571326504" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571323113"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571326504"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571323113"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571323113"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571326504"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571326504"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571323113"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571326504"></script>
 
     
   </div>
@@ -1806,11 +1806,11 @@ it by sending us pull requests!</p>
 
 <p>You will occasionally want to validate the colour of something as part of your tests;
 the problem is that colour definitions on the web are not constant.
-Wouldn&rsquo;t it be nice if there was an easy way to compare
-a HEX representation of a colour with an RGB representation of a colour,
-or an RGBA representation of a colour with a HSLA representation of a colour?</p>
+Would it not be nice if there was an easy way to compare
+a HEX representation of a colour with a RGB representation of a colour,
+or a RGBA representation of a colour with a HSLA representation of a colour?</p>
 
-<p>Worry not. There&rsquo;s a solution: the <em>Color</em> class!</p>
+<p>Worry not. There is a solution: the <em>Color</em> class!</p>
 
 <p>First of all, you will need to import the class:</p>
 
@@ -1843,6 +1843,11 @@ or an RGBA representation of a colour with a HSLA representation of a colour?</p
       <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
     
     <label for="tab4code1">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+    
+    <label for="tab5code1">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -1887,6 +1892,12 @@ or an RGBA representation of a colour with a HSLA representation of a colour?</p
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#719e07">import</span> org.openqa.selenium.support.Color</code></pre></div>
+</section>
 </div>
 </div>
 
@@ -1924,6 +1935,11 @@ Supported colour representations are:</p>
       <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
     
     <label for="tab4code2">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab5code2" aria-controls="kotlincode2">
+    
+    <label for="tab5code2">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -1986,6 +2002,20 @@ HSLA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> HEX_COLOUR = Color.fromString(<span style="color:#2aa198">&#34;#2F7ED8&#34;</span>)
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> RGB_COLOUR = Color.fromString(<span style="color:#2aa198">&#34;rgb(255, 255, 255)&#34;</span>)
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> RGB_COLOUR_PERCENT = Color.fromString(<span style="color:#2aa198">&#34;rgb(40%, 20%, 40%)&#34;</span>)
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> RGBA_COLOUR = Color.fromString(<span style="color:#2aa198">&#34;rgba(255, 255, 255, 0.5)&#34;</span>)
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> RGBA_COLOUR_PERCENT = Color.fromString(<span style="color:#2aa198">&#34;rgba(40%, 20%, 40%, 0.5)&#34;</span>)
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> HSL_COLOUR = Color.fromString(<span style="color:#2aa198">&#34;hsl(100, 0%, 50%)&#34;</span>)
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> HSLA_COLOUR = Color.fromString(<span style="color:#2aa198">&#34;hsla(100, 0%, 50%, 0.5)&#34;</span>)
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2022,6 +2052,11 @@ specified in
       <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
     
     <label for="tab4code3">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
+    
+    <label for="tab5code3">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2072,6 +2107,16 @@ HOTPINK <span style="color:#719e07">=</span> Color<span style="color:#719e07">.<
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> BLACK = Color.fromString(<span style="color:#2aa198">&#34;black&#34;</span>)
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> CHOCOLATE = Color.fromString(<span style="color:#2aa198">&#34;chocolate&#34;</span>)
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> HOTPINK = Color.fromString(<span style="color:#2aa198">&#34;hotpink&#34;</span>)
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2108,6 +2153,11 @@ The Color class also supports this:</p>
       <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
     
     <label for="tab4code4">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab5code4" aria-controls="kotlincode4">
+    
+    <label for="tab5code4">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2152,6 +2202,14 @@ TRANSPARENT <span style="color:#719e07">=</span> Color<span style="color:#719e07
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">private</span> <span style="color:#719e07">val</span> TRANSPARENT = Color.fromString(<span style="color:#2aa198">&#34;transparent&#34;</span>)
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2189,6 +2247,11 @@ and converted into a valid Color object:</p>
       <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5">
     
     <label for="tab4code5">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab5code5" aria-controls="kotlincode5">
+    
+    <label for="tab5code5">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2236,6 +2299,15 @@ login_button_background_colour <span style="color:#719e07">=</span> driver<span 
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">val</span> loginButtonColour = driver.findElement(By.id(<span style="color:#2aa198">&#34;login&#34;</span>)).getCssValue(<span style="color:#2aa198">&#34;color&#34;</span>)
+<span style="color:#719e07">val</span> loginButtonBackgroundColour = driver.findElement(By.id(<span style="color:#2aa198">&#34;login&#34;</span>)).getCssValue(<span style="color:#2aa198">&#34;background-color&#34;</span>)
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2270,6 +2342,11 @@ login_button_background_colour <span style="color:#719e07">=</span> driver<span 
       <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6">
     
     <label for="tab4code6">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab5code6" aria-controls="kotlincode6">
+    
+    <label for="tab5code6">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2314,6 +2391,14 @@ assert(login_button_background_colour <span style="color:#719e07">==</span> <spa
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+assert(loginButtonBackgroundColour.equals(HOTPINK))
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2349,6 +2434,11 @@ and perform a static validation:</p>
       <input type="radio" name="tabsetcode7" id="tab4code7" aria-controls="javascriptcode7">
     
     <label for="tab4code7">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab5code7" aria-controls="kotlincode7">
+    
+    <label for="tab5code7">Kotlin</label>
       
   <div class="tab-panels">
   
@@ -2399,6 +2489,16 @@ assert(login_button_background_colour<span style="color:#719e07">.</span>rgb <sp
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
+  
+
+
+<section id="kotlincode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+assert(loginButtonBackgroundColour.asHex().equals(<span style="color:#2aa198">&#34;#ff69b4&#34;</span>))
+assert(loginButtonBackgroundColour.asRgba().equals(<span style="color:#2aa198">&#34;rgba(255, 105, 180, 1)&#34;</span>))
+assert(loginButtonBackgroundColour.asRgb().equals(<span style="color:#2aa198">&#34;rgb(255, 105, 180)&#34;</span>))
+  </code></pre></div>
+</section>
 </div>
 </div>
 
@@ -2412,7 +2512,7 @@ assert(login_button_background_colour<span style="color:#719e07">.</span>rgb <sp
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/support_packages/working_with_colours/">
       “Trabajando con colores”
-    </a> was last updated on: 23 Aug 2019 20:14:11 &#43;0530: <a href="https://github.com/SeleniumHQ/docs/commit/e0acf92ed656cb5dfbe19534f4ade03838cb2e8a">Update: updating doc with missing # for sendKeys (#351) (e0acf92e)</a>
+    </a> was last updated on: 10 Oct 2019 00:14:35 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/0af645fe22f8b18f57aeab1561ab276865728b88">TabDefinition (0af645fe)</a>
 </h5>
         
         </div> 
@@ -3529,19 +3629,19 @@ assert(login_button_background_colour<span style="color:#719e07">.</span>rgb <sp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571326504"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571323114"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571326504"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571326504"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571323114" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571323114"></script>
+    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571326504" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571326504"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/support_packages/browser_navigation/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -529,7 +529,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/webdriver/driver_requirements/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -564,7 +564,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/driver_idiosyncrasies/driver_specific_capabilities/</loc>
-    <lastmod>2019-10-16T02:08:00+03:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -704,7 +704,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/introduction/on_test_automation/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -739,7 +739,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/remote_webdriver/remote_webdriver_client/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -844,7 +844,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/support_packages/working_with_colours/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -914,7 +914,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/webdriver/browser_manipulation/</loc>
-    <lastmod>2019-09-18T19:44:48+05:30</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1054,7 +1054,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/getting_started_with_webdriver/locating_elements/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1194,7 +1194,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/support_packages/working_with_select_elements/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1369,7 +1369,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/support_packages/mouse_and_keyboard_actions_in_detail/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1404,7 +1404,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1439,7 +1439,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/webdriver/waits/</loc>
-    <lastmod>2019-10-17T14:03:30+02:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1684,7 +1684,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/webdriver/js_alerts_prompts_and_confirmations/</loc>
-    <lastmod>2019-08-30T23:51:38+05:30</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2104,7 +2104,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/webdriver/web_element/</loc>
-    <lastmod>2019-09-04T21:39:42+05:30</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2174,7 +2174,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/webdriver/keyboard/</loc>
-    <lastmod>2019-09-04T21:39:42+05:30</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2384,7 +2384,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/docs/site/ja/</loc>
-    <lastmod>2019-09-17T00:57:36-05:00</lastmod>
+    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
