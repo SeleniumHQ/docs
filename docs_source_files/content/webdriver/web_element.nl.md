@@ -75,8 +75,10 @@ await searchBar.sendKeys('Webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+val driver = ChromeDriver()
+driver.get("http://www.google.com")
+val searchForm = driver.findElement(By.tagName("form"))
+val searchBox = searchForm.findElement(By.name("q"))
+searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
-
-

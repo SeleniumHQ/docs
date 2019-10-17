@@ -76,5 +76,3 @@ val searchBox = searchForm.findElement(By.name("q"))
 searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
-
-

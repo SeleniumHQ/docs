@@ -97,7 +97,17 @@ await alert.accept();
 // Note: To use await, the above code should be inside an async function
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Click the link to activate the alert
+driver.findElement(By.linkText("See an example alert")).click()
+
+//Wait for the alert to be displayed and store it in a variable
+val alert = wait.until(ExpectedConditions.alertIsPresent())
+
+//Store the alert text in a variable
+val text = alert.getText()
+
+//Press the OK button
+alert.accept()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -190,7 +200,20 @@ await alert.dismiss();
 // Note: To use await, the above code should be inside an async function
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Click the link to activate the alert
+driver.findElement(By.linkText("See a sample confirm")).click()
+
+//Wait for the alert to be displayed
+wait.until(ExpectedConditions.alertIsPresent())
+
+//Store the alert in a variable
+val alert = driver.switchTo().alert()
+
+//Store the alert in a variable for reuse
+val text = alert.text
+
+//Press the Cancel button
+alert.dismiss()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -279,6 +302,16 @@ await alert.accept();
 //Note: To use await, the above code should be inside an async function 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Click the link to activate the alert
+driver.findElement(By.linkText("See a sample prompt")).click()
+
+//Wait for the alert to be displayed and store it in a variable
+val alert = wait.until(ExpectedConditions.alertIsPresent())
+
+//Type your message
+alert.sendKeys("Selenium")
+
+//Press the OK button
+alert.accept()
   {{< / code-panel >}}
 {{< / code-tab >}}

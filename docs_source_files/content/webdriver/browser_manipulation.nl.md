@@ -430,9 +430,7 @@ instead of close:
   {{< code-panel language="csharp" >}}driver.Quit();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.quit{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.quit();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.quit(){{< / code-panel >}}
 {{< / code-tab >}}
 
 * Quit will:
@@ -487,7 +485,15 @@ after('Tear down', async function () {
 });
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+  
+/**
+ * Example using JUnit
+ * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+ */
+@AfterAll
+fun tearDown() {
+    driver.quit()
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -531,7 +537,11 @@ try {
 }
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+try {
+    //WebDriver code here...
+} finally {
+    driver.quit()
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -591,7 +601,8 @@ driver.find_element(:tag_name,'button').click
 await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//This won't work
+driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -659,7 +670,14 @@ await driver.switchTo().frame(iframe);
 await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Store the web element
+WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"))
+
+//Switch to the frame
+driver.switchTo().frame(iframe)
+
+//Now we can click the button
+driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -714,7 +732,14 @@ await driver.switchTo().frame('myframe');
 await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Using the ID
+driver.switchTo().frame("buttonframe")
+
+//Or using the name instead
+driver.switchTo().frame("myframe")
+
+//Now we can click the button
+driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -748,7 +773,8 @@ driver.switch_to.frame(iframe)
 await driver.switchTo().frame(1);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+// Switches to the second frame  
+driver.switchTo().frame(1)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -780,7 +806,8 @@ driver.switch_to.default_content
 await driver.switchTo().defaultContent();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+// Return to the top level
+driver.switchTo().defaultContent()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -843,7 +870,14 @@ const width1 = rect.width;
 const height1 = rect.height;
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+//Access each dimension individually
+val width = driver.manage().window().getSize().getWidth()
+val height = driver.manage().window().getSize().getHeight()
+
+//Or store the dimensions and query them later
+val size = driver.manage().window().getSize()
+val width1 = size.getWidth()
+val height1 = size.getHeight()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -856,9 +890,7 @@ Restores the window and sets the window size.
   {{< code-panel language="csharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.resize_to(1024,768){{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().setRect({ width: 1024, height: 768 });{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().size(Dimension(1024, 768)){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get window position
@@ -909,7 +941,15 @@ const x1 = rect.x;
 const y1 = rect.y;
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
+// Access each dimension individually
+val x = driver.manage().window().position.x
+val y = driver.manage().window().position.y
+
+// Or store the dimensions and query them later
+val position = driver.manage().window().position
+val x1 = position.x
+int y1 = position.y
+  
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -938,8 +978,9 @@ driver.manage.window.move_to(0,0)
 await driver.manage().window().setRect({ x: 0, y: 0 });
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+// Move the window to the top left of the primary monitor
+driver.manage().window().position = Point(0,0)
+    {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Maximise window
@@ -953,9 +994,7 @@ toolbars.
   {{< code-panel language="csharp" >}}driver.Manage().Window.Maximize();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.maximize{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().maximize();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Fullscreen window
@@ -968,7 +1007,5 @@ Fills the entire screen, similar to pressing F11 in most browsers.
   {{< code-panel language="csharp" >}}driver.Manage().Window.FullScreen();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.full_screen{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().fullscreen();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().fullscreen(){{< / code-panel >}}
 {{< / code-tab >}}
