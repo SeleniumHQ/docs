@@ -12,20 +12,20 @@
     <title>Capacidades especificas de los controladores :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571083826" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571083826" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571083826" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571083826" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571083826" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571083826" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571083826" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571083826" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571083826" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571180934" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571083826" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571180934" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571083826"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571180934"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571083826"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571083826"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571180934"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571180934"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571083826"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571180934"></script>
 
     
   </div>
@@ -1877,8 +1877,10 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 
 <section id="csharpcode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Todavía no tenemos una muestra de código C#: ayúdenos y genere un PR (_pull request_)
-</span><span style="color:#586e75"></span>  
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> FirefoxOptions();
+options.Proxy.Kind = ProxyKind.Direct;
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> FirefoxDriver(options);
+  
 </code></pre></div>
 </section>
   
@@ -1965,8 +1967,11 @@ options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Todavía no tenemos una muestra de código C#: ayúdenos y genere un PR (_pull request_)
-</span><span style="color:#586e75"></span>  
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> FirefoxOptions();
+<span style="color:#dc322f">var</span> profile = <span style="color:#719e07">new</span> FirefoxProfile();
+options.Profile = profile;
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  
 </code></pre></div>
 </section>
   
@@ -1996,6 +2001,84 @@ options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=
 <p>En algunos entornos, Internet Explorer puede agotar el tiempo de espera al abrir el cuadro de diálogo Cargar archivo. IEDriver tiene un tiempo de espera predeterminado de 1000 ms, pero puede aumentar el tiempo de espera usando la <em>capability</em> fileUploadDialogTimeout.</p>
 
 
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    
+    <label for="tab0code2">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2">
+    
+    <label for="tab1code2">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2">
+    
+    <label for="tab2code2">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2">
+    
+    <label for="tab3code2">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
+    
+    <label for="tab4code2">JavaScript</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// We don&#39;t have a Java code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> InternetExplorerOptions();
+options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#2aa198">2000</span>);
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+</div>
+</div>
+
+
 <footer class=" footline" >
 	
 </footer>
@@ -2003,7 +2086,7 @@ options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/driver_specific_capabilities/">
       “Capacidades especificas de los controladores”
-    </a> was last updated on: 21 Aug 2019 12:50:16 &#43;0000: <a href="https://github.com/SeleniumHQ/docs/commit/e559b95f6059fa524a3bfca1fbf685041120ae3f">Publishing site on Wed Aug 21 12:50:16 UTC 2019, commit 90b19944d7f9c057e246cbe0763d046b8b1df706 and job 773.1, [skip ci] (e559b95f)</a>
+    </a> was last updated on: 16 Oct 2019 02:08:00 &#43;0300: <a href="https://github.com/SeleniumHQ/docs/commit/d479af2c1656e34a9d1608ad97fbbe9b116a6c2f">Added C# examples (#382) (d479af2c)</a>
 </h5>
         
         </div> 
@@ -3120,19 +3203,19 @@ options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571083826"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571083826"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571083826"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571083826"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571083826"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571083826"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571180934"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571083826"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571083826"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571083826"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571180934"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571083826" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571083826"></script>
+    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571180934" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571180934"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

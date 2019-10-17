@@ -27,7 +27,7 @@
       
       <guid>https://seleniumhq.github.io/docs/site/es/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Firefox Definir Capacidades (Capabilities) usando FirefoxOptions FirefoxOptions es la nueva forma de definir capacidades para el navegador Firefox y, por lo general, debe usarse con preferencia a las capacidades deseadas.
-Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   // Todavía no tenemos una muestra de código C#: ayúdenos y genere un PR (_pull request_)    # Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)   // Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)      Configuración de un perfil personalizado Es posible crear un perfil personalizado para Firefox como se muestra a continuación.</description>
+Java Python C# Ruby JavaScript FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.</description>
     </item>
     
   </channel>
