@@ -12,20 +12,20 @@
     <title>Esperas :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571180934" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571180934" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571180934" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571180934" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571180934" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571180934" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571180934" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571180934" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571180934" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/nucleus.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/fontawesome-all.min.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hybrid.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/featherlight.min.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/perfect-scrollbar.min.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/auto-complete.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/atom-one-dark-reasonable.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/theme.css?1571323114" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/docs/site/es/css/hugo-theme.css?1571323114" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571180934" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/docs/site/es/css/theme-selenium.css?1571323114" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery-3.3.1.min.js?1571323114"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571180934"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571180934"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/lunr.min.js?1571323114"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/auto-complete.js?1571323114"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/docs\/site\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571180934"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/docs/site/es/js/search.js?1571323114"></script>
 
     
   </div>
@@ -2530,8 +2530,8 @@ such as <code>NoSuchElementException</code> when searching for an element on the
 <span style="color:#586e75">// Waiting 30 seconds for an element to be present on the page, checking
 </span><span style="color:#586e75">// for its presence once every 5 seconds.
 </span><span style="color:#586e75"></span>Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FluentWait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span>(driver)
-  .withTimeout(30, SECONDS)
-  .pollingEvery(5, SECONDS)
+  .withTimeout(Duration.ofSeconds(30))
+  .pollingEvery(Duration.ofSeconds(5))
   .ignoring(NoSuchElementException.class);
 
 WebElement <span style="color:#268bd2">foo</span> <span style="color:#719e07">=</span> wait.until(<span style="color:#719e07">new</span> Function<span style="color:#719e07">&lt;</span>WebDriver, WebElement<span style="color:#719e07">&gt;</span>() {
@@ -2589,7 +2589,7 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/docs/site/es/webdriver/waits/">
       “Esperas”
-    </a> was last updated on: 16 Oct 2019 00:49:04 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/2a955a79f37cc667dcfcf9bf383e8b85f0d41b35">Csharp examples (#387) (2a955a79)</a>
+    </a> was last updated on: 17 Oct 2019 14:03:30 &#43;0200: <a href="https://github.com/SeleniumHQ/docs/commit/57ebe599e14036466174937e9fedfc5fa7ac3ec8">Changed deprecated method call for FluentWait () (#388) (57ebe599)</a>
 </h5>
         
         </div> 
@@ -3706,19 +3706,19 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571180934"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571180934"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571180934"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571180934"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571180934"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/clipboard.min.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.min.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/perfect-scrollbar.jquery.min.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/jquery.sticky.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/featherlight.min.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/highlight.pack.js?1571323114"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571180934"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571180934"></script>
-    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571180934"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/modernizr.custom-3.6.0.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/learn.js?1571323114"></script>
+    <script src="https://seleniumhq.github.io/docs/site/es/js/hugo-learn.js?1571323114"></script>
 
-    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571180934" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571180934"></script>
+    <link href="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.css?1571323114" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/docs/site/es/mermaid/mermaid.js?1571323114"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
