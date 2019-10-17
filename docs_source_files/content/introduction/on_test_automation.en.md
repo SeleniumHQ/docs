@@ -328,4 +328,3 @@ Ideally, you will be able to create an account
 and pre-configure a unicorn via the API or database.
 Then all you have to do is log in as the user, locate Sparkles,
 and add her to the cart.
-
