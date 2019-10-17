@@ -13,7 +13,7 @@ it by sending us pull requests!
 
 ### Define Capabilities using `FirefoxOptions`
 
-`FirefoxOptions` is the new way to define capabilities for the Firefox 
+`FirefoxOptions` is the new way to define capabilities for the Firefox
 browser and should generally be used in preference to DesiredCapabilities.
 
 {{< code-tab >}}
@@ -76,7 +76,7 @@ var driver = new RemoteWebDriver(options);
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val options = FirefoxOptions()

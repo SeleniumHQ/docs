@@ -124,7 +124,7 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
 
 ### Locating multiple elements
 
-It's possible that the document we are working with may turn out to have an
+It is possible that the document we are working with may turn out to have an
 ordered list of the cheese we like the best:
 
 ```html
