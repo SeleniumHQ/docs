@@ -424,7 +424,6 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .withTimeout(30, SECONDS)
   .pollingEvery(5, SECONDS)
   .ignoring(NoSuchElementException.class);
-//FIXME Deprecated
 
 WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
   public WebElement apply(WebDriver driver) {
@@ -448,9 +447,12 @@ element = wait.until(EC.element_to_be_clickable((By.XPATH, "//div")))
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
+val wait = FluentWait<WebDriver>(getWebDriver())
+        .withTimeout(Duration.ofSeconds(30))
+        .pollingEvery(Duration.ofSeconds(3))
+        .ignoring(NoSuchElementException::class.java)
 
-
-// We don't have a Kotlin sample yet - Help us out and raise a PR
+val foo = wait.until {it.findElement(By.id("foo")) }
   {{< / code-panel >}}
 {{< / code-tab >}}
 
