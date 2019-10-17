@@ -1,4 +1,4 @@
-# The contents of this repository are not part of the Selenium [website](https://github.com/SeleniumHQ/site)
+# The contents of this repository are now part of the Selenium [website](https://github.com/SeleniumHQ/site)
 Please send your PRs and raise issues over there. Thanks!
 
 
