@@ -1,3 +1,8 @@
+# The contents of this repository are not part of the Selenium [website](https://github.com/SeleniumHQ/site)
+Please send your PRs and raise issues over there. Thanks!
+
+
+
 # [Selenium documentation rewrite](https://seleniumhq.github.io/docs/) 
 [![Travis Status](https://travis-ci.com/SeleniumHQ/docs.svg?branch=gh-pages)](//travis-ci.com/SeleniumHQ/docs/builds)
 
